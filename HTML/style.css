@@ -10,3 +10,18 @@ color: blueviolet;
 h2{
     color:brown;
 }
+h3{
+    color:darkorchid;
+}
+h4{
+    color:darksalmon;
+    background-color: lightblue;
+}
+img{
+    height: 40%;
+    width: 30%;
+}
+p{ 
+       color: red;
+       size: 15px;
+}
