@@ -1,0 +1,25 @@
+body{
+    background: grey;
+}
+h1{
+    color:blue;
+}
+h2{
+    color:brown;
+}
+h3{
+    color:yellow;
+}
+h4{
+    color:pink;
+}
+#header{
+    width:800px;
+    border:1px solid greenyellow; 
+    margin:0 auto;
+}
+#content{
+    width:800px;
+    border:1px solid palegoldenrod;
+    margin:0 auto;
+}
