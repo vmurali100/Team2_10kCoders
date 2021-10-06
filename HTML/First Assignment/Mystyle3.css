@@ -1,0 +1,73 @@
+#box{
+    width: 1300px;
+    height: 1300;
+    border: 2px solid black;
+}
+#one{
+    width: 1260px;
+    height: 80px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+#two{
+    width: 1260px;
+    height: 300px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#three{
+    width: 550px;
+    height: 350px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+#four{
+    width: 550px;
+    height: 350px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+
+
+}
+#five{
+    width: 550px;
+    height: 350px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: 20px;
+    Float:left;
+}
+#six{
+    width: 550px;
+    height: 350px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-right: 20px;
+    float: right;
+}
+#seven{
+    width: 1260px;
+        height: 70px;
+        border: 3px solid black;
+        box-sizing: border-box;
+        margin-top: 800px;
+        margin-left: 20px;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
