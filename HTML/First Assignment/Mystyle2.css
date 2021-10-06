@@ -1,0 +1,23 @@
+#header{
+    width:50%;
+    height:2px;
+    padding:20px;
+    border:1px solid black;
+    margin:0 auto;
+    box-sizing: border-box;
+}
+#content{
+    Width:50%;
+    Padding:20px;
+    border:1px solid black;
+    margin:0 auto;
+    box-sizing: border-box;
+}
+#one{
+    width:50%;
+    height:2px;
+    Padding:20px;
+    border:1px solid black;
+    margin:0 auto;
+    box-sizing: border-box;
+}
