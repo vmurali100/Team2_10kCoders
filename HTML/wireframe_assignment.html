@@ -4,7 +4,7 @@
         <title>Wire_Frame_Assignment</title>
         <style>
             #div1{
-                width: 1250px;
+                width: 1255px;
                 height: 80px;
                 border: 3px solid black;
                 box-sizing: border-box;
@@ -15,8 +15,8 @@
                 text-align: start;
             }
             #div2{
-                width: 1250px;
-                height: 300px;
+                width: 1255px;
+                height: 450px;
                 border: 3px solid black;
                 box-sizing: border-box;
                 margin-top: 20px;
@@ -24,16 +24,17 @@
             }
             #div3{
                 width: 450px;
-                height: 350px;
+                height: 300px;
                 border: 3px solid black;
                 box-sizing: border-box;
                 margin-top: 20px;
                 margin-left: 20px;
                 float: left;
+                padding-right: initial;
             }
             #div4{
                 width: 450px;
-                height: 350px;
+                height: 300px;
                 border: 3px solid black;
                 box-sizing: border-box;
                 margin-top: 20px;
@@ -44,7 +45,7 @@
             }
             #div5{
                 width: 450px;
-                height: 350px;
+                height: 300px;
                 border: 3px solid black;
                 box-sizing: border-box;
                 margin-top: 20px;
@@ -53,7 +54,7 @@
             }
             #div6{
                 width: 450px;
-                height: 350px;
+                height: 300px;
                 border: 3px solid black;
                 box-sizing: border-box;
                 margin-top: 20px;
@@ -66,20 +67,36 @@
                 height: 1500px; 
                 border: 3px solid black;
             }
-            .p{
-               float: right; 
-
+            #ne{
+                float: right;
+                border: 3px solid black;
+                height: 390px;
+                width: 500px;
+                margin-top: 20px;
+                margin-right: 20px;
             }
             #img{
-                margin-top: 15px;
-                margin-left: 20px;
+                margin-top: 8px;
+                margin-left: 10px;
                 float: left;
+                width: 290px;
             }
             #para{
-                font-size: 20px;
+                font-size: 45px;
+                text-align: center;
             }
             #p1,#p2,#p3,#p4{
-                float: right;
+                float: left;
+                font-size: 40px;
+
+            }
+            #p2,#p4{
+                padding-left: 50px;
+            }
+            #box{
+                height: 700px;
+                margin-top: 30px;
+                box-sizing: border-box;
             }
 
             #pd{
@@ -88,11 +105,11 @@
                 display: inline;
             }
             #div7{
-                width: 1250px;
+                width: 1255px;
                 height: 80px;
                 border: 3px solid black;
                 box-sizing: border-box;
-                margin-top: 900px;
+                margin-top: 100px;
                 margin-left: 20px;
                 font-size: 50px;
                 font-weight: bold;
@@ -106,14 +123,17 @@
         <div id = "main">
             <div class = "d" id = "div1">My App</div>
             <div class = "d"id="div2">
-                    <p id ="para" class="p">App Tagline</p>
-                    <p id ="p1" class="p">App Tagline</p>
-                    <p id ="p2" class="p">App Tagline</p>
-                    <p id ="p3" class="p">App Tagline</p>
-                    <p id ="p4" class="p">App Tagline</p>
-
-                    <img id = "img" src = "./images/ntr.jpg">
+                    <div id = "ne">
+                        <p id ="para" class="p">App Tagline</p>
+                        <p id ="p1" class="p">App Tagline</p>
+                        <p id ="p2" class="p">App Tagline</p>
+                        <p id ="p3" class="p">App Tagline</p>
+                        <p id ="p4" class="p">App Tagline</p>
+                    </div>
+                    <div id = "img">
+                    <img id = "img" src = "./images/ntr.jpg"></div>
             </div>
+            <div id = "box">
             <div class = "d"id="div3">
                 <h1>Box 1 heading</h1>
             </div>
@@ -125,6 +145,7 @@
             </div>
             <div class = "d"id = "div6">
                 <h1>Box 4 heading</h1>
+            </div>
             </div>
             <div id = "div7">Footer</div>
         </div>
