@@ -1,6 +1,77 @@
 body{
-    margin:10px auto;
     width: 90%;
+    height: 100%;
     padding: 10px;
+    background-coloR:BLACK;
   }
+  #template{
+    height: 700px;
+    width:60%;
+    border:5px solid grey;
+    background-color:wheat;
+    margin: 5px auto;
+   
+}
+#block1{
+    width: 700px;
+    height: 70px;
+    border: 2px solid black;
+    margin: 5px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+.links{
+    float:right;
+    font-size: 20px;
+}
+#block2{
+    width: 700px;
+    height: 250px;
+    border: 2px solid black;
+    margin: 50px auto;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+.t{
+    font-size: 20px;
+    float: right;
+
+}
+.t1{
+    font-size: 20px;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    float: right;
+}
+    
+
+#block3{
+    width: 700px;
+    height: 170px;
+    margin: 10px auto;
+    border: 1px solid black;
+    box-sizinZg: border-box;
+   
+}
+.box1{
+    height: 110px;
+    width: 303px;
+    border: solid black;
+    float:left;
+    text-align: center;
+    margin: 10px;
+    padding:10px;
+}
+#footer{
+    width: 700px;
+    height: 80px;
+    border: 2px solid black;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    text-align:right; 
+    bottom:0;
 }
