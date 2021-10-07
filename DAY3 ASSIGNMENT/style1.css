@@ -1,0 +1,82 @@
+body{
+    background-color:white;
+    text-align: center;
+}
+#template2{
+    height: 570px;
+    width: 790px;
+    border:3px solid blue;
+    margin:10px auto;
+}
+#block1{
+    height: 400px;
+    width:360px;
+    float:right;
+    }
+    #block11{
+        height:420px;
+        width: 340px;
+        border : 2px solid black;
+        margin:10px auto;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: lightgreen;
+    }
+    #block111{
+        height: 100px;
+        width:150px;
+        border: 2px solid black;
+        margin:80px auto;
+        padding-top:40px;
+        padding-bottom:30px;
+        background-color: powderblue;
+    }
+#block2{
+    height:100px;
+    width:410px;
+    margin:10px;
+    border: 2px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size:20px;
+    background-color: lightsalmon;
+
+}
+#block3{
+    height:40px;
+    width:410px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: lightpink;
+}
+#block4{
+    margin:10px;
+    height:260px;
+    width: 410px;
+    border: 2px solid brown;
+    box-sizing: border-box;
+    padding-top: 20px;
+    background-color:lightseagreen;
+}
+    #block41{
+        height:150px;
+        width:200px;
+        border:2px solid black;
+        margin: 20px auto;
+        padding-top:40px ;
+        background-color: steelblue;
+    }
+#block5{
+    height: 100px;
+    margin: 10px;
+    width:730px;
+    border: 2px solid black;
+    margin:px auto;
+    padding-left: 40px;
+    font-size:20px;
+    padding-top: 20px;
+    background-color:lightskyblue;
+}
