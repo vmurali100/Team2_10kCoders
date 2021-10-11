@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
 }
-#cont,#home{
-    line-height: 1.8cm;
-}
 body{
     font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -212,11 +209,11 @@ img{
     line-height: normal;
     float: right;
 }
-figcaption p{
+/* figcaption p{
     display: block;
     margin: 0;
     padding: 0;
-}
+} */
 #kk{
     margin: 0;
     padding: 0;
@@ -238,7 +235,7 @@ figcaption p{
     width: 960px;
     margin: 0 auto;
 }
-one{
+.one{
     display: block;
     float: left;
     margin: 0 20px 0 0;
