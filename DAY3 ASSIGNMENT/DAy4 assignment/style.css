@@ -9,51 +9,52 @@
     display: block;
     width:100%;
 }
-#header{
-    width: 960px;
-    margin: 0 auto;
-}
-#hgroup{
-    float: left;
-    margin: 0 0 20px 0;
-}
-h1,h2{
-    display:block;
-    color:#C0BAB6;
-}
-#hgroup h1{
-    font-weight: normal;
-    text-transform: none;
-    font-size: 36px;
-}
-#row1 a{
-    color: #C0BAB6;
-    outline: none;
-    text-decoration: none;
-}
-#hgroup h2{
-    font-size: 13px;
-    font-weight: normal;
-    text-transform: none;
-}
-#nav{
-    float:right;
-    margin: 0px 0 0 0;
-    padding: 20px 0;
-    color: #C0BAB6;
-    background-color: #232323;
-    
-}
- #nav ul{
-    padding: 0 20px;
-    list-style-type: none;
- }
- #nav ul li{
-    display: inline;
-    margin-right: 25px;
-    text-transform: uppercase;
-}
-#nav ul li:hover{
-    color: orange;
-    cursor: pointer;
-}
+                #header{
+                    width: 960px;
+                    margin: 0 auto;
+                }
+                #hgroup{
+                    float: left;
+                    margin: 0 0 20px 0;
+                }
+                h1,h2{
+                    display:block;
+                    color:#C0BAB6;
+                }
+                #hgroup h1{
+                    font-weight: normal;
+                    text-transform: none;
+                    font-size: 36px;
+                }
+                #row1 a{
+                    color: #C0BAB6;
+                    outline: none;
+                    text-decoration: none;
+                }
+                #hgroup h2{
+                    font-size: 13px;
+                    font-weight: normal;
+                    text-transform: none;
+                }
+                #nav{
+                    float:right;
+                    margin: 0px 0 0 0;
+                    padding: 20px 0;
+                    color: #C0BAB6;
+                    background-color: #232323;
+                    
+                }
+                #nav ul{
+                    padding: 0 20px;
+                    list-style-type: none;
+                    background-color: #232323;
+                }
+                #nav ul li{
+                    display: inline;
+                    margin-right: 25px;
+                    text-transform: uppercase;
+                }
+                #nav ul li:hover{
+                    color: orange;
+                    cursor: pointer;
+                }
