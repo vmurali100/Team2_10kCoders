@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+a{
+    text-decoration: none;
+    color:cornsilk
+}
+#block1{
+    background-color: black;
+    color:cornsilk;
+    padding:10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    overflow: auto;
+    display: block;
+}
+        #header{
+            width:180px;
+            display: inline;
+        }
+        #hgroup{
+            display: inline;
+            float: left;
+        }
+        #nav{
+            float:right;
+            background-color: rgb(41, 39, 39);
+            padding: 10px;
+
+        }
+        #nav ul{
+        list-style-type: none;  
+        }
+        #nav ul li{
+            dispaly:inline;
+            float: left;
+            padding: 8px;
+            
+        }
+        #nav ul li a:hover{
+            color:orange ;
+            cursor: pointer;
+        }
+#block2{
+    margin:20px 50px 15px 250px;
+    border:0px solid black;
+    height:300px;
+    padding:10px;
+    width:800px;
+    background-color: rgb(255, 255, 255);
+}
+    #textpart{
+        background-color: rgb(158, 157, 157);
+        width: 300px;
+
+    }
+        #hgroupblock2{
+            width: 280px;
+            border: 0px solid black;
+            overflow: auto;
+            padding:10px;
+            float:left;
+        }
+    img{
+        float:left;
+        width:400px;
+        height:280px;
+        margin:0px 20px 0px 80px;
+    }
+#block3{
+    margin:20px 25px 15px 40px;
+    display: block;
+    overflow: auto;
+}
+.block3part1{
+    width:390px;
+    float:left;
+    border: 1px solid black;
+    margin-right: 20px;
+    background-color: rgb(244, 248, 255);
+}
+
+#block4{
+    margin:30px 20px 15px 40px;
+    border: 0px solid black;
+    height:300px;
+    padding: 10px;
+    padding-left: 40px;
+    width: 1165px;
+    background-color: rgb(235, 226, 226);
+}
+.imgblock4{
+    border: 0px solid black;
+    width:250px;
+    float:left;
+    overflow: auto;
+    margin-right:40px;
+    color: rgb(24, 13, 4);
+    font-style:oblique;
+}
+#row5{
+    margin-top:0px;
+    background-color: black;
+    width: 100%;
+    padding:20px;
+    overflow: auto;
+}
+#row5 a{
+    color:orange;
+    cursor: pointer;
+}
