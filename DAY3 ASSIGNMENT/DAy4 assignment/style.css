@@ -5,7 +5,7 @@
 #row1{
     background-color: black;
     padding:20px 60px;
-    overflow: auto;  overflow: auto;
+    overflow: auto;
     display: block;
     width:100%;
 }
