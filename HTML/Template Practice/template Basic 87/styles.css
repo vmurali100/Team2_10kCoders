@@ -100,7 +100,7 @@ nav a{
 }
 #section1 article{
     float:left;
-    margin-right:12px;
+    margin-right:20px;
     width:225;
 
 }
@@ -113,6 +113,9 @@ nav a{
     text-align:center;
     color:#979797;
     background-color: #EEEEEE;
+}
+#homepage #article4{
+    margin-right:0;
 }
 /*---------------Section II ----------------- */
 #homepage #section2{

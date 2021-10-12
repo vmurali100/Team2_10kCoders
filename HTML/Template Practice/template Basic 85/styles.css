@@ -1,0 +1,202 @@
+/* ===============
+        Global
+    =============== */
+    *{
+        margin:0;
+        padding:0;
+        /* border:1px solid red; */
+    }
+/*--------------------------- Elements --------------------------- */
+body{
+    color:#C0BAB6;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:13px;
+}
+h1{
+    font-size:36px;
+    font-weight:normal;
+}
+h2{
+    font-weight:normal;
+    font-size:13px;
+}
+a{
+    text-decoration:none;
+    outline:none;
+}
+ul li{
+    list-style-type: none;
+}
+
+.wrapper{
+    width:100%;
+}
+/*--------------------------- Header--------------------------- */
+.row1{
+    background-color: #333333;
+    overflow:auto;
+}
+.row1 header{
+    width:960px;
+    margin:0 auto;
+    padding:20px 0;
+    overflow:hidden;
+}
+/*--------------- Title----------------- */
+.row1 header #title{
+    float:left;
+    margin:0 0 20px 0;   
+}
+.row1 header #title a{
+    color:#C0BAB6;   
+}
+/*--------------- Nav bar----------------- */
+header nav{
+    float:right;
+    margin:10px 0 0 0;
+    padding:20px 0;
+    color: #C0BAB6;
+    background-color: #232323
+}
+header nav ul{
+    list-style-type: none;
+    text-transform:uppercase;
+    padding:0 20px;
+}
+header nav ul li{
+    display:inline;
+    list-style-type: none;
+    margin-right:25px;
+}
+.last{
+    margin-right:0;
+}
+nav a{
+    text-decoration:none;
+    color:#C0BAB6;
+}
+/*==========================================Container==========================================*/
+#container{
+    width:960px;
+    margin:0 auto;
+    padding:30px 0;
+    overflow:auto;
+}
+/*---------------Section 1 ----------------- */
+#section1{
+    padding: 0 0 20px 0;
+    margin: 0 0 30px 0;
+    border-bottom:1px solid #DEDEDE;
+}
+#section1 p{
+    line-height:1.8em;
+    font-size:20px;
+    text-align:center;
+    color: #979797;
+} 
+/*---------------Homepage ----------------- */
+#homepage{
+    width:100%;
+    line-height:1.6em;  
+    overflow:auto;  
+}
+/*---------------Section 2 ----------------- */
+#homepage #section2{
+    overflow:auto;
+    margin-bottom:50px;
+}
+#homepage #section2 article figure ul li{
+    float: left;
+    margin:0 20px 20px 0;
+    overflow:auto;
+
+}
+#homepage #section2 article figure ul #last{
+    margin-right:0px;
+}
+#homepage #section2 article figure ul li img{
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+    text-align: center;
+    vertical-align: middle;
+}
+#homepage #section2 article figcaption{
+    clear:both;
+    padding-bottom:20px;
+    width:100%;
+    font-weight: bold;
+    text-transform: uppercase;  
+    text-align:right;
+    border-bottom: 1px solid #DEDEDE;
+}
+#homepage #section2 article figcaption a {
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+/*---------------Section 3 ----------------- */
+#homepage #section3{
+    overflow:auto;
+    color: #979797
+}
+#homepage #section3 article{
+    width:225px;
+    margin-right:20px;
+}
+#homepage #section3 article figure img{
+    float:left;
+} 
+#homepage #section3 article strong{
+    float:left;
+    margin:8px 0 0 10px;
+    font-size:14px;
+    font-weight:bold;
+} 
+#homepage #section3 article p{
+    clear:both;
+    padding-top:5px;    
+} 
+#homepage #section3 .last{
+    margin-right:0px;
+}
+#homepage #section3 .article_row1{
+    float:left;
+}
+#homepage #section3 .article_row2{
+    float:left;
+}
+#homepage #section3 article .readmore{
+    text-align:right;
+}
+#homepage #section3 article .readmore a{
+    color: #FF9900;
+    background-color: #FFFFFF;
+}
+/* ============================================= */
+.spacer{
+    clear:both;
+    height:30px;
+    width:100%;
+}
+/* ============================================= */
+
+/* =====================Footer======================== */
+.row3{
+    background-color: #232323;
+}
+#main_footer{
+    clear:both;
+    width:960px;
+    margin:0 auto;
+    overflow:auto;
+}
+#main_footer p{
+    font-size:13px;
+}
+#main_footer #left_footer{
+    float:left;
+    padding:20px 0;
+}
+#main_footer #right_footer{
+    float:right;
+    padding:20px 0;
+}
