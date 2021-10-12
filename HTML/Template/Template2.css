@@ -193,6 +193,7 @@ img {
 }
 .row2 a{
     color: #ff9900;
+    overflow: auto;
 }
 #container .more{
     text-align: right;
@@ -254,18 +255,20 @@ aside{
 #container #right_column nav ul li a:hover{
     color: orange;
 }
+
 .row3{
     color: #919191;
     background-color: #232323;
-    overflow: auto;
+    line-height: 0.5cm;
 }
-.row3 a {
+.row3 a{
     color: #919191;
     background-color: #232323;
-} 
-a {
-    outline: none;
-    text-decoration: none;
+}
+footer{
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 #footer{
     display: block;
@@ -273,10 +276,7 @@ a {
     margin: 0 auto;
     padding: 20px 0;
 }
-.clear{
-    clear: both;
-}
-#footer p {
+#footer p{
     margin: 0;
     padding: 0;
 }
