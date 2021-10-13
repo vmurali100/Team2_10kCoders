@@ -1,0 +1,62 @@
+
+.sub1{
+    color: red;
+    background-color: lightblue;
+    padding: 20px 0 0 0;
+}
+
+.maincamp {
+    display: block;                                                                                       
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    text-align: left;
+   
+    
+}
+header{
+    display: block;
+    width: 800;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 20px o;
+}
+#header h1{
+    text-decoration: none;
+}
+#hgroup{
+
+    float:left;
+    margin:0 0 20px 0;
+    
+
+}
+#header nav{
+    display: block;
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+}
+nav ul {
+    margin: 0;
+    padding: 20px ;
+    list-style: none;
+}
+#header nav li{
+display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+#header nav ul li a:hover{
+    color:orange;
+    cursor: pointer;
+    text-decoration: none;
+}
+.clear{
+    clear: both;
+}
+.sub2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
