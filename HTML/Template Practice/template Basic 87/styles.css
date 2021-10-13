@@ -84,6 +84,7 @@ nav a{
     width:960px;
     box-sizing: border-box;
     overflow:auto;
+    color: #979797;
 }
 #homepage{
     /* background-color:yellow; */
@@ -161,7 +162,11 @@ nav a{
     /* background-color:pink; */
 }
 #main #section3 ul li figcaption h2{
-    font-size:13px;
+    font-size:14px;
+    font-weight:bold;
+    font-style:none;
+    line-height:normal;
+    
 }
 #main #section3 ul li figcaption p{
     margin:13px 0;
@@ -188,11 +193,16 @@ aside h2{
     font-size:16px;
 }
 aside nav ul li a{
+    margin-bottom:3px;
+}
+aside nav ul li a{
     list-style-type: none;
     display:block;
     background: url(./images/orange_file.gif) no-repeat 10px center #FFFFFF;
     padding: 5px 10px 5px 20px;
     border-bottom: 1px dotted #666666;
+    color: #666666;
+
 }
 /*--------------------------- Footer--------------------------- */
 #main_footer{
