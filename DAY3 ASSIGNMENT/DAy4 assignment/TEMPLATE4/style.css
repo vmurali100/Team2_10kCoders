@@ -46,6 +46,7 @@
     list-style-type: none;
     background-color: black;
     margin:10px 0px 10p 30px;
+    font-size: 25px;
 }
 #nav ul li{
     display: inline;
@@ -74,7 +75,7 @@
     color: cornsilk;
 }
 #block4{
-    margin:20px 20px 20px 180px;
+    margin:20px 20px 40px 180px;
     overflow: auto;
     
 }
@@ -89,12 +90,12 @@
 }
 #block5{
     border:0px solid black;
-    margin:40px 125px 0px 180px;
+    margin:100px 125px 0px 180px;
     text-align: center;
 }
 
 #block6{
-        margin:5px 30px 30px 200px;
+        margin:0px 30px 30px 200px;
         overflow: auto;
 }
     
