@@ -118,6 +118,10 @@ nav ul .last{
 #container #section1{
     margin-bottom:30px;
 }
+#container #section1 img{
+    width:960px;
+    height:360px;
+}
 /* ============================ Section 2 ========================== */
 #container #section2{
     padding:15px;
@@ -165,6 +169,8 @@ nav ul .last{
 }
 #homepage #section3 .article img{
     float:left;
+    height:32px;
+    width:32px;
 }
 #homepage #section3 .article strong{
     float:left;
@@ -203,11 +209,16 @@ nav ul .last{
     padding:4px;
     border: 1px solid #D6D6D6;
 }
+#section4 article figure img{
+    width:215px;
+    height:315px;
+}
 #section4 article figcaption{
     padding:5px;
     text-align:center;
     color:#979797;
     background-color: #EEEEEE;
+    text-transform:uppercase;
 }
 #section4 #article4{
     margin-right:0;
