@@ -119,6 +119,8 @@ nav a{
     border: 1px solid #D6D6D6;
     text-align: center;
     vertical-align: middle;
+    width:215px;
+    height:150px;
 }
 #homepage #section2 article figcaption{
     clear:both;
@@ -144,12 +146,15 @@ nav a{
 }
 #homepage #section3 article figure img{
     float:left;
+    height:32px;
+    width:32px;
 } 
 #homepage #section3 article strong{
     float:left;
     margin:8px 0 0 10px;
     font-size:14px;
     font-weight:bold;
+    text-transform: uppercase;
 } 
 #homepage #section3 article p{
     clear:both;
