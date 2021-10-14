@@ -116,6 +116,10 @@ nav ul .last{
 #section1{
     margin-bottom:50px;
 }
+#section1 img{
+    width:960px;
+    height:280px;
+}
 
 /*---------------Homepage ----------------- */
 #homepage{
@@ -136,6 +140,8 @@ nav ul .last{
 }
 #homepage #section2 article figure img{
     float:left;
+    height:32px;
+    width:32px;
 } 
 #homepage #section2 article strong{
     float:left;
@@ -162,6 +168,7 @@ nav ul .last{
 .readmore a{
     color: #FF9900;
     background-color: #FFFFFF;
+    
 }
 /*---------------Section 2 ----------------- */
 #section3{
@@ -188,4 +195,24 @@ nav ul .last{
 #section3 aside{
     float:left;
     width:225px;
+}
+/* ============================================ Footer ============================================  */
+.row3{
+    background-color: #232323;
+}
+#main_footer{
+    width:960px;
+    margin:0 auto;
+    overflow:auto;
+}
+#main_footer p{
+    font-size:13px;
+}
+#main_footer #left_footer{
+    float:left;
+    padding:20px 0;
+}
+#main_footer #right_footer{
+    float:right;
+    padding:20px 0;
 }
