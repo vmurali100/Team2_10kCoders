@@ -21,7 +21,7 @@ a{
 }
 
 .row1{
-    background-color: #565df8;
+    background-color: #0007fe;
 }
 .wrapper{
     width:100%;
@@ -30,7 +30,7 @@ a{
 header{
     width:960px;
     margin:0 auto;
-    background-color:#565df8;
+    background-color:#0007fe;
     padding:20px 0;
 }
 /* ============================Title========================== */
@@ -61,7 +61,7 @@ header{
     padding:5px;
     border: 1px solid #666666;
     font-size: 12px;
-    background-color: #232323;
+    background-color: #11bdff;
     font-size: 12px;
     color: white;
 }
@@ -84,7 +84,7 @@ header{
 /* ============================Nav========================== */
 nav{
     clear:both;
-    background-color: #232323;
+    background-color: #11bdff; 
     overflow:auto;
     width:100%;
     padding:20px 0;
@@ -100,6 +100,9 @@ nav ul li{
     text-transform: uppercase;
     width:auto;
     height:auto;
+}
+nav ul li a{
+    color: #0027ba;
 }
 nav ul .last{
     margin-right:0;
@@ -126,11 +129,11 @@ nav ul .last{
 #container #section2{
     padding:15px;
     width:930px;
-    background-color: #EEEEEE;
+    background-color: #cdedfa;
     margin-bottom:30px;
 }
 #container #section2 p{
-    color: #979797;
+    color: #439cbe;
     font-size:16px;
     line-height: 1.8em;
     text-transform:uppercase;
@@ -146,7 +149,7 @@ nav ul .last{
 }
 /* ============================ Section 3 ========================== */
 #homepage h1{
-    color: #979797;
+    color: #fc813b;
     font-size:16px;
     font-weight:bold;
     margin-bottom:25px;
@@ -177,11 +180,11 @@ nav ul .last{
     margin:8px 0 0 10px;
     font-size:14px;
     font-weight:bold;
-    color: #919191;
+    color: #3986a3;
 }
 #homepage #section3 .article p{
     clear:both;
-    color: #919191;
+    color: #439cbe;
     padding-top:5px;
 }
 #homepage #section3 .article .readmore{
@@ -216,7 +219,7 @@ nav ul .last{
 #section4 article figcaption{
     padding:5px;
     text-align:center;
-    color:#979797;
+    color:#fc813b;
     background-color: #EEEEEE;
     text-transform:uppercase;
 }
@@ -227,7 +230,8 @@ nav ul .last{
 
 /* ============================================ Footer ============================================  */
 .row3{
-    background-color: #232323;
+    background-color: #11bdff;
+    color:#0027ba;
 }
 #main_footer{
     width:960px;
