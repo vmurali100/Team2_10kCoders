@@ -78,6 +78,13 @@ a{
     margin-right: 25px;
     text-transform: uppercase;
 }
+#header nav ul li a:hover{
+    color: #FF9900;
+    cursor: pointer;
+}
+#header nav ul li.last{
+    margin-right: 0;
+}
 #header nav li a {
     color: #C0BAB6;
     background-color: #232323;
@@ -213,8 +220,7 @@ img {
 .row3{
     color: #919191;
     background-color: #232323;
-    position: fixed;
-    top: 600px;
+    overflow: auto;
 }
 .row3 a{
     color: #919191;
@@ -224,7 +230,6 @@ img {
     display: block;
     width: 960px;
     margin: 0 auto;
-    height: 18px;
     padding: 20px 0;
 }
 #footer p {

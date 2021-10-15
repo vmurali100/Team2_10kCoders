@@ -10,7 +10,6 @@ body {
 div.wrapper{
     display: block;
     width: 100%;
-    height: 116px;
     padding: 0;
     margin: 0;
     text-align: left;
@@ -18,13 +17,13 @@ div.wrapper{
 .row1{
     color: #C0BAB6;
     background-color: #333333;
-    overflow: auto;
 }
 #header{
     padding: 20px 0;
     width: 960px;
     display: block;
     margin: 0 auto;
+    overflow: auto;
 }
 .clear{
     clear: both;
@@ -81,7 +80,10 @@ a{
     columns: #C0BAB6;
     background-color: #232323;
 }
-.last{
+#header nav ul li a:hover{
+    color: #FF9900;
+}
+#header nav ul li.last{
     margin-right: 0;
 }
 .row2{
@@ -93,6 +95,7 @@ a{
     width: 960px;
     margin: 0 auto;
     padding: 30px 0;
+    overflow: auto;
 }
 #container section{
     display: block;
@@ -124,7 +127,7 @@ img {
     width: 280px;
     height: 260px;
     padding: 20px;
-    overflow: hidden;
+
     columns: #989898;
     background-color: #DEDEDE;
     line-height: 0.6cm;
@@ -240,6 +243,7 @@ img{
 .row3{
     color: #919191;
     background-color: #232323;
+    overflow: auto;
 }
 .row3 a{
     color: #919191;
@@ -249,7 +253,6 @@ img{
     display: block;
     width: 960px;
     margin: 0 auto;
-    height: 18px;
     padding: 20px 0;
 }
 #footer p {

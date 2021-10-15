@@ -128,13 +128,13 @@ nav{
 .row2{
     color: #979797;
     background-color: #FFFFFF;
-    overflow: auto;
 }
 #container{
     display: block;
     width: 960px;
     margin: 0 auto;
     padding: 30px 0;
+    overflow: auto;
 }
 .clear{
     clear: both;

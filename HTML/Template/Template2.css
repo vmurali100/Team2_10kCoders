@@ -10,7 +10,6 @@
 .row1{
     color: #c0bab6;
     background-color: #333333;
-    overflow: auto;
 }
 body {
     font-size: 13px;
@@ -21,6 +20,7 @@ body {
     width: 960px;
     padding: 20px 0;
     margin: 0 auto;
+    overflow: auto;
 }
 .clear{
     clear: both;
@@ -40,9 +40,12 @@ a{
     outline: none;
     text-decoration: none;
 }
+#header #hgroup h1 a{
+    background-color: #333333;
+}
 .row1 a{
     color: #c0bab6;
-    background-color: #333333;
+    background-color: #232323;
 }
 #header #hgroup h2{
     font-size: 13px;
@@ -75,19 +78,19 @@ nav ul{
     color: orange;
     cursor: pointer;
 }
-#header nav li.last {
+#header nav ul li.last{
     margin-right: 0;
 }
 .row2{
     color: #979797;
     background-color: #FFFFFF;
-    overflow: auto;
 }
 #container{
     display: block;
     width: 960px;
     margin: 0 auto;
     padding: 30px 0;
+    overflow: auto;
 }
 #container #homepage{
     display: block;
@@ -99,6 +102,7 @@ nav ul{
     width: 100%;
     margin: 0 0 30px 0;
     padding: 0;
+    overflow: auto;
 }
 .one_quarter{
     width: 225px;
@@ -115,6 +119,9 @@ figure{
     margin: 0;
     padding: 4px;
     border: 1px solid #dcdcdc;
+}
+#latest .clear{
+    clear: both;
 }
 img {
     margin: 0;
@@ -136,12 +143,12 @@ img {
 .lastbox{
     margin-right: 0;
 }
-#container #shout{
+.shout{
     padding: 0 0 20px 0;
     text-align: center;
     border-bottom: 1px solid #dedede;
 }
-#container #shout p{
+#container .shout p{
     font-size: 20px;
     margin: 0;
     padding: 0;
@@ -153,7 +160,7 @@ img {
 
 }
 #container .last{
-    margin: 0;
+    margin-right: 0;
 }
 #container #content #services ul {
     margin: 0;
@@ -166,7 +173,6 @@ img {
     margin-bottom: 30px;
 }
 .clear {
-    display: block;
     clear: both;
 }
 #container #content #services ul li article figure img {
@@ -269,6 +275,7 @@ footer{
     display: block;
     padding: 0;
     margin: 0;
+    overflow: auto;
 }
 #footer{
     display: block;

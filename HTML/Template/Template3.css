@@ -16,13 +16,13 @@ div.wrapper{
 .row1{
     color: #c0bac6;
     background-color: #333333;
-    overflow: auto;
 }
 #header{
     display: block;
     width: 960px;
     margin: 0 auto;
     padding: 20px 0;
+    overflow: auto;
 }
 .clear{
     clear: both;
