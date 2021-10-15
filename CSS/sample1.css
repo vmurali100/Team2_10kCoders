@@ -1,0 +1,24 @@
+/*#parent{
+    background: orange;
+    padding: 2px;
+}*/
+
+/*#parent{
+    background: orange;
+    padding: 2px;
+    top: 100px;
+    position: absolute;
+}
+p{
+    font-size: 40px;
+    position: relative;
+}*/
+
+#parent{
+    background: orange;
+    padding: 2px;
+    position: fixed;
+}
+p{
+    font-size: 40px;
+}

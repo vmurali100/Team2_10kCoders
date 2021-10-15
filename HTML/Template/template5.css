@@ -213,6 +213,8 @@ img {
 .row3{
     color: #919191;
     background-color: #232323;
+    position: fixed;
+    top: 600px;
 }
 .row3 a{
     color: #919191;
