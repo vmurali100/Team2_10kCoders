@@ -6,29 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #one{
-            background-color:brown;
-            width:500px;
-            height:200px;
+        #container{
+            width:50%;
+            margin:0 auto;
+            position:relative;
+            text-align:right;
+            left:200px;
+            padding:30px 0;
+        }
+        .origin{
+            transform-origin:80%  90%;
+            width:200px;
+            height:400px;
             border:1px solid black;
             position: absolute;
-            z-index:1;
+        }
+        #one{
+            background-color:brown;
+            transform:rotate(310deg);
+            z-index:10;
+
         }
         #two{
             background-color:cornflowerblue ;
-            width:500px;
-            height:200px;
-            border: 1px solid black;
-            position: absolute;
+            z-index:9;
+            transform:rotate(325deg);
+
+
+        }
+        #three{
+            background-color:darkviolet ;
+            z-index:8;
+            transform:rotate(340deg);
+
+        }
+        #four{
+            background-color:coral ;
+            z-index:7;
+            transform:rotate(355deg);
+        }
+        #five{
+            background-color:cyan ;
+            z-index:6;
+            transform:rotate(10deg);
+
+        }
+        #six{
+            background-color:brown;
+            transform:rotate(25deg);
+            z-index:5;
+
+        }
+        #seven{
+            background-color:cornflowerblue ;
+            z-index:4;
+            transform:rotate(40deg);
+
+
+        }
+        #eight{
+            background-color:darkviolet ;
+            z-index:3;
+            transform:rotate(55deg);
+
+        }
+        #nine{
+            background-color:coral ;
+            z-index:2;
+            transform:rotate(70deg);
+        }
+        #ten{
+            background-color:cyan ;
+            z-index:1;
+            transform:rotate(85deg);
+
         }
     </style>
 </head>
 <body>
-    <div id="one">
-        <h1>I am div one</h1>
-    </div>
-    <div id="two">
-        <h2>I am div two</h2>
+    <div id="container">
+        <div id="one" class="origin">
+            <h1>1</h1>
+            <p>z-index:10</p>
+        </div>
+        <div id="two" class="origin">
+            <h1>2</h1>
+            <p>z-index:9</p>
+        </div>
+        <div id="three" class="origin">
+            <h1>3</h1>
+            <p>z-index:8</p>
+        </div>
+        <div id="four" class="origin">
+            <h1>4</h1>
+            <p>z-index:7</p>
+        </div>
+        <div id="five" class="origin">
+            <h1>5</h1>
+            <p>z-index:6</p>
+        </div>
+        <div id="six" class="origin">
+            <h1>6</h1>
+            <p>z-index:5</p>
+        </div>
+        <div id="seven" class="origin">
+            <h1>7</h1>
+            <p>z-index:4</p>
+        </div>
+        <div id="eight" class="origin">
+            <h1>8</h1>
+            <p>z-index:3</p>
+        </div>
+        <div id="nine" class="origin">
+            <h1>9</h1>
+            <p>z-index:2</p>
+        </div>
+        <div id="ten" class="origin">
+            <h1>10</h1>
+            <p>z-index:1</p>
+        </div>
     </div>
 </body>
 </html>
