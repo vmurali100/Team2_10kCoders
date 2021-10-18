@@ -244,6 +244,8 @@ img{
     color: #919191;
     background-color: #232323;
     overflow: auto;
+    position: fixed;
+    top: 600px;
 }
 .row3 a{
     color: #919191;
