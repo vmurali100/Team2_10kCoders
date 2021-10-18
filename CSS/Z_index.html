@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            width: 500px;
+            height: 300px;
+            border: 1px solid gray;
+            text-align: center;
+            margin: 0 auto;
+            background: red;
+        }
+        #children{
+            width: 300px;
+            background: green;
+            height: 150px;
+            margin: 20px auto;
+        }
+        #second{
+            background: yellow;
+            display: absolute;
+            z-index: 2;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="children">
+            <h2>Z_index Example</h2>
+        </div>
+    </div>
+    <div id="second">
+        <h2>Second Element</h2>
+    </div>
+</body>
+</html>
