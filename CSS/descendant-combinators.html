@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .descendant-combinator h1{
+            font-size:36px;
+            color:red;
+        }
+        .descendant-combinator p{
+            font-size:24px;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <h1>heading h1</h1>
+    <div class="descendant-combinator">
+        <h1>heading h1 in descendant-combinator div</h1>
+        <p>paragraph1</p>
+        <p>paragraph2</p>
+        <p>paragraph3</p>
+    </div>
+    <p>paragraph4</p>
+    <div>
+        <p>paragarpah5</p>
+    </div>
+</body>
+</html>
