@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* unvisited link */
+        a:link {
+            color: red;
+        }
+
+        /* visited link */
+        a:visited {
+            color: hotpink;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: green;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        /* When you hover over the first link below, it will change color and font size:*/
+        a.highlight:hover {
+            color: blueviolet;
+            font-size: 25px;
+        }
+
+        .block {
+            background-color: green;
+            text-align: center;
+            color: white;
+            padding: 25px;
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .block:hover {
+            background-color: blue;
+        }
+        /*The :lang pseudo-class allows you to define special rules for different languages.**/
+        q:lang(no) {
+            quotes: "~""~";
+        }
+        .two p{
+            display: none;
+            background-color: blue;
+            padding: 20px;
+        }
+        .two:hover p{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo Classes</h1>
+    <p><b><a class="highlight" href="https://www.google.com/" target="_blank">www.google.com</a></b></p>
+    <p><b><a href="https://www.google.com/" target="_blank">www.google.com</a></b></p>
+    <p>When we mouse hover on div div color changed to blue</p>
+    <div class="block">
+        Mouse hover
+    </div>
+    <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+    <p>In this example, :lang defines the quotation marks for q elements with lang="no":</p>
+    <div class="two"> hover here to show
+        <p>After hover</p>
+    </div>
+</body>
+
+</html>

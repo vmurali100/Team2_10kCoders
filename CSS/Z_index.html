@@ -6,36 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #parent{
-            width: 500px;
-            height: 300px;
-            border: 1px solid gray;
-            text-align: center;
-            margin: 0 auto;
+        .container{
+            position: relative;
+        }
+        .div1{
             background: red;
+            height: 100px;
+            margin: 30px;
+            position: relative;
+            border: 3px solid black;
+            z-index: 1;
         }
-        #children{
-            width: 300px;
-            background: green;
-            height: 150px;
-            margin: 20px auto;
+        .div2{
+            position: absolute;
+            background: lightgrey;
+            width: 70%;
+            height: 60px;
+            left: 50px;
+            top: 50px;
+            z-index: 3;
         }
-        #second{
-            background: yellow;
-            display: absolute;
+        .div3{
+            position: absolute;
+            background: lightgreen;
+            width: 25%;
+            left: 270px;
+            top: -15px;
+            height: 100px;
             z-index: 2;
-
         }
     </style>
 </head>
 <body>
-    <div id="parent">
-        <div id="children">
-            <h2>Z_index Example</h2>
-        </div>
-    </div>
-    <div id="second">
-        <h2>Second Element</h2>
+    <div class="container">
+        <div class="div1">Black box</div>
+        <div class="div2">grey box</div>
+        <div class="div3">green box</div>
     </div>
 </body>
 </html>

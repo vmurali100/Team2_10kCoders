@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Descendant Selectoer*/
+        div p{
+            background-color: green;
+        }
+        /*Child Selecor*/
+        /*div >p{
+            background-color: green;
+        }*/
+       /* The + selector is used to select an element that is directly after another specific element.
+       Adjacent siblling selector
+       div + p{
+           background-color: green;
+       }*/
+       /*General Sibling Selector
+        The general sibling selector (~) selects all elements that are next siblings of a specified element.
+       div ~p{
+           background-color: green;
+       }*/
+    </style>
+</head>
+<body>
+    <p>Descendent Combinators</p>
+    <div>
+        <div>
+            <p>Paragraph 1 in the div.</p>
+            <p>Paragraph 2 in the div.</p>
+            <section><p>Paragraph 3 in the div.</p></section>
+          </div>
+            <p>new</p>
+    </div>
+    <p>Paragraph 4 not in div.</p>
+</body>
+</html>
