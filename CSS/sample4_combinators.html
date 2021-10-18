@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Element Selector */
+        div{
+            width: 400px;
+            height: 100px;
+            background: red;
+        }
+        /* Id selector */
+        #myDiv{
+            width: 400px;
+            height: 100px;
+            background: grey;
+        }
+        /* class slector */
+
+        .parent{
+            width: 400px;
+            height: 100px;
+            background: hotpink;
+        }
+        
+        /* group selector */
+        div,#myDiv,.parent{
+            border: 2px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- There are four different combinators in CSS:
+
+    descendant selector (space)
+    child selector (>)
+    adjacent sibling selector (+)
+    general sibling selector (~) 
+-->
+<div></div>
+<div id="myDiv"></div>
+<div class="parent"></div>
+</body>
+</html>
