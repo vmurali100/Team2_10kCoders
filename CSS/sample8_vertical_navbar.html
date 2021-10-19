@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .vertical-wrapper {
+        width: 100px;
+        background: lightgray;
+        height: 380px;
+        float: left;
+      }
+      li {
+        /* margin-left: 20px; */
+        list-style: none;
+        margin-bottom: 2px;
+        background: darkgrey;
+        padding-left: 12px;
+        font-family: sans-serif;
+      }
+      li:hover {
+        background: grey;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      #content {
+        width: 500px;
+        float: left;
+        height: 380px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vertical-wrapper">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Gallery</li>
+        <li>Projects</li>
+      </ul>
+    </div>
+
+    <div id="content">
+      <iframe
+        src="https://timesofindia.indiatimes.com/"
+        title="W3Schools Free Online Web Tutorials"
+        width="100%"
+        height="100%"
+      ></iframe>
+    </div>
+  </body>
+</html>
