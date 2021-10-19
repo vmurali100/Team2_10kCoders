@@ -141,7 +141,7 @@ nav ul .last{
 #sidenav ul li:hover{
    background-color:black;
 }
-#sidenav ul li:hover a{
+#sidenav ul li:hover > a{
     color:#C0BAB6;
     font-weight:bold;
 }
@@ -156,9 +156,7 @@ nav ul .last{
     left:270px;
     display:none;
 }
-#sidenav .lastoption ul li a{
-    font-weight:normal;
-}
+
 #sidenav .lastoption:hover{
     background-color:darkgray;
 }
@@ -247,7 +245,7 @@ nav ul .last{
     background-color: #FFFFFF;
     
 }
-/*---------------Section 2 ----------------- */
+/*---------------Section 3 ----------------- */
 #section3{
     line-height:1.6em;
     width:100%;
@@ -292,4 +290,18 @@ nav ul .last{
 #main_footer #right_footer{
     float:right;
     padding:20px 0;
+}
+
+
+
+
+
+#container .aboutus_page_homepage .aboutus_page{
+    padding:50px 0;
+    box-sizing: border-box;
+}
+
+#container #homepage .aboutus_page article{
+    width:960px;
+    text-align:center;
 }
