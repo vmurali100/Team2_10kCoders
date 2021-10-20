@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinations </title>
+    <style>
+        /* 
+        decendente selector - (space)
+        child selector - (>)
+        sibling selector- (+)
+        */
+       #main div{
+            background-color: chartreuse;
+       }
+       #main>div{
+           background-color: coral;
+       }
+       #main+div{
+           background-color: cornflowerblue;
+       }
+       #main~div{
+           background-color: darkgreen;
+       }
+    </style>
+</head>
+<body>
+    <div id=main>
+        <div>
+            <h1>decending one</h1>
+            <div>
+                <h2> last one</h2>
+            </div>
+        </div>
+    </div>
+    <div id=main2>
+        <div>
+            another element
+        </div>
+       
+    </div>
+    <div>
+            finish
+        </div>
+</body>
+</html>
