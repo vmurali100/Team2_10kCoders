@@ -75,6 +75,80 @@ nav a{
     text-decoration:none;
     color:#C0BAB6;
 }
+.row2{
+    position:relative;
+}
+/* ================================================================================================================= */
+
+.row2{
+    position:relative;
+}
+/* ===================================================Side Nav======================================================== */
+
+
+#sidenav{
+    width:275px;
+    position:absolute;
+    display:block;
+    background-color:#ffffff;
+    margin:0 auto;
+}
+#sidenav ul{
+    width:270px;
+    padding:30px 0 0 5px;
+}
+#sidenav ul li{
+    float:none;
+    background-color:#333333;
+    margin-bottom:5px;
+    padding:20px 0px;
+    text-align:center;
+}
+#sidenav ul li a{
+    color:#C0BAB6;
+    text-transform: uppercase;
+}
+
+/* =========hover======== */
+#sidenav ul li:hover{
+   background-color:black;
+}
+#sidenav ul li:hover > a{
+    color:#C0BAB6;
+    font-weight:bold;
+}
+#sidenav .dropdown{
+    position:relative;
+}
+
+#sidenav .dropdown ul{
+    padding:0;
+    position:absolute;
+    top:0;
+    left:270px;
+    display:none;
+}
+
+#sidenav .dropdown:hover{
+    background-color:darkgray;
+}
+#sidenav .dropdown:hover a{
+    color:black;
+}
+#sidenav .dropdown:hover ul li a{
+    color:darkgray;
+}
+
+#sidenav .dropdown:hover ul{
+    display:block;
+}
+
+#sidenav .dropdown ul li:hover a{
+    color:darkgray;
+    font-weight:bold;
+}
+
+/* ================================================================================================================= */
 /*==========================================Container==========================================*/
 #container{
     width:960px;

@@ -145,11 +145,11 @@ nav ul .last{
     color:#C0BAB6;
     font-weight:bold;
 }
-#sidenav .lastoption{
+#sidenav .dropdown{
     position:relative;
 }
 
-#sidenav .lastoption ul{
+#sidenav .dropdown ul{
     padding:0;
     position:absolute;
     top:0;
@@ -157,21 +157,21 @@ nav ul .last{
     display:none;
 }
 
-#sidenav .lastoption:hover{
+#sidenav .dropdown:hover{
     background-color:darkgray;
 }
-#sidenav .lastoption:hover a{
+#sidenav .dropdown:hover a{
     color:black;
 }
-#sidenav .lastoption:hover ul li a{
+#sidenav .dropdown:hover ul li a{
     color:darkgray;
 }
 
-#sidenav .lastoption:hover ul{
+#sidenav .dropdown:hover ul{
     display:block;
 }
 
-#sidenav .lastoption ul li:hover a{
+#sidenav .dropdown ul li:hover a{
     color:darkgray;
     font-weight:bold;
 }

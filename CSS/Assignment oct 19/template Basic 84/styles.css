@@ -108,6 +108,75 @@ nav ul .last{
     margin-right:0;
 }
 /* ================================================================================================================= */
+.row2{
+    position:relative;
+}
+/* ===================================================Side Nav======================================================== */
+
+
+#sidenav{
+    width:275px;
+    position:absolute;
+    display:block;
+    background-color:#ffffff;
+    margin:0 auto;
+}
+#sidenav ul{
+    width:270px;
+    padding:30px 0 0 5px;
+}
+#sidenav ul li{
+    float:none;
+    background-color:#11bdff;
+    margin-bottom:5px;
+    padding:20px 0px;
+    text-align:center;
+}
+#sidenav  a{
+    text-transform: uppercase;
+    color:black;
+}
+
+/* =========hover======== */
+#sidenav ul li:hover{
+   background-color:#0007fe;
+}
+#sidenav ul li:hover > a{
+    color:#C0BAB6;
+    font-weight:bold;
+}
+#sidenav .dropdown{
+    position:relative;
+}
+
+#sidenav .dropdown ul{
+    padding:0;
+    position:absolute;
+    top:0;
+    left:270px;
+    display:none;
+}
+
+#sidenav .dropdown:hover{
+    background-color:darkgray;
+}
+#sidenav .dropdown:hover a{
+    color:black;
+}
+#sidenav .dropdown:hover ul li a{
+    color:black;
+}
+
+#sidenav .dropdown:hover ul{
+    display:block;
+}
+
+#sidenav .dropdown ul li:hover a{
+    color:darkgray;
+    font-weight:bold;
+}
+
+/* ================================================================================================================= */
 
 /* ============================================ Section ============================================  */
 
@@ -248,4 +317,46 @@ nav ul .last{
 #main_footer #right_footer{
     float:right;
     padding:20px 0;
+}
+
+
+
+
+
+
+#section3{
+    line-height:1.6em;
+    width:100%;
+    color: #979797;
+    overflow:auto;
+}
+#section3 h2{
+    font-weight:bold;
+    font-size:16px;
+    font-style:normal;
+    line-height:normal;
+    text-transform:uppercase;
+}
+#section3 p{
+    margin:13px 0;
+}
+#section3 article{
+    float:left;
+    margin-right:20px;
+    width:715px;
+}
+#section3 aside{
+    float:left;
+    width:225px;
+}
+
+
+#container .aboutus_page_homepage .aboutus_page{
+    padding:50px 0;
+    box-sizing: border-box;
+}
+
+#container #homepage .aboutus_page article{
+    width:960px;
+    text-align:center;
 }
