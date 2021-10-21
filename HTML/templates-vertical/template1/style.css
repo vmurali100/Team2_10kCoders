@@ -37,7 +37,7 @@ div.box{
     margin:0 auto;
 }
 
-nav ul{
+.nav ul{
     margin:0; 
     padding:0; 
     list-style:none;}
@@ -176,6 +176,14 @@ input, textarea, select{
     padding:10px;
     line-height: 600%;
 }
+.nav ul>li{
+   padding:0px;
+   cursor:pointer;
+   font-size:18px;
+   text-align:center;
+   margin-left:0px; 
+
+}
 .nav li{
     display:inline;
      margin-right:25px; 
@@ -186,12 +194,16 @@ input, textarea, select{
 .nav li.last{
     margin-right:0;
 }
-.nav li a{
+.nav ul li a{
     color:#C0BAB6; 
     background-color:#232323;
 }
-.nav li a:hover{
+.nav ul li :hover{
     color:#FF9900; 
+    background-color:#232323;
+}
+.nav ul li a:hover{
+    color:#165e6b; 
     background-color:#232323;
 }
 img:hover{
@@ -275,9 +287,10 @@ a{
 }
 .trees{
     display: none;
+    
     background-color: rgb(230, 173, 216);
     color: rgb(207, 120, 20);
   }     
-  #mytrees:hover.trees{
+  #mytrees:hover .trees{
     display: block;
   }       
