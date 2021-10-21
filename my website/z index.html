@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent {
+        width: 500px;
+        background: rgb(22, 11, 11);
+        margin: 0 auto;
+        text-align: center;
+        height: 200px;
+        border: 1px solid red;
+        position:absolute;
+        z-index: 1;
+      }
+      #child {
+        width: 300px;
+        background: lightgreen;
+        height: 200px;
+        margin: 20px auto;
+        position:absolute;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="child">
+        <h2>hell0 prapancham nenu z index ni</h2>
+      </div>
+    </div>
+    <div id="second" style="background: rgb(122, 199, 22);">
+        <h2>I am from Second Element</h2>
+    </div>
+  </body>
+</html>
