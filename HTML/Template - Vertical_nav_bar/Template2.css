@@ -325,6 +325,9 @@ img:hover{
 .drop{
     display: none;
     width: 160px;
+    position: absolute;
+    top: 195px;
+    left: 145px;
 }
 .last:hover .drop{
     display: block;

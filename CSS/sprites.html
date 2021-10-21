@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .sprites{
+            width: 150px;
+            height: 150px;
+        }
+        .top-right{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .bottom-right{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .bottom-left{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .left-top{
+            background: url(./sprote.png);
+            background-position: -30px -20px;
+        }
+        .right-top{
+            background: url(./sprote.png);
+            background-position: -220px -20px;
+        }
+        .bottom-left{
+            background: url(./sprote.png);
+            background-position: -420px 0;
+        }
+        .bottom-right{
+            background: url(./sprote.png);
+            background-position: -220px -190px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sprites left-top"></div>
+    <div class="sprites top-right right-top"></div>
+    <div class="sprites bottom-left left-bottom"></div>
+    <div class="sprites bottom-right right-bottom"></div>
+</body>
+</html>
