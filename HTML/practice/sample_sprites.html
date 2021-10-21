@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprites</title>
+<style>
+    *{
+        margin: 0;
+
+
+    }
+    .sprites{
+        width: 150px; height: 150px; border: 10px solid greenyellow;
+    }
+    .top-left{
+        background: url(./images/arrows.png); background-size: 600px;
+        background-position: -225px 4px ;
+    }
+    .top-right{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background: url(./images/arrows.png); background-size: 600px;
+        background-position: -74px 1px;
+    }
+    .bottom-right{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        background: url(./images/arrows.png); background-size: 600px;
+        background-position: -77px -131px ;
+    }
+    .bottom-left{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background: url(./images/arrows.png); background-size: 600px;
+        background-position: -370px 433px ;
+    }
+</style>
+</head>
+<body>
+    <div class="sprites top-left "></div>
+    <div class="sprites top-right"></div>
+    <div class="sprites bottom-left"></div>
+    <div class="sprites bottom-right"></div>
+</body>
+</html>
