@@ -372,6 +372,8 @@ figure img:hover{
     display:none;
     background-color: white;
     color:rebeccapurple;
+    position: absolute;
+
 }
 #last:hover .others{
     display:block;
