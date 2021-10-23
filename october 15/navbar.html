@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            .dropdown{
+                display: none;
+            }
+            ul{
+                list-style-type: none;
+
+            }
+            #btn:hover .dropdown{
+                display: block;
+            }
+            #btn .dropdown a{
+                border: 1px solid black;
+                padding: 2px;
+                height: 20px;
+                width: 10px;
+                text-decoration: none;
+            }
+            a:hover{
+                color: blueviolet;
+                background-color: cadetblue;
+                height: 20px;
+                width: 10px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="navbar">
+            <ul id="btn">DropButton
+            <div class="dropdown">
+                    <li><a href="#link1">LINK1</a></li>
+                    <li><a href="#link1">LINK1</a></li>
+                    <li><a href="#link1">LINK1</a></li>
+                    <li><a href="#link1">LINK1</a></li>
+                
+            </div>
+            </ul>
+        </div>
+    </body>
+</html>
