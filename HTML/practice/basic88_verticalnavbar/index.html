@@ -33,8 +33,14 @@
         #drop:hover ul{
             display: block;
         }
-        
-        
+        #content aside{
+            position: absolute;
+        }
+        #unorder ul {
+            z-index: 3;
+            position: absolute;
+            width: 200px;
+        }
         </style>
     
 </head>
@@ -54,30 +60,27 @@
 <div id="content">
    
     <div style="overflow: auto; margin: 20px auto;">
-        <aside style="float: left; height: 500px;">
+        <aside style="float: left; height: 500px; width: 200px; margin-left: 0px;">
             <nav>
                 <ul id=unorder>
                    <li><a href="#" style="text-transform: uppercase; color:whitesmoke;text-decoration: none;"> text link</a></li>
                    <li><a href="#" style="text-transform: uppercase; color:whitesmoke;text-decoration: none;"> text link</a></li>
                    <li><a href="#" style="text-transform: uppercase; color:whitesmoke;text-decoration: none;"> text link</a></li>
                    <li id=drop><a href="#" style="text-transform: uppercase; color:whitesmoke;text-decoration: none;"> text link</a>
-                    <ul>
+                    <ul >
                         <li><a href="#" style="text-transform: uppercase; color:whitesmoke;text-decoration: none;"> text link</a></li>
                         <li><a href="#" style="text-transform: uppercase; color:whitesmoke;text-decoration: none;"> text link</a></li>
                         <li><a href="#" style="text-transform: uppercase; color:whitesmoke;text-decoration: none;"> text link</a></li>
                     </ul>
-
                 </li>
                 </ul>
-                
-                
             </nav>
         </aside>
     <div style ="margin: 20px auto; width: 980px;">
         <img style="width: 960px; height: 360px ; border: 10px solid white; " src="/images/avici1.jpeg" alt=" acivii image">
     </div>
     <div>
-        <img style="width : 290px; height:  180px ; margin-left: 104px  ; margin-top: 50px; float: left; border: 10px solid white;" src="/images/wakemeup.jpeg" alt="wakemeup"> 
+        <img style="width : 290px; height:  180px ; margin-left: 266px  ; margin-top: 50px; float: left; border: 10px solid white;" src="/images/wakemeup.jpeg" alt="wakemeup"> 
 
     </div>
     <div>
