@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            #grd{
+                height:200px;
+                width:800px;
+                border-radius: 15px;
+                background-image: linear-gradient(red,yellow,blue);
+                margin-left: 200px;
+            }
+            #grdLR{
+                height:200px;
+                width:800px;
+                border-radius: 50px;
+                background-image: linear-gradient(to right,red,yellow,blue);
+                margin-left: 200px;
+            }
+            #grdTLtoBR{
+                height:200px;
+                width:800px;
+                border-radius: 50px 15px 50px 15px;
+                background-image: linear-gradient(to bottom right,red,yellow,blue);
+                margin-left: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="grd"><p style="padding:40px;font-weight:bold;text-align: center;">Top to bottom</p></div>
+        <div id="grdLR"><p style="padding:40px;font-weight:bold;text-align: center;">Left to Right</p></div>
+        <div id="grdTLtoBR"><p style="padding:40px;font-weight:bold;text-align: center;">TopLeft to BottomRight</p></div>
+    </body>
+</html>
