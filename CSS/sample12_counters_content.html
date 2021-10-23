@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* a::after {
+        content: " (" attr(href) ")";
+      } */
+      a::before{
+          content: "("attr(target)")";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The content Property</h1>
+    <p>The content property is used to insert generated content.</p>
+
+    <p>Look at our:</p>
+    <p>
+      <a href="https://www.w3schools.com/css/" target="_blank">CSS Tutorial</a><br />
+      <a href="https://www.w3schools.com/cssref/" target="_blank">CSS Reference</a>
+    </p>
+  </body>
+</html>
