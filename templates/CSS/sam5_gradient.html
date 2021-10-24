@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient</title>
+    <style>
+        #gradient1{
+            background-image: linear-gradient(0deg, blue, yellow,green);
+            height: 100px;
+            padding: 10px;
+            text-align: center;
+
+        }
+        #head{
+            text-align: center;
+            color: blue;
+        }
+        #gradient2{
+            height: 100px;
+            background-image: repeating-radial-gradient(rgb(255, 0, 0), pink 10%, green 15%);
+            text-align: center;
+            padding: 10px;
+
+        }
+        #gradient3{
+            height: 200px;
+            padding: 20px;
+            text-align: center;
+            background-image: conic-gradient(red, yellow, green, blue, black);
+            width:200px;
+            color:white;
+            float:left;
+            margin:20px;
+        }
+        #gradient4{
+            height: 200px;
+            padding: 20px;
+            text-align: center;
+            width:200px;
+            float:left;
+            background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">   <h1>Gradients</h1></div><br>
+<div id="gradient1"><h1>Linear Gradient</h1></div><br>
+<div id="gradient2"><h1>Radial Gradient</h1></div><br>
+<div id="gradient3"><h1>Conic Gradient</h1></div><br>    
+<div id="gradient4"><h1>Conic Gradient1</h1></div><br>    
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            counter-reset: Technology;
+        }
+        #child h2::before{
+            counter-increment: Technology;
+            content: "Technology" counter(Technology)  " : " ;
+
+        }
+        #one {
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div id=one><h1>Full Stack Developer</h1></div>    <br>
+    <div id="child">
+        <h2>HTML</h2>
+        <h2>CSS</h2>
+        <h2>Java Script</h2>
+        <h2>React</h2>
+        <h2>Node JS</h2>
+        <h2>Mongo DB</h2>
+        <h2>My SQL</h2>
+    </div><br>
+</body>
+</html>
