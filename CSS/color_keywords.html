@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(./bg.gif);
+        }
+
+        .div1 {
+            border: 2px solid black;
+            background-color: lightgreen;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .div2 {
+            border: 2px solid black;
+            background-color: transparent;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .div3 {
+            color: green;
+            border: 10px solid currentColor;
+            padding: 20px;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        div {
+            border: 2px solid red;
+        }
+
+        span {
+            border: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">Green Background</div>
+    <div class="div2">Transprent Background</div>
+    <p>The currentcolor keyword is like a variable that holds the current value of the color property of an element.</p>
+    <div class="div3">currentcolor</div>
+
+    <h2>The inherit Keyword</h2>
+
+    <div>Here, the <span>span element's</span> border settings will be inherited from the parent element.</div>
+    <br>
+
+    <div style="border:2px dotted blue;">Here, the <span>span element's</span> border settings will also be inherited
+        from the parent element.</div>
+</body>
+
+</html>

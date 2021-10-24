@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image {
+            background-image: url(./back2.jpg), url(./back2.jpg), url(./bg\ \(2\).jpg);
+            background-position: right bottom, bottom left, left top;
+            background-repeat: no-repeat, no-repeat, repeat;
+            background-blend-mode: multiply;
+            padding: 20px;
+        }
+
+        p {
+            font-weight: bold;
+        }
+
+        .div2 {
+            border: 3px solid black;
+            height: 200px;
+            width: 200px;
+            background: url(./back2.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .div3 {
+            border: 3px solid black;
+            height: 200px;
+            width: 200px;
+            background: url(./back2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .div4 {
+            border: 3px solid black;
+            height: 200px;
+            width: 200px;
+            background: url(./back2.jpg);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="image">
+        <h1>Background Images In CSS</h1>
+        <p>Rama Rao hosted the reality show, Bigg Boss 1 that was broadcast on the Star Maa. Rama Rao's television debut
+            was a huge success and had a record breaking ratings for Star Maa, making it the number one channel among
+            all the shows.[39] The show began airing from 16 July 2017.[40] He has also been as a guest in Telugu
+            reality game show Meelo Evaru Koteeswarudu[41][42] and Telugu reality dance shows Dhee 2 and Dhee 10.[43] In
+            February 2021, he was confirmed to be the host of Evaru Meelo Koteeswarulu.[44] Later, on 10 July 2021, he
+            joined the production of the show.</p>
+        <p> and had a record breaking ratings for Star Maa, making it the number one channel among all the shows.[39]
+            The show began airing from 16 July 2017.[40] He has also been as a guest in Telugu reality game show Meelo
+            Evaru Koteeswarudu[41][42] and Telugu reality dance shows Dhee 2 and Dhee 10.[43] In February 2021, he was
+            confirmed to be the host of Evaru Meelo Koteeswarulu.[44] Later, on 10 July 2021, he joined the production
+            of the show.</p>
+        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+            commodo consequat.</p>
+
+    </div>
+
+    <h1>The background-size Property</h1>
+
+    <h2>background-size: contain:</h2>
+    <p>The contain keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area).</p>
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <h2>background-size: cover:</h2>
+    <p>The cover keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). </p>
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <h2>No background-size defined:</h2>
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+</body>
+
+</html>

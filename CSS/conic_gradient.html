@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: green;
+            background-image: conic-gradient(red,green,yellow,blue,black);
+        }
+        .div2{
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: green;
+            background-image: conic-gradient(red 90deg,red,green,yellow,blue,black);
+        }
+        .div3{
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: green;
+            background-image: conic-gradient(red,green,yellow,blue,black);
+            border-radius: 50%;
+        }
+        .div4{
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: green;
+            background-image: conic-gradient(red 0deg,red 90deg,green 90deg,green 180deg,yellow 180deg,yellow 270deg,orange 270deg,orange 300deg,blue 300deg,blue 360deg);
+            border-radius: 50%;
+        }
+        .div5{
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: green;
+            background-image: conic-gradient(from 250deg,red,green,yellow,blue,black);
+            border-radius: 50%;
+        }
+        .div6{
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: green;
+            background-image: conic-gradient(at 50% 40%,red,green,yellow,blue,black);
+            border-radius: 50%;
+        }
+        .div7{
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: green;
+            background-image: repeating-conic-gradient(red 10%,blue 20%);
+            border-radius: 50%;
+        }
+        .div8{
+            height: 200px;
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            background-color: green;
+            background-image: repeating-conic-gradient(red 0deg 10deg,blue 10deg 20deg,yellow 20deg 30deg,green 30deg 40deg);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conic Gradient</h1>
+    <div class="div1"></div>
+    <p>with degree</p>
+    <div class="div2"></div>
+    <p>Just add border-radius: 50% to make the conic gradient look like a pie:</p>
+    <div class="div3"></div>
+    <p>Here is another pie chart with defined degrees for all the colors:</p>
+    <div class="div4"></div>
+    <p>The [from angle] specifies an angle that the entire conic gradient is rotated by.</p>
+    <div class="div5"></div>
+    <p>The [at position] specifies the center of the conic gradient.</p>
+    <div class="div6"></div>
+    <p>repeating-conic-gradient</p>
+    <div class="div7"></div>
+    <p>A repeating conic gradient with defined color-starts and color-stops:</p>
+    <div class="div8"></div>
+</body>
+</html>

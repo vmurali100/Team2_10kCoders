@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            height: 40px;
+            width: calc(100% - 100px);
+            border: 1px solid black;
+            background-color: yellow;
+            padding: 5px;
+            /* position: absolute;
+            left: 50px; */
+        }
+        #div2{
+            background: yellow;
+            height: 100px;
+            width: max(10%,500px);
+            margin: 10px;
+        }
+        #div3{
+            background: yellow;
+            height: 100px;
+            width: min(10%,500px);
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Match calc()</p>
+    <div id="div1">Text...</div>
+    <div id="div2">Div2.....</div>
+    <div id="div3">Div3.....</div>
+</body>
+
+</html>
