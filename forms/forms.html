@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:10px ;
+        }
+#username, #password,#email,#date,#time,#search,#number,#value{
+    color: blue;
+    background-color: rosybrown;
+    width: 200px;
+}
+body{
+    background-color: aqua;
+}
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="username">User Name:</label>
+      <input type="text" id="username" /><br/>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" /> <br />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required /> <br />
+
+      <label for="date">Date</label>
+      <input type="date" id="date" /> <br />
+
+      <label for="time">Time</label>
+      <input type="time" id="time" /> <br />
+
+      <label for="search">Search</label>
+      <input type="search" id="search" /> <br />
+
+      <label for="number">Number</label>
+      <input type="number" id="number" /> <br />
+
+      <label for="number">State Name :</label>
+      <select name="" id="value">
+        <option value="">andhra pradesh</option>
+        <option value="">karnataka</option>
+        <option value="">tamilnadu</option>
+        <option value="">kerala</option>
+      </select>
+      <br />
+      <label for="number">Gender</label>
+      <input type="radio" name="" id="gender"/>Male
+      <input type="radio" name="" id="gender"/>Female <br />
+
+      <label for="number">Sybhects</label>
+      
+      <input type="checkbox" name="" id="topic" /> HTML 5
+      <input type="checkbox" name="" id="topic" /> CSS
+      <input type="checkbox" name="" id="topic" /> JS
+      <input type="checkbox" name="" id="topic" /> ReactJS
+
+      <br />
+
+      <button type="button">SUBMIT </button>
+    </form>
+  </body>
+</html>
