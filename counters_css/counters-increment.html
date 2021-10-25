@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            counter-reset: subject;
+            background-color: cadetblue;
+            padding: 0 0 0 20px;
+            margin: 0%;
+        
+        }
+        h2::before{
+            counter-increment: subject;
+            content: "subject"counter(subject)":";
+        }
+        ::content{
+            color: blue;
+        }
+        h1{
+            color: crimson;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 50px;
+        }
+        
+        h2{
+            color:yellow;
+            font-size: 35px;
+        }
+        </style>
+</head>
+<body>
+    <h1 >using css counters</h1>
+
+    <h2 >html tutorial</h2>
+    <h2>css</h2>
+    <h2>javascript</h2>
+    <h2>python</h2>
+    <h2>sql tutorial</h2>
+</body>
+</html>
