@@ -48,6 +48,7 @@
         }
         li:hover{
             color: red;
+        }
     </style>
 </head>
 <body>
@@ -101,7 +102,7 @@
         var myPlayer = document.getElementById("myAudio")
 
         document.getElementById("mySongs").onclick = function (event) {
-            myPlayer.setAttribute("src",`./${event.target.innerHTML}.mp3)
+            myPlayer.setAttribute("src",`./${event.target.innerHTML}.mp3`)
             if(myPlayer.paused){
                 myPlayer.play()
          }else{
