@@ -13,7 +13,14 @@
 <button onclick="touchMe()"> Touch Me</button> <br>
 <button onmouseover="overMe()">click Me</button> <br>
 <button ondblclick="doubleMe()">Double Click</button> <br> <br>
-<button onmouseout="mouseOut()">Mouse Out</button>
+<button onmouseout="mouseOut()">Mouse Out</button> <br>
+<input type="text" id="" name="" onfocus="focus()" onblur="blured()" >
+<select name="" id="" onchange="changeEvent()">
+ <option value="one">one</option>
+ <option value="two">two</option>
+ <option value="three">three</option>
+
+</select>
 <script>
     /*function playGame() {
 
@@ -33,6 +40,15 @@
     function mouseOut() {
         alert("hello from the MOUSEOUT side....")
     }
+  function focus(){
+      console.log("blured the field..........")
+  }
+  function blured(){
+      console.log("focused on me..........")
+  }
+  function changeEvent(){
+    console.log("changed the option..........")
+  }
 </script>
 
 <body>
