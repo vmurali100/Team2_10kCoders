@@ -8,7 +8,16 @@
 </head>
 <body>
 <button onclick="clickMe()">Click Me</button>
+<button onmouseover="hoverme()">Hover Me</button>
+<button onmouseout="goOutFromMe()">GO Out of Me </button>
 
+<input type="text" name="" id="" onfocus="justFocused()" onblur="justBlured()">
+<select name="" id="" onchange="OptChangeEvent()">
+    <option value="opt1">Option1</option>
+    <option value="opt1">Option1</option>
+    <option value="opt1">Option1</option>
+    <option value="opt1">Option1</option>
+</select>
 <!-- Click
 dobleClick
 Mouseover
@@ -19,8 +28,28 @@ mouseover - onmouseover
 doublelcik- ondoubleclick -->
 
 <script>
+    function OptChangeEvent() {
+        console.log("OptChangeEvent Happend Here .....")
+    }
+    
+    function justBlured() {
+        console.log("You Just Blurred... or gone Out of Input Field")
+    }
+
+    function justFocused() {
+        console.log("You Just Focused on Me !!! ... Or entered in input Field!!!")
+    }
+
     function clickMe() {
         alert("Hello , You Clicked me !!!!")
+    }
+
+    function hoverme(){
+        console.log("You Just Hovered ")
+    }
+
+    function goOutFromMe() {
+        console.log("Gone Out Of Me")
     }
 </script>
 </body>
