@@ -10,9 +10,9 @@
             list-style: none;
         }
         .container{
-            width:50%;
+            width:30%;
             height:500px;
-            margin:0 auto;
+            margin:7% auto;
             background-color:lightgrey;
         }
         audio{
@@ -32,7 +32,7 @@
         section ul{
             padding:0;
         }
-        section ul li{
+        section  ul  li{
             background-color:lightslategray;
             margin-bottom:5px;
             padding:5px;
@@ -41,12 +41,26 @@
         section ul .title .songs_list li{
             background-color:lightgrey;
             display:none;
+            font-weight:normal;
+            font-size:16px;
+        }
+        section ul .title:hover{
+            font-size:20px;
+            font-weight:bold;
+            color:#232323;
+        }
+        section ul #marqueeli{
+            /* display:none; */
+            visibility : hidden;
+            background:lightgrey;
         }
         section ul .title:hover .songs_list li{
             display: block;
             cursor: pointer;
         }
-        
+        section ul .title .songs_list li:hover{
+            background:lightpink;
+        }
     </style>
 </head>
 <body>
@@ -54,13 +68,14 @@
         <figure>
             <img src="./Images/visulizer.jfif" alt="visulizer">
         </figure>
-        <audio controls id="audio" src="./Music/Srivalli.mp3" type="audio/mpeg"></audio>
+        <audio controls id="audio" src="#" type="audio/mpeg"></audio>
         <section>
             <ul id="songs">
-                <li class="title"> Pushpa
+                <li id="marqueeli"><marquee behavior="" direction="" id="marquee"></marquee></li>
+                <li class="title">Pushpa
                     <ul class="songs_list">
-                        <li>Daakko Daakko Meka</li>
                         <li>Srivalli</li>
+                        <li>Daakko Daakko Meka</li>
                     </ul>
                 </li>
                 <li class="title">Bachelor
@@ -79,15 +94,22 @@
         document.getElementById("songs").onclick = function(event)
         {
             var song = event.target.innerHTML;
-            myaudioplayer.setAttribute("src",`./Music/${song}.mp3`)
+            myaudioplayer.setAttribute("src",`./Music/${song}.mp3`);
+            document.getElementById("marquee").innerHTML = "now playing "+song+"...";
+            
             if(myaudioplayer.paused)
             {
                 myaudioplayer.play();
+                document.getElementById("marqueeli").style.visibility = 'visible';
+
             }
-            else{
+            else
+            {
                 myaudioplayer.pause();
+                document.getElementById("marqueeli").style.visibility = 'hidden';
             }
         }
+           
     </script>
     
 </body>
