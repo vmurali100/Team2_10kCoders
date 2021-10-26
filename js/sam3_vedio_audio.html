@@ -6,19 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       div{
-        width:800px;
-        margin:auto;
-        text-align:center;
-    } 
-
+        body{
+            width:400px;
+            text-align: center;
+            height:300px;
+        }
+        #buttons{
+            text-align: center;
+            padding: 10px;
+        }
     </style>
 </head>
-<body>    
-    <div>
-        <vedio controls with="600px">
-            <source src="./ishq.mp4" type="vedio/mp4">
+<body>
+    <div id="buttons">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+    </div>
+   
+    <div id="vedio">
+        <video controls id="myvideo" width="400px" height="400px">
+            <source src="./vedio.mp4" type="video/mp4">
         </vedio>
-    </div>   
+    </div> 
+    <script>
+        var videoEelement = document.getElementById("myvideo")
+
+        function playPause() {
+
+            if (videoEelement.paused) {
+                videoEelement.play()
+            } else {
+                videoEelement.pause()
+            }
+        }
+        function makeBig() {
+            videoEelement.style.width="900px"
+        }
+        function makeSmall() {
+            videoEelement.style.width="600px"
+        }
+
+        function makeNormal() {
+            videoEelement.style.width=""
+
+        }
+    </script>  
 </body>
 </html>
