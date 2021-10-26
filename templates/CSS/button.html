@@ -7,13 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="clickMe()" >ClickMe</button>
-    <button ondblclick="dblClick()">Double click</button>
-    <button onmouseover="mouseOver()">Mouse Over</button>
-    <button onmousedown="mouseOut()">Mouse Out</button>
-
-    <input type="text " name="" Onfocus="onFocus()" Blur="blur()">
-
+    <button onclick="clickMe()" >ClickMe</button> <br><br>
+    <button ondblclick="dblClick()">Double click</button><br><br>
+    <button onmouseover="mouseOver()">Mouse Over</button><br><br>
+    <button onmousedown="mouseOut()">Mouse Out</button><br><br>
+    <label for="text">Name</label>
+    <input type="text" name="" id="" onfocus="justFocused()" onblur="justBlured()"> <br><br>
+    <label for="number">Education</label>
+    <select name="" id="" onchange="OptChangeEvent()">
+        <option value="opt1">B.tech</option>
+        <option value="opt1">Inter</option>
+        <option value="opt1">SSC</option>
+        <option value="opt1">Other</option>
+    </select>
 
     <script>
         function clickMe(){
@@ -28,10 +34,10 @@
         function mouseOut(){
             console.log("hello,u mouse out on me")
         }
-        function onFocus(){
+        function justFocus(){
             console.log("You Entered a text")
         }
-        function blur(){
+        function justBlured(){
             console.log("u blurred on me")
         }
         
