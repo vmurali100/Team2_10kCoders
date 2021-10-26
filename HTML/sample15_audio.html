@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <audio controls id="myAudio">
+        <source src="./Srivalli.mp3" type="audio/mpeg" >
+    </audio>
+
+    <ul id="mySongs">
+        <li>Srivalli</li>
+        <li>Madhura Nagarilo</li>
+    </ul>
+
+    <!-- <button onclick="playSongs()">Play/Pause</button> -->
+
+    <script>
+        var myPlayer = document.getElementById("myAudio")
+
+        document.getElementById("mySongs").onclick = function (event) {
+            myPlayer.setAttribute("src",`./${event.target.innerHTML}.mp3`)
+            if(myPlayer.paused){
+                myPlayer.play()
+         }else{
+                myPlayer.pause()
+            }
+        }
+        function playSongs() {
+            if (myPlayer.paused) {
+                myPlayer.play()
+            } else {
+                myPlayer.pause()
+            }
+        }
+    </script>
+</body>
+
+</html>
