@@ -12,19 +12,27 @@
     <button onmouseover="mouseOver()">Mouse Over</button>
     <button onmousedown="mouseOut()">Mouse Out</button>
 
+    <input type="text " name="" Onfocus="onFocus()" Blur="blur()">
+
 
     <script>
         function clickMe(){
             alert("hello,u clicked me")
         }
         function dblClick(){
-            alert("hello, doubleclick on me")
+            console.log("hello, doubleclick on me")
         }
         function mouseOver(){
-            alert("hello,u mouse over on me")
+            console.log("hello,u mouse over on me")
         }
         function mouseOut(){
-            alert("hello,u mouse out on me")
+            console.log("hello,u mouse out on me")
+        }
+        function onFocus(){
+            console.log("You Entered a text")
+        }
+        function blur(){
+            console.log("u blurred on me")
         }
         
     </script>
