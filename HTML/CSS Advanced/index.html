@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advanced </title>
+<style>
+    
+     body{
+        counter-reset: No
+    }
+    h2{
+        counter-reset: one;
+        
+    }
+    #counter h2::before{
+         counter-increment: No;
+         content: "Rollno "counter(No)".";
+     }
+     #counter h3::before{
+         counter-increment: one;
+         content: counter(No) "." counter(one) " ";
+     }
+    #counter{
+        width: calc(100% - 200px);
+        background-color: turquoise;
+        background-image: conic-gradient(green,blue,yellow,white,maroon);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        border: 20px solid;
+        padding: 25px;
+        border-radius: 20px;
+        border-image: url(/images/158-1582742_images-of-border-spacehero-bamboo-frames-and-borders.png) 60 round  ;
+        margin-top: 100px;
+        margin-bottom: 50px;
+
+    }
+    #counter h2{
+        text-align: center;
+        text-shadow: blueviolet 10px 1px 5px;
+        font-size: 3vw;
+
+        
+    }
+    #counter h3{
+        text-align: center;
+        text-shadow: lightgreen 10px 1px 5px;
+        font-size: 2vw;
+        
+    }
+    #content{
+        box-shadow: brown 20px 29px 20px;
+    }
+    @font-face{
+        font-family: myFontForh1;
+        src: url(/fonts/sansation_light.woff);
+    }
+  
+ #counter h1{
+  font-family: myFontForh1;
+  color: blueviolet;
+  text-align: center;
+  font-size: 5vw;
+}
+.two{
+  
+    
+}
+    
+</style>
+
+</head>
+<body>
+    <div id="counter">
+        <h1>WORLD TOP DJS</h1>
+   <h2>skrillex</h2>
+   <h3>amarican dj</h3>
+   <h3>dubstep</h3>
+   <h2>avicii</h2>
+   <h3>amarican dj</h3>
+   <h3>dubstep</h3>
+   <h2>marshmello</h2>
+   <h3>amarican dj</h3>
+   <h3>dubstep</h3>
+   <h2>david guetta</h2>
+   <h3>amarican dj</h3>
+   <h3>dubstep</h3>
+   <h2>martin garrix</h2>
+   <h3>amarican dj</h3>
+   <h3>dubstep</h3>
+   <h2>zedd</h2>
+   <h3>amarican dj</h3>
+   <h3>dubstep</h3>
+</div>
+<hr>
+<div id="counter" class="two" style=" background: url(/images/colourfull_background.jpeg)  right top  repeat-y ,  url(/images/wakemeup.jpeg) left bottom repeat-y;  ">
+    <h1>WORLD TOP DJS</h1>
+<h2>skrillex</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>avicii</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>marshmello</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>david guetta</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>martin garrix</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>zedd</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+</div>
+<hr>
+<div id="counter" class="three" style="background: linear-gradient(orange,white,green);">
+    <h1>WORLD TOP DJS</h1>
+<h2>skrillex</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>avicii</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>marshmello</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>david guetta</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>martin garrix</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+<h2>zedd</h2>
+<h3>amarican dj</h3>
+<h3>dubstep</h3>
+</div>
+</body>
+</html>
