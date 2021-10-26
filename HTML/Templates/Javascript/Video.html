@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div style.text-align="center">
+       <button onclick="playPause()">Play/Pause</button>
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="normal()">Normal</button>
+</div>
+    <div>
+       <video controls Id="myvideo">
+           <source src="./WhatsApp Video 2021-07-14 at 9.19.14 PM.mp4" type="video/mp4">
+       </video>
+    </div>
+    <script>
+        var Signatureday=document.getElementById("myvideo")
+        function playPause(){
+
+            if (Signatureday.paused){
+                Signatureday.play()
+            }else{
+                Signatureday.pause()
+            }
+        }
+        function makeBig() {
+            Signatureday.style.width="500px"
+        }
+        function makeSmall() {
+            Signatureday.style.width="300px"
+        }
+        function makeNormal() {
+            Signatureday.style.width="400px"}
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        counter-reset: section;
+      }
+
+     h2::before{
+         counter-increment: section;
+         content:"section"counter(section) ":";
+
+     }
+    </style>
+  </head>
+  <body>
+    <h1>Educational Qualifications</h1>
+
+    <h2>Secondary School certificate</h2>
+    <h2>Board of Intermediate</h2>
+    <h2>Diploma</h2>
+    <h2>Bacheolar of Technology</h2>
+    <h2>Master of technology</h2>
+  </body>
+</html>
