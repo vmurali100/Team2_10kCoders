@@ -6,33 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>funtions</title>
-    
-</head>
-<h1 id=one >welcome to javascript</h1>
 
-<button onclick="touchMe()"> Touch Me</button>
-<button onmouseover="overMe()">click Me</button>
-<button ondblclick="doubleMe()">Double Click</button>
+</head>
+<h1 id=one>welcome to javascript</h1>
+
+<button onclick="touchMe()"> Touch Me</button> <br>
+<button onmouseover="overMe()">click Me</button> <br>
+<button ondblclick="doubleMe()">Double Click</button> <br> <br>
+<button onmouseout="mouseOut()">Mouse Out</button>
 <script>
     /*function playGame() {
 
     }
     playGame()*/
     document.getElementById("one").style.color = "red";
-     
-    function touchMe(){
+
+    function touchMe() {
         alert("hello from the aother side....")
     }
-    function overMe(){
-       document.write("hello from the aother side....")
+    function overMe() {
+        console.log("hello from the mouseover side....")
     }
-    function doubleMe(){
-       document.write("hello from the aother side....")
+    function doubleMe() {
+        alert("hello from the double click side....")
     }
-
-
-
+    function mouseOut() {
+        alert("hello from the MOUSEOUT side....")
+    }
 </script>
+
 <body>
 
 </body>
