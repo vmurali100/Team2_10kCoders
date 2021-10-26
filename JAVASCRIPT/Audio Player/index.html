@@ -54,9 +54,9 @@
         <figure>
             <img src="./Images/visulizer.jfif" alt="visulizer">
         </figure>
-        <audio controls id="audio" src="./Music/Pushpa/Srivalli.mp3" type="audio/mpeg"></audio>
+        <audio controls id="audio" src="./Music/Srivalli.mp3" type="audio/mpeg"></audio>
         <section>
-            <ul>
+            <ul id="songs">
                 <li class="title"> Pushpa
                     <ul class="songs_list">
                         <li>Daakko Daakko Meka</li>
@@ -73,7 +73,22 @@
             </ul>
         </section>
     </div>
+    <script>
+        var myaudioplayer = document.getElementById("audio");
 
+        document.getElementById("songs").onclick = function(event)
+        {
+            var song = event.target.innerHTML;
+            myaudioplayer.setAttribute("src",`./Music/${song}.mp3`)
+            if(myaudioplayer.paused)
+            {
+                myaudioplayer.play();
+            }
+            else{
+                myaudioplayer.pause();
+            }
+        }
+    </script>
     
 </body>
 </html>
