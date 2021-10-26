@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="playPause()">play/pause</button>
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">small</button>
+    <button onclick="makeNormal()">normal</button>
+    <div>
+        <video controls id="myvideo">
+            <source src="./video/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        var videoElement = document.getElementById('myvideo')
+
+        function playPause() {
+            if (videoElement.paused) {
+                videoElement.play()
+            } else {
+                videoElement.pause()
+            }
+        }
+        function makeBig(){
+            videoElement.style.width="900px"
+        }
+        function makeSmall(){
+            videoElement.style.width="400px"
+        }
+        function makeNormal(){
+            videoElement.style.width=""
+        }
+    </script>
+</body>
+
+</html>

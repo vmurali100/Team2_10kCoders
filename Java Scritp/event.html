@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clickMe()"> Click Me</button><br><br>
+    <button ondblclick="dblClick()"> Click Me</button><br><br>
+    <button onmouseover="mouseOver()"> Click Me</button><br><br>
+    <button onmouseout="mouseOut()"> Click Me</button><br><br>
+    <input type="text" onfocus="onFocus()" onblur="onBlur()"><br><br>
+    <select onchange="onChange()" id="" name=""> 
+        <option value="op1">option1</option>
+        <option value="op1">option2</option>
+        <option value="op1">option3</option>
+        <option value="op1">option4</option>
+    </select>
+    <script>
+        function clickMe(){
+            alert('clicked')
+        }
+        function dblClick(){
+            // alert('dblclick..')
+            console.log('clicked')
+        }
+        function mouseOver(){
+            alert('mouseover..')
+            console.log('clicked')
+        }
+        function mouseOut(){
+            alert('mouseout..')
+        }
+        function onFocus(){
+            console.log('focused')
+        }
+        function onBlur(){
+            console.log('blured')
+        }
+        function onChange(){
+            console.log('option');
+        }
+        function onChange(){
+            console.log('change option happended...')
+        }
+    </script>
+</body>
+</html>
