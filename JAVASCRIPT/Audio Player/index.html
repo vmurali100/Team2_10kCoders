@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+        ul li{
+            list-style: none;
+        }
+        .container{
+            width:50%;
+            height:500px;
+            margin:0 auto;
+            background-color:lightgrey;
+        }
+        audio{
+            margin:0 auto;
+            display:block;
+        }
+        figure img{
+            width:300px;
+            height:200px;
+            display:block;
+            margin:0 auto;
+        }
+        section{
+            width:300px;
+            margin:0 auto;
+        }
+        section ul{
+            padding:0;
+        }
+        section ul li{
+            background-color:lightslategray;
+            margin-bottom:5px;
+            padding:5px;
+            text-align:center;
+        }
+        section ul .title .songs_list li{
+            background-color:lightgrey;
+            display:none;
+        }
+        section ul .title:hover .songs_list li{
+            display: block;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <figure>
+            <img src="./Images/visulizer.jfif" alt="visulizer">
+        </figure>
+        <audio controls id="audio" src="./Music/Pushpa/Srivalli.mp3" type="audio/mpeg"></audio>
+        <section>
+            <ul>
+                <li class="title"> Pushpa
+                    <ul class="songs_list">
+                        <li>Daakko Daakko Meka</li>
+                        <li>Srivalli</li>
+                    </ul>
+                </li>
+                <li class="title">Bachelor
+                    <ul class="songs_list">
+                        <li>Guche Gulabi</li>
+                        <li>Manasa Manasa</li>
+                        <li>Ye Zindagi</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    
+</body>
+</html>
