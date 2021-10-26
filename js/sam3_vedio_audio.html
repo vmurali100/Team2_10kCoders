@@ -29,7 +29,25 @@
             text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             
         }
+        ul {
+            counter-reset: section;
+            list-style-type: none;
+            }
 
+        li::before {
+            counter-increment: section;
+            content: counters(section,"") ".";
+        }
+        li{
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        button:hover{
+            color: red;
+        }
+        li:hover{
+            color: red;
     </style>
 </head>
 <body>
@@ -45,7 +63,7 @@
         <video controls id="myvideo" width="400px" height="400px">
             <source src="./vedio.mp4" type="video/mp4">
         </vedio>
-    </div> 
+    </div> <br><br><br>
     <script>
         var videoEelement = document.getElementById("myvideo")
 
@@ -68,6 +86,36 @@
             videoEelement.style.width=""
 
         }
-    </script>  
+        
+    </script> 
+     <audio controls id="myAudio">
+        <source src="./jaanu.mp3" type="audio/mp3" >
+    </audio>
+
+    <ul id="mySongs">
+        <li>Jaanu</li>
+        <li>Ae dil hey</li>
+    </ul>
+
+    <script>
+        var myPlayer = document.getElementById("myAudio")
+
+        document.getElementById("mySongs").onclick = function (event) {
+            myPlayer.setAttribute("src",`./${event.target.innerHTML}.mp3)
+            if(myPlayer.paused){
+                myPlayer.play()
+         }else{
+                myPlayer.pause()
+            }
+        }
+        function playSongs() {
+            if (myPlayer.paused) {
+                myPlayer.play()
+            } else {
+                myPlayer.pause()
+            }
+        }
+        
+    </script> 
 </body>
 </html>
