@@ -22,13 +22,15 @@
             margin: 0 auto;
             text-align: center;
             padding-top: 380px;
+
         }
 
         audio {
             border-radius: 20px;
-            width:300px;
+            width: 100px;
             background: color rgb(201, 6, 6);
             padding-bottom: 0%;
+        
         }
 
         ul {
@@ -55,55 +57,37 @@
         }
     </style>
 </head>
+<audio controls id="audio" >
+   
+    <source src="./Ghani Anthem.mp3" type="audio/mpeg" >
+</audio>
 
 <body>
     <div id="main">
+        <div id="mm">
             <ul id="songs">
-                <li> <audio controls >
-                    <source src="./[iSongs.info] 02 - Ghani Anthem.mp3" type="audio/mpeg" id="audio">
-                </audio></li>
-                <li> <audio controls >
-                    <source src="./[iSongs.info] 02 - Nee Chitram Choosi.mp3" type="audio/mpeg" id="audio">
-                </audio></li>
-                <li> <audio controls >
-                    <source src="./[iSongs.info] 02 - Srivalli.mp3" type="audio/mpeg" id="audio">
-                </audio></li>
-                <li>   <audio controls >
-                    <source src="./[iSongs.info] 03 - Saami Saami (Promo).mp3" type="audio/mpeg" id="audio">
-                </audio></li>
+                <li>Ghani Anthem</li>
+                <li>Nee chitram</li>
+                <li>srivalli</li>
+                <li>saami saami</li>
             </ul>
+
+        </div>
     </div>
 
     <script>
         var myPlayer = document.getElementById("audio")
 
         document.getElementById("songs").onclick = function (event) {
-            console.log(event.target.innerHTML)
-            myPlayer.setAttribute("src",`${event.target.innerHTML}.mp3`)
+            myPlayer.setAttribute("src", `./${event.target.innerHTML}.mp3`)
             if (myPlayer.paused) {
-                myPlayer.play();
+                myPlayer.play()
             } else {
-                myPlayer.pause();
+                myPlayer.pause()
             }
         }
-        if (myPlayer.paused) {
-                myPlayer.play();
-            } else {
-                myPlayer.pause();
-            }
-        }
-        if (myPlayer.paused) {
-                myPlayer.play();
-            } else {
-                myPlayer.pause();
-            }
-        }
-        if (myPlayer.paused) {
-                myPlayer.play();
-            } else {
-                myPlayer.pause();
-            }
-        }
+
+
     </script>
 </body>
 
