@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birayni</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        background: peru;
+        padding: 15px;
+      }
+      .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .menu ul li {
+        background-color: wheat;
+        margin-bottom: 7px;
+        padding: 8px;
+      }
+      aside {
+      }
+      [class*="col-"] {
+        float: left;
+        padding: 15px;
+      }
+
+      /* mobile */
+      @media only screen and (max-width: 500px) {
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+
+      /* tablet */
+      @media only screen and (min-width: 500px) {
+        .col-s-1 {
+          width: 8.33%;
+        }
+        .col-s-2 {
+          width: 16.66%;
+        }
+        .col-s-3 {
+          width: 25%;
+        }
+        .col-s-4 {
+          width: 33.33%;
+        }
+        .col-s-5 {
+          width: 41.66%;
+        }
+        .col-s-6 {
+          width: 50%;
+        }
+        .col-s-7 {
+          width: 58.33%;
+        }
+        .col-s-8 {
+          width: 66.66%;
+        }
+        .col-s-9 {
+          width: 75%;
+        }
+        .col-s-10 {
+          width: 83.33%;
+        }
+        .col-s-11 {
+          width: 91.66%;
+        }
+        .col-s-12 {
+          width: 100%;
+        }
+      }
+
+      /* Desktop */
+      @media only screen and (min-width: 790px) {
+        .col-1 {
+          width: 8.33%;
+        }
+        .col-2 {
+          width: 16.66%;
+        }
+        .col-3 {
+          width: 25%;
+        }
+        .col-4 {
+          width: 33.33%;
+        }
+        .col-5 {
+          width: 41.66%;
+        }
+        .col-6 {
+          width: 50%;
+        }
+        .col-7 {
+          width: 58.33%;
+        }
+        .col-8 {
+          width: 66.66%;
+        }
+        .col-9 {
+          width: 75%;
+        }
+        .col-10 {
+          width: 83.33%;
+        }
+        .col-11 {
+          width: 91.66%;
+        }
+        .col-12 {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Biryani</h1>
+    </div>
+    <div class="menu col-s-3 col-3">
+      <ul>
+        <li>Chicken Biryani</li>
+        <li>Mutton Biryani</li>
+        <li>Prawns Biryani</li>
+        <li>Fish Birayni</li>
+      </ul>
+    </div>
+    <div class="main col-s-9 col-6">
+      <h1>About</h1>
+      <p>
+        Biryani is a mixed rice dish originating among the Muslims of the Indian
+        subcontinent. It is made with Indian spices, rice, and meat usually that
+        of chicken, goat, lamb, prawn, fish, and sometimes, in addition, eggs or
+        vegetables such as potatoes in certain regional varieties.
+      </p>
+    </div>
+    <div class="col-s-12 col-3">
+      <aside>
+        <h1>Mogul Biryanis</h1>
+        <p>
+          Mughali Biryani – It is a Mogul style of cooking with rich contents of
+          lamb and is a one dish meal to relish. Dindigul biryani evolved out of
+          this tradition.
+        </p>
+        <p>
+          Lucknow Biryani – Famous in Lucknow, a place ruled over by the mogul
+          emperors for a long period of time – it is otherwise known as Awadhi
+          Dum biryani.
+        </p>
+        <p>
+          Ambur Biryani – It is a famous South Indian kind found in Tamil Nadu
+          in typical mogul style. It is served with raita (pachadi) and brinjal
+          curry.
+        </p>
+      </aside>
+    </div>
+  </body>
+</html>
