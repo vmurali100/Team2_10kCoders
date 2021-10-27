@@ -7,6 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is new page</h1>
+    <button onclick="clickMe()">click Me</button>
+    <button ondblclick="onDouble()">clickMe</button>
+    <button onmouseover="mouseOver()">clickMe</button>
+    <button onmouseout="mouseOut()">clickMe</button>
+    <input type="text" name="srikanth" id="sir" onfocus="justFocused()">
+    <script>
+        function justFocused(){
+            alert("you just justFocused")
+        }
+        function clickMe(){
+        alert("hello you clicked me!!!")
+        }
+        function onDouble(){
+        alert("ondouble")
+        }
+        function mouseOver(){
+        alert("mouseover!!!")
+        }
+        function mouseOut(){
+        alert("mouseout!!")
+        }
+
+    </script>
 </body>
 </html>
