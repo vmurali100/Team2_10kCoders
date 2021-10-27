@@ -7,33 +7,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       div{
-           width: 600px;
-           margin: 0 auto;
-           background: url(../CSS/back2.jpg);
-           background-position: 40px -50px;
-       }
+        #main {
+            background: url(../CSS/bg.gif);
+            width: 960px;
+            height: 640px;
+            margin: 0 auto;
+            background: url(../CSS/back2.jpg), url(../CSS/bg\ \(2\).jpg);
+            background-position: center top;
+            background-repeat: no-repeat, repeat;
+            background-blend-mode: multiply;
+        }
+
+        #mm {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 380px;
+        }
+
+        audio {
+            border-radius: 20px;
+            width: 500px;
+            background-color: green;
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        ul li {
+            background-color: lightslategray;
+            margin: 10px 0 0 285px;
+            padding: 10px;
+            border: 2px solid black;
+            text-align: center;
+            display: block;
+            width: 300px;
+        }
+
+        ul li:hover {
+            background: green;
+            font-size: 20px;
+            font-weight: bold;
+            color: wheat;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
-    <button onclick="playPause()">Play/Pause</button>
-    <div>
-        <audio controls id="myAudio">
-            <source src="./audio/[iSongs.info] 04 - Madhura Nagarilo.mp3" type="audio/mp3">
-        </audio>
-    </div>
-</body>
-<script>
-    var audioElement = document.getElementById('myAudio')
+    <div id="main">
+        <div id="mm">
+            <!-- <figure>
+                <img src="../CSS/back2.jpg" alt="">
+            </figure> -->
+            <audio controls id="audio">
+                <source src="./audio/So So Ga.mp3" type="audio/mpeg">
+            </audio>
 
-    function playPause(){
-        if(audioElement.paused){
-            audioElement.play()
-        }else{
-            audioElement.pause()
+            <ul id="songs">
+                <li>So So Ga</li>
+                <li>Madhura Nagarilo</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var myPlayer = document.getElementById("audio")
+
+        document.getElementById("songs").onclick = function (event) {
+            myPlayer.setAttribute("src", `./audio/${event.target.innerHTML}.mp3`)
+            if (myPlayer.paused) {
+                myPlayer.play();
+            } else {
+                myPlayer.pause();
+            }
         }
-    }
-</script>
+    </script>
+</body>
 
 </html>
