@@ -9,36 +9,38 @@
     <style>
         * {
             margin: auto;
-            
+
         }
-        body{
+
+        body {
             background-color: rosybrown;
             text-align: center;
             margin: 5px solid red;
-            height:300px;
-           
-            
-            }
-       div{
-           padding: 20px;
-           
-       }
-       #onepunch{
-           padding: 20px !important;
-           width: 1000px;
-           background-color: slateblue;
-           text-align: center;
-           border: 10px solid yellow;
-           margin: auto;
-           height: 1000px;
-       }
-            #myaudio{
-                padding: 1px 0 0 0;
-            }
-        
+            height: 300px;
+            padding: top 50px; ;
 
 
-       
+        }
+
+        div {
+            padding: 20px;
+
+        }
+
+        #onepunch {
+            padding: 50px !important;
+            width: 1000px;
+            background-color: slateblue;
+            text-align: center;
+            border: 10px solid yellow;
+            margin: auto;
+            height: 700px;
+        }
+
+     
+
+
+
 
 
         #buttons {
@@ -48,78 +50,91 @@
             width: 400px;
         }
 
-      
-    
+        li {
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            text-align:left;
+            color:white;
+            width: 100px;
+            
+        }
+        #mySongs{
+            text-align: left;
+            background-color: yellowgreen;
+            width: 200px;
+
+        }
     </style>
 </head>
 
 <body>
-    
-   <div  id="onepunch">
-    <div>
-        <video controls id="myvideo" >
-            <source src="../videoplayback.mp4" type="video/mp4">
-            </vedio>
-    </div>
-    <div id="buttons">
-        <button onclick="playPause()">play/pause</button>
-        <button onclick="big()">big</button>
-        <button onclick="small()">small</button>
-        <button onclick="makeNormal()">normal</button>
-    </div>
 
-    <script>
-        var videoEelement= document.getElementById("myvideo")
+    <div id="onepunch">
+        <div>
+            <video controls id="myvideo">
+                <source src="../videoplayback.mp4" type="video/mp4">
+                </vedio>
+        </div>
+        <div id="buttons">
+            <button onclick="playPause()">play/pause</button>
+            <button onclick="big()">big</button>
+            <button onclick="small()">small</button>
+            <button onclick="makeNormal()">normal</button>
+        </div>
 
-        function playPause() {
-          
-            if (videoEelement.paused) {
-                videoEelement.play()
-            } else {
-                videoEelement.pause()
-            }  
+        <script>
+            var videoEelement = document.getElementById("myvideo")
+
+            function playPause() {
+
+                if (videoEelement.paused) {
+                    videoEelement.play()
+                } else {
+                    videoEelement.pause()
+                }
 
 
-        }
-        function big() {
-            videoEelement.style.width="900px"
-
-        }
-        function small() {
-            videoEelement.style.width="600px"
-
-        }
-        function makeNormal() {
-            videoEelement.style.width=""
-        }
-
-    </script>
-    <h3 style="padding: 20px; color: black;font-size: 40px;">my favourite songs</h1>
-    <audio controls  id="mySongs">
-        <source  src="../prema.mp3">
-    </audio>
-    <ul id="myAudio">
-        <li >prema</li>
-        <li>chitti</li>
-    </ul>
-    <script>
-        var myPlayer = document.getElementById("myAudio")
-
-        document.getElementById("mySongs").onclick = function (event) {
-            myPlayer.setAttribute("src",`./${event.target.innerHTML}.mp3`)
-            if(myPlayer.paused){
-                myPlayer.play()
-         }else{
-                myPlayer.pause()
             }
-        }
-        function playSongs() {
-            if (myPlayer.paused) {
-                myPlayer.play()
-            } else {
-                myPlayer.pause()
+            function big() {
+                videoEelement.style.width = "900px"
+
             }
-        }
+            function small() {
+                videoEelement.style.width = "600px"
+
+            }
+            function makeNormal() {
+                videoEelement.style.width = ""
+            }
+
+        </script>
+        <h3 style="padding: 20px; color: black;font-size: 40px;">my favourite songs</h3>
+            <audio controls id="myAudio">
+                <source src="../prema.mp3">
+            </audio>
+            <ul id="mySongs">
+                <li>prema</li>
+                <li>chitti</li>
+            </ul>
+            <script>
+                var myPlayer = document.getElementById("myAudio")
+                document.getElementById("mySongs").onclick = function (event) {
+                    myPlayer.setAttribute("src", `../${event.target.innerHTML}.mp3`)
+                    if (myPlayer.paused) {
+                        myPlayer.play()
+                    }
+                    else {
+                        myPlayer.pause()
+
+                    }
+                }
+               
+
+                
+
+
+
+            </script>
     </div>
 </body>
 
