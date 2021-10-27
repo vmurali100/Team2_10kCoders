@@ -1,0 +1,122 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            height:300px;
+            background: lightseagreen;
+            
+            }
+        #buttons{
+            text-align: center;
+            padding: 10px;
+            
+        }
+        button{
+            cursor:pointer;
+            
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            color: yellow;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            
+        }
+        ul {
+            counter-reset: section;
+            list-style-type: none;
+            }
+
+        li::before {
+            counter-increment: section;
+            content: counters(section,"") ".";
+        }
+        li{
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        button:hover{
+            color: red;
+        }
+        li:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vedio and Audio Player</h1>
+    <div id="buttons">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+    </div>
+   
+    <div id="vedio">
+        <video controls id="myvideo" width="400px" height="400px">
+            <source src="../vedio.mp4" type="video/mp4">
+        </vedio>
+    </div> <br><br><br>
+    <script>
+        var videoEelement = document.getElementById("myvideo")
+
+        function playPause() {
+
+            if (videoEelement.paused) {
+                videoEelement.play()
+            } else {
+                videoEelement.pause()
+            }
+        }
+        function makeBig() {
+            videoEelement.style.width="900px"
+        }
+        function makeSmall() {
+            videoEelement.style.width="600px"
+        }
+
+        function makeNormal() {
+            videoEelement.style.width=""
+
+        }
+        
+    </script> 
+     <audio controls id="myAudio">
+        <source src="./jaanu.mp3" type="audio/mp3" >
+    </audio>
+
+    <ul id="mySongs">
+        <li>Jaanu</li>
+        <li>Ae dil hey</li>
+    </ul>
+
+    <script>
+        var myPlayer = document.getElementById("myAudio")
+
+        document.getElementById("mySongs").onclick = function (event) {
+            myPlayer.setAttribute("src",`./${event.target.innerHTML}.mp3`)
+            if(myPlayer.paused){
+                myPlayer.play()
+         }else{
+                myPlayer.pause()
+            }
+        }
+        function playSongs() {
+            if (myPlayer.paused) {
+                myPlayer.play()
+            } else {
+                myPlayer.pause()
+            }
+        }
+        
+    </script> 
+</body>
+</html>
