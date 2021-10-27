@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            background: url(./audio/violin.jfif);
+            width: 960px;
+            height: 640px;
+            margin: 0 auto;
+            background: url(./audio/violin.jfif), url(./audio/violin.jfif);
+            background-position: center top;
+            background-repeat: no-repeat, repeat;
+            background-blend-mode: multiply;
+        }
+
+        #mm {
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 380px;
+        }
+
+        audio {
+            border-radius: 20px;
+            width: 500px;
+            background: color rgb(201, 6, 6);
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        ul li {
+            background-color: lightslategray;
+            margin: 10px 0 0 285px;
+            padding: 10px;
+            border: 2px solid rgb(88, 4, 4);
+            text-align: center;
+            display: block;
+            width: 300px;
+        }
+
+        ul li:hover {
+            background: rgb(127, 184, 127);
+            font-size: 20px;
+            font-weight: bold;
+            color: wheat;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+            <ul id="songs">
+                <li> <audio controls >
+                    <source src="./[iSongs.info] 02 - Ghani Anthem.mp3" type="audio/mpeg" id="audio">
+                </audio></li>
+                <li> <audio controls >
+                    <source src="./[iSongs.info] 02 - Nee Chitram Choosi.mp3" type="audio/mpeg" id="audio">
+                </audio></li>
+                <li> <audio controls >
+                    <source src="./[iSongs.info] 02 - Srivalli.mp3" type="audio/mpeg" id="audio">
+                </audio></li>
+                <li>   <audio controls >
+                    <source src="./[iSongs.info] 03 - Saami Saami (Promo).mp3" type="audio/mpeg" id="audio">
+                </audio></li>
+            </ul>
+    </div>
+
+    <script>
+        var myPlayer = document.getElementById("audio")
+
+        document.getElementById("songs").onclick = function (event) {
+            console.log(event.target.innerHTML)
+            myPlayer.setAttribute("src",`${event.target.innerHTML}.mp3`)
+            if (myPlayer.paused) {
+                myPlayer.play();
+            } else {
+                myPlayer.pause();
+            }
+        }
+        if (myPlayer.paused) {
+                myPlayer.play();
+            } else {
+                myPlayer.pause();
+            }
+        }
+        if (myPlayer.paused) {
+                myPlayer.play();
+            } else {
+                myPlayer.pause();
+            }
+        }
+        if (myPlayer.paused) {
+                myPlayer.play();
+            } else {
+                myPlayer.pause();
+            }
+        }
+    </script>
+</body>
+
+</html>
