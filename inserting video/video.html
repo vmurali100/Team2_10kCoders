@@ -95,13 +95,31 @@
 
     </script>
     <h3 style="padding: 20px; color: black;font-size: 40px;">my favourite songs</h1>
-    <audio controls  id="myaudio">
+    <audio controls  id="mySongs">
         <source  src="../prema.mp3">
     </audio>
-    <ul>
-        <li>prema</li>
+    <ul id="myAudio">
+        <li >prema</li>
         <li>chitti</li>
     </ul>
+    <script>
+        var myPlayer = document.getElementById("myAudio")
+
+        document.getElementById("mySongs").onclick = function (event) {
+            myPlayer.setAttribute("src",`./${event.target.innerHTML}.mp3`)
+            if(myPlayer.paused){
+                myPlayer.play()
+         }else{
+                myPlayer.pause()
+            }
+        }
+        function playSongs() {
+            if (myPlayer.paused) {
+                myPlayer.play()
+            } else {
+                myPlayer.pause()
+            }
+        }
     </div>
 </body>
 
