@@ -94,7 +94,7 @@
         document.getElementById("songs").onclick = function(event)
         {
             var song = event.target.innerHTML;
-            myaudioplayer.setAttribute("src",`./Music/${song}.mp3`);
+            myaudioplayer.setAttribute("src",`./Music/${song  }.mp3`);
             document.getElementById("marquee").innerHTML = "now playing "+song+"...";
             
             if(myaudioplayer.paused)
