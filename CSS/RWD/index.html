@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD</title>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+         #header{
+             background: royalblue;
+             text-align: center;
+         }
+        
+
+        #side_nav ul {
+            padding: 0px;
+            margin-left:20px ;
+            text-align: center;
+            
+        }
+
+        #side_nav li {
+            background: rosybrown;
+            text-decoration: none;
+            list-style-type: none;
+            padding: 15px;
+            
+            margin-top: 5px;
+        }
+        .para{
+            margin-left: 50px;
+    
+        }
+        .image{
+            width: 100px !important;
+            float: left;
+            margin-left: 20px;
+        }
+        
+        [class*= "col-"] {
+            width: 100%;
+            float: left;
+        }
+       
+       @media only screen and (min-width:670px) {
+
+            .col-s-1 {
+                width: 8.33%;
+            }
+
+            .col-s-2 {
+                width: 16.66%;
+            }
+
+            .col-s-3 {
+                width: 25%;
+            }
+
+            .col-s-4 {
+                width: 33.33%;
+            }
+
+            .col-s-5 {
+                width: 41.66%;
+            }
+
+            .col-s-6 {
+                width: 50%;
+            }
+
+            .col-s-7 {
+                width: 58.33%;
+            }
+
+            .col-s-8 {
+                width: 66.66%;
+            }
+
+            .col-s-9 {
+                width: 75%;
+            }
+
+            .col-s-10 {
+                width: 83.33%;
+            }
+
+            .col-s-11 {
+                width: 91.66%;
+            }
+
+            .col-s-12 {
+                width: 100%;
+            }
+
+        }
+        @media only screen and (min-width: 1000px) {
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+    }
+    #final{
+        background: red;
+        margin-top: 30px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Responsive wed design</h1>
+    </div>
+    <div id="side_nav" class="col-2  col-s-2">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>four</li>
+        </ul>
+    </div>
+    <div class="col-6  col-s-9 para">
+        
+        <h1>Where does it come from?</h1>
+        <p>
+            
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 15
+        </p>
+    </div>
+
+    <span class="col-4 col-s-12 image">
+        <img src="/images/avici1.jpeg" alt="">
+    </span> <br>
+
+    <div id=final class="col-12 col-s-12">
+        <h1>footer</h1>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funtions</title>
+
+    <style>
+        #vdclip {
+            margin: 50px auto;
+            padding: 100px 200px;
+            background: chartreuse;
+            width: 900px;
+            box-sizing: border-box;
+
+        }
+
+        #vdclip video {
+            width: 350px;
+            height: 250px;
+        }
+
+        button:hover {
+            color: aquamarine;
+            background-color: black;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    <h1 id=one>welcome to javascript</h1>
+
+    <button onclick="touchMe()"> Touch Me</button> <br>
+    <button onmouseover="overMe()">click Me</button> <br>
+    <button ondblclick="doubleMe()">Double Click</button> <br>
+    <button onmouseout="mouseOut()">Mouse Out</button> <br>
+    <input type="text" id="" name="" onfocus="focus()" onblur="blured()">
+    <select name="" id="" onchange="changeEvent()">
+        <option value="one">one</option>
+        <option value="two">two</option>
+        <option value="three">three</option> <br> <br> <br>
+    </select> <br> <br> <br>
+
+
+    <div id=vdclip>
+
+        <video id="demovideo" controls>
+            <source src="/videos/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+        </video> <br> <br>
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button> <br> <br>
+        <hr>
+        <audio controls id="demoAudio" style="color: chocolate;">
+            <source src="./audios/Leharaayi.mp3" type="audio/mp3">
+        </audio> <br>
+
+        <ul id="newSongs">
+            <li>Leharaayi</li>
+            <li>Radhe_Shyam_Teaser</li>
+          
+        </ul>
+        <button onclick="playPauseAudio()">Play/Pause</button>
+        <button onclick="makeBigAudio()">Big</button>
+        <button onclick="makeSmallAudio()">Small</button>
+        <button onclick="makeNormalAudio()">Normal</button>
+    </div>
+
+
+    <script>
+        /*function playGame() {
+    
+        }
+        playGame()*/
+        document.getElementById("one").style.color = "red";
+
+        function touchMe() {
+            alert("hello from the aother side....")
+        }
+        function overMe() {
+            console.log("hello from the mouseover side....")
+        }
+        function doubleMe() {
+            alert("hello from the double click side....")
+        }
+        function mouseOut() {
+            alert("hello from the MOUSEOUT side....")
+        }
+        function focus() {
+            console.log("blured the field..........")
+        }
+        function blured() {
+            console.log("focused on me..........")
+        }
+        function changeEvent() {
+            console.log("changed the option..........")
+        }
+        function mydemo(demovideo) {
+
+        }
+
+
+        var videoElement = document.getElementById("demovideo")
+
+        function playPause() {
+
+            if (videoElement.paused) {
+                videoElement.play()
+            } else {
+                videoElement.pause()
+            }
+        }
+
+        function makeBig() {
+            videoElement.style.width = "600px"
+        }
+        function makeSmall() {
+            videoElement.style.width = "200px"
+        }
+        function makeNormal() {
+            videoElement.style.width = ""
+        }
+
+
+        var audioElement = document.getElementById("demoaudio")
+
+        function playPauseAudio() {
+
+            if (audioElement.paused) {
+                audioElement.play()
+            } else {
+                audioElement.pause()
+            }
+        }
+
+        function makeBigAudio() {
+            audioElement.style.width = "600px"
+        }
+        function makeSmallAudio() {
+            audioElement.style.width = "200px"
+        }
+        function makeNormalAudio() {
+            audioElement.style.width = ""
+        }
+
+        var mySpotify = document.getElementById("demoAudio")
+
+        document.getElementById("newSongs").onclick = function (song) {
+            mySpotify.setAttribute("src", `./audios/${song.target.innerHTML}.mp3`)
+        
+        if (mySpotify.paused) {
+            mySpotify.play()
+        } else {
+            mySpotify.pause()
+        }
+    }
+    
+        function playSongs() {
+            if (mySpotify.paused) {
+                mySpotify.play()
+            } else {
+                mySpotify.pause()
+            }
+        }
+            </script>
+</body>
+
+</html>
