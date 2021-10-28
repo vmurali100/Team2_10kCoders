@@ -16,12 +16,39 @@
             overflow: auto;
 
         }
+        nav ul li {
+            /* background-color:thistle; */
+            width: 75px;
+            display: inline-block;
+            list-style-type: none;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+        nav {
+            clear: both;
+            margin: 10px auto;
+            background-color: #232323;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
 
         /* Below 768px  */
         @media only screen and (max-width: 768px) {
             header{
                width: 100% ;
             }
+            nav ul li {
+                width: 98%;
+                display: block;
+                border-bottom: 3px solid white;
+            }
+            nav{
+                padding: 0px;
+            }
+            
         }
 
         * {
@@ -93,24 +120,8 @@
             font-weight: bold;
         }
 
-        nav {
-            clear: both;
-            margin: 10px auto;
-            background-color: #232323;
-            padding: 10px;
-            margin: 20px 0;
-        }
-
-        nav ul li {
-            /* background-color:thistle; */
-            width: 75px;
-            display: inline-block;
-            list-style-type: none;
-            padding: 10px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 13px;
-        }
+        
+        
 
         nav ul li {
             text-decoration: none;
