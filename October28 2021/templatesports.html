@@ -1,0 +1,169 @@
+<html>
+<title>TEMPLATE3</title>
+
+<head>
+    <link href="./sports.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0px 0px;
+            box-sizing: border-box;
+        }
+
+        #block1 {
+            background-color: black;
+            color: cornsilk;
+            border: 0px solid black;
+            padding: 10px 40px 10px 50px;
+            display: block;
+            overflow: auto;
+        }
+
+        #header {
+            display: inline;
+            float: left;
+            overflow: auto;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+
+        #searchbox {
+            display: inline;
+            float: right;
+            border: 0px solid blanchedalmond;
+            padding-top: 40px;
+
+        }
+
+        #submit {
+            color: orange;
+            cursor: pointer;
+        }
+
+        #block2 {
+            margin: 20px 40px 20px 180px;
+        }
+        #block2 img{
+            height:280px;
+            width:960px;"
+        }
+
+
+        @media only screen and (max-width: 768px) {
+            #block1 {
+                background-color: aqua;
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            #block11 {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            #hgroup {
+                width: 100%;
+                border: 0px solid white;
+                border: 1px solid palegoldenrod;
+                box-sizing: border-box;
+            }
+
+            #header {
+                width: 100%;
+                background-color: black;
+                text-align: center;
+                padding: 0px;
+            }
+
+            #header h1 {
+                padding: 0px;
+                width: 100%;
+                border: 1px solid blue;
+                box-sizing: border-box;
+            }
+
+            #header h3 {
+                width: 100%;
+            }
+
+            #searchbox {
+                width: 100%;
+                background-color: pink;
+                text-align: center;
+                margin: 0px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 0px
+            }
+
+            form {
+                width: 100%;
+                padding: 0px;
+            }
+
+            #nav {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            #nav ul {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            #nav ul li {
+                width: 100%;
+                border: 2px solid tomato;
+                margin: 0px;
+                text-align: center;
+            }
+            #block2{
+                width:100%;
+                padding:0px;
+                margin:0px;
+            }
+            #block2 img{
+                width:100%;
+                padding:0px;
+                margin:0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="block1">
+        <div id="block11">
+            <div id="header">
+                <div id="hgroup">
+                    <h1>SPORTS</h1>
+                    <h3>play sports more and live more.</h3>
+                </div>
+            </div>
+            <div id="searchbox">
+                <form action="#" method="post">
+                    <input type="text" value="Search Our Website&hellip;"
+                        onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+                    <input type="submit" id="submit" value="submit">
+                </form>
+            </div>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#testlink">CRICKET</a></li>
+                <li><a href="#testlink">FOOTBALL</a></li>
+                <li><a href="#testlink">KABBADI</a></li>
+                <li><a href="#testlink">VOLLEYBALL</a></li>
+                <li><a href="#testlink">HOCKEY</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="block2">
+        <img src="./images/sportsmix.jpg" alt="imagenot found" >
+    </div>
+</body>
+
+</html>
