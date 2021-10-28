@@ -3,7 +3,51 @@
 <head>
 <title>Movies</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./movie_poster_style.css" type="text/css">
+<style>
+  #header{
+    display:block; 
+    width:960px; 
+    margin:0 auto;
+    overflow: auto;
+
+  }
+  #header nav ul li {
+    width: 75px;
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+    display:inline-block;
+    text-transform: uppercase;
+    font-size:13px;
+    }
+  nav {
+    clear: both;
+    margin: 10px auto;
+    background-color: #232323;
+    padding:10px; 
+    margin: 20px 0;
+  }
+
+
+   @media only screen and (max-width:768px)
+   {
+            #header{
+                width:100%;
+            }       
+            #header nav ul li {
+                width: 100%;
+                display:block;
+                border-bottom: 3px solid white;
+                margin:0 auto;
+            }
+            nav{
+                padding: 0px;
+            }
+    }
+   
+</style>
 </head>
 <body>
 <div class="wrapper row1">
@@ -30,7 +74,7 @@
     </nav>
   </header>
 </div>
-<div class="wrapper row2">
+<!-- <div class="wrapper row2">
   <div id="container" class="clear">
     <section id="slider"><a href="#"><img src="./images/power.jpg" width="960" height="360" alt=""></a></section>
     <section id="shout">
@@ -89,6 +133,6 @@
     <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
     <p class="fl_right">Movies By<a target="_blank" href="https://www.movies Dada.com/" title="Free Movies Website">  Hari Vardhan</a></p>
   </footer>
-</div>
+</div> -->
 </body>
 </html>

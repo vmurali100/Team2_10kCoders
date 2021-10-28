@@ -301,12 +301,7 @@
             padding: 0 20px;
         }
 
-        #header nav li {
-            display: inline;
-            margin-right: 25px;
-            text-transform: uppercase;
-        }
-
+        
         #header nav li.last {
             margin-right: 0;
         }
