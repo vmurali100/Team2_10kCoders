@@ -218,10 +218,23 @@ nav ul .last{
 }
 
 /* ============================================ media qeuries ============================================  */
-/* @media only screen and (max-width: 768px)
+@media only screen and (max-width: 768px)
 {
+
     header{
-        background-color:red;
-        width:100% !important;
+        width:100%;
     }
-} */
+    nav ul{
+        padding:0px;
+    }
+    nav ul li{
+        width:100%;
+        border-bottom:3px solid white;
+        text-align:center;
+        padding:10px 0;
+    }
+    nav{
+        padding:0px;
+    }
+
+}
