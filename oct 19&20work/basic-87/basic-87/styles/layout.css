@@ -1,5 +1,5 @@
 /*
-HTML 5 Template Name: Basic 88
+HTML 5 Template Name: Basic 87
 File: Layout CSS
 Author: OS Templates
 Author URI: https://www.os-templates.com/
@@ -8,7 +8,7 @@ Licence: <a href="https://www.os-templates.com/template-terms">Website Template 
 
 html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
 
-body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#FF9900; background-color:rgb(red, green, blue);}
+body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191; background-color:#232323;}
 
 .clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
 .clear{display:block; clear:both;}
@@ -42,17 +42,15 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 .row1, .row1 a{color:#C0BAB6; background-color:#333333;}
 .row2{color:#979797; background-color:#FFFFFF;}
 .row2 a{color:#FF9900; background-color:#FFFFFF;}
-.row3{color:#989898; background-color:#333333;}
-.row3 a{color:#FF9900; background-color:#333333;}
-.row4, .row4 a{color:#919191; background-color:#232323;}
+.row3, .row3 a{color:#919191; background-color:#232323;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
-#header, #container, #footer, #copyright{display:block; width:960px; margin:0 auto;}
+#header, #container, #footer{display:block; width:960px; margin:0 auto;}
 
 nav ul{margin:0; padding:0; list-style:none;}
 
-h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:32px; font-weight:normal; font-style:italic; line-height:normal;}
+h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; font-style:normal; line-height:normal; text-transform:uppercase;}
 
 address{font-style:normal;}
 
@@ -69,12 +67,6 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 .two_quarter{width:470px;}
 .three_quarter{width:715px;}
 .four_quarter{width:960px; float:none; margin-right:0; clear:both;}
-
-.one_third, .two_third, .three_third{display:block; float:left; margin:0 30px 0 0;}
-.one_third{width:300px;}
-.two_third{width:630px;}
-.three_third{width:960px; float:none; margin-right:0; clear:both;}
-
 .lastbox{margin-right:0;}
 
 /*----------------------------------------------Header-------------------------------------*/
@@ -82,7 +74,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #header{padding:20px 0;}
 
 #header #hgroup{float:left; margin:0 0 20px 0;}
-#header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
+#header #hgroup h1, #header #hgroup h2{font-weight:normal; text-transform:none;}
 #header #hgroup h1{font-size:36px;}
 #header #hgroup h2{font-size:13px;}
 
@@ -93,6 +85,21 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #header nav li a{color:#C0BAB6; background-color:#232323;}
 #header nav li a:hover{color:#FF9900; background-color:#232323;}
 
+@media only screen and (max-width:768px){
+    #header{
+        background-color: red;
+    }
+    #header nav {
+        width: 100%;
+    }
+    #header nav ul li{
+        display: block;
+        border-bottom: 3px solid white;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
 /*----------------------------------------------Content Area-------------------------------------*/
 
 #container{padding:30px 0;}
@@ -100,85 +107,48 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #container .last{margin:0;}
 #container .more{text-align:right;}
 
-/* ------Slider-----*/
+/* ------Homepage-----*/
 
-#container #slider{}
+#container #homepage{display:block; width:100%; line-height:1.6em;}
+
+#container #homepage #latest{}
+#container #homepage #latest article{}
+#container #homepage #latest figure{padding:4px; border:1px solid #D6D6D6; text-align:center;}
+#container #homepage #latest figcaption{padding:5px; text-align:center; color:#979797; background-color:#EEEEEE; text-transform:uppercase; text-align:center;}
+
+/* ------Shout-----*/
+
+#container #shout{padding:0 0 20px 0; border-bottom:1px solid #DEDEDE; text-align:center;}
+#container #shout p{font-size:20px; margin:0; padding:0; line-height:1.8em;}
 
 /* ------Main Content-----*/
 
-#container #homepage{display:block; width:100%; line-height:1.8em;}
+#container #content{float:left; width:630px; line-height:1.6em;}
 
-#container #homepage #services{}
-#container #homepage #services article{}
-#container #homepage #services article figure{}
-#container #homepage #services article figure img{margin:0 0 15px 0; padding:4px; border:1px solid #D6D6D6;}
-#container #homepage #services article figure figcaption{}
-#container #homepage #services article figure h2{font-size:14px; font-weight:bold;}
-#container #homepage #services article figure footer{}
+#container #content #services{}
+#container #content #services ul{margin:0; padding:0; list-style:none;}
+#container #content #services ul li{display:block; width:100%; margin-bottom:30px;}
+#container #content #services ul li.last{ margin-bottom:0;}
+#container #content #services ul li article{}
+#container #content #services ul li article figure{}
+#container #content #services ul li article figure img{float:left; width:180px; height:150px; margin:0; padding:4px; border:1px solid #666666;}
+#container #content #services ul li article figure figcaption{display:block; float:right; width:410px;}
+#container #content #services ul li article figure h2{font-size:14px;}
+#container #content #services ul li article figure footer{}
 
-#container #homepage #intro{}
-#container #homepage #intro article{}
-#container #homepage #intro article figure{}
-#container #homepage #intro article figure img{float:right; margin:0 0 10px 0; padding:4px; border:1px solid #D6D6D6;}
-#container #homepage #intro article figure figcaption{float:left; width:460px;}
-#container #homepage #intro article figure h2{}
-#container #homepage #intro article figure footer{}
+/* ------Right Column-----*/
+
+#container #right_column{float:right; width:280px;}
+#container #right_column h2.title{margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #DEDEDE;}
+
+#container #right_column nav{display:block; width:100%;}
+#container #right_column nav ul{margin:0; padding:0; list-style:none;}
+#container #right_column nav li{margin:0 0 3px 0; padding:0;}
+#container #right_column nav li.last{margin-bottom:0;}
+#container #right_column nav a{display:block; margin:0; padding:5px 10px 5px 20px; color:#666666; background:url("../images/orange_file.gif") no-repeat 10px center #FFFFFF; text-decoration:none; border-bottom:1px dotted #666666;}
+#container #right_column nav a:hover{color:#FF9900; background-color:#FFFFFF;}
 
 /*----------------------------------------------Footer-------------------------------------*/
 
-#footer{padding:30px 0; font-size:12px; line-height:1.4em;}
-
-#footer section h2.title{margin:0 0 25px 0; padding:0; color:#FFFFFF; background-color:#333333; font-size:12px; font-weight:bold; text-transform:uppercase;}
-
-#footer section nav li{margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #555555;}
-#footer section nav li.last{margin:0;}
-
-/*----------------------------------------------Copyright-------------------------------------*/
-
-#copyright{padding:20px 0;}
-#copyright p{margin:0; padding: 0;}
-
-#sidebar{
-    position: absolute;
-    width: 150px;
-    background: #333333;
-    text-align: center;
-    margin: 10px 0 0 10px;
-}
-#sidebar ul li{
-    border: 2px solid white;
-    padding: 10px;
-}
-#sidebar ul li a{
-    color: white;
-}
-#sidebar ul li a:hover{
-    color: #FF9900;
-}
-#sidebar ul li:hover{
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-}
-.drop{
-    display: none;
-    position: absolute;
-    top: 150px;
-    left: 150px
-}
-.oo ul li{
-    background: #232323;
-    width: 100px;
-}
-.oo:hover .drop{
-    display: block;
-}.oo ul li:hover{
-    background: red;
-}
-img{
-    opacity: 0.5 ;
-}
-img:hover{
-    opacity: 1;
-}
-
+#footer{padding:20px 0;}
+#footer p{margin:0; padding:0;}
