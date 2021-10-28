@@ -43,11 +43,57 @@
         #block2 {
             margin: 20px 40px 20px 180px;
         }
-        #block2 img{
-            height:280px;
-            width:960px;"
+
+        #block2 img {
+            height: 280px;
+            width: 960px;
+            "
+
         }
 
+        #block3 {
+            margin: 20px 20px 20px 180px;
+            overflow: auto;
+
+        }
+
+        .imgandtext {
+            height: 310px;
+            width: 150px;
+            border: 1px solid black;
+            padding: 5px;
+            float: left;
+            margin-right: 105px;
+            background-color: rgb(255, 242, 242);
+        }
+
+        #block4 {
+            margin: 40px 40px 20px 200px;
+            border: 0px solid black;
+            overflow: auto;
+        }
+
+        #block41 {
+            height: 300px;
+            width: 550px;
+            border: 0px solid black;
+            float: left;
+            background-color: rgb(255, 228, 188);
+        }
+
+        #block42 {
+            height: 400px;
+            width: 370px;
+            border: 0px solid black;
+            float: left;
+            margin-left: 20px;
+            background-color: rgb(255, 228, 188);
+        }
+
+        #block4 a {
+            color: rgb(255, 101, 50);
+            cursor: pointer;
+        }
 
         @media only screen and (max-width: 768px) {
             #block1 {
@@ -120,15 +166,49 @@
                 margin: 0px;
                 text-align: center;
             }
-            #block2{
+
+            #block2 {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            #block2 img {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                border: px solid black;
+            }
+
+            #block3 {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .imgandtext {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                border: 1px solid black;
+            }
+            #block4{
                 width:100%;
                 padding:0px;
                 margin:0px;
             }
-            #block2 img{
+            #block41{
                 width:100%;
                 padding:0px;
                 margin:0px;
+                overflow:auto;
+                height:500px;
+            }
+            #block42{
+                width:100%;
+                padding:0px;
+                margin:0px;
+                overflow: auto;
             }
         }
     </style>
@@ -162,7 +242,67 @@
         </div>
     </div>
     <div id="block2">
-        <img src="./images/sportsmix.jpg" alt="imagenot found" >
+        <img src="./images/sportsmix.jpg" alt="imagenot found">
+    </div>
+    <div id="block3">
+        <div class="imgandtext">
+            <img src="./crc.jpg" alt="not found" style="width: 50px;height:50px;float:left">
+            <p style="margin:10px 0px 25px 0px;text-align: center; background-color: aquamarine;"><b>CRICKET</b></p>
+            <h5><b>Cricket is a bat-and-ball game played between two teams of eleven players on a field at the
+                    centre of which is a 22-yard.</b></h5>
+        </div>
+
+        <div class="imgandtext">
+            <img src="./football.jpg" alt="not found" style="width: 50px;height:50px;float:left">
+            <p style="margin:10px 0px 25px 0px;text-align: center;background-color: aquamarine;"><b>FOOTBALL</b></p>
+            <h5><b>football is a ball game played between two teams of eleven players on a field at the
+                    centre of which is a 22-yard.</b></h5>
+        </div>
+
+        <div class="imgandtext">
+            <img src="./volleyball.jpg" alt="not found" style="width: 50px;height:50px;float:left">
+            <p style="margin:10px 0px 25px 0px;text-align: center;background-color: aquamarine;"><b>VOLLYBAL</b></p>
+            <h5><b>football is a ball game played between two teams of eleven players on a field at the
+                    centre of which is a 22-yard.</b></h5>
+        </div>
+
+
+
+
+        <div class="imgandtext">
+            <img src="./kabadi.jpg" alt="not found" style="width: 50px;height:50px;float:left">
+            <p style="margin:10px 0px 25px 0px;text-align: center;background-color: aquamarine;"><b>KABBADI</b></p>
+            <h5><b>kabadi is a man-man game played between two teams of eleven players on a field at the
+                    centre of which is palyed in box.</b></h5>
+        </div>
+
+    </div>
+    <div id="block4">
+        <div id="block41">
+            <h1 style="text-align: center;"><b>SPORTS IMPORTANCE</b></h1>
+            <p><b>Competitive sports are a lot fun. They help you stay healthy, meet new people, and teach you about
+                    teamwork.
+                    If you've never played a sport before, it's a chance to try something new. But sports also take a
+                    lot of
+                    hard work and practice.
+                    So starting a new season might make you feel a little nervous
+                    Get in shape. Being in shape will help you have an easier.</b></p>
+            <a href="#somethimg" style="text-decoration: none;float: right;">
+                <h3>LEARNMORE>></h3>
+            </a>
+
+        </div>
+        <div id="block42">
+            <h1 style="text-align: center;"><b>BENFITS OF SPORTS</b></h1>
+            <p><b>People who are active dramatically reduce their risk of many diseases, including heart disease and
+                    osteoporosis.
+                    Regular exercise is also known to reduce the risk of emotional problems.
+                </b></p>
+            <a href="#somethimg" style="text-decoration: none;float: right;">
+                <h3>LEARNMORE>></h3>
+            </a>
+
+        </div>
     </div>
 </body>
 

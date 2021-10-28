@@ -23,45 +23,8 @@
 #block2{
     margin:20px 40px 20px 180px;
 }
-#block3{
-    margin:20px 20px 20px 180px;
-    overflow: auto;
-    
-}
-.imgandtext{
-    height:310px;
-    width: 150px;
-    border:1px solid black;
-    padding: 5px;
-    float:left;
-    margin-right: 105px;
-    background-color: rgb(255, 242, 242);
-}
-#block4{
-    margin:40px 40px 20px 200px;
-    border: 0px solid black;
-    overflow: auto;
-   }
-#block41{
-    height: 300px;
-    width:550px;
-    border: 0px solid black;
-    float:left;
-    background-color: rgb(255, 228, 188);
-}
 
-#block42{
-    height: 400px;
-    width:370px;
-    border: 0px solid black;
-    float:left;
-    margin-left:20px;
-    background-color: rgb(255, 228, 188);
-}
-#block4 a{
-    color:rgb(255, 101, 50);
-    cursor: pointer;
-}
+
 #row5{
     margin-top:20px;
     background-color: black;
