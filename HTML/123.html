@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Above 768px or global Styles  */
+        header {
+            width: 960px;
+            background-color: #333333;
+            /* background-color:red; */
+            margin: 0 auto;
+            overflow: auto;
+
+        }
+
+        nav ul li {
+            /* background-color:thistle; */
+            width: 75px;
+            display: inline-block;
+            list-style-type: none;
+            padding: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        nav {
+            clear: both;
+            margin: 10px auto;
+            background-color: #232323;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+
+        /* Below 768px  */
+        @media only screen and (max-width: 768px) {
+            header {
+                width: 100%;
+            }
+
+            nav ul li {
+                width: 98%;
+                display: block;
+                border-bottom: 3px solid white;
+            }
+
+            nav {
+                padding: 0px;
+            }
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+
+        #row_container_1 {
+            width: 100%;
+            margin: 0 auto;
+            background-color: #333333;
+            padding-top: 20px;
+            overflow: auto;
+        }
+
+
+        h1,
+        h2,
+        a {
+            color: #c0bab6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header h1 {
+            float: left;
+            font-weight: normal;
+            font-size: 34px;
+        }
+
+        header h2 {
+            clear: both;
+            font-size: 13px;
+            font-weight: normal;
+            padding: 2px 2px;
+        }
+
+        #form {
+            float: right;
+            margin-top: 10px;
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        #search_box {
+            float: right;
+            width: 200px;
+            height: 15px;
+            background-color: #232323;
+            border: 1px solid #c0bab6;
+            color: white;
+            font-size: 12px;
+            padding: 2px 5px;
+            margin-top: 2px;
+        }
+
+        #submit {
+            float: right;
+            width: 75px;
+            padding: 5px;
+            margin-left: 5px;
+            font-size: 12px;
+            color: white;
+            background-color: orange;
+            border: none;
+            font-weight: bold;
+        }
+
+
+
+
+        nav ul li {
+            text-decoration: none;
+        }
+
+        #container {
+            /* background-color:red; */
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        #image {
+            width: 960px;
+            height: 280px;
+            margin: 30px 0;
+
+        }
+
+        #image img {
+            width: 960px;
+            height: 280px;
+            /*  border: 1px solid rgb(189, 150, 150); */
+            box-sizing: border-box;
+        }
+
+        section {
+            width: 960px;
+            /* background-color:green; */
+            overflow: hidden;
+        }
+
+        section #cast_container figure {
+            /* border:1px solid black; */
+            float: left;
+            height: 32px;
+            width: 32px;
+        }
+
+        section #cast_container figure img {
+            width: 32px;
+            height: 32px;
+            margin-right: 5px;
+        }
+
+        section #cast_container .actorname p {
+            box-sizing: border-box;
+            /* border:1px solid yellow; */
+            float: left;
+            padding-top: 12px;
+            margin-left: 5px;
+            width: 82%;
+            font-weight: bold;
+            color: #97979c;
+
+
+        }
+
+        .cast {
+            width: 220px;
+            height: 150px;
+            /* background-color:violet; */
+            margin-right: 20px;
+            float: left;
+
+        }
+
+        #cast4 {
+            margin-right: 0;
+        }
+
+        section #cast_container .para {
+            clear: both;
+            width: 220px;
+            height: 80px;
+            /* background: yellowgreen; */
+            /* border:1px solid orange; */
+            box-sizing: border-box;
+            font-size: 13px;
+            margin-top: 40px !important;
+            color: #97979c;
+        }
+
+        section #readmore {
+            text-align: right;
+        }
+
+        #readmore a {
+            text-decoration: none;
+            color: #ffbb1f;
+            font-size: 12px;
+        }
+
+        section #about p {
+            font-size: 13px;
+            color: #97979c;
+        }
+
+        section #about {
+            margin-top: 30px;
+        }
+
+        #about_movie {
+            float: left;
+            width: 700px;
+            height: 150px;
+            /* border:1px solid yellow; */
+            margin-right: 30px;
+
+        }
+
+        #about_movie h3 {
+            color: #97979c;
+            margin: 10px 0;
+        }
+
+        #about_movie p {
+            margin: 18px 0px;
+        }
+
+        #about_character h3 {
+            color: #97979c;
+            margin: 10px 0;
+        }
+
+        #about_character p {
+            margin: 20px 0px;
+        }
+
+        #about_character {
+            float: left;
+            width: 200px;
+            height: 150px;
+            /* border:1px solid green; */
+        }
+
+        footer {
+            margin-top: 30px;
+            width: 100%;
+            height: 100px;
+            background-color: #333333;
+        }
+
+        #wrapper {
+            width: 960px;
+            padding-top: 25px;
+            margin: 30px auto;
+            /* border: 1px solid yellow; */
+            font-size: 13px;
+            color: #97979c;
+        }
+
+        #wrapper #par1 {
+            display: inline-block;
+            margin-left: 0px;
+            margin-right: 450px;
+        }
+
+        #wrapper #par2 {
+            text-align: right;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header part -->
+    <div id="row_container_1">
+        <header>
+            <a href="#">
+                <h1>Deadpool</h1>
+            </a>
+            <form action="#" id="form">
+                <input type="submit" name="submit" value="SUBMIT" id="submit">
+                <input type="text" name="text" id="search_box" placeholder="Search our website...">
+
+            </form>
+            <h2>Maximum Effort</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Comics</a></li>
+                    <li><a href="#">Movies</a></li>
+                    <li><a href="#">Director</a></li>
+                    <li><a href="#">Procucer</a></li>
+                    <li><a href="#">Actors</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <!-- <div id="container">
+        <div id="image">
+            <img src="./images/cover photo.png" alt="Environment">
+        </div>
+        <section>
+            <div id="cast_container">
+                <div id="cast1" class="cast">
+                    <figure><img src="./images/actor1.jfif" alt="ryan ronalds"></figure>
+                    <div class="actorname">
+                        <p>Ryan Ronalds</p>
+                    </div>
+                    <div class="para">
+                        <p>Ryan Rodney Reynolds (born October 23, 1976) is a Canadian actor and film producer. He began
+                            his career starring in the Canadian teen soap opera Hillside (1991–1993)</p>
+                    </div>
+                    <div id="readmore">
+                        <a href="#">Read More <span>>></span></a>
+                    </div>
+                </div>
+                <div id="cast2" class="cast">
+                    <figure><img src="./images/actor2.jfif" alt="Morena_Baccarin"></figure>
+                    <div class="actorname">
+                        <p>Morena Baccarin</p>
+                    </div>
+                    <div class="para">
+                        <p>Morena Silva de Vaz Setta Baccarin[1] (Portuguese: [mo'ɾenɐ baka'ɾĩ]; born June 2, 1979) is a
+                            Brazilian actress known for portraying Inara Serra in the sci-fi series Firefly and the
+                            follow-up film </p>
+                    </div>
+                    <div id="readmore">
+                        <a href="#">Read More <span>>></span></a>
+                    </div>
+                </div>
+                <div id="cast3" class="cast">
+                    <figure><img src="./images/actor3.jfif" alt="Karan Soni"></figure>
+                    <div class="actorname">
+                        <p>Karan Soni</p>
+                    </div>
+                    <div class="para">
+                        <p>Karan Soni (born January 8, 1989) is an Indian-American actor. Often appearing in comedic
+                            roles, he came to prominence for playing Dopinder in the Deadpool films.</p>
+                    </div>
+                    <div id="readmore">
+                        <a href="#">Read More <span>>></span></a>
+                    </div>
+                </div>
+                <div id="cast4" class="cast">
+                    <figure><img src="./images/actor4.jfif" alt="Josh Brolin"></figure>
+                    <div class="actorname">
+                        <p>Josh Brolin</p>
+                    </div>
+                    <div class="para">
+                        <p>Josh James Brolinborn February 12, 1968 is an American actor. He is the recipient of several
+                            accolades, including a Critics' Choice Movie Award.</p>
+                    </div>
+                    <div id="readmore">
+                        <a href="#">Read More <span>>></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="about">
+                <div id="about_movie">
+                    <h3>About Movie</h3>
+                    <p><span style="color:#ffbb1f">Deadpool</span> is a 2016 American superhero film based on the <span
+                            style="color:#ffbb1f">Marvel Comics</span> character of the same name.
+                    <p>Directed by Tim Miller from a screenplay by Rhett Reese and Paul Wernick, it stars Ryan Reynolds
+                        in the title role alongside Morena Baccarin, Ed Skrein, T. J. Miller, Gina Carano, and Brianna
+                        Hildebrand.</p>
+                    <div id="readmore">
+                        <a href="#">Read More <span>>></span></a>
+                    </div>
+                </div>
+                <div id="about_character">
+                    <h3>Deadpool</h3>
+                    <p>Deadpool is a fictional character appearing in American comic books published by Marvel Comics.
+                    </p>
+                    <div id="readmore">
+                        <a href="#">Read More <span>>></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div id="wrapper">
+            <p id="par1">Copyright © 2018 - All Rights Reserved - Domain Name</p>
+            <p id="par2">Contact Us</p>
+        </div>
+    </footer> -->
+</body>
+
+</html>
