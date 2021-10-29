@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .sprites{
+            width:150px;
+            height:150px;
+
+        }
+        .top-right{
+            position:absolute;
+            right:0;
+            top:0;
+        }
+        .bottom-right{
+            position:absolute;
+            bottom:0;
+            right:0
+        }
+        .bottom-left{
+            position:absolute;
+            bottom:0;
+            left:0;
+        }
+        .top-left{
+            background:url("./images/image2.jpg");
+            background-position:470px -63px;
+        }
+        .top-right{
+            background:url("./images/image2.jpg");
+            background-position: 265px -101px;
+        }
+        .bottom-right{
+            background:url("./images/image2.jpg");
+            background-position:-73px -63px;
+        }
+        .bottom-left{
+            background:url("./images/image2.jpg");
+            background-position: 2509px -69px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sprites top-left"></div>
+    <div class="sprites top-right"></div>
+    <div class="sprites bottom-left"></div>
+    <div class="sprites bottom-right"></div>
+</body>
+</html> 
