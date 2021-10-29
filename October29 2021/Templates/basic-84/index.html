@@ -1,37 +1,287 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Basic 84</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="styles/layout.css" type="text/css">
-<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <title>Basic 84</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <style>
+    /*----------------------------------------------Header-------------------------------------*/
+
+    #header {
+      padding: 20px 0;
+    }
+
+    #header #hgroup {
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+
+    #header #hgroup h1,
+    #header #hgroup h2 {
+      font-weight: normal;
+      text-transform: none;
+    }
+
+    #header #hgroup h1 {
+      font-size: 36px;
+    }
+
+    #header #hgroup h2 {
+      font-size: 13px;
+    }
+
+    #header form {
+      display: block;
+      width: 290px;
+      float: right;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    #header form input {
+      display: block;
+      float: left;
+      width: 200px;
+      margin: 0;
+      padding: 5px;
+      color: #C0BAB6;
+      background-color: #232323;
+      border: 1px solid #666666;
+    }
+
+    #header form #sf_submit {
+      display: block;
+      float: right;
+      width: 70px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background-color: #FF9900;
+      border: none;
+      cursor: pointer;
+    }
+
+    #header nav {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 20px 0;
+      color: #C0BAB6;
+      background-color: #232323;
+      clear: both;
+    }
+
+    #header nav ul {
+      padding: 0 20px;
+    }
+
+    #header nav li {
+      margin-right: 25px;
+      text-transform: uppercase;
+    }
+
+    #header nav li.last {
+      margin-right: 0;
+    }
+
+    #header nav li a {
+      color: #C0BAB6;
+      background-color: #232323;
+    }
+
+    #header nav li a:hover {
+      color: #FF9900;
+      background-color: #232323;
+    }
+
+    @media only screen and (max-width: 768px) {
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+      }
+
+      .wrapper {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header #hgroup {
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #hgroup h1 {
+        width: 100%;
+      }
+
+      #hgoup h1 a {
+        width: 100%;
+        background-color: cadetblue;
+      }
+
+      #hgroup h2 {
+        width: 100%;
+
+      }
+
+      nav {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header nav ul {
+        width: 100%;
+        margin: 0px;
+        padding: 0px 0px;
+      }
+
+      nav ul li {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid aliceblue;
+        text-align: center;
+      }
+      #row2 {
+        margin: 0px;
+      }
+
+      #container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+      }
+
+      #container #slider img {
+        width: 100%;
+      }
+
+      #container #slider {
+        margin-bottom: 0px;
+      }
+      #container #shout {
+        margin-bottom: 0px;
+        width:100%;
+        font-size:10px;
+        padding: 0px;
+      }
+      #homepage h1{
+        margin-top:10px;
+        width: 100%;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+      }
+      #container #homepage #services article{
+        width:100%;
+        border:2px solid red;
+      }
+      .one_quarter {
+        width: 100%;
+        border: 2px solid tomato;
+      }
+
+      #row3 {
+        margin: 0px;
+      }
+      #footer {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .fl_left,
+      .f1_right {
+        margin: 0px;
+        padding: 0px;
+
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      #header {
+        width: 100%;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        text-align: center;
+      }
+      #container{
+        width:100%;
+        padding:0px;
+    }
+    #container #slider img {
+        width: 100%;
+      }
+      #container #shout {
+        margin-bottom: 0px;
+        width:100%;
+        padding: 0px;
+      }
+  }
+
+  @media only screen and (min-width: 1024px) {
+      #container #slider {
+        margin-bottom: 50px;
+      }
+
+      #container {
+        padding: 30px 0;
+      }
+
+      #header,
+      #container,
+      #footer {
+        display: block;
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      #container {
+        padding: 30px 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">Basic 84</a></h1>
-      <h2>Free HTML5 Website Template</h2>
-    </div>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Search:</legend>
-        <input type="text" value="Search Our Website&hellip;" onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
-        <input type="submit" id="sf_submit" value="submit">
-      </fieldset>
-    </form>
-    <nav>
-      <ul>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li class="last"><a href="#">Text Link</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-<!-- content -->
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Basic 84</a></h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li class="last"><a href="#">Text Link</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <!-- content -->
 <div class="wrapper row2">
   <div id="container" class="clear">
     <!-- content body -->
@@ -63,7 +313,7 @@
           <p class="more"><a href="#">Read More &raquo;</a></p>
         </article>
       </section>
-      <!-- / services area -->
+         <!-- / services area -->
       <!-- ########################################################################################## -->
       <!-- ########################################################################################## -->
       <!-- ########################################################################################## -->
@@ -72,8 +322,8 @@
       <h1>Latest From The Gallery</h1>
       <section id="latest" class="last clear">
         <article class="one_quarter">
-          <figure><img src="images/demo/215x315.gif" width="215" height="315" alt="">
-            <figcaption>Image Caption Here</figcaption>
+          <figure><img id="imgdiv" src="images/demo/215x315.gif" width="215" height="315" alt="">
+            <figcaption><button type="button" onclick="imgTRNS()" style="background-color: chartreuse;">Image Transistion</button></figcaption>
           </figure>
         </article>
         <article class="one_quarter">
@@ -104,5 +354,12 @@
     <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
   </footer>
 </div>
+<script>
+  function imgTRNS(){
+    var imgdiv=document.getElementById(imgdiv);
+    imgdiv.style. transition="width 2s;"
+  }
+</script>
 </body>
+
 </html>
