@@ -44,7 +44,7 @@
         }
         section{
          width: 960px; margin: 25px auto; 
-         }
+         } 
          #d1 img{
             width: 215px; height: 315px;
          }
@@ -88,16 +88,28 @@
         #table{
           margin-top: -339px;  text-decoration:none; width: 340px; height: 347.6px; display: inline; float: right; padding-left: 0px;
         }
-         
+
+        [class*= "col-"] {
+            width: 100%;
+            float: left;
+        }
+        @media only screen and (max-width:768px) {
+          header{
+            width: 100%;
+          }
+        }
+        
     </style>
+
+
 </head>
 <body>
     <header>
         <main id=top>
-        <div id=avicii>
+        <div id=avicii class= col-3>
      <span id=avc_sp1>BEST DJ </span> <br><span id=avc_sp2 > in the World</span>
      </div>
-     <nav id=link>
+     <nav id=link class=col-6 >
          <span ><a href="#" > text link</a> </span> 
          <span><a href="#" > text link</a> </span>
          <span><a href="#" > text link</a> </span>
@@ -157,7 +169,7 @@
         <div style="color: gray;margin-left:250px ; float: left; font-family:sans-serif; "> all content regarding <a style="text-decoration:none;" href="avicii .com">avicii</a> </div>
         <div style=" color: gray;;margin-right:250px ;float: right;font-family:sans-serif;">templete by <a style="text-decoration:none ;" href="#">mike</a></div>
       
-      </div>
+      </div> 
         
     
 </body>
