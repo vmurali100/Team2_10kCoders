@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Basic 83</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->\
+  <style>
+    /*----------------------------------------------Header-------------------------------------*/
+
+    #header {
+      padding: 20px 0;
+    }
+
+    #header #hgroup {
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+
+    #header #hgroup h1,
+    #header #hgroup h2 {
+      font-weight: normal;
+      text-transform: none;
+    }
+
+    #header #hgroup h1 {
+      font-size: 36px;
+    }
+
+    #header #hgroup h2 {
+      font-size: 13px;
+    }
+
+    #header form {
+      display: block;
+      width: 290px;
+      float: right;
+      margin: 20px 0;
+      padding: 0;
+    }
+
+    #header form input {
+      display: block;
+      float: left;
+      width: 200px;
+      margin: 0;
+      padding: 5px;
+      color: #C0BAB6;
+      background-color: #232323;
+      border: 1px solid #666666;
+    }
+
+    #header form #sf_submit {
+      display: block;
+      float: right;
+      width: 70px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      background-color: #FF9900;
+      border: none;
+      cursor: pointer;
+    }
+
+    #header nav {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 20px 0;
+      color: #C0BAB6;
+      background-color: #232323;
+      clear: both;
+    }
+
+    #header nav ul {
+      padding: 0 20px;
+    }
+
+    #header nav li {
+      margin-right: 25px;
+      text-transform: uppercase;
+    }
+
+    #header nav li.last {
+      margin-right: 0;
+    }
+
+    #header nav li a {
+      color: #C0BAB6;
+      background-color: #232323;
+    }
+
+    #header nav li a:hover {
+      color: #FF9900;
+      background-color: #232323;
+    }
+
+    @media only screen and (max-width: 768px) {
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+      }
+
+      .wrapper {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header #hgroup {
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #hgroup h1 {
+        width: 100%;
+      }
+
+      #hgoup h1 a {
+        width: 100%;
+        background-color: cadetblue;
+      }
+
+      #hgroup h2 {
+        width: 100%;
+
+      }
+
+      nav {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header nav ul {
+        width: 100%;
+        margin: 0px;
+        padding: 0px 0px;
+      }
+
+      nav ul li {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid aliceblue;
+        text-align: center;
+      }
+      #row2{
+        margin:0px;
+      }
+      #container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+      }
+
+      #container #slider img {
+        width: 100%;
+      }
+
+      #container #slider {
+        margin-bottom: 0px;
+      }
+    .one_quarter{
+        width: 100%;
+        border: 2px solid tomato;
+      }
+      #row3{
+        margin:0px;
+      }
+      #footer{
+        width: 100%;
+        margin:0px;
+        padding:0px;
+      }
+      .fl_left,.f1_right{
+        margin:0px;
+        padding: 0px;
+
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      #header {
+        width: 100%;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        text-align: center;
+      }
+
+      #container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+      }
+
+      #container #slider img {
+        width: 100%;
+      }
+
+      #container #slider {
+        margin-bottom: 0px;
+      }
+      #container #homepage{
+        width:100%;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #container #slider {
+        margin-bottom: 50px;
+      }
+
+      #container {
+        padding: 30px 0;
+      }
+
+      #header,
+      #container,
+      #footer {
+        display: block;
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      #container {
+        padding: 30px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Basic 83</a><button type="button" id="btn">BB</button></h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li class="last"><a href="#">Text Link</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <!-- content -->
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- content body -->
+      <section id="slider"><a href="#"><img src="images/demo/1.jpg" alt=""></a></section>
+      <!-- main content -->
+      <div id="homepage">
+        <!-- services area -->
+        <section id="services" class="clear">
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+        </section>
+        <!-- / Two Third -->
+      </div>
+      <!-- / content body -->
+    </div>
+  </div>
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    </footer>
+  </div>
+  <script></script>
+
+</body>
+
+</html>
