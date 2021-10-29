@@ -1,0 +1,262 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    margin:0;
+    padding:0;
+    font-size:13px; 
+    font-family:Georgia, "Times New Roman", Times, serif; 
+    color:#919191; background-color:#232323;
+}
+div.wrapper{
+    display:block; 
+    width:100%; 
+    margin:0; 
+    padding:0; 
+    text-align:left;
+}
+.row1, .row1 a{
+    color:#C0BAB6; 
+    background-color:#333333;
+}
+.row2{
+    color:#979797; 
+    background-color:#FFFFFF;
+}
+.row2 a{
+    color:#FF9900;
+    background-color:#FFFFFF;
+}
+.row3, .row3 a{
+    color:#919191; 
+    background-color:#232323;
+}
+#header, #container, #footer{
+    display:block; 
+    width:960px; 
+    margin:0 auto;
+}
+nav ul{
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}
+h1, h2, h3, h4, h5, h6{
+    margin:0; 
+    padding:0; 
+    font-size:16px; 
+    font-weight:bold; 
+    font-style:normal; 
+    line-height:normal; 
+    text-transform:uppercase;
+}
+form, fieldset, legend{
+    margin:0; 
+    padding:0; 
+    border:none;
+}
+legend{
+    display:none;
+}
+input, textarea, select{
+    font-size:12px; 
+    font-family:Georgia,"Times New Roman",Times,serif;
+}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter{
+    display:block; 
+    float:left; 
+    margin:0 20px 0 0;
+}
+.one_quarter{
+    width:225px;
+}
+.two_quarter{
+    width:470px;
+}
+.three_quarter{
+    width:715px;
+}
+.four_quarter{
+    width:960px; 
+    float:none; 
+    margin-right:0; 
+    clear:both;
+}
+.one_third, .two_third, .three_third{
+    display:block; 
+    float:left; 
+    margin:0 30px 0 0;
+}
+.one_third{
+    width:300px;
+}
+.two_third{
+    width:630px;
+}
+.three_third{
+    width:960px; 
+    float:none; 
+    margin-right:0; 
+    clear:both;
+}
+.lastbox{
+    margin-right:0;
+}
+#header{
+    padding:20px 0;
+}
+
+#header #hgroup{
+    float:left; 
+    margin:0 0 20px 0;
+}
+#header #hgroup h1, #header #hgroup h2{
+    font-weight:normal; 
+    text-transform:none;
+}
+#header #hgroup h1{
+    font-size:36px;
+}
+#header #hgroup h2{
+    font-size:13px;
+}
+
+#header nav{
+    display:block; 
+    float:right; 
+    margin:10px 0 0 0; 
+    padding:20px 0; 
+    color:#C0BAB6;
+     background-color:#232323;
+    }
+#header nav ul{
+    padding:0 20px;
+}
+#header nav li{
+    display:inline; 
+    margin-right:25px; 
+    text-transform:uppercase;
+}
+#header nav li.last{
+    margin-right:0;
+}
+#header nav li a{
+    color:#C0BAB6; 
+    background-color:#232323;
+}
+#header nav li a:hover{
+    color:#FF9900; 
+    background-color:#232323;
+}
+#container{
+    padding:30px 0;
+}
+#container section{
+    display:block; 
+    width:100%; 
+    margin:0 0 50px 0; 
+    padding:0;
+}
+#container .last{
+    margin:0;
+}
+#container .more{
+    text-align:right;
+}
+#container #slider figure img{
+    float:right; 
+    width:630px; 
+    height:300px;
+}
+#container #slider figure figcaption{
+    display:block; 
+    float:left; 
+    width:280px; 
+    height:260px; 
+    padding:20px; 
+    overflow:hidden; 
+    color:#989898; 
+    background-color:#DEDEDE; 
+    line-height:1.6em;
+}
+#container #slider figure figcaption a{
+    color:#FF9900; 
+    background-color:#DEDEDE;
+}
+#container #slider figure h2{
+    font-size:42px; 
+    font-weight:normal; 
+    font-style:italic; 
+    text-transform:none;
+}
+#container #homepage{
+    display:block; 
+    width:100%; 
+    line-height:1.6em;
+}
+#container #homepage #services article h2{
+    font-size:14px; 
+    margin-bottom:15px;
+}
+#container #homepage #services article p{
+    margin:0; 
+    padding:0;
+}
+#container #homepage #services article img{
+    float:left;
+    width:80px; 
+    height:80px;
+    margin:0 10px 10px 0; 
+    padding:4px; 
+    border:1px solid #DEDEDE;
+}
+#container #homepage #services article footer{
+    margin:10px 0 0 0;
+}
+#container #homepage #latest article figure img{
+    margin:0 0 10px 0; 
+    padding:4px; 
+    border:1px solid #D6D6D6;
+}
+#container #homepage #latest article figure h2{
+    font-size:14px;
+}
+.clear:after{
+    content:"."; 
+    display:block; 
+    height:0; 
+    clear:both; 
+    visibility:hidden; 
+    line-height:0;
+}
+a{
+    outline:none; 
+    text-decoration:none;
+}
+.fl_left{
+    float:left;
+}
+.fl_right{
+    float:right;
+}
+#footer{
+    padding:20px 0;
+}
+#footer p{
+    margin:0; 
+    padding:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
