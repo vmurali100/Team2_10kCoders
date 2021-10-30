@@ -51,6 +51,25 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 #header, #container, #footer, #copyright{display:block; width:960px; margin:0 auto;}
 
 nav ul{margin:0; padding:0; list-style:none;}
+#header{
+    width:960px;
+    margin:0 auto;
+      overflow: auto;
+}
+@media only screen and(max-width:768px){
+    #header{
+        width:100%;
+        padding:0 auto;
+        margin:0 auto;
+    } 
+ } 
+ #sidebar nav ul li{
+ width:100%;
+ text-align: center;
+ padding:10px 0;
+ border bottom:3px solid white;
+ }
+ 
 
 h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:32px; font-weight:normal; font-style:italic; line-height:normal;}
 
@@ -84,7 +103,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #header #hgroup{float:left; margin:0 0 20px 0;}
 #header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
 #header #hgroup h1{font-size:36px;}
-#header #hgroup h2{font-size:13px;}
+#header #hgroup h2{font: size 15px;}
 
 #header nav{display:block; float:right; margin:10px 0 0 0; padding:20px 0; color:#C0BAB6; background-color:#232323;}
 #header nav ul{padding:0 20px;}

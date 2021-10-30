@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css image</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0.1)
+            }
+
+            to {
+                transform: scale(2)
+            }
+        }
+
+        .main {
+            width: 500px;
+            margin: auto;
+        }
+
+        #smallImage {
+            width: 100%;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        #overlay {
+            position: absolute;
+            transition: 2s;
+            background-color: rgba(0, 0, 0, 0.9);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            display: none;
+            text-align: center;
+
+        }
+
+        #myImage {
+            animation-name: zoom;
+            animation-duration: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="./dance1.jfif" alt="" id="smallImage" onclick="showCase()">
+    </div>
+
+    <div id="overlay">
+        <img src="./dance1.jfif" alt="" id="myImage">
+    </div>
+
+    <script>
+        function showCase() {
+            var overLay = document.getElementById("overlay")
+            overLay.style.display = "block"
+            
+            overLay.addEventListener("click",(e)=>{
+                console.log(e.target.id)
+                if(e.target.id =="overlay"){
+                    overLay.style.display="none"
+                }
+            })
+        }
+
+        
+    </script>
+</body>
+
+</html>
