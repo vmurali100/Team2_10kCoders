@@ -1,33 +1,670 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Basic 88</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="styles/layout.css" type="text/css">
-<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
-<style>
-  @media only screen and (max-width: 768px){
-    
-  }
-</style>
+  <title>Basic 88</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <style>
+    /*
+HTML 5 Template Name: Basic 88
+File: Layout CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
+
+body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191; background-color:#232323;}
+
+.clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
+.clear{display:block; clear:both;}
+html[xmlns] .clear{display:block;}
+* html .clear{height:1%;}
+
+a{outline:none; text-decoration:none;}
+
+code{font-weight:normal; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
+.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
+.imgl{float:left; margin:0 15px 15px 0; clear:left;}
+.imgr{float:right; margin:0 0 15px 15px; clear:right;}
+
+/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
+
+q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
+q:before{content:'� '; font-size:26px;}
+q:after{content:' �'; font-size:26px; line-height:0;}
+
+/* ----------------------------------------------Wrapper-------------------------------------*/
+
+div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
+
+.row1, .row1 a{color:#C0BAB6; background-color:#333333;}
+.row2{color:#979797; background-color:#FFFFFF;}
+.row2 a{color:#FF9900; background-color:#FFFFFF;}
+.row3{color:#989898; background-color:#333333;}
+.row3 a{color:#FF9900; background-color:#333333;}
+.row4, .row4 a{color:#919191; background-color:#232323;}
+
+/*----------------------------------------------Generalise-------------------------------------*/
+
+#header, #container, #footer, #copyright{display:block; width:960px; margin:0 auto;}
+
+nav ul{margin:0; padding:0; list-style:none;}
+
+h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:32px; font-weight:normal; font-style:italic; line-height:normal;}
+
+address{font-style:normal;}
+
+blockquote, q{display:block; padding:8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
+blockquote:before, q:before{content:'� '; font-size:26px;}
+blockquote:after, q:after{content:' �'; font-size:26px; line-height:0;}
+
+form, fieldset, legend{margin:0; padding:0; border:none;}
+legend{display:none;}
+input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Times,serif;}
+
+.one_quarter, .two_quarter, .three_quarter, .four_quarter{display:block; float:left; margin:0 20px 0 0;}
+.one_quarter{width:225px;}
+.two_quarter{width:470px;}
+.three_quarter{width:715px;}
+.four_quarter{width:960px; float:none; margin-right:0; clear:both;}
+
+.one_third, .two_third, .three_third{display:block; float:left; margin:0 30px 0 0;}
+.one_third{width:300px;}
+.two_third{width:630px;}
+.three_third{width:960px; float:none; margin-right:0; clear:both;}
+
+.lastbox{margin-right:0;}
+
+/*----------------------------------------------Header-------------------------------------*/
+
+#header{padding:20px 0;}
+
+#header #hgroup{float:left; margin:0 0 20px 0;}
+#header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
+#header #hgroup h1{font-size:36px;}
+#header #hgroup h2{font-size:13px;}
+
+#header nav{display:block; float:right; margin:10px 0 0 0; padding:20px 0; color:#C0BAB6; background-color:#232323;}
+#header nav ul{padding:0 20px;}
+#header nav li{ margin-right:25px; text-transform:uppercase;}
+#header nav li.last{margin-right:0;}
+#header nav li a{color:#C0BAB6; background-color:#232323;}
+#header nav li a:hover{color:#FF9900; background-color:#232323;}
+
+/*----------------------------------------------Content Area-------------------------------------*/
+
+#container{padding:30px 0;}
+#container section{display:block; width:100%; margin:0 0 30px 0; padding:0;}
+#container .last{margin:0;}
+#container .more{text-align:right;}
+
+/* ------Slider-----*/
+
+#container #slider{}
+
+/* ------Main Content-----*/
+
+#container #homepage{display:block; width:100%; line-height:1.8em;}
+
+#container #homepage #services{}
+#container #homepage #services article{}
+#container #homepage #services article figure{}
+#container #homepage #services article figure img{margin:0 0 15px 0; padding:4px; border:1px solid #D6D6D6;}
+#container #homepage #services article figure figcaption{}
+#container #homepage #services article figure h2{font-size:14px; font-weight:bold;}
+#container #homepage #services article figure footer{}
+
+#container #homepage #intro{}
+#container #homepage #intro article{}
+#container #homepage #intro article figure{}
+#container #homepage #intro article figure img{float:right; margin:0 0 10px 0; padding:4px; border:1px solid #D6D6D6;}
+#container #homepage #intro article figure figcaption{float:left; width:460px;}
+#container #homepage #intro article figure h2{}
+#container #homepage #intro article figure footer{}
+
+/*----------------------------------------------Footer-------------------------------------*/
+
+#footer{padding:30px 0; font-size:12px; line-height:1.4em;}
+
+#footer section h2.title{margin:0 0 25px 0; padding:0; color:#FFFFFF; background-color:#333333; font-size:12px; font-weight:bold; text-transform:uppercase;}
+
+#footer section nav li{margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #555555;}
+#footer section nav li.last{margin:0;}
+
+/*----------------------------------------------Copyright-------------------------------------*/
+
+#copyright{padding:20px 0;}
+#copyright p{margin:0; padding: 0;}
+
+    @media only screen and (max-width: 768px) {
+      * {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 100%;
+
+      }
+
+      #header {
+        width: 100%;
+        background-color:lightcyan;s
+        padding: 0px;
+        margin: 0px
+      }
+
+      #header #hgroup {
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+        margin: 0px
+      }
+
+      #hgroup h1 {
+        width: 100%;
+      }
+
+      #hgoup h1 a {
+        width: 100%;
+        background-color: cadetblue;
+      }
+
+      #hgroup h2 {
+        width: 100%;
+        color: maroon;
+
+      }
+
+      #header nav {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header nav ul {
+        width: 100%;
+        margin: 0px;
+        padding: 0px 0px;
+      }
+
+      #header nav ul li {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid aliceblue;
+        text-align: center;
+      }
+
+      #row2 {
+        width: 100%;
+        margin: 0px;
+      }
+
+      #container {
+        width: 100%;
+        margin: 0px;
+      }
+
+      #container #slider {
+        width: 100%;
+      }
+
+      #container #slider img {
+        width: 100%;
+      }
+
+      #container section {
+        display: block;
+        width: 100%;
+        margin: 0px;
+        padding: 0;
+      }
+
+      .one_third {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0 0px 0 0;
+        padding: 0px;
+      }
+
+      #container #homepage #services article figure img {
+        margin: 0 0 0px 0;
+        width: 170px;
+        padding: 4px;
+        border: 1px solid #D6D6D6;
+      }
+
+      #container #homepage #services article figure figcaption p {
+        margin: 0px;
+      }
+
+      #container #homepage #services article figure footer {
+        text-align: center;
+      }
+
+      #footer {
+        width: 100%;
+      }
+
+      #footer .one_quarter {
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+        border: 1px solid palevioletred;
+        text-align: center;
+      }
+
+      #footer section h2.title {
+        margin: 0 0 0px 0;
+        padding: 10px 0px 10px 0px;
+        color: #FFFFFF;
+        background-color: sandybrown;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      #footer section nav li {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        border-bottom: 1px solid #555555;
+      }
+      #footer {
+        width: 100%;
+      }
+      .row4 #copyright {
+        width: 100%;
+      }
+
+    }
+
+    @media only screen and (min-width: 769px) {
+      * {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 100%;
+
+      }
+
+      #header {
+        width: 100%;
+        background-color:lightcyan;
+        padding: 0px;
+        margin: 0px
+      }
+
+      #hgroup h2 {
+        width: 100%;
+        color: red;
+        padding: 0px;
+        margin: 0px
+      }
+
+      #header nav {
+        text-align: center;
+      }
+
+      #header nav ul li {
+
+        width: 100%;
+        display: inline;
+        text-align: center;
+      }
+
+      #row2 {
+        width: 100%;
+        margin: 0px;
+      }
+
+      #container {
+        width: 100%;
+        margin: 0px;
+      }
+
+      #container #slider {
+        width: 100%;
+      }
+
+      #container #slider img {
+        width: 100%;
+      }
+
+      #container section {
+        display: block;
+        width: 100%;
+        margin: 0px;
+        padding: 0;
+      }
+
+      .one_third {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0 20px 0 0;
+      }
+
+      #container #homepage #services article figure img {
+        margin: 0 0 0px 0;
+
+        padding: 4px;
+        border: 1px solid #D6D6D6;
+      }
+
+      #container #homepage #services article figure figcaption p {
+        margin: 0px;
+      }
+
+      #container #homepage #services article figure footer {
+        text-align: center;
+      }
+
+      #footer {
+        width: 100%;
+        text-align: center;
+      }
+
+      #footer .one_quarter {
+        text-align: center;
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+        border: 1px solid palevioletred;
+      }
+
+      #footer section h2.title {
+        margin: 0 0 0px 0;
+        padding: 10px 0px 10px 0px;
+        color: #FFFFFF;
+        background-color: sandybrown;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      #footer section nav li {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        border-bottom: 1px solid #555555;
+      }
+      .row4{
+        width:100%
+      }
+      .row4 #copyright {
+        width: 100%;
+      }
+
+    }
+
+    @media only screen and (min-width: 1024px) {
+      .wrapper {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+
+      #header {
+        padding: 20px 0;
+      }
+
+      #header #hgroup {
+        float: left;
+        margin: 0 0 20px 0;
+      }
+
+      #header,
+      #container,
+      #footer {
+        display: block;
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      #header nav {
+        display: block;
+        float: right;
+        margin: 10px 0 0 0;
+        padding: 20px 0;
+        color: #C0BAB6;
+        background-color: #232323;
+      }
+
+      #container {
+        padding: 30px 0;
+      }
+
+      #container section {
+        display: block;
+        width: 100%;
+        margin: 0 0 30px 0;
+        padding: 0;
+      }
+
+      #container #homepage {
+        display: block;
+        width: 100%;
+        line-height: 1.8em;
+      }
+
+      #container section {
+        display: block;
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 0;
+      }
+
+      .one_third,
+      .two_third,
+      .three_third {
+        display: block;
+        float: left;
+        margin: 0 20px 0 0;
+      }
+
+      .one_third {
+        width: 300px;
+
+      }
+
+      #container #homepage #services article figure img {
+        margin: 0 0 15px 0;
+        padding: 4px;
+        border: 1px solid #D6D6D6;
+      }
+
+      #container #homepage #services article figure figcaption p {
+        margin: 10px;
+      }
+
+      #footer .one_quarter {
+        padding: 0px 20px 0px 20px;
+        width: 240px;
+        bottom: 2px solid white;
+      }
+
+      #footer section h2.title {
+        margin: 0 0 25px 0;
+        padding: 10px 0px 0px 0px;
+        color: #FFFFFF;
+        background-color: #333333;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      #footer section nav li {
+        margin: 0 0 5px 0;
+        padding: 0 0 5px 0;
+        border-bottom: 1px solid #555555;
+      }
+      #footer {
+        padding: 20px 0;
+      }
+    }
+
+    @media only screen and (min-width: 1025px) {
+
+      #container section {
+        display: block;
+        width: 100%;
+        margin: 0 0 30px 0;
+        padding: 0;
+      }
+
+      one_third,
+      .two_third,
+      .three_third {
+        display: block;
+        float: left;
+        margin: 0 30px 0 0;
+      }
+
+      #container #homepage {
+        display: block;
+        width: 100%;
+        line-height: 1.8em;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">Basic 88</a></h1>
-      <h2>Free HTML5 Website Template</h2>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li class="last"><a href="#">Text Link</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Basic 88</a></h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li class="last"><a href="#">Text Link</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <!-- content -->
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- Slider -->
+      <section id="slider"><a href="#"><img src="images/demo/960x360.gif" alt=""></a></section>
+      <!-- main content -->
+      <div id="homepage">
+        <!-- Services -->
+        <section id="services" class="clear">
+          <article class="one_third">
+            <figure><img src="images/demo/290x180.gif" width="290" height="180" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_third">
+            <figure><img src="images/demo/290x180.gif" width="290" height="180" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_third lastbox">
+            <figure><img src="images/demo/290x180.gif" width="290" height="180" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+        <!-- Footer -->
+        <div class="wrapper row3">
+          <div id="footer" class="clear">
+            <!-- Section One -->
+            <section class="one_quarter">
+              <h2 class="title">Link Block</h2>
+              <nav>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit</a></li>
+                  <li><a href="#">Amet consectetur</a></li>
+                  <li><a href="#">Praesent vel sem id</a></li>
+                  <li><a href="#">Curabitur hendrerit est</a></li>
+                  <li class="last"><a href="#">Sed a nulla urna</a></li>
+                </ul>
+              </nav>
+            </section>
+            <!-- Section Two -->
+            <section class="one_quarter">
+              <h2 class="title">Link Block</h2>
+              <nav>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit</a></li>
+                  <li><a href="#">Amet consectetur</a></li>
+                  <li><a href="#">Praesent vel sem id</a></li>
+                  <li><a href="#">Curabitur hendrerit est</a></li>
+                  <li class="last"><a href="#">Sed a nulla urna</a></li>
+                </ul>
+              </nav>
+            </section>
+            <!-- Section Three -->
+            <section class="one_quarter">
+              <h2 class="title">Link Block</h2>
+
+              <nav>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit</a></li>
+                  <li><a href="#">Amet consectetur</a></li>
+                  <li><a href="#">Praesent vel sem id</a></li>
+                  <li><a href="#">Curabitur hendrerit est</a></li>
+                  <li class="last"><a href="#">Sed a nulla urna</a></li>
+                </ul>
+              </nav>
+            </section>
+            <!-- Section Four -->
+            <section class="one_quarter lastbox">
+              <h2 class="title">Link Block</h2>
+              <nav>
+                <ul>
+                  <li><a href="#">Lorem ipsum dolor sit</a></li>
+                  <li><a href="#">Amet consectetur</a></li>
+                  <li><a href="#">Praesent vel sem id</a></li>
+                  <li><a href="#">Curabitur hendrerit est</a></li>
+                  <li class="last"><a href="#">Sed a nulla urna</a></li>
+                </ul>
+              </nav>
+            </section>
+            <!-- / Section -->
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div class="wrapper row4">
+          <footer id="copyright" class="clear">
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+            <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+                title="Free Website Templates">OS Templates</a></p>
+          </footer>
+        </div>
+
 </body>
+
 </html>
