@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0.1)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .main {
+            width: 400px;
+            margin: auto;
+        }
+
+        #small_image {
+            width: 100%;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #overlay {
+            position: absolute;
+            transition: 2s;
+            background-color: rgba(0, 0, 0, 0.9);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            display: none;
+            text-align: center;
+        }
+
+        #myimage {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="https://www.w3schools.com/css/img_lights.jpg" alt="" id="small_image" onclick="showModal()">
+    </div>
+    <div id="overlay">
+        <img src="https://www.w3schools.com/css/img_lights.jpg" alt="" id="myimage">
+    </div>
+    <script>
+        function showModal() {
+            var overLay = document.getElementById("overlay")
+            overLay.style.display = "block"
+        }
+    </script>
+</body>
+
+</html>
