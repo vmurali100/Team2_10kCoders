@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+             .myDiv {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .overLay {
+            opacity: 0;
+            background: grey;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 2;
+            top: 8px;
+            left: 8px;
+            transition: .5s ease;
+        }
+        h2{
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+        }
+        #main:hover .overLay{
+            opacity: 1;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <img src="../October29 2021/Templates/basic-83/images/demo/1.jpg" alt="" class="myDiv">
+            <div class="overLay">
+                <h2>Text in image</h2>
+            </div>
+        </div>
+    </body>
+</html>
