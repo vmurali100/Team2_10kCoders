@@ -11,7 +11,7 @@
             margin: 0;
         }
 
-        @keyframes zoom {
+        @keyframes ss {
             from {
                 transform: scale(0.1)
             }
@@ -46,7 +46,7 @@
         }
 
         #myImage {
-            animation-name: zoom;
+            animation-name: ss;
             animation-duration: 0.6s;
         }
     </style>
@@ -66,12 +66,12 @@
             var overLay = document.getElementById("overlay")
             overLay.style.display = "block"
             
-            overLay.addEventListener("click",(e)=>{
-                console.log(e.target.id)
-                if(e.target.id =="overlay"){
-                    overLay.style.display="none"
-                }
-            })
+            // overLay.addEventListener("click",(e)=>{
+            //     console.log(e.target.id)
+            //     if(e.target.id =="overlay"){
+            //         overLay.style.display="none"
+            //     }
+            // })
         }
 
         
