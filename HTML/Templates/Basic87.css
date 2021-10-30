@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0
+}
+.wrapper{
+    width:100%;
+    margin:0;
+    padding:0;
+    display:block;
+    text-align: left;
+    overflow: auto;
+}
+.row1{
+    background-color: black;
+    color: bisque;
+}
+#header{
+    padding: 20px;
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+}
+#hgroup{
+    float:left;
+    margin: 0 0 20px 0;
+}
+#hgroup h1{
+    font-weight: normal;
+    font-size: 36px;
+    text-transform: none;
+}
+.row1 a{
+    background-color: black;
+    color: blanchedalmond;
+    text-decoration:none;
+    outline: none;
+}
+#hgroup h2{
+    font-weight: normal;
+    text-transform: none;
+    font-size:13px ;
+}
+#header nav{
+    float:right;
+    margin:20px 0 0 0;
+    padding:10px 0;
+    background-color: black;
+    color: blanchedalmond;
+}
+#header nav ul{
+    padding: 0 20px;
+    list-style-type: none;
+}
+#header nav ul li{
+    display:inline;
+    margin-right: 25px;
+    text-transform:uppercase ;
+}
+#header nav ul li:hover{
+color: darkorange;
+cursor: pointer;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: aliceblue;
+    background-color: black;
+}
+.row2{
+    color: grey;
+    background-color: aliceblue;
+}
+#container{
+    width: 960px;
+    margin: 0 auto;
+    display: block;
+}
+#container #homepage {
+    display:block;
+    width: 100%;
+    line-height: 1.6em;
+}
+#container section{
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+.one_quarter{
+width: 225px;
+}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+}
+.lastbox{
+    margin: 0 ;
+}
+#container #homepage #latestfigure{
+    padding: 4px;
+    border:1px solid antiquewhite;
+    text-align: center;
+}
+#container #shout {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #DEDEDE;
+    text-align: center;
+    overflow: auto;
+}
+
+#container #shout p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8em;
+}
+#latest {
+    overflow: auto;
+}
