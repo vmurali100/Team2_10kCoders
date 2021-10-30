@@ -16,42 +16,157 @@ Author URI: https://www.os-templates.com/
 Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
 */
 
-html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
+    html {
+      overflow-y: scroll;
+    }
 
-body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191; background-color:#232323;}
+    /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
 
-.clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
-.clear{display:block; clear:both;}
-html[xmlns] .clear{display:block;}
-* html .clear{height:1%;}
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #919191;
+      background-color: #232323;
+    }
 
-a{outline:none; text-decoration:none;}
+    .clear:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+    }
 
-code{font-weight:normal; font-style:normal; font-family:Georgia, "Times New Roman", Times, serif;}
+    .clear {
+      display: block;
+      clear: both;
+    }
 
-.fl_left{float:left;}
-.fl_right{float:right;}
+    html[xmlns] .clear {
+      display: block;
+    }
 
-img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
-.imgholder, .imgl, .imgr{padding:4px; border:1px solid #D6D6D6; text-align:center;}
-.imgl{float:left; margin:0 15px 15px 0; clear:left;}
-.imgr{float:right; margin:0 0 15px 15px; clear:right;}
+    * html .clear {
+      height: 1%;
+    }
 
-/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+    a {
+      outline: none;
+      text-decoration: none;
+    }
 
-address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
+    code {
+      font-weight: normal;
+      font-style: normal;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
 
-q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
-q:before{content:'� '; font-size:26px;}
-q:after{content:' �'; font-size:26px; line-height:0;}
-/* ----------------------------------------------Wrapper-------------------------------------*/
+    .fl_left {
+      float: left;
+    }
 
-div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
+    .fl_right {
+      float: right;
+    }
 
-.row1, .row1 a{color:#C0BAB6; background-color:#333333;}
-.row2{color:#979797; background-color:#FFFFFF;}
-.row2 a{color:#FF9900; background-color:#FFFFFF;}
-.row3, .row3 a{color:#919191; background-color:#232323;}
+    img {
+      margin: 0;
+      padding: 0;
+      border: none;
+      line-height: normal;
+      vertical-align: middle;
+    }
+
+    .imgholder,
+    .imgl,
+    .imgr {
+      padding: 4px;
+      border: 1px solid #D6D6D6;
+      text-align: center;
+    }
+
+    .imgl {
+      float: left;
+      margin: 0 15px 15px 0;
+      clear: left;
+    }
+
+    .imgr {
+      float: right;
+      margin: 0 0 15px 15px;
+      clear: right;
+    }
+
+    /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+    address,
+    article,
+    aside,
+    figcaption,
+    figure,
+    footer,
+    header,
+    nav,
+    section {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    q {
+      display: block;
+      padding: 0 10px 8px 10px;
+      color: #979797;
+      background-color: #ECECEC;
+      font-style: italic;
+      line-height: normal;
+    }
+
+    q:before {
+      content: '� ';
+      font-size: 26px;
+    }
+
+    q:after {
+      content: ' �';
+      font-size: 26px;
+      line-height: 0;
+    }
+
+    /* ----------------------------------------------Wrapper-------------------------------------*/
+
+    div.wrapper {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .row1,
+    .row1 a {
+      color: #C0BAB6;
+      background-color: #333333;
+    }
+
+    .row2 {
+      color: #979797;
+      background-color: #FFFFFF;
+    }
+
+    .row2 a {
+      color: #FF9900;
+      background-color: #FFFFFF;
+    }
+
+    .row3,
+    .row3 a {
+      color: #919191;
+      background-color: #232323;
+    }
 
     /*----------------------------------------------Header-------------------------------------*/
 
@@ -143,81 +258,274 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
       background-color: #232323;
     }
 
-  /*----------------------------------------------Generalise-------------------------------------*/
+    /*----------------------------------------------Generalise-------------------------------------*/
 
-#header, #container, #footer{display:block; width:960px; margin:0 auto;}
+    #header,
+    #container,
+    #footer {
+      display: block;
+      width: 960px;
+      margin: 0 auto;
+    }
 
-nav ul{margin:0; padding:0; list-style:none;}
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; font-style:normal; line-height:normal; text-transform:uppercase;}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: normal;
+      text-transform: uppercase;
+    }
 
-address{font-style:normal;}
+    address {
+      font-style: normal;
+    }
 
-blockquote, q{display:block; padding:8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
-blockquote:before, q:before{content:'� '; font-size:26px;}
-blockquote:after, q:after{content:' �'; font-size:26px; line-height:0;}
+    blockquote,
+    q {
+      display: block;
+      padding: 8px 10px;
+      color: #979797;
+      background-color: #ECECEC;
+      font-style: italic;
+      line-height: normal;
+    }
 
-form, fieldset, legend{margin:0; padding:0; border:none;}
-legend{display:none;}
-input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Times,serif;}
+    blockquote:before,
+    q:before {
+      content: '� ';
+      font-size: 26px;
+    }
 
-.one_third, .two_third, .three_third{display:block; float:left; margin:0 30px 0 0;}
-.one_third{width:300px;}
-.two_third{width:630px;}
-.three_third{width:960px; float:none; margin-right:0; clear:both;}
+    blockquote:after,
+    q:after {
+      content: ' �';
+      font-size: 26px;
+      line-height: 0;
+    }
 
-.one_quarter, .two_quarter, .three_quarter, .four_quarter{display:block; float:left; margin:0 20px 0 0; text-align:justify;}
-.one_quarter{width:225px;}
-.two_quarter{width:470px;}
-.three_quarter{width:715px;}
-.four_quarter{width:960px; float:none; margin-right:0; clear:both;}
+    form,
+    fieldset,
+    legend {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
 
-.lastbox{margin-right:0;}
+    legend {
+      display: none;
+    }
+
+    input,
+    textarea,
+    select {
+      font-size: 12px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .one_third,
+    .two_third,
+    .three_third {
+      display: block;
+      float: left;
+      margin: 0 30px 0 0;
+    }
+
+    .one_third {
+      width: 300px;
+    }
+
+    .two_third {
+      width: 630px;
+    }
+
+    .three_third {
+      width: 960px;
+      float: none;
+      margin-right: 0;
+      clear: both;
+    }
+
+    .one_quarter,
+    .two_quarter,
+    .three_quarter,
+    .four_quarter {
+      display: block;
+      float: left;
+      margin: 0 20px 0 0;
+      text-align: justify;
+    }
+
+    .one_quarter {
+      width: 225px;
+    }
+
+    .two_quarter {
+      width: 470px;
+    }
+
+    .three_quarter {
+      width: 715px;
+    }
+
+    .four_quarter {
+      width: 960px;
+      float: none;
+      margin-right: 0;
+      clear: both;
+    }
+
+    .lastbox {
+      margin-right: 0;
+    }
 
 
 
-/*----------------------------------------------Content Area-------------------------------------*/
+    /*----------------------------------------------Content Area-------------------------------------*/
 
-#container{padding:30px 0;}
-#container section{display:block; width:100%; margin:0 0 30px 0; padding:0;}
-#container .last{margin:0;}
-#container .more{text-align:right;}
+    #container {
+      padding: 30px 0;
+    }
 
-/* ------Slider-----*/
+    #container section {
+      display: block;
+      width: 100%;
+      margin: 0 0 30px 0;
+      padding: 0;
+    }
 
-#container #slider{}
+    #container .last {
+      margin: 0;
+    }
 
-/* ------Shout-----*/
+    #container .more {
+      text-align: right;
+    }
 
-#container #shout{display:block; width:930px; padding:15px; font-size:16px; line-height:1.8em; color:#979797; background-color:#EEEEEE; text-transform:uppercase; text-align:justify;}
-#container #shout p{margin:0; padding:0;}
+    /* ------Slider-----*/
 
-/* ------Main Content-----*/
+    #container #slider {}
 
-#container #homepage{display:block; width:100%; line-height:1.6em;}
-#container #homepage h1{margin-bottom:25px; padding-bottom:10px; border-bottom:1px solid #D6D6D6;}
+    /* ------Shout-----*/
 
-#container #homepage #services{}
-#container #homepage #services article{display:inline; float:left; width:300px; margin:0 30px 0 0; padding:0;}
-#container #homepage #services .last{margin-right:0;}
-#container #homepage #services figure{display:inline; float:left;}
-#container #homepage #services strong{float:left; margin:8px 0 0 10px; padding:0; font-size:14px; font-weight:bold; text-transform:uppercase;}
-#container #homepage #services p{display:block; margin:0; padding:5px 0 0 0; clear:both; line-height:1.6em;}
-#container #homepage #services .spacer{clear:both; padding:8px 0; line-height:normal;}
+    #container #shout {
+      display: block;
+      width: 930px;
+      padding: 15px;
+      font-size: 16px;
+      line-height: 1.8em;
+      color: #979797;
+      background-color: #EEEEEE;
+      text-transform: uppercase;
+      text-align: justify;
+    }
 
-#container #homepage #latest{}
-#container #homepage #latest article{}
-#container #homepage #latest figure{padding:4px; border:1px solid #D6D6D6; text-align:center;}
-#container #homepage #latest figcaption{padding:5px; text-align:center; color:#979797; background-color:#EEEEEE; text-transform:uppercase; text-align:center;}
+    #container #shout p {
+      margin: 0;
+      padding: 0;
+    }
 
-/*----------------------------------------------Footer-------------------------------------*/
+    /* ------Main Content-----*/
 
-#footer{padding:20px 0;}
-#footer p{margin:0; padding:0;}
+    #container #homepage {
+      display: block;
+      width: 100%;
+      line-height: 1.6em;
+    }
+
+    #container #homepage h1 {
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #D6D6D6;
+    }
+
+    #container #homepage #services {}
+
+    #container #homepage #services article {
+      display: inline;
+      float: left;
+      width: 300px;
+      margin: 0 30px 0 0;
+      padding: 0;
+    }
+
+    #container #homepage #services .last {
+      margin-right: 0;
+    }
+
+    #container #homepage #services figure {
+      display: inline;
+      float: left;
+    }
+
+    #container #homepage #services strong {
+      float: left;
+      margin: 8px 0 0 10px;
+      padding: 0;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    #container #homepage #services p {
+      display: block;
+      margin: 0;
+      padding: 5px 0 0 0;
+      clear: both;
+      line-height: 1.6em;
+    }
+
+    #container #homepage #services .spacer {
+      clear: both;
+      padding: 8px 0;
+      line-height: normal;
+    }
+
+    #container #homepage #latest {}
+
+    #container #homepage #latest article {}
+
+    #container #homepage #latest figure {
+      padding: 4px;
+      border: 1px solid #D6D6D6;
+      text-align: center;
+    }
+
+    #container #homepage #latest figcaption {
+      padding: 5px;
+      text-align: center;
+      color: #979797;
+      background-color: #EEEEEE;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    /*----------------------------------------------Footer-------------------------------------*/
+
+    #footer {
+      padding: 20px 0;
+    }
+
+    #footer p {
+      margin: 0;
+      padding: 0;
+    }
 
 
 
-/* The changes done by me*/
+    /* The changes done by me*/
 
     @media only screen and (max-width: 768px) {
       * {
@@ -277,6 +585,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
         border: 2px solid aliceblue;
         text-align: center;
       }
+
       #row2 {
         margin: 0px;
       }
@@ -294,31 +603,36 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
       #container #slider {
         margin-bottom: 0px;
       }
+
       #container #shout {
         margin-bottom: 0px;
-        width:100%;
-        font-size:10px;
+        width: 100%;
+        font-size: 10px;
         padding: 0px;
       }
-      #homepage h1{
-        margin-top:10px;
+
+      #homepage h1 {
+        margin-top: 10px;
         width: 100%;
         text-align: center;
         margin: 0px;
         padding: 0px;
       }
-      #container #homepage #services article{
-        width:100%;
-        border:2px solid red;
+
+      #container #homepage #services article {
+        width: 100%;
+        border: 2px solid red;
       }
+
       .one_quarter {
         width: 100%;
-        border: 2px solid tomato;
+        border: 1px solid tomato;
       }
 
       #row3 {
         margin: 0px;
       }
+
       #footer {
         width: 100%;
         margin: 0px;
@@ -346,40 +660,6 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
         display: inline;
         text-align: center;
       }
-      #container{
-        width:100%;
-        padding:0px;
-    }
-    #container #slider img {
-        width: 100%;
-      }
-      #container #shout {
-        margin-bottom: 0px;
-        width:100%;
-        padding: 0px;
-      }
-  }
-
-  @media only screen and (min-width: 1024px) {
-      #container #slider {
-        margin-bottom: 50px;
-      }
-
-      #container {
-        padding: 30px 0;
-      }
-
-      #header,
-      #container,
-      #footer {
-        display: block;
-        width: 960px;
-        margin: 0 auto;
-      }
-
-      #container {
-        padding: 30px 0;
-      }
     }
   </style>
 </head>
@@ -403,108 +683,119 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
     </header>
   </div>
   <!-- content -->
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <!-- content body -->
-    <section id="slider"><a href="#"><img src="images/demo/960x360.gif" alt=""></a></section>
-    <section id="shout">
-      <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt namjusto cras urna.</p>
-    </section>
-    <!-- main content -->
-    <div id="homepage">
-      <!-- services area -->
-      <h1>Services We Offer</h1>
-      <section id="services" class="clear">
-        <article>
-          <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
-          <strong>Lorum ipsum dolor</strong>
-          <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <article>
-          <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
-          <strong>Lorum ipsum dolor</strong>
-          <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <article class="last">
-          <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
-          <strong>Lorum ipsum dolor</strong>
-          <p>For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>. Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- content body -->
+      <section id="slider"><a href="#"><img src="images/demo/960x360.gif" alt=""></a></section>
+      <section id="shout">
+        <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum
+          nulla orna nisl velit elit ac aliquat non tincidunt namjusto cras urna.</p>
       </section>
-         <!-- / services area -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- One Quarter -->
-      <h1>Latest From The Gallery</h1>
-      <section id="latest" class="last clear">
-        <article class="one_quarter">
-          <figure><img id="imgdiv" src="images/demo/215x315.gif" width="215" height="315" alt="">
-            <figcaption><button type="button" onmouseover="imgTRNS()"  style="background-color: chartreuse;">Image Transistion</button></figcaption>
-          </figure>
-        </article>
-        <article class="one_quarter">
-          <figure><img id="imgdiv1" src="images/demo/215x315.gif" width="215" height="315" alt="">
-            <figcaption><button type="button" onclick ="imgTRNS2()"  style="background-color:palegreen  ;">Image Transistion</button></figcaption>
-          </figure>
-        </article>
-        <article class="one_quarter">
-          <figure><img id="imgdiv2" src="images/demo/215x315.gif" width="215" height="315" alt="">
-            <figcaption><button type="button" onclick ="imgTRNS3()"  style="background-color:rgb(60, 109, 60)  ;">Image Transistion</button></figcaption>
-          </figure>
-        </article>
-        <article class="one_quarter lastbox">
-          <figure><img id="imgdiv3" src="images/demo/215x315.gif" width="215" height="315" alt="">
-            <figcaption><button type="button" onmouseover ="imgTRNS4()"  style="background-color:rgb(60, 109, 60)  ;">Image Transistion</button></figcaption>
-          </figure>
-        </article>
-      </section>
-      <!-- / One Quarter -->
+      <!-- main content -->
+      <div id="homepage">
+        <!-- services area -->
+        <h1>Services We Offer</h1>
+        <section id="services" class="clear">
+          <article>
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/"
+                title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our
+              <a href="https://www.os-templates.com/template-terms">website template licence</a>.
+            </p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article>
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>You can use and modify the template for both personal and commercial use. You must keep all copyright
+              information and credit links in the template and associated files.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="last">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>.
+              Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+        </section>
+        <!-- / services area -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- One Quarter -->
+        <h1>Latest From The Gallery</h1>
+        <section id="latest" class="last clear">
+          <article class="one_quarter">
+            <figure><img id="imgdiv" src="images/demo/215x315.gif" width="215" height="315" alt="">
+              <figcaption><button type="button" onmouseover="imgTRNS()" style="background-color: chartreuse;">Image
+                  Transistion</button></figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter">
+            <figure><img id="imgdiv1" src="images/demo/215x315.gif" width="215" height="315" alt="">
+              <figcaption><button type="button" onclick="imgTRNS2()" style="background-color:palegreen  ;">Image
+                  Transistion</button></figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter">
+            <figure><img id="imgdiv2" src="images/demo/215x315.gif" width="215" height="315" alt="">
+              <figcaption><button type="button" onclick="imgTRNS3()" style="background-color:rgb(60, 109, 60)  ;">Image
+                  Transistion</button></figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img id="imgdiv3" src="images/demo/215x315.gif" width="215" height="315" alt="">
+              <figcaption><button type="button" onmouseover="imgTRNS4()"
+                  style="background-color:rgb(60, 109, 60)  ;">Image Transistion</button></figcaption>
+            </figure>
+          </article>
+        </section>
+        <!-- / One Quarter -->
+      </div>
+      <!-- / content body -->
     </div>
-    <!-- / content body -->
   </div>
-</div>
-<!-- Footer -->
-<div class="wrapper row3">
-  <footer id="footer" class="clear">
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-  </footer>
-</div>
-<script>
-  function imgTRNS(){
-    var imgdiv=document.getElementById("imgdiv");
-    imgdiv.style. transition="width 2s;"
-    imgdiv.style. transitionDuration="2s";
-    imgdiv.style.width = "50px"
-    imgdiv.style.height = "50px"
-  }
-   
- 
+  <!-- Footer -->
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates">OS Templates</a></p>
+    </footer>
+  </div>
+  <script>
+    function imgTRNS() {
+      var imgdiv = document.getElementById("imgdiv");
+      imgdiv.style.transition = "width 2s;"
+      imgdiv.style.transitionDuration = "2s";
+      imgdiv.style.width = "50px"
+      imgdiv.style.height = "50px"
+    }
 
-  function imgTRNS2(){
-    var imgdiv=document.getElementById("imgdiv1");
-    imgdiv.style.transitionDelay="3s";
-    imgdiv.style.width = "60px"
-    imgdiv.style.height = "80px"
-  }
 
-  function imgTRNS3(){
-    var imgdiv=document.getElementById("imgdiv2");
-    imgdiv.style.transitionDelay="1s";
-    imgdiv.style.width = "60px"
-  }
-  function imgTRNS4(){
-    var imgdiv=document.getElementById("imgdiv3");
-    imgdiv.style.transitionTimingFunction="ease";
-    imgdiv.style.transitionDuration="`1s";
-    imgdiv.style.height= "600px"
-  }
-</script>
+
+    function imgTRNS2() {
+      var imgdiv = document.getElementById("imgdiv1");
+      imgdiv.style.transitionDelay = "3s";
+      imgdiv.style.width = "60px"
+      imgdiv.style.height = "80px"
+    }
+
+    function imgTRNS3() {
+      var imgdiv = document.getElementById("imgdiv2");
+      imgdiv.style.transitionDelay = "1s";
+      imgdiv.style.width = "60px"
+    }
+    function imgTRNS4() {
+      var imgdiv = document.getElementById("imgdiv3");
+      imgdiv.style.transitionTimingFunction = "ease";
+      imgdiv.style.transitionDuration = "`1s";
+      imgdiv.style.height = "600px"
+    }
+  </script>
 </body>
 
 </html>

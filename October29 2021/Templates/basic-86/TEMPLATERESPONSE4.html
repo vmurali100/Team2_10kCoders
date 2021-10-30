@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Basic 86</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <style>
+    /*
+HTML 5 Template Name: Basic 86
+File: Layout CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+    html {
+      overflow-y: scroll;
+    }
+
+    /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #919191;
+      background-color: #232323;
+    }
+
+    .clear:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+    }
+
+    .clear {
+      display: block;
+      clear: both;
+    }
+
+    html[xmlns] .clear {
+      display: block;
+    }
+
+    * html .clear {
+      height: 1%;
+    }
+
+    a {
+      outline: none;
+      text-decoration: none;
+    }
+
+    code {
+      font-weight: normal;
+      font-style: normal;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .fl_left {
+      float: left;
+    }
+
+    .fl_right {
+      float: right;
+    }
+
+    img {
+      margin: 0;
+      padding: 0;
+      border: none;
+      line-height: normal;
+      vertical-align: middle;
+    }
+
+    .imgholder,
+    .imgl,
+    .imgr {
+      padding: 4px;
+      border: 1px solid #D6D6D6;
+      text-align: center;
+    }
+
+    .imgl {
+      float: left;
+      margin: 0 15px 15px 0;
+      clear: left;
+    }
+
+    .imgr {
+      float: right;
+      margin: 0 0 15px 15px;
+      clear: right;
+    }
+
+    /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+    address,
+    article,
+    aside,
+    figcaption,
+    figure,
+    footer,
+    header,
+    nav,
+    section {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    q {
+      display: block;
+      padding: 0 10px 8px 10px;
+      color: #979797;
+      background-color: #ECECEC;
+      font-style: italic;
+      line-height: normal;
+    }
+
+    q:before {
+      content: '� ';
+      font-size: 26px;
+    }
+
+    q:after {
+      content: ' �';
+      font-size: 26px;
+      line-height: 0;
+    }
+
+    /* ----------------------------------------------Wrapper-------------------------------------*/
+
+    div.wrapper {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .row1,
+    .row1 a {
+      color: #C0BAB6;
+      background-color: #333333;
+    }
+
+    .row2 {
+      color: #979797;
+      background-color: #FFFFFF;
+    }
+
+    .row2 a {
+      color: #FF9900;
+      background-color: #FFFFFF;
+    }
+
+    .row3,
+    .row3 a {
+      color: #919191;
+      background-color: #232323;
+    }
+
+    /*----------------------------------------------Generalise-------------------------------------*/
+
+    #header,
+    #container,
+    #footer {
+      display: block;
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    blockquote,
+    q {
+      display: block;
+      padding: 8px 10px;
+      color: #979797;
+      background-color: #ECECEC;
+      font-style: italic;
+      line-height: normal;
+    }
+
+    blockquote:before,
+    q:before {
+      content: '� ';
+      font-size: 26px;
+    }
+
+    blockquote:after,
+    q:after {
+      content: ' �';
+      font-size: 26px;
+      line-height: 0;
+    }
+
+    form,
+    fieldset,
+    legend {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    legend {
+      display: none;
+    }
+
+    input,
+    textarea,
+    select {
+      font-size: 12px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .one_quarter,
+    .two_quarter,
+    .three_quarter,
+    .four_quarter {
+      display: block;
+      float: left;
+      margin: 0 20px 0 0;
+    }
+
+    .one_quarter {
+      width: 225px;
+    }
+
+    .two_quarter {
+      width: 470px;
+    }
+
+    .three_quarter {
+      width: 715px;
+    }
+
+    .four_quarter {
+      width: 960px;
+      float: none;
+      margin-right: 0;
+      clear: both;
+    }
+
+    .one_third,
+    .two_third,
+    .three_third {
+      display: block;
+      float: left;
+      margin: 0 30px 0 0;
+    }
+
+    .one_third {
+      width: 300px;
+    }
+
+    .two_third {
+      width: 630px;
+    }
+
+    .three_third {
+      width: 960px;
+      float: none;
+      margin-right: 0;
+      clear: both;
+    }
+
+    .lastbox {
+      margin-right: 0;
+    }
+
+    /*----------------------------------------------Header-------------------------------------*/
+
+    #header {
+      padding: 20px 0;
+    }
+
+    #header #hgroup {
+      float: left;
+      margin: 0 0 20px 0;
+    }
+
+    #header #hgroup h1,
+    #header #hgroup h2 {
+      font-weight: normal;
+      text-transform: none;
+    }
+
+    #header #hgroup h1 {
+      font-size: 36px;
+    }
+
+    #header #hgroup h2 {
+      font-size: 13px;
+    }
+
+    #header nav {
+      display: block;
+      float: right;
+      margin: 10px 0 0 0;
+      padding: 20px 0;
+      color: #C0BAB6;
+      background-color: #232323;
+    }
+
+    #header nav ul {
+      padding: 0 20px;
+    }
+
+    #header nav li {
+      margin-right: 25px;
+      text-transform: uppercase;
+    }
+
+    #header nav li.last {
+      margin-right: 0;
+    }
+
+    #header nav li a {
+      color: #C0BAB6;
+      background-color: #232323;
+    }
+
+    #header nav li a:hover {
+      color: #FF9900;
+      background-color: #232323;
+    }
+
+    /*----------------------------------------------Content Area-------------------------------------*/
+
+    #container {
+      padding: 30px 0;
+    }
+
+    #container section {
+      display: block;
+      width: 100%;
+      margin: 0 0 50px 0;
+      padding: 0;
+    }
+
+    #container .last {
+      margin: 0;
+    }
+
+    #container .more {
+      text-align: right;
+    }
+
+    /* ------Slider-----*/
+
+    #container #slider {}
+
+    #container #slider figure {}
+
+    #container #slider figure img {
+      float: right;
+      width: 630px;
+      height: 300px;
+    }
+
+    #container #slider figure figcaption {
+      display: block;
+      float: left;
+      width: 280px;
+      height: 260px;
+      padding: 20px;
+      overflow: hidden;
+      color: #989898;
+      background-color: #DEDEDE;
+      line-height: 1.6em;
+    }
+
+    #container #slider figure figcaption a {
+      color: #FF9900;
+      background-color: #DEDEDE;
+    }
+
+    #container #slider figure h2 {
+      font-size: 42px;
+      font-weight: normal;
+      font-style: italic;
+      text-transform: none;
+    }
+
+    #container #slider figure footer {}
+/* ------Main Content-----*/
+
+    #container #homepage {
+      display: block;
+      width: 100%;
+      line-height: 1.6em;
+    }
+
+    #container #homepage #services {}
+
+    #container #homepage #services article {}
+
+    #container #homepage #services article h2 {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    #container #homepage #services article p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #container #homepage #services article img {
+      float: left;
+      width: 80px;
+      height: 80px;
+      margin: 0 10px 10px 0;
+      padding: 4px;
+      border: 1px solid #DEDEDE;
+    }
+
+    #container #homepage #services article footer {
+      margin: 10px 0 0 0;
+    }
+
+    #container #homepage #latest {}
+
+    #container #homepage #latest article {}
+
+    #container #homepage #latest article figure {}
+
+    #container #homepage #latest article figure img {
+      margin: 0 0 10px 0;
+      padding: 4px;
+      border: 1px solid #D6D6D6;
+    }
+
+    #container #homepage #latest article figure figcaption {}
+
+    #container #homepage #latest article figure h2 {
+      font-size: 14px;
+    }
+
+    #container #homepage #latest article figure footer {}
+
+    /*----------------------------------------------Footer-------------------------------------*/
+    #footer {
+      padding: 20px 0;
+    }
+    #footer p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* THE CHANGES THAT HAVE BEEN DONE BY ME*/
+    @media only screen and (max-width: 768px) {
+      * {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 100%;
+
+      }
+
+      #header {
+        width: 100%;
+        background-color: pink;
+      }
+
+      #header #hgroup {
+        width: 100%;
+        text-align: center;
+      }
+
+      #hgroup h1 {
+        width: 100%;
+      }
+
+      #hgoup h1 a {
+        width: 100%;
+        background-color: cadetblue;
+      }
+
+      #hgroup h2 {
+        width: 100%;
+        color: maroon;
+
+      }
+
+      nav {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header nav ul {
+        width: 100%;
+        margin: 0px;
+        padding: 0px 0px;
+      }
+
+      nav ul li {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid aliceblue;
+        text-align: center;
+      }
+
+      #row2 {
+        width: 100%;
+        padding: 0px;
+      }
+
+      #container {
+        width: 100%;
+        padding: 0px;
+      }
+
+      #container #slider {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #container #slider figure {
+        width: 100%;
+        background-color: mediumseagreen;
+      }
+
+      #container #slider figure img {
+        float: right;
+        width: 50%;
+      }
+
+      #container #slider figure figcaption {
+        margin-top: 15px;
+        display: block;
+        float: left;
+        width: 50%;
+        padding: 20px;
+        overflow: hidden;
+        color: #989898;
+        background-color: #DEDEDE;
+        line-height: 1.6em;
+      }
+
+      #container #slider figure figcaption h2 {
+        font-size: 15px;
+      }
+
+      #container #slider figure figcaption p {
+        font-size: 9px;
+      }
+
+      .one_third {
+        width: 100%;
+        border: 1px solid black;
+      }
+
+      .one_quarter {
+        width: 100%;
+        text-align: center;
+        border: 1px solid black;
+      }
+
+      #footer {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 769px) {
+      * {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 100%;
+
+      }
+
+      #header {
+        width: 100%;
+        background-color: pink;
+
+      }
+
+      #hgroup h2 {
+        width: 100%;
+        color: red;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav ul li {
+        margin: 0px;
+        width: 100%;
+        display: inline;
+        text-align: center;
+      }
+
+      #row2 {
+        width: 100%;
+      }
+
+      #container {
+        width: 100%;
+        padding: 0px;
+      }
+
+      #container #slider {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #container #slider figure {
+        width: 100%;
+        background-color: mediumseagreen;
+      }
+
+      #container #slider figure img {
+        float: right;
+        width: 50%;
+      }
+
+      #container #slider figure figcaption {
+        margin-top: 15px;
+        display: block;
+        float: left;
+        width: 50%;
+        padding: 20px;
+        overflow: hidden;
+        color: #989898;
+        background-color: #DEDEDE;
+        line-height: 1.6em;
+      }
+
+      #container #slider figure figcaption p {
+        font-size: 9px;
+      }
+
+      .one_third {
+        width: 100%;
+        border: 1px solid black;
+      }
+
+      .one_quarter {
+        width: 100%;
+        text-align: center;
+        border: 1px solid black;
+      }
+
+      #footer {
+        width: 100%;
+      }
+
+    }
+
+    @media only screen and (min-width: 1024px) {
+      .wrapper {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+
+      #header {
+        padding: 20px 0;
+      }
+
+      #header #hgroup {
+        float: left;
+        margin: 0 0 20px 0;
+      }
+
+      #header,
+      #container,
+      #footer {
+        display: block;
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      #header nav {
+        display: block;
+        float: right;
+        margin: 10px 0 0 0;
+        padding: 20px 0;
+        color: #C0BAB6;
+        background-color: #232323;
+      }
+
+      #container {
+        padding: 30px 0;
+      }
+
+      #container section {
+        display: block;
+        width: 100%;
+        margin: 0 0 50px 0;
+        padding: 0;
+      }
+
+      #container #slider {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0px;
+      }
+
+      #container #slider figure img {
+        float: right;
+        width: 630px;
+        height: 300px;
+      }
+
+      img {
+        margin: 0;
+        padding: 0;
+        border: none;
+        line-height: normal;
+        vertical-align: middle;
+      }
+
+      #container #slider figure figcaption {
+        display: block;
+        float: left;
+        width: 280px;
+        height: 260px;
+        padding: 20px;
+        overflow: hidden;
+        color: #989898;
+        background-color: #DEDEDE;
+        line-height: 1.6em;
+      }
+
+      #container #slider figure figcaption p {
+        font-size: 15px;
+      }
+
+      #container #homepage {
+        display: block;
+        width: 100%;
+        line-height: 1.6em;
+      }
+
+      .one_third {
+        width: 300px;
+      }
+
+      .one_third,
+      .two_third,
+      .three_third {
+        display: block;
+        float: left;
+        margin: 0 20px 0 0;
+      }
+
+      .one_quarter {
+        width: 225px;
+      }
+
+      #container #homepage #services article h2 {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      #container #homepage #services article img {
+        float: left;
+        width: 80px;
+        height: 80px;
+        margin: 0 10px 10px 0;
+        padding: 4px;
+        border: 1px solid #DEDEDE;
+      }
+
+      #container #homepage #services article footer {
+        margin: 10px 0 0 0;
+      }
+
+      #container .more {
+        text-align: right;
+      }
+
+      #footer {
+        padding: 20px 0;
+      }
+
+    }
+
+    @media only screen and (min-width: 1025px) {
+
+      one_third,
+      .two_third,
+      .three_third {
+        display: block;
+        float: left;
+        margin: 0 30px 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Basic 86</a></h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li class="last"><a href="#">Text Link</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <!-- content -->
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- Slider -->
+      <section id="slider" class="clear">
+        <figure><img src="images/demo/630x300.gif" alt="">
+          <figcaption>
+            <h2>Eu justo augue estas</h2>
+            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis
+              curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat adipiscinia pellentum leo.
+            </p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- main content -->
+      <div id="homepage">
+        <!-- services area -->
+        <section id="services" class="clear">
+          <!-- article 1 -->
+          <article class="one_third">
+            <h2>Lorum ipsum dolor</h2>
+            <img src="images/demo/80x80.gif" alt="">
+            <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede
+              estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque
+              sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus.
+              Inpede cumst vitae ris tellentesque fring intesquet.</p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </article>
+          <!-- article 2 -->
+          <article class="one_third">
+            <h2>Lorum ipsum dolor</h2>
+            <img src="images/demo/80x80.gif" alt="">
+            <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede
+              estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque
+              sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus.
+              Inpede cumst vitae ris tellentesque fring intesquet.</p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </article>
+          <!-- article 3 -->
+          <article class="one_third lastbox">
+            <h2>Lorum ipsum dolor</h2>
+            <img src="images/demo/80x80.gif" alt="">
+            <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede
+              estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque
+              sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus.
+              Inpede cumst vitae ris tellentesque fring intesquet.</p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </article>
+        </section>
+        <!-- / services area -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- One Quarter -->
+        <section id="latest" class="last clear">
+          <article class="one_quarter">
+            <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+        <!-- / One Quarter -->
+      </div>
+      <!-- / content body -->
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates">OS Templates</a></p>
+    </footer>
+  </div>
+</body>
+
+</html>

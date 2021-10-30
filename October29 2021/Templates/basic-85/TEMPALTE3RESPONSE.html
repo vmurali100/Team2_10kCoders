@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Basic 85</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <style>
+    /*
+HTML 5 Template Name: Basic 85
+File: Layout CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+    html {
+      overflow-y: scroll;
+    }
+
+    /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #919191;
+      background-color: #232323;
+    }
+
+    .clear:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+    }
+
+    .clear {
+      display: block;
+      clear: both;
+    }
+
+    html[xmlns] .clear {
+      display: block;
+    }
+
+    * html .clear {
+      height: 1%;
+    }
+
+    a {
+      outline: none;
+      text-decoration: none;
+    }
+
+    code {
+      font-weight: normal;
+      font-style: normal;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .fl_left {
+      float: left;
+    }
+
+    .fl_right {
+      float: right;
+    }
+
+    img {
+      margin: 0;
+      padding: 0;
+      border: none;
+      line-height: normal;
+      vertical-align: middle;
+    }
+
+    .imgholder,
+    .imgl,
+    .imgr {
+      padding: 4px;
+      border: 1px solid #D6D6D6;
+      text-align: center;
+    }
+
+    .imgl {
+      float: left;
+      margin: 0 15px 15px 0;
+      clear: left;
+    }
+
+    .imgr {
+      float: right;
+      margin: 0 0 15px 15px;
+      clear: right;
+    }
+
+    /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+    address,
+    article,
+    aside,
+    figcaption,
+    figure,
+    footer,
+    header,
+    nav,
+    section {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    q {
+      display: block;
+      padding: 0 10px 8px 10px;
+      color: #979797;
+      background-color: #ECECEC;
+      font-style: italic;
+      line-height: normal;
+    }
+
+    q:before {
+      content: '� ';
+      font-size: 26px;
+    }
+
+    q:after {
+      content: ' �';
+      font-size: 26px;
+      line-height: 0;
+    }
+
+    /* ----------------------------------------------Wrapper-------------------------------------*/
+
+    div.wrapper {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .row1,
+    .row1 a {
+      color: #C0BAB6;
+      background-color: #333333;
+    }
+
+    .row2 {
+      color: #979797;
+      background-color: #FFFFFF;
+    }
+
+    .row2 a {
+      color: #FF9900;
+      background-color: #FFFFFF;
+    }
+
+    .row3,
+    .row3 a {
+      color: #919191;
+      background-color: #232323;
+    }
+
+    /*----------------------------------------------Generalise-------------------------------------*/
+
+    #header,
+    #container,
+    #footer {
+      display: block;
+      width: 960px;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    blockquote,
+    q {
+      display: block;
+      padding: 8px 10px;
+      color: #979797;
+      background-color: #ECECEC;
+      font-style: italic;
+      line-height: normal;
+    }
+
+    blockquote:before,
+    q:before {
+      content: '� ';
+      font-size: 26px;
+    }
+
+    blockquote:after,
+    q:after {
+      content: ' �';
+      font-size: 26px;
+      line-height: 0;
+    }
+
+    form,
+    fieldset,
+    legend {
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+
+    legend {
+      display: none;
+    }
+
+    input,
+    textarea,
+    select {
+      font-size: 12px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .one_quarter,
+    .two_quarter,
+    .three_quarter,
+    .four_quarter {
+      display: block;
+      float: left;
+      margin: 0 20px 0 0;
+    }
+
+    .one_quarter {
+      width: 225px;
+    }
+
+    .two_quarter {
+      width: 470px;
+    }
+
+    .three_quarter {
+      width: 715px;
+    }
+
+    .four_quarter {
+      width: 960px;
+      float: none;
+      margin-right: 0;
+      clear: both;
+    }
+
+    .lastbox {
+      margin-right: 0;
+    }
+
+    /*----------------------------------------------Header-------------------------------------*/
+
+    #header {
+      padding: 20px 0;
+    }
+
+    #header #hgroup {
+      float: left;
+      margin: 0 0 20px 0;
+    }
+
+    #header #hgroup h1,
+    #header #hgroup h2 {
+      font-weight: normal;
+      text-transform: none;
+    }
+
+    #header #hgroup h1 {
+      font-size: 36px;
+    }
+
+    #header #hgroup h2 {
+      font-size: 13px;
+    }
+
+    #header nav {
+      display: block;
+      float: right;
+      margin: 10px 0 0 0;
+      padding: 20px 0;
+      color: #C0BAB6;
+      background-color: #232323;
+    }
+
+    #header nav ul {
+      padding: 0 20px;
+    }
+
+    #header nav li {
+      margin-right: 25px;
+      text-transform: uppercase;
+    }
+
+    #header nav li.last {
+      margin-right: 0;
+    }
+
+    #header nav li a {
+      color: #C0BAB6;
+      background-color: #232323;
+    }
+
+    #header nav li a:hover {
+      color: #FF9900;
+      background-color: #232323;
+    }
+
+    /*----------------------------------------------Content Area-------------------------------------*/
+
+    #container {
+      padding: 30px 0;
+    }
+
+    #container section {
+      display: block;
+      width: 100%;
+      margin: 0 0 30px 0;
+      padding: 0;
+    }
+
+    #container .last {
+      margin: 0;
+    }
+
+    #container .more {
+      text-align: right;
+    }
+
+    /* ------Shout-----*/
+
+    #container #shout {
+      padding: 0 0 20px 0;
+      border-bottom: 1px solid #DEDEDE;
+      text-align: center;
+    }
+
+    #container #shout p {
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8em;
+    }
+
+    /* ------Main Content-----*/
+
+    #container #homepage {
+      display: block;
+      width: 100%;
+      line-height: 1.6em;
+    }
+
+    #container #homepage .spacer {
+      display: block;
+      width: 100%;
+      height: 30px;
+      margin: 0;
+      padding: 0;
+      clear: both;
+    }
+
+    #container #homepage #latest {
+      margin-bottom: 50px;
+    }
+
+    #container #homepage #latest article {}
+
+    #container #homepage #latest article figure {}
+
+    #container #homepage #latest article figure ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #container #homepage #latest article figure ul li {
+      margin-bottom: 20px;
+    }
+
+    #container #homepage #latest article figure ul li img {
+      padding: 4px;
+      border: 1px solid #D6D6D6;
+      text-align: center;
+    }
+
+    #container #homepage #latest article figure figcaption {
+      display: block;
+      width: 100%;
+      clear: both;
+      padding: 0 0 20px 0;
+      border-bottom: 1px solid #DEDEDE;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    #container #homepage #services {}
+
+    #container #homepage #services article {}
+
+    #container #homepage #services figure {
+      display: inline;
+      float: left;
+    }
+
+    #container #homepage #services strong {
+      float: left;
+      margin: 8px 0 0 10px;
+      padding: 0;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    #container #homepage #services p {
+      display: block;
+      margin: 0;
+      padding: 5px 0 0 0;
+      clear: both;
+      line-height: 1.6em;
+    }
+
+    /*----------------------------------------------Footer-------------------------------------*/
+
+    #footer {
+      padding: 20px 0;
+    }
+
+    #footer p {
+      margin: 0;
+      padding: 0;
+    }
+
+
+
+                /*MY CHANGES*/
+    @media only screen and (max-width: 768px) {
+      * {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        width: 100%;
+      }
+
+      #header {
+        margin: 0px;
+        width: 100%;
+        background-color: aqua;
+      }
+
+      #header #hgroup {
+        width: 100%;
+        background-color: blue;
+        text-align: center;
+        margin: 0px;
+      }
+
+      #hgroup h1 {
+        width: 100%;
+      }
+
+      #hgoup h1 a {
+        width: 100%;
+        background-color: cadetblue;
+      }
+
+      #hgroup h2 {
+        width: 100%;
+
+      }
+
+      nav {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      #header nav ul {
+        width: 100%;
+        margin: 0px;
+        padding: 0px 0px;
+      }
+
+      nav ul li {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        border: 2px solid aliceblue;
+        text-align: center;
+      }
+
+      #row2 {
+        margin: 0px;
+      }
+
+      #container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+      }
+
+      #container #shout {
+        width: 100%;
+        background-color: burlywood;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #container #homepage article {
+        width: 100%;
+        border: 1px solid pink;
+        text-align: center;
+        margin: 0px;
+      }
+
+      .one_quarter {
+        width: 100%;
+        border: 1px solid tomato;
+        text-align: center;
+        margin: 0px;
+      }
+
+      #container #homepage #latest article figure ul li {
+        margin: 0px;
+      }
+
+      #container #shout p {
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        line-height: 1.8em;
+      }
+
+      #container #homepage #latest article figure figcaption {
+        margin: 0px;
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+      }
+
+      #container #homepage #latest {
+        margin-bottom: 0px;
+      }
+
+      #footer {
+        width: 100%;
+      }
+
+
+    }
+
+    @media only screen and (min-width: 769px) {
+      * {
+        box-sizing: border-box;
+      }
+
+      #header {
+        width: 100%;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        text-align: center;
+      }
+
+      #container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+      }
+
+      #container #shout {
+        width: 100%;
+        background-color: burlywood;
+        margin: 0px;
+      }
+
+      #container #shout p {
+        font-size: 15px;
+        margin: 0;
+        padding: 0;
+        line-height: 1.8em;
+      }
+
+      #row2 {
+        margin: 0px;
+      }
+
+      #container {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+      }
+
+      #container #shout {
+        width: 100%;
+        background-color: burlywood;
+        margin: 0px;
+        padding: 0px;
+      }
+
+
+
+      .one_quarter {
+        width: 100%;
+        border: 1px solid tomato;
+        text-align: center;
+        margin: 0px;
+      }
+
+      #container #homepage #latest article figure ul li {
+        margin: 0px;
+      }
+
+      #container #shout p {
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+        line-height: 1.8em;
+      }
+
+      #container #homepage #latest article figure figcaption {
+        margin: 0px;
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+      }
+
+      #container #homepage #latest {
+        margin-bottom: 0px;
+      }
+
+      #footer {
+        width: 100%;
+      }
+
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #container {
+        padding: 30px 0;
+      }
+
+      #header,
+      #container,
+      #footer {
+        display: block;
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      #container #shout {
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid #DEDEDE;
+        text-align: center;
+      }
+
+      #container #shout p {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        line-height: 1.8em;
+      }
+
+      #container #homepage {
+        display: block;
+        width: 100%;
+        line-height: 1.6em;
+      }
+
+      #container #homepage #latest {
+        margin-bottom: 50px;
+      }
+
+      #container section {
+        display: block;
+        width: 100%;
+        margin: 0 0 30px 0;
+        padding: 0;
+      }
+
+      #container #homepage #latest article figure ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+      }
+
+      #container #homepage #latest article figure ul li {
+        margin-bottom: 20px;
+        margin-right: 15px;
+      }
+
+      .one_quarter {
+        width: 225px;
+        border: none;
+      }
+
+      .one_quarter,
+      .two_quarter,
+      .three_quarter,
+      .four_quarter {
+        display: block;
+        float: left;
+      }
+
+      #container #homepage #latest article {
+        border: none;
+      }
+
+      #container #homepage #latest article figure figcaption {
+        display: block;
+        width: 100%;
+        clear: both;
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid #DEDEDE;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: right;
+      }
+
+      #container #homepage #latest {
+        margin-bottom: 50px;
+      }
+
+      #container #shout {
+        padding: 0 0 20px 0;
+        border-bottom: 1px solid #DEDEDE;
+        text-align: center;
+      }
+
+      #footer {
+        padding: 20px 0;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Basic 85</a></h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li class="last"><a href="#">Text Link</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- content body -->
+      <section id="shout">
+        <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum
+          nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci
+          nulla laoremut vitae doloreet condimentumst.</p>
+      </section>
+      <!-- main content -->
+      <div id="homepage">
+        <!-- One Quarter -->
+        <section id="latest">
+          <article>
+            <figure>
+              <ul>
+                <li class="one_quarter"><img src="images/demo/215x150.gif" width="215" height="150" alt=""></li>
+                <li class="one_quarter"><img src="images/demo/215x150.gif" width="215" height="150" alt=""></li>
+                <li class="one_quarter"><img src="images/demo/215x150.gif" width="215" height="150" alt=""></li>
+                <li class="one_quarter lastbox"><img src="images/demo/215x150.gif" width="215" height="150" alt=""></li>
+              </ul>
+              <figcaption><a href="#">View All Our Recent Work Here &raquo;</a></figcaption>
+            </figure>
+          </article>
+        </section>
+        <section id="services" class="last clear">
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi
+              ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi
+              ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi
+              ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi
+              ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <!-- spacer - clearer -->
+          <div class="spacer"></div>
+          <!-- / spacer - clearer -->
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi
+              ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi
+              ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi
+              ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img src="images/demo/32x32.gif" width="32" height="32" alt=""></figure>
+            <strong>Lorum ipsum dolor</strong>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi
+              ullamcorper.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+        </section>
+        <!-- / services area -->
+      </div>
+      <!-- / content body -->
+    </div>
+  </div>
+  <!-- Footer -->
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates">OS Templates</a></p>
+    </footer>
+  </div>
+</body>
+
+</html>
