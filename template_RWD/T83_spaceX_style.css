@@ -131,7 +131,7 @@
             color: #919191;
             background-color: #232323;
         }
-        #header,#container,#footer {
+        #header,#container{
             display: block;
             width: 960px;
             margin: 0 auto;
