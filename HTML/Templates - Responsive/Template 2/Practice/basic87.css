@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.row1{
+    background: #333333;
+    color: #C0BAB6;
+}
+
+#header{
+    width: 960px;
+    margin: 0 auto;
+}
+#hgroup{
+    float: left;
+    margin: 0 0 20px 0;
+}
+#hgroup h1{
+    font-weight: normal;
+    text-transform: none;
+    font-size: 36px;
+}
+.row1 a{
+    color: #C0BAB6;
+    background-color: #333333;
+    outline: none;
+    text-decoration: none;
+}
+#hgroup h2{
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: none;
+}
+#header{
+    padding: 20px 0;
+    overflow: auto;
+}
+#header nav{
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 20px 0;
+    color: #C0BAB6;
+    background-color: #232323;
+}
+
+#header nav ul{
+    padding: 0 20px;
+    list-style-type: none;
+}
+
+#header nav ul li{
+    display: inline;
+    margin-right: 25px;
+    text-transform: uppercase;
+}
+#header nav ul li:hover{
+    color: orange;
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #919191;
+    background-color: #232323;
+}
+.last{
+    margin-right: 0;
+}
+
+.row2 {
+    color: #979797;
+    background-color: #FFFFFF;
+}
+#container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+#container #homepage {
+    display: block;
+    width: 100%;
+    line-height: 1.6em;
+}
+
+#container section {
+    display: block;
+    width: 100%;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+#container {
+    padding: 30px 0;
+}
+.one_quarter {
+    width: 225px;
+}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter {
+    display: block;
+    float: left;
+    margin: 0 20px 0 0;
+}
+.lastbox {
+    margin-right: 0;
+}
+#container #homepage #latest figure {
+    padding: 4px;
+    border: 1px solid #D6D6D6;
+    text-align: center;
+}
+
+#container #shout {
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #DEDEDE;
+    text-align: center;
+    overflow: auto;
+}
+
+#container #shout p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8em;
+}
+#latest {
+    overflow: auto;
+}

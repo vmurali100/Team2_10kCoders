@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The translate() Method</h1>
+    <p>The translate() method moves an element from its current position:</p>
+
+    <button onclick="moveDiv()">Move Div</button>
+    <div id="myDiv">
+      This div element is moved 50 pixels to the right, and 100 pixels down from
+      its current position.
+    </div>
+
+    <script>
+      function moveDiv() {
+        var myDiv = document.getElementById("myDiv");
+        myDiv.style.transition="width 2s"
+
+        //myDiv.style.transform="translate(50px,100px)"
+        //myDiv.style.transform = "rotate(45deg)"
+        myDiv.style.transform="scale(2,3)"
+        //myDiv.style.transform="scale(0.5,0.5)"
+        //myDiv.style.transform="scaleX(3)"
+        //myDiv.style.transform="scaleY(3)"
+        //myDiv.style.transform = "skew(20deg,20deg)";
+        //myDiv.style.transform = "matrix(1, -0.3, 0, 1, 0, 0)"
+      }
+    </script>
+  </body>
+</html>
