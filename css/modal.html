@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0.1)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .main {
+            width: 300px;
+            margin: auto;
+        }
+
+        #smallImage {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #overlay {
+            position: absolute;
+            transition: 5s;
+            background-color: rgba(0, 0, 0, 0.9);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            display: none;
+            text-align: center;
+
+        }
+
+        #image {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="./images/image1.jpeg" alt="" id="smallImage" onclick="modal()">
+    </div>
+
+    <div id="overlay">
+        <img src="./images/image1.jpeg" alt="" id="image">
+    </div>
+
+    <script>
+        function modal() {
+            var overLay = document.getElementById("overlay")
+            overLay.style.display = "block"
+            
+           /*overLay.addEventListener("click",(e)=>{
+                console.log(e.target.id)
+                if(e.target.id =="overlay"){
+                    overLay.style.display="none"
+                }
+            })*/
+        }
+
+        
+    </script>
+</body>
+</html>
