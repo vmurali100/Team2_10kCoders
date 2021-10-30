@@ -217,15 +217,15 @@ nav ul .last {
 }
 
 /* ============================================ media qeuries ============================================  */
-@media only screen and (max-width: 500px) {
-  * {
+  @media only screen and (max-width: 768px) {
+    * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   header {
     width: 100%;
-  }
+  }        
   .row1 header #title {
     padding: 0 10px;
     margin-bottom: 0;
@@ -273,10 +273,11 @@ nav ul .last {
 
   #main_footer {
     width: 100%;
+    padding:0 10px;
   }
   #main_footer #right_footer,
   #main_footer #left_footer {
     float: none;
-    /* font-size:8px; */
+    
   }
 }
