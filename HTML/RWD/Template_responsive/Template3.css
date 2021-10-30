@@ -264,7 +264,12 @@ footer {
 .f1_right {
   float: right;
 }
-@media only screen and (min-width: 0px) and (max-width: 950px) {
+@media only screen and (min-width: 0px) and (max-width: 450px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
   #header {
     width: 100%;
   }
@@ -302,4 +307,44 @@ footer {
   }
 }
 @media only screen and (min-width: 451px) and (max-width: 768px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  #header {
+    width: 100%;
+  }
+  #header #hgroup {
+    padding-left: 90px;
+  }
+
+  #header nav {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #container {
+    width: 100%;
+  }
+  #container #slider img {
+    width: 100%;
+  }
+  #container #homepage #services .one_quarter {
+    width: 47%;
+    font-size: 16px;
+    padding: 30px;
+  }
+  #container #homepage .three_quarter {
+    width: 47%;
+    padding: 30px;
+  }
+  #footer {
+    width: 100%;
+  }
 }
+/* @media only screen and (min-width: 769px) {
+  #header {
+    width: 960px;
+  }
+} */
