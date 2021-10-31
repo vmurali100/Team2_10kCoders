@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @keyframes zoom {
+        from {
+          transform: scale(0.1);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
       #smalldiv {
         width: 300px;
         height: 200px;
@@ -22,21 +30,14 @@
         background-color: rgb(0, 0, 0, 0.9);
         top: 0;
         left: 0;
-        display: block;
-        text-align: center;
         display: none;
       }
-      #bigdiv #img {
+      #bigimg {
+        display:block;
+        margin:0 auto;
+        padding-top:150px;
         animation-name: zoom;
         animation-duration: 2s;
-      }
-      @keyframes zoom {
-        from {
-          transform: scale(0.1);
-        }
-        to {
-          transform: scale(1);
-        }
       }
     </style>
   </head>
@@ -45,11 +46,12 @@
       <img src="./img_lights.jpg" alt="" onclick="overlay()" />
     </div>
     <div id="bigdiv">
-      <img src="./img_lights.jpg" alt="" />
+      <img id="bigimg" src="./img_lights.jpg" alt="" />
     </div>
     <script>
       function overlay() {
         document.getElementById("bigdiv").style.display = "block";
+
       }
     </script>
   </body>
