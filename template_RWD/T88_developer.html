@@ -12,7 +12,6 @@
       width: 960px;
       margin: 0 auto;
       overflow: auto;
-      padding: 20px;
 
     }
 
@@ -28,19 +27,29 @@
       display: inline-block;
       text-transform: uppercase;
       font-size: 13px;
+
     }
+
     /* adding over ____________HOVER_________________________________ */
 
-    #header nav ul li:hover a {
-      width: 75px;
-      list-style-type: none;
-      padding: 10px;
-      text-align: center;
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 13px;
+    #header nav ul li:hover {
+
       color: white;
       background-color: tomato;
+    }
+
+    #header nav ul li:hover a {
+
+      color: white;
+      background-color: tomato;
+    }
+
+    /* SHADOW EFFECT_----------------------------------------------------- */
+    .row1 h1 a,
+    h2 {
+      color: white;
+      text-shadow: 1px 1px 5px rgb(180, 216, 18), 0 0 30px rgb(205, 236, 25), 0 0 10px rgb(175, 233, 41);
+
     }
 
     nav {
@@ -53,19 +62,13 @@
 
     @media only screen and (max-width:768px) {
 
-          /* adding over ______________HOVER_______________________________ */
+      /* adding over ______________HOVER_______________________________ */
 
-      #header nav ul li:hover a {
-      width: 75px;
-      list-style-type: none;
-      padding: 10px;
-      text-align: center;
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 13px;
-      color: white;
-      background-color: tomato;
-    }
+      #header nav ul li:hover {
+
+        color: white;
+        background-color: royalblue;
+      }
 
       #header {
         width: 100%;
