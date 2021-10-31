@@ -12,6 +12,7 @@
       width: 960px;
       margin: 0 auto;
       overflow: auto;
+      padding: 20px;
 
     }
 
@@ -22,11 +23,24 @@
     #header nav ul li {
       width: 75px;
       list-style-type: none;
+      padding: 15px;
+      text-align: center;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    /* adding over ____________HOVER_________________________________ */
+
+    #header nav ul li:hover a {
+      width: 75px;
+      list-style-type: none;
       padding: 10px;
       text-align: center;
       display: inline-block;
       text-transform: uppercase;
       font-size: 13px;
+      color: white;
+      background-color: tomato;
     }
 
     nav {
@@ -38,6 +52,21 @@
     }
 
     @media only screen and (max-width:768px) {
+
+          /* adding over ______________HOVER_______________________________ */
+
+      #header nav ul li:hover a {
+      width: 75px;
+      list-style-type: none;
+      padding: 10px;
+      text-align: center;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: white;
+      background-color: tomato;
+    }
+
       #header {
         width: 100%;
       }
