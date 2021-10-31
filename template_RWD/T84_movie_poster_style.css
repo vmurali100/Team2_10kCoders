@@ -236,7 +236,7 @@ input, textarea, select{
 #header form{
     display:block; 
     width:290px; 
-    float:right; 
+    
     margin:20px 0; 
     padding:0;
 }
