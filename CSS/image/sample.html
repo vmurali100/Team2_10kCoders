@@ -61,6 +61,13 @@
         function showModal() {
             var overLay = document.getElementById("overlay")
             overLay.style.display = "block"
+
+            overLay.addEventListener("click", (e) => {
+                console.log(e.target.id)
+                if (e.target.id == "overlay") {
+                    overLay.style.display = "none"
+                } 
+            })
         }
     </script>
 </body>
