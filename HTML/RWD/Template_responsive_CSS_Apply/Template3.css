@@ -47,6 +47,23 @@ div.wrapper {
   /* transition-timing-function: ease-in;
   background-color: red; */
 }
+#header #hgroup h1 #tool {
+  visibility: hidden;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 330px;
+}
+#header #hgroup h1:hover #tool {
+  visibility: visible;
+}
 .row1 a {
   /* color: #c0bab6; */
   color: red;
@@ -198,6 +215,8 @@ img {
   float: left;
   margin: 0 20px 0 0;
   width: 225px;
+}
+.one_quarter:hover {
   animation-name: colo;
   animation-duration: 20s;
 }
