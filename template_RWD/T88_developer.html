@@ -1,137 +1,399 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Developer</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="./T88_developer_style.css" type="text/css">
+  <title>Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./T88_developer_style.css" type="text/css">
+  <style>
+    #header {
+      display: block;
+      width: 960px;
+      margin: 0 auto;
+      overflow: auto;
+
+    }
+
+    #header nav {
+      float: none;
+    }
+
+    #header nav ul li {
+      width: 75px;
+      list-style-type: none;
+      padding: 10px;
+      text-align: center;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    nav {
+      clear: both;
+      margin: 10px auto;
+      background-color: #232323;
+      padding: 10px;
+      margin: 20px 0;
+    }
+
+    @media only screen and (max-width:768px) {
+      #header {
+        width: 100%;
+      }
+
+      #hrgroup {
+        background-color: black;
+      }
+
+      #header nav ul li {
+        width: 100%;
+        display: block;
+        border-bottom: 3px solid white;
+        margin: 0 auto;
+      }
+
+      #header nav {
+        float: none;
+      }
+
+      nav {
+        padding: 0px;
+      }
+
+      .row2 {
+        background-color: lightskyblue;
+        color: black;
+      }
+
+      #container {
+        width: 100%;
+      }
+
+      #container #slider figure figcaption {
+        width: 100%;
+        display: inline-block;
+        float: none;
+        margin: 0px;
+        padding: 0px;
+
+      }
+
+      #container #slider {
+        width: 100%;
+      }
+
+
+      #container #slider img {
+        float: none;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+
+      #services {
+        width: 100%;
+
+      }
+
+      #container #content {
+        float: none;
+
+      }
+
+
+      #container #homepage #services article img {
+        float: left;
+        width: 80px;
+        height: 80px;
+        margin: 0 10px 10px 0;
+        padding: 4px;
+        border: 1px solid #DEDEDE;
+      }
+
+      .clear {
+        width: 100%;
+      }
+
+      .one_quarter {
+        display: block;
+        width: 100%;
+      }
+
+      .last .clear {
+        width: 100%;
+      }
+
+      .three_quarter {
+        width: 100%;
+      }
+
+      .wrapper row3 {
+        width: 100px;
+      }
+
+
+
+      .fl_left {
+        float: left;
+      }
+
+      .fl_right {
+        float: right;
+      }
+
+      #shout {
+        width: 100%;
+
+      }
+
+      #container #shout {
+        width: 100%;
+        text-align: left;
+        display: inline;
+        color: black;
+        border: none;
+      }
+
+      #shout p {
+        background-color: coral;
+      }
+
+      #content #services ul li figure img {
+        width: 100%;
+        float: none;
+        padding-top: 20px;
+
+
+      }
+
+      #container #content {
+        width: 100%;
+      }
+
+      #content #services ul li figcaption h2,
+      p {
+        float: none;
+        padding: 20px;
+      }
+
+      #container #right_column {
+        float: none;
+        display: inline;
+        width: 100%;
+      }
+
+      #container #right_column nav ul li {
+        text-align: center;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      #footer {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        display: inline;
+      }
+
+      #copyright {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        display: inline;
+      }
+
+
+      .fl_left {
+        float: left;
+      }
+
+      .fl_right {
+        float: right;
+      }
+
+      .fl_right p a {
+        float: right;
+      }
+
+      .row3,
+      .row3 a {
+        color: #919191;
+        background-color: #232323;
+      }
+
+      #copyright {
+        padding: 20px 0;
+      }
+
+      #copyright p {
+        margin: 0;
+        padding: auto;
+      }
+
+      #container #homepage #intro article figure figcaption {
+        float: left;
+        width: 100%;
+      }
+
+      #container #homepage #intro article figure img {
+        width: 100%;
+        float: right;
+        margin: 0 0 10 px 0;
+        padding: 4 px;
+
+      }
+
+      .one_quarter nav ul li {
+        text-align: center;
+      }
+
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrapper row1">`
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">Developer School</a></h1>
-      <h2>Join and Become a Pro</h2>
+  <div class="wrapper row1">`
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Developer School</a></h1>
+        <h2>Join and Become a Pro</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Placements</a></li>
+          <li><a href="#">Team</a></li>
+          <li class="last"><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- Slider -->
+      <section id="slider"><a href="#"><img src="./images/mern.jpg" width="960" height="360" alt=""></a></section>
+      <div id="homepage">
+        <section id="services" class="clear">
+          <article class="one_third">
+            <figure><img src="./images/mean.jpg" width="290" height="180" alt="">
+              <figcaption>
+                <h2>MEAN</h2>
+                <p>Mean Stack refers to a collection of JavaScript technologies used to develop web applications.
+                  Therefore, from the client to the server and from server to database, everything is based on
+                  JavaScript.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_third">
+            <figure><img src="./images/python.png" width="290" height="180" alt="">
+              <figcaption>
+                <h2>Python</h2>
+                <p>A full-stack Python developer has expertise in using the Python suite of languages for all the
+                  applications. Python is one language that permits our computer systems to execute software and
+                  communicate with each other.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_third lastbox">
+            <figure><img src="./images/java.png" width="290" height="180" alt="">
+              <figcaption>
+                <h2>Java</h2>
+                <p>A java full stack web developer is a developer with extensive knowledge and expertise in full stack
+                  tools and frameworks that works with java. The java suite of technologies include working with
+                  servlets, core java, REST API and more tools that make the building of web apps easy.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+        <section id="intro" class="last clear">
+          <article>
+            <figure><img src="images/full.jpg" width="450" height="250" alt="">
+              <figcaption>
+                <h2>Know About Full Stack Developer</h2>
+                <p>A full stack web developer is a person who can develop both client and server software. React and
+                  Node are a popular combination for building robust full-stack applications. <a
+                    href="https://www.os-templates.com/" title="Free Website Templates">Know about Mern</a>Mean Stack
+                  refers to a collection of JavaScript technologies used to develop web applications from the client to
+                  server <a href="https://www.os-templates.com/template-terms">About Mean</a>.</p>
+                <p>Python in comparison to Ruby is known for its simplicity and technology. Java developers need a wide
+                  range of skills, from the basics to an understanding of the Java doesn't just mean knowing the
+                  language.<a href="https://www.os-templates.com/">About Pyhton @ Java</a>.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Placements</a></li>
-        <li><a href="#">Team</a></li>
-        <li class="last"><a href="#">About</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <!-- Slider -->
-    <section id="slider"><a href="#"><img src="./images/mern.jpg" width="960" height="360"alt=""></a></section>
-    <div id="homepage">
-      <section id="services" class="clear">
-        <article class="one_third">
-          <figure><img src="./images/mean.jpg" width="290" height="180" alt="">
-            <figcaption>
-              <h2>MEAN</h2>
-              <p>Mean Stack refers to a collection of JavaScript technologies used to develop web applications. Therefore, from the client to the server and from server to database, everything is based on JavaScript.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="one_third">
-          <figure><img src="./images/python.png" width="290" height="180" alt="">
-            <figcaption>
-              <h2>Python</h2>
-              <p>A full-stack Python developer has expertise in using the Python suite of languages for all the applications. Python is one language that permits our computer systems to execute software and communicate with each other.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="one_third lastbox">
-          <figure><img src="./images/java.png" width="290" height="180" alt="">
-            <figcaption>
-              <h2>Java</h2>
-              <p>A java full stack web developer is a developer with extensive knowledge and expertise in full stack tools and frameworks that works with java. The java suite of technologies include working with servlets, core java, REST API and more tools that make the building of web apps easy.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
+  </div>
+  <div class="wrapper row3">
+    <div id="footer" class="clear">
+      <!-- Section One -->
+      <section class="one_quarter">
+        <h2 class="title">MERN</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Mongo DB</a></li>
+            <li><a href="#">Express</a></li>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Node js</a></li>
+            <li class="last"><a href="#">API</a></li>
+          </ul>
+        </nav>
       </section>
-      <section id="intro" class="last clear">
-        <article>
-          <figure><img src="images/full.jpg" width="450" height="250" alt="">
-            <figcaption>
-              <h2>Know About Full Stack Developer</h2>
-              <p>A full stack web developer is a person who can develop both client and server software. React and Node are a popular combination for building robust full-stack applications. <a href="https://www.os-templates.com/" title="Free Website Templates">Know about Mern</a>Mean Stack refers to a collection of JavaScript technologies used to develop web applications from the client to server <a href="https://www.os-templates.com/template-terms">About Mean</a>.</p>
-              <p>Python in comparison to Ruby is known for its simplicity and technology.  Java developers need a wide range of skills, from the basics to an understanding of the Java doesn't just mean knowing the language.<a href="https://www.os-templates.com/">About Pyhton @ Java</a>.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
+      <!-- Section Two -->
+      <section class="one_quarter">
+        <h2 class="title">MEAN</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Mongo Db</a></li>
+            <li><a href="#">Express</a></li>
+            <li><a href="#">Angular</a></li>
+            <li><a href="#">Node js</a></li>
+            <li class="last"><a href="#">API</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="one_quarter">
+        <h2 class="title">PYTHON</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Php</a></li>
+            <li><a href="#">My spl</a></li>
+            <li><a href="#">AWS</a></li>
+            <li><a href="#">Python</a></li>
+            <li class="last"><a href="#">SPA</a></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- Section Four -->
+      <section class="one_quarter lastbox">
+        <h2 class="title">JAVA</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Oracle</a></li>
+            <li><a href="#">Mongo DB</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">DS</a></li>
+            <li class="last"><a href="#">Mokito</a></li>
+          </ul>
+        </nav>
       </section>
     </div>
   </div>
-</div>
-<div class="wrapper row3">
-  <div id="footer" class="clear">
-    <!-- Section One -->
-    <section class="one_quarter">
-      <h2 class="title">MERN</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Mongo DB</a></li>
-          <li><a href="#">Express</a></li>
-          <li><a href="#">React</a></li>
-          <li><a href="#">Node js</a></li>
-          <li class="last"><a href="#">API</a></li>
-        </ul>
-      </nav>
-    </section>
-    <!-- Section Two -->
-    <section class="one_quarter">
-      <h2 class="title">MEAN</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Mongo Db</a></li>
-          <li><a href="#">Express</a></li>
-          <li><a href="#">Angular</a></li>
-          <li><a href="#">Node js</a></li>
-          <li class="last"><a href="#">API</a></li>
-        </ul>
-      </nav>
-    </section>
-    <section class="one_quarter">
-      <h2 class="title">PYTHON</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Php</a></li>
-          <li><a href="#">My spl</a></li>
-          <li><a href="#">AWS</a></li>
-          <li><a href="#">Python</a></li>
-          <li class="last"><a href="#">SPA</a></li>
-        </ul>
-      </nav>
-    </section>
-    <!-- Section Four -->
-    <section class="one_quarter lastbox">
-      <h2 class="title">JAVA</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Oracle</a></li>
-          <li><a href="#">Mongo DB</a></li>
-          <li><a href="#">Java</a></li>
-          <li><a href="#">DS</a></li>
-          <li class="last"><a href="#">Mokito</a></li>
-        </ul>
-      </nav>
-    </section>
+  <div class="wrapper row4">
+    <footer id="copyright" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Developer School</a></p>
+      <p class="fl_right">Developed by <a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates">Hari Vardhan</a></p>
+    </footer>
   </div>
-</div>
-<div class="wrapper row4">
-  <footer id="copyright" class="clear">
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Developer School</a></p>
-    <p class="fl_right">Developed by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">Hari Vardhan</a></p>
-  </footer>
-</div>
 </body>
+
 </html>
