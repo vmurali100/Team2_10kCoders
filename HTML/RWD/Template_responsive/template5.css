@@ -339,3 +339,44 @@ img {
     width: 100%;
   }
 }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #header {
+    width: 100%;
+  }
+  #header #hgroup {
+    padding-left: 90px;
+  }
+
+  #header nav {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    margin: 30px;
+  }
+  #container {
+    width: 100%;
+  }
+  #container #shout {
+    width: 100%;
+    font-size: 100px;
+  }
+  #container #homepage #latest {
+    width: 100%;
+  }
+  /* #container #homepage #latest article figure ul .one_quarter {
+    width: 47%;
+  } */
+  #container #homepage #latest article figure ul li img {
+    width: 100%;
+    margin-left: 10px;
+  }
+  #container #homepage #latest article figure figcaption {
+    text-align: center;
+  }
+  /* #container #services .one_quarter {
+    width: 47%;
+  } */
+  #footer {
+    width: 100%;
+  }
+}

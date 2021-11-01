@@ -348,3 +348,43 @@ footer {
     width: 960px;
   }
 } */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #header {
+    width: 100%;
+  }
+  #header #hgroup {
+    padding-left: 90px;
+  }
+  fieldset {
+    width: 100%;
+  }
+  #header nav {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #container {
+    width: 100%;
+  }
+  #container #slider img {
+    width: 100%;
+  }
+  /* #container #homepage #services .one_quarter {
+    width: 47%;
+    font-size: 16px;
+    padding: 30px;
+  } */
+  #container #last .three_quarter {
+    width: 100%;
+    padding: 30px;
+  }
+  #container #last .three_quarter h2 {
+    width: 47%;
+  }
+  #container #last .three_quarter p {
+    width: 47%;
+  }
+  #footer {
+    width: 100%;
+  }
+}

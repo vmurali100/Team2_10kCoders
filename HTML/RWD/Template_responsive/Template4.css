@@ -368,3 +368,44 @@ img {
     width: 100%;
   }
 }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #header {
+    width: 100%;
+  }
+  fieldset {
+    width: 100%;
+    margin-right: 10px;
+  }
+  #header nav {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #container {
+    width: 100%;
+  }
+  #container #slider img {
+    width: 100%;
+  }
+  /* #container #shout {
+    width: 100%;
+  } */
+  #container #homepage {
+    width: 100%;
+  }
+  /* #container #homepage #services article {
+    width: 100%;
+  } */
+  /* .one_quarter {
+    width: 47%;
+  }
+  #container #homepage #latest .one_quarter figure img {
+    width: 100%;
+  }
+  #container #homepage #latest .one_quarter figure figcaption {
+    width: 100%;
+  } */
+  #footer {
+    width: 100%;
+  }
+}

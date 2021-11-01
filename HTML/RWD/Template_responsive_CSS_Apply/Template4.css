@@ -7,18 +7,14 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 div.wrapper {
-  display: block;
-  margin: 0;
-  padding: 0;
   width: 100%;
-  text-align: left;
 }
 .row1 {
   color: #c0bab6;
   background-color: #333333;
   overflow: auto;
 }
-#header {
+header {
   display: block;
   width: 960px;
   margin: 0 auto;
@@ -60,7 +56,6 @@ a {
   line-height: normal;
 }
 #header form {
-  display: block;
   width: 290px;
   float: right;
   padding: 0;
@@ -129,14 +124,10 @@ nav {
   background-color: #ffffff;
 }
 #container {
-  display: block;
   width: 960px;
   margin: 0 auto;
   padding: 30px 0;
-  overflow: auto;
-}
-.clear {
-  clear: both;
+  overflow: hidden;
 }
 #container section {
   display: block;
@@ -147,6 +138,7 @@ nav {
 .row2 a {
   color: #ff9900;
   background-color: #ffffff;
+  overflow: auto;
 }
 img {
   margin: 0;
@@ -157,7 +149,7 @@ img {
 }
 #container #shout {
   display: block;
-  width: 930px;
+  /* width: 960px; */
   padding: 15px;
   font-size: 16px;
   line-height: 1cm;
@@ -246,14 +238,10 @@ img {
 .row3 {
   color: #919191;
   background-color: #232323;
+  overflow: auto;
 }
 .clear {
   clear: both;
-}
-.row3 {
-  color: #919191;
-  background-color: #232323;
-  height: 55px;
 }
 .row3 a {
   color: #919191;
@@ -263,6 +251,7 @@ img {
   display: block;
   width: 960px;
   margin: 0 auto;
+  overflow: auto;
 }
 .f1_left {
   float: left;
@@ -366,5 +355,53 @@ img {
   }
   #footer {
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+  #header form {
+    margin-right: 90px;
+  }
+  #header nav {
+    margin-left: 80px;
   }
 }

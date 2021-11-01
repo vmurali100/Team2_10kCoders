@@ -338,7 +338,7 @@ footer {
     width: 100%;
   }
   #container #homepage #latest figure figcaption {
-    width: 98%;
+    width: 100%;
     text-align: center;
   }
   .shout p {
@@ -355,11 +355,11 @@ footer {
     width: 100%;
   }
   #container #content #services ul li .clear figure img {
-    width: 98%;
+    width: 100%;
     background: green;
   }
   #container #content #services ul li article figure figcaption {
-    width: 100%;
+    width: 98%;
     text-align: center;
   }
   #container #right_column {
@@ -427,5 +427,45 @@ footer {
   #footer {
     width: 100%;
     display: block;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #header {
+    width: 90%;
+  }
+  #header nav {
+    width: 95%;
+    text-align: center;
+  }
+  #container {
+    width: 100%;
+    background-color: blue;
+  }
+  #container #homepage #latest article {
+    margin-top: 10px;
+  }
+  .one_quarter {
+    margin: 10px;
+    display: block;
+    width: 23%;
+  }
+  #container #homepage #latest figure {
+    margin-left: 15px;
+  }
+  #container #homepage #latest figure img {
+    width: 100%;
+  }
+  #container #homepage #latest figure figcaption {
+    text-align: center;
+  }
+  #container #content #services ul li .clear figure img {
+    margin-left: 15px;
+  }
+  #container #right_column {
+    margin-right: 20px;
+    text-align: center;
+  }
+  #footer {
+    width: 100%;
   }
 }

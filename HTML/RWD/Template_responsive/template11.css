@@ -361,3 +361,29 @@ footer {
     width: 100%;
   }
 }
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #header {
+    width: 90%;
+  }
+  #header nav {
+    width: 95%;
+    text-align: center;
+  }
+  #container {
+    width: 100%;
+  }
+  #container #slider img {
+    width: 100%;
+  }
+
+  /* #container #homepage #services .one_third figure {
+    width: 28%;
+  }
+  #container #homepage #services .one_third figure figcaption {
+    width: 28%;
+  }  */
+  #footer .one_quarter {
+    width: 47%;
+    text-align: center;
+  }
+}
