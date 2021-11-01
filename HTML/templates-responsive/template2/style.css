@@ -364,7 +364,7 @@ address, article, aside, figcaption, figure, footer, header, nav, section{
     #footer {
       width: 100%;
     }
-    .boxrow1{
+    .box row1{
         width:100%;
     }
     #copyright {
@@ -385,6 +385,9 @@ address, article, aside, figcaption, figure, footer, header, nav, section{
 #header nav li{
     margin-right: 0px;
   }
+  div.box{
+    width:100%;
+}
 }
   @media only screen and (min-width: 421px) and (max-width: 768px){
   * {
@@ -429,8 +432,11 @@ address, article, aside, figcaption, figure, footer, header, nav, section{
 #header nav li{
     margin-right: 0px;
   }
-  .boxrow1{
+  .box row1{
       width:100%;
 
+  }
+  div.box{
+      width:100%;
   }
   }
