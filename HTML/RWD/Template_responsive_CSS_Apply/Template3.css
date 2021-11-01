@@ -112,6 +112,7 @@ fieldset {
   margin: 0;
   padding: 0;
   border: 0;
+  resize: both;
 }
 #header form input {
   display: block;
@@ -183,6 +184,22 @@ nav ul {
   width: 100%;
   margin: 0 0 30px 0;
   padding: 0;
+}
+.pagination {
+  display: inline;
+  margin: 10px;
+}
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 1px solid #ff9900;
+}
+.pagination a:hover {
+  color: red;
+  background-color: green;
 }
 .row2 a {
   color: #ff9900;

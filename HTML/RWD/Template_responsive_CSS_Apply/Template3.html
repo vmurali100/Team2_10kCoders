@@ -45,6 +45,16 @@
                     </li>
                 </ul>
             </nav>
+            <div class="pagination">
+                <a onclick="pagination()" href="">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a onclick="pagination()" id="pp" href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
         </header>
     </div>
     <div class="wrapper row2">
@@ -179,6 +189,10 @@
         function easeIn() {
             var transition = document.getElementById("he")
             transition.style.width = "500px"
+        }
+        function pagination() {
+            var pag = document.getElementById('pp')
+            pag.style.background = "orange";
         }
     </script>
 </body>
