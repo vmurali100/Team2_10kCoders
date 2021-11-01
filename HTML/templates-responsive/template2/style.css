@@ -364,9 +364,7 @@ address, article, aside, figcaption, figure, footer, header, nav, section{
     #footer {
       width: 100%;
     }
-    .box row1{
-        width:100%;
-    }
+    
     #copyright {
         width: 100%;
       }
@@ -432,10 +430,7 @@ address, article, aside, figcaption, figure, footer, header, nav, section{
 #header nav li{
     margin-right: 0px;
   }
-  .box row1{
-      width:100%;
-
-  }
+ 
   div.box{
       width:100%;
   }
