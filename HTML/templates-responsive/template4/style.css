@@ -255,7 +255,7 @@ a{
     }
     #header {
       width: 100%;
-      background-color: #eb197b;
+      background-color: #ff00d4;
     }
      #header nav {
       width: 100%;
@@ -291,7 +291,9 @@ a{
       width: 100%;
       font-size: 16px;
     }
-    
+    #container #homepage .three_quarter {
+      width: 100%;
+    }
     #footer {
       width: 100%;
     }
@@ -307,7 +309,7 @@ a{
   }
   #header {
     width: 100%;
-    background-color: #da1953;
+    background-color: #ff00d4;
   }
    #header nav {
     width: 100%;
@@ -343,7 +345,9 @@ a{
     width: 100%;
     font-size: 16px;
   }
-  
+  #container #homepage .three_quarter {
+    width: 100%;
+  }
   #footer {
     width: 100%;
   }

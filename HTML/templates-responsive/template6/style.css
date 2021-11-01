@@ -328,9 +328,6 @@ width:100%;
   .wrapper row3{
       width:100%;
   }
-  #header nav li{
-    margin-right: 0px;
-  } 
   .clear{
     display:block; 
     clear:both;
@@ -341,7 +338,7 @@ width:100%;
       padding: 0;
       margin: 0;
     }
-   
+    
     #header nav {
       width: 100%;
       margin: 0 auto;
@@ -350,18 +347,30 @@ width:100%;
     #container {
       width: 100%;
     }
+   
+   
+    #footer {
+      width: 100%;
+    }
     #header {
         width: 100%;
         background-color: lightcoral;
       }
-    
+     #header nav {
+        width: 100%;
+      }
      #header nav ul li {
         display: block;
         padding: 10px;
         text-align: center;
         border-bottom: 3px solid white;
       }
-      
+      #container {
+        width: 100%;
+      }
+      #container #content {
+          width:100%;
+      }
       #footer {
         width: 100%;
       }
@@ -371,9 +380,7 @@ width:100%;
     #container #content #services ul li article figure figcaption {
       width:100%;
     }
-    #container #content {
-        width:100%;
-  }
+   
   #container #homepage #latest figure {
       width:100%;
   }
