@@ -1,0 +1,73 @@
+<style>
+    * {
+        margin: 0;
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0.1)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    .main {
+        width: 400px;
+        margin: auto;
+    }
+
+    #smallImage {
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #overlay {
+        position: absolute;
+        transition: 2s;
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/ opacity */
+        height: 100%;
+        width: 100%;
+        top: 0;
+        display: none;
+        text-align: center;
+
+    }
+
+    #myImage {
+        animation-name: tejdeep;
+        animation-duration: 0.2s;
+    }
+</style>
+</head>
+
+<body>
+<div class="main">
+    <img src="../antartica night image.jpg" alt="" id="smallImage" onclick="showModal()">
+</div>
+
+<div id="overlay">
+    <img src="../antartica night image.jpg" alt="" id="myImage">
+</div>
+
+<script>
+    function showModal() {
+        var overLay = document.getElementById("overlay")
+        overLay.style.display = "block"
+        
+        overLay.addEventListener("click",(e)=>{
+            console.log(e.target.id)
+            if(e.target.id =="overlay"){
+                overLay.style.display="none"
+            }
+        })
+    }
+
+    
+</script>
+</body>
+
+</html>
