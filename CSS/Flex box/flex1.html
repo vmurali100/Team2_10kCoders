@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Document</title>
     <style>
-        #container{
-            background-color:cornflowerblue;
-            height:auto;
+        .container{
+            background-color:blue;
+            height:200px;
             display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+            align-items: center;
         }
         .box{
-            background-color:cadetblue;
-            padding:20px;
-            margin:10px;
+            background-color:red;
             text-align:center;
+            line-height:100px;
+            margin:3px;
+            width:100px;
+        }
+        .box3{
+            width:100%;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-    </div>
+   <div class="container">
+       <div class="box box1">1</div>
+       <div class="box box2">2</div>
+       <div class="box box3">3</div>
+   </div> 
 </body>
 </html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  background-color: DodgerBlue;
+}
+
+.container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+
+</body>
+</html> -->
+
+
