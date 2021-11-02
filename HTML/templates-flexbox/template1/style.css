@@ -266,7 +266,7 @@ a{
   @media (max-width: 768px) {
     
     .flex-container{
-        background: rgb(43, 205, 226);
+        background: rgb(6, 185, 185);
         padding: 10px;
         display:flex;
         flex-direction:column ;
