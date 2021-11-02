@@ -1,0 +1,218 @@
+/*header h1 fort size:36px;*/
+/*header h1 fort size:13px;*/
+/* color: #C0BAB6; text color */
+/* background-color: #333333; */
+/* background-color: #232323; Link bg color*/
+/* border: 1px solid #666666; */
+
+/* ============================Common Elements========================== */
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 13px;
+    color:#C0BAB6;
+}
+a{
+    text-decoration:none;
+    color:#C0BAB6;
+}
+
+.row1{
+    background-color: #333333;
+}
+.wrapper{
+    width:100%;
+}
+/* ============================================ Header  ============================================  */
+header{
+    width:960px;
+    margin:0 auto;
+    background-color:#333333;
+    padding:20px 0;
+}
+/* ============================Title========================== */
+.row1 header #title{
+    float:left;
+    margin-bottom:20px;
+}
+.row1 header #title h1{
+    font-size:36px;
+    font-weight:normal;
+}
+.row1 header #title h2{
+    font-size:13px;
+    font-weight:normal;
+}
+/* ============================Form========================== */
+.row1 header form{
+    float:right;
+    width: 290px;
+    margin:20px 0;
+}
+.row1 header form fieldset{
+   border:none;
+}
+.row1 header form #searchbox{
+    float:left;
+    width: 200px;
+    padding:5px;
+    border: 1px solid #666666;
+    font-size: 12px;
+    background-color: #232323;
+    font-size: 12px;
+    color: white;
+}
+.row1 header form #searchbox textarea select{
+    font-size: 12px;
+    color: white;
+}
+.row1 header form #submit{
+    float:right;
+    width: 70px;
+    font-size: 12px;
+    font-weight:bold;
+    background-color: #FF9900;
+    color: #FFFFFF;
+    border:none;
+    cursor:pointer;
+    padding:5px;
+    
+}
+/* ============================Nav========================== */
+nav{
+    clear:both;
+    background-color: #232323;
+    overflow:auto;
+    width:100%;
+    padding:20px 0;
+}
+nav ul {
+    list-style:none;
+    padding:0 20px;
+    overflow:auto;
+}
+nav ul li{
+    float:left;
+    margin-right:25px;
+    text-transform: uppercase;
+    width:auto;
+    height:auto;
+}
+nav ul .last{
+    margin-right:0;
+}
+/* ================================================================================================================= */
+#container{
+    width:960px;
+    margin:0 auto;
+    overflow:hidden;
+    padding:30px 0;
+    color: #979797;
+}
+/* ============================ Section 1 ========================== */
+#section1{
+    margin-bottom:50px;
+}
+#section1 img{
+    width:960px;
+    height:280px;
+}
+
+/*---------------Homepage ----------------- */
+#homepage{
+    width:100%;
+    line-height:1.6em;  
+    overflow:auto;  
+}
+
+/*---------------Section 2 ----------------- */
+#homepage #section2{
+    overflow:auto;
+    color: #979797;
+    margin-bottom:30px;
+}
+#homepage #section2 article{
+    width:225px;
+    margin-right:20px;
+}
+#homepage #section2 article figure img{
+    float:left;
+    height:32px;
+    width:32px;
+} 
+#homepage #section2 article strong{
+    float:left;
+    margin:8px 0 0 10px;
+    font-size:14px;
+    font-weight:bold;
+} 
+#homepage #section2 article p{
+    clear:both;
+    padding-top:5px;    
+} 
+#homepage #section2 .last{
+    margin-right:0px;
+}
+#homepage #section2 .article_row1{
+    float:left;
+}
+#homepage #section2 .article_row2{
+    float:left;
+}
+.readmore{
+    text-align:right;
+}
+.readmore a{
+    color: #FF9900;
+    background-color: #FFFFFF;
+    
+}
+/*---------------Section 2 ----------------- */
+#section3{
+    line-height:1.6em;
+    width:100%;
+    color: #979797;
+    overflow:auto;
+}
+#section3 h2{
+    font-weight:bold;
+    font-size:16px;
+    font-style:normal;
+    line-height:normal;
+    text-transform:uppercase;
+}
+#section3 p{
+    margin:13px 0;
+}
+#section3 article{
+    float:left;
+    margin-right:20px;
+    width:715px;
+}
+#section3 aside{
+    float:left;
+    width:225px;
+}
+/* ============================================ Footer ============================================  */
+.row3{
+    background-color: #232323;
+}
+#main_footer{
+    width:960px;
+    margin:0 auto;
+    overflow:auto;
+}
+#main_footer p{
+    font-size:13px;
+}
+#main_footer #left_footer{
+    float:left;
+    padding:20px 0;
+}
+#main_footer #right_footer{
+    float:right;
+    padding:20px 0;
+}
