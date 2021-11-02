@@ -11,19 +11,22 @@
             background: grey;
             padding: 5px;
             display: flex;
-            /* flex-direction: column-reverse; */
-            /* flex-wrap: wrap-reverse; */
-            /* flex-wrap: wrap ; */
-            /* justify-content: center; */
-            justify-content: space-between;
-            /* justify-content: space-around; */
-            
+            height: 600px;
+            /* align-items: center;
+            justify-content: center; */
+            /* align-items: stretch !important ; */
+            /* align-items: baseline; */
+            flex-wrap: wrap;
+            align-content: space-between;
+
         }
 
         .box {
             background-color: red;
             margin: 10px;
             padding: 20px;
+            width: 100px;
+            height: 75px;
             font-size: 30px;
             text-align: center;
             color: white;
@@ -32,17 +35,13 @@
 </head>
 
 <body>
-    <!-- <div id="container">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-    </div> -->
+  
     <div id="container">
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">4</div>
-        <div class="box">5</div>
+        <div class="box" style="font-size: 16px;">1</div>
+        <div class="box" style="font-size: 20px;">2</div>
+        <div class="box" style="font-size: 24px;">3</div>
+        <div class="box" style="font-size: 30px;">4</div>
+        <div class="box" style="font-size: 32px;">5</div>
         <div class="box">6</div>
         <div class="box">7</div>
         <div class="box">8</div>
