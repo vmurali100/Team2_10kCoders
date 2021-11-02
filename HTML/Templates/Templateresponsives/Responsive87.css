@@ -309,4 +309,21 @@
     #header nav {
       width: 100%;
     }
+    #container {
+      width: 100%;
+    }
+    #container #slider img {
+      width: 100%;
+    }
+    #container #homepage #services .one_quarter {
+      width: 100%;
+      font-size: 16px;
+    }
+    #container #homepage .three_quarter {
+      width: 100%;
+    }
+    #footer {
+      width: 100%;
+    }
   }
+  
