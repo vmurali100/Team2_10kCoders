@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> avicii-basic-89 </title>
+  <style>
+    
+      
+    
+    #header {
+      width: 100%;
+      margin: 0 auto;
+      overflow: auto;
+      background-color: #333333;
+    }
+
+    #avicii {
+      width: 960px;
+      margin: 20px auto;
+      overflow: auto;
+      height: 100px;
+      padding: 10px 10px;
+    }
+
+    #avicii div {
+      float: left;
+    }
+
+    #sp1 {
+      font-weight: bold;
+      font-size: 50px;
+      color: whitesmoke;
+      text-transform: uppercase;
+    }
+
+    #sp2 {
+      color: whitesmoke;
+      float: left;
+      text-transform: uppercase;
+    }
+
+    #textlinkbar {
+      /* float: right; */
+      padding: 20px auto;
+      float: right;
+      margin-top: 0px;
+
+    }
+
+    #avicii ul li {
+      display: inline-block;
+    }
+
+    .textlink {
+      background: black;
+      padding: 20px;
+      margin-top: 0px;
+    }
+
+    .link {
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: black;
+      color: white;
+    }
+
+    #big_imageblock {
+      width: 960px;
+      height: 360px;
+      margin: 20px auto;
+      overflow: both;
+      /* background-image: url(https://dancingastro-wpengine.netdna-ssl.com/wp-content/uploads/2021/09/Ej0K3HjXsAIn06A.jpg); */
+      /* background-size: 960px 360px; */
+    }
+
+    #big_image {
+      width: 960px;
+      height: 360px;
+      margin: auto;
+      overflow: both;
+    }
+
+    #img_row {
+      width: 960px;
+      height: 280px;
+      margin: 0px auto;
+    }
+
+    #img_row div {
+      width: 240px;
+      float: left;
+      margin-bottom: 20px;
+    }
+
+    #img_row div img {
+      width: 32px;
+      height: 32px;
+      margin-top: 50px;
+    }
+
+    #img_row div figcaption {
+      float: right;
+      margin: 50px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #img_row div p {
+      margin-right: 50px;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 14px;
+    }
+
+    #img_row div a,
+    #spotify {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: #FF9900;
+      float: right;
+      margin-right: 30px;
+    }
+
+    figures {
+      width: 960px;
+      margin: 30px auto;
+      overflow: auto;
+    }
+
+    figures img {
+      width: 290px;
+      height: 180px;
+      float: left;
+    }
+
+    #middle {
+      margin-left: 45px;
+      margin-right: 45px;
+    }
+
+    #spotify {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      float: right;
+    }
+
+    section {
+      overflow: none;
+      clear: both;
+    }
+
+    section box {
+      width: 960px;
+      margin: 20px auto;
+    }
+
+    #final_img {
+      width: 180px;
+      height: 150px;
+      float: left;
+    }
+
+    #dj {
+      float: left;
+      ;
+    }
+
+    #final {
+      margin: 50px auto;
+      width: 960px;
+      padding-top: 30px;
+      clear: both;
+      height: 360px;
+    }
+
+    .final {
+      width: 620px;
+      height: 150px;
+    }
+
+    #final_img {
+      width: 180px;
+      height: 150px;
+      float: left;
+    }
+
+    #para {
+      margin-left: 50px;
+      float: left;
+      width: 300px;
+    }
+
+    #table {
+      margin-top: -339px;
+      font-size: 20px;
+      text-decoration: none;
+      width: 340px;
+      height: 347.6px;
+      display: inline;
+      float: right;
+      padding-left: 0px;
+    }
+
+    figcaption {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #final p {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    li a {
+      background: url(https://www.os-templates.com/website-templates/template-demos/free-basic-html5-templates/basic-89/images/orange_file.gif) no-repeat 10px center #FFFFFF;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+    }
+
+    a:hover {
+      color: goldenrod;
+    }
+
+    #read {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: #FF9900;
+      float: right;
+      margin-right: 30px;
+    }
+
+    #para a {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: #FF9900;
+    }
+
+    #hz {
+      clear: both;
+      width: 960px;
+      margin: 0px auto;
+    }
+
+    footer {
+      height: 40px;
+      width: 100%;
+      background: black;
+      padding-top: 15px;
+    }
+
+    #footer_1 {
+      color: gray;
+      margin-left: 250px;
+      float: left;
+      font-family: sans-serif;
+    }
+
+    #footer_2 {
+      color: gray;
+      ;
+      margin-right: 250px;
+      float: right;
+      font-family: sans-serif;
+    }
+  
+    /* ++++++++===================++++++++++++media max-width:601px +++++++++++++++===================++++++++++ */
+    @media screen and (max-width:601px) {
+      * {
+        
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+      }
+
+      #header {
+        width: 100%;
+      }
+
+      #avicii {
+        width: 100%;
+        padding: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+      }
+
+      #avicii div {
+        width: 100%;
+        margin-right: 0px;
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
+        
+      }
+      #textlinkbar {
+        width: 100%;
+        margin-left: 0px;
+        height: 100%;
+        margin-top: 20px;
+      }
+
+      #avicii ul {
+        width: 100%;
+        margin-right: 0px;
+        display:flex ;
+        flex-direction: column;
+        
+      }
+      #avicii ul li{
+        border-bottom: 2px solid white;
+      }
+      #big_imageblock {
+        width: 100%;
+        height: 100%;
+
+      }
+
+      #big_imageblock img {
+        width: 100%;
+        height: 100%;
+
+      }
+
+      #img_row {
+        width: 100%;
+        height: 100%;
+        padding-left: 0%;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+      }
+      #img_row div {
+        width: 100%;
+        height: 100%;
+        /* padding-left: 6%; */
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      #img_row div img {
+        width: 70%;
+        height: 50%;
+        margin-top: 0px;
+      }
+      #img_row div figcaption{
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+      #img_row div p{
+        margin-right: 0px;
+      }
+      #img_row div a{
+        align-self: end;
+      }
+      figures {
+        width: 95%;
+        margin: 0px 0px 0px 0px ;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+      }
+      figures img{
+        width: 90%;
+        margin: 10px 0px 0px 0px;
+        height: auto;
+      }
+      #middle{
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+      #spotify_box {
+        width: 100%;
+        margin: 0px 0px;
+        
+      }
+      #spotify{
+        width: 100%;
+        margin-right: 0px;
+        margin-top: 0px;
+        text-align: end;
+      }
+      hr {
+        width: 90%;
+      }
+      #final{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+      }
+      #final>div{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+      }
+      #table {
+        margin-top: 20px;
+      }
+      .final #para {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-left: 0px;
+
+      }
+      .final #final_img {
+        width: 70%;
+        height: auto;
+        margin: 0px 0px 0px 0px;
+        
+
+      }
+      .final > a {
+        width: auto;
+        height: auto;
+        margin-right: 0px;
+        text-align: end;
+      }
+      .final #para figcaption{
+        width: 90%;
+      }
+      .final  span{
+        width: 100%;
+      }
+      footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+      }
+      footer div {
+        width: 100%;
+        height: auto;
+        color: gainsboro;
+        text-align: center;
+
+      }
+      #footer_1{
+        margin-left: 0px;
+        margin-bottom: 5px;
+      }
+      #footer_2{
+        margin-right: 0px;
+      }
+      #hz{
+        width: 90%;
+      }
+    }
+    /* +++++++++++++++++++++++++++++++++++++++++max-width:768px +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    @media only screen and (max-width:768px) and (min-width:601px){
+      * {
+        
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+      }
+
+      #header {
+        width: 100%;
+      }
+
+      #avicii {
+        width: 100%;
+        padding: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+      }
+
+      #avicii div {
+        width: 40%;
+        margin-right: 0px;
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
+        
+      }
+      #textlinkbar {
+      
+        margin-left: 0px;
+        height: 100%;
+        margin-top: 20px;
+      }
+
+      #avicii ul {
+        width: 100%;
+        margin-right: 0px;
+        display:flex ;
+        flex-direction: row;
+        
+      }
+      #avicii ul li{
+        border-bottom: 2px solid white;
+      }
+      #big_imageblock {
+        width: 90%;
+        height: 100%;
+
+      }
+
+      #big_imageblock img {
+        width: 100%;
+        height: 100%;
+
+      }
+      #img_row hr {
+        width: 0px;
+        height: 0px;
+        margin: 0px 0px 0px 0px;
+      }
+      #img_row a{
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+
+      #img_row {
+        width: 100%;
+        height: 100%;
+        padding-left: 0%;
+        margin-top: 0px;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        align-items: center;
+        justify-items: center;
+      }
+      #img_row div {
+        width: 100%;
+        height: 100%;
+        /* padding-left: 6%; */
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      #img_row div img {
+        width: 70%;
+        height: 50%;
+        margin-top: 0px;
+      }
+      #img_row div figcaption{
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      #img_row div p{
+        margin-right: 0px;
+      }
+      #spotify_box{
+        align-self: center;
+        justify-content: end;
+        grid-column: 1/3;
+        grid-row: 5/6;
+
+       
+      }
+      figures {
+        width: 100%;
+        margin: 0px 0px 0px 0px ;
+        height: auto;
+        display: flex;
+        grid-column: 1/3;
+        grid-row: 3/4;
+        flex-direction: row;
+        /* align-items: center; */
+         justify-items: space-evenly;
+         justify-content: space-between;
+
+      }
+      figures img{
+        width: 30%;
+        margin: 10px 0px 0px 0px;
+        height: auto;
+      }
+      #middle{
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+      #spotify_box {
+        width: 100%;
+        margin: 0px 0px;
+        
+      }
+      #spotify{
+        width: 100%;
+        margin-right: 0px;
+        margin-top: 0px;
+        text-align: end;
+      }
+      hr {
+        width: 90%;
+      }
+      #final{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        /* flex-direction: column;
+        justify-items: center; */
+        grid-template-columns: 30% 30% auto;
+        grid-template-rows: auto auto;
+      }
+      #number1{
+        grid-row: 1/2;
+        grid-column: 1/3;
+      }
+      #number2{
+        grid-row: 2/3;
+        grid-column: 1/3;
+      }
+      #table {
+        grid-column:3/4 ;
+        grid-row: 1/3;
+      }
+      #final>div{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+      }
+      #table {
+        margin-top: 20px;
+      }
+      .final #para {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin-left: 0px;
+
+      }
+      .final #final_img {
+        width: 70%;
+        height: 40%;
+        margin: 0px 0px 0px 0px;
+        
+
+      }
+      .final > a {
+        width: auto;
+        height: 10%;
+        margin-right: 0px;
+        text-align: end;
+
+      }
+      .final #para figcaption{
+        width: 90%;
+      }
+      .final  span{
+        width: 100%;
+      }
+      footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+      }
+      footer div {
+        width: 50%;
+        height: auto;
+        color: gainsboro;
+        text-align: center;
+
+      }
+      #footer_1{
+        margin-left: 0px;
+        margin-bottom: 5px;
+      }
+      #footer_2{
+        margin-right: 0px;
+      }
+      #hz{
+        width: 90%;
+      }
+     
+    }
+  </style>
+</head>
+
+<body>
+  <div id=header>
+    <div id=avicii>
+      <div> <span id="sp1">avicii </span> <br><span id="sp2"> tim berling</span></div>
+      <nav id=textlinkbar>
+        <ul>
+          <li class="textlink"><a href="#" class="link">one</a></li>
+          <li class="textlink"><a href="#" class="link">two</a></li>
+          <li class="textlink"><a href="#" class="link">three</a></li>
+          <li class="textlink"><a href="#" class="link">four</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <figure id=big_imageblock>
+    <img id=big_image src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii image">
+  </figure> <br>
+
+  <section id=img_row>
+    <div id=one>
+      <img src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii">
+      <figcaption>tim berling</figcaption>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.</p>
+      <a href="#">Read More>></a>
+    </div>
+    <div id=second>
+      <img src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii">
+      <figcaption>tim berling</figcaption>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.</p>
+      <a href="#">Read More>></a>
+    </div>
+    <div id=three>
+      <img src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii">
+      <figcaption>tim berling</figcaption>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.</p>
+      <a href="#">Read More>></a>
+    </div>
+    <div id=four>
+      <img src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii">
+      <figcaption>tim berling</figcaption>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.</p>
+      <a href="#">Read More>></a>
+    </div>
+    <hr style="margin: 25px auto ; clear: both;">
+    <figures>
+      <img src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii">
+      <img id="middle" src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii">
+      <img src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii">
+    </figures>
+    <br>
+    <box id=spotify_box>
+      <a id=spotify
+        href="https://open.spotify.com/artist/1vCWHaC5f2uS3yhpwWbIA6?si=4kjCswpzTzyZcciCs3TnCw&dl_branch=1">View All
+        Avicii Songs Here >></a>
+    </box>
+  </section>
+  <hr id=hz>
+  <div id=final>
+    <div class=final id=number1>
+      <img id=final_img src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii ">
+      <div id=para>
+        <figcaption>Tim Bergling</figcaption> <br>
+        <span>Tim Bergling, known professionally as Avicii, was a Swedish DJ,
+          remixer, <a href="#">record producer</a>, musician, and songwriter.</span>
+      </div>
+      <a id=read href="#">Read More>></a>
+    </div>
+    <br>
+    <div class=final id=number2>
+      <img id=final_img src="/RWD/basic89_RWD/images/download.jpeg" alt="avicii">
+      <div id=para>
+        <figcaption>Tim Bergling</figcaption><br>
+        <span>Tim Bergling, known professionally as Avicii, was a Swedish DJ,
+          remixer, <a href="#">record producer</a>, musician, and <a href="#">songwriter.</a></span>
+      </div>
+      <a id=read href="#">Read More>></a>
+    </div>
+    <div id=table>
+      <p>Songs List</p>
+      <ul>
+        <li><a href="https://open.spotify.com/track/0ct6r3EGTcMLPtrXHDvVjc?si=2db40d2e688640cd">The Nights</a></li>
+        <hr>
+        <li><a href="https://open.spotify.com/track/0nrRP2bk19rLc0orkWPQk2?si=0dee8ba1bf57463f">Wake Me Up</a></li>
+        <hr>
+        <li><a href="https://open.spotify.com/track/2P4OICZRVAQcYAV2JReRfj?si=f99c4a6d069a404e">Waiting For Love</a>
+        </li>
+        <hr>
+        <li><a href="https://open.spotify.com/track/4lhqb6JvbHId48OUJGwymk?si=307c2cc2541e48b0">Hey Brother</a></li>
+        <hr>
+        <li><a href="https://open.spotify.com/track/5UqCQaDshqbIk3pkhy4Pjg?si=67c87b910d004acb">Levels</a></li>
+        <hr>
+        <li><a href="https://open.spotify.com/track/4eDYMhIin1pSLIG96f1aD0?si=081c8d0cc98e4cf4">Addicted To You</a></li>
+        <hr>
+        <li><a href="https://open.spotify.com/track/2x0RZdkZcD8QRI53XT4GI5?si=6c2e82a6800d42e4">SOS</a></li>
+        <hr>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div id=footer_1> all content regarding <a style="text-decoration:none;" href="avicii .com">avicii</a> </div>
+    <div id=footer_2>templete by <a style="text-decoration:none ;" href="#">mike</a></div>
+  </footer>
+</body>
+
+</html>

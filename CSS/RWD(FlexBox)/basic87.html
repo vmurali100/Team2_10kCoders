@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>best_djs_in_the_world (flex-box)</title>
+  <style>
+    * {
+      overflow: auto;
+
+    }
+
+    body {
+      background-color: rgb(235, 235, 235);
+    }
+
+    #top {
+      width: 960px;
+      margin: 25px auto;
+    }
+
+    #link {
+      float: right;
+      height: 90px;
+      padding-top: 10px;
+    }
+
+    #image {
+      width: 215px;
+      height: 315px;
+    }
+
+    #avc_sp1 {
+      font-weight: bold;
+      font-size: 50px;
+      color: whitesmoke;
+      text-transform: uppercase;
+    }
+
+    #avc_sp2 {
+      color: whitesmoke;
+    }
+
+    header {
+      width: 100%;
+      margin: 0 auto;
+      overflow: auto;
+      background-color: #333333;
+    }
+
+    #avicii {
+      float: left;
+    }
+
+    #link ul {
+      background: black;
+      padding: 6px;
+    
+    }
+
+    #link li {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 10px;
+    }
+    
+
+    #link a {
+      text-transform: uppercase;
+      color: whitesmoke;
+      text-decoration: none;
+    }
+
+    section {
+      width: 960px;
+      margin: 25px auto;
+    }
+
+    #d1 img {
+      width: 215px;
+      height: 315px;
+    }
+
+    #d1 {
+      border: 5px solid white;
+      width: 215px;
+      text-align: center;
+      float: left;
+      margin-bottom: 30px;
+    }
+
+    .d2 {
+      margin-left: 20px;
+    }
+
+    #parag {
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 24px;
+      clear: both;
+      margin-bottom: 30px;
+    }
+
+    #final {
+      margin: 20px auto;
+      width: 960px;
+      padding-top: 30px;
+      clear: both;
+      height: 360px;
+    }
+
+    .final {
+      width: 620px;
+      height: 150px;
+    }
+
+    #final_img {
+      width: 180px;
+      height: 150px;
+      float: left;
+    }
+
+    #para {
+      margin-left: 50px;
+      float: left;
+      width: 300px;
+    }
+
+    #final p {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    li a {
+
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: black;
+      font-size: 15px;
+    }
+
+    a:hover {
+      color: goldenrod;
+    }
+
+    #read {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: #FF9900;
+      float: right;
+      margin-right: 30px;
+    }
+
+    #para a {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: #FF9900;
+    }
+
+    #table {
+      margin-top: -339px;
+      text-decoration: none;
+      width: 340px;
+      height: 347.6px;
+      display: inline;
+      float: right;
+      padding-left: 0px;
+    }
+
+    .footer {
+      height: 40px;
+      width: 100%;
+      background: black;
+      padding-top: 15px;
+      margin-top: 0px;
+    }
+
+    #footer_one {
+      color: gray;
+      margin-left: 250px;
+      float: left;
+      font-family: sans-serif;
+    }
+
+    #footer_two {
+      color: gray;
+      margin-right: 250px;
+      float: right;
+      font-family: sans-serif;
+    }
+
+    .footer a {
+      text-decoration: none;
+    }
+
+
+
+    /* ++++++++++++++++++++++++media max-768px+++++++++++++++++++++++++++++++++++++++++++ */
+    @media only screen and (max-width:768px) and (min-width:601px){
+
+
+      
+      header{
+        width: 100%;
+      }
+      #top {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left:5%;
+        padding-right: 5%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      #avicii {
+        width: 40%;
+        
+      }
+
+      #link {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+      }
+
+      #link ul {
+        width: 100%;
+        margin-left: 0px;
+        padding: 0px;
+      }
+
+      #link ul li {
+      
+        margin-left: 0px;
+      }
+
+      #link li a {
+        font-size: 15px;
+      }
+
+      section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      #images_row {
+        width: 99%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      #images_row #d1 {
+        width: 20%;
+        margin-left: 0px;
+        padding-left: 0px;
+    
+      }
+
+      #images_row img {
+        width: 100%;
+      }
+
+      .footer {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      
+
+      #footer_one {
+       width: 40%;
+       margin-left: 10px;
+      }
+
+       #footer_two {
+        margin-right: 10px;
+        /* float: left; */
+      }
+
+      #final {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .final {
+        width: 100%;  
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+     
+      }
+      .final a{
+        width: 20%;
+        height: 40%;
+        margin-top: 20%;
+      }
+
+      #final_area {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+       #table {
+        width: 30%;
+        
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-top:0px;
+
+      }
+
+       #final_img {
+        margin-left: 0px;
+        width: 30%;
+
+      }
+
+      #para {
+        margin-left: 5px;
+        width: 60%;
+      }
+
+      #read {
+
+        float: right;
+        margin-right: 10px;
+      } 
+    }
+
+    /* +++++++++++++++++++++++++++++media max-768px ends here +++++++++++=+++++++++++ */
+
+    /*+++++++++++++++++++++++++++ mediea queries+++++++++++++++++++++++++++++++++++++ */
+    @media only screen and (max-width:601px) {
+      * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #top {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      
+
+      #link {
+        
+        width: 100%;
+        height: 100%;
+        
+        margin-bottom: 0px;
+      }
+
+      #link ul {
+        padding: 0px;
+        width: 100%;
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+
+      }
+
+      #link ul li {
+
+      
+        border-bottom: 3px solid white;
+        
+        }
+
+      section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #images_row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      } 
+
+       #d1 img {
+        width: 100%;
+        height: 95%;
+      }
+
+      #d1 {
+        width: 80%;
+        height: 100%;
+        margin-left: 0%;
+      }
+      #footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #footer_one {
+      width: 100%;
+        margin-left: 0px;
+      }
+
+      #footer_two {
+        width: 100%;
+        margin-right: 0px;
+        
+      }
+
+      #final_area {
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #final {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #table {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        margin-top: 0px;
+        
+      }
+
+      #table ul li {
+        font-weight: 40px;
+        width: 98%;
+      }
+
+      .final {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; 
+      } 
+
+       #final_img {
+        width: 50%;
+      
+      }
+
+      #para {
+      
+        width: 85%;
+        margin-left: 0px;
+      
+      }
+      hr {
+        width: 90%;
+      }
+
+      #read {
+       margin-left: 0%;
+       margin-right: 0px;
+      } 
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <main id=top>
+      <div id=avicii>
+        <span id=avc_sp1>BEST DJ </span> <br><span id=avc_sp2> in the World</span>
+      </div>
+      <nav id=link>
+        <ul>
+          <li><a href="#">one</a></li>
+          <li><a href="#">two</a></li>
+          <li><a href="#">three</a></li>
+          <li><a href="#">four</a></li>
+          <li><a href="#">five</a></li>
+      </nav>
+    </main>
+  </header>
+  <section>
+    <div id=images_row>
+      <div id=d1>
+        <img src="http://www.trbimg.com/img-5dad18c5/turbine/sf-go-avicii-dj-ultra-sls-south-beach-20140328"
+          alt="avicii">
+        <br> <span>AVICII</span>
+      </div>
+      <div class="d2" id=d1>
+        <img src="http://www.trbimg.com/img-5dad18c5/turbine/sf-go-avicii-dj-ultra-sls-south-beach-20140328"
+          alt="avicii">
+        <br> <span>AVICII</span>
+      </div>
+      <div class="d2" id=d1>
+        <img src="http://www.trbimg.com/img-5dad18c5/turbine/sf-go-avicii-dj-ultra-sls-south-beach-20140328"
+          alt="avicii">
+        <br> <span>AVICII</span>
+      </div>
+      <div class="d2" id=d1>
+        <img src="http://www.trbimg.com/img-5dad18c5/turbine/sf-go-avicii-dj-ultra-sls-south-beach-20140328"
+          alt="avicii">
+        <br> <span>AVICII</span>
+      </div>
+    </div>
+    <br>
+    <summary id=parag>DJs often use specialized DJ mixers, small audio mixers with crossfader and cue functions to blend
+      or transition from one song to another. Mixers are also used to pre-listen to sources of recorded music in
+      headphones and adjust upcoming tracks to mix with currently playing music</summary>
+    <hr>
+
+    <div id=final>
+      <div id="final_area">
+        <div class="final">
+          <img id=final_img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_PrCNx6sSviLgcX6_oVNJnfAPJdGw6hUEw&usqp=CAU"
+            alt="avicii ">
+          <div id=para>
+            <figcaption>Tim Bergling</figcaption> <br>Tim Bergling, known professionally as Avicii, was a Swedish DJ,
+            remixer, <a href="#">record producer</a>, musician, and songwriter.
+          </div>
+          <a id=read href="#">Read More>></a>
+        </div>
+        <br>
+        <div class="final">
+          <img id=final_img src="https://images.askmen.com/entertainment/music/avicii-interview_1374711342.jpg"
+            alt="avicii">
+          <div id=para>
+            <figcaption>Tim Bergling</figcaption><br>Tim Bergling, known professionally as Avicii, was a Swedish DJ,
+            remixer, <a href="#">record producer</a>, musician, and <a href="#">songwriter.</a>
+          </div>
+          <a id=read href="#">Read More>></a>
+        </div>
+      </div>
+      <div id=table>
+        <p>Songs List</p>
+        <ul>
+          <li><a href="https://open.spotify.com/track/0ct6r3EGTcMLPtrXHDvVjc?si=2db40d2e688640cd">The Nights</a></li>
+          <hr>
+          <li><a href="https://open.spotify.com/track/0nrRP2bk19rLc0orkWPQk2?si=0dee8ba1bf57463f">Wake Me Up</a></li>
+          <hr>
+          <li><a href="https://open.spotify.com/track/2P4OICZRVAQcYAV2JReRfj?si=f99c4a6d069a404e">Waiting For Love</a>
+          </li>
+          <hr>
+          <li><a href="https://open.spotify.com/track/4lhqb6JvbHId48OUJGwymk?si=307c2cc2541e48b0">Hey Brother</a></li>
+          <hr>
+          <li><a href="https://open.spotify.com/track/5UqCQaDshqbIk3pkhy4Pjg?si=67c87b910d004acb">Levels</a></li>
+          <hr>
+          <li><a href="https://open.spotify.com/track/4eDYMhIin1pSLIG96f1aD0?si=081c8d0cc98e4cf4">Addicted To You</a>
+          </li>
+          <hr>
+          <li><a href="https://open.spotify.com/track/2x0RZdkZcD8QRI53XT4GI5?si=6c2e82a6800d42e4">SOS</a></li>
+          <hr>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+  <div class="footer">
+    <div id=footer_one> all content regarding <a href="avicii .com">avicii</a> </div>
+    <div id=footer_two>templete by <a href="#">mike</a></div>
+
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image styles</title>
+</head>
+<body>
+    <style>
+    
+
+    @keyframes zoom {
+        from {
+            transform: scale(0.1)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+   
+    .first {
+        width: 500px;
+        margin: auto;
+    }
+
+    #Imageone {
+        width: 100%;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    #second {
+        position: absolute;
+        transition: 10s;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        display: none;
+        text-align: center;
+
+    }
+
+    #Imagetwo {
+        animation-name: zoom;
+        animation-duration: 5s;
+    }
+</style>
+</head>
+
+<body>
+<div class="first">
+    <img src="tree.jpeg" alt="" id="Imageone" onclick="newOne()">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias nisi eos quia nobis aliquid tempore necessitatibus nam saepe ullam, nulla delectus officia dolore dolor vero cum possimus accusantium praesentium non.
+    Sint ex praesentium architecto quae modi ipsum qui corrupti minus aut distinctio consequuntur exercitationem reprehenderit magnam nemo alias corporis quod, voluptates explicabo aliquam inventore vitae laborum! Sunt, libero dolorem. Corrupti.
+    Quos dolorem mollitia aliquam blanditiis architecto minus? Vitae ipsam quos, quisquam libero mollitia enim molestias rerum officia modi aspernatur odio. Eius sed quod officia laboriosam fugiat placeat amet cum ipsum.
+    Distinctio earum quibusdam deleniti in dolorem numquam fuga maiores tempore? A vero exercitationem optio voluptate nam iste quod, minima porro eum, dolor odit dolores sequi maxime, corrupti cum reprehenderit sit!
+    Iste pariatur minus soluta adipisci libero est nisi, delectus ab recusandae molestiae eligendi unde ullam consectetur voluptatem praesentium cumque rem ex ea laudantium consequuntur. Officiis quam ipsa maxime perferendis. Nobis.
+</div>
+
+<div id="second">
+    <img src="tree.jpeg" alt="" id="Imagetwo">
+</div>
+<script>
+ function newOne() {
+            var secondPart = document.getElementById("second")
+            secondPart.style.display = "block"}
+</script>
+</body>
+</html>

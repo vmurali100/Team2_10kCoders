@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>basic83 templete </title>
+
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    #header {
+      width: 100%;
+      margin: 0 auto;
+      overflow: auto;
+      background-color: rgb(63, 61, 61);
+    }
+
+    #avicii {
+      width: 960px;
+      margin: 10px auto;
+      /* margin: 10px 271.6px 0px 271.6px;  */
+      overflow: auto;
+      /* float: left; */
+      height: 130px;
+      padding: 10px;
+    }
+
+    #title {
+      font-weight: bold;
+      font-size: 50px;
+      color: whitesmoke;
+    }
+
+    #sub_title {
+      color: whitesmoke;
+      float: left;
+    }
+
+    button {
+
+      width: 100px;
+      background: goldenrod;
+      color: white;
+      font-size: 14px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+      float: right;
+      height: 35px;
+      text-decoration: chartreuse;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: oblique;
+
+    }
+
+    form.example input[type=text] {
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      margin-right: 0px;
+      width: 250px;
+      background: #f1f1f1;
+      margin-left: 515.99px;
+      height: 35px;
+    }
+
+
+    form.example button:hover {
+      background: rgb(114, 87, 19);
+    }
+
+    form.example::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    form {
+      display: inline;
+    }
+
+    #nav_bar {
+      margin-left: 15%;
+      width: 960px;
+      margin: 10px auto;
+      background: black;
+      clear: both;
+    }
+
+    #nav_bar ul {
+      background: black;
+    }
+
+    #nav_bar li {
+      display: inline-block;
+      padding: 25px;
+      box-sizing: border-box;
+    }
+
+    #nav_bar li a {
+      text-transform: uppercase;
+      color: whitesmoke;
+      text-decoration: none;
+    }
+
+    #big_image {
+      width: 960px;
+      height: 280px;
+      margin: 25px auto;
+    }
+
+    #big_image img {
+      width: 960px;
+      height: 280px;
+      margin: 25px auto;
+    }
+
+    #images_row {
+      width: 960px;
+      height: 280px;
+      margin: 50px auto;
+    }
+
+    #images_row div {
+      width: 240px;
+      float: left;
+    }
+
+    #images_row img {
+      width: 32px;
+      height: 32px;
+      margin-top: 50px;
+    }
+
+    #images_row figcaption {
+      float: right;
+      margin: 50px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #images_row p {
+      margin-right: 50px;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 14px;
+    }
+
+    #images_row a {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: #FF9900;
+      float: right;
+      margin-right: 30px;
+    }
+
+    #last {
+      margin: 30px auto;
+      width: 960px;
+      height: 300px;
+      margin-bottom: 10px;
+    }
+
+    #last_one {
+      width: 690px;
+      height: 280px;
+      margin-right: 30px;
+      float: left;
+      margin-top: 30px;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 14px;
+    }
+
+    #last_one figcaption {
+      margin: 10px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #last_two {
+      width: 100px;
+      height: 50px;
+      margin-top: 20px;
+      margin-right: 0px;
+    }
+
+    #last_two a {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: #FF9900;
+      margin-top: 240px;
+      margin-right: 0px;
+    }
+
+    #final_part {
+      width: 240px;
+      margin-top: 15px;
+      float: left;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 14px;
+    }
+
+    #final_part figcaption {
+      margin: 5px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: grey;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #final_part a {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-decoration: none;
+      color: #FF9900;
+      float: right;
+      margin-right: 30px;
+      margin-top: 20px;
+    }
+
+    article {
+      width: 960px;
+      margin: auto;
+      background: rgb(63, 61, 61);
+      height: 50px;
+      padding: 17.5px;
+    }
+
+    footer {
+      background: rgb(63, 61, 61);
+      margin: 0;
+      height: 50px;
+    }
+
+    #footer_srh {
+      float: right;
+    }
+
+    article span {
+      color: gainsboro;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    @media screen and (max-width:768px) and (min-width:601px) {
+      * {
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+
+      }
+
+      #header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      form.example input[type=text] {
+        width: 70%;
+        margin-left: 0px;
+      }
+
+      #avicii {
+        height: 100%;
+        text-transform: uppercase;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+
+      }
+
+      #title_avicii {
+        width: 30%;
+
+      }
+
+      #search_bar {
+        height: 100%;
+        margin-top: 4%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .example {
+        width: 100%;
+        height: 100%;
+      }
+
+      #nav_bar {
+        width: 100%;
+
+      }
+
+      #nav_bar ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #big_image {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0px;
+      }
+
+      #big_image img {
+        width: 99%;
+        height: 100%;
+      }
+
+      #images_row {
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #images_row div {
+        width: 20%;
+        margin-left: 0%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #images_row figcaption,
+      #last figcaption {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+
+      #images_row p,
+      #images_row img #images_row a {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+      }
+
+      #images_row img {
+        width: 90%;
+        height: 50px;
+      }
+
+      #last {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #last_one {
+        width: 60%;
+        height: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+
+      }
+
+      #last_one figcaption,
+      #last_one figcaption {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0px;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+
+      #last_one p,
+      #last_one a {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+      }
+
+      #final_part {
+        height: 100%;
+        margin: 0px;
+
+      }
+
+      #series {
+        margin-left: 0%;
+      }
+
+      footer {
+        width: 100%;
+        height: 100%;
+
+      }
+
+      article {
+        width: 99%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #copy,
+      #footer_srh {
+        width: 50%;
+        text-align: center;
+      }
+    }
+
+    /*++++++++++++++++++++++++++++++++++media max-768px ends+++++++++++++++++++++++++++++++++++++++++  */
+
+
+    /*++++++++++++++++++++++++++++++++++media 601px +++++++++++++++++++++++++++++++++++++++++  */
+    @media screen and (max-width:601px) {
+      * {
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+      }
+
+      #header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 0px;
+      }
+
+      #avicii {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      #title_avicii span {
+        width: 100%;
+      }
+
+      #title {
+        font-size: 40px;
+      }
+
+      .example {
+        width: 100%;
+        height: 100%;
+        /* margin-top: 10px;
+        margin-bottom: 10px; */
+      }
+
+      form.example input[type=text] {
+        width: 70%;
+        margin-left: 0px;
+      }
+
+      .example {
+        width: 100%;
+        height: 100%;
+      }
+
+      #nav_bar {
+        width: 100%;
+
+      }
+
+      #nav_bar ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #search_bar {
+        height: 100%;
+        margin-top: 4%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #search_bar input {
+        width: 70%;
+      }
+
+      #search_bar button {
+        width: 30%;
+
+      }
+
+      #nav_bar li {
+        border-bottom: 2px solid goldenrod;
+      }
+
+      #big_image {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0px;
+      }
+
+      #big_image img {
+        width: 99%;
+        height: 99%;
+      }
+
+      #images_row {
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #images_row div {
+        width: 90%;
+        height: 100%;
+        padding: 0px;
+        margin-top: 10px;
+        box-sizing: border-box;
+        overflow: auto;
+      }
+
+      #images_row p {
+        width: 100%;
+        margin-right: 0px;
+      }
+
+      #images_row a {
+        width: 100%;
+        text-align: end;
+        height: 100%;
+      }
+
+      #images_row img {
+        width: 35%;
+        height: 20%;
+        margin-top: 0px;
+
+      }
+
+      #images_row figcaption {
+        width: 60%;
+        margin-left: 5%;
+        margin-right: 0px;
+      }
+
+      #last {
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #last_one {
+        width: 90%;
+        height: 100%;
+        margin-right: 0px;
+        margin-top: 0px;
+      }
+
+      #last_one figcaption,
+      #last_one p,
+      #last_one a {
+        width: 94%;
+        margin-left: 5%;
+      }
+
+      #final_part {
+        width: 90%;
+        margin-top: 0px;
+      }
+
+      #final_part figcaption,
+      #final_part p {
+        width: 94%;
+        height: auto;
+        margin-left: 5%;
+      }
+
+      #final_part a {
+        width: 94%;
+        height: 5%;
+        margin-right: 0%;
+      }
+
+      footer {
+        width: 100%;
+        height: 100%;
+      }
+
+      footer article {
+        width: 98%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #footer_srh {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        
+      }
+
+      #last_one_para2 {
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+
+    /* ==============================media max-width: 601px  ends here============================*/
+  </style>
+</head>
+
+<body>
+  <div id=header>
+    <div id=avicii>
+      <div id="title_avicii"> <span id=title>avicii </span> <br><span id=sub_title> tim berling</span></div>
+
+      <span id=search_bar>
+        <form class="example" action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i>search</button>
+        </form>
+      </span>
+    </div>
+    <br>
+    <div id=nav_bar>
+      <ul>
+        <li> <a href="/basic83_RWD/index.html.html">HOME</a></li>
+        <li><a href="/basic83_RWD/index.html.html">CHARTS</a></li>
+        <li><a href="/basic83_RWD/index.html.html">ABOUT US</a></li>
+        <li><a href="/basic83_RWD/index.html.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id=big_image>
+    <img src="download.jpeg" alt="avicii image">
+  </div> <br>
+  <div id=images_row>
+    <div id=series>
+      <img src="download.jpeg" alt="avicii">
+      <figcaption>tim berling</figcaption>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.</p>
+      <a href="#">Read More>></a>
+    </div>
+    <div id="second">
+      <img src="download.jpeg" alt="avicii">
+      <figcaption>tim berling</figcaption>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.</p>
+      <a href="#">Read More>></a>
+    </div>
+    <div id=third>
+      <img src="download.jpeg" alt="avicii">
+      <figcaption>tim berling</figcaption>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.</p>
+      <a href="#">Read More>></a>
+    </div>
+    <div id=four>
+      <img src="download.jpeg" alt="avicii">
+      <figcaption>tim berling</figcaption>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.</p>
+      <a href="#">Read More>></a>
+    </div>
+  </div>
+  <div id=last>
+    <div id=last_one>
+      <figcaption>tim berling</figcaption> <br>
+      <p>At the age of 16, Bergling began posting his remixes on
+        <a style="font-family: Georgia, 'Times New Roman', Times, serif; text-decoration: none;color: #FF9900;"" href="
+          #">electronic music forums</a>, which led to his first record deal.[2] He rose to prominence in 2011 with his
+        single "Levels".
+      </p><br>
+      <p id=last_one_para2> His debut studio album, True (2013), blended electronic music with elements of
+        multiple genres and received generally positive reviews. It peaked in the top ten in more than fifteen countries
+        and topped international charts;[3][4][5][6] the lead single, "Wake Me Up", topped most music markets in Europe
+        and reached number four in the United States.</p>
+      <div id=last_two>
+        <a href="#">Read More>></a>
+      </div>
+    </div> <br>
+
+    <div id=final_part>
+      <figcaption>tim berling</figcaption> <br>
+      <p> Tim Bergling, known professionally as Avicii, was a Swedish DJ, remixer, record producer, musician, and
+        songwriter. At the age of 16, Bergling began posting his remixes on electronic music forums, which led to his
+        first record deal.He rose to prominence in 2011 with his single "Levels".</p>
+      <a href="#">Read More>></a>
+    </div>
+  </div>
+  <footer>
+    <article>
+      <span id=copy>all copyrights to avicii </span> <span id=footer_srh>go SRH</span>
+    </article>
+  </footer>
+</body>
+
+</html>

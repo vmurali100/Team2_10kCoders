@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic88 templete </title>
+    <style>
+        *{
+          margin: 0;
+          overflow: auto;
+         }
+         body{
+         background: honeydew;
+         width: 100%;
+         }
+         #header {
+           width:100%; margin: 0 auto; overflow:auto; background-color: #333333; 
+         }
+         #avicii{
+        float:left ;margin-top: 25px; margin-left: 15%;
+         }
+         #avicii p{
+        font-weight: bold; font-size: 50px;color:whitesmoke;text-transform: uppercase;
+         }
+         #avicii span {
+          color: whitesmoke;
+         }
+         #navs{
+        float: right; margin-top: 50px ; margin-bottom: 50px; margin-right: 15%;
+         }
+         #navs li{
+           background:black; padding: 20px; text-decoration: none;display: inline-block;
+         }
+         #navs li a{
+          text-transform: uppercase; color:whitesmoke;text-decoration: none;
+         }
+         #content{
+           width: 980px;
+           margin: 20px auto ;
+         }
+         #content_1 {
+          overflow: auto;
+         }
+         #big_image{
+          margin: 20px 0px; 
+         }
+         #big_image img {
+          width: 960px; height: 360px ; border: 10px solid white; 
+         }
+         #content_1_2 ,#content_1_1 , #content_1_3{
+           width: 310px; float: left;
+         }
+         #image1{
+          width : 290px; height:  180px ; margin-left: 0px  ; margin-top: 50px; float: left; border: 10px solid white;
+         }
+         #content_1_2 img {
+          width : 290px; height:  180px ;   margin-top: 50px;float: left;border: 10px solid white; 
+         }
+         #content_1_3{
+           overflow: auto;
+         }
+         #content_1_3 img {
+         width : 290px; height:  180px ; margin-top: 50px;  border: 10px solid white;
+         }
+         #main{
+          overflow: auto; height: 310px;
+         }
+         #main_1{
+          width : 290px; height: 180px ; margin-left: 0px; float: left; height: 100%;
+         }
+         #main_2{
+          width : 290px; height: 180px ; margin-left: 25px; float: left;height: 100%;
+         }
+         #main_3{
+          width : 290px; height: 180px ; margin-left: 25px; float: left;height: 100%;
+         }
+         #below{
+          width: 980px; height: 300px ; margin: 50px 0px 50px; clear: both; height: 100%;
+         }
+         #below_1{
+          width : 450px; height: 180px ; margin-left: 0px; margin-bottom: 50px ; float: left; height: 100%;
+         }
+         #below img{
+          width: 450px; height: 250px;float: right; height: 100%;
+         }
+         #footerone{
+          width:100%; margin-top: 50px; overflow:auto; background-color: #333333; padding-bottom: 15px; 
+         }
+          #footerone_1{
+            width: 235px; margin-left: 0px; float: left;
+          }
+          #footerone_2{
+            width: 235px; margin-left: 10px; float: left;
+          }
+          #footerone_3{
+            width: 235px; margin-left: 10px; float: left;
+          }
+          #footerone_4{
+            width: 235px; margin-left: 10px; float: left;
+          }
+          #footerone p{
+            font-family:'Times New Roman', Times, serif; font-size: 35px; font-weight: bold;
+          }
+          #footerone a{
+            font-size: 20px ; color: #FF9900; text-decoration: none;
+        }
+        #footertwo{
+          height: 40px; width: 100% ; background: black; padding-top: 15px;
+        }
+        #footertwo_1{
+          color: gray;margin-left:250px ; float: left; font-family:sans-serif; 
+        }
+        #footertwo_2{
+          color: gray;;margin-right:250px ;float: right;font-family:sans-serif;
+        }
+        #heading{
+          margin-bottom: 15px; font-size: 18px; font-weight: bold; text-transform: uppercase; color: grey; font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #main a,#below_1 a{
+          font-family: Georgia, 'Times New Roman', Times, serif; text-decoration: none; color: goldenrod; float: right; margin-right: 30px;
+        }
+        
+      /* ++++++++++++++++++++++++++++++++++++++++++++++media maxwidth: 768px++++++++++++++++++++++++++++++++++++++++++ */
+      @media screen and (max-width:768px){
+        *{
+          width: 100%;
+          margin: 0px;
+          padding: 0px;
+          overflow: auto;
+        }
+        #body{
+          width: 100%;
+        }
+        #header{
+          width: 100%;
+          float: left;
+          /* height: 100%; */
+        }
+        #avicii , #navs{
+          width: 50%;
+          float: left;
+          margin-left: 0px;
+          text-align: center;
+          margin-right: 0px;
+          /* height: 100%; */
+        }
+        #avicii p,#avicii span , #navs ul {
+          width: 100%;
+          margin-left: 0px;
+          /* height: 100%; */
+        }
+        #navs li{
+           background:black;
+            padding: 10px; 
+            text-decoration: none;
+            display: inline-block;
+            /* float: left; */
+            width: 15%;
+         }
+        #content {
+          width: 100%;
+          height: 100%;
+        }
+        #content_1{
+          width: 100%;
+        }
+        #big_image   {
+          width: 98%;
+          margin: 1%;
+        }
+        #big_image img{
+          width: 96%;
+          margin-left: 0px;
+        }
+        #content_1_1 ,#content_1_2 ,#content_1_3{
+          width: 30% ;
+          float: left;
+          margin-left:3.2% ;
+        }
+        #content_1_1 img ,#content_1_2 img ,#content_1_3  img {
+          width: 85%;
+          margin: 0px;
+        }
+        #main{
+          width: 100%;
+          height: 100%;
+        }
+        #main_1 , #main_2 , #main_3{
+          width: 30%;
+          margin-left: 3.2%;
+          float: left;
+          height: 100%;
+        }
+        #main_1 p, #main_2 p, #main_3 p{
+         width: 100%;
+         height: 100%;
+         margin-left:0px ;
+        }
+        #main_1 h1, #main_2 h1, #main_3 h1{
+           width: 100%;
+           height: 100%;
+           text-transform: lowercase;
+        }
+        #main_1 a, #main_2 a, #main_3 a{
+          width: 100%;
+          float: right;
+          margin: 0px;
+          
+        }
+        #below{
+          width: 100%;
+          margin-left: 0px;
+          height: 100%;
+        }
+        #below_1{
+          width: 45%;
+          float: left;
+          padding: 0px;
+          margin-left: 0px;
+          float: left;
+          height: 100%;
+        }
+        #below img {
+          width: 45%;
+          height: 95%;
+          float: left;
+          margin-left: 5%;
+        }
+        #below_1 a{
+          width: 100%;
+          float: right;
+          margin: 0px;
+        }
+        #footerone{
+          width: 100%;
+          height: 100%;
+
+        }
+        #footerone div div {
+          width: 20%;
+          margin-left: 5%;
+        }
+        #footerone div div hr {
+          width: 95%;
+        
+        }
+        #footertwo {
+          width: 100%;
+          height: 100%;
+        }
+        #footertwo_1 , #footertwo_2{
+          float: left;
+          margin-left: 0px;
+          margin-right: 0px;
+          width: 50%;
+        }
+      }
+      /* ++++++++++++++++++++++++++++++++++++++++++++++media maxwidth: 601px++++++++++++++++++++++++++++++++++++++++++ */
+      @media screen and (max-width:601px) {
+        *{
+          width: 100%;
+          /* height: 100%; */
+          margin: 0px;
+          padding: 0px;
+          overflow: auto;
+        }
+        #body{
+          width: 100%;
+        }
+        #header{
+          width: 100%;
+          float: left;
+          /* height: 100%; */
+        }
+        #avicii , #navs{
+          width: 100%;
+          margin-left: 0px;
+          text-align: center;
+          margin-right: 0px;
+          /* height: 100%; */
+        }
+        #avicii p,#avicii span , #navs ul {
+          width: 100%;
+          margin-left: 0px;
+          /* height: 100%; */
+        }
+        #navs li {
+            width: 100%;
+            padding: 10px 0px;
+        }
+        #content {
+          width: 100%;
+          height: 100%;
+        }
+        #content_1{
+          width: 100%;
+        }
+        #big_image   {
+          width: 98%;
+          margin: 1%;
+        }
+        #big_image img{
+          width: 94%;
+          margin-left: 0px;
+        }
+        #content_1_1 ,#content_1_2 ,#content_1_3{
+          width: 30% ;
+          float: left;
+          margin-left:3.2% ;
+        }
+        #content_1_1 img ,#content_1_2 img ,#content_1_3  img {
+          width: 85%;
+          margin: 0px;
+        }
+        #main{
+          width: 100%;
+          height: 100%;
+        }
+        #main_1 , #main_2 , #main_3{
+          width: 30%;
+          margin-left: 3.2%;
+          float: left;
+          height: 100%;
+        }
+        #main_1 p, #main_2 p, #main_3 p{
+         width: 100%;
+         height: 100%;
+         margin-left:0px ;
+        }
+        #main_1 h1, #main_2 h1, #main_3 h1{
+           width: 100%;
+           height: 100%;
+           text-transform: lowercase;
+        }
+        #main_1 a, #main_2 a, #main_3 a{
+          width: 100%;
+          float: right;
+          margin: 0px;
+          
+        }
+        #below{
+          width: 100%;
+          margin-left: 0px;
+          height: 100%;
+        }
+        #below_1{
+          width: 45%;
+          float: left;
+          padding: 0px;
+          margin-left: 0px;
+          float: left;
+          height: 100%;
+        }
+        #below img {
+          width: 45%;
+          height: 95%;
+          float: left;
+          margin-left: 5%;
+        }
+        #below_1 a{
+          width: 100%;
+          float: right;
+          margin: 0px;
+        }
+        #footerone{
+          width: 100%;
+          height: 100%;
+
+        }
+        #footerone div div {
+          width: 20%;
+          margin-left: 5%;
+        }
+        #footerone div div hr {
+          width: 95%;
+        
+        }
+        #footertwo {
+          width: 100%;
+          height: 100%;
+        }
+        #footertwo_1 , #footertwo_2{
+          float: left;
+          margin-left: 0px;
+          margin-right: 0px;
+          width: 50%;
+        }
+      }
+        </style>
+    
+</head>
+<body >
+    <div id=header >
+    <div id=avicii >
+ <P >avicii  </P> <span > tim berling</span>
+ </div>
+ <div id=navs>
+     <ul>
+       <li><a href="#" > text link</a></li>
+       <li><a href="#" > text link</a></li>
+       <li><a href="#" > text link</a></li>
+       <li><a href="#" > text link</a></li>
+     </ul> </div>
+</div>
+<div id="content">
+    <div id=content_1>
+    <div id=big_image>
+        <img src="/RWD/basic88_RWD/images/avc.jpeg" alt=" acivii image">
+    </div>
+    <div id=content_1_1>
+        <img id="image1"  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup"> 
+
+    </div>
+    <div id=content_1_2>
+        <img  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup">
+    </div>
+    <div id=content_1_3>
+        <img  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup">
+    </div>
+</div>
+<div id=main >
+   <div id=main_1>
+    <h1 id=heading>Indonectetus facilis</h1>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+    <a href="#">Read More>></a>
+    
+    </div>
+    <div id=main_2>
+      <h1 id=heading>Indonectetus facilis</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+        <a href="#">Read More>></a>
+     
+     </div>
+     <div id=main_3>
+      <h1 id= heading>Indonectetus facilis</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+        <a href="#">Read More>></a>
+      </div>
+     </div>
+   <div id=below>
+
+    <div id=below_1 >
+      <h1 id=heading>Indonectetus facilis</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+    <a href="#">Read More>></a>
+</div>
+       <img  src="/RWD/basic88_RWD/images/avc.jpeg" alt="acivii image">
+   </div>
+   <div id=footerone>
+
+    <div>
+        <div id=footerone_1 >
+            <p >link head</p> <br>
+
+            <a href="#" > list</a> <hr>
+            <a href="#" >more details</a> <hr>
+            <a href="#" >review</a> <hr>
+            <a href="#" >rating</a> <hr>
+        </div>
+        <div id=footerone_2>
+            <p>link head</p> <br>
+
+            <a href="#" > list</a> <hr>
+            <a href="#" >more details</a> <hr>
+            <a href="#" >review</a> <hr>
+            <a href="#" >rating</a> <hr>
+        </div>
+        <div id=footerone_3>
+            <p>link head</p> <br>
+
+            <a href="#" > list</a> <hr>
+            <a href="#" >more details</a> <hr>
+            <a href="#" >review</a> <hr>
+            <a href="#" >rating</a> <hr>
+        </div>
+        <div id=footerone_4>
+            <p style="font-family:'Times New Roman', Times, serif; font-size: 35px; font-weight: bold;">link head</p> <br>
+
+            <a href="#" > list</a> <hr>
+            <a href="#" >more details</a> <hr>
+            <a href="#" >review</a> <hr>
+            <a href="#" >rating</a> <hr>
+        </div>
+    </div>
+
+</div>
+<div id=footertwo>
+  <div id=footertwo_1> all content regarding <a style="text-decoration:none;" href="avicii .com">avicii</a> </div>
+  <div id=footertwo_2>templete by <a style="text-decoration:none ;" href="#">mike</a></div>
+
+</div>
+
+</div>
+
+</body>
+</html>
