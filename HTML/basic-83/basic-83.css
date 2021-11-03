@@ -1,0 +1,295 @@
+  /* Above 768px or global Styles  */
+  header {
+    width: 960px;
+    background-color: #333333;
+    /* background-color:red; */
+    margin: 0 auto;
+    overflow: auto;
+
+}
+nav ul li {
+    /* background-color:thistle; */
+    width: 75px;
+    list-style-type: none;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+nav {
+    clear: both;
+    margin: 10px auto;
+    background-color: #232323;
+    padding: 10px;
+    margin: 20px 0;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+}
+#submit {
+    float: right;
+    width: 75px;
+    padding: 5px;
+    margin-left: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: orange;
+    border: none;
+    font-weight: bold;
+}
+
+
+#search_box {
+   
+    width: 200px;
+    height: 15px;
+    background-color: #232323;
+    border: 1px solid #c0bab6;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    margin-top: 2px;
+}
+
+#form {
+    float: right;
+    margin-top: 10px;
+    width: 295px;
+    box-sizing: border-box;
+}
+
+
+
+/* Below 768px  */
+@media only screen and (max-width: 768px) {
+    ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav ul li {
+        width: 100%;
+        background-color: red;
+        border-bottom: 2px solid white;
+    }
+    header{
+        width: 100%;
+    }
+    #search_box{
+        float: none;
+    }
+    #submit{
+        float: none;
+    }
+    
+    #form{
+        width: 100%;
+        float: none;
+        display: flex;
+        justify-content: center;
+    }
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#row_container_1 {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #333333;
+    padding-top: 20px;
+    overflow: auto;
+}
+
+
+h1,
+h2,
+a {
+    color: #c0bab6;
+}
+
+a {
+    text-decoration: none;
+}
+
+header h1 {
+    float: left;
+    font-weight: normal;
+    font-size: 34px;
+}
+
+header h2 {
+    clear: both;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 2px 2px;
+}
+
+
+
+
+
+nav ul li {
+    text-decoration: none;
+}
+
+#container {
+    /* background-color:red; */
+    width: 960px;
+    margin: 0 auto;
+}
+
+#image {
+    width: 960px;
+    height: 280px;
+    margin: 30px 0;
+
+}
+
+#image img {
+    width: 960px;
+    height: 280px;
+    /*  border: 1px solid rgb(189, 150, 150); */
+    box-sizing: border-box;
+}
+
+section {
+    width: 960px;
+    /* background-color:green; */
+    overflow: hidden;
+}
+
+section #cast_container figure {
+    /* border:1px solid black; */
+    float: left;
+    height: 32px;
+    width: 32px;
+}
+
+section #cast_container figure img {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+section #cast_container .actorname p {
+    box-sizing: border-box;
+    /* border:1px solid yellow; */
+    float: left;
+    padding-top: 12px;
+    margin-left: 5px;
+    width: 82%;
+    font-weight: bold;
+    color: #97979c;
+
+
+}
+
+.cast {
+    width: 220px;
+    height: 150px;
+    /* background-color:violet; */
+    margin-right: 20px;
+    float: left;
+
+}
+
+#cast4 {
+    margin-right: 0;
+}
+
+section #cast_container .para {
+    clear: both;
+    width: 220px;
+    height: 80px;
+    /* background: yellowgreen; */
+    /* border:1px solid orange; */
+    box-sizing: border-box;
+    font-size: 13px;
+    margin-top: 40px !important;
+    color: #97979c;
+}
+
+section #readmore {
+    text-align: right;
+}
+
+#readmore a {
+    text-decoration: none;
+    color: #ffbb1f;
+    font-size: 12px;
+}
+
+section #about p {
+    font-size: 13px;
+    color: #97979c;
+}
+
+section #about {
+    margin-top: 30px;
+}
+
+#about_movie {
+    float: left;
+    width: 700px;
+    height: 150px;
+    /* border:1px solid yellow; */
+    margin-right: 30px;
+
+}
+
+#about_movie h3 {
+    color: #97979c;
+    margin: 10px 0;
+}
+
+#about_movie p {
+    margin: 18px 0px;
+}
+
+#about_character h3 {
+    color: #97979c;
+    margin: 10px 0;
+}
+
+#about_character p {
+    margin: 20px 0px;
+}
+
+#about_character {
+    float: left;
+    width: 200px;
+    height: 150px;
+    /* border:1px solid green; */
+}
+
+footer {
+    margin-top: 30px;
+    width: 100%;
+    height: 100px;
+    background-color: #333333;
+}
+
+#wrapper {
+    width: 960px;
+    padding-top: 25px;
+    margin: 30px auto;
+    /* border: 1px solid yellow; */
+    font-size: 13px;
+    color: #97979c;
+}
+
+#wrapper #par1 {
+    display: inline-block;
+    margin-left: 0px;
+    margin-right: 450px;
+}
+
+#wrapper #par2 {
+    text-align: right;
+    display: inline-block;
+}
