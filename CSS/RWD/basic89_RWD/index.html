@@ -7,19 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> avicii-basic-89 </title>
   <style>
+    *{
+      overflow: auto;
+      box-sizing: border-box;
+      
+    }
     #header {
       width: 100%;
+      height: auto;
       margin: 0 auto;
       overflow: auto;
       background-color: #333333;
     }
 
     #avicii {
-      width: 960px;
+      width: 100%;
       margin: 20px auto;
       overflow: auto;
       height: 100px;
-      padding: 10px 10px;
+      padding: 0px 10px;
+      box-sizing: border-box;
     }
 
     #avicii div {
@@ -44,6 +51,7 @@
       padding: 20px auto;
       float: right;
       margin-top: 0px;
+      width: 500px;
 
     }
 
@@ -53,8 +61,12 @@
 
     .textlink {
       background: black;
-      padding: 20px;
+      padding: 10px 10px;
+      width: 100px;
+      height: 50px;
       margin-top: 0px;
+      text-align: center;
+      align-content: center;
     }
 
     .link {
@@ -69,20 +81,19 @@
       height: 360px;
       margin: 20px auto;
       overflow: both;
-      background-image: url(https://dancingastro-wpengine.netdna-ssl.com/wp-content/uploads/2021/09/Ej0K3HjXsAIn06A.jpg);
-      background-size: 960px 360px;
+    
     }
 
     #big_image {
-      width: 960px;
-      height: 360px;
+      width: 950px;
+      height: 350px;
       margin: auto;
       overflow: both;
     }
 
     #img_row {
       width: 960px;
-      height: 280px;
+      height: 600px;
       margin: 0px auto;
     }
 
@@ -109,10 +120,11 @@
     }
 
     #img_row div p {
-      margin-right: 50px;
+      margin-right: 10px;
       color: grey;
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 14px;
+      width: 230px;
     }
 
     #img_row div a,
@@ -169,11 +181,11 @@
     }
 
     #final {
-      margin: 50px auto;
+      margin: 50px auto 0px auto;
       width: 960px;
       padding-top: 30px;
       clear: both;
-      height: 360px;
+      height: 450px;
     }
 
     .final {
@@ -197,8 +209,8 @@
       margin-top: -339px;
       font-size: 20px;
       text-decoration: none;
-      width: 340px;
-      height: 347.6px;
+      width: 360px;
+      height: 397.6px;
       display: inline;
       float: right;
       padding-left: 0px;
@@ -273,6 +285,171 @@
       float: right;
       font-family: sans-serif;
     }
+ /* ++++++++===================++++++++++++media max-width:768px +++++++++++++++===================++++++++++ */
+ @media screen and (min-width:601px) and (max-width:768px) {
+      * {
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+        box-sizing: border-box;
+      }
+
+      #header {
+        width: 100%;
+      }
+
+      #avicii {
+        width: 100%;
+        padding: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        height: 100%;
+        text-align: center;
+      }
+
+      #avicii div {
+        width:35%;
+        margin-right: 0px;
+      }
+
+      #avicii div span {
+        width: 100%;
+      }
+      #avicii nav{
+        width: 60%;
+      }
+
+      #textlinkbar {
+        width: 100%;
+       margin-left: 0px;
+        height: 100%;
+        margin-top: 20px;
+      }
+      #avicii nav ul {
+        display: inline-block;
+        width: 100%;
+      }
+
+      #avicii ul li {
+        width: 20%;
+      
+      }
+
+      #big_imageblock {
+        width: 100%;
+        height: 100%;
+
+      }
+
+      #big_imageblock img {
+        width: 90%;
+        height: 100%;
+        margin: 10px 5%;
+
+      }
+
+      #img_row {
+        width: 100%;
+        height: 100%;
+        padding: 0%;
+        box-sizing: border-box;
+        margin-top: 0px;
+      }
+     #img_row > div{
+        width: 50%;
+        height: 100%;
+        padding: 0px;
+        margin-left: 0px;
+        box-sizing: border-box;
+        overflow: auto;
+      }
+      #img_row div p{
+        width: 90%;
+        margin-left: 10%;
+        margin-right: 0px;
+        /* height: 100%; */
+      }
+      #img_row a{
+        width: 100%;
+        text-align: end;
+        margin-left: 0%;
+        height: 100%;
+      }
+      #img_row div img{
+        width: 70%;
+        height: 50%;
+        align-self: center;
+        margin-left: 10%;
+        margin-top: 5%;
+      }
+      #img_row div figcaption{
+        width: 90%;
+        /* margin-left: 10%; */
+        margin: 0 0 5px 10% ; 
+      }
+      #second , #four{
+        margin-left: 0%;
+      }
+      figures {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+      }
+      figures img {
+        width: 100%;
+        margin-top: 10%;
+        height: auto;
+      }
+      #middle {
+        margin-left:0px ;
+        margin-right: 0px;
+      }
+      #final  {
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+      }
+      #hz{
+        width: 90%;
+      }
+      #final .final {
+        width: 100%;
+        height: 100%;
+        margin: 0px 0px 0px 0px;
+        margin-right: 0px;
+      }
+      .final div#para{
+        width: 90%;
+        margin-left: 8%;
+      }
+      .final a{
+        text-align:end;
+      }  
+      .final img {
+        width: 80%;
+        margin-left: 10%;
+      }
+      #table{
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      #table ul hr {
+        width: 90%;
+      }
+      footer {
+        width :100%;
+        height: 100%;
+        margin: 0px;
+      }
+      #footer_1 , #footer_2 {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: center;
+      }
+    }
 
     /* ++++++++===================++++++++++++media max-width:601px +++++++++++++++===================++++++++++ */
     @media screen and (max-width:601px) {
@@ -289,7 +466,6 @@
 
       #avicii {
         width: 100%;
-        float: left;
         padding: 0px;
         margin-right: 0px;
         margin-left: 0px;
@@ -299,7 +475,6 @@
 
       #avicii div {
         width: 100%;
-        float: left;
         margin-right: 0px;
       }
 
@@ -309,15 +484,15 @@
 
       #textlinkbar {
         width: 100%;
-        float: left;
-        margin-left: 0px;
+       margin-left: 0px;
         height: 100%;
         margin-top: 20px;
       }
 
       #avicii ul li {
         width: 85%;
-        padding: 15px;
+        height: auto;
+        padding: 2% 0px 2% 0px;
       }
 
       #big_imageblock {
@@ -327,22 +502,24 @@
       }
 
       #big_imageblock img {
-        width: 100%;
+        width: 90%;
         height: 100%;
+        margin: 10px 5%;
 
       }
 
       #img_row {
         width: 100%;
         height: 100%;
-        padding-left: 6%;
+        padding: 5%;
+        box-sizing: border-box;
         margin-top: 0px;
       }
-      #one , #two , #three , #four{
-        width: 45%;
+     #img_row div{
+        width: 90%;
         height: 100%;
-        /* margin: 0px; */
         padding: 0px;
+        margin-left: 0px;
         box-sizing: border-box;
         overflow: auto;
       }
@@ -357,18 +534,70 @@
         margin-left: 0%;
         height: 100%;
       }
-      #img_row img{
-        width: 20%;
-        height: 20%;
-        float: left;
+      #img_row div img{
+        width: 70%;
+        height: 50%;
+        align-self: center;
+        margin-left: 15%;
+        margin-top: 5%;
       }
-      #img_row figcaption{
-        width: 60%;
+      #img_row div figcaption{
+        width: 90%;
         float: left;
-        margin-left: 5%;
+        margin: 0 5% 0px 0px ;
       }
       #second , #four{
+        margin-left: 0%;
+      }
+      figures {
+        width: 100%;
+        height: auto;
+        overflow: auto;
+      }
+      figures img {
+        width: 100%;
+        margin-top: 10%;
+        height: auto;
+      }
+      #middle {
+        margin-left:0px ;
+        margin-right: 0px;
+      }
+      #final , #final div  {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+      #hz{
+        width: 90%;
+      }
+      .final {
+        width: 100%;
+        height: 100%;
+      }
+      .final div#para{
+        width: 90%;
+        margin-left: 8%;
+      }
+      .final a{
+        text-align:end ;
+      }
+      .final img {
+        width: 80%;
         margin-left: 10%;
+      }
+      #table ul hr {
+        width: 90%;
+      }
+      footer {
+        width :100%;
+        margin: 0px;
+      }
+      #footer_1 , #footer_2 {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        text-align: center;
       }
     }
     
@@ -378,7 +607,7 @@
 <body>
   <div id=header>
     <div id=avicii>
-      <div> <span id="sp1">avicii </span> <br><span id="sp2"> tim berling</span></div>
+      <div> <span id="sp1">avicii </span> <br> <span id="sp2"> tim berling</span></div>
       <nav id=textlinkbar>
         <ul>
           <li class="textlink"><a href="#" class="link">one</a></li>

@@ -122,9 +122,9 @@
         }
         
       /* ++++++++++++++++++++++++++++++++++++++++++++++media maxwidth: 768px++++++++++++++++++++++++++++++++++++++++++ */
-      @media screen and (max-width:768px){
+      @media screen and (max-width:768px)and (min-width:601px){
         *{
-          width: 100%;
+          
           margin: 0px;
           padding: 0px;
           overflow: auto;
@@ -134,36 +134,59 @@
         }
         #header{
           width: 100%;
-          float: left;
-          /* height: 100%; */
+          margin: 0px auto;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
         }
-        #avicii , #navs{
-          width: 50%;
-          float: left;
+        #avicii {
+          width: 30%;
           margin-left: 0px;
           text-align: center;
           margin-right: 0px;
-          /* height: 100%; */
+          
+        }
+        #navs{
+          margin-right: 0px;
+          width: 70%;
         }
         #avicii p,#avicii span , #navs ul {
           width: 100%;
           margin-left: 0px;
-          /* height: 100%; */
+        
+        }
+        #navs ul{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
         }
         #navs li{
            background:black;
-            padding: 10px; 
+            padding: 10px 0px; 
             text-decoration: none;
-            display: inline-block;
-            /* float: left; */
-            width: 15%;
+            width: 20%;
+            text-align: center;
+         }
+         #navs li a{
+           width: 100%;
+           font-size: 15px;
          }
         #content {
           width: 100%;
           height: 100%;
+          display: flex;
+          flex-direction: column;
         }
         #content_1{
           width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+        #content_1 #rows {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          
         }
         #big_image   {
           width: 98%;
@@ -175,8 +198,7 @@
         }
         #content_1_1 ,#content_1_2 ,#content_1_3{
           width: 30% ;
-          float: left;
-          margin-left:3.2% ;
+        
         }
         #content_1_1 img ,#content_1_2 img ,#content_1_3  img {
           width: 85%;
@@ -185,12 +207,15 @@
         #main{
           width: 100%;
           height: 100%;
+          display: flex;
+          justify-content: space-between;
         }
         #main_1 , #main_2 , #main_3{
           width: 30%;
-          margin-left: 3.2%;
-          float: left;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
         #main_1 p, #main_2 p, #main_3 p{
          width: 100%;
@@ -204,97 +229,135 @@
         }
         #main_1 a, #main_2 a, #main_3 a{
           width: 100%;
-          float: right;
           margin: 0px;
+          text-align: end;
           
         }
         #below{
           width: 100%;
           margin-left: 0px;
           height: 100%;
+          margin-bottom: 0px;
+          display: flex;
+          justify-content: space-between;
         }
         #below_1{
           width: 45%;
-          float: left;
           padding: 0px;
           margin-left: 0px;
-          float: left;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
         }
         #below img {
           width: 45%;
           height: 95%;
-          float: left;
-          margin-left: 5%;
         }
         #below_1 a{
           width: 100%;
-          float: right;
           margin: 0px;
+          text-align: end;
         }
         #footerone{
           width: 100%;
           height: 100%;
-
+          margin-top: 0px;
+        }
+        #footerone>div {
+          width: 90%;
+          padding: 0px 5%;
+          display: flex;
+          
+          justify-content: space-between;
         }
         #footerone div div {
           width: 20%;
-          margin-left: 5%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-content: center;
+        
         }
         #footerone div div hr {
           width: 95%;
         
         }
         #footertwo {
-          width: 100%;
+          width: 97%;
           height: 100%;
+          padding: 2%;
+          box-sizing: border-box;
+          display: flex;
+          justify-content:space-between;
+          align-content: center;
         }
         #footertwo_1 , #footertwo_2{
-          float: left;
           margin-left: 0px;
           margin-right: 0px;
-          width: 50%;
+          width: 40%;
+          height: 80%;
         }
       }
       /* ++++++++++++++++++++++++++++++++++++++++++++++media maxwidth: 601px++++++++++++++++++++++++++++++++++++++++++ */
       @media screen and (max-width:601px) {
         *{
-          width: 100%;
-          /* height: 100%; */
           margin: 0px;
           padding: 0px;
           overflow: auto;
         }
-        #body{
+        /* #body{
           width: 100%;
-        }
+        } */
         #header{
           width: 100%;
-          float: left;
-          /* height: 100%; */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         #avicii , #navs{
           width: 100%;
           margin-left: 0px;
           text-align: center;
           margin-right: 0px;
-          /* height: 100%; */
         }
-        #avicii p,#avicii span , #navs ul {
+        #navs {
+          margin: 10px 0px 0px 0px;
+        }
+        #avicii p,#avicii span  {
           width: 100%;
           margin-left: 0px;
-          /* height: 100%; */
+        }
+        #navs ul{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          
         }
         #navs li {
             width: 100%;
             padding: 10px 0px;
+            border-bottom: 1px solid white;
         }
         #content {
           width: 100%;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+
         }
         #content_1{
           width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        #rows {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          justify-items: center;
         }
         #big_image   {
           width: 98%;
@@ -305,23 +368,32 @@
           margin-left: 0px;
         }
         #content_1_1 ,#content_1_2 ,#content_1_3{
-          width: 30% ;
-          float: left;
-          margin-left:3.2% ;
+          width: 99% ;
+          justify-content: center;
+          margin-top: 10px;
         }
         #content_1_1 img ,#content_1_2 img ,#content_1_3  img {
           width: 85%;
           margin: 0px;
+          align-self: center;
         }
         #main{
-          width: 100%;
+          width: 90%;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 5%;
         }
         #main_1 , #main_2 , #main_3{
-          width: 30%;
-          margin-left: 3.2%;
-          float: left;
+          width: 90%;
           height: 100%;
+          margin-left: 0px;
+          margin-top: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        
         }
         #main_1 p, #main_2 p, #main_3 p{
          width: 100%;
@@ -335,42 +407,59 @@
         }
         #main_1 a, #main_2 a, #main_3 a{
           width: 100%;
-          float: right;
           margin: 0px;
+          text-align: end;
           
         }
         #below{
           width: 100%;
           margin-left: 0px;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-top: 0px;
+        
         }
         #below_1{
-          width: 45%;
-          float: left;
+          width: 100%;
           padding: 0px;
           margin-left: 0px;
-          float: left;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         #below img {
-          width: 45%;
+          width: 90%;
           height: 95%;
-          float: left;
-          margin-left: 5%;
+          margin-bottom: 0px;
+          
         }
         #below_1 a{
           width: 100%;
-          float: right;
+          text-align: end;
           margin: 0px;
         }
         #footerone{
           width: 100%;
           height: 100%;
-
+          margin-top: 0px;
+          display: flex;
+          flex-direction: column;
+        }
+        #footerone > div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center !important;
+          
         }
         #footerone div div {
-          width: 20%;
-          margin-left: 5%;
+          width: 90%;
+          align-self: center;
+          margin-top: 10px;
+          margin-left: 0px;
         }
         #footerone div div hr {
           width: 95%;
@@ -379,12 +468,16 @@
         #footertwo {
           width: 100%;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         #footertwo_1 , #footertwo_2{
-          float: left;
           margin-left: 0px;
           margin-right: 0px;
-          width: 50%;
+          width: 100%;
+          text-align: center;
+          margin-top: 5px;
         }
       }
         </style>
@@ -408,16 +501,15 @@
     <div id=big_image>
         <img src="/RWD/basic88_RWD/images/avc.jpeg" alt=" acivii image">
     </div>
-    <div id=content_1_1>
-        <img id="image1"  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup"> 
-
-    </div>
-    <div id=content_1_2>
-        <img  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup">
-    </div>
-    <div id=content_1_3>
-        <img  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup">
-    </div>
+    <div id=rows><div id=content_1_1>
+      <img id="image1"  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup"> 
+     </div>
+  <div id=content_1_2>
+      <img  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup">
+  </div>
+  <div id=content_1_3>
+      <img  src="/RWD/basic88_RWD/images/avc.jpeg" alt="wakemeup">
+  </div></div>
 </div>
 <div id=main >
    <div id=main_1>
