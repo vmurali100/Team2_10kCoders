@@ -28,18 +28,20 @@
       text-transform: uppercase;
       font-size: 13px;
     }
-     /* adding over ____________HOVER_________________________________ */
 
-     #header nav ul li:hover  {
-     
-     color: white;
-     background-color: tomato;
-   }
-   #header nav ul li:hover a {
-    
-    color: white;
-    background-color: tomato;
-  }
+    /* adding over ____________HOVER_________________________________ */
+
+    #header nav ul li:hover {
+
+      color: white;
+      background-color: tomato;
+    }
+
+    #header nav ul li:hover a {
+
+      color: white;
+      background-color: tomato;
+    }
 
 
     nav {
@@ -53,6 +55,13 @@
     @media only screen and (max-width:768px) {
       #header {
         width: 100%;
+      }
+
+      #header nav {
+        /* float: none; */
+        display: flex;
+        width: 100%;
+        flex-direction: column;
       }
 
       #hrgroup {
@@ -107,11 +116,12 @@
         width: 100%;
 
       }
-      #container #content{
-        float:none;
 
-      }        
-      
+      #container #content {
+        float: none;
+
+      }
+
 
       #container #homepage #services article img {
         float: left;
@@ -177,7 +187,8 @@
 
 
       }
-      #container #content{
+
+      #container #content {
         width: 100%;
       }
 
@@ -192,10 +203,12 @@
         display: inline;
         width: 100%;
       }
-      #container #right_column nav ul li{
+
+      #container #right_column nav ul li {
         text-align: center;
       }
-      .title{
+
+      .title {
         text-align: center;
       }
 
@@ -232,8 +245,8 @@
         margin: 0;
         padding: auto;
       }
-      
-      
+
+
     }
   </style>
 </head>

@@ -12,6 +12,7 @@
       width: 960px;
       margin: 0 auto;
       overflow: auto;
+      clear: both;
 
     }
 
@@ -37,6 +38,18 @@
     @media only screen and (max-width:768px) {
       #header {
         width: 100%;
+        margin: 0px;
+      }
+
+      #header nav ul {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 20px 0;
+        color: #C0BAB6;
+        background-color: #232323;
+        clear: both;
+        /* display: flex; */
       }
 
       #header nav ul li {
@@ -53,6 +66,11 @@
       .row2 {
         background-color: lightskyblue;
         color: black;
+      }
+
+      #container section {
+        display: flex;
+        flex-wrap: wrap;
       }
 
       #container {
@@ -103,20 +121,24 @@
       .fl_right {
         float: right;
       }
-      #shout{
+
+      #shout {
         width: 100%;
-        
+
       }
-      #container #shout{
+
+      #container #shout {
         width: 100%;
-        text-align:left;
-        display:inline;
+        text-align: left;
+        display: inline;
         color: black;
         border: none;
       }
-      #shout p{
+
+      #shout p {
         background-color: coral;
       }
+
 
     }
   </style>
