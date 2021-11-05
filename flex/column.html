@@ -6,28 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            padding: 0 ;
+            margin: 0%;
+        }
         #container{
             display: flex;
-            background-color: grey;
-            padding: 5px;
+            background:green;
+            width: 100%;
+            height: 100px;
             
         }
-        #box{
-            background-color: red;
-            margin: 10px;
-            padding: 20px;
-            font-size: 20px;
-            text-align: center;
-            color:white;
+        #hgroup{
+            position: relative;
+            margin: 20px;
+            left: 350px;
         }
+        
     </style>
 
+       
 </head>
 <body>
-    <div id="container">
-    <div id="box">1</div>
-    <div id="box">2</div>
-    <div id="box">3</div>
+<div id="container">
+    <div class="box">
+        <div id="hgroup">
+        <h1><a href="#">TEMPLATES</a></h1>
+        <p>templates using flux</p>
+    </div>
+    <nav>
+        <ul>
+            <li>text1</li>
+            <li>text2</li>
+            <li>text3</li>
+            <li>text4</li>
+        </ul>
+    </nav>
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
 </div>
 </body>
 </html>
