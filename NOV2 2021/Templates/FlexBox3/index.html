@@ -1,117 +1,280 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Basic 86</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="styles/layout.css" type="text/css">
-<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <title>Basic 86</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <style>
+    #header nav ul {
+      display: flex;
+    }
+
+    #header nav li {
+      margin-right: 25px;
+      text-transform: uppercase;
+    }
+
+
+    @media only screen and (max-width: 1022px) {
+      .wrapper {
+        width: 100%;
+      }
+
+      #header {
+        width: 100%;
+      }
+
+      #header nav {
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+        ;
+
+      }
+
+      #header #hgroup {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+
+      }
+
+      #header nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+
+      }
+
+      #header nav ul li {
+        margin: 0px;
+        border: 1px solid white;
+        margin: 0px;
+        padding: 3px;
+      }
+
+      #container #slider figure img {
+        width: 100%;
+        height: 300px;
+      }
+
+      #container #slider figure figcaption {
+        box-sizing: border-box;
+        display: block;
+        margin-right: 10px;
+        width: 100%;
+
+        padding: 20px;
+        overflow: hidden;
+        color: #989898;
+        background-color: #DEDEDE;
+        line-height: 1.6em;
+        text-align: center;
+      }
+
+      #container .more {
+        text-align: center;
+      }
+
+      #container #slider {
+        margin-bottom: 0px;
+      }
+
+      .one_third {
+        width: 100%;
+        text-align: center;
+        margin-bottom:5px;
+        border: 1px solid pink;
+        background-color:lightcyan ;
+        box-sizing: border-box;
+      }
+      #container #homepage #services article h2{
+        margin-bottom: 5px;
+      }
+      .one_quarter{
+        width:100%;
+        text-align: center;
+        border:1px solid red;
+        margin-bottom: 5px;
+        padding: 0px;
+      }
+      #container #homepage #services {
+        margin-bottom: 5px;
+}
+#container #homepage #latest article figure img {
+  width: 100%;
+  margin-bottom: 0px;
+  box-sizing: border-box;
+}
+#container #homepage #latest article figure figcaption {
+  background-color: light grey;
+}
+#container #homepage #latest article figure p {
+  margin:0px;
+    }
+
+    @media only screen and (min-width: 1023px) {
+
+      #header,
+      #container,
+      #footer {
+        display: block;
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      #container #slider figure {
+        display: flex;
+      }
+
+      #container #slider figure img {
+        width: 630px;
+        height: 300px;
+      }
+
+      #container #slider figure figcaption {
+        display: block;
+        margin-right: 10px;
+        width: 280px;
+        height: 260px;
+        padding: 20px;
+        overflow: hidden;
+        color: #989898;
+        background-color: #DEDEDE;
+        line-height: 1.6em;
+      }
+
+      .one_third {
+        width: 300px;
+      }
+      .one_quarter{width:225px;}
+
+    }
+  }
+  </style>
 </head>
+
 <body>
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">Basic 86</a></h1>
-      <h2>Free HTML5 Website Template</h2>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li class="last"><a href="#">Text Link</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-<!-- content -->
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <!-- Slider -->
-    <section id="slider" class="clear">
-      <figure><img src="images/demo/630x300.gif" alt="">
-        <figcaption>
-          <h2>Eu justo augue estas</h2>
-          <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat adipiscinia pellentum leo.</p>
-          <footer class="more"><a href="#">Read More &raquo;</a></footer>
-        </figcaption>
-      </figure>
-    </section>
-    <!-- main content -->
-    <div id="homepage">
-      <!-- services area -->
-      <section id="services" class="clear">
-        <!-- article 1 -->
-        <article class="one_third">
-          <h2>Lorum ipsum dolor</h2>
-          <img src="images/demo/80x80.gif" alt="">
-          <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus. Inpede cumst vitae ris tellentesque fring intesquet.</p>
-          <footer class="more"><a href="#">Read More &raquo;</a></footer>
-        </article>
-        <!-- article 2 -->
-        <article class="one_third">
-          <h2>Lorum ipsum dolor</h2>
-          <img src="images/demo/80x80.gif" alt="">
-          <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus. Inpede cumst vitae ris tellentesque fring intesquet.</p>
-          <footer class="more"><a href="#">Read More &raquo;</a></footer>
-        </article>
-        <!-- article 3 -->
-        <article class="one_third lastbox">
-          <h2>Lorum ipsum dolor</h2>
-          <img src="images/demo/80x80.gif" alt="">
-          <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus. Inpede cumst vitae ris tellentesque fring intesquet.</p>
-          <footer class="more"><a href="#">Read More &raquo;</a></footer>
-        </article>
-      </section>
-      <!-- / services area -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- One Quarter -->
-      <section id="latest" class="last clear">
-        <article class="one_quarter">
-          <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
-            <figcaption>
-              <h2>Indonectetus facilis</h2>
-              <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="one_quarter">
-          <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
-            <figcaption>
-              <h2>Indonectetus facilis</h2>
-              <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="one_quarter">
-          <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
-            <figcaption>
-              <h2>Indonectetus facilis</h2>
-              <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="one_quarter lastbox">
-          <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
-            <figcaption>
-              <h2>Indonectetus facilis</h2>
-              <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
-      </section>
-      <!-- / One Quarter -->
-    </div>
-    <!-- / content body -->
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Basic 86</a></h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li class="last"><a href="#">Text Link</a></li>
+        </ul>
+      </nav>
+    </header>
   </div>
-</div>
+  <!-- content -->
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- Slider -->
+      <section id="slider" class="clear">
+        <figure><img src="images/demo/630x300.gif" alt="" style="order: 2;">
+          <figcaption style="order: 1;">
+            <h2>Eu justo augue estas</h2>
+            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis
+              curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat adipiscinia pellentum leo.
+            </p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </figcaption>
+        </figure>
+      </section>
+      <!-- main content -->
+      <div id="homepage">
+        <!-- services area -->
+        <section id="services" class="clear">
+          <!-- article 1 -->
+          <article class="one_third">
+            <h2>Lorum ipsum dolor</h2>
+            <img src="images/demo/80x80.gif" alt="">
+            <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede
+              estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque
+              sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus.
+              Inpede cumst vitae ris tellentesque fring intesquet.</p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </article>
+          <!-- article 2 -->
+          <article class="one_third">
+            <h2>Lorum ipsum dolor</h2>
+            <img src="images/demo/80x80.gif" alt="">
+            <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede
+              estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque
+              sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus.
+              Inpede cumst vitae ris tellentesque fring intesquet.</p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </article>
+          <!-- article 3 -->
+          <article class="one_third lastbox">
+            <h2>Lorum ipsum dolor</h2>
+            <img src="images/demo/80x80.gif" alt="">
+            <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede
+              estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque
+              sed quis orci nulla. Laoremut vitae doloreet condimentumst phasellentes dolor ut a ipsum id consectetus.
+              Inpede cumst vitae ris tellentesque fring intesquet.</p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </article>
+        </section>
+        <!-- / services area -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- One Quarter -->
+        <section id="latest" class="last clear">
+          <article class="one_quarter">
+            <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img src="images/demo/215x100.gif" width="215" height="100" alt="">
+              <figcaption>
+                <h2>Indonectetus facilis</h2>
+                <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+        <!-- / One Quarter -->
+      </div>
+      <!-- / content body -->
+    </div>
+  </div>
 <!-- Footer -->
 <div class="wrapper row3">
   <footer id="footer" class="clear">
@@ -120,4 +283,5 @@
   </footer>
 </div>
 </body>
+
 </html>
