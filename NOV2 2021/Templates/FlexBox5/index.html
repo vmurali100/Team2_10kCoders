@@ -1,30 +1,116 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Basic 88</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="styles/layout.css" type="text/css">
-<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <title>Basic 88</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/layout.css" type="text/css">
+  <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+  <style>
+    @media only screen and (max-width: 1023px){
+      *{
+        box-sizing: border-box;
+      }
+      #header{
+        width:100%;
+        padding-top: 10px;
+      }
+      #header #hgroup{
+        text-align: center;
+      }
+      #header nav{
+        width: 100%;
+        padding:0px;
+      }
+      #header nav ul{
+        display: flex;
+        flex-direction: column;
+        padding:0px;
+        text-align: center;
+        margin-top: 5px;
+      }
+      #header nav ul li{
+        margin:0px;
+        border: 1px solid pink;
+        padding: 3px;
+      }
+      #container #slider img{
+        width:100%
+      }
+      #container{padding:20px 0;}
+      #container section{display:block; width:100%; margin:0 0 10px 0; padding:0;}
+      .one_third{box-sizing: border-box; width: 100%;text-align: center;border:1px solid red;margin-bottom:5px; background-color: lightcyan;}
+      #container #homepage #services article figure img{margin:0 0 0px 0; padding:4px; border:1px solid #D6D6D6;}
+      #container #homepage #services article figure figcaption p{margin:0px;}
+      #container .more{text-align:center;}
+      #container #homepage #intro article figure img{
+        width: 100%;
+      }
+      #container #homepage #intro article figure figcaption{width:100%;text-align: center;border: 1px solid black;margin-top: 5px;}
+      .one_quarter{
+        text-align: center;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+      }
+      #footer section h2.title{ margin:5px 0 5px 0; padding:0; color:#FFFFFF;border: 1px solid goldenrod; background-color:#333333; font-size:12px; font-weight:bold; text-transform:uppercase;}
+      #footer{padding:10px 0; font-size:12px; line-height:1.4em;}
+
+    } 
+     @media only screen and (min-width: 1023px) {
+      #header, #container, #copyright{display:block; width:960px; margin:0 auto;}
+
+    #header{
+      display:flex;
+    }
+    #header #hgroup {
+      margin: 0 0 20px 0;
+    }
+
+    #header nav {
+      display: block;
+      margin: 10px 0 0 200px;
+      padding: 20px 0;
+      color: #C0BAB6;
+      background-color: #232323;
+    }
+    #container{padding:30px 0;}
+    #container section{display:block; width:100%; margin:0 0 30px 0; padding:0;}
+    .one_third, .two_third, .three_third{display:block;  margin:0 20px 0 0;}
+    #container #homepage #services article figure img{margin:0 0 15px 0; padding:4px; border:1px solid #D6D6D6;}
+    #container .more{text-align:right;}
+    #container #homepage #intro article figure {display: flex;}
+    #container #homepage #intro article figure img{box-sizing: border-box; margin:0 0 10px 0; padding:4px; border:1px solid #D6D6D6;}
+    #container #homepage #intro article figure figcaption{ box-sizing: border-box; width:460px;margin-right: 10px ;}
+    .one_quarter, .two_quarter, .three_quarter, .four_quarter{display:block; margin:0 20px 0 0;}
+    #footer{width:100%;padding-left: 180px;display: flex;box-sizing: border-box;}
+    .one_quarter{width:225px;}
+    #footer section h2.title{margin:0 0 25px 0; padding:0; color:#FFFFFF; background-color:#333333; font-size:12px; font-weight:bold; text-transform:uppercase;}
+    #footer{padding:30px 0; font-size:12px; line-height:1.4em;padding-left: 100px;}
+
+  }
+  </style>
 </head>
+
 <body>
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">Basic 88</a></h1>
-      <h2>Free HTML5 Website Template</h2>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li><a href="#">Text Link</a></li>
-        <li class="last"><a href="#">Text Link</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-<!-- content -->
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Basic 88</a></h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li><a href="#">Text Link</a></li>
+          <li class="last"><a href="#">Text Link</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <!-- content -->
 <div class="wrapper row2">
   <div id="container" class="clear">
     <!-- Slider -->
@@ -62,92 +148,93 @@
         </article>
       </section>
       <!-- / Services -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- ########################################################################################## -->
-      <!-- Introduction -->
-      <section id="intro" class="last clear">
-        <article>
-          <figure><img src="images/demo/450x250.gif" width="450" height="250" alt="">
-            <figcaption>
-              <h2>Indonectetus facilis leo nibh</h2>
-              <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
-              <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>.</p>
-              <footer class="more"><a href="#">Read More &raquo;</a></footer>
-            </figcaption>
-          </figure>
-        </article>
-      </section>
-      <!-- / Introduction -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- ########################################################################################## -->
+        <!-- Introduction -->
+        <section id="intro" class="last clear">
+          <article>
+            <figure><img src="images/demo/450x250.gif" width="450" height="250" alt="" style="order: 2;">
+              <figcaption style="order: 1;">
+                <h2>Indonectetus facilis leo nibh</h2>
+                <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+                <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>.</p>
+                <footer class="more"><a href="#">Read More &raquo;</a></footer>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+        <!-- / Introduction -->
+      </div>
+      <!-- / content body -->
     </div>
-    <!-- / content body -->
   </div>
-</div>
-<!-- Footer -->
-<div class="wrapper row3">
-  <div id="footer" class="clear">
-    <!-- Section One -->
-    <section class="one_quarter">
-      <h2 class="title">Link Block</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Lorem ipsum dolor sit</a></li>
-          <li><a href="#">Amet consectetur</a></li>
-          <li><a href="#">Praesent vel sem id</a></li>
-          <li><a href="#">Curabitur hendrerit est</a></li>
-          <li class="last"><a href="#">Sed a nulla urna</a></li>
-        </ul>
-      </nav>
-    </section>
-    <!-- Section Two -->
-    <section class="one_quarter">
-      <h2 class="title">Link Block</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Lorem ipsum dolor sit</a></li>
-          <li><a href="#">Amet consectetur</a></li>
-          <li><a href="#">Praesent vel sem id</a></li>
-          <li><a href="#">Curabitur hendrerit est</a></li>
-          <li class="last"><a href="#">Sed a nulla urna</a></li>
-        </ul>
-      </nav>
-    </section>
-    <!-- Section Three -->
-    <section class="one_quarter">
-      <h2 class="title">Link Block</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Lorem ipsum dolor sit</a></li>
-          <li><a href="#">Amet consectetur</a></li>
-          <li><a href="#">Praesent vel sem id</a></li>
-          <li><a href="#">Curabitur hendrerit est</a></li>
-          <li class="last"><a href="#">Sed a nulla urna</a></li>
-        </ul>
-      </nav>
-    </section>
-    <!-- Section Four -->
-    <section class="one_quarter lastbox">
-      <h2 class="title">Link Block</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Lorem ipsum dolor sit</a></li>
-          <li><a href="#">Amet consectetur</a></li>
-          <li><a href="#">Praesent vel sem id</a></li>
-          <li><a href="#">Curabitur hendrerit est</a></li>
-          <li class="last"><a href="#">Sed a nulla urna</a></li>
-        </ul>
-      </nav>
-    </section>
-    <!-- / Section -->
+  <!-- Footer -->
+  <div class="wrapper row3">
+    <div id="footer" class="clear">
+      <!-- Section One -->
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- Section Two -->
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- Section Three -->
+      <section class="one_quarter">
+        <h2 class="title">Link Block</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Lorem ipsum dolor sit</a></li>
+            <li><a href="#">Amet consectetur</a></li>
+            <li><a href="#">Praesent vel sem id</a></li>
+            <li><a href="#">Curabitur hendrerit est</a></li>
+            <li class="last"><a href="#">Sed a nulla urna</a></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- / Section -->
+    </div>
   </div>
-</div>
-<!-- Copyright -->
-<div class="wrapper row4">
-  <footer id="copyright" class="clear">
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-  </footer>
-</div>
+  <!-- Copyright -->
+  <div class="wrapper row4">
+    <footer id="copyright" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
+      <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    </footer>
+  </div>
+  
 </body>
+
 </html>
