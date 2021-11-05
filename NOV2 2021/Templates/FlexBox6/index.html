@@ -3,8 +3,60 @@
 <head>
 <title>Basic 87</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles/layout.css" type="text/css">
-<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]--><style>
+   @media only screen and (max-width: 1023px){
+     *{
+       box-sizing: border-box;
+     }
+     #header{width:100%;}
+    #header #hgroup{
+     text-align: center;
+     padding-bottom: 10px;
+    }
+    #header nav ul{display: flex;flex-direction: column;text-align: center;padding:0px;}
+   #header nav ul li{border: 1px solid green;}
+   #header{padding:10px 0;}
+   #container{width: 100%;}
+   #container #homepage #latest{display: flex;flex-direction: column;}
+   .one_quarter{width:100%;margin-bottom:15px;}
+   #container #homepage #latest figure img {width: 100%;}
+   #container{padding:10px 0;}
+   #container #shout{width:100%;margin-bottom: 0px;}
+   #container #content{width: 100%;text-align: center;}
+   #container .more{text-align:center;}
+   #container #content #services ul li article figure{border: 1px solid grey;background-color: lavender;}
+   #container #content #services ul li article figure img{margin-top: 5px;}
+   #container #content #services ul li article figure figcaption p{margin:0px}
+   #container #right_column{text-align: center;}
+  #container #right_column h2.title {margin-bottom:0px;border:1px solid black}
+  }
+
+   @media only screen and (min-width: 1023px){
+     #header{display: flex;}
+    #header #hgroup{ margin:0 0 20px 0;}
+    #header nav{display:block;  margin:10px 0 0 180px; padding:20px 0; color:#C0BAB6; background-color:#232323;}
+    #header nav ul{display: flex;}
+    #header nav li{ margin-right:25px; text-transform:uppercase;}
+    #header{padding:20px 0;}
+    #header, #container, #footer{display:block; width:960px; margin:0 auto;}
+    #container #homepage #latest{display: flex;}
+    .one_quarter, .two_quarter, .three_quarter, .four_quarter{display:block; margin:0 20px 0 0;}
+    .one_quarter{width:225px;}
+    #container{padding:30px 0;}
+    #container #myown{display: flex;}
+    #container #content{width:630px; line-height:1.6em;padding-right:40px;}
+    #container #right_column{ width:280px;}
+    #container #content #services ul li article figure{display: flex;}
+    #container #content #services ul li article figure img{width:180px; height:150px; margin:0; padding:4px; border:1px solid #666666;margin-right: 20px;}
+    #container #content #services ul li article figure figcaption{display:block;width:410px;}
+    #container .more{text-align:right;}
+    #container #right_column h2.title{margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #DEDEDE;}
+
+
+   }
+</style>
 </head>
 <body>
 <div class="wrapper row1">
@@ -58,53 +110,55 @@
       </section>
     </div>
     <!-- main content -->
-    <div id="content">
-      <section id="services" class="last clear">
-        <ul>
-          <li>
-            <article class="clear">
-              <figure><img src="images/demo/180x150.gif" alt="">
-                <figcaption>
-                  <h2>Indonectetus facilis leo nibh</h2>
-                  <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
-                  <footer class="more"><a href="#">Read More &raquo;</a></footer>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-          <li class="last">
-            <article class="clear">
-              <figure><img src="images/demo/180x150.gif" alt="">
-                <figcaption>
-                  <h2>Indonectetus facilis leo nibh</h2>
-                  <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>.</p>
-                  <footer class="more"><a href="#">Read More &raquo;</a></footer>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-        </ul>
-      </section>
+    <div id="myown">
+      <div id="content">
+        <section id="services" class="last clear">
+          <ul>
+            <li>
+              <article class="clear">
+                <figure><img src="images/demo/180x150.gif" alt="">
+                  <figcaption>
+                    <h2>Indonectetus facilis leo nibh</h2>
+                    <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+                    <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+            <li class="last">
+              <article class="clear">
+                <figure><img src="images/demo/180x150.gif" alt="">
+                  <figcaption>
+                    <h2>Indonectetus facilis leo nibh</h2>
+                    <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>.</p>
+                    <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <!-- right column -->
+      <aside id="right_column">
+        <h2 class="title">Categories</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Free Website Templates</a></li>
+            <li><a href="#">Free CSS Templates</a></li>
+            <li><a href="#">Free XHTML Templates</a></li>
+            <li><a href="#">Free Web Templates</a></li>
+            <li><a href="#">Free Website Layouts</a></li>
+            <li><a href="#">Free HTML 5 Templates</a></li>
+            <li><a href="#">Free Webdesign Templates</a></li>
+            <li><a href="#">Free FireWorks Templates</a></li>
+            <li><a href="#">Free PNG Templates</a></li>
+            <li class="last"><a href="#">Free Website Themes</a></li>
+          </ul>
+        </nav>
+        <!-- /nav -->
+      </aside>
     </div>
-    <!-- right column -->
-    <aside id="right_column">
-      <h2 class="title">Categories</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Free Website Templates</a></li>
-          <li><a href="#">Free CSS Templates</a></li>
-          <li><a href="#">Free XHTML Templates</a></li>
-          <li><a href="#">Free Web Templates</a></li>
-          <li><a href="#">Free Website Layouts</a></li>
-          <li><a href="#">Free HTML 5 Templates</a></li>
-          <li><a href="#">Free Webdesign Templates</a></li>
-          <li><a href="#">Free FireWorks Templates</a></li>
-          <li><a href="#">Free PNG Templates</a></li>
-          <li class="last"><a href="#">Free Website Themes</a></li>
-        </ul>
-      </nav>
-      <!-- /nav -->
-    </aside>
     <!-- / content body -->
   </div>
 </div>
