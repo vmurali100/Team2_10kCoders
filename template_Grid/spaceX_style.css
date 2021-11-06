@@ -70,13 +70,13 @@
         }
 
         .imgl {
-            float: left;
+            /* float: left; */
             margin: 0 15px 15px 0;
             clear: left;
         }
 
         .imgr {
-            float: right;
+            /* float: right; */
             margin: 0 0 15px 15px;
             clear: right;
         }
@@ -188,7 +188,7 @@
         }
         .one_quarter,.two_quarter,.three_quarter,.four_quarter {
             display: block;
-            float: left;
+            /* float: left; */
             margin: 0 20px 0 0;
         }
         .one_quarter {
@@ -213,7 +213,7 @@
             padding: 20px 0;
         }
         #header #hgroup {
-            float: left;
+            /* float: left; */
             margin: 0 0 20px 0;
         }
         #header #hgroup h1,
@@ -230,13 +230,13 @@
         #header form {
             display: block;
             width: 290px;
-            float: right;
+            /* float: right; */
             margin: 20px 0;
             padding: 0;
         }
         #header form input {
             display: block;
-            float: left;
+            /* float: left; */
             width: 200px;
             margin: 0;
             padding: 5px;
@@ -245,8 +245,8 @@
             border: 1px solid #666666;
         }
         #header form #sf_submit {
-            display: block;
-            float: right;
+           
+            /* float: right; */
             width: 70px;
             font-size: 12px;
             font-weight: bold;
@@ -257,7 +257,10 @@
             cursor: pointer;
         }
         #header nav {
-            display: block;
+            /* grid------------------------------ */
+            display: grid;
+            grid-gap: 5px;
+            position: relative;
             width: 100%;
             margin: 0;
             padding: 20px 0;
@@ -313,7 +316,11 @@
         }
         #container #homepage #services figure {
             display: inline;
-            float: left;
+            /* float: left; */
+        }
+        /* grid------------ */
+        #services{
+            display: grid;
         }
         #container #homepage #services strong {
             float: left;
