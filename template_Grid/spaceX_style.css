@@ -47,11 +47,12 @@
         }
 
         .fl_left {
-            float: left;
+            /* float: left; */
+            
         }
 
         .fl_right {
-            float: right;
+            /* float: right; */
         }
 
         img {
