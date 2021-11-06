@@ -236,7 +236,7 @@ input, textarea, select{
 #header form{
     display:block; 
     width:290px; 
-    float:right; 
+    
     margin:20px 0; 
     padding:0;
 }
@@ -307,7 +307,7 @@ input, textarea, select{
 #container .more{
     text-align:right;
 }
-#container #shout{display:block; width:930px; padding:15px; font-size:16px; line-height:1.8em; color:#979797; background-color:#EEEEEE; text-transform:uppercase; text-align:justify;}
+#container #shout{display:inline-block; width:930px; padding:20px; font-size:20px;  color:#979797;  }
 #container #shout p{margin:0; padding:0;}
 
 #container #homepage{display:block; width:100%; line-height:1.6em;}

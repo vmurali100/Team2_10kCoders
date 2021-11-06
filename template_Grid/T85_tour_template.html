@@ -1,106 +1,266 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Basic 85</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="./tour_template_style.css" type="text/css">
+  <title>Basic 85</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./T85_tour_template_style.css" type="text/css">
+  <style>
+    #header {
+      display: block;
+      width: 960px;
+      margin: 0 auto;
+      overflow: auto;
+
+    }
+
+    #header nav ul li {
+      width: 75px;
+      list-style-type: none;
+      padding: 10px;
+      text-align: center;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    nav {
+      clear: both;
+      margin: 10px auto;
+      background-color: #232323;
+      padding: 10px;
+      margin: 20px 0;
+    }
+
+
+    @media only screen and (max-width:768px) {
+      #header {
+        width: 100%;
+      }
+
+      #header nav {
+        float: none;
+      }
+
+      #header nav ul li {
+        width: 100%;
+        display: inline-block;
+        border-bottom: 3px solid white;
+        margin: 0 auto;
+      }
+
+      nav {
+        padding: 0px;
+      }
+
+      .row2 {
+        background-color: lightskyblue;
+        color: black;
+      }
+
+      #container {
+        width: 100%;
+      }
+
+      #container #slider img {
+        width: 100%;
+      }
+
+      #services {
+        width: 100%;
+
+      }
+
+      .clear {
+        width: 100%;
+      }
+
+      .one_quarter {
+        display: block;
+        width: 100%;
+      }
+
+      .last clear {
+        width: 100%;
+      }
+
+      .three_quarter {
+        width: 100%;
+      }
+
+      .wrapper row3 {
+        width: 100px;
+      }
+
+      #footer {
+        width: 100px;
+        margin: 0 auto;
+        padding: 10px;
+        display: inline;
+      }
+
+      .fl_left {
+        float: left;
+      }
+
+      .fl_right {
+        float: right;
+      }
+
+      #shout {
+        width: 100%;
+
+      }
+
+      #container #shout {
+        width: 100%;
+        text-align: left;
+        display: inline;
+        color: black;
+        border: none;
+      }
+
+      #shout p {
+        background-color: coral;
+      }
+
+      .one_quarter {
+        width: 100%;
+        margin: 0 auto;;
+      }
+
+      .two_quarter {
+        width: 100%;
+      }
+
+      .three_quarter {
+        width: 100%;
+      }
+
+      .four_quarter {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        clear: both;
+      }
+      #latest figure ul li img{
+        width: 100%;
+        height: 300px;
+
+      }
+
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">Tour My India</a></h1>
-      <h2>Fly with your favorite Places</h2>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Destination</a></li>
-        <li><a href="#">Package</a></li>
-        <li><a href="#">Adventure</a></li>
-        <li><a href="#">Trekking</a></li>
-        <li class="last"><a href="#">Weekend</a></li>
-      </ul>
-    </nav>
-  </header>
-</div>
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <section id="shout">
-      <p>Home to some of the surreal hill stations, India is a travel destination you have to visit. Adorned with tranquil ambience, verdant greenery, sprawling desert, beautiful valleys, and dreamy lakes, the hill stations in India make for the best holiday destinations. Undoubtedly, your hill station trip in India will be an experience that shall remain etched in your mind for the rest of your life. </p>
-    </section>
-    <div id="homepage">
-      <section id="latest">
-        <article>
-          <figure>
-            <ul>
-              <li class="one_quarter"><img src="images/taj.jpg" width="215" height="150" alt=""></li>
-              <li class="one_quarter"><img src="images/kerala.jpg" width="215" height="150" alt=""></li>
-              <li class="one_quarter"><img src="images/goa.jpg" width="215" height="150" alt=""></li>
-              <li class="one_quarter lastbox"><img src="images/manali.jpg" width="215" height="150" alt=""></li>
-            </ul>
-            <figcaption><a href="#">View All Our Recent Places &raquo;</a></figcaption>
-          </figure>
-        </article>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">Tour My India</a></h1>
+        <h2>Fly with your favorite Places</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Destination</a></li>
+          <li><a href="#">Package</a></li>
+          <li><a href="#">Adventure</a></li>
+          <li><a href="#">Trekking</a></li>
+          <li class="last"><a href="#">Weekend</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <section id="shout">
+        <p>Home to some of the surreal hill stations, India is a travel destination you have to visit. Adorned with
+          tranquil ambience, verdant greenery, sprawling desert, beautiful valleys, and dreamy lakes, the hill stations
+          in India make for the best holiday destinations. Undoubtedly, your hill station trip in India will be an
+          experience that shall remain etched in your mind for the rest of your life. </p>
       </section>
-      <section id="services" class="last clear">
-        <article class="one_quarter">
-          <figure><img src="images/charan.jpg" width="32" height="32" alt=""></figure>
-          <strong>Ram Charan</strong>
-          <p>I am Travelled Goa. Provided the best accomodation, food and best hotels. I hope, i travel many places in this Company. </p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <article class="one_quarter">
-          <figure><img src="images/pk.jpg" width="32" height="32" alt=""></figure>
-          <strong>Pawan Kalyan</strong>
-          <p>I travelled Kerala . Best Place to enjoy Nature. Best Travellers company. provided Best food, hotels ,accomodation and good time management.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <article class="one_quarter">
-          <figure><img src="images/kajal.jpg" width="32" height="32" alt=""></figure>
-          <strong>Kajal Agarwal</strong>
-          <p>I travelled Taj Mahal. Best place. Best Travellers company. provided Best food, hotels ,accomodation and good time management.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <article class="one_quarter lastbox">
-          <figure><img src="images/vdk.jpg" width="32" height="32" alt=""></figure>
-          <strong>Vijay Devarakonda</strong>
-          <p>I Love travelling. Im almost travelled all places in India. I enjoyed a lot in this trip.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <div class="spacer"></div>
-        <article class="one_quarter">
-          <figure><img src="images/mohan.jpg" width="32" height="32" alt=""></figure>
-          <strong>Mohan Babu</strong>
-          <p>Great travellers. all employers are worked well. Treat us like their bosses. No Worries Mast Enjoyment.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <article class="one_quarter">
-          <figure><img src="images/ntr.jpg" width="32" height="32" alt=""></figure>
-          <strong>NTR</strong>
-          <p>I Love Travelling. Best place. Best Travellers company. provided Best food, hotels ,accomodation and good time management.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <article class="one_quarter">
-          <figure><img src="images/Ram.jpg" width="32" height="32" alt=""></figure>
-          <strong>Ram Pothineni</strong>
-          <p>Enjoyed a lot in this trip. Best travellers. I always prefers Tour My India.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-        <article class="one_quarter lastbox">
-          <figure><img src="images/mahesh.jpg" width="32" height="32" alt=""></figure>
-          <strong>Mahesh Babu</strong>
-          <p>I travelled Kerala . Best Place to enjoy Nature. Best Travellers company. provided Best food, hotels ,accomodation and good time management.</p>
-          <p class="more"><a href="#">Read More &raquo;</a></p>
-        </article>
-      </section>
+      <div id="homepage">
+        <section id="latest">
+          <article>
+            <figure>
+              <ul>
+                <li class="one_quarter"><img src="images/taj.jpg" width="215" height="150" alt=""></li>
+                <li class="one_quarter"><img src="images/kerala.jpg" width="215" height="150" alt=""></li>
+                <li class="one_quarter"><img src="images/goa.jpg" width="215" height="150" alt=""></li>
+                <li class="one_quarter lastbox"><img src="images/manali.jpg" width="215" height="150" alt=""></li>
+              </ul>
+              <figcaption><a href="#">View All Our Recent Places &raquo;</a></figcaption>
+            </figure>
+          </article>
+        </section>
+        <section id="services" class="last clear">
+          <article class="one_quarter">
+            <figure><img src="images/charan.jpg" width="32" height="32" alt=""></figure>
+            <strong>Ram Charan</strong>
+            <p>I am Travelled Goa. Provided the best accomodation, food and best hotels. I hope, i travel many places in
+              this Company. </p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/pk.jpg" width="32" height="32" alt=""></figure>
+            <strong>Pawan Kalyan</strong>
+            <p>I travelled Kerala . Best Place to enjoy Nature. Best Travellers company. provided Best food, hotels
+              ,accomodation and good time management.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/kajal.jpg" width="32" height="32" alt=""></figure>
+            <strong>Kajal Agarwal</strong>
+            <p>I travelled Taj Mahal. Best place. Best Travellers company. provided Best food, hotels ,accomodation and
+              good time management.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img src="images/vdk.jpg" width="32" height="32" alt=""></figure>
+            <strong>Vijay Devarakonda</strong>
+            <p>I Love travelling. Im almost travelled all places in India. I enjoyed a lot in this trip.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <div class="spacer"></div>
+          <article class="one_quarter">
+            <figure><img src="images/mohan.jpg" width="32" height="32" alt=""></figure>
+            <strong>Mohan Babu</strong>
+            <p>Great travellers. all employers are worked well. Treat us like their bosses. No Worries Mast Enjoyment.
+            </p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/ntr.jpg" width="32" height="32" alt=""></figure>
+            <strong>NTR</strong>
+            <p>I Love Travelling. Best place. Best Travellers company. provided Best food, hotels ,accomodation and good
+              time management.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/Ram.jpg" width="32" height="32" alt=""></figure>
+            <strong>Ram Pothineni</strong>
+            <p>Enjoyed a lot in this trip. Best travellers. I always prefers Tour My India.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img src="images/mahesh.jpg" width="32" height="32" alt=""></figure>
+            <strong>Mahesh Babu</strong>
+            <p>I travelled Kerala . Best Place to enjoy Nature. Best Travellers company. provided Best food, hotels
+              ,accomodation and good time management.</p>
+            <p class="more"><a href="#">Read More &raquo;</a></p>
+          </article>
+        </section>
+      </div>
     </div>
   </div>
-</div>
-<div class="wrapper row3">
-  <footer id="footer" class="clear">
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">My Tour India</a></p>
-    <p class="fl_right">Developed by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"> Hari Vardhan</a></p>
-  </footer>
-</div>
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">My Tour India</a></p>
+      <p class="fl_right">Developed by <a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates"> Hari Vardhan</a></p>
+    </footer>
+  </div>
 </body>
+
 </html>
