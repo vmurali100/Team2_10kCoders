@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-<title>Basic 87</title>
+<title>Basic 88</title>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles/layout.css" type="text/css">
 <!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+<style>
+  @media only screen and (max-width: 1023px){
+      *{box-sizing: border-box;}
+      #header{width: 100%;padding:10px 0px;}
+      #header #hgroup{width:100%;text-align: center;}
+      #header nav{ margin:10px 0 0 0; padding:5px 0; color:#C0BAB6; background-color:#232323;}
+      #header nav ul{padding:0px 5px;display: grid;grid-template-rows:auto auto auto auto auto ;}
+      #header nav li{border: 1px solid slateblue;padding:5px;text-align: center;}
+      #container{width: 100%;padding: 10px 0px;}
+      #container #homepage #latest {display: grid;grid-template-rows: auto auto auto auto;}
+      .one_quarter{width:100%;text-align: center; display:block; margin:0 20px 0 0;}
+      #container #homepage #latest figure img{width:100%;}
+      #container #homepage #latest {margin-bottom: 10px;}
+      #container #shout{width:100%;margin-bottom: 0px;border: 1px solid black;}
+      #container #content #services ul li {display: block;width: 100%;margin-bottom:5px;border: 1px solid red;text-align: center;}
+      #container .more {text-align:center;}
+      #container #content #services ul li article figure {text-align: center;}
+      #container #right_column{ width:100%;text-align: center;background: lightsalmon;}
+      #container #right_column h2.title {margin-bottom: 0px;padding-bottom: 5px;margin-top: 5px;background-color: lightgrey;}
+      .row3{width:100%}
+      #footer{width: 100%;}
+
+  }
+
+     @media only screen and (min-width: 1024px) {
+      #header, #container, #footer, #copyright{display:block; width:960px; margin:0 auto;}
+      *{box-sizing: border-box;}
+      #header{display: grid;grid-template-columns: auto auto;}
+      #header #hgroup{ margin:0 0 20px 0;}
+      #header nav{display:block; margin:10px 0 0 0; padding:20px 0; color:#C0BAB6; background-color:#232323;}
+      #header nav ul{display: grid;grid-template-columns: auto auto auto auto auto;}
+      #header nav li{margin-right:25px; text-transform:uppercase;}
+      #container #homepage #latest {display: grid;grid-template-columns: auto auto auto auto;}
+      .one_quarter{display:block; margin:0 20px 0 0;}
+      #container #myown {display: grid;grid-template-columns: auto auto}
+      #container #content{ width:630px; line-height:1.6em;}
+      #container #right_column{ width:280px;}
+     }
+</style>
 </head>
 <body>
 <div class="wrapper row1">
   <header id="header" class="clear">
     <div id="hgroup">
-      <h1><a href="#">Basic 87</a></h1>
+      <h1><a href="#">Basic 88</a></h1>
       <h2>Free HTML5 Website Template</h2>
     </div>
     <nav>
@@ -57,56 +97,58 @@
         <p>Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean elit intesque sed. Facilispede estibulum nulla orna nisl velit elit ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna neque sed quis orci nulla laoremut vitae doloreet condimentumst.</p>
       </section>
     </div>
-    <!-- main content -->
-    <div id="content">
-      <section id="services" class="last clear">
-        <ul>
-          <li>
-            <article class="clear">
-              <figure><img src="images/demo/180x150.gif" alt="">
-                <figcaption>
-                  <h2>Indonectetus facilis leo nibh</h2>
-                  <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
-                  <footer class="more"><a href="#">Read More &raquo;</a></footer>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-          <li class="last">
-            <article class="clear">
-              <figure><img src="images/demo/180x150.gif" alt="">
-                <figcaption>
-                  <h2>Indonectetus facilis leo nibh</h2>
-                  <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>.</p>
-                  <footer class="more"><a href="#">Read More &raquo;</a></footer>
-                </figcaption>
-              </figure>
-            </article>
-          </li>
-        </ul>
-      </section>
+     <!-- main content -->
+     <div id="myown">
+      <div id="content">
+        <section id="services" class="last clear">
+          <ul>
+            <li>
+              <article class="clear">
+                <figure><img src="images/demo/180x150.gif" alt="">
+                  <figcaption>
+                    <h2>Indonectetus facilis leo nibh</h2>
+                    <p>This is a W3C compliant free website template from <a href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a>. For full terms of use of this template please read our <a href="https://www.os-templates.com/template-terms">website template licence</a>.</p>
+                    <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+            <li class="last">
+              <article class="clear">
+                <figure><img src="images/demo/180x150.gif" alt="">
+                  <figcaption>
+                    <h2>Indonectetus facilis leo nibh</h2>
+                    <p>You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files. For more HTML5 templates visit <a href="https://www.os-templates.com/">free website templates</a>.</p>
+                    <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <!-- right column -->
+      <aside id="right_column">
+        <h2 class="title">Categories</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Free Website Templates</a></li>
+            <li><a href="#">Free CSS Templates</a></li>
+            <li><a href="#">Free XHTML Templates</a></li>
+            <li><a href="#">Free Web Templates</a></li>
+            <li><a href="#">Free Website Layouts</a></li>
+            <li><a href="#">Free HTML 5 Templates</a></li>
+            <li><a href="#">Free Webdesign Templates</a></li>
+            <li><a href="#">Free FireWorks Templates</a></li>
+            <li><a href="#">Free PNG Templates</a></li>
+            <li class="last"><a href="#">Free Website Themes</a></li>
+          </ul>
+        </nav>
+        <!-- /nav -->
+      </aside>
+      <!-- / content body -->
     </div>
-    <!-- right column -->
-    <aside id="right_column">
-      <h2 class="title">Categories</h2>
-      <nav>
-        <ul>
-          <li><a href="#">Free Website Templates</a></li>
-          <li><a href="#">Free CSS Templates</a></li>
-          <li><a href="#">Free XHTML Templates</a></li>
-          <li><a href="#">Free Web Templates</a></li>
-          <li><a href="#">Free Website Layouts</a></li>
-          <li><a href="#">Free HTML 5 Templates</a></li>
-          <li><a href="#">Free Webdesign Templates</a></li>
-          <li><a href="#">Free FireWorks Templates</a></li>
-          <li><a href="#">Free PNG Templates</a></li>
-          <li class="last"><a href="#">Free Website Themes</a></li>
-        </ul>
-      </nav>
-      <!-- /nav -->
-    </aside>
-    <!-- / content body -->
-  </div>
+     </div>
 </div>
 <!-- Footer -->
 <div class="wrapper row3">
