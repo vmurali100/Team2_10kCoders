@@ -11,11 +11,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 13px;
   color: #c0bab6;
 }
+
 a {
   text-decoration: none;
   color: #c0bab6;
@@ -24,39 +26,46 @@ a {
 .row1 {
   background-color: #333333;
 }
+
 .wrapper {
   width: 100%;
 }
+
 /* ============================================ Header  ============================================  */
 header {
   width: 960px;
   margin: 0 auto;
   padding: 20px 0;
   background-color: #333333;
-  display:grid;
+  display: grid;
   grid-template-columns: auto auto;
   row-gap: 10px;
 }
+
 /* ============================Title========================== */
 #title h1 {
   font-size: 36px;
   font-weight: normal;
 }
+
 #title h2 {
   font-size: 13px;
   font-weight: normal;
-  color:#c0bab6;
+  color: #c0bab6;
 }
+
 /* ============================Form========================== */
 header form {
-  display:grid;
-  grid-template-columns:auto auto;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: end;
   align-content: center;
 }
+
 header form fieldset {
   border: none;
 }
+
 header form #searchbox {
   width: 200px;
   padding: 5px;
@@ -66,6 +75,7 @@ header form #searchbox {
   font-size: 12px;
   color: white;
 }
+
 header form #submit {
   align-content: center;
   width: 70px;
@@ -77,23 +87,27 @@ header form #submit {
   cursor: pointer;
   padding: 5px;
 }
+
 /* ============================Nav========================== */
 nav {
-  grid-area:2/1/2/3;
+  grid-area: 2/1/2/3;
   background-color: #232323;
   padding: 20px 0;
 }
+
 nav ul {
   list-style: none;
   padding: 0 20px;
-  display:grid;
-  grid-template-columns: repeat(5,1fr);
-  justify-items:center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
 }
+
 nav ul li {
   text-transform: uppercase;
-  
+
 }
+
 /* ================================================================================================================= */
 .container {
   /* width: 960px;
@@ -101,17 +115,19 @@ nav ul li {
   overflow: hidden;
   padding: 30px 0;
   color: #979797;
-  display:grid;
-  grid-template-columns: repeat(auto-fill,minmax(600px,960px));
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 960px));
   place-content: center;
 
 
 
 }
+
 /* ============================ Section 1 ========================== */
 .section1 {
   margin-bottom: 50px;
 }
+
 .section1 img {
   width: 100%;
   height: auto;
@@ -122,7 +138,7 @@ nav ul li {
   width: 100%;
   line-height: 1.6em;
   /* overflow: auto; */
-  display:grid;
+  display: grid;
 }
 
 /*---------------Section 2 ----------------- */
@@ -130,47 +146,55 @@ nav ul li {
   color: #979797;
   margin-bottom: 30px;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: start;
   column-gap: 10px;
 }
+
 .section2 article {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
-  align-items: end ;
+  align-items: end;
   column-gap: 10px;
 }
+
 .section2 article figure img {
   height: 32px;
   width: 32px;
 }
+
 .section2 article strong {
   font-size: 14px;
   font-weight: bold;
 }
+
 .section2 article p {
   grid-area: 2/1/2/3;
-  width:100%;
+  width: 100%;
   padding-top: 5px;
 }
+
 .readmore {
   grid-area: 3/1/3/3;
   text-align: right;
 }
+
 .readmore a {
   color: #ff9900;
   background-color: #ffffff;
 }
+
 /*---------------Section 2 ----------------- */
 .section3 {
   line-height: 1.6em;
   width: 100%;
   color: #979797;
   display: grid;
-  grid-template-columns: 2fr 1fr ;
+  grid-template-columns: 2fr 1fr;
   column-gap: 20px;
 }
+
 .section3 h2 {
   font-weight: bold;
   font-size: 16px;
@@ -178,20 +202,25 @@ nav ul li {
   line-height: normal;
   text-transform: uppercase;
 }
+
 .section3 p {
   margin: 13px 0;
-} 
+}
+
 /* ============================================ Footer ============================================  */
 .row3 {
   background-color: #232323;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 960px));
+  place-content: center;
 }
+
 footer {
-  width: 960px;
-  margin: 0 auto;
-  display:grid;
+  display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
 }
+
 footer p {
   font-size: 13px;
   padding: 20px 0;
@@ -206,108 +235,114 @@ footer p {
     padding: 0;
     margin-right: 0;
   }
+
   header {
-    display:block;
+    display: block;
     width: 100%;
     text-align: center;
   }
+
   header nav {
     padding: 0;
   }
+
   header nav ul {
     display: block;
     padding: 0;
   }
+
   header nav ul li {
     border: 3px solid white;
     margin: 10px;
     padding: 10px;
   }
+
   header nav ul li {
     font-weight: bold;
   }
+
   header #title {
     margin-bottom: 10px;
   }
+
   header form {
-    width:100%;
+    width: 100%;
     margin: 0;
     margin-bottom: 10px;
-    display:block;
+    display: block;
   }
 
   .container {
-    display:block;
-    width: 100%;
+    display: block;
     padding: 0 10px;
   }
+
   .section2 {
-    grid-template-columns:auto;
+    grid-template-columns: auto;
   }
+
   .section3 {
     grid-template-columns: auto;
   }
-  footer 
-  {
-    grid-template-columns:auto;
+
+  .row3 {
+    display: block;
+  }
+
+  footer {
+    grid-template-columns: auto;
+    place-content: center;
+    place-items: center;
   }
 }
+
 /* ============================================ Tablet ============================================  */
-@media only screen and (min-width:601px) and (max-width:768px){
-    * {
-        box-sizing: border-box;
-        padding: 0;
-        margin-right: 0;
-      }
-      header {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-      }
-      header nav {
-        padding: 0;
-      }
-      header nav ul {
-        padding: 0;
-      }
-      header nav ul li {
-        margin: 10px;
-        padding: 10px;
-      }
-      header nav ul li {
-        font-weight: bold;
-      }
-      header #title {
-        margin-bottom: 10px;
-      }
-      header form {
-        width:100%;
-        margin: 0;
-        margin-bottom: 10px;
-      }
-      .container {
-        width: 100%;
-        padding: 20px 30px;
-      }
-      .section2 {
-      }
-      .section2 article {
-        width: 50%;
-        margin: 0;
-        padding:10px;
-      }
-      .section3 {
-        flex-direction: column;
-      }
-      .section3 article {
-        width: 100%;
-      }
-      .section3 aside {
-        width: 100%;
-      }
-      footer {
-        width: 100%;
-        padding:0 30px;
-      }
-    }
+@media only screen and (min-width:601px) and (max-width:768px) {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin-right: 0;
+  }
+
+  header {
+    width: 100%;
+    grid-template-columns: auto;
+    text-align: center;
+  }
+
+  header form {
+    grid-area: 2/1;
+    margin: 0;
+    place-content: center;
+  }
+
+  header nav {
+    grid-area: 3/1;
+  }
+
+  header nav ul {
+    padding: 0;
+  }
+
+  header nav ul li {
+    font-weight: bold;
+  }
+
+  .container {
+    padding: 20px 30px;
+  }
+
+  .section2 {
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+
+  .section2 article {
+    padding: 10px;
+  }
+
+  footer {
+    padding: 0 30px;
+  }
+}
 }
