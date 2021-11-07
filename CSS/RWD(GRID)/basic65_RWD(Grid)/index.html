@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skrillex 65</title>
+    <style>
+        * {
+            overflow: auto;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration-color: grey;
+        }
+
+        body {
+            background-color: rgb(114, 114, 114);
+            /* width: auto;
+            height: auto; */
+            margin: 0px 0px 0px 0px;
+        }
+
+        #parent {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 17% 22% 22% 22% 17%;
+            grid-template-rows: 7% 89% 4%;
+        }
+
+        #heading {
+            height: auto;
+            grid-column: 1/6;
+            grid-row: 1/2;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 100%;
+            justify-items: center;
+            margin: 0px auto;
+            background-color: black;
+            border: blueviolet;
+            color: grey;
+            padding: 0px 0px 0px 0px;
+            box-sizing: border-box;
+        }
+
+        header main span {
+            font-size: 23px;
+            text-transform: uppercase;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+
+        header nav {
+            width: 100%;
+            height: 100%;
+            text-transform: uppercase;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: grey;
+            margin-right: 15px;
+
+        }
+
+        header nav ul {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 16% 16% 16% 16% 16% auto;
+            grid-template-rows: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            margin-top: 25px;
+        }
+
+        #listing li {
+            font-size: 20px;
+            margin-left: 0px;
+        }
+
+        header main {
+            height: 90%;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            padding-top: 1%;
+            justify-items: center;
+        }
+
+        #contact {
+            grid-column: 5/7;
+            grid-row: 1/2;
+        }
+
+        #listing a {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: grey;
+            text-decoration: none;
+        }
+
+        #listing a:hover {
+            color: orange;
+        }
+
+        section {
+            grid-column: 2/5;
+            grid-row: 2/3;
+            height: 897px;
+            background-color: whitesmoke;
+            width: 960px;
+            margin: 0px auto;
+            clear: both;
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-template-rows: 100%;
+        }
+
+        #left {
+            margin-left: 2%;
+            margin-top: 0px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 25% 2% 35% 37%;
+        }
+
+        #art1 {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 16% 7% 8% 35% 24% 10%;
+        }
+
+        #art2 {
+            height: 100%;
+            display: grid;
+            margin-bottom: 0px;
+            grid-template-columns: 100%;
+            grid-template-rows: 13% 6% 6% 15% 35% 17% 8%;
+        }
+
+        #art3 {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+            padding: 0px;
+        }
+
+        #art1 {
+            width: 588px;
+        }
+
+        #art2 ul {
+            margin-bottom: 0px;
+        }
+
+        #sp1,
+        figcaption {
+            font-size: 25px;
+        }
+
+        #art1 span,
+        #art2 span,
+        figcaption {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: grey;
+            text-decoration: none;
+
+        }
+
+        .sp2 {
+            font-size: 10px;
+            color: grey;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #art1 p,
+        #art2 p,
+        #art3 span {
+            font-size: 13px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: grey;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        #art1 p a {
+            font-size: 15px;
+            text-decoration: none;
+            color: #FF9900;
+        }
+
+        #aa {
+            font-size: 15px;
+            text-decoration: none;
+            color: #FF9900;
+        }
+
+        #art2 li {
+            font-size: 13px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: grey;
+            list-style: decimal;
+        }
+
+        #art3 img {
+            width: 269px;
+            height: 100px;
+            border: 5px solid rgb(201, 163, 163);
+        }
+
+        #art3 summary {
+            width: 100%;
+            overflow: auto;
+            margin-left: 0px;
+            height: 100%;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 40% 12% 38% 3% 7%;
+        }
+
+        #art3 summary figcaption,
+        #art3 summary figcaption p,
+        #art3 summary a {
+            width: 100%;
+            height: 100%;
+            margin: 0px 0px 0px 0px;
+        }
+
+        #art3 summary span {
+            width: 80%;
+        }
+
+        #art3 summary a {
+            text-align: end;
+        }
+
+        #sum2 {
+            margin-left: 30px;
+        }
+
+        hr {
+            line-break: dotted;
+        }
+
+        /* ================================================done=========================================  */
+        #right {
+            margin: 10px 0px 0px 0px;
+            margin-right: 0px;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 31.5% 31.5% auto;
+
+
+        }
+
+        #right summary {
+            width: 90%;
+            padding-right: 8%;
+            box-sizing: border-box;
+            height: auto;
+        }
+
+        #right summary ul {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        #sm1 a,
+        #sm2 a,
+        #sm3 a {
+            font-size: 15px;
+            text-decoration: none;
+            color: grey;
+        }
+
+        #right a:hover {
+            color: #FF9900;
+        }
+
+        #right summary p {
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: grey;
+            margin-bottom: 0px;
+
+        }
+
+        #sm1,
+        #sm2,
+        #sm3 {
+            margin-top: 0px;
+            height: 100%;
+        }
+
+        footer {
+            grid-column: 1/6;
+            grid-row: 3/4;
+            width: 960px;
+            height: 100%;
+            margin: 0px auto;
+            background-color: black;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100%;
+            justify-items: center;
+        }
+
+        footer p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            Color: grey;
+            text-decoration: none;
+            float: left;
+        }
+
+        footer a {
+            color: grey;
+            text-decoration: none;
+        }
+
+        footer span {
+            float: right;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: grey;
+            text-decoration: none;
+        }
+
+        #img2 {
+            opacity: 0.5;
+        }
+
+        #img2:hover {
+            opacity: 1;
+        }
+
+        #img1 {
+            opacity: 1;
+        }
+
+        #img1:hover {
+            opacity: 0.7;
+        }
+
+        /*            +++++++++++++++++++++++++++++++++++++++++++=max width:601px ++++++++++++++++++++++++ */
+        @media screen and (max-width:601px) {
+            * {
+                box-sizing: border-box;
+                overflow: auto;
+                width: 100%;
+            }
+
+            #parent {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 17% 79% 4%;
+                margin-left: 0px;
+            }
+
+            #heading {
+                height: auto;
+                width: 99%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 30% 70%;
+                justify-items: center;
+                margin: 0px auto;
+                background-color: black;
+                border: blueviolet;
+                color: grey;
+                padding: 0px 0px 0px 0px;
+                box-sizing: border-box;
+            }
+
+            header main span {
+                font-size: 23px;
+                text-transform: uppercase;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            }
+
+            header nav {
+                width: 90%;
+                height: 100%;
+                text-transform: uppercase;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: grey;
+                margin-right: 0px;
+                grid-column: 1/2;
+                grid-row: 2/3;
+
+            }
+
+            header nav ul {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+                box-sizing: border-box;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                padding-left: 0px;
+            }
+
+            #listing li {
+                font-size: 20px;
+                margin-left: 0px;
+                text-align: center;
+            }
+
+            header main {
+                height: 90%;
+                width: 90%;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                padding-top: 0%;
+                text-align: center;
+            }
+
+            #home {
+                width: 100%;
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            #home {
+                width: 100%;
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            #about {
+                width: 100%;
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+
+            #songs {
+                width: 100%;
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+
+            #videos {
+                width: 100%;
+                grid-column: 1/2;
+                grid-row: 4/5;
+            }
+
+            #contact {
+                grid-column: 1/2;
+                grid-row: 5/6;
+            }
+
+            #listing a {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: grey;
+                text-decoration: none;
+            }
+
+            #listing a:hover {
+                color: orange;
+            }
+
+            section {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                height: auto;
+                background-color: whitesmoke;
+                width: 100%;
+                margin: 0px auto;
+                clear: both;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 60% 40%;
+            }
+
+            #left {
+                margin-left: 0%;
+                margin-top: 0%;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 23% 1% 34% 42%;
+            }
+
+            #art1 {
+                height: 100%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 18% 7% 8% 35% 22% 10%;
+            }
+
+            #art2 {
+                height: 100%;
+                display: grid;
+                margin-bottom: 0px;
+                grid-template-columns: 100%;
+                grid-template-rows: 13% 6% 6% 13% 33% 19% 10%;
+            }
+
+            #art3 {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 50% 50%;
+                padding: 0px;
+            }
+
+            #art2 ul {
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+
+            #sp1,
+            figcaption {
+                font-size: 25px;
+            }
+
+            #sp1,
+            .sp2,
+            article>a,
+            #art3 summary figcaption {
+                width: 60%;
+            }
+
+            #art1 span,
+            #art2 span,
+            figcaption {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: grey;
+                text-decoration: none;
+                width: 100%;
+
+            }
+
+            .sp2 {
+                font-size: 10px;
+                color: grey;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            #art1 p,
+            #art2 p,
+            #art3 span {
+                font-size: 10px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: grey;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                width: 90%;
+            }
+
+            #art1 p a {
+                font-size: 15px;
+                text-decoration: none;
+                color: #FF9900;
+            }
+
+            #aa {
+                font-size: 15px;
+                text-decoration: none;
+                color: #FF9900;
+            }
+
+            #art2 li {
+                font-size: 13px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: grey;
+                list-style: decimal;
+            }
+
+            #art3 img {
+                width: 70%;
+                height: 80%;
+                border: 5px solid rgb(201, 163, 163);
+            }
+
+            #art3 summary {
+                width: 100%;
+                overflow: auto;
+                margin-left: 0px;
+                height: 100%;
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 33% 20% 34% 1% 12%;
+            }
+
+            #art3 summary figcaption p,
+            #art3 summary a {
+                width: 80%;
+                height: 100%;
+                margin: 0px 0px 0px 0px;
+            }
+
+            #art3 summary span {
+                width: 80%;
+            }
+
+            #art3 summary a {
+                text-align: end;
+            }
+
+            /* #sum2 {
+            margin-left: 30px;
+        } */
+
+            hr {
+                line-break: dotted;
+            }
+
+            /* ================================================done=========================================  */
+            #right {
+                margin: 0px 0px 0px 0px;
+                margin-right: 0px;
+                grid-column: 1/2;
+                grid-row: 2/3;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 30% 30% auto;
+
+
+            }
+
+            #right summary {
+                width: 90%;
+                padding-right: 8%;
+                box-sizing: border-box;
+                height: auto;
+            }
+
+            #right summary ul {
+                margin-bottom: 0px;
+                margin-top: 0px;
+                font-size: 5px;
+            }
+
+            #right summary ul a {
+                margin-bottom: 0px;
+                margin-top: 0px;
+
+            }
+
+            #right summary ul hr {
+                margin: 2px 0px;
+            }
+
+            #sm1 a,
+            #sm2 a,
+            #sm3 a {
+                text-decoration: none;
+                color: grey;
+            }
+
+            #right a:hover {
+                color: #FF9900;
+            }
+
+            #right summary p {
+                font-size: 20px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: grey;
+                margin-bottom: 0px;
+
+            }
+
+            #sm1,
+            #sm2,
+            #sm3 {
+                margin-top: 0px;
+                height: 100%;
+            }
+
+            #sm1 p,
+            #sm2 p,
+            #sm3 p {
+                margin-top: 10px;
+            }
+
+            footer {
+                grid-column: 1/6;
+                grid-row: 3/4;
+                width: 100%;
+                height: 100%;
+                margin: 0px auto;
+                background-color: black;
+                padding: 1% 2%;
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 65% 35%;
+                justify-items: center;
+            }
+
+            footer p {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                Color: grey;
+                text-decoration: none;
+
+            }
+
+            footer a {
+                color: grey;
+                text-decoration: none;
+            }
+
+            footer span {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                color: grey;
+                text-decoration: none;
+            }
+
+            #img2 {
+                opacity: 0.5;
+            }
+
+            #img2:hover {
+                opacity: 1;
+            }
+
+            #img1 {
+                opacity: 1;
+            }
+
+            #img1:hover {
+                opacity: 0.7;
+            }
+        }
+
+        /* ++++++++++++++++++++++++++++++++++++++++++++++++ max width-768px ++++++++++++++++++++++++++++++++++++++++++++ */
+
+        @media screen and (min-width:601px) and (max-width:768px) {
+            * {
+                box-sizing: border-box;
+                overflow: auto;
+                width: 100%;
+            }
+
+            #parent {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 7% 87% 6%;
+                margin-left: 0px;
+            }
+
+            #heading {
+                height: auto;
+                width: 99%;
+                display: grid;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 100%;
+                justify-items: center;
+                margin: 0px auto;
+                background-color: black;
+                border: blueviolet;
+                color: grey;
+                padding: 1% 0px 0px 0px;
+                box-sizing: border-box;
+            }
+
+            header main #skrillex {
+                font-size: 27px;
+                text-transform: uppercase;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            header main #sony {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+
+            header nav {
+                width: 90%;
+                height: 90%;
+                text-transform: uppercase;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: grey;
+                margin-right: 0px;
+                padding-top: 2%;
+                grid-row: 1/2;
+                grid-column: 2/3;
+
+            }
+
+            header nav ul {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 18% 18% 20% 20% auto;
+                grid-template-rows: 100%;
+                box-sizing: border-box;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                padding-left: 0px;
+            }
+
+            #listing li {
+                font-size: 20px;
+                margin-left: 0px;
+                text-align: center;
+            }
+
+            header main {
+                height: 90%;
+                width: 90%;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                padding-top: 0%;
+                text-align: center;
+            }
+
+            #home {
+                width: 100%;
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            #about {
+                width: 100%;
+                grid-row: 1/2;
+                grid-column: 2/3;
+            }
+
+            #songs {
+                width: 100%;
+                grid-row: 1/2;
+                grid-column: 3/4;
+            }
+
+            #videos {
+                width: 100%;
+                grid-row: 1/2;
+                grid-column: 4/5;
+            }
+
+            #contact {
+                grid-row: 1/2;
+                grid-column: 5/6;
+            }
+
+            #listing a {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: grey;
+                text-decoration: none;
+            }
+
+            #listing a:hover {
+                color: orange;
+            }
+
+            section {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                height: auto;
+                background-color: whitesmoke;
+                width: 100%;
+                margin: 0px auto;
+                clear: both;
+                display: grid;
+                grid-template-columns: 65% 35%;
+                grid-template-rows: 100%;
+            }
+
+            #left {
+                margin-left: 0%;
+                margin-top: 0%;
+                grid-column: 1/2;
+                grid-row: 1/2;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 23% 1% 34% 42%;
+            }
+
+            #art1 {
+                height: 100%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 18% 7% 8% 35% 22% 10%;
+            }
+
+            #art2 {
+                height: 100%;
+                display: grid;
+                margin-bottom: 0px;
+                grid-template-columns: 100%;
+                grid-template-rows: 13% 6% 6% 13% 33% 19% 10%;
+            }
+
+            #art3 {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 50% 50%;
+                padding: 0px;
+            }
+
+            #art2 ul {
+                margin-bottom: 0px;
+                margin-top: 0px;
+            }
+
+            #sp1,
+            figcaption {
+                font-size: 25px;
+            }
+
+            #sp1,
+            .sp2,
+            article>a,
+            #art3 summary figcaption {
+                width: 60%;
+            }
+
+            #art1 span,
+            #art2 span,
+            figcaption {
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                color: grey;
+                text-decoration: none;
+                width: 100%;
+
+            }
+
+            .sp2 {
+                font-size: 10px;
+                color: grey;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            #art1 p,
+            #art2 p,
+            #art3 span {
+                font-size: 10px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: grey;
+                margin-bottom: 0px;
+                margin-top: 0px;
+                width: 90%;
+            }
+
+            #art1 p a {
+                font-size: 15px;
+                text-decoration: none;
+                color: #FF9900;
+            }
+
+            #aa {
+                font-size: 15px;
+                text-decoration: none;
+                color: #FF9900;
+            }
+
+            #art2 li {
+                font-size: 13px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: grey;
+                list-style: decimal;
+            }
+
+            #art3 img {
+                width: 70%;
+                height: 80%;
+                border: 5px solid rgb(201, 163, 163);
+            }
+
+            #art3 summary {
+                width: 100%;
+                overflow: auto;
+                margin-left: 0px;
+                height: 100%;
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 33% 20% 34% 1% 12%;
+            }
+
+            #art3 summary figcaption p,
+            #art3 summary a {
+                width: 80%;
+                height: 100%;
+                margin: 0px 0px 0px 0px;
+            }
+
+            #art3 summary span {
+                width: 80%;
+            }
+
+            #art3 summary a {
+                text-align: end;
+            }
+
+            /* #sum2 {
+            margin-left: 30px;
+        } */
+
+            hr {
+                line-break: dotted;
+            }
+
+            /* ================================================done=========================================  */
+            #right {
+                margin: 0px 0px 0px 0px;
+                margin-right: 0px;
+                grid-row: 1/2;
+                grid-column: 2/3;
+                display: grid;
+                grid-template-columns: 100%;
+                grid-template-rows: 30% 30% auto;
+
+
+            }
+
+            #right summary {
+                width: 90%;
+                padding-right: 8%;
+                box-sizing: border-box;
+                height: auto;
+            }
+
+            #right summary ul {
+                margin-bottom: 0px;
+                margin-top: 0px;
+                font-size: 5px;
+            }
+
+            #right summary ul a {
+                margin-bottom: 0px;
+                margin-top: 0px;
+
+            }
+
+            #right summary ul hr {
+                margin: 2px 0px;
+            }
+
+            #sm1 a,
+            #sm2 a,
+            #sm3 a {
+                text-decoration: none;
+                color: grey;
+            }
+
+            #right a:hover {
+                color: #FF9900;
+            }
+
+            #right summary p {
+                font-size: 20px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: grey;
+                margin-bottom: 0px;
+
+            }
+
+            #sm1,
+            #sm2,
+            #sm3 {
+                margin-top: 0px;
+                height: 100%;
+            }
+
+            #sm1 p,
+            #sm2 p,
+            #sm3 p {
+                margin-top: 10px;
+            }
+
+            footer {
+                grid-column: 1/6;
+                grid-row: 3/4;
+                width: 100%;
+                height: 100%;
+                margin: 0px auto;
+                background-color: black;
+                padding: 1% 2%;
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: 60% auto 30%;
+                grid-template-rows: 100%;
+                justify-items: center;
+            }
+
+            footer p {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                Color: grey;
+                text-decoration: none;
+
+            }
+
+            footer a {
+                color: grey;
+                text-decoration: none;
+            }
+
+            footer span {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                color: grey;
+                text-decoration: none;
+                grid-column: 3/4;
+            }
+
+            #img2 {
+                opacity: 0.5;
+            }
+
+            #img2:hover {
+                opacity: 1;
+            }
+
+            #img1 {
+                opacity: 1;
+            }
+
+            #img1:hover {
+                opacity: 0.7;
+            }
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div id=parent>
+        <header id=heading class="col-3 col-s-3">
+            <main>
+                <span id=skrillex> skrillex </span> <br> <span id=sony> Sonny John Moore</span>
+            </main>
+            <nav>
+                <ul id=listing>
+                    <li id=home> <a href="#"> HOME</a></li>
+                    <li id=about> <a href="https://g.co/kgs/nmZgku">ABOUT</a> </li>
+                    <li id=songs> <a
+                            href="https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX?si=FQyFLhg6Rduit4cHlR6lGQ&dl_branch=1">SONGS</a>
+                    </li>
+                    <li id=videos> <a href="https://www.youtube.com/c/Skrillex/videos">VIDEOS</a> </li>
+                    <li id=contact> <a href="https://www.skrillex.com/">CONTACT</a> </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <div id=left>
+                <article id=art1>
+                    <span id=sp1>Skrillex</span>
+                    <address class="sp2">Sonny John Moore</address>
+                    <address class="sp2">15 January 1988 (age 33 years)</address>
+                    <p>Skrillex became EDM's everykid Generational <a href="#">Connector</a>, providing a bridge back to
+                        the great (primarily white) youth-culture movements of the 1990s and 2000s – from goth to
+                        industrial to alternative <a href="#">rock to electronica </a> to emo. </p>
+                    <p>Sonny John Moore, known professionally as Skrillex, is an American DJ, record producer, musician,
+                        <a href="#">singer and songwriter.</a>
+                    </p>
+                    <a id=aa href="#">Read More>></a>
+                </article> <br>
+                <article id=art2>
+                    <span id=sp1>Skrillex</span>
+                    <address class="sp2">Sonny John Moore</address>
+                    <address class="sp2">15 January 1988 (age 33 years)</address>
+                    <p>Sonny John Moore, known professionally as Skrillex, is an American DJ, record producer, musician,
+                        singer and songwriter.</p>
+                    <ul>
+                        <li>Rock n' Roll (Will Take You to the Mountain)</li>
+                        <li>Scary Monsters and Nice Sprites</li>
+                        <li>Kill EVERYBODY</li>
+                        <li>All I Ask of You</li>
+                        <li>Scatta - (featuring Bare Noize / Foreign Beggars)</li>
+                    </ul>
+                    <p>American record producer, DJ, singer and songwriter Skrillex has released one studio album, seven
+                        extended plays, 44 singles (including nine as a featured artist), and 23 music videos.</p>
+                    <a id=aa href="#">Read More>></a>
+                </article>
+                <article id=art3>
+                    <summary>
+                        <img id=img1 src="https://i.redd.it/02u4lh3bc0251.jpg" alt="skrillex">
+                        <figcaption>
+                            <p>Sonny John Moore</p>
+                        </figcaption>
+                        <span>American record producer, DJ, singer and songwriter Skrillex has released one studio
+                            album, seven extended plays, 44 singles (including nine as a featured artist), and 23 music
+                            videos.(including nine as a featured artist), and 23 music videos.</span>
+                        <br><a id=aa href="#">Read More>></a>
+                    </summary>
+                    <summary id=sum2>
+                        <img id=img2 src="https://i.redd.it/02u4lh3bc0251.jpg" alt="skrillex">
+                        <figcaption>
+                            <p>Sonny John Moore</p>
+                        </figcaption>
+                        <span>American record producer, DJ, singer and songwriter Skrillex has released one studio
+                            album, seven extended plays, 44 singles (including nine as a featured artist), and 23 music
+                            videos.(including nine as a featured artist), and 23 music videos.</span>
+                        <br> <a id=aa href="#">Read More>></a>
+                    </summary>
+                </article>
+            </div>
+            <div id=right>
+                <summary id=sm1>
+                    <p>DJ GENRES</p>
+                    <ul>
+                        <li><a href="#">Electronic dance</a></li>
+                        <hr>
+                        <li><a href="#">Dubstep</a></li>
+                        <hr>
+                        <li><a href="#">Big Room</a></li>
+                        <hr>
+                        <li><a href="#">Progressive House</a></li>
+                        <hr>
+                        <li><a href="#">Techno</a></li>
+                        <hr>
+
+                    </ul>
+                </summary>
+                <summary id=sm2>
+                    <p>AWARDS</p>
+                    <ul>
+                        <li><a href="#">Best Dance Recording</a></li>
+                        <hr>
+                        <li><a href="#">Best Short Form Music Video</a></li>
+                        <hr>
+                        <li><a href="#">Best New Artist</a></li>
+                        <hr>
+                        <li><a href="#">Progressive House</a></li>
+                        <hr>
+                        <li><a href="#">Best Dance/Electronic Album</a></li>
+                        <hr>
+                </summary>
+                <summary id=sm3>
+                    <p>ALBUMS</p>
+                    <ul>
+                        <li><a href="#">Recess</a></li>
+                        <hr>
+                        <li><a href="#">Leaving</a></li>
+                        <hr>
+                        <li><a href="#">Bangarang</a></li>
+                        <hr>
+                        <li><a href="#">My Name Is Skrillex</a></li>
+                        <hr>
+                        <li><a href="#">Scary Monsters</a></li>
+                        <hr>
+                        <li><a href="#">Triple Vinyl Box Set</a></li>
+                        <hr>
+                        <li><a href="#">GypsyhookEP</a></li>
+                        <hr>
+                </summary>
+
+
+            </div>
+        </section>
+        <footer>
+            <p> Copyright © 2009 - 2021 - All Rights Reserved - <a href="#">Domain Name</a> </p>
+            <span>Template by OS Templates</span>
+        </footer>
+    </div>
+</body>
+
+</html>
