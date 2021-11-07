@@ -123,7 +123,8 @@ nav a {
   line-height: 1.6em;
   margin-bottom: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  /* grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); */
+  grid-template-columns:auto auto auto;
   column-gap: 20px;
 }
 .section2 article {
@@ -255,11 +256,9 @@ footer p {
     margin:0;
   }
   .section2 {
-    /* width: 100%; */
-  }
-  .section2 article{
-    /* width:100%; */
-    /* text-align:center; */
+    width: 100%;
+    grid-template-columns: auto;
+    place-items: center;
   }
   .section2 article figure{
     width:100%;
