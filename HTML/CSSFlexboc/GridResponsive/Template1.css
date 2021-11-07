@@ -1,0 +1,414 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-size: 13px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .row1 {
+    width: 100%;
+    display: grid;
+    text-align: left;
+    background-color: #333333;
+    overflow: auto;
+  }
+  header {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  header h1 {
+    font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    line-height: normal;
+  }
+  header h2 {
+    font-size: 13px;
+    color: #c0bab6;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: none;
+    line-height: normal;
+  }
+  a {
+    color: #c0bab6;
+    background-color: #333333;
+    text-decoration: none;
+  }
+  header #form1 {
+    display: grid;
+    grid-column: 1 / 6;
+    justify-content: end;
+    padding-right: 50px;
+    margin: 20px 0;
+  }
+  header #form1 #box {
+    width: 200px;
+    margin: 0;
+    padding: 5px;
+    color: #c0bab6;
+    background-color: #232323;
+    border: 1px solid #666666;
+  }
+  header #form1 #sf_submit {
+    width: 70px;
+    height: 26px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #ff9900;
+    border: none;
+    cursor: pointer;
+  }
+  #header form{
+    text-align: end;
+    padding: 20px;
+  }
+  #header form input{
+         margin:0; padding:5px;
+        color:#C0BAB6;
+         background-color:#232323;
+          border:1px solid #666666;}
+        #header form #sf_submit{
+            width: 70px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black;
+            background-color:orange;
+            border: none;
+            cursor: pointer;
+        }
+  fieldset {
+    border: none;
+  }
+  img{
+      width: 100%;
+  }
+  header nav {
+    padding: 20px 0;
+    margin: 0;
+    color: #c0bab6;
+    background-color: #232323;
+    clear: both;
+    border-radius: 30px;
+  }
+  header nav ul {
+    list-style: none;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-evenly;
+  }
+  header nav ul li {
+    text-transform: uppercase;
+    display: grid;
+    font-size: 13px;
+     margin-right: 25px;
+  }
+  header nav ul li a {
+    background-color: #232323;
+  }
+  header nav ul li a:hover {
+    font-size: 20px;
+    color: #ff9900;
+  }
+  .row2 {
+    width: 100%;
+    color: #979797;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    overflow: auto;
+  }
+  #container {
+    width: 960px;
+    margin: 0 auto;
+    padding: 30px 0;
+    overflow: auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 30px;
+  }
+  #container #slider {
+    width: 100%;
+    display: grid;
+    grid-column: 1 / 1;
+  }
+  #container #homepage {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 30px;
+  }
+  #container #homepage h1 {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d6d6d6;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  #container #homepage #services {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 20px;
+    margin: 10px;
+  }
+  #container #homepage #services article {
+    width: 100%;
+    padding: 0;
+  }
+  #container #homepage #services .tt {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .row2 a {
+    background: #ffffff;
+    color: #ff9900;
+  }
+  #container #homepage #services article .more a {
+    display: grid;
+    justify-content: end;
+  }
+  #container #homepage .last {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px;
+  }
+  #container #homepage .last .three_quarter {
+     width: 715px;
+    margin: 0 20px 0 0;
+  }
+  #container #homepage .last .three_quarter .rr {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 10px;
+  }
+  #container #homepage .last h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-top: 20px 0;
+  }
+  #container #homepage .last .one_quarter .more {
+    display: grid;
+    justify-content: end;
+  }
+ 
+  #container #homepage .last .three_quarter .more a {
+    display: grid;
+    justify-content: end;
+  }
+  .row3 {
+    display: grid;
+    grid-template-columns: auto;
+    color: #919191;
+    background-color: #232323;
+    height: 55px;
+  }
+  .row3 a {
+    color: #919191;
+    background-color: #232323;
+  }
+  #footer {
+    padding: 20px 0 20px 0;
+    width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    overflow: auto;
+  }
+  .f1_right {
+    justify-content: end;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  @media only screen and (min-width: 0px) and (max-width: 450px) {
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    header {
+      width: 100%;
+    }
+    header nav {
+      width: 100%;
+    }
+    header nav ul {
+      width: 100%;
+    }
+    header nav ul li {
+      grid-template-rows: auto auto auto auto auto;
+      grid-column: 1 / 6;
+      text-transform: uppercase;
+      width: 100%;
+      background: red;
+      padding: 10px;
+      border-bottom: 2px solid white;
+    }
+    header nav ul li a {
+      background-color: red;
+      color: black;
+      font-weight: bold;
+    }
+    header #form1 {
+      width: 100%;
+    }
+    header #form1 form fieldset {
+      width: 100%;
+    }
+    header #form1 form fieldset #box {
+      width: 100%;
+    }
+  
+    .row2 {
+      width: 100%;
+    }
+    #container {
+      width: 100%;
+    }
+    #container #slider img {
+      width: 100%;
+    }
+    #container #homepage {
+      width: 100%;
+    }
+    .clear {
+      clear: both;
+    }
+    #container #homepage #services {
+      width: 100%;
+      display: grid;
+      grid-template-columns: none;
+    }
+    #container #homepage #services .one_quarter {
+      width: 100%;
+    }
+    #container #homepage #services .tt {
+      width: 100%;
+    }
+ 
+    #container #homepage #services article p {
+      width: 100%;
+    }
+    #container #homepage .last {
+      width: 100%;
+      display: grid;
+      grid-template-columns: none;
+      margin: 10px;
+    }
+    #container #homepage .last .three_quarter {
+      width: 100%;
+    }
+    #container #homepage .last .three_quarter .rr {
+      width: 100%;
+      display: grid;
+    }
+    #container #homepage .last .one_quarter {
+      width: 100%;
+    }
+    .row3 {
+      width: 100%;
+      display: grid;
+    }
+    #footer {
+      width: 100%;
+    }
+    .f1_right {
+      display: grid;
+      grid-template-columns: none;
+    }
+  }
+  @media only screen and (min-width: 451px) and (max-width: 768px) {
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    header {
+      width: 100%;
+      display: grid;
+    }
+    #container {
+      width: 100%;
+    }
+   #homepage h1 {
+      display: grid;
+    }
+    #container #slider img {
+      width: 100%;
+      height: 300px;
+      padding: 0 10px;
+    }
+    .row2 {
+      width: 100%;
+    }
+    #container {
+      width: 100%;
+    }
+    #container #slider img {
+      width: 100%;
+    }
+    #container #homepage {
+      width: 100%;
+    }
+    .clear {
+      clear: both;
+    }
+    #container #homepage #services {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+    }
+    #container #homepage #services .one_quarter {
+      width: 100%;
+    }
+    #container #homepage #services .tt {
+      width: 100%;
+    }
+  #container #homepage #services article p {
+      width: 100%;
+    }
+    #container #homepage .last {
+      width: 100%;
+      display: grid;
+      grid-template-columns: none;
+      margin: 10px;
+    }
+    #container #homepage .last .three_quarter {
+      width: 100%;
+    }
+    #container #homepage .last .three_quarter .rr {
+      width: 100%;
+      display: grid;
+    }
+    #container #homepage .last .one_quarter {
+      width: 100%;
+    }
+    .row3 {
+      width: 100%;
+      display: grid;
+    }
+    #footer {
+      width: 100%;
+    }
+    .f1_right {
+      display: grid;
+      grid-template-columns: none;
+    }
+  }
+ 

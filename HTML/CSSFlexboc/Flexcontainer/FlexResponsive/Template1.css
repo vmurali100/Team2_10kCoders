@@ -1,4 +1,4 @@
-HTML 5 Template Name: Basic 83
+/*HTML 5 Template Name: Basic 83
 
 
 html{overflow-y:scroll;}
@@ -105,3 +105,214 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 #footer{padding:20px 0;}
 #footer p{margin:0; padding:0;}
+@media only screen and  (max-width: 845px) {
+    #header {
+      width: 100%;
+    }
+    
+    #header nav {
+      width: 100%;
+    }
+    #header nav ul li {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 3px solid black;
+    }
+    #container {
+      width: 100%;
+    }
+    #container #slider img {
+      width: 100%;
+    }
+    #container #homepage #services .one_quarter {
+      width: 100%;
+      font-size: 16px;
+    }
+    #container #homepage .three_quarter {
+      width: 100%;
+    }
+    #footer {
+      width: 100%;
+    }
+  }*/
+  *{
+    padding: 0;
+    margin: 0;
+}
+  body{
+      font-style: normal;
+      font-size: 13px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .wrapper row1{
+      width: 100%;
+      
+      display: flex;
+  }
+  #header{
+      display: flex;
+      width: 100%;
+     background-color: black;
+      flex-direction: column;
+     
+  }
+  #hgroup{
+      display: flex;
+      flex-direction: column;
+      text-align:left;
+      padding-left: 10px;
+      padding-top: 20px !important;
+  }
+  h1{
+      color: blanchedalmond;
+      font-size:xx-large;
+  }
+  h2{
+      color: blanchedalmond;
+      font-size: small;
+  }
+  a{
+      color: wheat;
+     text-decoration:none  ;
+  }
+  fieldset{
+      border: none;
+  }
+  #header form{
+    text-align: end;
+    padding: 20px;
+  }
+  #header form input{
+         margin:0; padding:5px;
+        color:#C0BAB6;
+         background-color:#232323;
+          border:1px solid #666666;}
+        #header form #sf_submit{
+            width: 70px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: black;
+            background-color:orange;
+            border: none;
+            cursor: pointer;
+        }
+   #header nav{
+ padding: 20px 0;
+  margin: 0;
+  color: #c0bab6;
+  background-color: #232323;
+  clear: both;
+  border-radius: 30px;
+        }
+  #header nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            list-style: none;
+            padding: 0 20px;
+  }
+  #header nav ul li{
+    text-transform: uppercase;
+      }
+ #header nav ul li a:hover{
+        background-color: green;
+        font-size: 20px;
+        cursor: pointer;
+     }
+     .wrapper row2{
+        width: 100%;
+        display: flex;
+      }
+#container{
+    width: 98%;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-flow: column;
+}
+#slider{
+    width: 100%;
+}
+#slider img{
+    width: 100%;
+}
+#homepage{
+    width: 100%;
+    padding: 20px 0;
+}
+#container #homepage #services{
+    display: flex;
+}
+#container #homepage #latest .one_quarter{
+    margin: 20px;
+    width: 100%;
+}
+.wrapper row3{
+    width: 100%;
+    display: flex;
+  }
+#footer{
+  width: 100%;  
+  background-color:#333333;
+  margin:0 auto;
+  padding:30px 0;
+  display:flex;
+  justify-content: space-between;
+  color: #c0bab6;
+}
+.fl_left{
+  padding-left: 20px;
+}
+.fl_right{
+  padding-right: 20px;
+}
+@media only screen and (min-width: 451px) and (max-width: 768px){
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ header{
+   width: 100%;
+   display: flex;
+   align-content: center;
+ }
+  #container{
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  #homepage h1{
+    display: flex;
+    justify-content: center;
+  }
+  #container #slider img{
+    width: 100%;
+    height: 300px;
+    padding: 0 10px;
+  }
+  #container #shout{
+    width: 100%;
+  }
+  #container #homepage #services{
+    width: 100%;
+    align-items: center; 
+  }
+   #container #homepage #latest{
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+  #container #homepage #latest .one_quarter{
+  margin: 20px;
+  width: 100%;
+  }
+  #container #homepage #latest figure img{
+    width: 100%;
+  } 
+   footer{
+    width: 100%;
+    justify-content: space-between;
+  } 
+}
