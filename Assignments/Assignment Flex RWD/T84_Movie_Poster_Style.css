@@ -21,7 +21,7 @@ a {
 }
 
 .row1 {
-  background-color: #0007fe;
+  /* background-color: #0007fe; */
 }
 .wrapper {
   width: 100%;
@@ -31,7 +31,9 @@ header {
   width: 960px;
   margin: 0 auto;
   padding: 20px 0;
-  background-color: #0007fe;
+  /* background-color: #0007fe; */
+  color:#919191; 
+  background-color:#232323;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -69,7 +71,7 @@ header form #searchbox {
   padding: 5px;
   border: 1px solid #666666;
   font-size: 12px;
-  background-color: #11bdff;
+  /* background-color: #11bdff; */
   font-size: 12px;
   color: white;
 }
@@ -90,7 +92,7 @@ header form #submit {
 }
 /* ============================Nav========================== */
 nav {
-  background-color: #11bdff;
+  /* background-color: #11bdff; */
   width: 100%;
   padding: 20px 0;
 }
@@ -105,7 +107,7 @@ nav ul li {
   text-transform: uppercase;
 }
 nav ul li a {
-  color: #0027ba;
+  /* color: #0027ba; */
 }
 /* ================================================================================================================= */
 
@@ -129,11 +131,11 @@ nav ul li a {
 .section2 {
   padding: 15px;
   width: 930px;
-  background-color: #cdedfa;
+  background-color: #f5e9a4;
   margin-bottom: 30px;
 }
 .section2 p {
-  color: #439cbe;
+  /* color: #439cbe; */
   font-size: 16px;
   line-height: 1.8em;
   text-transform: uppercase;
@@ -225,8 +227,8 @@ nav ul li a {
 
 /* ============================================ Footer ============================================  */
 .row3 {
-  background-color: #11bdff;
-  color: #0027ba;
+  color:#919191; 
+  background-color:#232323;
 }
 footer {
   width: 960px;
@@ -391,4 +393,4 @@ footer #right_footer {
           padding:0 30px;
         }
       }
-  }
+  
