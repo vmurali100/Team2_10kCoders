@@ -9,6 +9,7 @@
 <body>
     <button onclick="addSkill()">Add Skill</button>
     <button onclick="addCompany()">Add Company</button>
+    <button onclick="del()">Delete</button>
     <script>
         var person = {
             fname : "Ervin",
@@ -24,6 +25,10 @@
         }
         function addCompany(){
             person["company"] = "Zoho";
+            console.log(person)
+        }
+        function del(){
+            delete person.lname;
             console.log(person)
         }
     </script>

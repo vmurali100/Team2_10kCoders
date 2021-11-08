@@ -32,6 +32,7 @@
                 <button onclick="addSkill1()">Add Skill</button>
                 <button onclick="addCompany1()">Add Company</button>
                 <button onclick="addExperience1()">Add Experience</button>
+                <button onclick="delete1()">Delete</button>
             </div>
           </div>
           
@@ -46,6 +47,7 @@
                 <button onclick="addSkill2()">Add Skill</button>
                 <button onclick="addCompany2()">Add Company</button>
                 <button onclick="addExperience2()">Add Experience</button>
+                <button onclick="delete2()">Delete</button>
             </div>
           </div>
           
@@ -60,6 +62,7 @@
                 <button onclick="addSkill3()">Add Skill</button>
                 <button onclick="addCompany3()">Add Company</button>
                 <button onclick="addExperience3()">Add Experience</button>
+                <button onclick="delete3()">Delete</button>
             </div>
           </div>
           
@@ -74,6 +77,7 @@
                 <button onclick="addSkill4()">Add Skill</button>
                 <button onclick="addCompany4()">Add Company</button>
                 <button onclick="addExperience4()">Add Experience</button>
+                <button onclick="delete4()">Delete</button>
             </div>
           </div>
           
@@ -89,6 +93,7 @@
                 <button onclick="addSkill5()">Add Skill</button>
                 <button onclick="addCompany5()">Add Company</button>
                 <button onclick="addExperience5()">Add Experience</button>
+                <button onclick="delete5()">Delete</button>
             </div>
           </div>
           
@@ -103,6 +108,7 @@
                 <button onclick="addSkill6()">Add Skill</button>
                 <button onclick="addCompany6()">Add Company</button>
                 <button onclick="addExperience6()">Add Experience</button>
+                <button onclick="delete6()">Delete</button>
             </div>
           </div>
           
@@ -117,6 +123,7 @@
                 <button onclick="addSkill7()">Add Skill</button>
                 <button onclick="addCompany7()">Add Company</button>
                 <button onclick="addExperience7()">Add Experience</button>
+                <button onclick="delete7()">Delete</button>
             </div>
           </div>
           
@@ -131,6 +138,7 @@
                 <button onclick="addSkill8()">Add Skill</button>
                 <button onclick="addCompany8()">Add Company</button>
                 <button onclick="addExperience8()">Add Experience</button>
+                <button onclick="delete8()">Delete</button>
             </div>
           </div>
           
@@ -146,6 +154,7 @@
                 <button onclick="addSkill9()">Add Skill</button>
                 <button onclick="addCompany9()">Add Company</button>
                 <button onclick="addExperience9()">Add Experience</button>
+                <button onclick="delete9()">Delete</button>
             </div>
           </div>
           
@@ -161,6 +170,7 @@
                 <button onclick="addSkill10()">Add Skill</button>
                 <button onclick="addCompany10()">Add Company</button>
                 <button onclick="addExperience10()">Add Experience</button>
+                <button onclick="delete10()">Delete</button>
             </div>
           </div>
           
@@ -208,6 +218,13 @@
         console.log(person1);
         experienceDisplay1.innerHTML = "Experience: " + person1.experience;
       }
+      function delete1(){
+        delete person1.age;
+        display1.innerHTML = 
+      "First Name: " + person1.fname + "<br>" +
+      "Second Name: "+ person1.lname + "<br>" +
+      "Searching for Job: " + person1.jobSearch;
+      }
 
 
     //   ------------------object2--------------------
@@ -243,6 +260,13 @@
         console.log(person2);
         experienceDisplay2.innerHTML = "Experience: " + person2.experience;
       }
+      function delete2(){
+        delete person2.age;
+        display2.innerHTML = 
+      "First Name: " + person2.fname + "<br>" +
+      "Second Name: "+ person2.lname + "<br>" +
+      "Searching for Job: " + person2.jobSearch;
+      }
       
 
       //   ------------------object 3--------------------
@@ -277,7 +301,13 @@
         console.log(person1);
         experienceDisplay3.innerHTML = "Experience: " + person3.experience;
       }
-
+      function delete3(){
+        delete person3.age;
+        display3.innerHTML = 
+      "First Name: " + person3.fname + "<br>" +
+      "Second Name: "+ person3.lname + "<br>" +
+      "Searching for Job: " + person3.jobSearch;
+      }
 
     //   ------------------object 4--------------------
 
@@ -311,6 +341,13 @@
         person4.experience = 4;
         console.log(person4);
         experienceDisplay4.innerHTML = "Experience: " + person4.experience;
+      }
+      function delete4(){
+        delete person4.age;
+        display4.innerHTML = 
+      "First Name: " + person4.fname + "<br>" +
+      "Second Name: "+ person4.lname + "<br>" +
+      "Searching for Job: " + person4.jobSearch;
       }
 
       //   ------------------object 5--------------------
@@ -346,7 +383,13 @@
         console.log(person5);
         experienceDisplay5.innerHTML = "Experience: " + person5.experience;
       }
-
+      function delete5(){
+        delete person5.age;
+        display5.innerHTML = 
+      "First Name: " + person5.fname + "<br>" +
+      "Second Name: "+ person5.lname + "<br>" +
+      "Searching for Job: " + person5.jobSearch;
+      }
 
       //   ------------------object6--------------------
       var person6 = new Person("Fname6","Lname6",6,null,true);
@@ -380,7 +423,13 @@
         console.log(person6);
         experienceDisplay6.innerHTML = "Experience: " + person6.experience;
       }
-
+      function delete6(){
+        delete person6.age;
+        display6.innerHTML = 
+      "First Name: " + person6.fname + "<br>" +
+      "Second Name: "+ person6.lname + "<br>" +
+      "Searching for Job: " + person6.jobSearch;
+      }
 
     //   ------------------object7--------------------
 
@@ -415,7 +464,13 @@
         console.log(person7);
         experienceDisplay7.innerHTML = "Experience: " + person7.experience;
       }
-      
+      function delete7(){
+        delete person7.age;
+        display7.innerHTML = 
+      "First Name: " + person7.fname + "<br>" +
+      "Second Name: "+ person7.lname + "<br>" +
+      "Searching for Job: " + person7.jobSearch;
+      }
 
       //   ------------------object 8--------------------
       var person8 = new Person("Fname8","Lname8",8,null,true);
@@ -448,6 +503,13 @@
         person8.experience = 8;
         console.log(person1);
         experienceDisplay8.innerHTML = "Experience: " + person8.experience;
+      }
+      function delete8(){
+        delete person8.age;
+        display8.innerHTML = 
+      "First Name: " + person8.fname + "<br>" +
+      "Second Name: "+ person8.lname + "<br>" +
+      "Searching for Job: " + person8.jobSearch;
       }
 
 
@@ -484,6 +546,13 @@
         console.log(person9);
         experienceDisplay9.innerHTML = "Experience: " + person9.experience;
       }
+      function delete9(){
+        delete person9.age;
+        display9.innerHTML = 
+      "First Name: " + person9.fname + "<br>" +
+      "Second Name: "+ person9.lname + "<br>" +
+      "Searching for Job: " + person9.jobSearch;
+      }
 
       //   ------------------object 10--------------------
 
@@ -517,6 +586,13 @@
         person10.experience = 10;
         console.log(person10);
         experienceDisplay10.innerHTML = "Experience: " + person10.experience;
+      }
+      function delete10(){
+        delete person10.age;
+        display10.innerHTML = 
+      "First Name: " + person10.fname + "<br>" +
+      "Second Name: "+ person10.lname + "<br>" +
+      "Searching for Job: " + person10.jobSearch;
       }
       
     </script>
