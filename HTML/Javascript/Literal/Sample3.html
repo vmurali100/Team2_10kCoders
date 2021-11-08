@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button onclick="addskills()">Add skills</button>
+    <button onclick="addcompany()">Add company</button>
+    <button onclick="deleteage()">Delete Age </button>
+    <button onclick="deletefname()">Delet Fname</button>
+    <button onclick="addexp()">Add Exp</button>
+
+<script>
+     var person = {
+        fname :"Padi",
+        Lname :"Ranadeep",
+        Age :"22",
+        Mobile:9502467503,
+        Isgoodguy :true,
+        }
+    console.log(person)
+     
+    function addskills(){
+        person.skill = "Full stack developer"
+        console.log(person)
+    }
+    function addcompany(){
+        person["company"]= "Infosys"
+        console.log(person)
+    }
+    function deleteage(){
+    delete person.Age
+    console.log(person)
+    }
+    function deletefname(){
+        delete person["fname"]
+        console.log(person)
+    }
+    function addexp(){
+        person.Exp ="2"
+        console.log(person)
+    }
+</script>
+</body>
+</html>
