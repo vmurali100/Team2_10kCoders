@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addSkill()">Add Skill</button>
+    <button onclick="addCompany()">Add Company</button>
+    <script>
+        var person = {
+            fname : "Ervin",
+            lname : "Prabhu",
+            age : 24,
+            experience: null,
+            jobSearch: true
+        }       
+        console.log(person)
+        function addSkill(){
+            person.skill = "Full Stack Developer";
+            console.log(person)
+        }
+        function addCompany(){
+            person["company"] = "Zoho";
+            console.log(person)
+        }
+    </script>
+</body>
+</html>
