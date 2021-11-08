@@ -202,7 +202,7 @@
         }
         .four_quarter {
             width: 960px;
-            /* float: none; */
+            float: none;
             margin-right: 0;
             clear: both;
         }
@@ -291,7 +291,12 @@
         #container {
             padding: 30px 0;
         }
-       
+        #container section {
+            display: block;
+            width: 100%;
+            margin: 0 0 30px 0;
+            padding: 0;
+        }
         #container .last {
             margin: 0;
         }
