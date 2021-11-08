@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+    <button onclick="addSkills()">Add Skill</button>
+    <button onclick="addCompany()">Add Company</button>
     <script>
         // Objects 
         // 1. Literel Way 
@@ -18,9 +20,21 @@
             experience:null
             // Propery of An Object
         } 
+
         // an Empty Object is Crearted
         console.log(person)
         // 2. OOP(Object Oriented Programming)
+
+        function addSkills(){
+            person.skill = "UI Developer"
+
+            console.log(person)
+        }
+
+        function addCompany(){
+            person["company"] = "DELL"
+            console.log(person)
+        }
     </script>
 </body>
 </html>
