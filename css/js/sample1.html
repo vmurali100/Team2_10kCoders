@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addSkills()">Add Skills</button>
+    <button onclick="addCompany()">Add Company</button>
+    <button onclick="addState()">Add State</button>
+
+
+    <script>
+        var person={
+            fname:"punem",
+            lname:"harish",
+            age:20,
+            mobileNo:7989255768,
+            lookingForJob:true,
+            experience:null,
+
+        }
+        console.log(person)
+
+        function addSkills(){
+            person.skill = "Developer"
+            console.log(person)
+        }
+        function addCompany(){
+            person["company"] = "Dell"
+            console.log(person)
+
+        }function addState(){
+            person.state="Telangana"
+            console.log(person)
+        }
+
+    </script>
+</body>
+</html>
