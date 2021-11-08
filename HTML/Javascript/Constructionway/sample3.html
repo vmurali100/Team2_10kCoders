@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<button onclick="deletmail()">Delete Mail</button>
 <body>
     <script>
         // Creating Objectas With Built in Contructor 
-        var ranadeep = new Object({});
-        ranadeep.fname = "Padi"
-        ranadeep.lname = "Ranadeep"
-        ranadeep.email= "ranadeepreddypadi@gmail.com"
-        console.log(ranadeep)
-
+       var ranadeep = new Object({ Fname: "Padi", Lname: "Ranadeep", Email: "ranadeepreddypadi@gmail.com" });
+       console.log(ranadeep)
         
+       function deletmail(){
+           delete ranadeep.Email
+           console.log(ranadeep)
+       }
     </script>
 </body>
 

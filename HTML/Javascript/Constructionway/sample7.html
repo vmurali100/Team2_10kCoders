@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button onclick= "addtype4()">Add</button>
+<button onclick= "deletetype()">Delete</button>
+<body>
+    <script>
+        // Creating Objectas With Built in Contructor 
+      var icecreams = new Object({})
+     icecreams. Type1="Venella" ,
+     icecreams. Type2="strawberry",
+     icecreams.Type3="butterscocth"
+      console.log(icecreams)
+      
+      function addtype4(){
+          icecreams.Type4="Chocolate"
+          console.log(icecreams)
+      }
+      function deletetype(){
+          delete icecreams.Type2
+          console.log(icecreams)
+      }
+    </script>
+</body>
+
+</html>
