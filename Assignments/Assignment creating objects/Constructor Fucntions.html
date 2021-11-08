@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        margin: 0;
+      }
+      .btn_container{
+          margin:10px 0;
+      }
+      .container{
+          display:grid;
+          grid-template-columns: auto auto auto;
+          place-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Custom Constructor objects</h1>
+    <div class="container">
+        <div id="display_container">
+            <h1>Object1</h1>
+            <p id="display1"></p>
+            <p id="Experience display1"></p>
+            <p id="skill display1"></p>
+            <p id="company display1"></p>
+            <div class="btn_container">
+                <button onclick="addSkill1()">Add Skill</button>
+                <button onclick="addCompany1()">Add Company</button>
+                <button onclick="addExperience1()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+          <div id="display_container">
+            <h1>Object2</h1>  
+            <p id="display2"></p>
+            <p id="Experience display2"></p>
+            <p id="skill display2"></p>
+            <p id="company display2"></p>
+            <div class="btn_container">
+                <button onclick="addSkill2()">Add Skill</button>
+                <button onclick="addCompany2()">Add Company</button>
+                <button onclick="addExperience2()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+          <div id="display_container">
+            <h1>Object3</h1>  
+            <p id="display3"></p>
+            <p id="Experience display3"></p>
+            <p id="skill display3"></p>
+            <p id="company display3"></p>
+            <div class="btn_container">
+                <button onclick="addSkill3()">Add Skill</button>
+                <button onclick="addCompany3()">Add Company</button>
+                <button onclick="addExperience3()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+          <div id="display_container">
+            <h1>Object4</h1>
+            <p id="display4"></p>
+            <p id="Experience display4"></p>
+            <p id="skill display4"></p>
+            <p id="company display4"></p>
+            <div class="btn_container">
+                <button onclick="addSkill4()">Add Skill</button>
+                <button onclick="addCompany4()">Add Company</button>
+                <button onclick="addExperience4()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+      
+          <div id="display_container">
+            <h1>Object5</h1>
+            <p id="display5"></p>
+            <p id="Experience display5"></p>
+            <p id="skill display5"></p>
+            <p id="company display5"></p>
+            <div class="btn_container">
+                <button onclick="addSkill5()">Add Skill</button>
+                <button onclick="addCompany5()">Add Company</button>
+                <button onclick="addExperience5()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+          <div id="display_container">
+            <h1>Object6</h1>
+            <p id="display6"></p>
+            <p id="Experience display6"></p>
+            <p id="skill display6"></p>
+            <p id="company display6"></p>
+            <div class="btn_container">
+                <button onclick="addSkill6()">Add Skill</button>
+                <button onclick="addCompany6()">Add Company</button>
+                <button onclick="addExperience6()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+          <div id="display_container">
+            <h1>Object7</h1>
+            <p id="display7"></p>
+            <p id="Experience display7"></p>
+            <p id="skill display7"></p>
+            <p id="company display7"></p>
+            <div class="btn_container">
+                <button onclick="addSkill7()">Add Skill</button>
+                <button onclick="addCompany7()">Add Company</button>
+                <button onclick="addExperience7()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+          <div id="display_container">
+            <h1>Object8</h1>
+            <p id="display8"></p>
+            <p id="Experience display8"></p>
+            <p id="skill display8"></p>
+            <p id="company display8"></p>
+            <div class="btn_container">
+                <button onclick="addSkill8()">Add Skill</button>
+                <button onclick="addCompany8()">Add Company</button>
+                <button onclick="addExperience8()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+          
+          <div id="display_container">
+            <h1>Object9</h1>
+            <p id="display9"></p>
+            <p id="Experience display9"></p>
+            <p id="skill display9"></p>
+            <p id="company display9"></p>
+            <div class="btn_container">
+                <button onclick="addSkill9()">Add Skill</button>
+                <button onclick="addCompany9()">Add Company</button>
+                <button onclick="addExperience9()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+          
+          <div id="display_container">
+            <h1>Object10</h1>
+            <p id="display10"></p>
+            <p id="Experience display10"></p>
+            <p id="skill display10"></p>
+            <p id="company display10"></p>
+            <div class="btn_container">
+                <button onclick="addSkill10()">Add Skill</button>
+                <button onclick="addCompany10()">Add Company</button>
+                <button onclick="addExperience10()">Add Experience</button>
+            </div>
+          </div>
+          
+      
+    </div>
+
+    <script>
+        // ---------------------Constructor----------------------
+        function Person(fname,lname,age,experience,jobSearch){
+          this.fname = fname;
+          this.lname = lname;
+          this.age = age;
+          this.experience = experience;
+          this.jobSearch = jobSearch;
+      }
+        //   ------------------object1--------------------
+      var person1 = new Person("Fname1","Lname1",1,null,true);
+      console.log(person1);
+
+      display1 = document.getElementById("display1");
+      skillDisplay1 = document.getElementById("skill display1");
+      companyDisplay1 = document.getElementById("company display1");
+      experienceDisplay1 = document.getElementById("Experience display1");
+
+      display1.innerHTML = 
+      "First Name: " + person1.fname + "<br>" +
+      "Second Name: "+ person1.lname + "<br>" +
+      "Age: " + person1.age + "<br>" +
+      "Searching for Job: " + person1.jobSearch;
+
+      experienceDisplay1.innerHTML = "Experience: " + person1.experience;
+
+      function addSkill1() {
+        person1.skill = "full stack developer";
+        console.log(person1);
+        skillDisplay1.innerHTML = "Skills: " + person1.skill;
+      }
+      function addCompany1() {
+        person1["company"] = "Zoho";
+        console.log(person1);
+        companyDisplay1.innerHTML = "Company: " + person1.company;
+      }
+      function addExperience1() {
+        person1.experience = 1;
+        console.log(person1);
+        experienceDisplay1.innerHTML = "Experience: " + person1.experience;
+      }
+
+
+    //   ------------------object2--------------------
+
+    var person2 = new Person("Fname2","Lname2",2,null,true);
+      console.log(person2);
+
+      display2 = document.getElementById("display2");
+      skillDisplay2 = document.getElementById("skill display2");
+      companyDisplay2 = document.getElementById("company display2");
+      experienceDisplay2 = document.getElementById("Experience display2");
+
+      display2.innerHTML = 
+      "First Name: " + person2.fname + "<br>" +
+      "Second Name: "+ person2.lname + "<br>" +
+      "Age: " + person2.age + "<br>" +
+      "Searching for Job: " + person2.jobSearch;
+
+      experienceDisplay2.innerHTML = "Experience: " + person2.experience;
+
+      function addSkill2() {
+        person2.skill = "front end developer";
+        console.log(person2);
+        skillDisplay2.innerHTML = "Skills: " + person2.skill;
+      }
+      function addCompany2() {
+        person2["company"] = "Google";
+        console.log(person2);
+        companyDisplay2.innerHTML = "Company: " + person2.company;
+      }
+      function addExperience2() {
+        person2.experience = 2;
+        console.log(person2);
+        experienceDisplay2.innerHTML = "Experience: " + person2.experience;
+      }
+      
+
+      //   ------------------object 3--------------------
+      var person3 = new Person("Fname3","Lname3",3,null,true);
+      console.log(person3);
+
+      display3 = document.getElementById("display3");
+      skillDisplay3 = document.getElementById("skill display3");
+      companyDisplay3 = document.getElementById("company display3");
+      experienceDisplay3 = document.getElementById("Experience display3");
+
+      display3.innerHTML = 
+      "First Name: " + person3.fname + "<br>" +
+      "Second Name: "+ person3.lname + "<br>" +
+      "Age: " + person3.age + "<br>" +
+      "Searching for Job: " + person3.jobSearch;
+
+      experienceDisplay3.innerHTML = "Experience: " + person3.experience;
+
+      function addSkill3() {
+        person3.skill = "java developer";
+        console.log(person3);
+        skillDisplay3.innerHTML = "Skills: " + person3.skill;
+      }
+      function addCompany3() {
+        person3["company"] = "microsoft";
+        console.log(person3);
+        companyDisplay3.innerHTML = "Company: " + person3.company;
+      }
+      function addExperience3() {
+        person3.experience = 3;
+        console.log(person1);
+        experienceDisplay3.innerHTML = "Experience: " + person3.experience;
+      }
+
+
+    //   ------------------object 4--------------------
+
+    var person4 = new Person("Fname4","Lname4",4,null,true);
+      console.log(person4);
+
+      display4 = document.getElementById("display4");
+      skillDisplay4 = document.getElementById("skill display4");
+      companyDisplay4 = document.getElementById("company display4");
+      experienceDisplay4 = document.getElementById("Experience display4");
+
+      display4.innerHTML = 
+      "First Name: " + person4.fname + "<br>" +
+      "Second Name: "+ person4.lname + "<br>" +
+      "Age: " + person4.age + "<br>" +
+      "Searching for Job: " + person4.jobSearch;
+
+      experienceDisplay4.innerHTML = "Experience: " + person4.experience;
+
+      function addSkill4() {
+        person4.skill = "python developer";
+        console.log(person4);
+        skillDisplay4.innerHTML = "Skills: " + person4.skill;
+      }
+      function addCompany4() {
+        person4["company"] = "Dell";
+        console.log(person4);
+        companyDisplay4.innerHTML = "Company: " + person4.company;
+      }
+      function addExperience4() {
+        person4.experience = 4;
+        console.log(person4);
+        experienceDisplay4.innerHTML = "Experience: " + person4.experience;
+      }
+
+      //   ------------------object 5--------------------
+
+    var person5 = new Person("Fname5","Lname5",5,null,true);
+      console.log(person5);
+
+      display5 = document.getElementById("display5");
+      skillDisplay5 = document.getElementById("skill display5");
+      companyDisplay5 = document.getElementById("company display5");
+      experienceDisplay5 = document.getElementById("Experience display5");
+
+      display5.innerHTML = 
+      "First Name: " + person5.fname + "<br>" +
+      "Second Name: "+ person5.lname + "<br>" +
+      "Age: " + person5.age + "<br>" +
+      "Searching for Job: " + person5.jobSearch;
+
+      experienceDisplay5.innerHTML = "Experience: " + person5.experience;
+
+      function addSkill5() {
+        person5.skill = ".NET developer";
+        console.log(person5);
+        skillDisplay5.innerHTML = "Skills: " + person5.skill;
+      }
+      function addCompany5() {
+        person5["company"] = "HP";
+        console.log(person5);
+        companyDisplay5.innerHTML = "Company: " + person5.company;
+      }
+      function addExperience5() {
+        person5.experience = 5;
+        console.log(person5);
+        experienceDisplay5.innerHTML = "Experience: " + person5.experience;
+      }
+
+
+      //   ------------------object6--------------------
+      var person6 = new Person("Fname6","Lname6",6,null,true);
+      console.log(person6);
+
+      display6 = document.getElementById("display6");
+      skillDisplay6 = document.getElementById("skill display6");
+      companyDisplay6 = document.getElementById("company display6");
+      experienceDisplay6 = document.getElementById("Experience display6");
+
+      display6.innerHTML = 
+      "First Name: " + person6.fname + "<br>" +
+      "Second Name: "+ person6.lname + "<br>" +
+      "Age: " + person6.age + "<br>" +
+      "Searching for Job: " + person6.jobSearch;
+
+      experienceDisplay6.innerHTML = "Experience: " + person6.experience;
+
+      function addSkill6() {
+        person6.skill = "full stack developer";
+        console.log(person6);
+        skillDisplay6.innerHTML = "Skills: " + person6.skill;
+      }
+      function addCompany6() {
+        person6["company"] = "Zoho";
+        console.log(person6);
+        companyDisplay6.innerHTML = "Company: " + person6.company;
+      }
+      function addExperience6() {
+        person6.experience = 6;
+        console.log(person6);
+        experienceDisplay6.innerHTML = "Experience: " + person6.experience;
+      }
+
+
+    //   ------------------object7--------------------
+
+    var person7 = new Person("Fname7","Lname7",7,null,true);
+      console.log(person7);
+
+      display7 = document.getElementById("display7");
+      skillDisplay7 = document.getElementById("skill display7");
+      companyDisplay7 = document.getElementById("company display7");
+      experienceDisplay7 = document.getElementById("Experience display7");
+
+      display7.innerHTML = 
+      "First Name: " + person7.fname + "<br>" +
+      "Second Name: "+ person7.lname + "<br>" +
+      "Age: " + person7.age + "<br>" +
+      "Searching for Job: " + person7.jobSearch;
+
+      experienceDisplay7.innerHTML = "Experience: " + person7.experience;
+
+      function addSkill7() {
+        person7.skill = "front end developer";
+        console.log(person7);
+        skillDisplay7.innerHTML = "Skills: " + person7.skill;
+      }
+      function addCompany7() {
+        person7["company"] = "Google";
+        console.log(person7);
+        companyDisplay7.innerHTML = "Company: " + person7.company;
+      }
+      function addExperience7() {
+        person7.experience = 7;
+        console.log(person7);
+        experienceDisplay7.innerHTML = "Experience: " + person7.experience;
+      }
+      
+
+      //   ------------------object 8--------------------
+      var person8 = new Person("Fname8","Lname8",8,null,true);
+      console.log(person8);
+
+      display8 = document.getElementById("display8");
+      skillDisplay8 = document.getElementById("skill display8");
+      companyDisplay8 = document.getElementById("company display8");
+      experienceDisplay8 = document.getElementById("Experience display8");
+
+      display8.innerHTML = 
+      "First Name: " + person8.fname + "<br>" +
+      "Second Name: "+ person8.lname + "<br>" +
+      "Age: " + person8.age + "<br>" +
+      "Searching for Job: " + person8.jobSearch;
+
+      experienceDisplay8.innerHTML = "Experience: " + person8.experience;
+
+      function addSkill8() {
+        person8.skill = "java developer";
+        console.log(person8);
+        skillDisplay8.innerHTML = "Skills: " + person8.skill;
+      }
+      function addCompany8() {
+        person8["company"] = "microsoft";
+        console.log(person8);
+        companyDisplay8.innerHTML = "Company: " + person8.company;
+      }
+      function addExperience8() {
+        person8.experience = 8;
+        console.log(person1);
+        experienceDisplay8.innerHTML = "Experience: " + person8.experience;
+      }
+
+
+    //   ------------------object 9--------------------
+
+    var person9 = new Person("Fname9","Lname9",9,null,true);
+      console.log(person9);
+
+      display9 = document.getElementById("display9");
+      skillDisplay9 = document.getElementById("skill display9");
+      companyDisplay9 = document.getElementById("company display9");
+      experienceDisplay9 = document.getElementById("Experience display9");
+
+      display9.innerHTML = 
+      "First Name: " + person9.fname + "<br>" +
+      "Second Name: "+ person9.lname + "<br>" +
+      "Age: " + person9.age + "<br>" +
+      "Searching for Job: " + person9.jobSearch;
+
+      experienceDisplay9.innerHTML = "Experience: " + person9.experience;
+
+      function addSkill9() {
+        person9.skill = "python developer";
+        console.log(person9);
+        skillDisplay9.innerHTML = "Skills: " + person9.skill;
+      }
+      function addCompany9() {
+        person9["company"] = "Dell";
+        console.log(person9);
+        companyDisplay9.innerHTML = "Company: " + person9.company;
+      }
+      function addExperience9() {
+        person9.experience = 9;
+        console.log(person9);
+        experienceDisplay9.innerHTML = "Experience: " + person9.experience;
+      }
+
+      //   ------------------object 10--------------------
+
+    var person10 = new Person("Fname10","Lname10",10,null,true);
+      console.log(person10);
+
+      display10 = document.getElementById("display10");
+      skillDisplay10 = document.getElementById("skill display10");
+      companyDisplay10 = document.getElementById("company display10");
+      experienceDisplay10 = document.getElementById("Experience display10");
+
+      display10.innerHTML = 
+      "First Name: " + person10.fname + "<br>" +
+      "Second Name: "+ person10.lname + "<br>" +
+      "Age: " + person10.age + "<br>" +
+      "Searching for Job: " + person10.jobSearch;
+
+      experienceDisplay10.innerHTML = "Experience: " + person10.experience;
+
+      function addSkill10() {
+        person10.skill = ".NET developer";
+        console.log(person10);
+        skillDisplay10.innerHTML = "Skills: " + person10.skill;
+      }
+      function addCompany10() {
+        person10["company"] = "HP";
+        console.log(person10);
+        companyDisplay10.innerHTML = "Company: " + person10.company;
+      }
+      function addExperience10() {
+        person10.experience = 10;
+        console.log(person10);
+        experienceDisplay10.innerHTML = "Experience: " + person10.experience;
+      }
+      
+    </script>
+  </body>
+</html>
