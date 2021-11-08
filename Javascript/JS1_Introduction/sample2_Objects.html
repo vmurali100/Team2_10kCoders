@@ -9,6 +9,7 @@
 <body>
     <button onclick="addSkills()">Add Skill</button>
     <button onclick="addCompany()">Add Company</button>
+    <button onclick="deleteExperience()">Delete Experience</button>
     <script>
         // Objects 
         // 1. Literel Way 
@@ -21,6 +22,7 @@
             // Propery of An Object
         } 
 
+        
         // an Empty Object is Crearted
         console.log(person)
         // 2. OOP(Object Oriented Programming)
@@ -33,6 +35,11 @@
 
         function addCompany(){
             person["company"] = "DELL"
+            console.log(person)
+        }
+
+        function deleteExperience(){
+            delete person.experience
             console.log(person)
         }
     </script>
