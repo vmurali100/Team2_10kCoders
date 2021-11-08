@@ -1,7 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="24f97bcb-d184-477d-b44d-1f36fc92a82c" name="Default Changelist" comment="" />
+    <list default="true" id="24f97bcb-d184-477d-b44d-1f36fc92a82c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/template_Grid/T83_spaceX.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T83_spaceX_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T84_movie_poster.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T84_movie_poster_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T85_tour_template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T85_tour_template_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T86_10000coders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T86_10000coders_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T87-flipcart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T87_flipcart_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T88_developer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/T88_developer_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/290x180.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/450x250.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/960x360.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/bhai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/bootstrap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/busi1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/busi2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/charan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/css.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/download2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/download3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/download5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/elon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/fashion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/full.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/goa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/grocery.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/hari 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/html.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/images 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/images 6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/images 7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/images 8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/images8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/images9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/iphones.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/java.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/js.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/kajal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/kerala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/mahesh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/manali.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/mean.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/mern.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/mobile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/mohan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/mongo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/murali sir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/node.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/ntr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/pk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/power.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/python.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/ram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/react.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/shoes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/spaceX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/taj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/travel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/vdk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/images/weather.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_Grid/spaceX_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T83_spaceX.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T83_spaceX_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T84_movie_poster.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T84_movie_poster_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T85_tour_template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T85_tour_template_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T86_10000coders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T86_10000coders_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T87-flipcart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T87_flipcart_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T88_developer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/T88_developer_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/290x180.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/450x250.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/960x360.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/bhai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/bootstrap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/busi1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/busi2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/charan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/css.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/download2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/download3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/download5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/elon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/fashion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/full.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/goa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/grocery.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/hari 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/html.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/images 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/images 6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/images 7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/images 8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/images8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/images9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/iphones.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/java.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/js.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/kajal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/kerala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/mahesh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/manali.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/mean.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/mern.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/mobile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/mohan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/mongo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/murali sir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/node.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/ntr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/pk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/power.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/python.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/ram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/react.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/shoes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/spaceX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/taj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/travel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/vdk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template_RWD/images/weather.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T83_spaceX.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T83_spaceX_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T84_movie_poster.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T84_movie_poster_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T85_tour_template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T85_tour_template_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T86_10000coders.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T86_10000coders_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T87-flipcart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T87_flipcart_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T88_developer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/T88_developer_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/290x180.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/450x250.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/960x360.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/bhai.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/bootstrap.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/busi1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/busi2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/charan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/css.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/download.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/download2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/download3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/download5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/elon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/fashion.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/full.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/goa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/grocery.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/hari 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/html.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/images 1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/images 6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/images 7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/images 8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/images.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/images8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/images9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/iphones.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/java.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/js.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/kajal.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/kerala.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/mahesh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/manali.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/mean.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/mern.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/mobile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/mohan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/mongo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/murali sir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/node.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/ntr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/pk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/power.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/python.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/ram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/react.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/shoes.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/spaceX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/taj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/travel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/vdk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates_FlexBox/images/weather.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

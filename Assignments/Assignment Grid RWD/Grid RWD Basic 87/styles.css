@@ -1,0 +1,397 @@
+
+/* ===============
+        Global
+    =============== */
+*{
+    margin:0;
+    padding:0;
+    /* border:1px solid red; */
+}
+/*--------------------------- Elements --------------------------- */
+body{
+    color:#C0BAB6;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:13px;
+}
+h1{
+    font-size:36px;
+    font-weight:normal;
+}
+h2{
+    font-weight:normal;
+    font-size:13px;
+}
+a{
+    text-decoration:none;
+    outline:none;
+}
+ul li{
+    list-style-type: none;
+}
+
+.wrapper{
+    width:100%;
+}
+/*--------------------------- Header--------------------------- */
+
+.row1 {
+    background-color: #333333;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 960px));
+    place-content: center;
+  }
+  header {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(480px,1fr));
+  }
+  /*--------------- Title----------------- */
+  #title a {
+    color: #c0bab6;
+  }
+  /*--------------- Nav bar----------------- */
+  header nav {
+    padding: 20px 0;
+    color: #c0bab6;
+    background-color: #232323;
+  }
+  header nav ul {
+    list-style-type: none;
+    text-transform: uppercase;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(85px,1fr));
+    place-items: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: #c0bab6;
+  }
+/*--------------------------- Home Page--------------------------- */
+.container{
+    padding:30px 0;
+    box-sizing: border-box;
+    color: #979797;
+    width:960px;
+    margin:0 auto;
+    display:grid;
+    /* grid-template-columns:repeat(auto-fit,minmax(900px,960px)) ; */
+    /* place-content: center; */
+}
+#homepage{
+    width:100%;
+    margin:0;
+    box-sizing: border-box;
+    grid-area:1/1/1/3;
+}
+/*---------------Section I ----------------- */
+#section1{
+    margin-bottom:30px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(225px,1fr));
+}
+#section1 article{
+    display:grid;
+    place-items: center;;
+
+}
+#homepage article figure{
+    padding:4px;
+    border: 1px solid #D6D6D6;
+}
+#homepage article figcaption{
+    padding:5px;
+    text-align:center;
+    color:#979797;
+    background-color: #EEEEEE;
+}
+/*---------------Section II ----------------- */
+#homepage #section2{
+    padding: 0 0 20px 0;
+    margin: 0 0 30px 0;
+    border-bottom:1px solid #DEDEDE;
+}
+#homepage #section2 p{
+    line-height:1.8em;
+    font-size:20px;
+    text-align:center;
+} 
+/*--------------------------- Main Cpntent--------------------------- */
+#main{
+    width:630px;
+    line-height:1.6em;
+}
+#section3 ul {
+    display:grid;
+    row-gap: 20px;
+}
+#section3 ul li{
+    width:100%;
+}
+#section3 ul li article figure{
+    /* width:10%; */
+    display:grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+}
+#section3 ul li figure img{
+    padding:4px;
+    border: 1px solid #666666;
+}
+#section3 ul li figcaption{
+    width:100%;
+}
+#section3 ul li figcaption h2{
+    font-size:14px;
+    font-weight:bold;
+    font-style:none;
+    line-height:normal;
+    
+}
+#section3 ul li figcaption p{
+    margin:13px 0;
+    color:#aa9ca4;
+}
+.readmore{
+    text-align:right;
+}
+.readmore a{
+    text-align:right;
+    color: #FF9900 ;
+    background-color: #FFFFFF
+}
+/*--------------------------- Aside--------------------------- */
+aside{
+    width:280px;
+}
+aside h2{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DEDEDE;
+    font-weight:bold;
+    font-size:16px;
+}
+aside nav ul li a{
+    margin-bottom:3px;
+}
+aside nav ul li a{
+    list-style-type: none;
+    display:block;
+    background: url(./images/orange_file.gif) no-repeat 10px center #FFFFFF;
+    padding: 5px 10px 5px 20px;
+    border-bottom: 1px dotted #666666;
+    color: #666666;
+
+}
+/*--------------------------- Footer--------------------------- */
+.row3 {
+    background-color: #232323;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,960px));
+    place-content: center;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* place-content:center; */
+    justify-content: space-between;
+  }
+  footer p {
+    font-size: 13px;
+    padding: 20px 0;
+  }
+
+
+/* ------------------------------------- Media Querie -------------------------------------- */
+
+
+/* ------------------------------------- Mobile -------------------------------------- */
+@media only screen and (max-width: 600px){
+    * {
+        box-sizing: border-box;
+      }
+      .row1{
+        display:block;
+      }
+      header {
+        grid-template-columns: auto;
+      }
+      #title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #title h1 {
+        font-size: 2em;
+      }
+      header nav {
+        padding: 0;
+      }
+      header nav ul {
+        padding: 0;
+        grid-template-columns: auto;
+      }
+      header nav ul li {
+        width:100%;
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid white;
+        justify-content: center;
+        text-align: center;
+      }
+    
+    .container{
+        display:block;
+        padding:30px 10px;
+        width:100%;
+    }
+    #homepage{
+        width:100%;
+    }
+    #homepage #section2 p{
+        line-height:1.8em;
+        font-size:1em;
+        text-align:center;
+    } 
+    #main{
+        width:100%;
+    }
+    #section3 ul{
+        /* grid-template-columns: auto; */
+        margin-bottom:30px;
+    }
+    #section3 ul li article{
+        width:100%;
+    }
+    #section3 ul li article figure{
+        grid-template-columns: auto;
+        place-items: center;
+    }
+    #section3 ul li article img{
+        margin-bottom:20px;
+    }
+    #section3 ul li article h2{
+        text-align:center;
+    }
+    #section3 ul li figcaption{
+        text-align:justify;
+    }
+
+    aside{
+        width:100%;
+        display:grid;
+
+    }
+    aside h2{
+        width:100%;
+        text-align:center;
+    }
+    aside nav{
+        width:100%;
+    }
+    aside nav ul li{
+        display:grid;
+        place-items:center;
+    }
+    aside nav ul li a{
+        width:190px;
+        border:none;
+    }
+    footer {
+        width: 100%;
+        grid-template-columns: auto;
+        place-content: center;
+        place-items: center;
+        padding: 0 10px;
+    }
+}
+
+/* ------------------------------------- Tablet -------------------------------------- */
+@media only screen and (min-width:601px) and (max-width: 768px)
+{
+    * {
+        box-sizing: border-box;
+      }
+      header {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 0;
+      }
+      #title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #title h1 {
+        font-size: 2em;
+      }
+      header nav {
+        width: 100%;
+        padding: 0 50px;
+      }
+      header nav ul {
+        padding: 0;
+        justify-content: space-between;
+      }
+      header nav ul li {
+        padding: 10px;
+      }
+
+    .container{
+        display:block;
+        padding:30px 30px;
+        width:100%;
+    }
+    #section1{
+        grid-template-columns: auto auto;
+        row-gap:30px;
+    }
+    
+    #main{
+        width:100%;
+    }
+    #section3{
+        width:100%;
+        margin-bottom:30px;
+    }
+    #section3 ul li {
+        width:100%;
+        padding:0 20px;
+    }
+    #section3 ul li article{
+        padding:0;
+    }
+    #section3 ul li article figure{
+        place-items: center;
+    }
+    #section3 ul li article img{
+        margin-bottom:20px;
+    }
+    #section3 ul li figcaption{
+        width:100%;
+        padding:0;
+        /* text-align:center; */
+    }
+    
+    aside{
+        width:100%;
+    
+    }
+    aside h2{
+        width:100%;
+        text-align:center;
+    }
+    aside nav{
+        width:100%;
+    }
+    aside nav ul{
+        display: grid;
+        grid-template-columns: auto auto;
+        place-items: center;
+    }
+    aside nav ul li a{
+        width:190px;
+        border:none;
+    }
+    footer{
+    padding: 0 30px;
+  }
+}
