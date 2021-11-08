@@ -93,7 +93,8 @@ nav a {
   order: 2;
 }
 .section1 figure img {
-  width: 100%;
+  width: 630px;
+  height: 300px;
 }
 .section1 figcaption {
   order: 1;
@@ -171,7 +172,7 @@ nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 }
 .section3 article {
   width: 225px;
@@ -181,6 +182,7 @@ nav a {
   border: 1px solid #dedede;
   padding: 4px;
   margin-bottom: 10px;
+  width: 150px;
 }
 .section3 article figcaption h2 {
   font-size: 14px;
@@ -260,9 +262,10 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
-  .section1 figure {
+  .section1 figure img{
     width: 100%;
     order:1;
+    margin: 5px;
   }
   .section1 figcaption {
     order: 2;
@@ -361,8 +364,9 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
-  .section1 figure {
-    width: 100%;
+  .section1 figure img {
+    width: 690px;
+    margin: 10px;
     order:1;
   }
   .section1 figcaption {
