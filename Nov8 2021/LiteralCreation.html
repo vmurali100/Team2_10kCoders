@@ -1,0 +1,57 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <button onclick="addSkill()">addSkill</button>
+        <button onclick="addSalary()">AddSalary</button>
+        <button onclick="delClass()">Delete</button>
+        <button onmouseover="delIns()">DELINS</button>
+        <button ondblclick="addBtn()">WrkAdd</button>
+        <button onclick="btn1()">BTN1</button>
+        <script>
+            var person={fname:"Teja",lname:"Ulisetti",age:25}
+            console.log(person)
+            function addSkill(){
+                person.skill="HTML Developer"
+                console.log(person)
+            }
+            var empl={fname:"Kiran",lanme:"Raja",sal:100000}
+            console.log(empl)
+            function addSalary(){
+                empl["salary"]=100000000;
+                console.log(empl)
+            }
+            var std={name:"Sree",rollno:12345,class:8,marks:98}
+            console.log(std)
+            function delClass(){
+                delete std.class;
+                console.log(std);
+            }
+            var player={name:"Ashok",game:"hockey"}
+            console.log(player)
+            function delIns(){
+                player.rank=22;
+                player["height"]=6.2;
+                delete player.game;
+                console.log(player)
+            }
+            var worker={name:"Teja",workPower:"10hrs"}
+            console.log(worker)
+            function addBtn(){
+                worker.salary=10000
+                worker['Experience']="20 years";
+                delete worker.workPower;
+                console.log(worker)
+            }
+            var wrkr1={name:"Ravi",sal:"1023450"}
+            console.log(wrkr1)
+            function btn1(){
+                wrkr1.experience="5years"
+                wrkr1["lName"]="Teja"
+                delete wrkr1.sal;
+                console.log(wrkr1)
+            }
+        </script>
+    </body>
+</html>

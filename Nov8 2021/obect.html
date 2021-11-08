@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    
+    <body>
+        <button onclick="addSkill()">Add Skill</button>
+        <button onmouseover="addCompany()">AddCompany</button>
+        <script>
+            var person={
+                fname:"Teja",
+                lname:"ulisetti",
+                age:20,
+                isItObject:true
+            }
+            console.log(person)
+            function addSkill(){
+                person.skill="JAVASCRIPT DEVELOPER";
+                console.log(person);
+            }
+            function addCompany(){
+                person["Company"]="hioieoijeoptpoek";
+                console.log(person)
+            }
+        </script>
+    </body></html>

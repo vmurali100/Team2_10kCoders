@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="function1()">Button1</button>
+        <button onclick="funct2()">Button2</button>
+        <script>
+            var person=new Object({fname:"Teja",lName:"Ulisetti"})
+            person.sal="50000"
+            person["experience"]="3years"
+            console.log(person)
+            function function1(){
+                delete person.experience;
+                console.log(person)
+            }
+            var person1=new Object({name:"Shankar"})
+            person1.laname="pamletti"
+            person1["salary"]=100000
+            console.log(person1)
+            function funct2(){
+                person1.isHeAvailable=true;
+                console.log(person1)
+            }
+        </script>
+    </body>
+</html>
