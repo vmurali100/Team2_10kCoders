@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function Employee(fname, lname, email) {
+            this.fname = fname;
+            this.lname = lname;
+            this.email = email
+        }
+
+        var emp1 = new Employee("Murali", "Krishna M")
+        console.log(emp1)
+
+        function person(fname,lname,email,mobile){
+            this.fname=fname;
+            this.lname=lname;
+            this.email=email;
+            this.mobile=mobile
+        }
+        var Person =new person('Hari', 'Vardhan','hari@gmail.com',7989255678)
+        console.log(Person)
+
+        function Bank (user_name, id_number, experience) {
+                this.user_name = user_name;
+                this.id_number = id_number;
+                this.experience = experience;
+        }
+        var bank=new Bank('hari',2345, 3)
+        console.log(bank)
+
+            function Hospital(name, doctors, medicines_supply) {
+                this.name = name;
+                this.doctors = doctors;
+                this.medicines = medicines_supply;
+        }
+        var hospital = new Hospital('KIMS', 4, 'available');
+        console.log(hospital)
+
+        function Course(name, students, mentors, technology) {
+                this.name = name;
+                this.students = students;
+                this.mentors = mentors;
+                this.technology = technology;
+        }
+        
+        var course = new Course('Full_Stack_Developer', 10, 'Murali Sir', '[html,css,java_script,node_js,mongo_DB,React]')
+        console.log(course)
+
+        function B_tech(college_name, student_name, year, branch) {
+                this.college_name = college_name;
+                this.student_name = student_name;
+                this.year = year;
+                this.branch = branch;
+            
+        }
+        var btech= new B_tech('Vijaya College','Punem Harish', 2018, 'CSE')
+        console.log(btech)
+    </script>
+    
+</body>
+</html>

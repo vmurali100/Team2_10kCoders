@@ -16,6 +16,23 @@
         person.lname = "Krishna"
         console.log(person)
 
+        var bank = new Object({name:'SBI'})
+        bank.branches=20
+        bank.email='sbi@gmail.com'
+        console.log(bank)
+
+        var dmart= new Object({items:'groceries,cloths'})
+        dmart.salesman=30
+        dmart.managers=2
+        dmart.email='dmart@gmail.com'
+        console.log(dmart)
+
+        var threatre =new Object({movie_name:'Bachelor'})
+        threatre.rating=4.0
+        threatre.cast='Akhil and Pooja hedge'
+        threatre.overall='good'
+        console.log(threatre)
+
         // Custom Constructor
         function Employee(fname, lname, email) {
             this.fname = fname;
@@ -23,7 +40,7 @@
             this.email = email
         }
 
-        var emp1 = new Employee("Murali","Krishna M")
+        var emp1 = new Employee("Murali", "Krishna M")
         console.log(emp1)
     </script>
 </body>
