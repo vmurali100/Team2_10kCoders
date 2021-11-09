@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="concat"></div>
+    <button onclick="addValue()">GOVERNMENT JOBS</button>
+    <button onclick="addJob()">jobs</button>
+    <script>
+        var results = ""
+        var exams = ["IAS", "SSC", "RAILWAY", "SBI"]
+        function addValue() {
+            exams.forEach((val) => {
+                results += val + "<br>"
+            })
+            console.log(exams)
+            document.getElementById("concat").innerHTML = results
+        }
+        var shows = ""
+        var jobs = ["collector", "railway", "bank", "office"]
+        function addJob() {
+            exams.concat(jobs);
+            jobs.forEach((val) => {
+                results += val + "<br>"
+            })
+            console.log(jobs)
+            document.getElementById("concat").innerHTML = shows
+
+
+    </script>
+</body>
+
+</html>
