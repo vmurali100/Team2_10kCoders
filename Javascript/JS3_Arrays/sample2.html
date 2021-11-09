@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        var students = ["Srikanth", "Taja", "Tejdeep", "Harish"]
+
+        // Adding values to An Array 
+        // students.push("Divya") // Will Add a  value to the end of rhe Array
+        // students.unshift("Rajesh") // Will add a value at the Starting of sn array
+        // students.splice(2,0,"Murali") // Will add a value at given index
+
+        // students.pop()
+        // students.shift()
+        // students.splice(2,1)
+
+        // students.sort()
+        // students.reverse()
+
+        let results = ""
+        for (i = 0; i < students.length; i++) {
+            console.log(students[i])
+            results = results + students[i] + "<br>"
+        }
+        document.getElementById("demo").innerHTML = results
+    </script>
+</body>
+
+</html>
