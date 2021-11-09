@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-image: linear-gradient(red, blue, green);
+            padding: 10px;
+            color: white;
+            border-radius: 50px;
+        }
+
+        button:hover {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="addProperty()">Add-Property</button>
+    <button onclick="delProperty()">Delete-Property</button>
+    <script>
+        var Employee = new Object();
+        Employee.ename = "Narendra"
+        Employee.eid = 143
+        Employee.stream = "stack"
+        console.log(Employee)
+        function addProperty() {
+            Employee.skill = "Full Stack"
+            Employee.role = "Developer"
+            console.log(Employee)
+        }
+        function delProperty() {
+            delete Employee.stream
+            console.log(Employee)
+        }
+    </script>
+</body>
+
+</html>

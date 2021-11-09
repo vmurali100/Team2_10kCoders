@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-image: linear-gradient(red, blue, green);
+            padding: 10px;
+            color: white;
+            border-radius: 50px;
+        }
+
+        button:hover {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="addProperty()">Add-Property</button>
+    <button onclick="delProperty()">Delete-Property</button>
+    <script>
+        var Item = {
+            item1: "Apple",
+            item2: "Mango",
+            item3: "Banana"
+        }
+        console.log(Item)
+        function addProperty() {
+            Item["item4"] = "Orange"
+            Item["item5"] = "Grape"
+            console.log(Item)
+        } 
+        function delProperty() {
+            delete Item["item3"]
+            console.log(Item)
+        }
+    </script>
+</body>
+
+</html>

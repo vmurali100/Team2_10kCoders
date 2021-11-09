@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addSkil()">Add</button>
+    <button onclick="deleteLname()">Delete</button>
+    <script>
+        // literal way
+        var person = new Object({ email: "narendrajammula22@gmail.com", adress: "Katrapadu" });
+        person.fname = "narendra"
+        person.lname = "jammula"
+        person.no = 8074206491
+        person.address = "Guntur"
+        console.log(person)
+        function addSkil() {
+            person.skill = "Full Stack"
+            person.Branch = "CSE"
+            console.log(person)
+        }
+        function deleteLname() {
+            delete person.lname
+            console.log(person)
+        }
+    </script>
+</body>
+
+</html>

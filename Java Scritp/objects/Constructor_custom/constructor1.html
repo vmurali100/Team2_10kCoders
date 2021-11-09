@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-image: linear-gradient(red, blue, green);
+            padding: 10px;
+            color: white;
+            border-radius: 50px;
+        }
+
+        button:hover {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #pe {
+            width: 100px;
+            padding-bottom: 100px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p id="pe" style="background: red;"></p>
+    </div>
+    <button onclick="addSkil()">Add-Properties</button>
+    <button onclick="deleteLname()">Del-Properties</button>
+    <script>
+        function person(fname, lname, no, email, skill) {
+            this.fname = fname;
+            this.lname = lname;
+            this.no = no;
+            this.skill = skill;
+            // this.email = email;
+        }
+
+        var per = new person("jammula", "narendra", 8074206491)
+        // per.fname = "narendra"
+        // per.lname = "jammula"
+        // per.no = 8074206491
+        // per.address = "Guntur"
+        console.log(per)
+        var one = document.getElementById("pe");
+        function addSkil() {
+            per.skill = "Full Stack"
+            per.Branch = "CSE"
+            console.log(per)
+            one.innerHTML = per.Branch
+        }
+        function deleteLname() {
+            delete per.Branch
+            console.log(per)
+        }
+    </script>
+</body>
+
+</html>
