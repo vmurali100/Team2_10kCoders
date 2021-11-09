@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="Ranadeep()">Update Values</button>
+    <div id="mydetails"></div>
+    <script>
+            
+           person = {
+                "fname": "Murali",
+                "lname": "Krishna",
+                "tel": "(244)109-9899",
+                "address": "8352 Sit Ln",
+                "city": "Bangalore",
+                "state": "KA",
+                "zip": 82316
+            }
+        var ranadeep=""
+        for(A in person){
+            console.log(A)
+            ranadeep=ranadeep+person[A]+"<br>"
+        }
+
+            
+            document.getElementById("mydetails").innerHTML=ranadeep
+           
+           </script>
+</body>
+
+</html>

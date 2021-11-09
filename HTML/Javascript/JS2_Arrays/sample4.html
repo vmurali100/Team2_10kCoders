@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="rana"></div>
+    <script>
+        //Adding values to an Array
+       var ranadeep =[ "srikanth","Narendra","akhil","Ervin","Teja","divya"]
+      /* ranadeep.push("Karthik")*/ // Will Add values to an array
+     /* ranadeep.unshift("latha")*/  //will add values at starting of an array
+     ranadeep.splice(3,0,"Akshith",)  //will add values at given index
+     
+
+let results=""
+for(i=0;
+i< ranadeep.length;
+i++) {
+    console.log(ranadeep[i])
+    results=results+ranadeep[i]+"<br>"
+} 
+document.getElementById("rana").innerHTML=results
+    </script>
+</body>
+</html>
