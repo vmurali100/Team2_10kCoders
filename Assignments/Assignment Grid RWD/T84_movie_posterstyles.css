@@ -23,7 +23,7 @@ a {
 }
 
 .row1 {
-  background-color: #0007fe;
+  background-color: #232323;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 960px));
   place-content: center;
@@ -36,7 +36,7 @@ a {
 /* ============================================ Header  ============================================  */
 header {
   padding: 20px 0;
-  background-color: #0007fe;
+  background-color: #232323;
   display: grid;
   grid-template-columns: auto auto;
   row-gap: 10px;
@@ -71,7 +71,7 @@ header form #searchbox {
   padding: 5px;
   border: 1px solid #666666;
   font-size: 12px;
-  background-color: #11bdff;
+  background-color: white;
   font-size: 12px;
   color: white;
 }
@@ -89,7 +89,7 @@ header form #submit {
 
 /* ============================Nav========================== */
 nav {
-  background-color: #11bdff;
+  background-color: #232323;
   grid-area: 2/1/2/3;
   padding: 20px 0;
 }
@@ -108,8 +108,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #0027ba;
-}
+  color: #979797; }
 
 /* ================================================================================================================= */
 
@@ -136,12 +135,12 @@ nav ul li a {
 .section2 {
   padding: 15px;
   /* width: 100%; */
-  background-color: #cdedfa;
+  background-color: #f7bb60;
   margin-bottom: 30px;
 }
 
 .section2 p {
-  color: #439cbe;
+  color: black;
   font-size: 16px;
   line-height: 1.8em;
   text-transform: uppercase;
@@ -191,18 +190,18 @@ nav ul li a {
 .section3 .article strong {
   font-size: 14px;
   font-weight: bold;
-  color: #3986a3;
+  color: solid black;
 }
 
 .section3 .article p {
-  color: #439cbe;
+  color: black;
   padding-top: 5px;
   grid-area: 2/1/2/3;
 }
 
 .readmore {
   grid-area: 3/1/3/3;
-  color: #919191;
+  color: black;
   padding-top: 5px;
   text-align: right;
 }
@@ -243,8 +242,8 @@ nav ul li a {
 
 /* ============================================ Footer ============================================  */
 .row3 {
-  background-color: #11bdff;
-  color: #0027ba;
+  background-color: #232323;
+  color:#979797;  
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 960px));
   place-content: center;
@@ -416,5 +415,4 @@ footer p {
     width: 100%;
     padding: 0 30px;
   }
-}
 }
