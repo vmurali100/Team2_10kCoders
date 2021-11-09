@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>FlipCart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="T87_flipcart_style.css" type="text/css">
+  <style>
+    #header {
+      display: block;
+      width: 960px;
+      margin: 0 auto;
+      overflow: auto;
+
+    }
+
+    #header nav {
+      float: none;
+    }
+
+    #header nav ul li {
+      width: 75px;
+      list-style-type: none;
+      padding: 10px;
+      text-align: center;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+     /* adding over ____________HOVER_________________________________ */
+
+     #header nav ul li:hover  {
+     
+     color: white;
+     background-color: tomato;
+   }
+   #header nav ul li:hover a {
+    
+    color: white;
+    background-color: tomato;
+  }
+
+
+    nav {
+      clear: both;
+      margin: 10px auto;
+      background-color: #232323;
+      padding: 10px;
+      margin: 20px 0;
+    }
+
+    @media only screen and (max-width:768px) {
+      #header {
+        width: 100%;
+      }
+
+      #hrgroup {
+        background-color: black;
+      }
+
+      #header nav ul li {
+        width: 100%;
+        display: block;
+        border-bottom: 3px solid white;
+        margin: 0 auto;
+      }
+
+      #header nav {
+        float: none;
+      }
+
+      nav {
+        padding: 0px;
+      }
+
+      .row2 {
+        background-color: lightskyblue;
+        color: black;
+      }
+
+      #container {
+        width: 100%;
+      }
+
+      #container #slider figure figcaption {
+        width: 100%;
+        display: inline-block;
+        float: none;
+        margin: 0px;
+        padding: 0px;
+
+      }
+
+      #container #slider {
+        width: 100%;
+      }
+
+
+      #container #slider figure img {
+        float: none;
+        width: 100%;
+        padding-bottom: 20px;
+      }
+
+      #services {
+        width: 100%;
+
+      }
+      #container #content{
+        float:none;
+
+      }        
+      
+
+      #container #homepage #services article img {
+        float: left;
+        width: 80px;
+        height: 80px;
+        margin: 0 10px 10px 0;
+        padding: 4px;
+        border: 1px solid #DEDEDE;
+      }
+
+      .clear {
+        width: 100%;
+      }
+
+      .one_quarter {
+        display: block;
+        width: 100%;
+      }
+
+      .last .clear {
+        width: 100%;
+      }
+
+      .three_quarter {
+        width: 100%;
+      }
+
+      .wrapper row3 {
+        width: 100px;
+      }
+
+
+
+      .fl_left {
+        float: left;
+      }
+
+      .fl_right {
+        float: right;
+      }
+
+      #shout {
+        width: 100%;
+
+      }
+
+      #container #shout {
+        width: 100%;
+        text-align: left;
+        display: inline;
+        color: black;
+        border: none;
+      }
+
+      #shout p {
+        background-color: coral;
+      }
+
+      #content #services ul li figure img {
+        width: 100%;
+        float: none;
+        padding-top: 20px;
+
+
+      }
+      #container #content{
+        width: 100%;
+      }
+
+      #content #services ul li figcaption h2,
+      p {
+        float: none;
+        padding: 20px;
+      }
+
+      #container #right_column {
+        float: none;
+        display: inline;
+        width: 100%;
+      }
+      #container #right_column nav ul li{
+        text-align: center;
+      }
+      .title{
+        text-align: center;
+      }
+
+      #footer {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        display: inline;
+      }
+
+      .fl_left {
+        float: left;
+      }
+
+      .fl_right {
+        float: right;
+      }
+
+      .fl_right p a {
+        float: right;
+      }
+
+      .row3,
+      .row3 a {
+        color: #919191;
+        background-color: #232323;
+      }
+
+      #footer {
+        padding: 20px 0;
+      }
+
+      #footer p {
+        margin: 0;
+        padding: auto;
+      }
+      
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">FlipCart</a></h1>
+        <h2>Easy Shopping</h2>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">WishList</a></li>
+          <li><a href="#">Favorites</a></li>
+          <li class="last"><a href="#">Wallet</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <div id="homepage">
+        <section id="latest" class="clear">
+          <article class="one_quarter">
+            <figure><img src="images/mobile.jpg" width="215" height="315" alt="">
+              <figcaption>Electronics</figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/grocery.jpg" width="215" height="315" alt="">
+              <figcaption>Grocery</figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter">
+            <figure><img src="images/home.jpg" width="215" height="315" alt="">
+              <figcaption>Home</figcaption>
+            </figure>
+          </article>
+          <article class="one_quarter lastbox">
+            <figure><img src="images/travel.jpg" width="215" height="315" alt="">
+              <figcaption>Travel</figcaption>
+            </figure>
+          </article>
+        </section>
+        <section id="shout">
+          <p>Spot & Steal Deals for a Limited Time Period. Get Contactless & Save Delivery. Buy Now! 20%-80% off on all
+            products. Get Contactless & Save Delivery. Huge Collection Available.</p>
+        </section>
+      </div>
+      <div id="content">
+        <section id="services" class="last clear">
+          <ul>
+            <li>
+              <article class="clear">
+                <figure><img src="images/iphones.jpg" alt="">
+                  <figcaption>
+                    <h2>IPhones</h2>
+                    <p>iPhone 6. iPhone SE (1st generation) Sierra blue, silver, gold and graphite.<a
+                        href="https://www.os-templates.com/" title="Free Website Templates">Ios link</a> 15.4 cm
+                      (6.1-inch) Super Retina XDR display with ProMotion technology, HDR and True Tone 1<a
+                        href="https://www.os-templates.com/template-terms">iphone</a>.</p>
+                    <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+            <li class="last">
+              <article class="clear">
+                <figure><img src="images/shoes.jpg" alt="">
+                  <figcaption>
+                    <h2>Shoes</h2>
+                    <p>There are many brands that offer lightweight shoes, like Reebok shoes, Adidas shoes and many
+                      more, like the Fila Colourblocked Drebo, for instance.<a href="https://www.os-templates.com/">
+                        Shoes</a>.</p>
+                    <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                  </figcaption>
+                </figure>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <aside id="right_column">
+        <h2 class="title">Categories</h2>
+        <nav>
+          <ul>
+            <li><a href="#">Gaming</a></li>
+            <li><a href="#">Health Care</a></li>
+            <li><a href="#">Toys</a></li>
+            <li><a href="#">Power Banks</a></li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Headsets</a></li>
+            <li><a href="#">Tools & Utility</a></li>
+            <li><a href="#">Lightining</a></li>
+            <li><a href="#">Air Conditioners</a></li>
+            <li class="last"><a href="#">Buying Guide</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </div>
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">FlipCart</a></p>
+      <p class="fl_right">Developed By<a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates"> Hari Vardhan</a></p>
+    </footer>
+  </div>
+</body>
+
+</html>
