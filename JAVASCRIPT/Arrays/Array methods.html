@@ -29,6 +29,9 @@
         .del{
             grid-area:2/1/2/3;
         }
+        .splice{
+          display:grid;
+        }
     </style>
   </head>
   <body>
@@ -46,7 +49,23 @@
         <button onclick="push()">Add value at End</button>
         <button onclick="pop()" class="del">Remove value at End</button>
       </div>
+
+      <div id="splice" class="splice">
+        <input type="text" id="indexValue" placeholder="Index"/>
+        <input type="text" id="delValue" placeholder="No. of elements to remove"/>
+        <input type="text" id="spliceValue" placeholder="Enter value to add "/>
+        <button onclick="splice()">Add value (splice)</button>
+      </div>
+
+      <div id="sort-reverse" class="splice">
+        <button onclick="sort()" >Sort</button>
+        <button onclick="reverse()">Reverse</button>
+      </div>
+
     </div>
+
+    
+
 
     <script>
       var states = [
@@ -112,6 +131,55 @@
         }
         document.getElementById("display").innerHTML = result;
       }
+
+      function splice()
+      {
+        var index = document.getElementById("indexValue").value;
+        var delvalue = document.getElementById("delValue").value;
+        var userInput = document.getElementById("spliceValue").value;
+        if (userInput != "" && index !="" && delvalue!="")
+         {
+          states.splice(index,delvalue,userInput);
+          console.log(states);
+        }
+
+        result = "";
+        for (i = 0; i < states.length; i++) {
+          console.log(states[i]);
+          result += states[i] + "<br>";
+          console.log(result);
+        }
+        document.getElementById("display").innerHTML = result;
+
+        document.getElementById("indexValue").value = "";
+        document.getElementById("delValue").value = "";
+        document.getElementById("spliceValue").value = "";  
+      }
+
+      function sort()
+      {
+        states.sort();
+        result = "";
+        for (i = 0; i < states.length; i++) {
+          console.log(states[i]);
+          result += states[i] + "<br>";
+          console.log(result);
+        }
+        document.getElementById("display").innerHTML = result;
+      }
+
+      function reverse()
+      {
+        states.reverse();
+        result = "";
+        for (i = 0; i < states.length; i++) {
+          console.log(states[i]);
+          result += states[i] + "<br>";
+          console.log(result);
+        }
+        document.getElementById("display").innerHTML = result;
+      }
+
     </script>
   </body>
 </html>
