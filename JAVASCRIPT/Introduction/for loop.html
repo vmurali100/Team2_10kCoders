@@ -7,19 +7,27 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="details"></div>
     <button onclick = "updateDetails()">Update</button>
     <script>
         var person = {
-            fname: Ervin,
-            lname: prabhu,
+            fname: "Ervin",
+            lname: "prabhu",
             age: 24,
-            state: AP,
+            state: "AP",
             zipcode: 534112
         }
         var allinfo = "";
-        for(a in )
-        function updateDetails(){
+        for(a in person)
+        {
+            console.log(person[a]);
+            allinfo = allinfo + person[a] + "<br>";
+        }
 
+        function updateDetails()
+        {
+            
+            document.getElementById("details").innerHTML = allinfo;
         }
     </script>
 </body>
