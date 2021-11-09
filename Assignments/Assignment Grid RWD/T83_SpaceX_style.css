@@ -231,7 +231,7 @@ footer p {
 @media only screen and (max-width: 600px) {
   * {
     box-sizing: border-box;
-    padding: 0;
+    padding: 5px;
     margin-right: 0;
   }
 
@@ -346,5 +346,4 @@ footer p {
   footer {
     padding: 0 30px;
   }
-}
 }
