@@ -11,6 +11,7 @@
 <body>
     <button onclick="addSkills()">add skill</button>
     <button onclick="scriptType()">type of script</button>
+    <button onclick="gender()">gender</button>
 
     <script>
         var person = {
@@ -31,7 +32,11 @@
         }
         function gender() {
             person.gender = "male"
+            person.section="b"
+            person["qualification"]="degree"
             console.log(person)
+            
+            
         }
     </script>
 </body>
