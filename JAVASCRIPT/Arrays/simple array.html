@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <div id="display"></div>
-    <button onclick = "display()">Display Array</button>
+    <button onclick="pop()">POP</button>
+
     <script>
-        var states = ["Andhra Pradesh", "Tamilnadu", "Telengana", "Karnataka", "kerala"];
-        var result = "";
-                  
-        for(i=0; i<states.length; i++)
-        {
-            console.log(states[i]);
+      var states = [
+        "Andhra Pradesh",
+        "Tamilnadu",
+        "Telengana",
+        "Karnataka",
+        "kerala",
+      ];
+      var result = "";
 
-            
-            result += states[i] + "<br>";
-            console.log(result);
-        }
-        function display()
-        {
-            states.splice(1,0,"Ervin");
-            console.log(states)
-            document.getElementById("display").innerHTML = result;
-        }
+      states.forEach((val) => {
+        result = result + (val + "<br>");
+        console.log(result);
+      });
+      document.getElementById("display").innerHTML = result;
 
-        
+      console.log(states);
+      function pop()
+      {
+          states.pop();
+          console.log(states);
+      }
+
     </script>
-</body>
+  </body>
 </html>
