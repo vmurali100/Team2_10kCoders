@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="updateValues()">Update Values</button>
+    <div id="myDetails"></div>
+    <script>
+        var person = {
+            "fname": "xyz",
+            "lname": "yzx",
+            "tel": "2546546545",
+            "address": "jntu",
+            "city": "hyd",
+            "state": "telangana",
+            "zip": 4545534
+        }
+
+        function updateValues() {
+            person = {
+                "fname": "xyz",
+                "lname": "yzo",
+                "tel": "5465416541",
+                "address": "jntuh",
+                "city": "hyderabad",
+                "state": "telangana",
+                "zip": 5432556
+            }
+            var allInfo = ""
+
+            for (a in person) {
+                console.log(a)
+                allInfo = allInfo + person[a]+"<br>"
+            }
+
+            document.getElementById("myDetails").innerHTML = allInfo
+                             person.tel
+        }
+    </script>
+</body>
+
+</html>
