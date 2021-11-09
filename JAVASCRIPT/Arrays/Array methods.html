@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container{
+            width:960px;
+            margin:0 auto;
+            display:grid;
+            grid-template-columns: auto;
+            place-items: center;
+            place-content: center;
+            row-gap:20px;
+        }
+        #display{
+            /* width:100%; */
+            padding:20px;
+            border:1px solid red;
+        }
+        .buttondiv{
+            display:grid;
+            grid-template-columns: auto auto;
+            place-items: center;
+            row-gap:10px;
+        }
+        .del{
+            grid-area:2/1/2/3;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="display"></div>
+
+      <div id="shift-unshift" class="buttondiv">
+        <input type="text" id="unshiftValue" placeholder="Enter value to add at start"/>
+        <button onclick="unshift()">Add value at start</button>
+        <button onclick="shift()" class="del">Remove value at start</button>
+      </div>
+
+      <div id="push-pop" class="buttondiv">
+        <input type="text" id="pushValue" placeholder="Enter value to add at End"/>
+        <button onclick="push()">Add value at End</button>
+        <button onclick="pop()" class="del">Remove value at End</button>
+      </div>
+    </div>
+
+    <script>
+      var states = [
+        "Andhra Pradesh",
+        "Tamilnadu",
+        "Telengana",
+        "Karnataka",
+        "kerala",
+      ];
+      var result = "";
+
+      for (i = 0; i < states.length; i++) {
+        console.log(states[i]);
+        result += states[i] + "<br>";
+        console.log(result);
+      }
+
+      document.getElementById("display").innerHTML = result;
+
+      function push() {
+        var userInput = document.getElementById("pushValue").value;
+        if (userInput != "") {
+          result += states[states.push(userInput) - 1] + "<br>";
+          document.getElementById("display").innerHTML = result;
+        }
+        document.getElementById("pushValue").value = "";
+        console.log(result);
+      }
+
+      function pop() {
+        states.pop();
+        console.log(states);
+        result = "";
+        for (i = 0; i < states.length; i++) {
+          console.log(states[i]);
+          result += states[i] + "<br>";
+          console.log(result);
+        }
+        document.getElementById("display").innerHTML = result;
+      }
+
+      function unshift() {
+        var userInput = document.getElementById("unshiftValue").value;
+        if (userInput != "") {
+          states.unshift(userInput);
+          console.log(states);
+          result = states[0] + "<br>" + result;
+          console.log(result);
+          document.getElementById("display").innerHTML = result;
+        }
+        document.getElementById("unshiftValue").value = "";
+        console.log(result);
+      }
+
+      function shift() {
+        states.shift();
+        console.log(states);
+        result = "";
+        for (i = 0; i < states.length; i++) {
+          console.log(states[i]);
+          result += states[i] + "<br>";
+          console.log(result);
+        }
+        document.getElementById("display").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

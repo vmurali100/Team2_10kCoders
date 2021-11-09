@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="display"></div>
+    <button onclick = "display()">Display Array</button>
+    <script>
+        var states = ["Andhra Pradesh", "Tamilnadu", "Telengana", "Karnataka", "kerala"];
+        var result = "";
+                  
+        for(i=0; i<states.length; i++)
+        {
+            console.log(states[i]);
+
+            
+            result += states[i] + "<br>";
+            console.log(result);
+        }
+        function display()
+        {
+            document.getElementById("display").innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>
