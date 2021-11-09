@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        var students = ["Srikanth", "Taja", "Tejdeep", "Harish","Hema"]
+
+        var resutls = "";
+        // TO Iterate An Array
+
+        // function(){} // ES 5
+        // ()=>{} // ES6  Array function or Fat Arrow Function
+        var newStudetns = students.map((val)=>{
+            return val+"_10K"
+        })
+        newStudetns.forEach(val => {
+            // resutls = resutls + val
+            resutls += val+"<br>"
+        });
+
+        var ch4 = students.find((student)=>{
+            return student.length == 4
+        })
+
+        var ch4 = students.filter((student)=>{
+            return student.length == 4
+        })
+
+        // var check4 = students.every((val)=>{
+        //     return val.length ===4
+        // })
+
+        var check4 =students.some((val)=>{
+            return val.length > 7
+        })
+        console.log(check4)
+        console.log(ch4)
+        document.getElementById("demo").innerHTML = resutls
+    </script>
+</body>
+
+</html>
