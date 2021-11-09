@@ -1,0 +1,47 @@
+<html>
+    <body>
+        <div id="mydiv"></div>
+        <div id="mydiv1"></div>
+        <div id="mydiv2"></div>
+        <div id="del1"></div>
+        <button onclick="displayArray()">DisplayArray</button><br><br>
+        <button onclick="add()">AddinganElt</button><br><br>
+        <button onclick="add1()">AddinganEltatStart</button><br><br>
+        <button onclick="del()">DeletingEndArray</button>
+        <script>
+            var guitars=["rock_guitars","pop_guitars","classical_guitars"]
+            var val=""
+            var vals=""
+            function  displayArray(){
+                for(i=0;i<guitars.length;i++){
+                    val=val+guitars[i]+"<br>"
+                    console.log(guitars)
+                }
+                document.getElementById("mydiv").innerHTML=val;
+            }
+            function add(){
+                guitars.push("fingerstyle_guitar")
+                for(a in guitars){
+                vals=vals+guitars[a]+"<br>"
+            }
+            document.getElementById('mydiv1').innerHTML=vals;
+            }
+            function add1(){
+                guitars.unshift("rocks1");
+                vals1=""
+                for(i=0;i<guitars.length;i++){
+                    vals1=vals1+guitars[i]+"<br>"
+                }
+                document.getElementById("mydiv2").innerHTML=vals1
+            }
+            function del(){
+                guitars.pop()
+                vals1=""
+                for(a in guitars){
+                    vals1=vals1+guitars[a]+"<br>"
+                }
+                document.getElementById("del1").innerHTML=vals1
+            }
+        </script>
+    </body>
+</html>

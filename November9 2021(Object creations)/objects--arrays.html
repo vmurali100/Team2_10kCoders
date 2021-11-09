@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <div id="mydiv"></div>
+        <div id="mydiv1"></div>
+        <button onclick="displayValues()">DisplayValues</button><br><br>
+        <button onclick="displayKeys()">DisplayKeys</button>
+        <script>
+            var students={
+                fname:"teja",
+                lname:"Ulisetti",
+                age:25,
+                marks:100
+            }
+            var studentvalues=Object.values(students);
+            var studentkeys=Object.keys(students);
+            console.log(studentvalues)
+            console.log(studentkeys)
+            var val=""
+            var key=""
+            function displayValues() {
+                for(a in studentvalues){
+                    console.log(studentvalues)
+                    val=val+studentvalues[a]+"<br>"
+                }
+                document.getElementById("mydiv").innerHTML=val                               
+            }
+            function displayKeys(){
+                for(i=0;i<studentkeys.length;i++){
+                    console.log(studentkeys)
+                    key=key+studentkeys[i]+"<br>"
+                }
+                document.getElementById("mydiv1").innerHTML=key;
+            }
+        </script>
+    </body>
+</html>

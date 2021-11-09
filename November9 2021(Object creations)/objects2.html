@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div id="mydiv"></div>
+        <button onclick="prin()">PrintObjects</button>
+        <script>
+            var students={
+                fname:"Teja",
+                lname:"Ulisetti",
+                age:50,
+                subject:"maths"
+            }
+            var values=""
+            for(a in students){
+                    console.log(a)
+                    values=values+a+"<br>"
+                }
+            function prin(){
+                document.getElementById("mydiv").innerHTML=values;
+             }
+        </script>
+    </body>
+</html>

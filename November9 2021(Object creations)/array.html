@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <div id="mydiv"></div>
+        <button onclick="display()">DisplayValues</button>
+        <script>
+            var students=["Teja","Srikanth","Ravi","Ervin"]
+            var values=""
+            function display() {
+                for(i=0;i<students.length;i++){
+                    values=values+students[i]+"<br>"
+                    console.log("value at "+i+" is"+" "+students[i])
+                }
+                document.getElementById("mydiv").innerHTML=values;
+                
+            }
+
+        </script>
+    </body>
+</html>
