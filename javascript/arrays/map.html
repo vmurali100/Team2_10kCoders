@@ -1,0 +1,17 @@
+<div id="demo"></div>
+    <script>
+        var student = ["abc", "bca", "cad", "def","fgh"]
+
+        var results = "";
+       
+        var newStudent = student.map((val)=>{
+            return val+"52"
+        })
+        newStudent.forEach(val => {
+            results += val+"<br>"
+        });
+        document.getElementById("demo").innerHTML = results
+
+        </script>
+        </body>
+        </html>
