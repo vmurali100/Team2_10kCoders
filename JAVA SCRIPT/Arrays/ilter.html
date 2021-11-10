@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+
+        const items = [
+            { name: 'BIke' , price: 100 },
+            { name: 'Car' , price: 200 },
+            { name: 'Book' , price: 300 },
+            { name: 'TV' , price: 400 }
+        ]
+
+        const filteredItems = items.filter((item) => {
+            return item.price <= 500
+        })
+        console.log(items)
+        console.log(filteredItems)
+    </script>
+</body>
+
+</html>
