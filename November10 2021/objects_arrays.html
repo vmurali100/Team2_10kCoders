@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="display()">DisplayButton</button>
+        <div id="mydiv"></div>
+        <button onclick="add()">ADD</button>
+        <div id="mydiv1"></div>
+        <script>
+            var emps={
+                fname:"teja",
+                lname:"Ulisetti",
+                sal:6000000,
+                isCertified:true,
+           
+            }
+            function display(){
+                val=""
+                for(i in emps){
+                    val+=i+"<br>"
+                }
+                document.getElementById("mydiv").innerHTML=val
+            }
+            function add(){
+                val1=""
+                emps.hike=20000
+                for(i in emps){
+                    val1=val1+i+"<br>"
+                }
+                document.getElementById("mydiv1").innerHTML=val1
+            }
+        </script>
+    </body>
+</html>

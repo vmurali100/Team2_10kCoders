@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+        <button onclick="display()">Display Arr1</button>
+        <div id="mydiv"></div>
+        <button onclick="displaya()">DisplayForEach</button><br>
+        <div id="mydiv1"></div>
+        <button onclick="display2()">MAPPING</button>
+        <div id="mydiv2"></div>
+        <script>
+            var arr1=["teja","satish","ravi","raj","madhu"]
+            arrvalues=""
+            function display() {
+                var words4 = arr1.reverse()
+                document.getElementById("mydiv").innerHTML=words4;                
+            }
+            var arr2 = ["bharu","padma","chinni","jyothi"]
+            arr2values=""
+            function displaya() {
+                arr2.forEach(function(anyReferce) {
+                    arr2values+=anyReferce+"<br>"
+                })
+                document.getElementById("mydiv1").innerHTML=arr2values;  
+                
+            }
+            function display2() {
+                var maps=arr2.map((anyRefer)=>{
+                    return anyRefer+"_sister"
+                    console.log(maps)
+                })
+                document.getElementById("mydiv2").innerHTML=maps;
+            }
+        </script>
+    </body>
+</html>
