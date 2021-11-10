@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>types of objects</title>
+</head>
+<body>
+    <script>
+        var amazon = new Object ({fname:"amazon"})
+        {
+        amazon.location = "entite world" ;
+        amazon.founder ="jeff";
+        }
+        console.log(amazon)
+ 
+        // var flipkart = new Object ({flipkart,entiteworld, 100 })
+        // {
+        //     this.fname= "flipkart";
+        //     this.location ="entire world";
+        //     this.income =100;
+        // }
+        // console.log(flipkart)
+
+        function employee(name,skill,location){
+            this.name = name ;
+            this.skill = skill;
+            this.location = location 
+
+        }
+        var employee = new employee ("akhil" , "dveloper", "wgl")
+        console.log(employee);
+    </script>
+</body>
+</html>

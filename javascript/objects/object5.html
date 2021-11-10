@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>displaying keys and values </title>
+</head>
+
+<body>
+    <script>
+        var dj = {
+            "name": "marshmello",
+            "country": "usa" ,
+            "song": "stars",
+             "fname": "Murali",
+            "lname": "Krishna",
+            "tel": "(244)109-9899",
+            "address": "8352 Sit Ln",
+            "city": "Bangalore",
+            "state": "KA",
+            "zip": 82316
+        }
+    console.log(Object.keys(dj))
+    document.write(Object.values(dj))  
+    
+     var bigRoom = Object.values(dj)
+
+     for (i=0; i< bigRoom.length ; i++){
+         document.write(bigRoom[i] + "<br>")
+     }
+    </script>
+</body>
+
+</html>

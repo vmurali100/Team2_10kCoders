@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> adding to a object</title>
+</head>
+<body>
+    <div id="myself"></div>
+    <button onclick="addSkills()">addskill</button>
+    <button onclick="addExp()">add exp</button>
+    <button onclick="delEmail()">Delete</button>
+<script>
+    var person = {
+
+        fname:"akhil varma",
+        lname:"ankathi",
+        mobile:9010902696,
+        email: "akhilankathi@gmail.com",
+
+    }
+    
+    document.getElementsById(myself).innerHTML= person;
+
+      function addSkills(){
+          person.skill = "developer";
+          console.log(person)
+      }
+      function addExp(){
+          person.exp = "5years";
+          document.getElementsByName(person);
+      }
+      function delEmail(){
+          delete person.email;
+          console.log(person)
+      }
+</script>
+</body>
+</html>

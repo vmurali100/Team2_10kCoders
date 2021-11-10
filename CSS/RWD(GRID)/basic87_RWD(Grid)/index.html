@@ -15,23 +15,37 @@
     body {
       background-color: rgb(235, 235, 235);
     }
+    #whole{
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 960px auto;
+      grid-template-rows: 170px 980px 70px;
+    }
+    header {
+      width: 100%;
+      margin: 0 auto;
+      overflow: auto;
+      background-color: #333333;
+    }
 
     #top {
       width: 960px;
       margin: 25px auto;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      display: grid;
+      grid-template-columns: 180px auto 380px;
+      grid-template-rows: 100%;
+      
     }
 
     #link {
-      float: right;
       height: 90px;
       padding-top: 10px;
+      grid-column: 3/4;
+      grid-row: 1/2;
     }
-
-    #image {
-      width: 215px;
-      height: 315px;
-    }
-
+    
     #avc_sp1 {
       font-weight: bold;
       font-size: 50px;
@@ -43,26 +57,19 @@
       color: whitesmoke;
     }
 
-    header {
-      width: 100%;
-      margin: 0 auto;
-      overflow: auto;
-      background-color: #333333;
-    }
+   
 
-    #avicii {
-      float: left;
-    }
+    
 
     #link ul {
       background: black;
-      padding: 6px;
+      padding: 0px;
+      display: grid;
+      grid-template-columns: 15% 20% 25% 20% 20%;
     
     }
 
     #link li {
-      display: inline-block;
-      margin-left: 10px;
       padding: 10px;
     }
     
@@ -73,9 +80,17 @@
       text-decoration: none;
     }
 
+    #image {
+      width: 215px;
+      height: 315px;
+    }
+
+
     section {
       width: 960px;
       margin: 25px auto;
+      grid-column: 2/3;
+      grid-row: 2/3;
     }
 
     #d1 img {
@@ -506,6 +521,7 @@
 </head>
 
 <body>
+ <div>
   <header>
     <main id=top>
       <div id=avicii>
@@ -603,6 +619,7 @@
 
   </div>
 
+ </div>
 
 </body>
 

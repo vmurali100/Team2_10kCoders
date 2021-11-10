@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>push</title>
+    <style>
+        #demo {
+            width: 300px;
+            height: auto;
+            margin: 0px auto;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo2"></div>
+    <button onclick="addValue()"> add New</button>
+    <button onmouseover="removeFirstLast()">Remove</button>
+    <script>
+        var djs = ["skrillex" , "marshmello" , "martin garrix" , "avicii" , "nucleya"];
+        
+        var djmag = "" ;
+
+        for (i=0 ; i<djs.length ; i++){
+            djmag+= djs[i] + "<br>"
+            console.log(djmag)
+        }
+        
+
+    //     function addValue() {
+    //         djs.push("alan walker");
+    //         djs.unshift("zedd")
+    //         for (i=0 ; i < djs.length ; i++){
+    //             // console.log(djs[i]);
+    //             djmag += djs[i] + "<br>" ;
+
+    //             document.getElementById("demo").innerHTML= djmag;
+    //         }
+            
+           
+            
+    //     }
+    //    function removeFirstLast(){
+
+    //     //    djs.shift();
+    //     //    djs.pop();
+
+    //     //    document.getElementById("demo").innerHTML= djmag;
+    //    }
+        
+    </script>
+   
+</body>
+</html>
