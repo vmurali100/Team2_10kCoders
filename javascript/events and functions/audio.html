@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style:none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 300%;
+            font-size: large;
+        }
+
+        #myAudio {
+            text-align: center;
+            margin-top: 40px;
+        }
+        li:hover{
+
+            
+            padding:10px;
+            color:brown
+        }
+
+        #audio {
+            width: 900px;
+            height: 500px;
+            text-align: center;
+            margin: auto;
+            background-image: url("./image1.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <div id="audio">
+
+        <audio controls id="myAudio">
+            <source src="./audio1.mp3" type="audio/mpeg">
+            <source src="./audio2.mp3" type="audio/mpeg">
+            <source src="./audio3.mp3" type="audio/mpeg">
+            <source src="./audio4.mp3" type="audio/mpeg">
+
+        </audio>
+
+        <ul id="mySongs">
+            <li>audio1</li>
+            <li>audio2</li>
+            <li>audio3</li>
+            <li>audio4</li>
+        </ul>
+    </div>
+
+    <script>
+        var myPlayer = document.getElementById("myAudio")
+
+        document.getElementById("mySongs").onclick = function (event) {
+            myPlayer.setAttribute("src", `./${event.target.innerHTML}.mp3`)
+            if (myPlayer.paused) {
+                myPlayer.play()
+            } else {
+                myPlayer.pause()
+            }
+        }
+        function playSongs() {
+            if (myPlayer.paused) {
+                myPlayer.play()
+            } else {
+                myPlayer.pause()
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #video {
+            width: 800px;
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #button{
+            width: 800px;
+            margin: auto;
+            text-align: center;
+            }   
+        button{
+            color:crimson;
+            background-color: cyan;
+            padding:10px;
+            width:100px;
+        } 
+        button:hover{
+            color:darkmagenta;
+        } 
+       
+    </style>
+</head>
+<body>
+    <div id=button>
+    <button onclick="playPause()">Play/Pause</button>
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    </div>
+    <div id=video>
+        <video controls id="myvideo">
+            <source src="./videos/video2.mp4" type="video/mp4">
+        </video>
+    </div>
+    <script>
+        var videoEelement = document.getElementById("myvideo")
+
+        function playPause() {
+
+            if (videoEelement.paused) {
+                videoEelement.play()
+            } else {
+                videoEelement.pause()
+            }
+        }
+        function makeBig() {
+            videoEelement.style.width="900px"
+        }
+        function makeSmall() {
+            videoEelement.style.width="600px"
+        }
+
+        function makeNormal() {
+            videoEelement.style.width=""
+
+        }
+    </script>
+</body>
+
+</html>
