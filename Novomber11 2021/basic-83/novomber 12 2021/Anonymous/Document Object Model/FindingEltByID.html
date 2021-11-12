@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <p id="para">This paragraph was in Headpart</p>
+    </head>
+    <body>
+        <button onclick="display()">Display</button>
+        <p id="para">This paragraph was in Body part</p>
+        <div id ="mydiv"></div>
+        <script>
+            var ids = document.getElementById("para")
+            console.log(ids)
+
+            var ids = document.querySelector("#para")
+            console.log(ids)
+
+            var ids = document.querySelectorAll("#para")
+            console.log(ids)
+
+            var ids = document.querySelectorAll("#para")[0]
+            console.log(ids)
+
+            var ids = document.querySelectorAll("#para")[1].innerText
+            console.log(ids)
+            function display() {
+                var ids = document.querySelectorAll("#para")
+                var ids1=""
+                for(a in ids){
+                    var ids1=ids1+ids[a]
+                    console.log("this output is through for loop:",ids[a])
+                }
+                document.getElementById("mydiv").innerHTML=ids1
+            }
+        </script>
+    </body>
+</html>

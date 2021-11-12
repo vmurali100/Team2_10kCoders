@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <h2>This is Heading1</h2>
+<body>
+    <h2>This Is Heading2</h2>
+<script>
+    //Displays Array
+    var elts = document.getElementsByTagName("h2")
+    console.log(elts)
+
+
+    //Displays Specified Index positioned Element with Tags
+    var elts1 = document.getElementsByTagName("h2")[0]
+    console.log("Displays Specified Index positioned Element with Tags",elts1)
+    var elts1 = document.getElementsByTagName("h2")[1]
+    console.log("Displays Specified Index positioned Element with Tags",elts1)
+
+    //Displays only text Without tags
+    var elts2 = document.getElementsByTagName("h2")[0].innerText
+    console.log("Displays only text Without tags",elts2)
+
+    //Trying To use For Loop
+    for(a in elts){
+        console.log("Execution through for loop",elts[a])
+    }
+    
+    //Using another formats
+    var elts3 = document.querySelector("h2")
+    console.log(elts3)
+
+    var elts3 = document.querySelector("h2").innerText
+    console.log(elts3)
+
+    var elts4 = document.querySelectorAll("h2")
+    console.log(elts4)
+
+    var elts4 = document.querySelectorAll("h2")[0]
+    console.log(elts4)
+
+    var elts4 = document.querySelectorAll("h2")[1].innerText
+    console.log(elts4)
+</script>
+
+</body>
+</html>

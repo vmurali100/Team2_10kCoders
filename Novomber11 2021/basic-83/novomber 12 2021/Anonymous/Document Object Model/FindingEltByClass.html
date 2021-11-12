@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <h2 class="similar">This is Heading1</h2>
+    </head>
+    <body>
+        <h2 class="similar">This is Heading2</h2>
+        <script>
+            //getElemetsByClassName
+            var clselts = document.getElementsByClassName("similar")
+            console.log(clselts)
+
+            var clselts = document.getElementsByClassName("similar")[0]
+            console.log(clselts)
+
+            var clselts = document.getElementsByClassName("similar")[1].innerText
+            console.log(clselts)
+
+            //QuerySelector
+            var clselts1 = document.querySelector(".similar")
+            console.log(clselts1)
+
+            var clselts1 = document.querySelector(".similar").innerHTML
+            console.log(clselts1)
+
+            //QuerySelectorAll
+            var clselts2 = document.querySelectorAll(".similar")
+            console.log(clselts2)
+             
+            var clselts2 = document.querySelectorAll(".similar")[0]
+            console.log(clselts2)
+
+            var clselts2 = document.querySelectorAll(".similar")[1].innerText
+            console.log(clselts2)
+        </script>
+    </body>
+</html>
