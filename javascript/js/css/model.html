@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        @keyframes d {
+            from {
+                transform: scale(0.1)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .main {
+            width: 400px;
+            margin: auto;
+        }
+
+        #smallImage {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #overlay {
+            position: absolute;
+            transition: 2s;
+            background-color: rgba(0, 0, 0, 0.9);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            display: none;
+            text-align: center;
+
+        }
+
+        #myImage {
+            animation-name: d;
+            animation-duration: 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="../image1.jpg" alt="" id="smallImage" onclick="showModal()">
+    </div>
+
+    <div id="overlay">
+        <img src="../image1.jpg" alt="" id="myImage">
+    </div>
+
+    <script>
+        function showModal() {
+            var overLay = document.getElementById("overlay")
+            overLay.style.display = "block"
+            
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>
