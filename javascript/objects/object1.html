@@ -4,36 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>peerson details </title>
+    <title>person details </title>
 </head>
 <body>
-    <button onclick="updateValues()""> click to update</button>
+    <!-- <button onclick="updateValues()""> click to update</button> -->
     <div id=myDetails></div>
     <script>
         
-       var person = {
-            "name":"akhil",
-            "age":24,
-            "state":"tg",
-            "dist":"wgl"
-        }
-        function updateValues(){
-           person = {
-            "name":"varma",
-            "age":28,
-            "state":"tg",
-            "dist":"kmm"
-           }
-        }
-        var allInfo = "" 
+       var p1 =  new persons(
+            "akhil",
+            24 ,
+            "tg" ,
+        "wgl"
+        )
+
+        // document.getElementById("myDetails").innerHTML = person.age;
+
+
+        function  persons (name , age , state , dist){
+            this.name =  name ;
+            this.age = age ;
+             this.state =  state ;
+             this.dist =  dist ;
+        } 
+ var p2 = new persons ("ajay" , 27 , "hyd" , "shamshabad" );
+
+ document.getElementById("myDetails").innerHTML =  p1.age(37) ;
+
         
 
-            for (a in person) {
-                // console.log(a)
-                allInfo = allInfo + person[a]+"<br>"
-                // allInfo=person[a]
+        // function updateValues(){
+        //     var allInfo = "" 
+        //    person = {
+        //     "name":"varma",
+        //     "age":28,
+        //     "state":"tg",
+        //     "dist":"kmm"
+        //    }
+        //     for (a in person) {
+        //         // console.log(a)
+        //         allInfo = allInfo + person[a]+"<br>"
+        //         // allInfo=person[a]
             
-        }
+        // }
+        //    }
+        
+        // var allInfo = "" 
+        
+
+        //     // for (a in person) {
+        //     //     // console.log(a)
+        //     //     allInfo = allInfo + person[a]+"<br>"
+        //     //     // allInfo=person[a]
+            
+        
         document.getElementById("myDetails").innerHTML = allInfo 
     </script>
 </body>

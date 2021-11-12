@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else condition </title>
+</head>
+<body>
+<input type="number" id="reach" placeholder="enter a number" value=""/>
+    <button onclick="active()">find even or odd</button>
+    <button onclick="activePosive()">find + or - </button>
+    <div id="get"></div>
+    <script>
+// Q1) write the give number is even or odd 
+// Q2) write the given number is negative or positive 
+// Q3) write the given number is positive and even 
+
+// Q1) write the give number is even or odd  
+
+function active(){
+    var i = Number (document.getElementById("reach").value);
+
+    if (i%2 ==0 ){
+    document.getElementById("get").innerHTML =  "the given " + i + " number is even" ;
+} else {
+    document.getElementById("get").innerHTML = "the given number is odd"; 
+}
+}
+// Q2) write the given number is negative or positive 
+function activePosive(){
+    var i = Number (document.getElementById("reach").value);
+
+    if (i>0 ){
+    document.getElementById("get").innerHTML =  "the given " + i + " number is positive" ;
+} else {
+    document.getElementById("get").innerHTML = "the given number is Negative"; 
+}
+}
+
+    </script>
+</body>
+</html>

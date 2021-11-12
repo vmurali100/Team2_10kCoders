@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function types </title>
+
+    <style>
+        #main  {
+           width: 500px ;
+           height: auto ;
+           border: 5px double violet;
+           display: grid;
+           grid-template-columns: 100%;
+         grid-template-rows: 100px 100px 100px 100px ;
+        }
+        #name {
+            width: 500px ;
+           height: 100px;
+           /* border: 5px double violet; */
+           grid-row: 1/2;
+           grid-column: 1/2;
+           justify-items: center;
+          
+        }
+        .expression_button{
+            width: 500px ;
+           height: auto;
+           background-color: yellowgreen;
+           grid-row: 2/3;
+           grid-column: 1/2;
+           display: grid;
+           grid-template-columns: 100%;
+           grid-template-rows: 70px 30px;
+        }
+        .expression{
+            width: 100%;
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        #ex{
+            grid-row: 2/3;
+            grid-column: 1/2;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+  <div id="main">
+    
+    
+    
+    <div id="name"></div>
+    <div class="expression_button">
+        <div class="expression"></div>
+    <button onclick="ex()" id=ex>expression</button>
+    </div>
+    <div id="math">
+        <div class="sum"></div>
+    <input type="number" id = "numA" placeholder="enter a number ">
+    <input type="number" id = "numB" placeholder="enter a number ">
+    <button onclick="cal()">calculate sum</button>
+    </div>
+    <div id="self"></div>
+  </div>
+    
+    <script>
+           //   named function demo
+        function hero(){
+            document.getElementById("name").innerHTML = (" <h2> hey welcome to types of functions </h2>")  
+        }
+        hero()
+         //   expression function demo 
+         function ex(){
+          document.getElementsByClassName("expression")[0].innerHTML = (" <h3>hey am from expression function </h3>")
+        }
+        // var two = ex();
+
+
+        //  fat arrow function demo 
+      function cal(){
+        var sum = (a,b) => {return a+b} ;
+        var a = Number (document.getElementById("numA").value)
+      var  b = Number  (document.getElementById("numB").value)
+
+        var val = sum ( a ,b );
+    document.getElementsByClassName("sum")[0].innerHTML = val ;
+    //    document.write(cal)
+      }
+    //   self invoked funtion 
+
+    (function (){
+        document.getElementById("self").innerHTML = ("<h1> hey am from self invoked funtion </h1>" )
+    })()
+    
+    // function () {
+
+    // }
+        
+    </script>
+
+ 
+</body>
+</html> 
