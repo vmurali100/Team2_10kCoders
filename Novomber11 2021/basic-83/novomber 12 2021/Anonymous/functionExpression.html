@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            //function Expression in normal format
+            var anony = function(num1,num2){
+                console.log("this is anonymous function which is also a function expression")
+                return num1+num2
+            }
+            console.log(anony(10,29))
+         
+
+            //function Expression in arrow format
+            var anonyArrow = (num1,num2)=>{
+                console.log("Anonymous arrow function which is also a Function Expression")
+                return num1+num2;
+            }
+           var res=anonyArrow(36,59)
+           console.log(res)
+        </script>
+    </body>
+</html>
