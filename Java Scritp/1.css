@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.row1 {
+  background-color: #333333;
+}
+header {
+  margin: 0 auto;
+  background-color: #333;
+  padding: 20px 0;
+  overflow: auto;
+}
+header h2 {
+  font-size: 36px;
+  color: #c0bab6;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  line-height: normal;
+}
+header .box2 {
+  display: grid;
+  justify-content: end;
+  padding-right: 50px;
+  margin: 20px 0;
+}
+.box3 {
+  display: grid;
+  padding: 0px !important;
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto auto;
+  width: 960px;
+  margin: 0px auto;
+  overflow: auto;
+}

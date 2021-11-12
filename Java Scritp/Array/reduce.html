@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-Reduce</title>
+    <style>
+        button {
+            background-image: linear-gradient(red, green);
+            width: 150px;
+            padding: 10px;
+            border-radius: 30px;
+        }
+
+        button:hover {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #myDiv {
+            width: 400px;
+            height: 100px;
+            background: gray;
+            color: white;
+            margin: 20px;
+            text-align: left;
+            padding: 10px;
+        }
+
+        #myDiv1 {
+            width: 400px;
+            height: 100px;
+            background: gray;
+            color: white;
+            margin: 20px;
+            text-align: left;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <div id="myDiv1"></div>
+    <button onclick="beforeValue()">Array</button>
+    <button onclick="arrayReduce()">Array-Reduce</button>
+    <script>
+        // Subtract the numbers in the array, starting from the left:
+        var person = [175, 50, 25]
+        console.log(person)
+        var result = ""
+        function beforeValue() {
+            person.forEach(val => {
+                result += val + "<br>"
+                console.log(result)
+            });
+            document.getElementById("myDiv").innerHTML = result
+        }
+        function red(total, num) {
+            return total - num
+        }
+        function arrayReduce() {
+            document.getElementById("myDiv1").innerHTML = person.reduce(red)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice</title>
+    <style>
+        button {
+            background-image: linear-gradient(red, green);
+            width: 150px;
+            padding: 10px;
+            border-radius: 30px;
+        }
+
+        button:hover {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #myDiv {
+            width: 300px;
+            height: 100px;
+            background: gray;
+            color: white;
+            margin: 20px;
+            text-align: left;
+            padding: 10px;
+        }
+
+        #myDiv1 {
+            width: 300px;
+            height: 100px;
+            background: gray;
+            color: white;
+            margin: 20px;
+            text-align: left;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <div id="myDiv1"></div>
+    <button onclick="beforeSpliceValue()">Splice-Value</button>
+    <button onclick="spliceValue()">Splice-Value</button>
+    <script>
+        var person = ["Narendra", "Jammula", "8074206491", "narendrajammula22@gmail.com"]
+        console.log(person)
+        var result = ""
+        function beforeSpliceValue() {
+            person.forEach(val => {
+                result += val + "<br>"
+                console.log(result)
+            });
+            document.getElementById("myDiv").innerHTML = result
+        }
+        var result1 = ""
+        function spliceValue() {
+            // person.splice(1, 0, "Splice")
+            person.splice(2, 1)
+            person.forEach(val => {
+                result1 += val + "<br>"
+                console.log(result)
+            });
+            document.getElementById("myDiv1").innerHTML = result1
+        }
+    </script>
+</body>
+
+</html>

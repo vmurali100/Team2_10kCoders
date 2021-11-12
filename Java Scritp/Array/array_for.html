@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <button onclick="values()">update</button>
+    <script>
+        var person = ["Narendra", "R141590", "Surendra", "R141599"]
+        function values() {
+            var one = ""
+            for (i = 0; i < person.length; i++) {
+                console.log(person[i])
+                one = one + person[i] + "<br>"
+            }
+            document.getElementById("myDiv").innerHTML = one
+        }
+
+    </script>
+</body>
+
+</html>
