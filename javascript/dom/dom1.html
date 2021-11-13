@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: rgb(70, 200, 204);
+            color: rgb(255, 0, 106);
+        }
+
+        .box1 {
+            background-color: rgb(70, 204, 148);
+            color: rgb(162, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <div id="demo1"></div>
+
+    <script>
+        for (i = 0; i < 6; i++) {
+            var h1 = document.createElement("h1");
+            h1.setAttribute("class", "box")
+            h1.style.textAlign = "center"
+            h1.style.padding = "10px"
+            h1.innerHTML = "i am heading one " + i;
+            document.getElementById("demo").appendChild(h1)
+
+        }
+
+        for (i = 0; i < 6; i++) {
+            var para = document.createElement("p");
+            para.setAttribute("class", "box1")
+            para.style.textAlign = "center"
+            para.style.padding = "6px"
+            para.innerHTML = "i am paragraph" + i;
+            document.getElementById("demo1").appendChild(para)
+
+        }
+
+    </script>
+</body>
+
+</html>
