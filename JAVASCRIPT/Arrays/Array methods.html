@@ -12,43 +12,53 @@
         text-align:center;
       }
         .container{
-            width:960px;
+            width:780px;
             margin:0 auto;
+            background:honeydew;
+            padding:10px;
             display:grid;
+            /* grid-template-columns: 40% 40%; */
             grid-template-columns: auto auto;
-            /* place-items: center; */
-            place-content: center;
             row-gap:20px;
             column-gap:20px;
         }
         #display{
-            /* width:100%; */
-            background:ghostwhite;
+            background:lightblue;
             padding:20px;
             /* border:1px solid red; */
             grid-area:1/1/2/3;
             text-align:center;
         }
         #display2{
+          background:cornflowerblue;
           grid-area:2/1/3/3;
           text-align:center;
         }
-        .buttondiv{
-            display:grid;
-            grid-template-columns: auto auto;
-            /* place-items: center; */
-            row-gap:10px;
-        }
-        .del{
-            grid-area:2/1/2/3;
-        }
-        .splice{
+        form{
           display:grid;
+          grid-template-columns: 50% 50%;
+          column-gap:5px;
+          align-items: center;
         }
-        .grid{
+        button{
+          border-radius: 7px;
+          height:30px;
+          background-color:dodgerblue;
+        }
+        input[type="text"]{
+          box-sizing: border-box;
+          border-color:darkslategray;
+          height:25px;
+          border-radius:10px;
+          padding:15px;
+        }
+        #splice{
+          grid-column: span 2;
+          grid-row: span 2;
+          grid-template-columns:auto ;
           display:grid;
+          row-gap:5px;
         }
-        
     </style>
   </head>
   <body>
@@ -57,48 +67,57 @@
       <div id="display"></div>
       <div id="display2"></div>
 
-      <div id="shift-unshift" class="buttondiv button">
-        <input type="text" id="unshiftValue" placeholder="Enter value to add at start"/>
-        <button onclick="unshift()">Add value at start</button>
-        <button onclick="shift()" class="del">Remove value at start</button>
-      </div>
+      <!-- <div id="shift-unshift" class="buttondiv button"> -->
+        <form action="">
+          <input type="text" id="unshiftValue" placeholder="Enter value to add at start"/>
+          <button type="button" onclick="unshift()">Add value at start</button>
+        </form>
+        
 
-      <div id="push-pop" class="buttondiv button">
-        <input type="text" id="pushValue" placeholder="Enter value to add at End"/>
-        <button onclick="push()">Add value at End</button>
-        <button onclick="pop()" class="del">Remove value at End</button>
-      </div>
 
-      <div id="splice" class="splice button">
-        <input type="text" id="indexValue" placeholder="Index"/>
+        <button onclick="shift()" >Remove value at start</button>
+      <!-- </div> -->
+
+      <!-- <div id="push-pop" class="buttondiv button"> -->
+        <form action="">
+          <input type="text" id="pushValue" placeholder="Enter value to add at End"/>
+          <button type="button" onclick="push()">Add value at End</button>
+        </form>
+        
+
+        <button onclick="pop()" >Remove value at End</button>
+      <!-- </div> -->
+
+      <!-- <div id="splice" class="splice button"> -->
+        <form action="" id="splice">
+          <input type="text" id="indexValue" placeholder="Index"/>
         <input type="text" id="delValue" placeholder="No. of elements to remove"/>
-        <input type="text" id="spliceValue" placeholder="Enter value to add "/>
+          <input type="text" id="spliceValue" placeholder="Enter value to add "/>
         <button onclick="splice()">Add value (splice)</button>
-      </div>
+        </form>
+        
+      <!-- </div> -->
 
-      <div id="sort-reverse" class="grid buttond">
+      <!-- <div id="sort-reverse" class="grid buttond"> -->
         <button onclick="sort()" >Sort</button>
         <button onclick="reverse()">Reverse</button>
-      </div>
+      <!-- </div> -->
 
-      <div id="map" class="grid button">
+      <!-- <div id="map" class="grid button"> -->
         <button onclick="map()" >Uppercase using map()</button>
-      </div>
-      <div id="foreach" class="grid button">
+      <!-- </div> -->
+      <!-- <div id="foreach" class="grid button"> -->
         <button onclick="foreach()" >Lowercase using foreach()</button>
-      </div>
+      <!-- </div> -->
 
-      <div id="find" class="grid button">
+      <!-- <div id="find" class="grid button"> -->
         <button onclick="find()">Find length > 6</button>
-      </div>
-      <div id="filter" class="grid button">
-        <button onclick="filter()">Filter</button>
-      </div>
+      <!-- </div> -->
+      <!-- <div id="filter" class="grid button"> -->
+        <button onclick="filter()">Find all length > 6</button>
+      <!-- </div> -->
       
     </div>
-
-    
-
 
     <script>
       var states = [
@@ -120,8 +139,11 @@
 
       function push() {
         var userInput = document.getElementById("pushValue").value;
-        if (userInput != "") {
+
+        if (userInput != "") 
+        {
           result += states[states.push(userInput) - 1] + "<br>";
+          console.log(states);
           document.getElementById("display").innerHTML = result;
         }
         document.getElementById("pushValue").value = "";
@@ -142,7 +164,8 @@
 
       function unshift() {
         var userInput = document.getElementById("unshiftValue").value;
-        if (userInput != "") {
+        if (userInput != "") 
+        {
           states.unshift(userInput);
           console.log(states);
           result = states[0] + "<br>" + result;
@@ -153,7 +176,8 @@
         console.log(result);
       }
 
-      function shift() {
+      function shift() 
+      {
         states.shift();
         console.log(states);
         result = "";
@@ -257,6 +281,7 @@
         }
         document.getElementById("display2").innerHTML = msg+"<br>"+res;
       }
+      document.getElementById("display2").innerHTML = "";
     </script>
   </body>
 </html>

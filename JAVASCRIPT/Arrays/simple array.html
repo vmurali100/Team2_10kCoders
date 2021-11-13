@@ -9,7 +9,7 @@
 
   <body>
     <div id="display"></div>
-    <button onclick="pop()">POP</button>
+    <button onclick="push()">Push</button>
 
     <script>
       var states = [
@@ -19,19 +19,27 @@
         "Karnataka",
         "kerala",
       ];
+
       var result = "";
 
       states.forEach((val) => {
-        result = result + (val + "<br>");
+        result += (val + "<br>");
         console.log(result);
       });
+
+      console.log("result :"+ result);
       document.getElementById("display").innerHTML = result;
 
       console.log(states);
-      function pop()
+
+
+
+      function push()
       {
-          states.pop();
-          console.log(states);
+        states.push("Rajasthan");
+        console.log(states);
+        document.getElementById("display").innerHTML = states;
+
       }
 
     </script>
