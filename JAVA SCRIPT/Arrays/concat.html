@@ -25,11 +25,11 @@
         var shows = ""
         var jobs = ["collector", "railway", "bank", "office"]
         function addJob() {
-            exams.concat(jobs);
             jobs.forEach((val) => {
                 results += val + "<br>"
             })
             console.log(jobs)
+            exams.concat(jobs);
             document.getElementById("concat").innerHTML = shows
 
 
