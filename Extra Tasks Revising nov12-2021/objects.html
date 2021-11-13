@@ -1,0 +1,47 @@
+<html>
+    <body>
+        <button onclick="display()">Display</button>
+        <div id="myd"></div>
+        <script>
+            //Object Literal
+            var objs = {
+                fname:"teja",
+                name:"Ulisetti",
+                age:25
+            }
+            console.log(objs)
+            function display() {
+               vals=""
+               for(a in objs){
+                   vals+=a+"<br>"
+               } 
+               document.getElementById("myd").innerHTML=vals
+            }
+
+            //builtn constructors
+            var objs1 = new Object({fname:"teja"})
+            console.log(objs1)
+            objs1.marks=20
+            console.log(objs1)
+            objs["grade"]="A+"
+            console.log(objs)
+            delete objs['name']
+            console.log(objs)
+
+            //Custom Constructors
+            function mainFunc(name,lname,age){
+                this.name = name
+                this.lname = lname
+                this.age = age
+            }
+            var objs1 = new mainFunc("teja","ulisetti",25)
+            console.log(objs1)
+            var objs = new mainFunc("raj","komala",45)
+            console.log(objs)
+            objs.sname="kumar"
+            console.log(objs)
+            delete objs["lname"]
+            console.log(objs)
+        </script>
+    </body>
+</html>
