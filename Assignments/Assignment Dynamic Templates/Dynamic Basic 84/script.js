@@ -57,7 +57,7 @@ sec2_p.innerHTML = "The India men's national cricket team, also known as Team In
 document.getElementById("section2").appendChild(sec2_p);
 
 
-//Container Homepage h2
+//Container Homepage section3 h1
 var sec3_h1 = document.createElement("h1");
 sec3_h1.innerHTML="Forms of Cricket";
 document.querySelector(".homepage").insertBefore(sec3_h1, document.querySelector(".section3"));
@@ -95,9 +95,29 @@ for(i=0; i<(sec3_para_array).length; i++)
     document.getElementsByClassName("section3")[0].appendChild(sec3_article);
 }
 
+// Container Homepage section4 h1
 var sec4_h1 = document.createElement("h1");
 sec4_h1.innerHTML="Latest from the gallery";
 document.querySelector(".homepage").insertBefore(sec4_h1, document.querySelector(".section4"));
+
+//Container Homepage section4 aticle
+var sec4_figcap_array = ["smriti mandana", "Mitali Raj", "MS Dhoni", "Virat Kohli"]
+for(i=0; i<4; i++)
+{
+    var sec4_article = document.createElement("article");
+    var sec4_figure = document.createElement("figure");
+    var sec4_image = document.createElement("img");
+    var sec4_figcap = document.createElement("figcaption");
+
+    sec4_image.setAttribute("src","images/demo/215x315"+"("+(i+1)+")");
+    sec4_figcap.innerHTML = sec4_figcap_array[i];
+
+    sec4_figure.append(sec4_image, sec4_figcap);
+
+    sec4_article.appendChild(sec4_figure);
+
+    document.querySelector(".section4").appendChild(sec4_article);
+}
 
 
 
