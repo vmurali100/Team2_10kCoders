@@ -1,0 +1,352 @@
+/*header h1 fort size:36px;*/
+/*header h1 fort size:13px;*/
+/* color: #C0BAB6; text color */
+/* background-color: #333333; */
+/* background-color: #232323; Link bg color*/
+/* border: 1px solid #666666; */
+
+/* ============================Common Elements========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 13px;
+  color: #c0bab6;
+}
+a {
+  text-decoration: none;
+  color: #c0bab6;
+}
+
+.row1 {
+  background-color: #333333;
+}
+.wrapper {
+  width: 100%;
+}
+/* ============================================ Header  ============================================  */
+header {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #333333;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* ============================Title========================== */
+#title {
+  margin-bottom: 20px;
+}
+#title h1 {
+  font-size: 36px;
+  font-weight: normal;
+}
+#title h2 {
+  font-size: 13px;
+  font-weight: normal;
+}
+/* ============================Form========================== */
+header form {
+  width: 290px;
+  margin: 20px 0;
+}
+header form fieldset {
+  border: none;
+}
+header form #searchbox {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #666666;
+  font-size: 12px;
+  background-color: #232323;
+  font-size: 12px;
+  color: white;
+}
+header form #searchbox textarea select {
+  font-size: 12px;
+  color: white;
+}
+header form #submit {
+  align-content: center;
+  width: 70px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+/* ============================Nav========================== */
+nav {
+  clear: both;
+  background-color: #232323;
+  overflow: auto;
+  width: 100%;
+  padding: 20px 0;
+}
+nav ul {
+  list-style: none;
+  padding: 0 20px;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li {
+  text-transform: uppercase;
+  width: auto;
+  height: auto;
+}
+nav ul .last {
+  margin-right: 0;
+}
+/* ================================================================================================================= */
+.container {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 30px 0;
+  color: #979797;
+}
+/* ============================ Section 1 ========================== */
+.section1 {
+  margin-bottom: 50px;
+}
+.section1 img {
+  width: 100%;
+  height: auto;
+}
+
+/*---------------Homepage ----------------- */
+.homepage {
+  width: 100%;
+  line-height: 1.6em;
+  overflow: auto;
+}
+
+/*---------------Section 2 ----------------- */
+.section2 {
+  overflow: auto;
+  color: #979797;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.section2 article {
+  width: 225px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.section2 article figure img {
+  /* float:left; */
+  height: 32px;
+  width: 32px;
+  flex: 1;
+}
+.section2 article strong {
+  /* float:left; */
+  margin: 8px 0 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  flex: 1;
+}
+.section2 article p {
+  padding-top: 5px;
+}
+.section2 .last {
+  margin-right: 0px;
+}
+.readmore {
+  width: 100%;
+  text-align: right;
+}
+.readmore a {
+  color: #ff9900;
+  background-color: #ffffff;
+}
+/*---------------Section 2 ----------------- */
+.section3 {
+  line-height: 1.6em;
+  width: 100%;
+  color: #979797;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.section3 h2 {
+  font-weight: bold;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.section3 p {
+  margin: 13px 0;
+}
+.section3 article {
+  width: 715px;
+}
+.section3 aside {
+  width: 225px;
+}
+/* ============================================ Footer ============================================  */
+.row3 {
+  background-color: #232323;
+}
+footer {
+  width: 960px;
+  margin: 0 auto;
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+footer p {
+  font-size: 13px;
+}
+footer #left_footer {
+  /* float:left; */
+  padding: 20px 0;
+}
+footer #right_footer {
+  /* float:right; */
+  padding: 20px 0;
+}
+
+/* ============================================ Media queries ============================================  */
+
+/* ============================================ mobile ============================================  */
+@media only screen and (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin-right: 0;
+  }
+  header {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  header nav {
+    padding: 0;
+  }
+  header nav ul {
+    display: block;
+    padding: 0;
+  }
+  header nav ul li {
+    border: 3px solid white;
+    margin: 10px;
+    padding: 10px;
+  }
+  header nav ul li {
+    font-weight: bold;
+  }
+  header #title {
+    margin-bottom: 10px;
+  }
+  header form {
+      width:100%;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .section2 {
+    flex-direction: column;
+  }
+  .section2 article {
+    width: 100%;
+    margin: 0;
+  }
+  .section3 {
+    flex-direction: column;
+  }
+  .section3 article {
+    width: 100%;
+  }
+  .section3 aside {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+/* ============================================ Tablet ============================================  */
+@media only screen and (min-width:601px) and (max-width:768px){
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin-right: 0;
+      }
+      header {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+      header nav {
+        padding: 0;
+      }
+      header nav ul {
+        padding: 0;
+      }
+      header nav ul li {
+        margin: 10px;
+        padding: 10px;
+      }
+      header nav ul li {
+        font-weight: bold;
+      }
+      header #title {
+        margin-bottom: 10px;
+      }
+      header form {
+        width:100%;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+      .container {
+        width: 100%;
+        padding: 20px 30px;
+      }
+      .section2 {
+      }
+      .section2 article {
+        width: 50%;
+        margin: 0;
+        padding:10px;
+      }
+      .section3 {
+        flex-direction: column;
+      }
+      .section3 article {
+        width: 100%;
+      }
+      .section3 aside {
+        width: 100%;
+      }
+      footer {
+        width: 100%;
+        padding:0 30px;
+      }
+    }
+}
