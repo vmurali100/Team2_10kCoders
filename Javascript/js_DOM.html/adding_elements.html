@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            background-color:rgb(190, 223, 159);
+            color: black;
+            
+
+            
+        }
+    </style>
+</head>
+
+<body>
+   <div id="demo"></div>
+    <script>
+
+
+        for (i = 0; i < 8; i++) {
+            // Step 1 : 
+            var para = document.createElement("p");
+
+            //Adding Class Attribute to Element
+            para.setAttribute("class","item")
+
+            //Adding Style to An Element
+            para.style.textAlign="center"
+            para.style.padding="5px"
+            
+
+            // Step 2 : 
+            para.innerHTML = "Hello , Welcome to Paragraph  "+i;
+
+            // Step 3 : 
+            // document.body.appendChild(para)
+
+            // Adding All Elements in to an Element named Demo
+            document.getElementById("demo").appendChild(para)
+            // document.getElementById("demo").innerHTML=para
+
+        }
+        for (i = 0; i < 8; i++) {
+            // Step 1 : 
+            var heading = document.createElement("h2");
+
+            //Adding Class Attribute to Element
+            // heading.setAttribute("class","item")
+
+            //Adding Style to An Element
+            // para.style.textAlign="center"
+            // para.style.padding="5px"
+            
+
+            // Step 2 : 
+            heading.innerHTML = "Hello , Welcome to heading "+i;
+
+            // Step 3 : 
+            document.body.appendChild(heading)
+
+            // Adding All Elements in to an Element named Demo
+            document.getElementById("demo").appendChild(heading)
+            // document.getElementById("demo").innerHTML=para
+
+        }
+    </script>
+</body>
+
+</html>
