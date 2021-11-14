@@ -27,3 +27,4 @@ for(i=0;i<spaceDetails.length;i++){
 document.getElementById("myBanner").setAttribute("src","https://freight.cargo.site/t/original/i/d7d59958ac7c19813acf8b0f2ad4dbf1329c602086870e9faa3d380acbc12481/frame4_1.jpg")
 
 
+hvj
