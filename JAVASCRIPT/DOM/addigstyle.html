@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+        .heading2{
+            background-color:red;
+        }
+    </style>
   </head>
   <body>
     <script>
@@ -14,12 +19,13 @@
 
         //step 2:
         heading2.innerHTML = "This is h2 " + i;
+        heading2.style.textAlign= "center";
+        heading2.setAttribute("class","heading2");
 
         //step 3:
-        heading2.style.backgroundColor("red");
+        heading2.style.backgroundColor = "red";
         document.body.appendChild(heading2);
       }
-
       for (i = 0; i < 5; i++) {
         // step 1:
         var para = document.createElement("p");
@@ -30,6 +36,7 @@
         //step 3:
         document.body.appendChild(para);
       }
+    //   document.getElementsByClassName("heading2").style = "background: red";
     </script>
   </body>
 </html>
