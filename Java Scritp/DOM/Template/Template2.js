@@ -63,7 +63,7 @@ for (i = 0; i < allImages2.length; i++) {
 }
 // For list figcaption
 var allFigcaption2 = document.getElementsByClassName("fig2")
-for (i = 0; i < allImages.length; i++) {
+for (i = 0; i < allFigcaption2.length; i++) {
     var caption2 = document.createElement("figcaption")
     var cap_h2 = document.createElement("h2")
     var cap_p = document.createElement("p")
@@ -96,7 +96,44 @@ for (i = 0; i < allImages.length; i++) {
 //For Aside List
 var aside = document.getElementById("right_column")
 var header3 = document.createElement("h2")
-header3.innerHTML = "Free HTML5 Website Template"
+header3.innerHTML = "Categories"
 aside.appendChild(header3)
-// var aside_nav = document.createElement("nav")
-// aside.appendChild(aside_nav)
+var aside_nav = document.createElement("nav")
+aside.appendChild(aside_nav)
+var aside_ul = document.createElement("ul")
+aside_nav.appendChild(aside_ul)
+var ul_att = document.createAttribute("id")
+ul_att.value = "a_ul"
+aside_ul.setAttributeNode(ul_att)
+var aside_ul_li = ["Free WebSite Templates", "Free CSS Templates", "Free XHTML Templates", "Free Web Templates", "Free WebSite Layouts", "Free HTML5 Templates", "Free Webdesign Templates", "Free Fire Works Templates", "Free PNG Templates", "Free WebSite Themes"]
+for (i = 0; i < aside_ul_li.length; i++) {
+    var aside_li = document.createElement("li")
+    var aside_anchor = document.createElement("a")
+    aside_anchor.innerHTML = aside_ul_li[i]
+    aside_li.appendChild(aside_anchor)
+    document.getElementById("a_ul").appendChild(aside_li)
+}
+
+
+//For Footer
+var foo = document.getElementById("footer")
+var footer1 = document.createElement("p")
+var footer2 = document.createElement("p")
+var fo_att1 = document.createAttribute("class")
+fo_att1.value = "f1_left"
+footer1.setAttributeNode(fo_att1)
+var fo_att2 = document.createAttribute("class")
+fo_att2.value = "f1_right"
+footer2.setAttributeNode(fo_att2)
+var f_a1 = document.createElement("a")
+var f_a2 = document.createElement("a")
+f_a1.innerHTML = "Domain Name"
+f_a2.innerHTML = " Os Templates"
+f_a1.href = "#"
+f_a2.href = "https://www.os-templates.com/"
+f_a2.target = "_blank"
+f_a2.title = "Free Website Templates"
+footer1.innerHTML = "Copyright © 2018 - All Rights Reserved -" + "  " + f_a1.outerHTML
+footer2.innerHTML = "Template by" + "  " + f_a2.outerHTML
+foo.appendChild(footer1)
+foo.appendChild(footer2)
