@@ -8,7 +8,7 @@
 }
 /*--------------------------- Elements --------------------------- */
 body {
-  color: #c0bab6;
+  color:#3A4A3D;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 13px;
 }
@@ -33,7 +33,9 @@ ul li {
 }
 /*--------------------------- Header--------------------------- */
 .row1 {
-  background-color: #333333;
+  /* background-color: #333333; */
+  background-color: #FFED86;
+  /* background-color: #DAD870; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(480px, 960px));
   place-content: center;
@@ -41,28 +43,37 @@ ul li {
 header {
   padding: 20px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(480px,1fr));
+  /* grid-template-columns: repeat(auto-fill,auto); */
+  grid-template-columns: auto 2fr;
+  column-gap: 20px;
+  color:#FF5C4D;
 }
 /*--------------- Title----------------- */
 #title a {
-  color: #c0bab6;
+  /* color: #c0bab6; */
+  /* color:#FF5C4D; */
+  /* color:#FC2E20; */
 }
 /*--------------- Nav bar----------------- */
 header nav {
   padding: 20px 0;
-  color: #c0bab6;
-  background-color: #232323;
+  /* color: #c0bab6; */
+  /* background-color: #232323; */
+  background-color: #FDB750;
+  /* color:#FDB750; */
 }
 header nav ul {
   list-style-type: none;
   text-transform: uppercase;
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(85px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
   place-items: center;
 }
 nav a {
   text-decoration: none;
-  color: #c0bab6;
+  /* color: #c0bab6; */
+  /* color:#0A7029; */
+  color:#3A4A3D;
 }
 /*==========================================Container==========================================*/
 .container {
@@ -73,27 +84,35 @@ nav a {
 }
 /*==========================================section 1==========================================*/
 .section1 {
-  /* width: 100%; */
+  width: 100%;
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: auto auto;
 }
 .section1 figure {
+  width: 630px;
+  height:300px;
   order: 2;
 }
 .section1 figure img {
   width: 100%;
+  height:100%;
 }
 .section1 figcaption {
   order: 1;
   width: 280px;
   height: 260px;
-  color: #989898;
-  background-color: #dedede;
+  /* color: #989898; */
+  /* color:#AB6B51;
+  color:#2F435A; */
+  color:#3A4A3D;
+  /* background-color: #dedede; */
+  background-color: #DAD870;
   line-height: 1.6em;
   padding: 20px;
 }
 .section1 figcaption strong {
+  color:#AB6B51;
   font-size: 42px;
   font-style: italic;
   font-weight: normal;
@@ -103,7 +122,7 @@ nav a {
   margin: 13px 0;
 }
 .section1 figcaption .readmore a {
-  background-color: #dedede;
+  /* background-color: #DAD870; */
 }
 .readmore {
   width: 100%;
@@ -112,7 +131,7 @@ nav a {
 }
 .readmore a {
   color: #ff9900;
-  background-color: white;
+  /* background-color: white; */
 }
 /*==========================================Homepage==========================================*/
 .homepage {
@@ -128,9 +147,10 @@ nav a {
   column-gap: 20px;
 }
 .section2 article {
-  color: #979797;
+  /* color: #979797; */
 }
 .section2 article h2 {
+  color:#AB6B51;
   font-size: 14px;
   margin-bottom: 15px;
   font-weight: bold;
@@ -153,22 +173,26 @@ nav a {
 }
 .section3 article {
   /* width: 225px; */
-  color: #919191;
-  display:grid;
+  /* color:#AB6B51; */
+  /* display:grid; */
   place-items: center;
   /* place-content: center; */
   
 }
+
 .section3 article figure img {
   border: 1px solid #dedede;
   padding: 4px;
   margin-bottom: 10px;
+  width:215px;
+  height:100px;
 }
 .section3 article figcaption{
   display:grid;
   place-items:center;
 }
 .section3 article figcaption h2 {
+  color:#AB6B51;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -182,7 +206,8 @@ nav a {
 /*==========================================Footer==========================================*/
 /* =====================Footer======================== */
 .row3 {
-  background-color: #232323;
+  /* background-color: #232323; */
+  background-color: #FDB750;
   display:grid;
   grid-template-columns: repeat(auto-fit,minmax(100px,960px));
   place-content: center;
@@ -244,6 +269,9 @@ footer p {
     width: 100%;
     order:1;
   }
+  .section1 figure{
+    height:auto;
+  }
   .section1 figcaption {
     order: 2;
     width: 100%;
@@ -289,10 +317,12 @@ footer p {
     box-sizing: border-box;
   }
   header {
+    grid-template-columns: auto;
     width: 100%;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
+    padding: 0 30px 0 30px;
   }
   #title {
     text-align: center;
@@ -303,7 +333,7 @@ footer p {
   }
   header nav {
     width: 100%;
-    padding: 0 50px;
+    /* padding: 0 50px; */
   }
   header nav ul {
     padding: 0;
