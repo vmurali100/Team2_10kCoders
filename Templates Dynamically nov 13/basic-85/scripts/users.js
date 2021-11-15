@@ -113,9 +113,9 @@ var array = [
         
     }
 ]
-var tbody = document.createElement("tbody")
-document.querySelector("table").appendChild(tbody)
 array.forEach((user)=>{
+    var tbody = document.createElement("tbody")
+    document.querySelector("table").appendChild(tbody)
     var tr = document.createElement("tr")
     document.querySelector("tbody").appendChild(tr)
     for(a in user){
