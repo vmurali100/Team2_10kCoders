@@ -54,7 +54,7 @@ shout1.innerHTML = "Vestibulumaccumsan egestibulum eu justo convallis augue esta
 // document.getElementsByClassName("shout").appendChild(shout1)
 document.getElementById("one").appendChild(shout1)
 
-//For ;;ist images
+//For list images
 var allImages2 = document.getElementsByClassName("fig2")
 for (i = 0; i < allImages2.length; i++) {
     var image2 = document.createElement("img")
