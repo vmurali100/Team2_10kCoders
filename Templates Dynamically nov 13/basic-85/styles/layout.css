@@ -32,8 +32,8 @@ img{margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;
 address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
 
 q{display:block; padding:0 10px 8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
-q:before{content:'“ '; font-size:26px;}
-q:after{content:' „'; font-size:26px; line-height:0;}
+q:before{content:'ï¿½ '; font-size:26px;}
+q:after{content:' ï¿½'; font-size:26px; line-height:0;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
@@ -55,14 +55,14 @@ h1, h2, h3, h4, h5, h6{margin:0; padding:0; font-size:16px; font-weight:bold; fo
 address{font-style:normal;}
 
 blockquote, q{display:block; padding:8px 10px; color:#979797; background-color:#ECECEC; font-style:italic; line-height:normal;}
-blockquote:before, q:before{content:'“ '; font-size:26px;}
-blockquote:after, q:after{content:' „'; font-size:26px; line-height:0;}
+blockquote:before, q:before{content:'ï¿½ '; font-size:26px;}
+blockquote:after, q:after{content:' ï¿½'; font-size:26px; line-height:0;}
 
 form, fieldset, legend{margin:0; padding:0; border:none;}
 legend{display:none;}
 input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Times,serif;}
 
-.one_quarter, .two_quarter, .three_quarter, .four_quarter{display:block; float:left; margin:0 20px 0 0;}
+.one_quarter, .two_quarter, .three_quarter, .four_quarter{display:block; float:left; margin:0 10px 0 0;}
 .one_quarter{width:225px;}
 .two_quarter{width:470px;}
 .three_quarter{width:715px;}
@@ -83,7 +83,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #header nav li{display:inline; margin-right:25px; text-transform:uppercase;}
 #header nav li.last{margin-right:0;}
 #header nav li a{color:#C0BAB6; background-color:#232323;}
-#header nav li a:hover{color:#FF9900; background-color:#232323;}
+#header nav li a:hover{color:#FF9900; background-color:#232323;cursor: pointer;}
 
 /*----------------------------------------------Content Area-------------------------------------*/
 
