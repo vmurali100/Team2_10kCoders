@@ -34,7 +34,7 @@
     }
     /*--------------------------- Header--------------------------- */
     .row1 {
-        background-color: #333333;
+        background-color: #613659;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(480px, 960px));
         place-content: center;
@@ -43,16 +43,17 @@
         padding: 20px 0;
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(480px,1fr));
+        color: #FCA7A5;
       }
       /*--------------- Title----------------- */
       #title a {
-        color: #c0bab6;
+        
       }
       /*--------------- Nav bar----------------- */
       header nav {
         padding: 20px 0;
-        color: #c0bab6;
-        background-color: #232323;
+        
+        background-color: #C197D2;
       }
       header nav ul {
         list-style-type: none;
@@ -63,7 +64,7 @@
       }
       nav a {
         text-decoration: none;
-        color: #c0bab6;
+        color: #130329;
       }
 /* ================================================================================================================= */
 
@@ -105,12 +106,14 @@
     margin-bottom:10px;
 }
 #section2 article figcaption h2{
+    color:#613659;
     font-size:14px;
     font-weight:bold;
     font-style:italic;
     line-height:normal;
 }
 #section2 article figcaption p{
+    color:#130329;
     margin:13px 0;
     line-height:1.6em;
 }
@@ -150,22 +153,24 @@
     margin-bottom:10px;
 }
 #section3 figcaption strong{
+    color:#613659;
     font-size:32px;
     font-style: italic;
     font-weight:normal;
     line-height:normal;
 }
 #section3 figcaption p{
+    color:#130329;
     margin:13px 0;
 }
 /*==============================================================================================*/
 
 /*==========================================Footer 1==========================================*/
 .row3{
-    background-color:#333333;
+    background-color:#C197D2;
 }
 #details{
-    background-color:#333333;
+    background-color:#C197D2;
     width:960px;
     margin:0 auto;
     padding:30px 0;
@@ -184,7 +189,7 @@
     text-transform:uppercase;
     font-style:italic;
     line-height: normal;
-    color: #ffffff
+    color: #613659;
 }
 #details section nav ul li{
     margin-bottom:5px;
@@ -192,24 +197,25 @@
     border-bottom: 1px solid #555555;
 }
 #details section nav ul li a{
-    color: #FF9900;
-    background-color: #333333;
+    /* color: #211522; */
+    color:#5A3E79;
+    background-color: #C197D2;
     font-size:12px;
 }
     
 /*==========================================Footer 2==========================================*/
 .row4 {
-    background-color: #232323;
+    background-color: #613659;
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(100px,960px));
     place-content: center;
   }
-#main_footer{
+#footer{
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
 }
-#main_footer p{
+#footer p{
     font-size:13px;
     padding:20px 0;
 }
