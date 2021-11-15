@@ -9,7 +9,7 @@
 }
 /*--------------------------- Elements --------------------------- */
 body{
-    color:#C0BAB6;
+    color:#05445E;
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size:13px;
 }
@@ -22,6 +22,7 @@ h2{
     font-size:13px;
 }
 a{
+    color:#05445E;
     text-decoration:none;
     outline:none;
 }
@@ -35,7 +36,7 @@ ul li{
 /*--------------------------- Header--------------------------- */
 
 .row1 {
-    background-color: #333333;
+    background-color: #189AB4;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(480px, 960px));
     place-content: center;
@@ -47,13 +48,13 @@ ul li{
   }
   /*--------------- Title----------------- */
   #title a {
-    color: #c0bab6;
+    /* color: #c0bab6; */
   }
   /*--------------- Nav bar----------------- */
   header nav {
     padding: 20px 0;
-    color: #c0bab6;
-    background-color: #232323;
+    /* color: #c0bab6; */
+    background-color: #D4F1F4;
   }
   header nav ul {
     list-style-type: none;
@@ -64,7 +65,7 @@ ul li{
   }
   nav a {
     text-decoration: none;
-    color: #c0bab6;
+    /* color: #75E6DA; */
   }
 /*--------------------------- Home Page--------------------------- */
 .container{
@@ -95,14 +96,20 @@ ul li{
 
 }
 #homepage article figure{
+    width:215px;
+    /* height:315px; */
     padding:4px;
     border: 1px solid #D6D6D6;
+}
+#homepage article figure img{
+    width:100%;
+    height:315px;
 }
 #homepage article figcaption{
     padding:5px;
     text-align:center;
-    color:#979797;
-    background-color: #EEEEEE;
+    color:#05445E;
+    background-color: #D4F1F4;
 }
 /*---------------Section II ----------------- */
 #homepage #section2{
@@ -111,6 +118,7 @@ ul li{
     border-bottom:1px solid #DEDEDE;
 }
 #homepage #section2 p{
+    color:#05445E;
     line-height:1.8em;
     font-size:20px;
     text-align:center;
@@ -134,6 +142,8 @@ ul li{
     column-gap: 20px;
 }
 #section3 ul li figure img{
+    width:180px;
+    height:150px;
     padding:4px;
     border: 1px solid #666666;
 }
@@ -141,6 +151,7 @@ ul li{
     width:100%;
 }
 #section3 ul li figcaption h2{
+    color:#05445E;
     font-size:14px;
     font-weight:bold;
     font-style:none;
@@ -149,7 +160,8 @@ ul li{
 }
 #section3 ul li figcaption p{
     margin:13px 0;
-    color:#aa9ca4;
+    /* color:#aa9ca4; */
+    color:#189AB4;
 }
 .readmore{
     text-align:right;
@@ -164,6 +176,7 @@ aside{
     width:280px;
 }
 aside h2{
+    color:#05445E;
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid #DEDEDE;
@@ -174,17 +187,18 @@ aside nav ul li a{
     margin-bottom:3px;
 }
 aside nav ul li a{
+    color:#189AB4;
     list-style-type: none;
     display:block;
     background: url(./images/orange_file.gif) no-repeat 10px center #FFFFFF;
     padding: 5px 10px 5px 20px;
     border-bottom: 1px dotted #666666;
-    color: #666666;
+    /* color: #666666; */
 
 }
 /*--------------------------- Footer--------------------------- */
 .row3 {
-    background-color: #232323;
+    background-color: #05445E;
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(100px,960px));
     place-content: center;
@@ -196,6 +210,7 @@ aside nav ul li a{
     justify-content: space-between;
   }
   footer p {
+      color:#D4F1F4;
     font-size: 13px;
     padding: 20px 0;
   }
