@@ -11,8 +11,8 @@
     <div class="wrapper row1">
         <header id="header" class="clear">
             <div id="hgroup">
-                <!-- <h1><a href="#">SpaceX</a></h1>
-                <h2>AeroSpace Company</h2> -->
+                <h1><a href="#">SpaceX</a></h1>
+                <h2>AeroSpace Company</h2>
             </div>
             <form action="#" method="post">
                 <fieldset>
@@ -24,11 +24,11 @@
             </form>
             <nav>
                 <ul id="demo">
-                     <!-- <li><a href="#">Falcon</a></li>
+                     <li><a href="./index.html">Home</a></li>
                     <li><a href="#">Dragon</a></li>
                     <li><a href="#">Starship</a></li>
                     <li><a href="#">Rideshare</a></li>
-                    <li class="last"><a href="#">Human Spacelight</a></li> -->
+                    <li class="last"><a href="#">Users Details</a></li> 
                    
                 </ul>
             </nav>
@@ -82,6 +82,23 @@
                     </article>
                 </section>
             </div> -->
+            <table border="1" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>fname</th>
+                        <th>lname</th>
+                        <th>tel</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>zip</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
     </div>
     <div class="wrapper row3">
@@ -92,6 +109,18 @@
         </footer>
     </div>
     <script src="./users.js"></script>
+    <script>
+        users.forEach((user) => {
+            var myTr = document.createElement("tr");
+            for (a in user) {
+                var myTd = document.createElement("td")
+                myTd.innerHTML = user[a]
+                myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr);
+
+        })
+    </script>
 </body>
 
 </html>

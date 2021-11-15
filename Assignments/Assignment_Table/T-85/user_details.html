@@ -14,7 +14,7 @@
     </div>
     <nav>
       <ul id="demo">
-        <li><a href="#">Home</a></li>
+        <li><a href="./T85_tour_template.html">Home</a></li>
         <li><a href="#">Package</a></li>
         <li><a href="#">Adventure</a></li>
         <li><a href="#">Trekking</a></li>
@@ -25,7 +25,7 @@
 </div>
 <div class="wrapper row2">
   <div id="container" class="clear">
-    <section id="shout">
+    <!-- <section id="shout">
 
       <p>Home to some of the surreal hill stations, India is a travel destination you have to visit. Adorned with tranquil ambience, verdant greenery, sprawling desert, beautiful valleys, and dreamy lakes, the hill stations in India make for the best holiday destinations. Undoubtedly, your hill station trip in India will be an experience that shall remain etched in your mind for the rest of your life. </p>
     </section>
@@ -94,7 +94,26 @@
           <p class="more"><a href="#">Read More &raquo;</a></p>
         </article>
       </section>
-    </div> 
+    </div> -->
+
+    <table border="1" style="width:100%">
+      <thead>
+          <tr>
+              <th>fname</th>
+              <th>lname</th>
+              <th>tel</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>zip</th>
+
+          </tr>
+      </thead>
+      <tbody>
+
+
+      </tbody>
+  </table>
   </div>
 </div>
 <div class="wrapper row3">
@@ -103,7 +122,19 @@
     <p class="fl_right">Developed by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"> Hari Vardhan</a></p>
   </footer>
 </div>
+<script src="./users.js"></script>
+<script>
+   users.forEach((user) => {
+            var myTr = document.createElement("tr");
+            for (a in user) {
+                var myTd = document.createElement("td")
+                myTd.innerHTML = user[a]
+                myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr);
 
+        })
 
+</script>
 </body>
 </html>

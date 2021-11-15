@@ -13,7 +13,7 @@ document.getElementById("hgroup").appendChild(h2)
 
 // ============================ NAVIGATION BAR ====================
 
-var spaceDetails= ["Profile", "Cart", "WishList", "Favorites", "Wallet"]
+var spaceDetails= ["Home", "Cart", "WishList", "Favorites", "User Details"]
 for(i=0;i<spaceDetails.length;i++){
     var list = document.createElement("li");                  //step - 1
     var anchor = document.createElement("a");

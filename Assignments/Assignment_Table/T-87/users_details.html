@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Template5</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="flipcart_style.css" type="text/css">
+  <title>Template5</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="flipcart_style.css" type="text/css">
 </head>
+
 <body>
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">FlipCart</a></h1>
-      <h2>Easy Shopping</h2> 
-    </div>
-    <nav>
-      <ul id="demo">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Cart</a></li>
-        <li><a href="#">WishList</a></li>
-        <li><a href="#">Favorites</a></li>
-        <li class="last"><a href="./users_details.html">User Details</a></li> 
-      </ul>
-    </nav>
-  </header>
-</div>
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <div id="homepage">
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1><a href="#">FlipCart</a></h1>
+        <h2>Easy Shopping</h2>
+      </div>
+      <nav>
+        <ul id="demo">
+          <li><a href="./T87-flipcart.html">Home</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">WishList</a></li>
+          <li><a href="#">Favorites</a></li>
+          <li class="last"><a href="./users_details.html">User Details</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+      <!-- <div id="homepage">
       <section id="latest" class="clear">
         <article class="one_quarter">
           <figure class="myImage">
-            <img src="images/mobile.jpg" width="215" height="315" alt=""> 
+             <img src="images/mobile.jpg" width="215" height="315" alt=""> 
             <figcaption>Electronics</figcaption>
           </figure>
         </article>
         <article class="one_quarter">
           <figure class="myImage">
-            <img src="images/grocery.jpg" width="215" height="315" alt=""> 
+             <img src="images/grocery.jpg" width="215" height="315" alt=""> 
             <figcaption>Grocery</figcaption>
           </figure>
         </article>
@@ -47,7 +49,7 @@
         </article>
         <article class="one_quarter lastbox">
           <figure class="myImage">
-             <img src="images/travel.jpg" width="215" height="315" alt="">
+             <img src="images/travel.jpg" width="215" height="315" alt=""> 
             <figcaption>Travel</figcaption>
           </figure>
         </article>
@@ -100,14 +102,50 @@
           <li class="last"><a href="#">Buying Guide</a></li>
         </ul>
       </nav>
-    </aside>
+    </aside> -->
+
+      <table border="1" style="width:100%">
+        <thead>
+          <tr>
+            <th>fname</th>
+            <th>lname</th>
+            <th>tel</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>zip</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
-<div class="wrapper row3">
-  <footer id="footer" class="clear">
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#" >FlipCart</a></p>
-    <p class="fl_right">Developed By<a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"> Hari Vardhan</a></p>
-  </footer>
-</div>
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">FlipCart</a></p>
+      <p class="fl_right">Developed By<a target="_blank" href="https://www.os-templates.com/"
+          title="Free Website Templates"> Hari Vardhan</a></p>
+    </footer>
+  </div>
+  <script src="./users.js"></script>
+  <script>
+
+    users.forEach((user) => {
+      var myTr = document.createElement("tr");
+      for (a in user) {
+        var myTd = document.createElement("td")
+        myTd.innerHTML = user[a]
+        myTr.appendChild(myTd)
+      }
+      document.querySelector("tbody").appendChild(myTr);
+
+    })
+
+  </script>
 </body>
+
 </html>
