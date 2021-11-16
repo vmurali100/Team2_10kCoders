@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./spaceX_style.css">
 </head>
 
-<body>
+<body style="background-color: white;">
     <div class="wrapper row1">
         <header id="header" class="clear">
             <div id="hgroup">
@@ -24,21 +24,53 @@
             </form>
             <nav>
                 <ul id="demo">
-                     <li><a href="./T83_spaceX_User_details.html">Home</a></li>
+                    <li><a href="./T83_spaceX_User_details.html">Home</a></li>
                     <li><a href="#">Dragon</a></li>
                     <li><a href="#">Starship</a></li>
-                    <li><a href="./registers.html">Registers</a></li>
-                    <li class="last"><a href="#">Users Details</a></li> 
-                   
+                    <li><a href="#">Registers</a></li>
+                    <li class="last"><a href="./index.html">Users Details</a></li>
+
                 </ul>
             </nav>
         </header>
     </div>
-    <div class="wrapper row2">
-        <div id="container" class="clear">
-            <!-- <section id="slider"><a href="#">
+    <!-- <div class="container">
+        <div class="row">
+            <div class="column">
+
+            </div>
+            <div class="column">
+                <form onsubmit="getUserData(event)">
+                    <div class="register">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName"><br><br>
+                    </div>
+                    <div class="register">
+                        <label for="email" class="form-label">Email Adress</label>
+                        <input type="email" class="form-control" id="email"><br><br>
+                    </div>
+                    <div class="register">
+                        <label for="userName" class="form-label">User Name</label>
+                        <input type="text" class="form-control" id="userName"><br><br>
+                    </div>
+                    <div class="register">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password"><br><br>
+                    </div>
+                    <div class="register">
+                        <label for="email" class="form-label">Email Adress</label>
+                        <input type="email" class="form-control" id="email">
+                    </div> 
+                </form>
+
+            </div>
+        </div> 
+
+    </div> -->
+    <div id="container" class="clear" style="background-color: white;">
+         <section id="slider"><a href="#">
                 <img src="./images/spaceX.jpg" alt="" id="myBanner"></a></section>
-            <div id="homepage">
+            <!-- <div id="homepage">
                 <section id="services" class="clear">
                     <article class="one_quarter">
                         <figure><img src="./images/elon.jpg" width="32" height="32" alt=""></figure>
@@ -63,9 +95,9 @@
                         <strong>Storm</strong>
                         <p>To maintain the Accounts in the SpaceX.  6 years experience in this feild.</p>
                         <p class="more"><a href="#">Read More &raquo;</a></p>
-                    </article>
+                    </article> -->
                 </section>
-                <section class="last clear">
+                <!-- <section class="last clear">
                     <article class="three_quarter">
                         <h2>SpaceX  AeroSpace  Company</h2>
                         <p>SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, ...<a href="https://www.os-templates.com/"
@@ -80,9 +112,9 @@
                         <p>Elon Musk had the one of the another company name is Tesla is accelerating the world's transition to sustainable energy with electric cars, solar and integrated renewable energy solutions for home.</p>
                         <footer class="more"><a href="#">Read More &raquo;</a></footer>
                     </article>
-                </section>
+                </section> 
             </div> -->
-            <table border="1" style="width:100%">
+        <!-- <table border="1" style="width:100%">
                 <thead>
                     <tr>
                         <th>fname</th>
@@ -98,28 +130,66 @@
                 <tbody>
 
                 </tbody>
-            </table>
-        </div>
-    </div>
+            </table> -->
+            
+            <div class="row">
+                <div class="column">
+    
+                </div>
+                <div class="column">
+                    <form onsubmit="getUserData(event)">
+                        <div class="register">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="email" class="form-label">Email Adress</label>
+                            <input type="email" class="form-control" id="email"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="userName" class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="userName"><br><br>
+                        </div>
+                        <div class="register">
+                        <label for="number">Number</label>
+                        <input type="number" id="number"> <br><br>
+                        </div>
+                        <div class="register">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"><br><br>
+                        </div><br>
+
+                        <!-- <div class="register">
+                            <label for="email" class="form-label">Email Adress</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>  -->
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+    
+                </div>
+            </div>
+    </div> 
     <div class="wrapper row3">
         <footer id="footer" class="clear">
             <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Domain Name</a></p>
             <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/"
-                    title="Free Website Templates">OS Templates</a></p>
+                    title="Free Website Templates">Hari Vardhan</a></p>
         </footer>
     </div>
-    <script src="./users.js"></script>
     <script>
-        users.forEach((user) => {
-            var myTr = document.createElement("tr");
-            for (a in user) {
-                var myTd = document.createElement("td")
-                myTd.innerHTML = user[a]
-                myTr.appendChild(myTd)
+        function getUserData(event) {
+            event.preventDefault()
+            var person = {
+                fullName: "",
+                userName: "",
+                email: ""
             }
-            document.querySelector("tbody").appendChild(myTr);
-
-        })
+            for (a in person) {
+                person[a] = document.getElementById(a).value
+            }
+            console.log(person)
+        }
+        document.querySelector("button").onclick = getUserData
     </script>
 </body>
 

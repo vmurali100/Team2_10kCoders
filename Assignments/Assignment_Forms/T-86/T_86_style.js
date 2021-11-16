@@ -13,14 +13,14 @@ document.getElementById("hgroup").appendChild(h2)
 
 // ============================ NAVIGATION BAR ====================
 
-var spaceDetails= ["Home", "Curriculum", "Team", "Admission", "User Details"]
-for(i=0;i<spaceDetails.length;i++){
-    var list = document.createElement("li");                  //step - 1
-    var anchor = document.createElement("a");
-    anchor.innerHTML = spaceDetails[i]                        //step - 2
-    list.appendChild(anchor)                                  //step - 3
-    document.getElementById("demo").appendChild(list)
-}
+// var spaceDetails= ["Home", "Curriculum", "Team", "Admission", "User Details"]
+// for(i=0;i<spaceDetails.length;i++){
+//     var list = document.createElement("li");                  //step - 1
+//     var anchor = document.createElement("a");
+//     anchor.innerHTML = spaceDetails[i]                        //step - 2
+//     list.appendChild(anchor)                                  //step - 3
+//     document.getElementById("demo").appendChild(list)
+// }
 
 // =============================== BANNER ============================
 

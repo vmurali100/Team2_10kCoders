@@ -38,11 +38,11 @@
     </div>
     <div class="wrapper row2">
         <div id="container" class="clear">
-            <!-- <section id="slider"><a href="#"><img src="./images/power.jpg" width="960" height="360" alt="" id="myBanner"></a></section>
+          <section id="slider"><a href="#"><img src="./images/power.jpg" width="960" height="360" alt="" id="myBanner"></a></section>
     <section id="shout">
       <p>Bheemla Nayak is an upcoming Telugu language action thriller film directed by Saagar K. Chandra from a screenplay written by Trivikram Srinivas. It is a remake of the 2020 Malayalam film Ayyappanum Koshiyum by Sachy. Produced by Suryadevara Naga Vamsi of Sithara Entertainments, the film stars Pawan Kalyan, Rana Daggubati, and Nithya Menen.</p>
     </section>
-    <div id="homepage">
+      <!-- <div id="homepage">
       <h1>Telugu Upcoming Movies</h1>
       <section id="services" class="clear">
         <article>
@@ -100,7 +100,7 @@
         </article>
       </section>
     </div>   -->
-            <table border="1" style="width:100%">
+            <!-- <table border="1" style="width:100%">
                 <thead>
                     <tr>
                         <th>fname</th>
@@ -117,7 +117,43 @@
 
 
                 </tbody>
-            </table>
+            </table> -->
+            <div class="row">
+                <div class="column">
+    
+                </div>
+                <div class="column">
+                    <form onsubmit="getUserData(event)">
+                        <div class="register">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="email" class="form-label">Email Adress</label>
+                            <input type="email" class="form-control" id="email"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="userName" class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="userName"><br><br>
+                        </div>
+                        <div class="register">
+                        <label for="number">Number</label>
+                        <input type="number" id="number"> <br><br>
+                        </div>
+                        <div class="register">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"><br><br>
+                        </div><br>
+
+                        <!-- <div class="register">
+                            <label for="email" class="form-label">Email Adress</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>  -->
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+    
+                </div>
+            </div>
         </div>
     </div>
     <div class="wrapper row3">
@@ -127,19 +163,21 @@
                     title="Free Movies Website"> Hari Vardhan</a></p>
         </footer>
     </div>
-    <script src="./users.js"></script>
     <script>
 
-        users.forEach((user) => {
-            var myTr = document.createElement("tr");
-            for (a in user) {
-                var myTd = document.createElement("td")
-                myTd.innerHTML = user[a]
-                myTr.appendChild(myTd)
+function getUserData(event) {
+            event.preventDefault()
+            var person = {
+                fullName: "",
+                userName: "",
+                email: ""
             }
-            document.querySelector("tbody").appendChild(myTr);
-
-        })
+            for (a in person) {
+                person[a] = document.getElementById(a).value
+            }
+            console.log(person)
+        }
+        document.querySelector("button").onclick = getUserData
     </script>
 </body>
 

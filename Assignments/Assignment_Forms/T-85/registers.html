@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-<title>Basic 85</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="./tour_template_style.css" type="text/css">
+    <title>Basic 85</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./tour_template_style.css" type="text/css">
 </head>
+
 <body>
-<div class="wrapper row1">
-  <header id="header" class="clear">
-    <div id="hgroup">
-      <h1><a href="#">Tour My India</a></h1>
-      <h2>Fly with your favorite Places</h2> 
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="#">Tour My India</a></h1>
+                <h2>Fly with your favorite Places</h2>
+            </div>
+            <nav>
+                <ul id="demo">
+                    <li><a href="./T85_tour_template.html">Home</a></li>
+                    <li><a href="#">Package</a></li>
+                    <li><a href="#">Adventure</a></li>
+                    <li><a href="./registers.html">Register</a></li>
+                    <li class="last"><a href="./user_details.html">User Details</a></li>
+                </ul>
+            </nav>
+        </header>
     </div>
-    <nav>
-      <ul id="demo">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Package</a></li>
-        <li><a href="#">Adventure</a></li>
-        <li><a href="./registers.html">Register</a></li>
-        <li class="last"><a href="./user_details.html">User Details</a></li> 
-      </ul>
-    </nav>
-  </header>
-</div>
-<div class="wrapper row2">
-  <div id="container" class="clear">
-    <section id="shout">
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+            <!-- <section id="shout">
 
       <p>Home to some of the surreal hill stations, India is a travel destination you have to visit. Adorned with tranquil ambience, verdant greenery, sprawling desert, beautiful valleys, and dreamy lakes, the hill stations in India make for the best holiday destinations. Undoubtedly, your hill station trip in India will be an experience that shall remain etched in your mind for the rest of your life. </p>
     </section>
@@ -94,16 +96,89 @@
           <p class="more"><a href="#">Read More &raquo;</a></p>
         </article>
       </section>
-    </div> 
-  </div>
-</div>
-<div class="wrapper row3">
-  <footer id="footer" class="clear">
-    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">My Tour India</a></p>
-    <p class="fl_right">Developed by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"> Hari Vardhan</a></p>
-  </footer>
-</div>
+    </div> -->
+
+            <!-- <table border="1" style="width:100%">
+
+      <thead>
+          <tr>
+              <th>fname</th>
+              <th>lname</th>
+              <th>tel</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>zip</th>
+
+          </tr>
+      </thead>
+      <tbody>
 
 
+      </tbody>
+  </table> -->
+            <div class="row">
+                <div class="column">
+
+                </div>
+                <div class="column">
+                    <form onsubmit="getUserData(event)">
+                        <div class="register">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="email" class="form-label">Email Adress</label>
+                            <input type="email" class="form-control" id="email"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="userName" class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="userName"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="number">Number</label>
+                            <input type="number" id="number"> <br><br>
+                        </div>
+                        <div class="register">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"><br><br>
+                        </div><br>
+
+                        <!-- <div class="register">
+                <label for="email" class="form-label">Email Adress</label>
+                <input type="email" class="form-control" id="email">
+            </div>  -->
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper row3">
+        <footer id="footer" class="clear">
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">My Tour India</a></p>
+            <p class="fl_right">Developed by <a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates"> Hari Vardhan</a></p>
+        </footer>
+    </div>
+    <script>
+        function getUserData(event) {
+            event.preventDefault()
+            var person = {
+                fullName: "",
+                userName: "",
+                email: ""
+            }
+            for (a in person) {
+                person[a] = document.getElementById(a).value
+            }
+            console.log(person)
+        }
+        document.querySelector("button").onclick = getUserData
+
+
+    </script>
 </body>
+
 </html>

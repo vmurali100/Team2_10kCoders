@@ -2,32 +2,32 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>Template5</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="flipcart_style.css" type="text/css">
+    <title>Template5</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="flipcart_style.css" type="text/css">
 </head>
 
 <body>
-  <div class="wrapper row1">
-    <header id="header" class="clear">
-      <div id="hgroup">
-        <h1><a href="#">FlipCart</a></h1>
-        <h2>Easy Shopping</h2>
-      </div>
-      <nav>
-        <ul id="demo">
-          <li><a href="./T87-flipcart.html">Home</a></li>
-          <li><a href="#">Cart</a></li>
-          <li><a href="#">WishList</a></li>
-          <li><a href="./register.html">Register</a></li>
-          <li class="last"><a href="./users_details.html">User Details</a></li>
-        </ul>
-      </nav>
-    </header>
-  </div>
-  <div class="wrapper row2">
-    <div id="container" class="clear">
-      <!-- <div id="homepage">
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1><a href="#">FlipCart</a></h1>
+                <h2>Easy Shopping</h2>
+            </div>
+            <nav>
+                <ul id="demo">
+                    <li><a href="./T87-flipcart.html">Home</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">WishList</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li class="last"><a href="./users_details.html">User Details</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="wrapper row2">
+        <div id="container" class="clear">
+            <!-- <div id="homepage">
       <section id="latest" class="clear">
         <article class="one_quarter">
           <figure class="myImage">
@@ -103,7 +103,7 @@
         </ul>
       </nav>
     </aside> -->
-
+            <!-- 
       <table border="1" style="width:100%">
         <thead>
           <tr>
@@ -121,31 +121,71 @@
 
 
         </tbody>
-      </table>
+      </table> -->
+
+            <div class="row">
+                <div class="column">
+
+                </div>
+                <div class="column">
+                    <form onsubmit="getUserData(event)">
+                        <div class="register">
+                            <label for="fullName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="fullName"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="email" class="form-label">Email Adress</label>
+                            <input type="email" class="form-control" id="email"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="userName" class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="userName"><br><br>
+                        </div>
+                        <div class="register">
+                            <label for="number">Number</label>
+                            <input type="number" id="number"> <br><br>
+                        </div>
+                        <div class="register">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password"><br><br>
+                        </div><br>
+
+                        <!-- <div class="register">
+                    <label for="email" class="form-label">Email Adress</label>
+                    <input type="email" class="form-control" id="email">
+                </div>  -->
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="wrapper row3">
-    <footer id="footer" class="clear">
-      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">FlipCart</a></p>
-      <p class="fl_right">Developed By<a target="_blank" href="https://www.os-templates.com/"
-          title="Free Website Templates"> Hari Vardhan</a></p>
-    </footer>
-  </div>
-  <script src="./users.js"></script>
-  <script>
+    <div class="wrapper row3">
+        <footer id="footer" class="clear">
+            <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">FlipCart</a></p>
+            <p class="fl_right">Developed By<a target="_blank" href="https://www.os-templates.com/"
+                    title="Free Website Templates"> Hari Vardhan</a></p>
+        </footer>
+    </div>
+    <script src="./users.js"></script>
+    <script>
 
-    users.forEach((user) => {
-      var myTr = document.createElement("tr");
-      for (a in user) {
-        var myTd = document.createElement("td")
-        myTd.innerHTML = user[a]
-        myTr.appendChild(myTd)
-      }
-      document.querySelector("tbody").appendChild(myTr);
+        function getUserData(event) {
+            event.preventDefault()
+            var person = {
+                fullName: "",
+                userName: "",
+                email: ""
+            }
+            for (a in person) {
+                person[a] = document.getElementById(a).value
+            }
+            console.log(person)
+        }
+        document.querySelector("button").onclick = getUserData
 
-    })
-
-  </script>
+    </script>
 </body>
 
 </html>
