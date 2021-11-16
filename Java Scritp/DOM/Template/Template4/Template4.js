@@ -25,8 +25,8 @@ document.getElementById("field").appendChild(field_2)
 
 
 //FOr ul
-var listElements = ["Narendra", "surendra", "Data", "varma", "kalyan"]
-var list_link = ["#title", "#section1", "./new.html", "#section3", "#footer"];
+var listElements = ["Narendra", "Registration", "Data", "varma", "kalyan"]
+var list_link = ["#title", "./form1.html", "./new.html", "#section3", "#footer"];
 for (i = 0; i < listElements.length; i++) {
 
     //Step:1 Create Element
