@@ -108,23 +108,18 @@ for (i = 0; i < one.length; i++) {
     var ul_att = document.createAttribute("id")
     ul_att.value = "ul_do"
     ul.setAttributeNode(ul_att)
+    var ull = document.getElementById("ul_do")
+    var list = ["NLorem ipsum dolor sit", "Amet consectetur", "Praesent vel sem id", "Curabitur hendrerit est", "Sed a nulla urna"]
+    for (j = 0; j < list.length; j++) {
+        //Step:1 Create Element
+        var li = document.createElement("li")
+        var anchor = document.createElement("a")
+        // Step 2 : Adding a Text to Element
+        anchor.innerHTML = list[i]
+        // Step 3 : Appending the Element to Body Section
+        li.appendChild(anchor)
+        ul.appendChild(li)
 
-    var ul_l = document.getElementById("ul_do")
-    for (i = 0; i < ul_l.length; i++) {
-        var list = ["NLorem ipsum dolor sit", "Amet consectetur", "Praesent vel sem id", "Curabitur hendrerit est", "Sed a nulla urna"]
-        for (i = 0; i < list.length; i++) {
-            //Step:1 Create Element
-            var li = document.createElement("li")
-            var anchor = document.createElement("a")
-            // Step 2 : Adding a Text to Element
-            anchor.innerHTML = list[i]
-            // Step 3 : Appending the Element to Body Section
-            li.appendChild(anchor)
-            li.style.textAlign = "center"
-            // document.getElementById("ul_do").style.textAlign = "center"
-            ul_l.appendChild(li)
-
-        }
     }
 }
 
