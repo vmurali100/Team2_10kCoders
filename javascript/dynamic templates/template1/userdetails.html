@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>template1</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<div class="box row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">template1</a></h1>
+      <h2>nature images</h2>
+    </div>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Search:</legend>
+        <input type="text" value="Search Our Website&hellip;" onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+        <input type="submit" id="submit" value="submit">
+      </fieldset>
+    </form>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="userdetails.html">userdetails</a></li>
+        <li><a href="#">birds</a></li>
+        <li><a href="#">animals</a></li>
+        <li class="last"><a href="#">trees</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<div class="box row2">
+  <div id="container" class="clear">
+    <!-- <section id="slider"><a href="#"><img src="images/i.gif" alt=""></a></section>
+    <div id="homepage">
+      <section id="services" class="clear">
+        <article class="one_quarter">
+          <figure><img src="images/image1.jpeg" width="32" height="32" alt=""></figure>
+          <strong>Lorum ipsum dolor</strong>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="images/image2.jpeg" width="32" height="32" alt=""></figure>
+          <strong>Lorum ipsum dolor</strong>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="images/image3.jpeg" width="32" height="32" alt=""></figure>
+          <strong>Lorum ipsum dolor</strong>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter lastbox">
+          <figure><img src="images/image4.jpeg" width="32" height="32" alt=""></figure>
+          <strong>Lorum ipsum dolor</strong>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+      </section>
+     <section class="last clear">
+        <article class="three_quarter">
+          <h2>Lorum ipsum dolor</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <footer class="more"><a href="#">Read More &raquo;</a></footer>
+        </article>
+        <article class="one_quarter lastbox">
+          <h2>Lorum ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam erat. In fringilla massa ut nisi ullamcorper pellentesque. Quisque non luctus sem.</p>
+          <footer class="more"><a href="#">Read More &raquo;</a></footer>
+        </article>
+      </section>
+    </div>
+  </div>
+</div>-->
+<table border="1" style="width:100%;
+height:500px;
+">
+  <thead>
+      <tr>
+          <th>firstname</th>
+          <th>last name</th>
+          <th>tel</th>
+          <th>address</th>
+          <th>city</th>
+          <th>state</th>
+          <th>zip</th>
+
+      </tr>
+  </thead>
+      <tbody>
+
+      </tbody>
+</table> 
+</div>
+</div>
+<div class="box row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved</p>
+    <p class="fl_right">Template by <a target="_blank" href="https://unsplash.com/images/nature" title="nature images">nature images</a></p>
+  </footer>
+</div>
+<script src="users.js"></script>
+<script>
+  
+  users.forEach((user)=>{
+
+var myTr = document.createElement("tr");
+for(a in user){
+    var myTd=document.createElement("td")
+    myTd.innerHTML=user[a]
+    myTr.appendChild(myTd)
+}
+document.querySelector("tbody").appendChild(myTr);
+}) 
+</script>
+</body>
+</html>
