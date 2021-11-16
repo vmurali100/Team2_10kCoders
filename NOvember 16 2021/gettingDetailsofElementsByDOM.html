@@ -1,0 +1,41 @@
+<html>
+    <head id="head">
+
+    </head>
+    <body>
+        <script>
+            var h1 = document.createElement("title")
+            h1.innerText = "MY name is Teja"
+            document.querySelector("head").appendChild(h1)
+            console.log(head)
+            
+
+            var div= document.createElement("div")
+            div.innerText="Iam content of Div"
+            document.getElementsByTagName("body")[0].appendChild(div)
+            console.log(div)
+            div.setAttribute("id","mydiv")
+
+            var h2 = document.createElement("h1")
+            h2.innerText="Iam body Heading"
+            document.getElementById("mydiv").appendChild(h2)
+            console.log(h2)
+            h2.setAttribute("id","h2")
+
+            //Getting details of an element
+           
+            var form = document.createElement("form")
+            document.getElementById("mydiv").appendChild(form)
+
+            var button = document.createElement("button")
+            button.innerText = "Click Me"
+            document.querySelector("form").appendChild(button)
+            //button.setAttribute("type","button")
+            document.querySelector("button").onclick = function(event){
+                // event.preventDefault()
+                console.log(event.target)
+            }
+            console.log(form)
+        </script>
+    </body>
+</html>
