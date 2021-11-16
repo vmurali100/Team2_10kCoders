@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            background-color: gray;
+            color: yellowgreen;
+            text-transform: uppercase;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <script>
+
+
+        for (i = 0; i < 5; i++) {
+            // Step 1 : 
+            var para = document.createElement("p");
+
+            //Adding Class Attrubute to Element
+            para.setAttribute("class","item")
+
+            //Adding Style to An Element
+            para.style.textAlign="center"
+            para.style.padding="5px"
+
+            // Step 2 : 
+            para.innerHTML = "Hello ! , i am From Para "+i;
+
+            // Step 3 : 
+            document.body.appendChild(para)
+
+            
+        }
+    </script>
+</body>
+
+</html>
