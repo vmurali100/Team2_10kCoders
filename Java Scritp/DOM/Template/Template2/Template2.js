@@ -11,14 +11,15 @@ header2.innerHTML = "Free HTML5 Website Template"
 document.getElementById("hgroup").appendChild(header2)
 
 
-var listElements = ["Narendra", "surendra", "srikanth", "varma", "kalyan"]
+var listElements = ["Narendra", "surendra", "Data", "varma", "kalyan"]
+var list_link = ["#title", "#section1", "./new.html", "#section3", "#footer"];
 for (i = 0; i < listElements.length; i++) {
-
     //Step:1 Create Element
     var li = document.createElement("li")
     var anchor = document.createElement("a")
     // Step 2 : Adding a Text to Element
     anchor.innerHTML = listElements[i]
+    anchor.setAttribute("href", list_link[i]);
     // Step 3 : Appending the Element to Body Section
     li.appendChild(anchor)
     document.getElementById("ul_dom").appendChild(li)
@@ -34,7 +35,7 @@ for (i = 0; i < allImages.length; i++) {
     image.style.height = "300px"
     // const sty = document.querySelector(".myImage")
     // sty.style.width = '100%';
-    image.setAttribute("src", "../Template/images/" + (Number(i) + 1) + ".jpg")
+    image.setAttribute("src", "../images/" + (Number(i) + 1) + ".jpg")
     allImages[i].append(image)
 }
 
@@ -58,7 +59,7 @@ document.getElementById("one").appendChild(shout1)
 var allImages2 = document.getElementsByClassName("fig2")
 for (i = 0; i < allImages2.length; i++) {
     var image2 = document.createElement("img")
-    image2.setAttribute("src", "../Template/images/" + (Number(i) + 1) + ".jpg")
+    image2.setAttribute("src", "../images/" + (Number(i) + 1) + ".jpg")
     allImages2[i].appendChild(image2)
 }
 // For list figcaption

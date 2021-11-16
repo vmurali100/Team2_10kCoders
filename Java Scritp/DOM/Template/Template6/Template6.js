@@ -10,7 +10,8 @@ var header2 = document.createElement("h2")
 header2.innerHTML = "Free HTML5 Website Template"
 document.getElementById("hgroup").appendChild(header2)
 
-var listElements = ["Narendra", "surendra", "srikanth", "varma", "kalyan"]
+var listElements = ["Narendra", "surendra", "data", "varma", "kalyan"]
+var list_link = ["#title", "#section1", "./new.html", "#section3", "#footer"];
 for (i = 0; i < listElements.length; i++) {
 
     //Step:1 Create Element
@@ -18,6 +19,7 @@ for (i = 0; i < listElements.length; i++) {
     var anchor = document.createElement("a")
     // Step 2 : Adding a Text to Element
     anchor.innerHTML = listElements[i]
+    anchor.setAttribute("href", list_link[i]);
     // Step 3 : Appending the Element to Body Section
     li.appendChild(anchor)
     li.style.textAlign = "center"
