@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Basic 85</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./tour_template_style.css" type="text/css">
+</head>
+<body>
+<div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">Tour My India</a></h1>
+      <h2>Fly with your favorite Places</h2> 
+    </div>
+    <nav>
+      <ul id="demo">
+        <li><a href="./T85_tour_template.html">Home</a></li>
+        <li><a href="#">Package</a></li>
+        <li><a href="#">Adventure</a></li>
+        <li><a href="#">Trekking</a></li>
+        <li class="last"><a href="./user_details.html">User Details</a></li> 
+      </ul>
+    </nav>
+  </header>
+</div>
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <!-- <section id="shout">
+
+      <p>Home to some of the surreal hill stations, India is a travel destination you have to visit. Adorned with tranquil ambience, verdant greenery, sprawling desert, beautiful valleys, and dreamy lakes, the hill stations in India make for the best holiday destinations. Undoubtedly, your hill station trip in India will be an experience that shall remain etched in your mind for the rest of your life. </p>
+    </section>
+    <div id="homepage">
+      <section id="latest">
+        <article>
+          <figure>
+            <ul id="demo">
+              <li class="one_quarter"><img src="images/taj.jpg" width="215" height="150" alt=""></li>
+              <li class="one_quarter"><img src="images/kerala.jpg" width="215" height="150" alt=""></li>
+              <li class="one_quarter"><img src="images/goa.jpg" width="215" height="150" alt=""></li>
+              <li class="one_quarter lastbox"><img src="images/manali.jpg" width="215" height="150" alt=""></li>
+            </ul>
+            <figcaption><a href="#">View All Our Recent Places &raquo;</a></figcaption>
+          </figure>
+        </article>
+      </section>
+      <section id="services" class="last clear">
+        <article class="one_quarter">
+          <figure><img src="images/charan.jpg" width="32" height="32" alt=""></figure>
+          <strong>Ram Charan</strong>
+          <p>I am Travelled Goa. Provided the best accomodation, food and best hotels. I hope, i travel many places in this Company. </p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="images/pk.jpg" width="32" height="32" alt=""></figure>
+          <strong>Pawan Kalyan</strong>
+          <p>I travelled Kerala . Best Place to enjoy Nature. Best Travellers company. provided Best food, hotels ,accomodation and good time management.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="images/kajal.jpg" width="32" height="32" alt=""></figure>
+          <strong>Kajal Agarwal</strong>
+          <p>I travelled Taj Mahal. Best place. Best Travellers company. provided Best food, hotels ,accomodation and good time management.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter lastbox">
+          <figure><img src="images/vdk.jpg" width="32" height="32" alt=""></figure>
+          <strong>Vijay Devarakonda</strong>
+          <p>I Love travelling. Im almost travelled all places in India. I enjoyed a lot in this trip.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <div class="spacer"></div>
+        <article class="one_quarter">
+          <figure><img src="images/mohan.jpg" width="32" height="32" alt=""></figure>
+          <strong>Mohan Babu</strong>
+          <p>Great travellers. all employers are worked well. Treat us like their bosses. No Worries Mast Enjoyment.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="images/ntr.jpg" width="32" height="32" alt=""></figure>
+          <strong>NTR</strong>
+          <p>I Love Travelling. Best place. Best Travellers company. provided Best food, hotels ,accomodation and good time management.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter">
+          <figure><img src="images/Ram.jpg" width="32" height="32" alt=""></figure>
+          <strong>Ram Pothineni</strong>
+          <p>Enjoyed a lot in this trip. Best travellers. I always prefers Tour My India.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+        <article class="one_quarter lastbox">
+          <figure><img src="images/mahesh.jpg" width="32" height="32" alt=""></figure>
+          <strong>Mahesh Babu</strong>
+          <p>I travelled Kerala . Best Place to enjoy Nature. Best Travellers company. provided Best food, hotels ,accomodation and good time management.</p>
+          <p class="more"><a href="#">Read More &raquo;</a></p>
+        </article>
+      </section>
+    </div> -->
+
+    <table border="1" style="width:100%">
+      <thead>
+          <tr>
+              <th>fname</th>
+              <th>lname</th>
+              <th>tel</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>State</th>
+              <th>zip</th>
+
+          </tr>
+      </thead>
+      <tbody>
+
+
+      </tbody>
+  </table>
+  </div>
+</div>
+<div class="wrapper row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">My Tour India</a></p>
+    <p class="fl_right">Developed by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates"> Hari Vardhan</a></p>
+  </footer>
+</div>
+<script src="./users.js"></script>
+<script>
+   users.forEach((user) => {
+            var myTr = document.createElement("tr");
+            for (a in user) {
+                var myTd = document.createElement("td")
+                myTd.innerHTML = user[a]
+                myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr);
+
+        })
+
+</script>
+</body>
+</html>
