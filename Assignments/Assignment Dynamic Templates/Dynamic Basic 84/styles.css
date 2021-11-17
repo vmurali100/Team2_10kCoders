@@ -429,4 +429,14 @@ footer p {
     padding: 0 30px;
   }
 }
+
+
+
+
+table{
+  border:2px;
+  color:#439cbe;
+}
+table >thead{
+  color:#3986a3;
 }

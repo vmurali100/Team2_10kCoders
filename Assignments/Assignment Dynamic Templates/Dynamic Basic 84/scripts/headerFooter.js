@@ -1,13 +1,13 @@
 // title h1
 var title_a = document.createElement("a");
-title_a.innerHTML = "Dead Pool";
+title_a.innerHTML = "Indian Cricket";
 var title_h1 = document.createElement("h1");
 title_h1.appendChild(title_a);
 document.getElementById("title").appendChild(title_h1);
 
 // title h2
 var title_h2 = document.createElement("h2");
-title_h2.innerHTML = "Maximum effort";
+title_h2.innerHTML = "Bleed Blue";
 document.getElementById("title").appendChild(title_h2);
 
 // Form searchbox and button
@@ -27,10 +27,10 @@ fieldset.appendChild(submit);
 
 document.getElementsByTagName("form")[0].appendChild(fieldset);
 
-//header nav
+// //header nav
 var nav_ul = document.createElement("ul"); 
-var list_items = ["Home","User Details","Movie","About","Contact Us"];
-var list_link = ["./index.html","./user_details.html","#movieplot","#about","#footer"]
+var list_items = ["Home","User Details","Description","Forms","Latest from Gallery"];
+var list_link = ["./index.html","./user_details.html","#section2","#section3","#section4"];
 
 for(var i=0; i<list_items.length; i++)
 {
@@ -41,15 +41,14 @@ for(var i=0; i<list_items.length; i++)
     nav_li.appendChild(nav_a);
     nav_ul.appendChild(nav_li);
 }
-document.getElementById("nav").appendChild(nav_ul);
-
+document.getElementsByTagName("nav")[0].appendChild(nav_ul);
 
 
 //Footer
 var footer_p1 = document.createElement("p");
 var footer_p2 = document.createElement("p");
 
-footer_p1.innerHTML = "Copyright © 2021 - All Rights Reserved - CinemaBandi.";
+footer_p1.innerHTML = "Copyright © 2021 - All Rights Reserved - ScoreBuddy";
 footer_p2.innerHTML = "Template cloned from OS-Templates by Ervin";
 
 document.getElementById("footer").append(footer_p1, footer_p2);

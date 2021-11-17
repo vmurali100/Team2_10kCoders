@@ -1,34 +1,4 @@
 
-// title h1
-var title_a = document.createElement("a");
-title_a.innerHTML = "Travelling India";
-var title_h1 = document.createElement("h1");
-title_h1.appendChild(title_a);
-
-// title h2
-var title_h2 = document.createElement("h2");
-title_h2.innerHTML = "In search of...";
-
-//title
-document.getElementById("title").append(title_h1, title_h2);
-
-
-// //header nav
-var nav_ul = document.createElement("ul"); 
-var list_items = ["Home","Places","About","Category","Contact us"];
-var list_link = ["#title","#section1","#section2","#section3","#footer"];
-
-for(var i=0; i<list_items.length; i++)
-{
-    var nav_a =document.createElement("a"); 
-    nav_a.innerHTML = list_items[i];
-    nav_a.setAttribute("href",list_link[i]);
-    var nav_li = document.createElement("li"); 
-    nav_li.appendChild(nav_a);
-    nav_ul.appendChild(nav_li);
-}
-document.getElementsByTagName("nav")[0].appendChild(nav_ul);
-
 //Container section1 
 var sec1_image_array = ["https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.thetoptravelclub.com%2Fwp-content%2Fuploads%2F2020%2F03%2F4b77d2f4-20d5-4394-fdde-994322566c79.jpg&f=1&nofb=1",
 "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.iyFTshzC1-NPo9KCPmZdwwAAAA%26pid%3DApi&f=1",
@@ -108,11 +78,3 @@ document.querySelectorAll("nav")[1].append(aside_ul);
 
 
 
-//Footer
-var footer_p1 = document.createElement("p");
-var footer_p2 = document.createElement("p");
-
-footer_p1.innerHTML = "Copyright © 2021 - All Rights Reserved - Food Blog";
-footer_p2.innerHTML = "Template cloned from OS-Templates by Ervin";
-
-document.getElementById("footer").append(footer_p1, footer_p2);
