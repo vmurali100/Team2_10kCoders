@@ -198,6 +198,7 @@
     </div>
     <script src="./users.js"></script>
     <script>
+        var users=[]
 
         function getUserData(event) {
             event.preventDefault()
@@ -209,11 +210,16 @@
             for (a in person) {
                 person[a] = document.getElementById(a).value
             }
+            users.push(person)
+            clearForm()
+            display()
             console.log(person)
         }
         document.querySelector("button").onclick = getUserData
 
     </script>
+    <script src="./clear.js"></script>
+    <script src="./display.js"></script>
 </body>
 
 </html>

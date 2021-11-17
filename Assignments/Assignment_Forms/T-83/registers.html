@@ -151,8 +151,8 @@
                             <input type="text" class="form-control" id="userName"><br><br>
                         </div>
                         <div class="register">
-                        <label for="number">Number</label>
-                        <input type="number" id="number"> <br><br>
+                        <label for="number"  class="form-label">Number</label>
+                        <input type="number" class="form-control" id="number"> <br><br>
                         </div>
                         <div class="register">
                             <label for="password" class="form-label">Password</label>
@@ -163,7 +163,7 @@
                             <label for="email" class="form-label">Email Adress</label>
                             <input type="email" class="form-control" id="email">
                         </div>  -->
-                        <button class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
                     </form>
     
                 </div>
@@ -177,20 +177,43 @@
         </footer>
     </div>
     <script>
+        var users=[]
         function getUserData(event) {
             event.preventDefault()
             var person = {
                 fullName: "",
                 userName: "",
-                email: ""
+                email: "",
+                number:"",
+                password:""
             }
             for (a in person) {
                 person[a] = document.getElementById(a).value
             }
+            users.push(person)
             console.log(person)
+            display()
+            clearForm()
+            
         }
         document.querySelector("button").onclick = getUserData
+      
+
+        // function clearForm(){
+        //     var person = {
+        //         fullName: "",
+        //         userName: "",
+        //         email: "",
+        //         number:"",
+        //         password:""
+        //     }
+        //     for (a in person){
+        //         document.getElementById(a).value=""
+        //     }
+        // }
     </script>
+    <script src="./clear_form.js"></script>
+    <script src="./display_array.js"></script>
 </body>
 
 </html>
