@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templayte2_Basic87</title>
+    <link rel="stylesheet" href="./Template1.css" type="text/css">
+</head>
+
+<body>
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+            <div id="hgroup">
+                <h1>
+                    <a href="#">Basic 87</a>
+                </h1>
+                <h2>Free HTML5 Website Template</h2>
+            </div>
+            <nav>
+                <ul id="ul_dom">
+                    <li>
+                        <a href="./Template1.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Text Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text Link</a>
+                    </li>
+                    <li>
+                        <a href="#">Text Link</a>
+                    </li>
+                    <li class="last">
+                        <a href="#">Text Link</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="wrapper row2">
+        <div id="container" class="clear" style="height: 500px;">
+            <div class="col">
+                <form onsubmit="getUserData(event)">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">User Name</label>
+                        <input type="text" class="form-control" id="userName">
+                    </div>
+                    <button class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper row3">
+        <footer id="footer" class="clear">
+            <p class="f1_left">
+                Copyright © 2018 - All Rights Reserved -
+                <a href="#">Domain Name</a>
+            </p>
+            <p class="f1_right">
+                Template by
+                <a href="https://www.os-templates.com/" target="_blank" title="Free Website Templates"> Os Templates</a>
+            </p>
+        </footer>
+    </div>
+    <script>
+        function getUserData(event) {
+            event.preventDefault()
+            var person = {
+                email: "",
+                fullName: "",
+                userName: ""
+            }
+            for (a in person) {
+                person[a] = document.getElementById(a).value
+            }
+            console.log(person)
+        }
+        document.querySelector("button").onclick = getUserData
+    </script>
+</body>
+
+</html>
