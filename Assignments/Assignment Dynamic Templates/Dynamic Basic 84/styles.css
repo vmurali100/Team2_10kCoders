@@ -28,6 +28,18 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(600px, 960px));
   place-content: center;
 }
+.rows{
+  display:grid;
+  grid-template-rows: auto 1fr auto;
+  height:100vh;
+}
+.row2::-webkit-scrollbar { 
+        display: none;  /* Chrome Safari */
+}
+.row2{
+   scrollbar-width: none; /*Firefox */
+   -ms-overflow-style: none;  /*IE 10+ */
+}
 
 .wrapper {
   width: 100%;

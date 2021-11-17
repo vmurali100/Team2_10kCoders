@@ -41,6 +41,18 @@ ul li{
     grid-template-columns: repeat(auto-fill, minmax(480px, 960px));
     place-content: center;
   }
+  .rows{
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    height:100vh;
+  }
+  .row2::-webkit-scrollbar { 
+          display: none;  /* Chrome Safari */
+  }
+  .row2{
+     scrollbar-width: none; /*Firefox */
+     -ms-overflow-style: none;  /*IE 10+ */
+  }
   header {
     padding: 20px 0;
     display: grid;
