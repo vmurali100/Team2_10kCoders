@@ -29,8 +29,8 @@ document.getElementsByTagName("form")[0].appendChild(fieldset);
 
 //header nav
 var nav_ul = document.createElement("ul"); 
-var list_items = ["Home","User Details","Movie","About","Contact Us"];
-var list_link = ["./index.html","./user_details.html","#movieplot","#about","#footer"]
+var list_items = ["Home","User Details","Register","About","Contact Us"];
+var list_link = ["./index.html","./user_details.html","./registraion_page.html","#about","#footer"]
 
 for(var i=0; i<list_items.length; i++)
 {
