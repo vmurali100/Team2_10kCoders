@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            background-color: gray;
+            color: red;
+            
+        }
+        body{
+            margin: 0%;
+        }
+        #demo{
+            display: flex;
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+<div id="demo"></div>
+<body>
+    <!-- <script>
+        //creatig and dding new html elements
+       var heading= document.createElement("h2")//step1: creating a elemt
+       heading.innerHTML="hello iam heading"//step2: adding text to element
+       document.body.appendChild(heading)//step3: appending the element to body in html
+       console.log(heading)
+    </script>-->
+    <!-- <script>
+       var header= document.createElement("h1")
+       header.innerHTML="i am the header"
+       document.body.appendChild(header)
+        console.log(header)
+
+    </script>--> 
+
+    <script>
+        for (i = 0; i <5; i++){
+            var paragh = document.createElement("p")
+
+            //adding class-atribute to an element
+            paragh.setAttribute("class","item")
+
+            //adding style to an element
+            paragh.style.textAlign="center"
+            paragh.style.padding="15px"
+
+        paragh.innerHTML = "Data are individual facts, statistics, or items of information, often numeric. In a more technical sense, data are a set of values of qualitative or quantitative variables about one or more persons or objects, while a datum is a single value of a single variable." + i;
+        //document.body.appendChild(paragh)//we are saying body to display(paragh)
+        
+        //adding all elements into an element named(demo)
+        document.getElementById("demo").appendChild(paragh)
+        
+        }  
+    </script>
+</body> 
+
+</html>
