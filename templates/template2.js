@@ -1,11 +1,11 @@
 
 var movieDetails=["tel-comics","tel-movie","tel-director","tel-producers","tel-actors"]
 for(i=0;i<movieDetails.length;i++){
-    //step1:
-   var li= document.createElement("li")
-   
+    //step 1 to create element
+    var list = document.createElement("li")
+    var anchor = document.createElement("a")
+    list.innerHTML=movieDetails[i                   ]
 
-
-document.getElementById("demo").appendChild("li")
-
+list.appendChild(anchor)
+    document.getElementById("demo").appendChild(list)
 }
