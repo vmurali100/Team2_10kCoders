@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>template2</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+<style>
+  #container{
+    padding:30px 0;
+    height:500px;
+    overflow: scroll;
+}
+td{
+    padding:20px;
+}
+</style>
+</head>
+<body>
+<div class="box row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">template2</a></h1>
+      <h2>nature images</h2>
+    </div>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Search:</legend>
+        <input type="text" value="Search Our Website&hellip;" onFocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;">
+        <input type="submit" id="submit" value="submit">
+      </fieldset>
+    </form>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="userdetails.html">userdetails</a></li>
+        <li><a href="register.html">registration</a></li>
+        <li><a href="#">birds</a></li>
+        <li class="last"><a href="#">rivers</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<div class="box row2">
+  <div id="container" class="clear">
+    
+<table border="1" style="width:100%;
+height:500px;
+">
+  <thead>
+      <tr>
+          <th>firstname</th>
+          <th>last name</th>
+          <th>tel</th>
+          <th>address</th>
+          <th>city</th>
+          <th>state</th>
+          <th>zip</th>
+
+      </tr>
+  </thead>
+      <tbody>
+
+      </tbody>
+</table> 
+</div>
+</div>
+<div class="box row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved</p>
+    <p class="fl_right">Template by <a target="_blank" href="https://unsplash.com/images/nature" title="nature images">nature images</a></p>
+  </footer>
+</div>
+<script src="users.js"></script>
+<script>
+  
+  users.forEach((user)=>{
+
+var myTr = document.createElement("tr");
+for(a in user){
+    var myTd=document.createElement("td")
+    myTd.innerHTML=user[a]
+    myTr.appendChild(myTd)
+}
+document.querySelector("tbody").appendChild(myTr);
+}) 
+</script>
+</body>
+</html>
