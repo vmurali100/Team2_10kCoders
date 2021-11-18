@@ -279,6 +279,7 @@
         #header nav li a {
             color: #C0BAB6;
             background-color: #232323;
+            text-decoration: none;
         }
         #header nav li a:hover {
             color: #FF9900;
