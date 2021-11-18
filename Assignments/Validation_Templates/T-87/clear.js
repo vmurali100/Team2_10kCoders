@@ -1,16 +1,6 @@
-
-// clear The Form
-
-
-function clearForm(){
-    var person = {
-        fullName: "",
-        userName: "",
-        email: "",
-        number:"",
-        password:""
+function clear() {
+    for (a in person) {
+      document.getElementById(a).value = '';
     }
-    for (a in person){
-        document.getElementById(a).value=""
-    }
-}
+  }
+  
