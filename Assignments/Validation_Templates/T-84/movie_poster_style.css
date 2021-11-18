@@ -1,3 +1,7 @@
+*{
+    text-decoration:none;
+
+}
 
 
 html{
@@ -11,7 +15,7 @@ html{
 
   }
   #header nav ul li {
-    width: 75px;
+    width: auto;
     list-style-type: none;
     padding: 10px;
     text-align: center;
@@ -127,6 +131,7 @@ div.wrapper{
 .row1, .row1 a{
     color:#C0BAB6; 
     background-color:#333333;
+    text-decoration: none;
 }
 .row2{
     color:#979797; 
@@ -139,6 +144,7 @@ div.wrapper{
 .row3, .row3 a{
     color:#919191; 
     background-color:#232323;
+    text-decoration: none;
 }
 #container, #footer{
     display:block; 
@@ -307,6 +313,7 @@ input, textarea, select{
 #header nav li a{
     color:#C0BAB6; 
     background-color:#232323;
+    text-decoration: none;
 }
 #header nav li a:hover{
     color:#FF9900; 

@@ -124,6 +124,7 @@
         .row1 a {
             color: #C0BAB6;
             background-color: #333333;
+            text-decoration: none;
         }
 
         .row2 {
@@ -150,6 +151,7 @@
         .row4 a {
             color: #919191;
             background-color: #232323;
+            text-decoration: none;
         }
         #header,
         #container,

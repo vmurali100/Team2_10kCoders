@@ -110,6 +110,7 @@
         .row1 a {
             color: #0f0c0a;
             background-color: #ee5cce;
+            text-decoration: none;
         }
         .row2 {
             color: #979797;
@@ -124,6 +125,7 @@
         .row3 a {
             color: #919191;
             background-color: #232323;
+            text-decoration: none;
         }
         #header,
         #container,
@@ -258,6 +260,7 @@
         #header nav li a {
             color: #C0BAB6;
             background-color: #232323;
+            text-decoration: none;
         }
         #header nav li a:hover {
             color: #FF9900;
