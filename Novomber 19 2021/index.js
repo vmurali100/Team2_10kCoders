@@ -3,8 +3,8 @@ var person={
     lname:"",
     email:""
 }
-var  persons = []
-//var persons = JSON.parse(localStorage.getItem('persons'))
+//var  persons = []
+var persons = JSON.parse(localStorage.getItem('persons'))
 function display(event){
 event.preventDefault()
 for(a in person){
