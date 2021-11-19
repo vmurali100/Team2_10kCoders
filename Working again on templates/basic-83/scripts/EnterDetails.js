@@ -44,7 +44,8 @@ var person = {
     lname:'',
     email:""
 }
-var persons=[]
+//var persons=[]
+var persons = JSON.parse(localStorage.getItem("persons"))
 function store(event){
     event.preventDefault()
     for(a in person){
@@ -52,6 +53,9 @@ function store(event){
     }
     console.log("This is Object:",person)
     persons.push({...person})
+    var convertedpersons = JSON.stringify(persons)
+    localStorage.setItem("persons",convertedpersons)
+    console.log(convertedpersons)
     console.log("This is Array:",persons)
     clear()
     table()
@@ -69,6 +73,21 @@ function table(){
             tr.appendChild(td)
 
         }
+        //Adding Edit Button
+        var editTd = document.createElement("td")
+        tr.appendChild(editTd)
+        var editBtn = document.createElement("button")
+        editBtn.innerText="Edit"
+        editBtn.setAttribute("class","btn btn-warning")
+        editTd.appendChild(editBtn)
+        
+        //Adding Delete button
+        var delTd = document.createElement("td")
+        tr.appendChild(delTd)
+        var delBtn = document.createElement("button")
+        delBtn.innerText="Delete"
+        delBtn.setAttribute("class","btn btn-danger")
+        delTd.appendChild(delBtn)
     })
 }
 
