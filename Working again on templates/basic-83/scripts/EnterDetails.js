@@ -1,43 +1,3 @@
-var h1 = document.createElement("h1")
-h1.innerText = "Basic 83"
-document.getElementById("hgroup").appendChild(h1)
-
-var h2 = document.createElement("h2")
-h2.innerText = "Free HTML5 Website Template"
-document.getElementById("hgroup").appendChild(h2)
-
-//NavBar
-var ul = document.querySelector("ul")
-ul.setAttribute("id","navul")
-console.log(ul)
-
-for(i=0;i<5;i++){
-    var li = document.createElement("li")
-    document.getElementById("navul").appendChild(li)
-    li.setAttribute("class","lis")
-
-    var a = document.createElement("a")
-    if(i==0){
-        a.innerText = "Home"
-        document.getElementsByClassName("lis")[i].appendChild(a)
-        a.setAttribute("href","./index.html")
-        continue
-    }
-    if(i==3){
-        a.innerText = "Enter DetailS"
-        
-        document.getElementsByClassName("lis")[i].appendChild(a)
-        continue
-    }
-    if(i==4){
-        a.innerText = "Data Table"
-        a.setAttribute("href","./users.html")
-        document.getElementsByClassName("lis")[i].appendChild(a)
-        continue
-    }
-    a.innerText = "TextLink"
-    document.getElementsByClassName("lis")[i].appendChild(a)
-}
 
 var person = {
     fname:"",
@@ -61,10 +21,12 @@ function store(event){
     table()
     validate()   
 }
+//To get The data Direcrly from local storage we use to call thetable()
+table()
 
 function table(){
     document.querySelector("tbody").innerText=""
-    persons.forEach((person1)=>{
+    persons.forEach((person1,i)=>{
         var tr = document.createElement("tr")
         document.querySelector("tbody").appendChild(tr)
         for(a in person1){
@@ -79,6 +41,7 @@ function table(){
         var editBtn = document.createElement("button")
         editBtn.innerText="Edit"
         editBtn.setAttribute("class","btn btn-warning")
+        editBtn.setAttribute("onclick","edit("+ i +")")
         editTd.appendChild(editBtn)
         
         //Adding Delete button
@@ -87,8 +50,41 @@ function table(){
         var delBtn = document.createElement("button")
         delBtn.innerText="Delete"
         delBtn.setAttribute("class","btn btn-danger")
+        delBtn.setAttribute("onclick",'del(' + i + ')')
         delTd.appendChild(delBtn)
+
     })
+}
+var index;
+function edit(i){
+    index=i; 
+    console.log("Edit the value",i)
+    for(a in person){
+        document.getElementById(a).value = persons[i][a]
+    }
+    document.getElementById("update").style.display="block"
+    document.getElementById("submit").style.display="none"
+}
+
+function updateperson(){
+    for(a in person){
+        person[a] = document.getElementById(a).value
+    }
+    persons[index]={...person}
+    table()
+    localStorage.setItem('persons',JSON.stringify(persons))
+    document.getElementById("update").style.display="none"
+    document.getElementById("submit").style.display="block"
+    clear() 
+
+}
+
+
+function del(i){
+    console.log("Display the values of",i)
+    persons.splice(i,1)
+    localStorage.setItem('persons',JSON.stringify(persons))
+    table()
 }
 
 function clear(){

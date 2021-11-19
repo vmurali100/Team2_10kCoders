@@ -46,17 +46,18 @@
               <input type="email" class="form-control" id="email" aria-describedby="emailHelp" onkeyup="validate()">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
-            <button  class="btn btn-primary" onclick="store(event)"  disabled>Submit</button>
+            <button  class="btn btn-primary" id="submit" onclick="store(event)"  disabled >Submit</button>
+            <button type = "button" onclick="updateperson()" class= "btn btn-primary"
+             id ="update" style="display: none;">Update</button>
           </form>
         </div>
         <div class="col">
           <table class="table">
             <thead>
               <tr>
-              
-                <th scope="col">FirstName</th>
-                <th scope="col">LastName</th>
-                <th scope="col">Email</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
               </tr>
             </thead>
             <tbody>
