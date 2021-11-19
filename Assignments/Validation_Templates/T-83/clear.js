@@ -1,6 +1,5 @@
 function clear() {
-    for (a in person) {
-      document.getElementById(a).value = '';
-    }
+  for (a in person) {
+    document.getElementById(a).value = '';
   }
-  
+}
