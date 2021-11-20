@@ -29,7 +29,8 @@
                   <input type="email" class="form-control" id="email" aria-describedby="emailHelp" onkeyup="validate()">
                   <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
-                <button class="btn btn-primary" onclick="display(event)" disabled>Submit</button>
+                <button class="btn btn-primary" onclick="display(event)" id="submit" disabled>Submit</button>
+                <button type="button" class="btn btn-primary" onclick="updatePerson()" id="update" style="display:none">Update</button>
               </form>
         </div>
         <div class="col">
