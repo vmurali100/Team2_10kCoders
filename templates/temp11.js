@@ -1,14 +1,9 @@
+var externalLinks=["lnik1","link2","link3","link4","link5",]
+for(i=0;i=externalLinks.length;i++){
+  //step1: creating an element
+  var links = document.createElement("li")
+  //step2: adding text to an element
 
-var links=["link1","link2","link3","link4","link5"]
-for(i=0;i<links.length;i++){
-    var list =document.createElement("li")
-    var anchor=document.createElement("a")
-    anchor.innerHTML=links[i]
-
-
-
-    list.appendChild(anchor)
-      document.getElementById("demo").appendChild(list)
-      console.log(list)
+  //step3: appendchild to the element
+  document.getElementById("demo").appendChild(links)
 }
-
