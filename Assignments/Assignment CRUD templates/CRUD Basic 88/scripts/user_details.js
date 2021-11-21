@@ -1,1 +1,1 @@
-var persons = JSON.parse(localStorage.getItem("persons"));
+var persons = JSON.parse(localStorage.getItem("temp6persons"));

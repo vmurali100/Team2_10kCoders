@@ -3,5 +3,5 @@ function deletePerson(i){
     users.splice(i,1);
     console.log(users);
     display();
-    localStorage.setItem("persons",JSON.stringify(users));
+    localStorage.setItem("temp2persons",JSON.stringify(users));
 }

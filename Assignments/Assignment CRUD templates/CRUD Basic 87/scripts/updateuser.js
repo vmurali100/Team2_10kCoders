@@ -5,7 +5,7 @@ function updateUser()
         user[a] = document.getElementById(a).value ; 
     }
     users[index] = {...user};
-    localStorage.setItem("persons",JSON.stringify(users));
+    localStorage.setItem("temp5persons",JSON.stringify(users));
     display();
     document.getElementById("update").style.display = "none";
     document.getElementById("submit").style.display = "block";

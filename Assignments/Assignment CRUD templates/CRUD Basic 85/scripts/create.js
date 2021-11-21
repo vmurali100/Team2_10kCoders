@@ -4,7 +4,7 @@ var user = {
   email: "",
 };
 // var users = [];
-var users = JSON.parse(localStorage.getItem("persons"));
+var users = JSON.parse(localStorage.getItem("temp3persons"));
 if(users == null)
 {
   users = [];
@@ -18,7 +18,7 @@ function getUserDetails()
   }
   //pushing into array users
   users.push({...user});
-  localStorage.setItem("persons",JSON.stringify(users));
+  localStorage.setItem("temp3persons",JSON.stringify(users));
   
 
   clear();
