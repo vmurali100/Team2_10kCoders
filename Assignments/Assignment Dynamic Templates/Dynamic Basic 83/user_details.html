@@ -6,18 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic-83</title>
     <link rel="stylesheet" href="./styles.css" />
-    <!-- <style>
-      .row2 {
-        scrollbar-width: none; /*Firefox */
-        -ms-overflow-style: none; /*IE 10+ */
-      }
-      .row1 {
-        background-color: #333333;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(600px, 960px));
-        place-content: center;
-      }
-    </style> -->
+    
   </head>
   <body>
     <div class="rows">
@@ -37,7 +26,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>Company</th>
+                <!-- <th>Company</th> -->
               </tr>
             </thead>
             <tbody></tbody>
@@ -53,11 +42,11 @@
     <script src="scripts/user_details.js"></script>
     <script>
       document.querySelector(".row2").style.overflow = "auto";
-      users.forEach((user) => {
+      persons.forEach((person) => {
         var tr = document.createElement("tr");
-        for (key in user) {
+        for (key in person) {
           var td = document.createElement("td");
-          td.innerHTML = user[key];
+          td.innerHTML = person[key];
           td.style.padding = "0px 10px";
           tr.appendChild(td);
         }
