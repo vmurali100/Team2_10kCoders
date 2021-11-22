@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic-83</title>
+    <link rel="stylesheet" href="./styles.css" />
+    
+  </head>
+  <body>
+    <div class="rows">
+      <div class="wrapper row1">
+        <header id="home">
+          <div id="title"></div>
+          <nav id="nav"></nav>
+        </header>
+      </div>
+
+      <div class="wrapper row2">
+        <div class="container">
+          <table border="1">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <!-- <th>Company</th> -->
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="wrapper row3">
+        <footer id="footer"></footer>
+      </div>
+    </div>
+    <script src="./scripts/headerFooter.js"></script>
+    <script src="scripts/user_details.js"></script>
+    <script>
+      document.querySelector(".row2").style.overflow = "auto";
+      persons.forEach((user) => {
+        var tr = document.createElement("tr");
+        for (key in user) {
+          var td = document.createElement("td");
+          td.innerHTML = user[key];
+          td.style.padding = "0px 10px";
+          tr.appendChild(td);
+        }
+        document.querySelector("tbody").append(tr);
+      });
+    </script>
+  </body>
+</html>

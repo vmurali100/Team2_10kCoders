@@ -1,0 +1,445 @@
+/* ===============
+        Global
+    =============== */
+    *{
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+        /* border:1px solid red; */
+    }
+    /*--------------------------- Elements --------------------------- */
+    body{
+        color:#C0BAB6;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size:13px;
+    }
+    h1{
+        font-size:36px;
+        font-weight:normal;
+    }
+    h2{
+        font-weight:normal;
+        font-size:13px;
+    }
+    a{
+        text-decoration:none;
+        outline:none;
+    }
+    ul li{
+        list-style-type: none;
+    }
+    
+    .wrapper{
+        width:100%;
+    }
+    /*--------------------------- Header--------------------------- */
+    .row1 {
+        background-color: #613659;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(480px, 960px));
+        place-content: center;
+      }
+      .rows{
+        display:grid;
+        grid-template-rows: auto 1fr auto;
+        height:100vh;
+      }
+      .row2::-webkit-scrollbar { 
+              display: none;  /* Chrome Safari */
+      }
+      .row2{
+         scrollbar-width: none; /*Firefox */
+         -ms-overflow-style: none;  /*IE 10+ */
+      }
+      header {
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(480px,1fr));
+        color: #FCA7A5;
+      }
+      /*--------------- Title----------------- */
+      #title a {
+        
+      }
+      /*--------------- Nav bar----------------- */
+      header nav {
+        padding: 20px 0;
+        
+        background-color: #C197D2;
+      }
+      header nav ul {
+        list-style-type: none;
+        text-transform: uppercase;
+        display:grid;
+        grid-template-columns: repeat(5,auto);
+        place-items: center;
+      }
+      nav a {
+        text-decoration: none;
+        color: #130329;
+      }
+/* ================================================================================================================= */
+
+/* ============================================ Section ============================================  */
+
+.container{
+    width:960px;
+    margin:0 auto;
+    padding:30px 0;
+    display:grid;
+}
+/* ============================ Section 1 ========================== */
+#section1{
+    margin-bottom:30px;
+    height:360px;
+}
+#section1 img{
+    width:100%;
+    height:360px;
+}
+/*==========================================section 2==========================================*/
+#section2{
+    margin-bottom:30px;
+    display:grid;
+    /* grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); */
+    grid-template-columns: auto auto auto ;
+    /* place-items: center; */
+    justify-content: space-between;
+    column-gap: 10px;
+}
+#section2 article{
+    /* width:300px;     */
+    color: #919191;
+}
+#section2 article figure img{
+    width : 290px;
+    height : 180px;
+    border:1px solid #DEDEDE;
+    padding:4px;
+    margin-bottom:10px;
+}
+#section2 article figcaption h2{
+    color:#613659;
+    font-size:14px;
+    font-weight:bold;
+    font-style:italic;
+    line-height:normal;
+}
+#section2 article figcaption p{
+    color:#130329;
+    margin:13px 0;
+    line-height:1.6em;
+}
+/*==========================================read more==========================================*/
+.readmore{
+    text-align:right;
+    margin:0;
+}
+.readmore a{
+    color: #FF9900;
+    background-color: white;
+}
+/*==============================================================================================*/
+
+/*==========================================section 3==========================================*/
+#section3{
+    width:100%;
+    display:grid;
+    grid-template-columns: auto auto;
+    place-items:center;
+    column-gap: 20px;
+}
+#section3 figure {
+    order:2;
+}
+#section3 figcaption{
+    order:1;
+    
+    color: #989898;
+    line-height:1.6em;
+}
+#section3 figure img{
+    width:460px;
+    height:250px
+    padding:4px;
+    border: 1px solid #D6D6D6;
+    margin-bottom:10px;
+}
+#section3 figcaption strong{
+    color:#613659;
+    font-size:32px;
+    font-style: italic;
+    font-weight:normal;
+    line-height:normal;
+}
+#section3 figcaption p{
+    color:#130329;
+    margin:13px 0;
+}
+/*==============================================================================================*/
+
+/*==========================================Footer 1==========================================*/
+.row3{
+    background-color:#C197D2;
+}
+#details{
+    background-color:#C197D2;
+    width:960px;
+    margin:0 auto;
+    padding:30px 0;
+    line-height:1.4em;
+
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 20px;
+    place-items:center;
+}
+
+#details section h2{
+    font-size:12px;
+    margin-bottom:25px;
+    font-weight:bold;
+    text-transform:uppercase;
+    font-style:italic;
+    line-height: normal;
+    color: #613659;
+}
+#details section nav ul li{
+    margin-bottom:5px;
+    padding-bottom:5px;
+    border-bottom: 1px solid #555555;
+}
+#details section nav ul li a{
+    /* color: #211522; */
+    color:#5A3E79;
+    background-color: #C197D2;
+    font-size:12px;
+}
+    
+/*==========================================Footer 2==========================================*/
+.row4 {
+    background-color: #613659;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,960px));
+    place-content: center;
+  }
+#footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+#footer p{
+    font-size:13px;
+    padding:20px 0;
+}
+
+  
+
+
+/* ---------------------------------Media Queries--------------------------------------------------- */
+
+
+/* ---------------------------------Mobile--------------------------------------------------- */
+@media only screen and (max-width: 600px){
+
+    * {
+        box-sizing: border-box;
+      }
+      .row1{
+        display:block;
+      }
+      header {
+        grid-template-columns: auto;
+      }
+      #title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #title h1 {
+        font-size: 2em;
+      }
+      header nav {
+        padding: 0;
+      }
+      header nav ul {
+        padding: 0;
+        grid-template-columns: auto;
+      }
+      header nav ul li {
+        width:100%;
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid white;
+        justify-content: center;
+        text-align: center;
+      }
+    
+
+    .container{
+        width:100%;
+        padding:30px 10px;
+    }
+    #section1{
+        height:auto;
+    }
+    #section2{
+        width:100%;
+        grid-template-columns: auto;
+        text-align:center;
+    }
+    #section2 article{
+        width:100%
+        margin-bottom:20px;
+    }
+    #section2 article figure img{
+        width:50%;
+        /* height:50%
+         */
+    }
+    #section2 article .readmore{
+        text-align:center;
+    }
+
+    #section3{
+        width:100%;
+        grid-template-columns: auto;
+        /* justify-content: center; */
+    }
+    #section3 figure{
+        order:1;
+        text-align:center;
+    }
+    #section3 figure img{
+        width:100%;
+    }
+    #section3 figcaption{
+        width:100%;
+        order:2;
+    }
+
+    #section3 figcaption strong{
+        font-size:1.8em;
+        text-align: center;
+        padding-bottom:10px;
+    }
+    #section3 figcaption p{
+        margin:0 0 13px 0;
+        padding:10px;
+    }
+    #section3 figcaption .readmore{
+        padding:0;
+        margin:0;
+    }
+    #details{
+        width:100%;
+        grid-template-columns: auto auto;
+        place-content: center;
+        row-gap:20px;
+
+    }
+    #details section{
+        width:100%;
+        margin-bottom:10px;
+    }
+    #main_footer {
+        width: 100%;
+        grid-template-columns: auto;
+        place-content: center;
+        place-items: center;
+        padding: 0 10px;
+    }
+}
+
+/* ---------------------------------Tablet--------------------------------------------------- */
+@media only screen and (min-width: 601px) and (max-width: 768px){
+
+    * {
+        box-sizing: border-box;
+      }
+      header {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 0;
+      }
+      #title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #title h1 {
+        font-size: 2em;
+      }
+      header nav {
+        width: 100%;
+        padding: 0 50px;
+      }
+      header nav ul {
+        padding: 0;
+        justify-content: space-between;
+      }
+      header nav ul li {
+        padding: 10px;
+      }
+
+    .container{
+        width:100%;
+        padding:30px 30px;
+    }
+    #section1{
+        height:auto;
+    }
+    #section2{
+        width:100%;
+        grid-template-columns: auto;
+        margin-bottom:10px;
+    }
+    #section2 article{
+        width:100%;
+        margin-bottom:20px;
+        display:grid;
+        grid-template-columns: auto auto;
+        column-gap:20px;
+        place-items: center;
+    }
+    #section2 article figcaption{
+        width:100%;
+        height:auto;
+        flex-grow:1;
+    }
+    #section3{
+        width:100%;
+        grid-template-columns: auto;
+    }
+    #section3 figure{
+        order:1;
+        /* width:100%; */
+        /* height:auto; */
+    }
+    #section3 figure img{
+        order:2;
+        width:100%;
+        height:auto;
+    }
+    #section3 figcaption{
+        width:100%;
+        height:auto;
+    }
+
+    #section3 figcaption strong{
+        font-size:2em;
+        text-align: center;
+    }
+    #section3 figcaption p{
+        margin:0 0 13px 0;
+        padding:10px;
+    }
+    #section3 figcaption .readmore{
+        margin:0;
+    }
+    #details{
+        width:100%; 
+    }
+    #main_footer{
+    padding: 0 30px;
+  }
+}
