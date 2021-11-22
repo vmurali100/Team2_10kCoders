@@ -12,7 +12,7 @@ document.getElementById("hgroup").appendChild(header2)
 
 
 var listElements = ["Narendra", "Registration", "Data", "varma", "kalyan"]
-var list_link = ["#title", "./form1.html", "./new.html", "#section3", "#footer"];
+var list_link = ["#title", "/Java Scritp/DOM/Template/Template2/form1.html", "./new.html", "#section3", "#footer"];
 for (i = 0; i < listElements.length; i++) {
     //Step:1 Create Element
     var li = document.createElement("li")

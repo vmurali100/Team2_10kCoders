@@ -101,19 +101,19 @@ a {
   color: #979797;
   background-color: #ffffff;
 }
-#container {
+#containerr {
   display: block;
   width: 960px;
   margin: 0 auto;
   padding: 30px 0;
   overflow: auto;
 }
-#container #homepage {
+#containerr #homepage {
   display: block;
   width: 100%;
   line-height: 0.8cm;
 }
-#container section {
+#containerr section {
   display: block;
   width: 100%;
   margin: 0 0 30px 0;
@@ -130,7 +130,7 @@ figure {
   display: block;
   margin: 0;
 }
-#container #homepage #latest figure {
+#containerr #homepage #latest figure {
   display: block;
   margin: 0;
   padding: 4px;
@@ -146,7 +146,7 @@ img {
   line-height: normal;
   vertical-align: middle;
 }
-#container #homepage #latest figcaption {
+#containerr #homepage #latest figcaption {
   display: block;
   padding: 5px;
   text-align: center;
@@ -164,25 +164,25 @@ img {
   text-align: center;
   border-bottom: 1px solid #dedede;
 }
-#container .shout p {
+#containerr .shout p {
   font-size: 20px;
   margin: 0;
   padding: 0;
   line-height: 0.8cm;
 }
-#container #content {
+#containerr #content {
   float: left;
   width: 630px;
 }
-#container .last {
+#containerr .last {
   margin-right: 0;
 }
-#container #content #services ul {
+#containerr #content #services ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-#container #content #services ul li {
+#containerr #content #services ul li {
   display: block;
   width: 100%;
   margin-bottom: 30px;
@@ -190,7 +190,7 @@ img {
 .clear {
   clear: both;
 }
-#container #content #services ul li article figure img {
+#containerr #content #services ul li article figure img {
   float: left;
   width: 180px;
   height: 150px;
@@ -198,12 +198,12 @@ img {
   padding: 4px;
   border: 1px solid #666666;
 }
-#container #content #services ul li article figure figcaption {
+#containerr #content #services ul li article figure figcaption {
   display: block;
   float: right;
   width: 410px;
 }
-#container #content #services ul li article figure h2 {
+#containerr #content #services ul li article figure h2 {
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -216,16 +216,16 @@ img {
   color: #ff9900;
   overflow: auto;
 }
-#container .more {
+#containerr .more {
   text-align: right;
 }
-#container p {
+#containerr p {
   line-height: 0.8cm;
 }
-#container #content #services ul li.last {
+#containerr #content #services ul li.last {
   margin-bottom: 0;
 }
-#container .last {
+#containerr .last {
   margin: 0;
 }
 #content {
@@ -236,11 +236,11 @@ aside {
   margin: 0;
   padding: 0;
 }
-#container #right_column {
+#containerr #right_column {
   float: right;
   width: 280px;
 }
-#container #right_column h2.title {
+#containerr #right_column h2.title {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #dedede;
@@ -250,20 +250,20 @@ aside {
   line-height: normal;
   text-transform: uppercase;
 }
-#container #right_column nav {
+#containerr #right_column nav {
   display: block;
   width: 100%;
 }
-#container #right_column nav ul {
+#containerr #right_column nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-#container #right_column nav li {
+#containerr #right_column nav li {
   margin: 0 0 3px 0;
   padding: 0;
 }
-#container #right_column nav a {
+#containerr #right_column nav a {
   display: block;
   margin: 0;
   padding: 5px 10px 5px 20px;
@@ -274,7 +274,7 @@ aside {
   border-bottom: 1px dotted #666666;
   line-height: normal;
 }
-#container #right_column nav ul li a:hover {
+#containerr #right_column nav ul li a:hover {
   color: orange;
 }
 
@@ -307,5 +307,5 @@ footer {
   float: left;
 }
 .f1_right {
-  float: right; 
+  float: right;
 }
