@@ -22,38 +22,38 @@
                     <form id="form">
                         
                         <div class="mb-3">
-                          <label for="fname" class="form-label">First Name</label>
-                          <input type="text" class="form-control" id="fname" onkeyup="validate(id)">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" class="form-control" id="name" onkeyup="validate(id)">
                         </div>
     
                         <div class="mb-3">
-                          <label for="lname" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="lname" onkeyup="validate(id)">
+                          <label for="username" class="form-label">UserName</label>
+                          <input type="text" class="form-control" id="username" onkeyup="validate(id)">
                         </div>
 
                         <div class="mb-3">
-                            <label for="tel" class="form-label">Telephone</label>
-                            <input type="text" class="form-control" id="tel" onkeyup="validate(id)">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" class="form-control" id="email" onkeyup="validate(id)">
+                          </div>
+
+                          <div class="form-floating">
+                            <textarea class="form-control" placeholder="Address.." id="address" style= "height:150px;" onkeyup="validate(id)"></textarea>
+                            <label for="address">Address</label>
                           </div>
 
                           <div class="mb-3">
-                            <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" onkeyup="validate(id)">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phone" onkeyup="validate(id)">
                           </div>
 
                           <div class="mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" class="form-control" id="city" onkeyup="validate(id)">
-                          </div>
-
-                          <div class="mb-3">
-                            <label for="state" class="form-label">State</label>
-                            <input type="text" class="form-control" id="state" onkeyup="validate(id)">
+                            <label for="website" class="form-label">Website</label>
+                            <input type="text" class="form-control" id="website" onkeyup="validate(id)">
                           </div>
                           
-                          <div class="mb-3">
-                            <label for="zip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="zip" onkeyup="validate(id)">
+                          <div class="form-floating">
+                            <textarea class="form-control" placeholder="company.." id="company" style= "height:150px;" onkeyup="validate(id)"></textarea>
+                            <label for="company">Company</label>
                           </div>
                         <button type="button" class="btn btn-primary" onclick="updateUser()" id="update">Update</button>
                       </form>
@@ -66,13 +66,13 @@
                     <table class="table">
                         <thead id="thead" style="display:none">
                             <th>#</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Telephone</th>
+                            <th>Name</th>
+                            <th>UserName</th>
+                            <th>Email</th>
                             <th>Address</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip</th>
+                            <th>Phone</th>
+                            <th>Website</th>
+                            <th>Company</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </thead>

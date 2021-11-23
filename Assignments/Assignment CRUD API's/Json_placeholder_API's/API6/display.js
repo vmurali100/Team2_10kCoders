@@ -1,11 +1,11 @@
 user = {
-    fname : "",
-    lname : "",
-    tel : "",
+    name : "",
+    username : "",
+    email : "",
     address:"",
-    city: "",
-    state: "",
-    zip: ""
+    phone: "",
+    website: "",
+    company: ""
 }
 function display(data)
 { 
@@ -21,9 +21,31 @@ function display(data)
         slno.innerHTML = i+1;
         tr.appendChild(slno);
         for(a in user){
-            var td = document.createElement("td");
-            td.innerHTML = user[a];
-            tr.appendChild(td);
+            if(a !== "address" && a !== "company" && a !== "id")
+            {
+                var td = document.createElement("td");
+                td.innerHTML = user[a];
+                tr.appendChild(td);
+            }
+            else if (a == "address")
+            {
+                var td = document.createElement("td");
+                geoLoc = user[a].geo.lat +"<br>"+ user[a].geo.lng;
+                fullAddress = user[a].street + "<br>" + user[a].suite + "<br>" + user[a].city + "<br>" + user[a].zipcode + "<br>" + geoLoc;
+                td.innerHTML = fullAddress;
+                tr.appendChild(td);
+            }
+            else if (a == "company")
+            {
+                var td = document.createElement("td");
+                td.innerHTML = user[a].name + "<br>" + user[a].catchPhrase + "<br>" + user[a].bs;
+                tr.appendChild(td);
+            }
+            // else{
+            //     var td = document.createElement("td");
+            //     td.innerHTML = user[a];
+            //     tr.appendChild(td);
+            // }
         }
 
         var edittd = document.createElement("td");
