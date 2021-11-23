@@ -1,12 +1,16 @@
-var index;
-function edituser(i){
-    index = i;
-    for( a in user){
-        document.getElementById(a).value = users[i][a];
-    }
+// var index;
+// function edituser(){
+//     var save = document.createElement("button");
+//     save.innerHTML = "Save";
+//     save.setAttribute("type","button");
 
-    document.getElementById("update").style.display = "block";
-    document.getElementById("submit").style.display = "none";
-    
-    
-}
+
+//     // save.setAttribute("disabled",true);
+//     // index = i;
+//     // for( a in user){
+//     //     document.getElementById(a).value = users[i][a];
+//     // }
+
+//     // document.getElementById("Save").style.display = "block";
+//     // document.getElementById("Edit").style.display = "none";
+// }

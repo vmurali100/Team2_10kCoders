@@ -23,13 +23,17 @@
           <table border="1">
             <thead>
               <tr>
+                <th>slno</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <!-- <th>Company</th> -->
+                <th>Edit</th>
+                <th>Delete</th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+
+            </tbody>
           </table>
         </div>
       </div>
@@ -40,18 +44,6 @@
     </div>
     <script src="./scripts/headerFooter.js"></script>
     <script src="scripts/user_details.js"></script>
-    <script>
-      document.querySelector(".row2").style.overflow = "auto";
-      persons.forEach((user) => {
-        var tr = document.createElement("tr");
-        for (key in user) {
-          var td = document.createElement("td");
-          td.innerHTML = user[key];
-          td.style.padding = "0px 10px";
-          tr.appendChild(td);
-        }
-        document.querySelector("tbody").append(tr);
-      });
-    </script>
+    <script src="./scripts/edituser.js"></script>
   </body>
 </html>
