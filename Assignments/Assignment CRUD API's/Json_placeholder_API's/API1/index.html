@@ -22,39 +22,30 @@
                     <form id="form">
                         
                         <div class="mb-3">
-                          <label for="fname" class="form-label">First Name</label>
-                          <input type="text" class="form-control" id="fname" onkeyup="validate(id)">
+                          <label for="userId" class="form-label">User Id</label>
+                          <input type="text" class="form-control" id="userId" onkeyup="validate(id)">
                         </div>
     
-                        <div class="mb-3">
-                          <label for="lname" class="form-label">Last Name</label>
-                          <input type="text" class="form-control" id="lname" onkeyup="validate(id)">
-                        </div>
+                        <!-- <div class="mb-3">
+                          <label for="id" class="form-label">Id</label>
+                          <input type="text" class="form-control" id="id" onkeyup="validate(id)">
+                        </div> -->
 
                         <div class="mb-3">
-                            <label for="tel" class="form-label">Telephone</label>
-                            <input type="text" class="form-control" id="tel" onkeyup="validate(id)">
+                            <label for="title" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="title" onkeyup="validate(id)">
                           </div>
 
-                          <div class="mb-3">
-                            <label for="address" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="address" onkeyup="validate(id)">
+                          <div class="form-floating">
+                            <textarea class="form-control" placeholder="comment.." id="body" style= "height:150px;" onkeyup="validate(id)"></textarea>
+                            <label for="body">Body</label>
                           </div>
 
-                          <div class="mb-3">
-                            <label for="city" class="form-label">City</label>
-                            <input type="text" class="form-control" id="city" onkeyup="validate(id)">
-                          </div>
+                          <!-- <div class="mb-3">
+                            <label for="body" class="form-label">Body</label>
+                            <input type="text" class="form-control" id="body" onkeyup="validate(id)">
+                          </div> -->
 
-                          <div class="mb-3">
-                            <label for="state" class="form-label">State</label>
-                            <input type="text" class="form-control" id="state" onkeyup="validate(id)">
-                          </div>
-                          
-                          <div class="mb-3">
-                            <label for="zip" class="form-label">Zip</label>
-                            <input type="text" class="form-control" id="zip" onkeyup="validate(id)">
-                          </div>
                         <button type="button" class="btn btn-primary" onclick="updateUser()" id="update">Update</button>
                       </form>
                 </div>
@@ -66,13 +57,9 @@
                     <table class="table">
                         <thead id="thead" style="display:none">
                             <th>#</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Telephone</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip</th>
+                            <th>User Id</th>
+                            <th>Title</th>
+                            <th>Body</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </thead>

@@ -1,11 +1,8 @@
 user = {
-    fname : "",
-    lname : "",
-    tel : "",
-    address:"",
-    city: "",
-    state: "",
-    zip: ""
+    postId : "",
+    name : "",
+    email : "",
+    body:""
 }
 function display(data)
 { 
@@ -21,9 +18,13 @@ function display(data)
         slno.innerHTML = i+1;
         tr.appendChild(slno);
         for(a in user){
-            var td = document.createElement("td");
-            td.innerHTML = user[a];
-            tr.appendChild(td);
+            if(a !== "id")
+            {
+                var td = document.createElement("td");
+                td.innerHTML = user[a];
+                tr.appendChild(td);
+            }
+            
         }
 
         var edittd = document.createElement("td");
