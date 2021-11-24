@@ -15,7 +15,7 @@ function getData()
                 display(data);   
             }
         }
-    } 
+    }  
     else
     {
         display(data);

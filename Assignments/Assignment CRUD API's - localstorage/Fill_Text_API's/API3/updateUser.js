@@ -4,8 +4,8 @@ function updateUser(){
         user[a] = document.getElementById(a).value;
     }
     users[index]={...user};
-    // localStorage.setItem("username",JSON.stringify(users));
+    localStorage.setItem("data3",JSON.stringify(users));
     document.getElementById("form_row").style.display = "none";
     document.getElementById("table_row").style.display = "flex";
-    display();
+    display(users);
 }
