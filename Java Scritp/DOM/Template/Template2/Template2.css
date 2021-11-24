@@ -89,7 +89,10 @@ a {
   text-transform: none;
   line-height: normal;
 }
-
+a {
+  list-style: none;
+  text-decoration: none !important;
+}
 #header nav ul li a:hover {
   color: orange;
   cursor: pointer;
