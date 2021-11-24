@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templayte2_Basic87</title>
+  <link rel="stylesheet" href="./83.css" type="text/css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="wrapper row1">
+    <header id="header" class="clear">
+      <div id="hgroup">
+        <h1>
+          <a href="#">Basic 83</a>
+        </h1>
+        <h2>Free HTML5 Website Template</h2>
+      </div>
+      <nav>
+        <ul id="ul_dom">
+          <li>
+            <a href="./83.html">Home</a>
+          </li>
+          <li>
+            <a href="#">Text Link</a>
+          </li>
+          <li>
+            <a href="#">Text Link</a>
+          </li>
+          <li>
+            <a href="#">Text Link</a>
+          </li>
+          <li class="last">
+            <a href="#">Text Link</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="wrapper row2">
+    <div id="container" class="clear" style="height: 500px;">
+      <div class="row">
+        <div class="col">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="fname" onkeyup="validate()" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lname" onkeyup="validate()" />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" onkeyup="validate()" />
+            </div>
+            <button type="button" class="btn btn-primary" onclick="createPerson()" disabled="true" id="submit">
+              Submit
+            </button>
+
+            <button type="button" class="btn btn-primary" onclick="updatePerson()" class="btn btn-primary"
+              style="display:none" id="update">
+              update
+            </button>
+          </form>
+        </div>
+        <div class="col">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>FIRST</th>
+                <th>SECOND</th>
+                <th>EMAIL</th>
+                <th>EDIT</th>
+                <th>DELETE</th>
+              </tr>
+            </thead>
+            <tbody> </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="f1_left">
+        Copyright © 2018 - All Rights Reserved -
+        <a href="#">Domain Name</a>
+      </p>
+      <p class="f1_right">
+        Template by
+        <a href="https://www.os-templates.com/" target="_blank" title="Free Website Templates"> Os Templates</a>
+      </p>
+    </footer>
+  </div>
+  <script src="./create.js"></script>
+  <script src="./display.js"></script>
+  <script src="./clear.js"></script>
+  <script src="./validate.js"></script>
+  <script src="./editpersons.js"></script>
+  <script src="./deleteperson.js'"></script>
+  <script src="./updatepersons.js"></script>
+</body>
+
+</html>
