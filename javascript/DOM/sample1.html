@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding dynamically</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <!-- <button onclick="click()">click to display h6 </button> -->
+
+
+
+    <script>
+
+        // var a = document.createElement("p");
+
+        // a.innerHTML = "welcome to my para";
+
+        // document.getElementById("demo").appendChild(a);
+
+        for (i=1 ; i<=5 ; i++){
+            var a = document.createElement("p");
+
+        a.innerHTML = [i] +") welcome to my para";
+
+        document.getElementById("demo").appendChild(a);
+        }
+        for (i=1 ; i<=5 ; i++){
+            var a = document.createElement("h1");
+
+        a.innerHTML = [i] +") welcome to my heading 1";
+        a.style.background = "green"
+        a.style.textAlign = "center"
+
+        document.getElementById("demo").appendChild(a);
+        }
+       function click(){
+        for (i=1 ; i<=5 ; i++){
+            var a = document.createElement("h6");
+
+        a.innerHTML = [i] +") welcome to my heading 6 ";
+       
+
+        document.getElementById("demo").appendChild(a);
+    
+        }
+       }click()
+    </script>
+</body>
+</html>

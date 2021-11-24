@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skrillex 65</title>
+    <style>
+        *{
+            overflow: auto;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration-color: grey;
+        }
+        body{
+            background-color: rgb(114, 114, 114);}
+         
+        
+        #heading {
+            width: 960px;
+             margin: 0px auto ; background-color: black; border: blueviolet; color: grey; padding: 15px; box-sizing: border-box;
+        }
+        header main span{
+            font-size: 30px; 
+             text-transform: uppercase; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        header nav{
+           width: 500px; height: 60px; float: right;  text-transform: uppercase; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: grey; margin-right :15px; ;
+        }
+        #listing li {
+            float: left; font-size: 20px ; 
+            margin-left: 20px ; 
+        }
+        main{
+            float: left;
+        }
+        #listing a{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: grey;  text-decoration: none;
+        }
+        #listing a:hover{
+            color: orange;
+        }
+        
+        section{
+            background-color: whitesmoke; width: 960px; margin: 0px auto; clear: both;
+        }
+        #left{
+            width: 588px; margin-left: 20px; margin-top: 15px ; float: left;
+        }
+        #art1{
+             float: left; width: 588px ;
+        }
+        #sp1 ,figcaption{
+           font-size:  25px;   
+        }
+        #art1 span,#art2 span, figcaption{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: grey;text-decoration: none;
+        }
+        .sp2{
+            font-size: 10px; color: grey;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #art1 p,#art2 p, #art3 span{
+            font-size: 13px; font-family: Georgia, 'Times New Roman', Times, serif; color: grey;
+        }
+        #art1 p a{
+            font-size: 15px;text-decoration: none; color: #FF9900;
+        }
+        #aa{
+            font-size: 15px;text-decoration: none; color: #FF9900; float: right;
+        }
+         #art2{
+             width: 588px; margin-left: 0px; margin-top: 25px ; margin-bottom: 25px;
+         }
+         #art2 li{
+            font-size: 13px; font-family: Georgia, 'Times New Roman', Times, serif; color: grey; list-style: decimal;
+         }
+         #art3 img{
+             width: 269px; height: 100px; border: 5px solid rgb(201, 163, 163);
+         }
+         #art3 summary{
+             width: 279px; overflow:auto;float: left;
+         }
+         #sum2{
+            margin-left: 30px;
+         }
+         hr{
+             line-break: dotted;
+         }
+         /* ================================================done=========================================  */
+         #right{
+             float: right; width: 332px ;margin-right: 0px;
+
+         }
+         #right summary{
+             padding-right: 28px ; box-sizing: border-box; 
+         }
+         #sm1 a,#sm2 a,#sm3 a{
+            font-size: 15px;text-decoration: none; color:grey; 
+         }
+         #right a:hover{
+             color:#FF9900 ;
+         }
+         #right p{
+            font-size: 25px; font-family: Georgia, 'Times New Roman', Times, serif; color: grey; 
+         }
+         #sm1,#sm2,#sm3{
+            margin-top: 0px;
+         }
+        footer{
+            width: 960px; height: 50px;margin: 0px auto; background-color:black;  padding: 10PX 20px; box-sizing: border-box;
+        }
+        
+        footer p{
+            margin-top:0px ; margin-bottom: 0px;Color: grey; text-decoration: none;float: left;
+        }
+        footer a{
+            color: grey; text-decoration: none;
+        }
+        footer span{
+            float: right;margin-top:0px ; margin-bottom: 0px;color: grey; text-decoration: none;
+        }
+        #img2{
+            opacity: 0.5;
+        }
+        #img2:hover{
+            opacity: 1;
+        }
+        #img1{
+            opacity: 1;
+        }
+        #img1:hover{
+            opacity: 0.7;
+        }
+        
+        
+        /* <!-- media queries with max width(768px) --> */
+         
+     
+       @media screen and (max-width:768px) {
+        *{
+                 margin: 0px;
+                 padding: 0px;
+                 overflow: auto;
+                
+                 box-sizing:border-box ;
+             }
+             #heading{
+                 width: 100%;
+                 padding: 0px;
+             }
+             #heading main{
+                 width: 20%;
+                 margin: 10px 0px 10px 5px;
+                 
+             }
+             #heading nav{
+                 width: 70%;
+                 margin: 25px 5px 10px 0px;
+                display: inline-block;
+             }
+             section{
+                 width: 100%;
+
+             }
+             #left{
+                  width: 60%;
+                 float: left;
+                 margin-right: 0px 5% 0px 0px;
+                 /* position: relative; */ 
+             }
+             #art1 ,#art2{
+                 width: 100%;
+             }
+             #art1 {
+                 margin-bottom: 10%;
+             }
+             #art3{
+                 width: 100%;
+                 margin-top: 3.5%;
+                 position: absolute;
+                 background: whitesmoke;
+                 padding-left: 10px;
+                 margin-left: -20px;
+             }
+             footer{
+                 margin-top: 260px;
+                 width: 100%;
+             }
+             #right{
+                 width: 30%;
+                 float: left;
+                 margin-left: 0px;
+                 margin-top: 20px;
+                 float: right;
+             }
+             #sm1 , #sm2 ,#sm3 {
+                 width: 100%;
+             }
+             #art3 summary{
+                  margin-top: 15px; 
+                 float: left;
+                 width: 45%;
+             }
+             #sum2{
+                 margin-left: 20px;
+             }
+             #sm1 ,#sm2{
+                 margin-bottom: 5%;
+             }
+       }
+          /* <!-- ==================media queries with max width(601px)============================== --> */
+       
+          @media only screen and (max-width:601px) {
+             *{
+                 margin: 0px;
+                 padding: 0px;
+                 overflow: auto;
+                 width: 100%;
+                 box-sizing:border-box ;
+             }
+             #heading{
+                 width: 100%;
+                 padding: 0px;
+             }
+             #heading main{
+                 width: 98%;
+                 text-align: center;
+                 font-size: 20px;
+                 margin-left: 0px;
+
+             }
+             #heading main span{
+                 width: 100%;
+             }
+
+             #heading nav{
+                 width: 100%;
+                 padding-top: 10px ;
+                 height: 100%;
+                 margin-left: 0px;
+             }
+             #listing li{
+                 display: block;
+                 width: 98%;
+                 text-align: center;
+                 margin-left: 2%;
+                 border-bottom: 2px solid grey;
+             }
+             #left{
+                 width: 90%;
+                 margin-left: 5%;
+             }
+             #art1 , #art2 , #art3{
+                 width: 100%;
+             }
+             section{
+                 width: 100%;
+             }
+             #art3{
+                 margin-top: 10px;
+             }
+             #art3 summary{
+                 width: 100%;
+             }
+             #art3 img {
+                 width: 70%;
+                 margin-left: 15%;
+             }
+             #sum2{
+                 margin-left: 0px;
+             }
+              #sp1 ,  .sp2 {
+                  display: inline;
+                margin-left: 1%;
+            
+             }
+             #art1{
+                 margin-bottom: 20px;
+             } 
+             #art1 p , #art2 p{
+                 margin-top: 10px;
+             }
+             #right{
+                 margin-top: 530px;
+                 width: 100%;
+                 margin-left: 0px;
+             }
+             /* #right summary{
+                 /* padding-right: 0px;
+             } */
+             footer{
+                 width: 100%;
+                 height: 100%;
+                 margin-top: 0px;
+             }
+             #sm1 ,#sm2 ,#sm3{
+                 margin-left: 5%;
+                 width: 94%;
+                 /* border: 1px solid grey; */
+             }
+             #sm1 p,#sm2 p ,#sm3 p{
+                 text-align: center;
+                 margin-bottom: 10px;
+                 margin-top: 10px;
+                 border-bottom: 3px solid grey;
+             }
+             #sm1 li,#sm2 li ,#sm3 li{
+                 text-align: center;
+             }
+         } 
+  
+     /*+++++++++++++++++++++ end of media qeries -max-width-601px+++++++++++++++++++ */
+
+        
+        
+        
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+    <header id=heading class="col-3 col-s-3">
+         <main>
+            <span> skrillex </span> <br> <span> Sonny John Moore</span>
+         </main>
+         <nav> 
+             <ul id=listing>
+                 <li> <a href="#"> HOME</a></li>
+                 <li> <a href="https://g.co/kgs/nmZgku">ABOUT</a> </li>
+                 <li> <a href="https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX?si=FQyFLhg6Rduit4cHlR6lGQ&dl_branch=1">SONGS</a> </li>
+                 <li> <a href="https://www.youtube.com/c/Skrillex/videos">VIDEOS</a> </li>
+                 <li> <a href="https://www.skrillex.com/">CONTACT</a> </li>
+             </ul>
+         </nav>
+    </header>
+    <section>
+<div id=left>
+<article id=art1>
+    <span id=sp1>Skrillex</span>
+    <address class="sp2">Sonny John Moore</address>
+    <address class="sp2">15 January 1988 (age 33 years)</address>
+    <p>Skrillex became EDM's everykid Generational <a href="#">Connector</a>, providing a bridge back to the great (primarily white) youth-culture movements of the 1990s and 2000s – from goth to industrial to alternative <a href="#">rock to electronica </a> to emo. </p>
+<p>Sonny John Moore, known professionally as Skrillex, is an American DJ, record producer, musician, <a href="#">singer and songwriter.</a> </p>
+<a id=aa href="#">Read More>></a>
+</article> <br>
+<article id= art2>
+    <span id=sp1>Skrillex</span>
+    <address class="sp2">Sonny John Moore</address>
+    <address class="sp2">15 January 1988 (age 33 years)</address>
+    <p>Sonny John Moore, known professionally as Skrillex, is an American DJ, record producer, musician, singer and songwriter.</p>
+    <ul>
+        <li>Rock n' Roll (Will Take You to the Mountain)</li>
+            <li>Scary Monsters and Nice Sprites</li>
+            <li>Kill EVERYBODY</li>
+            <li>All I Ask of You</li>
+            <li>Scatta - (featuring Bare Noize / Foreign Beggars)</li>
+    </ul>
+    <p>American record producer, DJ, singer and songwriter Skrillex has released one studio album, seven extended plays, 44 singles (including nine as a featured artist), and 23 music videos.</p>
+    <a id=aa href="#">Read More>></a>
+</article>
+<article id=art3>
+    <summary>
+<img id=img1  src="https://i.redd.it/02u4lh3bc0251.jpg" alt="skrillex">
+<figcaption><p>Sonny John Moore</p></figcaption>
+<span>American record producer, DJ, singer and songwriter Skrillex has released one studio album, seven extended plays, 44 singles (including nine as a featured artist), and 23 music videos.(including nine as a featured artist), and 23 music videos.</span>
+<br><a id=aa href="#">Read More>></a>
+</summary>
+    <summary id=sum2>
+        <img id=img2 src="https://i.redd.it/02u4lh3bc0251.jpg" alt="skrillex">
+        <figcaption><p>Sonny John Moore</p></figcaption>
+        <span>American record producer, DJ, singer and songwriter Skrillex has released one studio album, seven extended plays, 44 singles (including nine as a featured artist), and 23 music videos.(including nine as a featured artist), and 23 music videos.</span>
+       <br> <a id=aa href="#">Read More>></a>        
+    </summary>
+</article>
+</div>
+<div id=right>
+<summary id=sm1>
+    <p>DJ GENRES</p>
+    <ul>
+     <li><a href="#">Electronic dance</a></li><hr>
+     <li><a href="#">Dubstep</a></li><hr>
+     <li><a href="#">Big Room</a></li><hr>
+     <li><a href="#">Progressive House</a></li><hr>
+     <li><a href="#">Techno</a></li><hr>
+
+    </ul>
+</summary> 
+<summary id=sm2>
+    <p>AWARDS</p>
+    <ul>
+     <li><a href="#">Best Dance Recording</a></li><hr>
+     <li><a href="#">Best Short Form Music Video</a></li><hr>
+     <li><a href="#">Best New Artist</a></li><hr>
+     <li><a href="#">Progressive House</a></li><hr>
+     <li><a href="#">Best Dance/Electronic Album</a></li><hr>
+</summary> 
+<summary id=sm2>
+    <p>ALBUMS</p>
+    <ul>
+     <li><a href="#">Recess</a></li><hr>
+     <li><a href="#">Leaving</a></li><hr>
+     <li><a href="#">Bangarang</a></li><hr>
+     <li><a href="#">My Name Is Skrillex</a></li><hr>
+     <li><a href="#">Scary Monsters</a></li><hr>
+     <li><a href="#">Triple Vinyl Box Set</a></li><hr>
+     <li><a href="#">GypsyhookEP</a></li><hr>
+</summary>
+
+
+</div>
+    </section>
+    <footer>
+       <p> Copyright © 2009 - 2021 - All Rights Reserved - <a href="#">Domain Name</a> </p>
+        <span>Template by OS Templates</span>
+    </footer>
+</body> 
+</html>
