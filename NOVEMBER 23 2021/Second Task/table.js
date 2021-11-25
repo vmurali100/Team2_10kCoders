@@ -47,3 +47,4 @@ table()
 document.getElementById("update").style.display = "none"
 document.getElementById("submit").style.display = "block"
 }
+table()

@@ -1,6 +1,8 @@
 var users;
+var data = localStorage.getData(JSON.parse(users))
 function getData() {
-    var getInfo = new XMLHttpRequest()
+    if(!data){
+        var getInfo = new XMLHttpRequest()
     getInfo.onreadystatechange = function () {
         if (getInfo.status == 200 && getInfo.readyState == 4) {
             users = getInfo.response
@@ -10,6 +12,7 @@ function getData() {
             table()
             
         }
+    }
     }
     getInfo.open("GET", "https://fakestoreapi.com/users")
     getInfo.send()
