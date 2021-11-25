@@ -57,6 +57,8 @@
     <script>
         var all = [];
         var all = JSON.parse(localStorage.getItem("akhil"));
+
+        // function for the submit button for creating 
         document.querySelector("button").onclick = (() => {
             var employee = {
                 email: "",
@@ -66,25 +68,77 @@
             for (a in employee) {
                 employee[a] = document.getElementById(a).value
             }
-            all.push(employee)
+            // creating a copy 
+            // var newemployee = object.assign({} ,employee )
+            all.push({...employee})
             console.log(all);
-            displayElements();
+            
             var allHere = JSON.stringify(all)
             localStorage.setItem("akhil", allHere)
             clearForm();
+            displayElements();
             validate();
 
         })
-       
-        
+    //    displaying elemsnts 
+    
+    function displayElements() {
+            // all = [];
+            // var employee = {
+            //     email: "",
+            //     firstName: "",
+            //     userName: "",
+            // }
+            // we have to clear the body before giving new value cause already enterd value is in table if we give new data, the previous  will be displayed with this new data also it means if we give two datas if will disply 3 datas 
+           document.querySelector("tbody").innerHTML = "";
+            all.forEach((employee, i) => {
+                var myTr = document.createElement("tr");
+                var indexId = document.createElement("td");
+                indexId.innerHTML = i + 1;
+                myTr.appendChild(indexId);
+               
+                for (a in employee) {
+                    var myTd = document.createElement("td");
+                    myTd.innerHTML = employee[a];                      
+                    myTr.appendChild(myTd);
+                  
+                }
+                document.querySelector("tbody").appendChild(myTr);
+                // edit button
+                var edited = document.createElement("td");
+                var editBtn = document.createElement("button");
+                editBtn.setAttribute("class", "btn-warning");
+                editBtn.setAttribute("onclick", "editElement(" + i + ")")
+                editBtn.innerHTML = 'edit';
 
+                myTr.appendChild(edited)
+                edited.appendChild(editBtn)
+
+                //    delete button 
+                var deleted = document.createElement("td");
+                var deleteBtn = document.createElement("button");
+                deleteBtn.setAttribute("class", "btn-danger");
+                deleteBtn.setAttribute("onclick", "deleteElement(" + i + ")")
+                deleteBtn.innerHTML = 'Delete';
+
+                myTr.appendChild(deleted)
+                deleted.appendChild(deleteBtn)
+
+                document.querySelector("tbody").appendChild(myTr);
+            });
+           
+        }
+        displayElements();
+
+        
+// clear form funtion
         function clearForm() {
             var employee = {
                 email: "",
                 firstName: "",
                 userName: "",
             }
-
+// we can create a clone to stop the dowble displying of funtions 
             for (a in employee) {
                 document.getElementById(a).value = ""
                 // document.getElementById("firstName").value = ""
@@ -92,6 +146,7 @@
             }
         }
         
+        // validating the function of button 
 
         function validate() {
             var employee = {
@@ -121,51 +176,6 @@
             }
 
         }
-        function displayElements() {
-            // all = [];
-            // var employee = {
-            //     email: "",
-            //     firstName: "",
-            //     userName: "",
-            // }
-           document.querySelector("tbody").innerHTML = "";
-            all.forEach((employee, i) => {
-                var myTr = document.createElement("tr");
-                var indexId = document.createElement("td");
-                indexId.innerHTML = i + 1;
-                myTr.appendChild(indexId);
-                document.querySelector("tbody").appendChild(myTr);
-                for (a in employee) {
-                    var myTd = document.createElement("td");
-                    myTr.appendChild(myTd);
-                    myTd.innerHTML = employee[a]
-                }
-                // edit button
-                var edited = document.createElement("td");
-                var editBtn = document.createElement("button");
-                editBtn.setAttribute("class", "btn-warning");
-                editBtn.setAttribute("onclick", "editElement(" + i + ")")
-                editBtn.innerHTML = 'edit';
-
-                myTr.appendChild(edited)
-                edited.appendChild(editBtn)
-
-                //    delete button 
-                var deleted = document.createElement("td");
-                var deleteBtn = document.createElement("button");
-                deleteBtn.setAttribute("class", "btn-danger");
-                deleteBtn.setAttribute("onclick", "deleteElement(" + i + ")")
-                deleteBtn.innerHTML = 'Delete';
-
-                myTr.appendChild(deleted)
-                deleted.appendChild(deleteBtn)
-
-                document.querySelector("tbody").appendChild(myTr);
-            });
-           
-        }
-        displayElements();
-
 
     </script>
 
