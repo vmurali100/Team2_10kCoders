@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>template4</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+  <div class="wrapper row1">
+  <header id="header" class="clear">
+    <div id="hgroup">
+      <h1><a href="#">template4</a></h1>
+      <h2>nature images</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="userdetails.html">userdetails</a></li>
+        <li><a href="register.html">registration</a></li>
+        <li><a href="crud.html">crud</a></li>
+        <li class="last"><a href="#">Text Link</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+<div class="wrapper row2">
+  <div id="container" class="clear">
+    <section id="slider" class="clear">
+      <figure><img src="images/630x300.gif" alt="">
+        <figcaption>
+          <h2>Eu justo augue estas</h2>
+          <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat adipiscinia pellentum leo.</p>
+          <footer class="more"><a href="#">Read More &raquo;</a></footer>
+        </figcaption>
+      </figure>
+    </section>
+   
+    
+      
+      <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <form onsubmit="getUserData(event)" >
+                <div class="mb-3">
+                    <label for="exampleInputEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="fullName" class="form-label">Full name</label>
+                    <input type="text" class="form-control" id="fullName">
+                </div>
+                <div class="mb-3">
+                    <label for="userName" class="form-label">User Name</label>
+                    <input type="text" class="form-control" id="userName">
+                </div>
+                
+                <button class="btn btn-primary" >Submit</button>
+            </form>
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<div class="box row3">
+  <footer id="footer" class="clear">
+    <p class="fl_left">Copyright &copy; 2021 - All Rights Reserved</p>
+    <p class="fl_right">Template by <a target="_blank" href="https://unsplash.com/images/nature" title="nature images">nature images</a></p>
+  </footer>
+</div>
+<script>
+    function getUserData(event) {
+              event.preventDefault()
+              
+              var person = {
+                  fullName:"",
+                  email:"",
+                  userName:""
+              }
+              for(a in person){
+                  person[a]=document.getElementById(a).value
+              }
+              console.log(person)
+      }
+
+      document.querySelector("button").onclick = getUserData
+</script>
+</body>
+</html>
