@@ -50,49 +50,59 @@
       </section>
       <div class="container">
         <div class="row">
-          <div class="col">
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="fname" onkeyup="validate()" />
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lname" onkeyup="validate()" />
-              </div>
+            <div class="col">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                </form>
+            </div>
+            <div class="col"></div>
 
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" onkeyup="validate()" />
-              </div>
-              <button type="button" class="btn btn-primary" onclick="createPerson()" disabled ="true" id="submit">
-                Submit
-            </button>
-            <button type="button" onclick="updatePerson()" class="btn btn-primary" style="display: none"
-                id="update">
-                Update
-            </button>
-
-             
-            </form>
-          </div>
-          <div class="col">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                                <th>First</th>
-                                <th>Last</th>
-                                <th>Email</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
         </div>
-      </div>
+        <label for="">Select Subject</label>
+        <p></p>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="HTML" name="subject">
+            <label class="form-check-label" for="flexCheckDefault">
+                HTML
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="CSS" name="subject" >
+            <label class="form-check-label" for="flexCheckChecked">
+                CSS
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Javascript" name="subject" >
+            <label class="form-check-label" for="flexCheckDefault">
+                Java Script
+            </label>
+        </div><br>
+        <label for="">Gender</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="male" name="gender" >
+            <label class="form-check-label" for="flexRadioDefault1">
+              Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" value="female" name="gender"  >
+            <label class="form-check-label" for="flexRadioDefault2">
+              Female
+            </label>
+          </div><br>
+
+        <button type="button" class="btn btn-primary" onclick="getAllDetails()">Submit</button>
+
+    </div>
+
     </div>
   </div>
   <div class="wrapper row3">
@@ -103,13 +113,8 @@
     </footer>
   </div>
 
-  <script src="create.js"></script>
-  <script src="display.js"></script>
-  <script src="clear.js"></script>
-  <script src="validate.js"></script>
-  <script src="deletePerson.js"></script>
-  <script src="editPerson.js"></script>
-  <script src="updatePerson.js"></script>
+  <script src="./script.js"></script>
+ 
 </body>
 
 </html>

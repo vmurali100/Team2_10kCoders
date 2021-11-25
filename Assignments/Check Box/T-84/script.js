@@ -1,28 +1,25 @@
 document.querySelector("button").onclick = function () {
-    let person = {
-        email: "",
-        password: "",
+    var person = {
+        email : "",
+        password : '',
     };
-    let allCheckBoxElements = document.getElementsByName('subject');
-    let allRadioElements = document.getElementsByName('gender');
+    var allCheckBoxElements = document.getElementsByName('subject');
+    var allRadioButtons = document.getElementsByName('gender');
 
     for (a in person) {
         person[a] = document.getElementById(a).value;
     }
     person['subjects'] = [];
     allCheckBoxElements.forEach((element) => {
-        console.log(element);
         if (element.checked) {
             person.subjects.push(element.value);
         }
     });
-    person['gender'] = '';
-
-    allRadioElements.forEach((element) => {
+    person['gender'] = ' ';
+    allRadioButtons.forEach((element) => {
         if (element.checked) {
             person.gender = element.value;
         }
     });
-
     console.log(person);
 };
