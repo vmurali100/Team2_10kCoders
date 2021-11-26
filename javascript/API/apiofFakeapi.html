@@ -32,6 +32,22 @@
          
         </tbody>
       </table>
+      <form>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" onkeyup="validate()">
+        </div>
+        <div class="mb-3">
+            <label for="firstName" class="form-label">firstName</label>
+            <input type="text" class="form-control" id="firstName" onkeyup="validate()">
+        </div>
+        <div class="mb-3">
+            <label for="userName" class="form-label">userName</label>
+            <input type="text" class="form-control" id="userName" onkeyup="validate()">
+        </div>
+        <button type="button" class="btn btn-primary" disabled="true" id=submit>Submit</button>
+        <button type="button" onclick="updateElement()" class="btn btn-info" style="display:none" id=update >Update</button>
+    </form>
     <script>
 
         // display elements
@@ -123,7 +139,7 @@
     //         userName : "" ,
     //     }
     all.splice(i,1);
-    localStorage.setItem("akhil" ,JSON.stringify(all[i]));
+    localStorage.setItem("akhil" ,JSON.stringify(all));
     deleteElement();
     console.log("clicked value to delete " + i);
 }

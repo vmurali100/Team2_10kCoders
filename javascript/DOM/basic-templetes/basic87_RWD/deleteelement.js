@@ -5,7 +5,7 @@ function deleteElement(i){
             userName : "" ,
         }
     all.splice(i,1);
-    localStorage.setItem("akhil" ,JSON.stringify(all[i]));
-    deleteElement();
-    console.log("clicked value to delete " + i);
+    localStorage.setItem("akhi" ,JSON.stringify(all));
+    displayElements();
+    // console.log("clicked value to delete " + i);
 }

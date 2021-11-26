@@ -27,7 +27,8 @@
                         <label for="userName" class="form-label">userName</label>
                         <input type="text" class="form-control" id="userName" onkeyup="validate()">
                     </div>
-                    <button type="button" class="btn btn-primary" disabled="true">Submit</button>
+                    <button type="button" class="btn btn-primary" disabled="true" id=submit>Submit</button>
+                    <button type="button" onclick="updateElement()" class="btn btn-info" style="display:none" id=update >Update</button>
                 </form>
 
             </div>
@@ -55,16 +56,17 @@
     </div>
 
     <script>
-        var all = [];
+        // var all = [];
         var all = JSON.parse(localStorage.getItem("akhil"));
-
-        // function for the submit button for creating 
-        document.querySelector("button").onclick = (() => {
-            var employee = {
+        var employee = {
                 email: "",
                 firstName: "",
                 userName: "",
             }
+
+        // function for the submit button for creating 
+        document.querySelector("button").onclick = (() => {
+           
             for (a in employee) {
                 employee[a] = document.getElementById(a).value
             }
@@ -80,7 +82,7 @@
             validate();
 
         })
-    //    displaying elemsnts 
+    //    displaying elements 
     
     function displayElements() {
             // all = [];
@@ -104,15 +106,20 @@
                   
                 }
                 document.querySelector("tbody").appendChild(myTr);
+
+
                 // edit button
                 var edited = document.createElement("td");
                 var editBtn = document.createElement("button");
+                editBtn.innerHTML = 'edit';
+                edited.appendChild(editBtn);
+                myTr.appendChild(edited);
                 editBtn.setAttribute("class", "btn-warning");
                 editBtn.setAttribute("onclick", "editElement(" + i + ")")
-                editBtn.innerHTML = 'edit';
+                
 
-                myTr.appendChild(edited)
-                edited.appendChild(editBtn)
+               
+               
 
                 //    delete button 
                 var deleted = document.createElement("td");
@@ -179,6 +186,9 @@
 
     </script>
 
+<script src="./deleteelement.js"></script>
+<script src="./edit.js"></script>
+<script src="./update.js"></script>
 
 </body>
 
