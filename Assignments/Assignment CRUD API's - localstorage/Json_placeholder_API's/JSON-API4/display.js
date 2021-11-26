@@ -1,12 +1,12 @@
-users = data;
 user = {
-    id : "",
-    email : "",
-    username : "",
-    password : ""
+    albumId : "",
+    title : "",
+    url : "",
+    thumbnailUrl:""
 }
 function display(data)
 { 
+    
     users = data;
     document.getElementById("thead").style.display = "table-header-group"
     document.querySelector("tbody").innerHTML = "";
@@ -16,9 +16,31 @@ function display(data)
         slno.innerHTML = i+1;
         tr.appendChild(slno);
         for(a in user){
-            var td = document.createElement("td");
-            td.innerHTML = user[a];
-            tr.appendChild(td);
+            if(a !== "id" && a !== "url" && a !== "thumbnailUrl")
+            {
+                var td = document.createElement("td");
+                td.innerHTML = user[a];
+                tr.appendChild(td);
+            }
+            else if(a == "url" || a == "thumbnailUrl")
+            {
+                var img = document.createElement("img");
+                var td = document.createElement("td");
+                img.setAttribute("src",user[a]);
+				if(a == "url")
+				{
+					img.setAttribute("width","100px"); 
+					img.setAttribute("height","100px");
+				}
+				else
+				{
+					img.setAttribute("width","50px"); 
+					img.setAttribute("height","50px");	
+				}
+				
+                td.appendChild(img)
+                tr.appendChild(td);
+            }
         }
 
         var edittd = document.createElement("td");

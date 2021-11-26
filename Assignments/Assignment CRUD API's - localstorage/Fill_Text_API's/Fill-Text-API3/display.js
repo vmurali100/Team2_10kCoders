@@ -1,35 +1,22 @@
+users = data;
 user = {
-    albumId : "",
-    title : "",
-    url : "",
-    thumbnailUrl:""
+    id : "",
+    email : "",
+    username : "",
+    password : ""
 }
 function display(data)
 { 
-    
     users = data;
     document.getElementById("thead").style.display = "table-header-group"
     document.querySelector("tbody").innerHTML = "";
     users.forEach((user,i)=>{
         var tr = document.createElement("tr");
-        var slno = document.createElement("td");
-        slno.innerHTML = i+1;
-        tr.appendChild(slno);
-        for(a in user){
-            if(a !== "id" && a !== "url" && a !== "thumbnailUrl")
-            {
-                var td = document.createElement("td");
-                td.innerHTML = user[a];
-                tr.appendChild(td);
-            }
-            else if(a == "url" || a == "thumbnailUrl")
-            {
-                var img = document.createElement("img");
-                var td = document.createElement("td");
-                img.setAttribute("src",user[a]);
-                td.appendChild(img)
-                tr.appendChild(td);
-            }
+        for(a in user)
+        {
+            var td = document.createElement("td");
+            td.innerHTML = user[a];
+            tr.appendChild(td);
         }
 
         var edittd = document.createElement("td");
