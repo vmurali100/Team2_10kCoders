@@ -2,50 +2,27 @@ user = {
     name : "",
     username : "",
     email : "",
-    address:"",
     phone: "",
-    website: "",
-    company: ""
-}
+    website: ""
+};
 function display(data)
 { 
-    if(data !== undefined)
-    {
-        users = data;
-    }
+    users = data;
     document.getElementById("thead").style.display = "table-header-group"
     document.querySelector("tbody").innerHTML = "";
-    users.forEach((user,i)=>{
+    users.forEach((user,i)=>
+    {
         var tr = document.createElement("tr");
         var slno = document.createElement("td");
         slno.innerHTML = i+1;
         tr.appendChild(slno);
         for(a in user){
-            if(a !== "address" && a !== "company" && a !== "id")
+            if(a !== "id" && a !== "address" && a !== "company")
             {
                 var td = document.createElement("td");
                 td.innerHTML = user[a];
                 tr.appendChild(td);
             }
-            else if (a == "address")
-            {
-                var td = document.createElement("td");
-                geoLoc = user[a].geo.lat +"<br>"+ user[a].geo.lng;
-                fullAddress = user[a].street + "<br>" + user[a].suite + "<br>" + user[a].city + "<br>" + user[a].zipcode + "<br>" + geoLoc;
-                td.innerHTML = fullAddress;
-                tr.appendChild(td);
-            }
-            else if (a == "company")
-            {
-                var td = document.createElement("td");
-                td.innerHTML = user[a].name + "<br>" + user[a].catchPhrase + "<br>" + user[a].bs;
-                tr.appendChild(td);
-            }
-            // else{
-            //     var td = document.createElement("td");
-            //     td.innerHTML = user[a];
-            //     tr.appendChild(td);
-            // }
         }
 
         var edittd = document.createElement("td");
