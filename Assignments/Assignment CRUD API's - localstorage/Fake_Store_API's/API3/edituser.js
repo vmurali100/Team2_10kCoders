@@ -5,10 +5,35 @@ function edituser(i){
     document.getElementById("table_row").style.display = "none";
     for(a in user)
     {
-        if(a!=="id" && a!=="rating")
+        if(a!=="name" && a!=="address")
+        {
+            document.getElementById(a).value = users[i][a];
+        }
+        else if (a == "address")
+        {
+            for (b in user[a]) 
             {
-                document.getElementById(a).value = users[i][a];
+                if (b !== "geolocation") 
+                {
+                    document.getElementById(b).value = users[i][a][b];
+                }
+                else 
+                {
+                    for (c in user[a][b]) 
+                    {
+                        document.getElementById(c).value = users[i][a][b][c];
+
+                    }
+                }
             }
-        // document.getElementById(a).value = users[i][a];
+        }
+        else if(a == "name")
+        {
+            for(b in user[a])
+            {
+                document.getElementById(b).value = users[i][a][b];
+            }
+        }
+
     }
 }

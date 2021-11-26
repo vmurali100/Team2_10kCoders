@@ -1,13 +1,10 @@
 user = {
-    title : "",
-    price : "",
-    description: "",
-    category:"",
-    image:"",
-    rating:{
-        rate : "",
-        count: ""
-    }
+    userId : "",
+    date : "",
+    products : [{
+        productId: "",
+        quantity: ""
+    }]
 }
 function display(data)
 { 
@@ -21,32 +18,27 @@ function display(data)
         slno.innerHTML = i+1;
         tr.appendChild(slno);
         for(a in user){
-            if(a!=="id" && a !== "image" && a!=="rating")
+            if(a!=="id" && a !== "__v" && a!=="products")
             {
                 var td = document.createElement("td");
                 td.innerHTML = user[a];
                 tr.appendChild(td);
             }
-            else if(a == "image")
+            else if( a == "products")
             {
-                var img = document.createElement("img");
                 var td = document.createElement("td");
-                img.setAttribute("src",user[a]);
-                img.setAttribute("width","100px");
-                img.setAttribute("height","100px");
-                td.appendChild(img)
-                tr.appendChild(td);
-            }
-            else if(a == "rating")
-            {
-                var rating = "";
-                var td = document.createElement("td");
-                for(b in user[a])
+                user[a].forEach((product)=>
                 {
-                    rating += b + " : " + user[a][b] + "<br>";
-                }
-                td.innerHTML =rating;
-                tr.appendChild(td);
+                        var products = "";
+                        for(b in product)
+                        {
+                            var ptr = document.createElement("tr");
+                            products += b +" : "+product[b] + "<br>";
+                            ptr.innerHTML =products;
+                        }
+                        td.appendChild(ptr)
+                        tr.appendChild(td);
+                })
             }
         }
 

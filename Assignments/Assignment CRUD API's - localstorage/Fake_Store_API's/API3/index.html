@@ -20,6 +20,16 @@
                 <div class="col">
                     <h2 style="text-align:center">UPDATE FORM</h2>
                     <form id="form">
+
+                        <div class="mb-3">
+
+                            <label for="address" class="form-label">Firs Name</label>
+                            <input type="text" class="form-control" id="firstname" onkeyup="validate(id)">
+
+                            <label for="address" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastname" onkeyup="validate(id)">
+
+                          </div>
                         
                         <div class="mb-3">
                           <label for="albumId" class="form-label">Email</label>
@@ -41,6 +51,15 @@
                             <input type="text" class="form-control" id="phone" onkeyup="validate(id)">
                           </div>
 
+                          <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="street" onkeyup="validate(id)" placeholder="street">
+                            <input type="text" class="form-control" id="number" onkeyup="validate(id)" placeholder="number">
+                            <input type="text" class="form-control" id="city" onkeyup="validate(id)" placeholder="city">
+                            <input type="text" class="form-control" id="zipcode" onkeyup="validate(id)" placeholder="zipcode">
+                            <input type="text" class="form-control" id="lat" onkeyup="validate(id)" placeholder="Latitude">
+                            <input type="text" class="form-control" id="long" onkeyup="validate(id)" placeholder="Longitude">
+                          </div>
 
                         <button type="button" class="btn btn-primary" onclick="updateUser()" id="update">Update</button>
                       </form>
@@ -53,9 +72,11 @@
                     <table class="table">
                         <thead id="thead" style="display:none">
                             <th>#</th>
+                            <th>Address</th>
                             <th>Email</th>
                             <th>User Name</th>
                             <th>Password</th>
+                            <th>Name</th>
                             <th>Phone</th>
                             <th>Edit</th>
                             <th>Delete</th>

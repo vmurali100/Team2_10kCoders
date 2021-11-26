@@ -1,8 +1,22 @@
 user = {
+    address : {
+        geolocation : {
+            lat : "",
+            long : ""
+        },
+        street : "",
+        number : "",
+        city : "",
+        zipcode : ""
+    },
     email : "",
     username: "",
     password :"",
-    phone : "",
+    name: {
+        firstname : "",
+        lastname :""
+    },
+    phone : ""
 }
 function display(data)
 { 
@@ -20,6 +34,40 @@ function display(data)
             {
                 var td = document.createElement("td");
                 td.innerHTML = user[a];
+                tr.appendChild(td);
+            }
+            else if( a == "address")
+            {
+                var full_Address = "";
+                var td = document.createElement("td");
+                for(b in user[a])
+                {
+                    if(b !== "geolocation")
+                    {
+                        full_Address  += b + " : " + user[a][b]  + "<br>";
+                    }
+                    else
+                    {
+                        for(c in user[a][b])
+                        {
+                            full_Address += c + " : "  + user[a][b][c] + "<br>";
+                            
+                        }
+
+                    }
+                }
+                td.innerHTML = full_Address;
+                tr.appendChild(td);
+            }
+            else if (a == "name")
+            {
+                var full_name = "";
+                var td = document.createElement("td");
+                for(b in user[a])
+                {
+                    full_name += user[a][b] + " "; 
+                }
+                td.innerHTML = full_name;
                 tr.appendChild(td);
             }
         }

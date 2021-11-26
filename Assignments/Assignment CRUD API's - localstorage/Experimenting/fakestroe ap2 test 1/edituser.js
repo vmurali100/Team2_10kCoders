@@ -6,16 +6,9 @@ function edituser(i){
     for(a in user)
     {
         if(a!=="id" && a!=="rating")
-        {
-            document.getElementById(a).value = users[i][a];
-        }
-        else if (a == "rating") 
-        {
-            for(b in user[a])
             {
-                document.getElementById(b).value = users[i][a][b];
-                
+                document.getElementById(a).value = users[i][a];
             }
-        }
+        // document.getElementById(a).value = users[i][a];
     }
 }
