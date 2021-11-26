@@ -9,7 +9,7 @@ function edituser(i) {
     }
     else if (a == "address") 
     {
-      for (b in addressobj) 
+      for (b in user[a]) 
       {
         if (b !== "geo") 
         {
@@ -17,7 +17,7 @@ function edituser(i) {
         }
         else 
         {
-          for (c in locobj) 
+          for (c in user[a][b]) 
           {
             document.getElementById(c).value = users[i][a][b][c];
 
@@ -27,16 +27,11 @@ function edituser(i) {
     }
     else if (a == "company") 
     {
-      companyobj1 = {
-        name2 : "",
-        catchPhrase : "",
-        bs : ""
-      }
-      for(b in companyobj1)
+      for(b in user[a])
       {
-        if(b == "name2")
+        if(b == "name")
         {
-          document.getElementById(b).value = users[i][a].name;
+          document.getElementById("name2").value = users[i][a][b];
         }
         else
         {

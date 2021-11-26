@@ -2,15 +2,29 @@ user = {
     name : "",
     username : "",
     email : "",
-    address:"",
+    address : {
+        street : "",
+        suite : "",
+        city : "",
+        zipcode : "",
+        geo : {
+            lat : "",
+            lng : ""
+        }
+    },
     phone: "",
     website: "",
-    company: ""
+    company: {
+        name : "",
+        catchPhrase : "",
+        bs : ""
+    }
 };
 
 
 function display(data)
 { 
+    console.log("entered display()")
     users = data;
     document.getElementById("thead").style.display = "table-header-group"
     document.querySelector("tbody").innerHTML = "";
@@ -32,20 +46,9 @@ function display(data)
 
             else if (a == "address")
             {
-                addressobj = { 
-                    street : "",
-                    suite : "",
-                    city : "",
-                    zipcode : "",
-                    geo : "",
-                };
-                locobj = {
-                    lat : "",
-                    lng : ""
-                };
                 var full_Address = "";
                 var td = document.createElement("td");
-                for(b in addressobj)
+                for(b in user[a])
                 {
                     if(b !== "geo")
                     {
@@ -53,7 +56,7 @@ function display(data)
                     }
                     else
                     {
-                        for(c in locobj)
+                        for(c in user[a][b])
                         {
                             full_Address += c + " : "  + user[a][b][c] + "<br>";
                             
@@ -65,17 +68,11 @@ function display(data)
                 tr.appendChild(td);
                 
             }
-
             else if (a == "company")
             {
-                companyobj = {
-                    name : "",
-                    catchPhrase : "",
-                    bs : ""
-                };
                 var company = "";
                 var td = document.createElement("td");
-                for(b in companyobj)
+                for(b in user[a])
                 {
                     company += b + " : " +  user[a][b] + "<br>";
                 }

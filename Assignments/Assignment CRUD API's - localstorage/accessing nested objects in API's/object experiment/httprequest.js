@@ -1,6 +1,7 @@
-var data = JSON.parse(localStorage.getItem("data9"));
+var data = JSON.parse(localStorage.getItem("nest"));
 function getData()
 {
+    console.log("entered display()")
     document.getElementById("getData").style.display = "none";
     if(!data || data.length == 0)
     {
@@ -11,7 +12,7 @@ function getData()
             if(getInfo.status == 200 && getInfo.readyState == 4)
             {
                 var data = JSON.parse(getInfo.response);
-                localStorage.setItem("data9",JSON.stringify(data))
+                localStorage.setItem("nest",JSON.stringify(data))
                 display(data);   
             }
         }

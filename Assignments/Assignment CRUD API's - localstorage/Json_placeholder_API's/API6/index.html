@@ -35,7 +35,15 @@
                             <label for="email" class="form-label">Email</label>
                             <input type="text" class="form-control" id="email" onkeyup="validate(id)">
                           </div>
-
+                          <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="street" onkeyup="validate(id)" placeholder="street">
+                            <input type="text" class="form-control" id="suite" onkeyup="validate(id)" placeholder="suite">
+                            <input type="text" class="form-control" id="city" onkeyup="validate(id)" placeholder="city">
+                            <input type="text" class="form-control" id="zipcode" onkeyup="validate(id)" placeholder="zipcode">
+                            <input type="text" class="form-control" id="lat" onkeyup="validate(id)" placeholder="Latitude">
+                            <input type="text" class="form-control" id="lng" onkeyup="validate(id)" placeholder="Longitude">
+                          </div>
                           <div class="mb-3">
                             <label for="phone" class="form-label">Phone</label>
                             <input type="text" class="form-control" id="phone" onkeyup="validate(id)">
@@ -46,6 +54,12 @@
                             <input type="text" class="form-control" id="website" onkeyup="validate(id)">
                           </div>
                           
+                          <div class="mb-3">
+                            <label for="address" class="form-label">Company</label>
+                            <input type="text" class="form-control" id="name2" onkeyup="validate(id)" placeholder="name">
+                            <input type="text" class="form-control" id="catchPhrase" onkeyup="validate(id)" placeholder="catchPhrase">
+                            <input type="text" class="form-control" id="bs" onkeyup="validate(id)" placeholder="bs">
+                          </div>
                         <button type="button" class="btn btn-primary" onclick="updateUser()" id="update">Update</button>
                       </form>
                 </div>
@@ -60,8 +74,10 @@
                             <th>Name</th>
                             <th>UserName</th>
                             <th>Email</th>
+                            <th>Address</th>
                             <th>Phone</th>
                             <th>Website</th>
+                            <th>Company</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </thead>

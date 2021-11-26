@@ -2,11 +2,29 @@ user = {
     name : "",
     username : "",
     email : "",
+    address : {
+        street : "",
+        suite : "",
+        city : "",
+        zipcode : "",
+        geo : {
+            lat : "",
+            lng : ""
+        }
+    },
     phone: "",
-    website: ""
+    website: "",
+    company: {
+        name : "",
+        catchPhrase : "",
+        bs : ""
+    }
 };
+
+
 function display(data)
 { 
+    console.log("entered display()")
     users = data;
     document.getElementById("thead").style.display = "table-header-group"
     document.querySelector("tbody").innerHTML = "";
@@ -16,11 +34,49 @@ function display(data)
         var slno = document.createElement("td");
         slno.innerHTML = i+1;
         tr.appendChild(slno);
-        for(a in user){
-            if(a !== "id" && a !== "address" && a !== "company")
+
+        for(a in user)
+        {
+            if(a !== "address" && a !== "company" && a !== "id")
             {
                 var td = document.createElement("td");
                 td.innerHTML = user[a];
+                tr.appendChild(td);
+            }
+
+            else if (a == "address")
+            {
+                var full_Address = "";
+                var td = document.createElement("td");
+                for(b in user[a])
+                {
+                    if(b !== "geo")
+                    {
+                        full_Address  += b + " : " + user[a][b]  + "<br>";
+                    }
+                    else
+                    {
+                        for(c in user[a][b])
+                        {
+                            full_Address += c + " : "  + user[a][b][c] + "<br>";
+                            
+                        }
+
+                    }
+                }
+                td.innerHTML = full_Address;
+                tr.appendChild(td);
+                
+            }
+            else if (a == "company")
+            {
+                var company = "";
+                var td = document.createElement("td");
+                for(b in user[a])
+                {
+                    company += b + " : " +  user[a][b] + "<br>";
+                }
+                td.innerHTML =company;
                 tr.appendChild(td);
             }
         }
