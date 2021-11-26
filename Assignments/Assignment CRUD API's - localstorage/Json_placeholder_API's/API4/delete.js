@@ -1,5 +1,6 @@
 function deluser(i)
 {
     users.splice(i,1);
-    display();  
+    localStorage.setItem("data7",JSON.stringify(users));
+    display(users);  
 }

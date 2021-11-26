@@ -1,13 +1,11 @@
 user = {
     userId : "",
-    title : ""
+    title : "",
+    body : ""
 }
 function display(data)
 { 
-    if(data !== undefined)
-    {
-        users = data;
-    }
+    users = data;
     document.getElementById("thead").style.display = "table-header-group"
     document.querySelector("tbody").innerHTML = "";
     users.forEach((user,i)=>{

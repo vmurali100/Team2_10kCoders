@@ -30,6 +30,11 @@
                           <label for="title" class="form-label">Title</label>
                           <input type="text" class="form-control" id="title" onkeyup="validate(id)">
                         </div>
+
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="fill body here" id="body"></textarea>
+                            <label for="body">Body</label>
+                          </div>
                           
                         <button type="button" class="btn btn-primary" onclick="updateUser()" id="update">Update</button>
                       </form>
@@ -44,6 +49,7 @@
                             <th>#</th>
                             <th>User Id</th>
                             <th>Title</th>
+                            <th>Body</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </thead>

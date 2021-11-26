@@ -6,10 +6,8 @@ user = {
 }
 function display(data)
 { 
-    if(data !== undefined)
-    {
-        users = data;
-    }
+    
+    users = data;
     document.getElementById("thead").style.display = "table-header-group"
     document.querySelector("tbody").innerHTML = "";
     users.forEach((user,i)=>{
@@ -18,10 +16,18 @@ function display(data)
         slno.innerHTML = i+1;
         tr.appendChild(slno);
         for(a in user){
-            if(a !== "id")
+            if(a !== "id" && a !== "url" && a !== "thumbnailUrl")
             {
                 var td = document.createElement("td");
                 td.innerHTML = user[a];
+                tr.appendChild(td);
+            }
+            else if(a == "url" || a == "thumbnailUrl")
+            {
+                var img = document.createElement("img");
+                var td = document.createElement("td");
+                img.setAttribute("src",user[a]);
+                td.appendChild(img)
                 tr.appendChild(td);
             }
         }
