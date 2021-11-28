@@ -16,8 +16,6 @@ function addUser() {
         person[a] = document.getElementById(a).value
     }
     user.push(person)
-    console.log(user)
-
 
 
     displayUsers()

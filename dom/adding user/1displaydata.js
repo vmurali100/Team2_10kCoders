@@ -1,5 +1,5 @@
 function displayUsers() {
-    console.log("displayUsers", user)
+    console.log(user)
 
     //clear the table body
     document.querySelector("tbody").innerHTML = "";
