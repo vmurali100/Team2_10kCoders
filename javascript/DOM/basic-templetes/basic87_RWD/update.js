@@ -12,6 +12,7 @@ localStorage.setItem("akhill" , JSON.stringify( all));
 
 document.getElementById("update").style.display = "none" ;
 document.getElementById("submit").style.display = "block" ;
-
+document.getElementById("submit").setAttribute('disabled' , true);
+// document.querySelector("button").setAttribute('disabled', true);
 clearForm();
 }

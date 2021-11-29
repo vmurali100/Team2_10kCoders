@@ -1,3 +1,19 @@
 {
-    "user":[]
+  "user": [
+    {
+      "fname": "akhil",
+      "lname": "varma",
+      "id": 1
+    },
+    {
+      "fname": "murali",
+      "lname": "v",
+      "id": 2
+    },
+    {
+      "fname": "harish varma",
+      "lname": "varma ankathi",
+      "id": 4
+    }
+  ]
 }

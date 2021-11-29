@@ -45,7 +45,7 @@
 
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody >
 
                     </tbody>
                 </table>
@@ -56,8 +56,13 @@
     </div>
 
     <script>
-        // var all = [];
-        var all = JSON.parse(localStorage.getItem("akhil"));
+        var all = [];
+        // if ( all == []){
+        //     var all = JSON.parse(localStorage.getItem("akhil"));
+        // }else {
+        //      all = [];
+        // }
+        // var all = JSON.parse(localStorage.getItem("akhil"));
         var employee = {
                 email: "",
                 firstName: "",
@@ -74,8 +79,7 @@
             // var newemployee = object.assign({} ,employee )
             all.push({...employee})
             console.log(all);
-            
-            var allHere = JSON.stringify(all)
+            var allHere = JSON.stringify(all);
             localStorage.setItem("akhil", allHere)
             clearForm();
             displayElements();
