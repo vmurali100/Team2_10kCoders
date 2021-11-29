@@ -1,11 +1,11 @@
 var users = data;
 var person = {
-    Serial: "",
-    Email: "",
-    Fname: "",
-    Password: "",
-    User: "",
-    Phone: ""
+    id: Number(""),
+    email: "",
+    username: "",
+    password: "",
+    name: { firstname: "", lastname: "" },
+    phone: Number("")
 
 }
 
@@ -15,19 +15,28 @@ function display(data) {
     document.querySelector('tbody').innerHTML = "";
     users.forEach((person, i) => {
         var myTr = document.createElement("tr")
-        var myTd = document.createElement("td")
-        myTd.innerHTML = i + 1
-        myTr.appendChild(myTd)
+        // var myTd = document.createElement("td")
+        // myTd.innerHTML = i + 1
+        // myTr.appendChild(myTd)
         for (a in person) {
-            if (a !== "address" && a !== "id" && a !== "__v" && a !== "name") {
+            var name = ""
+            if (a !== "address" && a !== "__v" && a !== "name") {
                 var myTd = document.createElement('td');
                 myTd.innerHTML = person[a];
                 myTr.appendChild(myTd);
             }
-            else if (a === "name") {
+            else if (a == "name") {
                 var myTd = document.createElement('td');
-                myTd.innerHTML = person[a].firstname + " " + person[a].lastname;
+                for (k in person[a]) {
+
+                    // myTd.innerHTML = person[a][k].firstname + " " + person[a][k].lastname;
+                    // myTd.innerHTML = person[a][k]
+                    name = name + person[a][k] + " "
+
+                }
+                myTd.innerHTML = name
                 myTr.appendChild(myTd);
+
             }
 
 

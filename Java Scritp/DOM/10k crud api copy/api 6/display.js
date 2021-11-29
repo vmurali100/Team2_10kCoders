@@ -1,7 +1,7 @@
 var users = data;
 var person = {
-    uid: "",
-    id: "",
+    userId: Number(""),
+    id: Number(""),
     title: "",
 }
 

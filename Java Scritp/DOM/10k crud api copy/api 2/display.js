@@ -1,11 +1,11 @@
 var users = data;
 var person = {
-    Id: "",
-    Title: "",
-    Price: "",
-    Description: "",
-    Category: "",
-    Image: ""
+    id: Number(""),
+    title: "",
+    price: Number(""),
+    description: "",
+    category: "",
+    image: ""
 
 }
 

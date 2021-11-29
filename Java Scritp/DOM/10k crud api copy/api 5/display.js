@@ -1,6 +1,6 @@
 var users = data;
 var person = {
-    id: "",
+    id: Number(""),
     name: "",
     email: "",
     body: ""

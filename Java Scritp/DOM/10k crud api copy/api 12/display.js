@@ -1,9 +1,11 @@
 var users = data;
 var person = {
-    title: "",
-    url: "",
-    thumbnailUrl: "",
-
+    id: "",
+    userId: "",
+    date: "",
+    products: {
+         
+    }
 }
 
 // var users = JSON.parse(localStorage.getItem("data"));
@@ -16,19 +18,9 @@ function display(data) {
         // myTd.innerHTML = i + 1
         // myTr.appendChild(myTd)
         for (a in person) {
-            if (a !== "id" && a != "url" && a !== "thumbnailUrl") {
-                var myTd = document.createElement('td');
-                myTd.innerHTML = person[a];
-                myTr.appendChild(myTd);
-            }
-            else if (a == "url" || a == "thumbnailUrl") {
-                var myTd = document.createElement("td")
-                var image = document.createElement("img")
-                image.setAttribute("src", person[a])
-                image.style.width = "100px"
-                myTd.appendChild(image)
-                myTr.appendChild(myTd)
-            }
+            var myTd = document.createElement('td');
+            myTd.innerHTML = person[a];
+            myTr.appendChild(myTd);
 
 
         }
