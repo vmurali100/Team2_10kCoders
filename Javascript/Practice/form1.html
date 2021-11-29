@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form onsubmit="getUserData(event)">
+    <div class="mb-3">
+        <label for="firstName" class="form-label">first Name</label>
+        <input type="text" class="form-control" id="firstName">
+      </div>
+      <div class="mb-3">
+        <label for="LastName" class="form-label">last Name</label>
+        <input type="text" class="form-control" id="LlastName">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">email</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <button class="btn btn-primary">Submit</button>
+    </form>
+    <script>
+      function getUserData(event){
+        event.preventDefault()
+        var person= {
+          firstName:"",
+          lastName:"",
+          email:""
+        }
+        for(a in person){
+          person[a]=document.getElementById(a).value
+        }
+        console.log(person)
+
+      }
+      document.querySelector("button").onclick = getUserData
+
+    </script>
+</body>
+</html>
