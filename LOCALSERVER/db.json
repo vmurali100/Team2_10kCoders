@@ -1,3 +1,182 @@
 {
-    "users":[]
+  "user1": [
+    {
+      "id": 1559,
+      "fname": "Jias",
+      "lname": "Wright"
+    },
+    {
+      "id": 1560,
+      "fname": "Joethelia",
+      "lname": "Simpson"
+    },
+    {
+      "id": 1561,
+      "fname": "Dina",
+      "lname": "Salter"
+    },
+    {
+      "id": 1562,
+      "fname": "Matthew",
+      "lname": "Cole"
+    },
+    {
+      "id": 1563,
+      "fname": "Seth",
+      "lname": "Noriega"
+    },
+    {
+      "id": 1564,
+      "fname": "Axay",
+      "lname": "Gumatay"
+    },
+    {
+      "id": 1565,
+      "fname": "Marita",
+      "lname": "Wittcop"
+    },
+    {
+      "id": 1566,
+      "fname": "Leatrice",
+      "lname": "Goodwin"
+    }
+  ],
+  "user2": [
+    {
+      "id": 2569,
+      "fname": "Kingi",
+      "lname": "Khillah",
+      "tel": "(379)414-5767",
+      "address": "71 Ipsum Dr",
+      "city": "Bella Vista",
+      "state": "MN",
+      "zip": 14811
+    },
+    {
+      "id": 2570,
+      "fname": "RoMeka",
+      "lname": "Jayanti",
+      "tel": "(850)020-5475",
+      "address": "2300 Eget St",
+      "city": "Pleasant Grove",
+      "state": "NY",
+      "zip": 10067
+    },
+    {
+      "id": 2571,
+      "fname": "Geeta",
+      "lname": "Suesskind",
+      "tel": "(272)679-3926",
+      "address": "290 Sollicitudin Ln",
+      "city": "Gettysburg",
+      "state": "IL",
+      "zip": 54824
+    },
+    {
+      "id": 2572,
+      "fname": "Nora",
+      "lname": "Polenz",
+      "tel": "(666)693-9936",
+      "address": "2948 Vestibulum St",
+      "city": "Granite Falls",
+      "state": "UT",
+      "zip": 56198
+    },
+    {
+      "id": 2573,
+      "fname": "Rachmat",
+      "lname": "Fogle",
+      "tel": "(772)235-4262",
+      "address": "4875 Neque Dr",
+      "city": "Cranford",
+      "state": "AL",
+      "zip": 47312
+    },
+    {
+      "id": 2574,
+      "fname": "Theodora",
+      "lname": "Strong",
+      "tel": "(483)346-4110",
+      "address": "8910 Egestas Dr",
+      "city": "Sylvania",
+      "state": "MN",
+      "zip": 17674
+    },
+    {
+      "id": 2575,
+      "fname": "Fang",
+      "lname": "Pyo",
+      "tel": "(778)928-1820",
+      "address": "5368 Tortor Dr",
+      "city": "Macomb",
+      "state": "KY",
+      "zip": 11001
+    },
+    {
+      "id": 2576,
+      "fname": "Guadalupe",
+      "lname": "Hess",
+      "tel": "(636)060-5593",
+      "address": "8993 Odio Rd",
+      "city": "Arlington",
+      "state": "ORS",
+      "zip": "90308"
+    }
+  ],
+  "user3": [
+    {
+      "id": 3503,
+      "email": "EStar@nec.com",
+      "username": "Teja",
+      "password": "gTEdWs"
+    },
+    {
+      "id": 3505,
+      "email": "ETurich@mattis.ly",
+      "username": "DKlug",
+      "password": "Tf0ap"
+    },
+    {
+      "id": 3506,
+      "email": "SZhu@sagittis.ly",
+      "username": "ISchwartzberg",
+      "password": "LVYEM"
+    },
+    {
+      "id": 3507,
+      "email": "DKandray@dolor.com",
+      "username": "CNordmark",
+      "password": "Yd4fF"
+    },
+    {
+      "id": 3508,
+      "email": "ABozzalla@tortor.ly",
+      "username": "ACastrucci",
+      "password": "DXSxL"
+    },
+    {
+      "id": 3509,
+      "email": "MOrtega@ipsum.net",
+      "username": "SCase",
+      "password": "yF5yd"
+    },
+    {
+      "id": 3510,
+      "email": "YPeck@sit.org",
+      "username": "EYork",
+      "password": "ivv2F"
+    },
+    {
+      "id": 3511,
+      "email": "AHippert@lectus.gov",
+      "username": "STollund",
+      "password": "vQ5v7"
+    },
+    {
+      "id": 3512,
+      "email": "MMazza@sollicitudin.net",
+      "username": "SCrooker",
+      "password": "eZ3zl"
+    }
+  ]
 }
