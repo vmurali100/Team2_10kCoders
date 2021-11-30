@@ -1,3 +1,16 @@
 {
-    "users": []
+  "users": [
+    {
+      "lname": "tejdeep",
+      "name": "kumar",
+      "2name": "hari",
+      "id": 1
+    },
+    {
+      "lname": "hari",
+      "name": "ram",
+      "2name": "tej",
+      "id": 2
+    }
+  ]
 }
