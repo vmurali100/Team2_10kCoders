@@ -1,4 +1,25 @@
 {
-    "users":[]
-    
+  "users": [
+    {
+      "id": 1
+    },
+    {
+      "fname": "divya",
+      "lname": "sunkara",
+      "id": 2
+    },
+    {
+      "fname": "divy",
+      "lname": "sunkara",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "fname": "d",
+      "lname": "d",
+      "id": 5
+    }
+  ]
 }
