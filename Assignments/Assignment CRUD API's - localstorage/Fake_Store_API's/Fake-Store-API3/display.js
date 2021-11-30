@@ -23,7 +23,9 @@ function display(data)
     
     users = data;
     document.getElementById("thead").style.display = "table-header-group"
+
     document.querySelector("tbody").innerHTML = "";
+    
     users.forEach((user,i)=>{
         var tr = document.createElement("tr");
         var slno = document.createElement("td");
