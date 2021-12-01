@@ -71,6 +71,12 @@ function displayUsers() {
 getallUsers()
 
 function editUser(i) {
+    index = i
+    for (a in allusers[i]) {
+        if (a !== "address" && a !== "name" && a !== "__v") {
+            document.getElementById(a).value = allusers[i][a]
+        }
+    }
     console.log(allusers[i])
 
 }
@@ -87,5 +93,31 @@ function deleteUser(i) {
     }
     getInfo.open("DELETE", DEL_URL)
     getInfo.send()
+
+}
+
+
+function updateUser() {
+    let user = { ...allusers[index] }
+    for (a in user) {
+        if (a !== "address" && a !== "name" && a !== "__v") {
+            user[a] = document.getElementById(a).value
+        }
+    }
+    let UPDATE_URL = API_URL + user.id
+    var getInfo = new XMLHttpRequest()
+    getInfo.onreadystatechange = function () {
+        if (getInfo.readyState == 4 && getInfo.status == 200) {
+            allusers = JSON.parse(getInfo.response)
+            console.log(allusers)
+            displayUsers()
+        }
+    }
+    getInfo.open("PUT", UPDATE_URL)
+    getInfo.setRequestHeader("content-type", "application/json")
+
+    getInfo.send(JSON.stringify(user))
+
+
 
 }
