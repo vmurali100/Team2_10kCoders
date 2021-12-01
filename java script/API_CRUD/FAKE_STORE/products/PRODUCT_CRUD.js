@@ -58,6 +58,7 @@ function displayProducts() {                  // we have created a function  to 
 }
 getAllProducts()
 function editProducts(i) {
+    index = i
     for (a in allProducts[i]) {
         if (a !== "rating") {
             document.getElementById(a).value = allProducts[i][a]
@@ -81,4 +82,13 @@ function deleteProducts(i) {
     getInfo.open("DELETE", DEL_url)
     getInfo.send()
 
+}
+function updateProducts(i) {
+    let products = { ...allProducts[index] }
+    for (a in allProducts[i]) {
+        if (a !== "rating") {
+            user[a] = document.getElementById(a).value
+        }
+    }
+    console.log(products)
 }
