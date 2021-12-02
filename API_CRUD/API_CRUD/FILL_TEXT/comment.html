@@ -18,7 +18,7 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col-8">
                 <table class="table">
                     <thead>
                         <tr>
@@ -32,7 +32,32 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col"></div>
+            <div class="col">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">body</label>
+                        <input type="text" class="form-control" id="body" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email </label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">id</label>
+                        <input type="" class="form-control" id="id" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">name</label>
+                        <input type="" class="form-control" id="name" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">postId</label>
+                        <input type="" class="form-control" id="postId" aria-describedby="emailHelp">
+                    </div>
+
+                    <button type="button" class="btn btn-primary" onclick="updateComments()">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>
