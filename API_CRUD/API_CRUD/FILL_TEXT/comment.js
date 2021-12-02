@@ -7,6 +7,7 @@ function getAllComments() {
         if (getComments.readyState == 4 && getComments.status == 200) {
             allComments = JSON.parse(getComments.response)
             console.log(allComments)
+            displayComments
         }
     }
     getComments.open("GET", API_URL)
@@ -14,7 +15,15 @@ function getAllComments() {
 
 }
 function displayComments() {
+    allComments.forEach((comments) => {
+        var myTr = document.createElement("tr")
+        var myTd = document.createElement("td")
+        myTd.innerHTML = comments.body
+        myTr.appendChild(myTd)
 
+        document.querySelector("tbody").appendChild(myTr)
+
+    })
 }
 
 getAllComments()
