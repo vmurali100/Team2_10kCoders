@@ -1,4 +1,5 @@
-let API_URL = "http://localhost:3000/products/"
+let API_URL = "  http://localhost:3000/products  "
+
 var allProducts = []
 function getAllProducts() {
     var getInfo = new XMLHttpRequest()
