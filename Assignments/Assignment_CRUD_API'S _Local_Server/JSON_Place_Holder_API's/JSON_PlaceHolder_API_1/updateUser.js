@@ -1,6 +1,5 @@
 function updateUser()
 {
-  user = {...users[index]}
     for(a in user)
     {
         user[a] = document.getElementById(a).value;

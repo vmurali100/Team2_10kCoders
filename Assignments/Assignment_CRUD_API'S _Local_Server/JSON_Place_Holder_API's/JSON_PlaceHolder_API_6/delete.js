@@ -1,5 +1,6 @@
 function deluser(i) 
 {
+  // user = {...users[i]}
   console.log(users);
   var del_url = api_url + users[i].id;
   var getInfo = new XMLHttpRequest();

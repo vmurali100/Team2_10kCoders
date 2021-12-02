@@ -1,6 +1,4 @@
-function updateUser()
-{
-  user = {...users[index]}
+function updateUser(){
     for(a in user)
     {
         user[a] = document.getElementById(a).value;

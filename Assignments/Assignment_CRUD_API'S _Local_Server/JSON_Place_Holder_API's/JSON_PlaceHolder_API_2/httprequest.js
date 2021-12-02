@@ -1,8 +1,9 @@
 var data = [];
-var api_url = "http://localhost:3000/names/";
+var api_url = "http://localhost:3000/comments/"
 function getData()
 {
-    document.getElementById("getData").style.display = "none"; 
+    document.getElementById("getData").style.display = "none";
+    
         var getInfo = new XMLHttpRequest();
         getInfo.open("GET",api_url)
         getInfo.send();
@@ -10,8 +11,12 @@ function getData()
             if(getInfo.status == 200 && getInfo.readyState == 4)
             {
                 var data = JSON.parse(getInfo.response);
+                localStorage.setItem("data5",JSON.stringify(data))
                 display(data);   
             }
         }
+    
 }
-getData();
+getData()
+
+

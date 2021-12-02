@@ -1,8 +1,8 @@
 var data = [];
-var api_url = "http://localhost:3000/names/";
+var api_url = "http://localhost:3000/users/";
 function getData()
 {
-    document.getElementById("getData").style.display = "none"; 
+    document.getElementById("getData").style.display = "none";
         var getInfo = new XMLHttpRequest();
         getInfo.open("GET",api_url)
         getInfo.send();
@@ -14,4 +14,5 @@ function getData()
             }
         }
 }
-getData();
+
+

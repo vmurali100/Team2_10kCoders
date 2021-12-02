@@ -1,11 +1,9 @@
-function updateUser()
-{
-  user = {...users[index]}
+function updateUser(){
     for(a in user)
     {
         user[a] = document.getElementById(a).value;
     }
-      var update_url = api_url + users[index].id;
+    var update_url = api_url + users[index].id;
       var getInfo = new XMLHttpRequest();
       getInfo.open("PUT", update_url);
       getInfo.setRequestHeader("content-type","application/json")
