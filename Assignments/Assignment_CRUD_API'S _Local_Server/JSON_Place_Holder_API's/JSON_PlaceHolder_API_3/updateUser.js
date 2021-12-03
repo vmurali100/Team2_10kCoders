@@ -6,12 +6,17 @@ function updateUser(){
 
     var update_url = api_url + users[index].id;
     var getInfo = new XMLHttpRequest();
-    getInfo.open("PUT",update_url)
-    getInfo.setRequestHeader("content-type","application/json");
+    getInfo.onreadystatechange = function (){
+      if(getInfo.status == 200 && getInfo.readyState == 4)
+      {
+        getData();
+      }
+    }
+    getInfo.open("PUT", update_url);
+    getInfo.setRequestHeader("content-type","application/json")
     getInfo.send(JSON.stringify(user));
+
     
-    document.getElementById("form_row").style.display = "none";
-    document.getElementById("table_row").style.display = "flex";
-    users[index]={...user};
-    display(users);
+  document.getElementById("form_row").style.display = "none";
+  document.getElementById("table_row").style.display = "flex";
 }

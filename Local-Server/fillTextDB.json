@@ -1,16 +1,6 @@
 {
   "names": [
     {
-      "id": 1281,
-      "fname": "Ervin",
-      "lname": "Prabhu"
-    },
-    {
-      "fname": "dfsgsd",
-      "lname": "Hobbs",
-      "id": 1283
-    },
-    {
       "id": 1284,
       "fname": "Monia",
       "lname": "Schreiner"
@@ -493,16 +483,6 @@
   ],
   "address": [
     {
-      "id": 3,
-      "fname": "Ervin",
-      "lname": "prabhu",
-      "tel": "(317)756-3225",
-      "address": "2783 Ac Ct",
-      "city": "Kalamazoo",
-      "state": "LA",
-      "zip": "99470"
-    },
-    {
       "id": 7,
       "fname": "Karl",
       "lname": "Kemmerling",
@@ -549,12 +529,6 @@
       "email": "ervin@placerat.net",
       "username": "JCrumbliss",
       "password": "4Q1Ok"
-    },
-    {
-      "id": 1413,
-      "email": "SGerhard@tincidunt.io",
-      "username": "AWhatley",
-      "password": "OI7BZ"
     },
     {
       "id": 1414,
