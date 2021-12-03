@@ -1,5 +1,5 @@
 {
-  "json1": [
+  "js1": [
     {
       "userId": "2",
       "id": 1,
@@ -595,7 +595,7 @@
       "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
     }
   ],
-  "json2": [
+  "js2": [
     {
       "postId": "9",
       "id": 2,
@@ -4083,7 +4083,7 @@
       "body": "perspiciatis quis doloremque\nveniam nisi eos velit sed\nid totam inventore voluptatem laborum et eveniet\naut aut aut maxime quia temporibus ut omnis"
     }
   ],
-  "json3": [
+  "js3": [
     {
       "userId": "8",
       "id": 2,
@@ -4580,7 +4580,7 @@
       "title": "enim repellat iste"
     }
   ],
-  "json4": [
+  "js4": [
     {
       "albumId": "9",
       "id": 1,
@@ -39568,7 +39568,7 @@
       "thumbnailUrl": "https://via.placeholder.com/150/6dd9cb"
     }
   ],
-  "json5": [
+  "js5": [
     {
       "userId": 1,
       "id": 1,
@@ -40764,7 +40764,7 @@
       "completed": false
     }
   ],
-  "json6": [
+  "js6": [
     {
       "id": 1,
       "name": "o",
