@@ -7,8 +7,8 @@
     },
     {
       "id": "3",
-      "fname": "Leela",
-      "lname": "Sluka"
+      "fname": "L",
+      "lname": "Sl"
     },
     {
       "id": "4",
@@ -34,11 +34,6 @@
       "id": "9",
       "fname": "Bob",
       "lname": "Garner"
-    },
-    {
-      "id": "10",
-      "fname": "Kristen",
-      "lname": "Vera"
     }
   ],
   "filltextapi2": [
