@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+  <!-- As a heading -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">10 K Coders - CHAMPS</span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Id</label>
+              <input type="email" class="form-control" id="id" aria-describedby="emailHelp">
+            </div>
+       
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="email" class="form-control" id="name" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              </div>
+              
+              <div class="mb-">
+                <label for="body">Body</label>
+
+                <textarea class="form-control" placeholder="comment.." id="body" style= "height:150px;" onkeyup="validate(id)"></textarea>
+              </div>  
+            
+            <button type="button" class="btn btn-primary" onclick="updateUser()">Submit</button>
+          </form>
+    </div>    
+
+        <div class="col-10">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">User Id</th>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Body</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+        </div>
+        
+    </div>
+  </div>
+    <script src="./comments.js"></script>
+</body>
+</html>
+  
