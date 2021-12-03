@@ -77,16 +77,17 @@ function updatePost() {
     for (a in post) {
         post[a] = document.getElementById(a).value
     }
-}
-var UPDATE_URL = API_URL + post.id
-var getData = new XMLHttpRequest()
-getData.onreadystatechange = function () {
-    if (getData.readyState == 4 && getData.status == 200) {
-        allposts = JSON.parse(getData.response)
-        console.log(allposts)
-        displayPosts()
+
+    var UPDATE_URL = API_URL + post.id
+    var getData = new XMLHttpRequest()
+    getData.onreadystatechange = function () {
+        if (getData.readyState == 4 && getData.status == 200) {
+            allposts = JSON.parse(getData.response)
+            console.log(allposts)
+            displayPosts()
+        }
     }
+    getData.open("PUT", UPDATE_URL)
+    getData.setRequestHeader("Content-Type", "application/json")
+    getData.send(JSON.stringify(post))
 }
-getData.open("PUT", UPDATE_URL)
-getData.setRequestHeader("content-type", "applictaion/json")
-getData.send(JSON.stringify(user))
