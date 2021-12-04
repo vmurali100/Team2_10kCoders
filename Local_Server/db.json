@@ -243,46 +243,6 @@
   ],
   "cart": [
     {
-      "id": 1,
-      "userId": 1,
-      "date": "2020-03-02T00:00:02.000Z",
-      "products": [
-        {
-          "productId": 1,
-          "quantity": 4
-        },
-        {
-          "productId": 2,
-          "quantity": 1
-        },
-        {
-          "productId": 3,
-          "quantity": 6
-        }
-      ],
-      "__v": 0
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "date": "2020-01-02T00:00:02.000Z",
-      "products": [
-        {
-          "productId": 2,
-          "quantity": 4
-        },
-        {
-          "productId": 1,
-          "quantity": 10
-        },
-        {
-          "productId": 5,
-          "quantity": 2
-        }
-      ],
-      "__v": 0
-    },
-    {
       "id": 6,
       "userId": 4,
       "date": "2020-03-01T00:00:02.000Z",
@@ -315,28 +275,6 @@
     {
       "address": {
         "geolocation": {
-          "lat": "-37.3159",
-          "long": "81.1496"
-        },
-        "city": "kilcoole",
-        "street": "new road",
-        "number": 7682,
-        "zipcode": "12926-3874"
-      },
-      "id": 1,
-      "email": "john@gmail.com",
-      "username": "vmurali100",
-      "password": "m38rmF$",
-      "name": {
-        "firstname": "john",
-        "lastname": "doe"
-      },
-      "phone": "1-570-236-7033",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
           "lat": "50.3467",
           "long": "-20.1310"
         },
@@ -354,28 +292,6 @@
         "lastname": "romer"
       },
       "phone": "1-765-789-6734",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
-          "lat": "40.3467",
-          "long": "-40.1310"
-        },
-        "city": "san Antonio",
-        "street": "adams St",
-        "number": 245,
-        "zipcode": "80796-1234"
-      },
-      "id": 5,
-      "email": "derek@gmail.com",
-      "username": "derek",
-      "password": "jklg*_56",
-      "name": {
-        "firstname": "derek",
-        "lastname": "powell"
-      },
-      "phone": "1-956-001-1945",
       "__v": 0
     },
     {
