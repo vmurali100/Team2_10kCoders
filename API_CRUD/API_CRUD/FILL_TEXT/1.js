@@ -1,16 +1,18 @@
 let API_URL = " http://localhost:3000/posts/"//data location
 var allposts = []
 function getAllPosts() {
-    var getData = new XMLHttpRequest()
-    getData.onreadystatechange = function () {
-        if (getData.readyState == 4 && getData.status == 200) {
-            allposts = JSON.parse(getData.response)
-            console.log(allposts)
-            displayPosts()
+    return new Promise((sucess) => {
+        var getData = new XMLHttpRequest()
+        getData.onreadystatechange = function () {
+            if (getData.readyState == 4 && getData.status == 200) {
+                allposts = JSON.parse(getData.response)
+                console.log(allposts)
+                sucess()
+            }
         }
-    }
-    getData.open("GET", API_URL)
-    getData.send()
+        getData.open("GET", API_URL)
+        getData.send()
+    })
 }
 function displayPosts() {
     allposts.forEach((post, i) => {
@@ -45,7 +47,9 @@ function displayPosts() {
         document.querySelector("tbody").appendChild(myTr)
     })
 }
-getAllPosts()
+getAllPosts().then(() => {
+    displayPosts()
+})
 
 
 function editPost(i) {
