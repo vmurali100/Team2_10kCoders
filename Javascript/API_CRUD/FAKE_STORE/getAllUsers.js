@@ -24,7 +24,14 @@ function displayUsers() {
         myTr.appendChild(myTd);
       } else if (a == "address") {
         var myTd = document.createElement("td");
-        myTd.innerHTML = user[a].city;
+        
+        // We are Having Nested Object
+        let results = ""
+        for(b in  user[a]){
+          results+=user[a][b]+"<br>"
+        }
+
+        myTd.innerHTML =results ;
         myTr.appendChild(myTd);
       } else if (a == "name") {
         var myTd = document.createElement("td");
