@@ -88,6 +88,6 @@ function updatePost() {
         }
     }
     getData.open("PUT", UPDATE_URL)
-    getData.setRequestHeader("Content-Type", "application/json")
+    getData.setRequestHeader("content-Type", "application/json")
     getData.send(JSON.stringify(post))
 }
