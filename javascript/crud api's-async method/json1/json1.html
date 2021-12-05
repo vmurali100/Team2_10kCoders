@@ -10,7 +10,7 @@
 <body>
   <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">api12</span>
+      <span class="navbar-brand mb-0 h1">api7</span>
     </div>
   </nav>
 
@@ -20,18 +20,11 @@
             <table class="table">
                 <thead>
                   <tr>
+                    <th scope="col">userId</th>
                     <th scope="col">id</th>
-                    <th scope="col">name</th>
-                    <th scope="col">username</th>
-                    <th scope="col">email</th>
-                    <th scope="col">address</th>
-                    <th scope="col">phone</th>
-                    <th scope="col">website</th>
-                    <th scope="col">company</th>
- 
 
-                  
-
+                    <th scope="col">title</th>
+                    <th scope="col">body</th>
 
                   </tr>
                 </thead>
@@ -40,44 +33,27 @@
                 </tbody>
               </table>
         </div>
+        <div class="col-3">
             <form>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">id</label>
-                  <input type="number" class="form-control" id="id" aria-describedby="emailHelp">
+                  <label for="exampleInputEmail1" class="form-label">userId</label>
+                  <input type="number" class="form-control" id="userId" aria-describedby="emailHelp">
                 </div>
            
                
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">name</label>
-                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label">ID</label>
+                    <input type="number" class="form-control" id="id" aria-describedby="emailHelp">
                   </div>  
                   
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">username</label>
-                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label">title</label>
+                    <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">email</label>
-                    <input type="text" class="form-control" id="email" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">address</label>
-                    <input type="text" class="form-control" id="address" aria-describedby="emailHelp">
-                  </div>
-                  <div class="mb-3">
-
-                  <label for="exampleInputEmail1" class="form-label">phone</label>
-                  <input type="text" class="form-control" id="phone" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">website</label>
-                  <input type="text" class="form-control" id="website" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">company</label>
-                    <input type="text" class="form-control" id="company" aria-describedby="emailHelp">
-                  </div>
-                 
+                    <label for="exampleInputEmail1" class="form-label">body</label>
+                    <input type="text" class="form-control" id="body" aria-describedby="emailHelp">
+                  </div>  
                
                 <button type="button" class="btn btn-primary" onclick="updatePerson()">Submit</button>
               </form>
@@ -85,15 +61,15 @@
     </div>
   </div>
     <script>
-        let API_URL = "http://localhost:3000/json6/";
-        var json = [];
+      let API_URL = "http://localhost:3000/json1/";
+      var jsonPlaceHolder = [];
 function getUsers() {
   return new Promise((success)=>{
     var getInfo = new XMLHttpRequest();
   getInfo.onreadystatechange = function () {
     if (getInfo.readyState == 4 && getInfo.status == 200) {
-      json = JSON.parse(getInfo.response);
-      console.log(json);
+      jsonPlaceHolder = JSON.parse(getInfo.response);
+      console.log(jsonPlaceHolder);
 success();
     }
   };
@@ -101,30 +77,22 @@ success();
   getInfo.send();
   })
 }
-getUsers().then(()=>{
-display();
-})
+async function handleGetAllUsers(){
+    Text = await getUsers();
+    display()
+}
+handleGetAllUsers()
+
 
 function display() {
-  json.forEach((person, i) => {
+  jsonPlaceHolder.forEach((person, i) => {
     var myTr = document.createElement("tr");
 
     for (a in person) {
-      if (a !== "address" && a !== "geo" && a !== "company") {
         var myTd = document.createElement("td");
         myTd.innerHTML = person[a];
         myTr.appendChild(myTd);
       } 
-      else if (a == "address") {
-        var myTd = document.createElement("td");
-        myTd.innerHTML = person[a].street;
-        myTr.appendChild(myTd);
-      } else if (a == "company") {
-        var myTd = document.createElement("td");
-        myTd.innerHTML = person[a].name;
-        myTr.appendChild(myTd);
-      }
-    }
     
 
     var EditTd = document.createElement("td");
@@ -151,19 +119,17 @@ function display() {
 
 function editPerson(i) {
   index = i;
-  for (a in json[i]) {
-    if (a !== "address" && a !== "geo" && a !== "company") {
-
-      document.getElementById(a).value = json[i][a];
+  for (a in jsonPlaceHolder[i]) {
+      document.getElementById(a).value = jsonPlaceHolder[i][a];
     }
-  }
-  console.log(json[i]);
+  
+  console.log(jsonPlaceHolder[i]);
 }
 
 
 function handleDelete(i){
       return new Promise((resolve)=>{
-        var DEL_URL = API_URL + json[i].id;
+        var DEL_URL = API_URL + jsonPlaceHolder[i].id;
         var getInfo = new XMLHttpRequest();
         getInfo.onreadystatechange = function () {
           if (getInfo.readyState == 4 && getInfo.status == 200) {
@@ -175,9 +141,8 @@ function handleDelete(i){
       })
   }
 
-  function deletePerson(i) {
-        handleDelete(i).then(()=>{
-        })
+  async function deletePerson(i) {
+      let response = await handleDelete(i)
   }
 
   function handleUpdate(person){
@@ -195,21 +160,18 @@ function handleDelete(i){
     })
   }
   
-  function updatePerson() {
-    let person = { ...json[index] };
+ async function updatePerson() {
+    let person = { ...jsonPlaceHolder[index] };
   
     for (a in person) {
-      if (a !== "address" && a !== "geo" && a !== "company") {
-
         person[a] = document.getElementById(a).value;
-      }
+      
     }
 
-    handleUpdate(person).then(()=>{
-    })
+    let response = await handleUpdate(person);
+ }
 
-  }
-  
-    </script>
+</script>
+     
 </body>
 </html>
