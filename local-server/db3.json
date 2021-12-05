@@ -1,23 +1,23 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "- Foldsack No. 1 Backpack, Fits 15 Laptops",
-      "price": "1",
-      "description": "for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-      "category": "men's",
-      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "id": 2,
+      "title": "Mens Casual Premium Slim Fit T-Shirts ",
+      "price": 22.3,
+      "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
       "rating": {
-        "rate": 3.9,
-        "count": 120
+        "rate": 4.1,
+        "count": 259
       }
     },
     {
       "id": 4,
-      "title": "M",
-      "price": "1",
-      "description": "different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-      "category": "men",
+      "title": "Mens Casual Slim Fit",
+      "price": 15.99,
+      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
       "rating": {
         "rate": 2.1,
@@ -25,9 +25,21 @@
       }
     },
     {
+      "id": 5,
+      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "price": 695,
+      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
+    },
+    {
       "id": 6,
-      "title": "Solid",
-      "price": "1",
+      "title": "Solid Gold Petite Micropave ",
+      "price": 168,
       "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
       "category": "jewelery",
       "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
@@ -131,6 +143,66 @@
         "rate": 2.2,
         "count": 140
       }
+    },
+    {
+      "id": 15,
+      "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+      "price": 56.99,
+      "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+      "rating": {
+        "rate": 2.6,
+        "count": 235
+      }
+    },
+    {
+      "id": 16,
+      "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+      "price": 29.95,
+      "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 340
+      }
+    },
+    {
+      "id": 17,
+      "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+      "price": 39.99,
+      "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+      "rating": {
+        "rate": 3.8,
+        "count": 679
+      }
+    },
+    {
+      "id": 18,
+      "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+      "price": 9.85,
+      "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 130
+      }
+    },
+    {
+      "id": 19,
+      "title": "Opna Women's Short Sleeve Moisture",
+      "price": 7.95,
+      "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      }
     }
   ],
   "cart": [
@@ -201,6 +273,34 @@
         }
       ],
       "__v": 0
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "date": "2020-03-01T00:00:02.000Z",
+      "products": [
+        {
+          "productId": 7,
+          "quantity": 1
+        },
+        {
+          "productId": 8,
+          "quantity": 1
+        }
+      ],
+      "__v": 0
+    },
+    {
+      "id": 6,
+      "userId": 8,
+      "date": "2020-03-01T00:00:02.000Z",
+      "products": [
+        {
+          "productId": 18,
+          "quantity": 1
+        }
+      ],
+      "__v": 0
     }
   ],
   "users": [
@@ -238,14 +338,14 @@
         "zipcode": "12926-3874"
       },
       "id": 2,
-      "email": "m",
-      "username": "m",
-      "password": "8",
+      "email": "morrison@gmail.com",
+      "username": "mor_2314",
+      "password": "83r5^_",
       "name": {
         "firstname": "david",
         "lastname": "morrison"
       },
-      "phone": "1",
+      "phone": "1-570-236-7033",
       "__v": 0
     },
     {
@@ -260,14 +360,14 @@
         "zipcode": "29567-1452"
       },
       "id": 3,
-      "email": "kevin@gmail.com",
-      "username": "kevinryan",
-      "password": "kev02937@",
+      "email": "ke",
+      "username": "ke",
+      "password": "k",
       "name": {
         "firstname": "kevin",
         "lastname": "ryan"
       },
-      "phone": "1-567-094-1345",
+      "phone": "1",
       "__v": 0
     },
     {
@@ -284,12 +384,12 @@
       "id": 4,
       "email": "don@gmail.com",
       "username": "donero",
-      "password": "e",
+      "password": "ewedon",
       "name": {
         "firstname": "don",
         "lastname": "romer"
       },
-      "phone": "1-",
+      "phone": "1-765-789-6734",
       "__v": 0
     },
     {
@@ -305,8 +405,8 @@
       },
       "id": 5,
       "email": "derek@gmail.com",
-      "username": "d",
-      "password": "j",
+      "username": "derek",
+      "password": "jklg*_56",
       "name": {
         "firstname": "derek",
         "lastname": "powell"
@@ -356,6 +456,28 @@
         "lastname": "snyder"
       },
       "phone": "1-123-943-0563",
+      "__v": 0
+    },
+    {
+      "address": {
+        "geolocation": {
+          "lat": "50.3456",
+          "long": "10.6419"
+        },
+        "city": "mesa",
+        "street": "vally view ln",
+        "number": 1342,
+        "zipcode": "96378-0245"
+      },
+      "id": 8,
+      "email": "william@gmail.com",
+      "username": "hopkins",
+      "password": "W",
+      "name": {
+        "firstname": "william",
+        "lastname": "hopkins"
+      },
+      "phone": "1-478-001-0890",
       "__v": 0
     }
   ]

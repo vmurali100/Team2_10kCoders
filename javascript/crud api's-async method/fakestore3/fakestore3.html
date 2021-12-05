@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> 
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">api3</span>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-9">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">userId</th>
+                    <th scope="col">date</th>
+                    <th scope="col">__v</th>
+
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+        </div>
+        <div class="col-3">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">id</label>
+                  <input type="number" class="form-control" id="id" aria-describedby="emailHelp">
+                </div>
+           
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">userId</label>
+                    <input type="number" class="form-control" id="userId" aria-describedby="emailHelp">
+                  </div>
+                  
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">date</label>
+                    <input type="text" class="form-control" id="date" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">__v</label>
+                    <input type="text" class="form-control" id="__v" aria-describedby="emailHelp">
+                  </div>
+                 
+                <button type="button" class="btn btn-primary" onclick="updatePerson()">Submit</button>
+              </form>
+        </div>
+    </div>
+  </div>
+    <script>
+     let API_URL = "http://localhost:3000/cart/";
+     var fakeStoreApi = [];
+function getUsers() {
+  return new Promise((success)=>{
+    var getInfo = new XMLHttpRequest();
+  getInfo.onreadystatechange = function () {
+    if (getInfo.readyState == 4 && getInfo.status == 200) {
+      fakeStoreApi = JSON.parse(getInfo.response);
+      console.log(fakeStoreApi);
+success();
+    }
+  };
+  getInfo.open("GET", API_URL);
+  getInfo.send();
+  })
+}
+async function handleGetAllUsers(){
+    Store = await getUsers();
+    display()
+}
+handleGetAllUsers()
+
+
+function display() {
+  fakeStoreApi.forEach((person, i) => {
+    var myTr = document.createElement("tr");
+
+    for (a in person) {
+      if (a !== "products") {
+        var myTd = document.createElement("td");
+        myTd.innerHTML = person[a];
+        myTr.appendChild(myTd);
+      } 
+    }
+
+    var EditTd = document.createElement("td");
+    var editBtn = document.createElement("button");
+    editBtn.innerHTML = "Edit";
+    editBtn.setAttribute("class", "btn btn-warning");
+    editBtn.setAttribute("onclick", "editPerson(" + i + ")");
+    EditTd.appendChild(editBtn);
+    myTr.appendChild(EditTd);
+
+    var deleteTd = document.createElement("td");
+    var deleteBtn = document.createElement("button");
+    deleteBtn.innerHTML = "Delete";
+    deleteBtn.setAttribute("onclick", "deletePerson(" + i + ")");
+    deleteBtn.setAttribute("class", "btn btn-danger");
+    deleteTd.appendChild(deleteBtn);
+    myTr.appendChild(deleteTd);
+
+   document.querySelector("tbody").appendChild(myTr);
+  });
+}
+
+
+
+function editPerson(i) {
+  index = i;
+  for (a in fakeStoreApi[i]) {
+    if (a !== "products") {
+      document.getElementById(a).value = fakeStoreApi[i][a];
+    }
+  }
+  console.log(fakeStoreApi[i]);
+}
+
+
+function handleDelete(i){
+      return new Promise((resolve)=>{
+        var DEL_URL = API_URL + fakeStoreApi[i].id;
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.readyState == 4 && getInfo.status == 200) {
+            resolve()
+          }
+        };
+        getInfo.open("DELETE", DEL_URL);
+        getInfo.send();
+      })
+  }
+
+  async function deletePerson(i) {
+      let response = await handleDelete(i)
+  }
+
+  function handleUpdate(person){
+    return new Promise((resolve)=>{
+        let UPDATE_URL = API_URL+person.id
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.readyState == 4 && getInfo.status == 200) {
+            resolve()
+          }
+        };
+        getInfo.open("PUT", UPDATE_URL);
+        getInfo.setRequestHeader("Content-type","application/json")
+        getInfo.send(JSON.stringify(person));
+    })
+  }
+  
+ async function updatePerson() {
+    let person = { ...fakeStoreApi[index] };
+  
+    for (a in person) {
+      if (a !== "products") {
+        person[a] = document.getElementById(a).value;
+      }
+    }
+    let response = await handleUpdate(person);
+
+  }
+  
+    </script>
+</body>
+</html>
