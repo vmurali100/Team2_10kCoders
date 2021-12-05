@@ -26,8 +26,8 @@
     },
     {
       "id": 6,
-      "title": "Solid Gold Petite Micropave ",
-      "price": 168,
+      "title": "Solid",
+      "price": "1",
       "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
       "category": "jewelery",
       "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
@@ -131,132 +131,76 @@
         "rate": 2.2,
         "count": 140
       }
-    },
-    {
-      "id": 15,
-      "title": "Women's 3-in-1 Snowboard Jacket Winter Coats",
-      "price": "",
-      "description": ":The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
-      "category": "women's",
-      "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-      "rating": {
-        "rate": 2.6,
-        "count": 235
-      }
     }
   ],
   "cart": [
     {
-      "id":1,
-      "userId":1,
-      "date":"2020-03-02T00:00:02.000Z",
-      "products":[
+      "id": 1,
+      "userId": 1,
+      "date": "2020-03-02T00:00:02.000Z",
+      "products": [
         {
-          "productId":1,
-          "quantity":4
+          "productId": 1,
+          "quantity": 4
         },
         {
-          "productId":2,
-          "quantity":1
+          "productId": 2,
+          "quantity": 1
         },
         {
-          "productId":3,
-          "quantity":6
+          "productId": 3,
+          "quantity": 6
         }
       ],
-      "__v":0
+      "__v": 0
     },
     {
-      "id":2,
-      "userId":1,
-      "date":"2020-01-02T00:00:02.000Z",
-      "products":[
+      "id": 2,
+      "userId": 1,
+      "date": "2020-01-02T00:00:02.000Z",
+      "products": [
         {
-          "productId":2,
-          "quantity":4
+          "productId": 2,
+          "quantity": 4
         },
         {
-          "productId":1,
-          "quantity":10
+          "productId": 1,
+          "quantity": 10
         },
         {
-          "productId":5,
-          "quantity":2
+          "productId": 5,
+          "quantity": 2
         }
       ],
-      "__v":0
+      "__v": 0
     },
     {
-      "id":3,
-      "userId":2,
-      "date":"2020-03-01T00:00:02.000Z",
-      "products":[
+      "id": 3,
+      "userId": 2,
+      "date": "2020-03-01T00:00:02.000Z",
+      "products": [
         {
-          "productId":1,
-          "quantity":2
+          "productId": 1,
+          "quantity": 2
         },
         {
-          "productId":9,
-          "quantity":1
+          "productId": 9,
+          "quantity": 1
         }
       ],
-      "__v":0
+      "__v": 0
     },
     {
-      "id":4,
-      "userId":3,
-      "date":"2020-01-01T00:00:02.000Z",
-      "products":[
+      "id": 4,
+      "userId": 3,
+      "date": "2020-01-01T00:00:02.000Z",
+      "products": [
         {
-          "productId":1,
-          "quantity":4
+          "productId": 1,
+          "quantity": 4
         }
       ],
-      "__v":0
-    },
-    {
-      "id":5,
-      "userId":3,
-      "date":"2020-03-01T00:00:02.000Z",
-      "products":[
-        {
-          "productId":7,
-          "quantity":1
-        },
-        {
-          "productId":8,
-          "quantity":1
-        }
-      ],
-      "__v":0
-    },
-    {
-      "id":6,
-      "userId":4,
-      "date":"2020-03-01T00:00:02.000Z",
-      "products":[
-        {
-          "productId":10,
-          "quantity":2
-        },
-        {
-          "productId":12,
-          "quantity":3
-        }
-      ],
-      "__v":0
-    },
-    {
-      "id":6,
-      "userId":8,
-      "date":"2020-03-01T00:00:02.000Z",
-      "products":[
-        {
-          "productId":18,
-          "quantity":1
-        }
-      ],
-      "__v":0
+      "__v": 0
     }
   ],
   "users": [
@@ -340,12 +284,12 @@
       "id": 4,
       "email": "don@gmail.com",
       "username": "donero",
-      "password": "ewedon",
+      "password": "e",
       "name": {
         "firstname": "don",
         "lastname": "romer"
       },
-      "phone": "1-765-789-6734",
+      "phone": "1-",
       "__v": 0
     },
     {
@@ -412,28 +356,6 @@
         "lastname": "snyder"
       },
       "phone": "1-123-943-0563",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
-          "lat": "50.3456",
-          "long": "10.6419"
-        },
-        "city": "mesa",
-        "street": "vally view ln",
-        "number": 1342,
-        "zipcode": "96378-0245"
-      },
-      "id": 8,
-      "email": "william@gmail.com",
-      "username": "hopkins",
-      "password": "William56$hj",
-      "name": {
-        "firstname": "william",
-        "lastname": "hopkins"
-      },
-      "phone": "1-478-001-0890",
       "__v": 0
     }
   ]

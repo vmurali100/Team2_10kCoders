@@ -23,12 +23,7 @@
     {
       "id": 6,
       "fname": "Jacqueline",
-      "lname": "Elkins"
-    },
-    {
-      "id": 8,
-      "fname": "Lavern",
-      "lname": "Tubbytelly"
+      "lname": "El"
     }
   ],
   "filltext2": [
@@ -87,10 +82,10 @@
       "fname": "Willie",
       "lname": "Barazi",
       "tel": "(689)812-4411",
-      "address": "2619 Pharetra Ln",
+      "address": "2",
       "city": "Milwaukee",
       "state": "AZ",
-      "zip": 47891
+      "zip": "47891"
     },
     {
       "id": 7,
@@ -101,16 +96,6 @@
       "city": "Wrentham",
       "state": "RI",
       "zip": 43074
-    },
-    {
-      "id": 9,
-      "fname": "Chun",
-      "lname": "Haga",
-      "tel": "(987)136-4928",
-      "address": "7699 Massa Rd",
-      "city": "Queen Creek",
-      "state": "NH",
-      "zip": 93816
     }
   ],
   "filltext3": [
@@ -139,16 +124,10 @@
       "password": "NkmDG"
     },
     {
-      "id": 2167,
-      "email": "JBessey@consequat.com",
-      "username": "CHarkey",
-      "password": "qQAIx"
-    },
-    {
       "id": 2168,
       "email": "Djhgbjhgjhgjhgjgjhg",
       "username": "Lhvjhvjhbhjkbkjbnkjn",
-      "password": ""
+      "password": "dfsdfsdf"
     }
   ]
 }
