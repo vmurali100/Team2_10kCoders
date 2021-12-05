@@ -2,21 +2,22 @@
 let API_URL = "http://localhost:3000/todos/";
 var allTodos = [];
 function getAllTodos() {
-  return new Promise((resolve)=>{
-    var getInfo = new XMLHttpRequest();
+ return new Promise((resolve)=>{
+  var getInfo = new XMLHttpRequest();
   getInfo.onreadystatechange = function () {
     if (getInfo.readyState == 4 && getInfo.status == 200) {
       allTodos= JSON.parse(getInfo.response);
+
       console.log(allTodos)
       resolve()
     }
   };
   getInfo.open("GET", API_URL);
   getInfo.send()
-  })
+ })
 }
-getAllTodos(()=>{
-  displayTodos();
+getAllTodos().then(()=>{
+  displayTodos()
 })
 
 function displayTodos() {

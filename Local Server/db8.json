@@ -1,27 +1,21 @@
 {
   "person": [
     {
-      "id": 7593,
-      "email": "LMullens@odio.ly",
-      "username": "Hari",
-      "password": "FWV26"
-    },
-    {
       "id": 7594,
       "email": "LSnow@lorem.com",
-      "username": "HConnor",
+      "username": "Hari",
       "password": "rz1Z3"
     },
     {
       "id": 7595,
       "email": "EGalligan@ac.net",
-      "username": "CWright",
+      "username": "vardhan",
       "password": "druAQ"
     },
     {
       "id": 7596,
       "email": "ELopez@pharetra.net",
-      "username": "CCalo",
+      "username": "ram",
       "password": "eYU0Q"
     },
     {
@@ -33,7 +27,7 @@
     {
       "id": 7598,
       "email": "CSweeney@et.ly",
-      "username": "VPachler",
+      "username": "Hari",
       "password": "3jfhO"
     },
     {

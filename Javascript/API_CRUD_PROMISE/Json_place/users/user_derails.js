@@ -2,19 +2,20 @@
 let API_URL = "http://localhost:3000/users/";
 var allUsers = [];
 function getAllUsers() {
+ return new Promise((resolve)=>{
     var getInfo = new XMLHttpRequest();
     getInfo.onreadystatechange = function () {
         if (getInfo.readyState == 4 && getInfo.status == 200) {
             allUsers = JSON.parse(getInfo.response);
-
             console.log(allUsers)
-            displayUsers()
-
+            resolve()
         }
     };
     getInfo.open("GET", API_URL);
     getInfo.send()
+ })
 }
+
 
 function displayUsers() {
     allUsers.forEach((user, i) => {
@@ -59,7 +60,10 @@ function displayUsers() {
 
     })
 }
-getAllUsers();
+getAllUsers().then(()=>{
+    displayUsers();
+})
+
 
 function editUser(i) {
     index = i;
@@ -72,44 +76,36 @@ function editUser(i) {
 console.log(allUsers[i])
 }
 
-
-function deleteUser(i) {
-    console.log(allUsers[i])
-    var DEL_URL = API_URL + allUsers[i].id
-    var getInfo = new XMLHttpRequest();
-    getInfo.onreadystatechange = function () {
-        if (getInfo.readyState == 4 && getInfo.status == 200) {
-            allUsers = JSON.parse(getInfo.response);
-
-            console.log(allUsers)
-            displayUsers()
-
-        }
-    };
-    getInfo.open("DELETE", DEL_URL);
-    getInfo.send()
+function handleDelete(){
+    return new Promise((resolve)=>{
+        var DEL_URL = API_URL + allUsers[i].id
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+            if (getInfo.readyState == 4 && getInfo.status == 200) {
+                resolve()
+                console.log(allUsers)
+    
+            }
+        };
+        getInfo.open("DELETE", DEL_URL);
+        getInfo.send()
+    })
 }
 
-function updateUser() {
-    let user = { ...allUsers[index] }
+function deleteUser(i) {
+handleDelete().then(()=>{
+    displayUsers()
+})   
+}
 
-    for (a in user) {
-        if (a !== "address " && a !== "company" && a !== "website"){
-            user[a] = document.getElementById(a).value
-        }else if(a == "address"){
-            user[a] = document.getElementById(a).value
-
-
-        }
-    }
+function handleUpdate(user){
+return new Promise((resolve)=>{
     let UPDATE_URL = API_URL + user.id
     var getInfo = new XMLHttpRequest();
     getInfo.onreadystatechange = function () {
         if (getInfo.readyState == 4 && getInfo.status == 200) {
-            allUsers = JSON.parse(getInfo.response);
-
+            resolve()
             console.log(allUsers)
-            displayUsers()
 
         }
     };
@@ -117,6 +113,21 @@ function updateUser() {
     getInfo.setRequestHeader("Content-type", "application/json")
     getInfo.send(JSON.stringify(user))
     console.log(user)
+})
+}
+function updateUser() {
+    let user = { ...allUsers[index] }
+
+    for (a in user) {
+        if (a !== "address " && a !== "company" && a !== "website"){
+            user[a] = document.getElementById(a).value
+        }
+    }
+    handleDelete(user).then(()=>{
+        displayUsers()
+
+    })
+   
 }
 
 

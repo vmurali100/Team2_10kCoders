@@ -2,19 +2,22 @@
 let API_URL = "http://localhost:3000/photos/";
 var allPersons = [];
 function getAllPersons () {
+ return new Promise((resolve)=>{
   var getInfo = new XMLHttpRequest();
   getInfo.onreadystatechange = function () {
     if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allPersons  = JSON.parse(getInfo.response);
-
-      console.log(allPersons )
-      displayPersons ()
-
+      resolve(JSON.parse(getInfo.response))
     }
   };
   getInfo.open("GET", API_URL);
   getInfo.send()
+ })
 }
+async function handleGetPersons(){
+  allPersons = await getAllPersons()
+  displayPersons()
+}
+handleGetPersons()
 
 function displayPersons () {
     allPersons .forEach((person, i) => {
@@ -60,25 +63,43 @@ function editUser(i) {
   console.log(allPersons[i])
 }
 
-
-function deleteUser(i) {
-  console.log(allPersons [i])
+function handleDelete(i){
+  return new Promise((resolve)=>{
     var DEL_URL = API_URL+allPersons [i].id
+    var getInfo = new XMLHttpRequest();
+    getInfo.onreadystatechange = function () {
+      if (getInfo.readyState == 4 && getInfo.status == 200) {
+        resolve()
+      }
+    };
+    getInfo.open("DELETE", DEL_URL);
+    getInfo.send()
+  })
+}
+
+async function deleteUser(i) {
+let response = await handleDelete(i)  
+displayPersons() 
+}
+
+
+function handleUpdate(person){
+  return new Promise((resolve)=>{
+    let UPDATE_URL = API_URL+person.id
   var getInfo = new XMLHttpRequest();
   getInfo.onreadystatechange = function () {
     if (getInfo.readyState == 4 && getInfo.status == 200) {
-        allPersons= JSON.parse(getInfo.response);
-
-      console.log( allPersons)
-      displayPersons()
-
+      resolve()
     }
   };
-  getInfo.open("DELETE", DEL_URL);
-  getInfo.send()
+  getInfo.open("PUT", UPDATE_URL);
+  getInfo.setRequestHeader("Content-type", "application/json")
+  getInfo.send(JSON.stringify(person))
+  console.log(person)
+  })
 }
 
-function updateUser(){
+async function updateUser(){
     
   let person = {... allPersons[index]}
 
@@ -86,21 +107,8 @@ function updateUser(){
     person[a]= document.getElementById(a).value 
     
   }
-  let UPDATE_URL = API_URL+person.id
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allPersons= JSON.parse(getInfo.response);
-
-      console.log(allPersons)
-      displayPersons ()
-
-    }
-  };
-  getInfo.open("PUT", UPDATE_URL);
-  getInfo.setRequestHeader("Content-type", "application/json")
-  getInfo.send(JSON.stringify(person))
-  console.log(person)
+  let response = handleUpdate(person)
+  handleGetPersons()
 }
 
  

@@ -1,31 +1,31 @@
-let API_URL = "  http://localhost:3000/comments/";
-var allComments = [];
-function getAllComments() {
-   return new Promise((resolve)=>{
-    var getInfo = new XMLHttpRequest();
-    getInfo.onreadystatechange = function () {
-        if (getInfo.readyState == 4 && getInfo.status == 200) {
-            resolve(JSON.parse(getInfo.response))
-        }
-    };
-    getInfo.open("GET", API_URL);
-    getInfo.send()
-   })
+let API_URL = "http://localhost:3000/fname/";
+var allPersons = [];
+function getAllPersons() {
+    return new Promise((resolve) => {
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+            if (getInfo.readyState == 4 && getInfo.status == 200) {
+                resolve(JSON.parse(getInfo.response))
+            }
+        };
+        getInfo.open("GET", API_URL);
+        getInfo.send()
+    })
 }
-async function handleGetComments(){
-    allComments = await getAllComments() 
-    displayComments()
+async function handleGetPersons() {
+    allPersons = await getAllPersons()
+    displayPersons()
 }
-handleGetComments()
+handleGetPersons()
 
-function displayComments() {
-    allComments.forEach((comment, i) => {
+function displayPersons() {
+    allPersons.forEach((person, i) => {
         var myTr = document.createElement("tr");
 
-        for (a in comment) {
+        for (a in person) {
 
             var myTd = document.createElement("td");
-            myTd.innerHTML = comment[a];
+            myTd.innerHTML = person[a];
             myTr.appendChild(myTd);
 
 
@@ -52,24 +52,22 @@ function displayComments() {
 
     })
 }
-getAllComments();
+getAllPersons();
 
 function editUser(i) {
     index = i;
-    for (a in allComments[i]) {
-        if (a !== "postId") {
-            document.getElementById(a).value = allComments[i][a]
-        }
+    for (a in allPersons[i]) {
+        document.getElementById(a).value = allPersons[i][a]
+
     }
 
-    console.log(allComments[i])
+    console.log(allPersons[i])
 }
 
 
-
-function handleDelete(i){
-    return new Promise((resolve)=>{
-        var DEL_URL = API_URL + allComments[i].id
+function handleDeleteUser(i) {
+    return new Promise((resolve) => {
+        var DEL_URL = API_URL + allPersons[i].id
         var getInfo = new XMLHttpRequest();
         getInfo.onreadystatechange = function () {
             if (getInfo.readyState == 4 && getInfo.status == 200) {
@@ -80,15 +78,15 @@ function handleDelete(i){
         getInfo.send()
     })
 }
+
 async function deleteUser(i) {
-    let response = await handleDelete(i)
-    displayComments()
+    let response = await handleDeleteUser(i)
+    displayPersons()
 }
 
-
-function handleUpdate(comment){
-    return new Promise((resolve)=>{
-        let UPDATE_URL = API_URL + comment.id
+function handleUpdate(person) {
+    return new Promise((resolve) => {
+        let UPDATE_URL = API_URL + person.id
         var getInfo = new XMLHttpRequest();
         getInfo.onreadystatechange = function () {
             if (getInfo.readyState == 4 && getInfo.status == 200) {
@@ -97,20 +95,25 @@ function handleUpdate(comment){
         };
         getInfo.open("PUT", UPDATE_URL);
         getInfo.setRequestHeader("Content-type", "application/json")
-        getInfo.send(JSON.stringify(comment))
-        console.log(comment)
+        getInfo.send(JSON.stringify(person))
+        console.log(person)
     })
-}
-async function updateUser() {
-    let comment = { ...allComments[index] }
 
-    for (a in comment) {
-        if (a !== "postId") {
-            comment[a] = document.getElementById(a).value
-        }
-    }
-    let response = handleUpdate(comment)
-   displayComments()
 }
+
+function updateUser() {
+    let person = { ...allPersons[index] }
+
+    for (a in person) {
+        person[a] = document.getElementById(a).value
+
+    }
+    let response = handleUpdate(person)
+    handleGetPersons()
+
+}
+
+
+
 
 

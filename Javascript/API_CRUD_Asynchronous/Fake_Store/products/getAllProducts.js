@@ -2,19 +2,23 @@
 let API_URL = "http://localhost:3000/products/";
 var allProducts = [];
 function getAllProducts() {
+ return new Promise((resolve)=>{
   var getInfo = new XMLHttpRequest();
   getInfo.onreadystatechange = function () {
     if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allProducts = JSON.parse(getInfo.response);
-
-      console.log(allProducts)
-      displayProducts()
-
+      resolve(JSON.parse(getInfo.response))
     }
-  };
+  }
   getInfo.open("GET", API_URL);
   getInfo.send()
+ });
 }
+
+async function handleGetProducts(){
+  allProducts = await getAllProducts()
+  displayProducts()
+}
+handleGetProducts()
 
 function displayProducts() {
   allProducts.forEach((product, i) => {
@@ -68,47 +72,53 @@ function editUser(i) {
 }
 
 
-function deleteUser(i) {
-  console.log(allProducts[i])
-    var DEL_URL = API_URL+allProducts[i].id
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allProducts = JSON.parse(getInfo.response);
-
-      console.log(allProducts)
-      displayProducts()
-
-    }
-  };
-  getInfo.open("DELETE", DEL_URL);
-  getInfo.send()
+function handleDelete(i) {
+ return new Promise((resolve)=>{
+  var DEL_URL = API_URL+allProducts[i].id
+var getInfo = new XMLHttpRequest();
+getInfo.onreadystatechange = function () {
+  if (getInfo.readyState == 4 && getInfo.status == 200) {
+    resolve()
+  }
+};
+getInfo.open("DELETE", DEL_URL);
+getInfo.send()
+ })
+}
+async function deleteUser(i){
+  let response = await handleDelete(i)
+  displayProducts()
 }
 
-function updateUser(){
-  let product = {...allProducts[index]}
+function handleUpdateUser(product){
+  return new Promise((resolve)=>{
+    let UPDATE_URL = API_URL+product.id
+    var getInfo = new XMLHttpRequest();
+    getInfo.onreadystatechange = function () {
+      if (getInfo.readyState == 4 && getInfo.status == 200) {
+        resolve()
+      }
+    }
+      getInfo.open("PUT", UPDATE_URL);
+      getInfo.setRequestHeader("Content-type", "application/json")
+      getInfo.send(JSON.stringify(product))
+      console.log(product)
+    
+  })
+}
+
+async function updateUser(){
+  let product = {...allProducts[index]};
 
   for(a in product){
     if(a !== "rating" && a !=="image" && a!== "description"){
-      product[a]= document.getElementById(a).value 
+      product[a]= document.getElementById(a).value ;
     } 
   }
-  let UPDATE_URL = API_URL+product.id
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allProducts = JSON.parse(getInfo.response);
-
-      console.log(allProducts)
-      displayProducts()
-
-    }
-  };
-  getInfo.open("PUT", UPDATE_URL);
-  getInfo.setRequestHeader("Content-type", "application/json")
-  getInfo.send(JSON.stringify(product))
-  console.log(product)
+let response = handleUpdateUser(product)
+handleGetProducts()
 }
+
 
  
 

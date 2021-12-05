@@ -17,7 +17,7 @@ function getAllPersons () {
 }
 
 function displayPersons () {
-    allPersons .forEach((person, i) => {
+    allPersons.forEach((person, i) => {
     var myTr = document.createElement("tr");
 
     for (a in person) {

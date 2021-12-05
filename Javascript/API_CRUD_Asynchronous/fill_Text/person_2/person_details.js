@@ -2,19 +2,22 @@
 let API_URL = "http://localhost:3000/person/";
 var allPersons = [];
 function getAllPersons () {
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allPersons  = JSON.parse(getInfo.response);
-
-      console.log(allPersons )
-      displayPersons ()
-
-    }
-  };
-  getInfo.open("GET", API_URL);
-  getInfo.send()
+  return new Promise((resolve)=>{
+    var getInfo = new XMLHttpRequest();
+    getInfo.onreadystatechange = function () {
+      if (getInfo.readyState == 4 && getInfo.status == 200) {
+        allPersons  = JSON.parse(getInfo.response); 
+        console.log(allPersons )
+        resolve()
+      }
+    };
+    getInfo.open("GET", API_URL);
+    getInfo.send()
+  })
 }
+getAllPersons().then(()=>{
+  displayPersons ();
+})
 
 function displayPersons () {
     allPersons .forEach((person, i) => {

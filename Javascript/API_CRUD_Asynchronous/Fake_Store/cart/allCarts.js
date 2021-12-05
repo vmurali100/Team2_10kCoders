@@ -1,19 +1,24 @@
 let API_URL = "http://localhost:3000/carts/";
 var allCarts = [];
 function getAllCarts() {
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allCarts = JSON.parse(getInfo.response);
-
-      console.log(allCarts)
-      displayCart()
-
+  return new Promise((resolve)=>{
+    var getInfo = new XMLHttpRequest();
+    getInfo.onreadystatechange = function () {
+      if (getInfo.readyState == 4 && getInfo.status == 200) {
+        resolve(JSON.parse(getInfo.response));  
+      }
     }
-  };
-  getInfo.open("GET", API_URL);
-  getInfo.send()
+    getInfo.open("GET", API_URL);
+    getInfo.send()
+
+  });
+ 
 }
+async function handleGetCarts(){
+  allCarts = await getAllCarts()
+  displayCart()
+}
+handleGetCarts()
 
 
 function displayCart(){
@@ -63,46 +68,49 @@ function editUser(i) {
   console.log(allCarts[i])
 }
 
-
-function deleteUser(i) {
-  console.log(allCarts[i])
-    var DEL_URL = API_URL+allCarts[i].id
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allProducts = JSON.parse(getInfo.response);
-
-      console.log(allCarts)
-      displayCarts()
-
-    }
-  };
-  getInfo.open("DELETE", DEL_URL);
-  getInfo.send()
+function handleDelete(i){
+  return new Promise((resolve)=>{
+    var DEL_URL = API_URL + allCarts[i].id;
+    var getInfo = new XMLHttpRequest();
+    getInfo.onreadystatechange = function () {
+      if (getInfo.readyState == 4 && getInfo.status == 200) {
+        resolve()
+      }
+    };
+    getInfo.open("DELETE", DEL_URL);
+    getInfo.send();
+  })
+}
+async function deleteUser(i) {
+  let respose = await handleDelete(i)
+  displayCart()
 }
 
-function updateUser(){
-  let product = {...allCarts[index]}
+
+function hanldeUpdate(cart){
+  return new Promise((resolve)=>{
+      let UPDATE_URL = API_URL+cart.id
+      var getInfo = new XMLHttpRequest();
+      getInfo.onreadystatechange = function () {
+        if (getInfo.readyState == 4 && getInfo.status == 200) {
+          resolve()
+        }
+      };
+      getInfo.open("PUT", UPDATE_URL);
+      getInfo.setRequestHeader("Content-type","application/json")
+      getInfo.send(JSON.stringify(cart));
+  })
+}
+
+async function updateUser(){
+  let cart = {...allCarts[index]}
 
   for(a in cart){
     if(a !== "products" && a !=="__v"){
       cart[a]= document.getElementById(a).value 
     } 
   }
-  let UPDATE_URL = API_URL+product.id
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allProducts = JSON.parse(getInfo.response);
+  let response = hanldeUpdate(cart)
+  handleGetCarts()
 
-      console.log(allCarts)
-      displayCart()
-
-    }
-  };
-  getInfo.open("PUT", UPDATE_URL);
-  getInfo.setRequestHeader("Content-type", "application/json")
-  getInfo.send(JSON.stringify(cart))
-  console.log(cart)
 }
-

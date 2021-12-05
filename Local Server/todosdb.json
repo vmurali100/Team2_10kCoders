@@ -15,8 +15,8 @@
     {
       "userId": 1,
       "id": 4,
-      "title": "et porro tempora",
-      "completed": true
+      "title": "Vardhan",
+      "completed": "true"
     },
     {
       "userId": 1,
@@ -28,7 +28,7 @@
       "userId": 1,
       "id": 6,
       "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-      "completed": false
+      "completed": "True"
     },
     {
       "userId": 1,
@@ -76,7 +76,7 @@
       "userId": 1,
       "id": 14,
       "title": "repellendus sunt dolores architecto voluptatum",
-      "completed": true
+      "completed": "true"
     },
     {
       "userId": 1,

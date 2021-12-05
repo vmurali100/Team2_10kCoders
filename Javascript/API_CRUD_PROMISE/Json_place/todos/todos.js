@@ -2,19 +2,21 @@
 let API_URL = "http://localhost:3000/todos/";
 var allTodos = [];
 function getAllTodos() {
+ return new Promise((resolve)=>{
   var getInfo = new XMLHttpRequest();
   getInfo.onreadystatechange = function () {
     if (getInfo.readyState == 4 && getInfo.status == 200) {
       allTodos= JSON.parse(getInfo.response);
 
       console.log(allTodos)
-      displayTodos()
-
+      resolve()
     }
   };
   getInfo.open("GET", API_URL);
   getInfo.send()
+ })
 }
+
 
 function displayTodos() {
   allTodos.forEach((todo, i) => {
@@ -50,7 +52,10 @@ function displayTodos() {
 
   })
 }
-getAllTodos();
+getAllTodos().then(()=>{
+  displayTodos()
+})
+
 
 function editUser(i) {
   index=i;
@@ -63,22 +68,45 @@ function editUser(i) {
   console.log(allTodos[i])
 }
 
-
-function deleteUser(i) {
-  console.log(allTodos[i])
+function handleDelete(){
+  return new Promise((resolve)=>{
     var DEL_URL = API_URL+allProducts[i].id
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allTodos = JSON.parse(getInfo.response);
+    var getInfo = new XMLHttpRequest();
+    getInfo.onreadystatechange = function () {
+      if (getInfo.readyState == 4 && getInfo.status == 200) {
+        resolve()
+        console.log(allTodos)  
+      }
+    };
+    getInfo.open("DELETE", DEL_URL);
+    getInfo.send()
+  })
+}
 
-      console.log(allTodos)
-      displayTodoss()
 
-    }
-  };
-  getInfo.open("DELETE", DEL_URL);
-  getInfo.send()
+function deleteUser() {
+  handleDelete().then(()=>{
+    displayTodos()
+  })   
+}
+
+function handleUpdate(todo){
+  return new Promise((resolve)=>{
+    let UPDATE_URL = API_URL+todo.id
+    var getInfo = new XMLHttpRequest();
+    getInfo.onreadystatechange = function () {
+      if (getInfo.readyState == 4 && getInfo.status == 200) {
+        allTodos = JSON.parse(getInfo.response);
+        resolve()
+          displayTodos()
+  
+      }
+    };
+    getInfo.open("PUT", UPDATE_URL);
+    getInfo.setRequestHeader("Content-type", "application/json")
+    getInfo.send(JSON.stringify(todo))
+    console.log(todo)
+  })
 }
 
 function updateUser(){
@@ -89,21 +117,10 @@ function updateUser(){
         todo[a]= document.getElementById(a).value 
     } 
   }
-  let UPDATE_URL = API_URL+todo.id
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allTodos = JSON.parse(getInfo.response);
-
-      console.log(allTodos)
-      displayTodos()
-
-    }
-  };
-  getInfo.open("PUT", UPDATE_URL);
-  getInfo.setRequestHeader("Content-type", "application/json")
-  getInfo.send(JSON.stringify(todo))
-  console.log(todo)
+  handleUpdate(todo).then(()=>{
+    displayTodos()
+  })
+ 
 }
 
  

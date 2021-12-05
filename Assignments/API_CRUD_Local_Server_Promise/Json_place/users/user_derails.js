@@ -99,11 +99,9 @@ function updateUser() {
     for (a in user) {
         if (a !== "address " && a !== "company" && a !== "website"){
             user[a] = document.getElementById(a).value
-        }else if(a == "address"){
-            user[a] = document.getElementById(a).value
-
-
         }
+
+        
     }
     let UPDATE_URL = API_URL + user.id
     var getInfo = new XMLHttpRequest();

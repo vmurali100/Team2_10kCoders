@@ -1,19 +1,21 @@
 let API_URL = "  http://localhost:3000/comments/";
 var allComments = [];
 function getAllComments() {
+   return new Promise((resolve)=>{
     var getInfo = new XMLHttpRequest();
     getInfo.onreadystatechange = function () {
         if (getInfo.readyState == 4 && getInfo.status == 200) {
             allComments = JSON.parse(getInfo.response);
 
             console.log(allComments)
-            displayComments()
-
+            resolve()
         }
     };
     getInfo.open("GET", API_URL);
     getInfo.send()
+   })
 }
+
 
 function displayComments() {
     allComments.forEach((comment, i) => {
@@ -49,7 +51,11 @@ function displayComments() {
 
     })
 }
-getAllComments();
+getAllComments().then(()=>{
+    displayComments();
+
+})
+
 
 function editUser(i) {
     index = i;
@@ -63,23 +69,45 @@ function editUser(i) {
 }
 
 
-function deleteUser(i) {
-    console.log(allComments[i])
+function handleDelete(){
+return new Promise((resolve)=>{
     var DEL_URL = API_URL + allComments[i].id
     var getInfo = new XMLHttpRequest();
     getInfo.onreadystatechange = function () {
         if (getInfo.readyState == 4 && getInfo.status == 200) {
-            allComments = JSON.parse(getInfo.response);
-
+            resolve()
             console.log(allComments)
-            displayComments()
 
         }
     };
     getInfo.open("DELETE", DEL_URL);
     getInfo.send()
+})
 }
 
+function deleteUser(i) {
+handleDelete().then(()=>{
+    displayComments()
+})  
+}
+
+
+function handleUpdate(comment){
+    return new Promise((resolve)=>{
+        let UPDATE_URL = API_URL + comment.id
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+            if (getInfo.readyState == 4 && getInfo.status == 200) {
+                resolve()
+                console.log(allComments)    
+            }
+        };
+        getInfo.open("PUT", UPDATE_URL);
+        getInfo.setRequestHeader("Content-type", "application/json")
+        getInfo.send(JSON.stringify(comment))
+        console.log(comment)
+    })
+}
 function updateUser() {
     let comment = { ...allComments[index] }
 
@@ -88,21 +116,11 @@ function updateUser() {
             comment[a] = document.getElementById(a).value
         }
     }
-    let UPDATE_URL = API_URL + comment.id
-    var getInfo = new XMLHttpRequest();
-    getInfo.onreadystatechange = function () {
-        if (getInfo.readyState == 4 && getInfo.status == 200) {
-            allComments = JSON.parse(getInfo.response);
+    handleUpdate(comment).then(()=>{
+        displayComments()
 
-            console.log(allComments)
-            displayComments()
-
-        }
-    };
-    getInfo.open("PUT", UPDATE_URL);
-    getInfo.setRequestHeader("Content-type", "application/json")
-    getInfo.send(JSON.stringify(comment))
-    console.log(comment)
+    })
+   
 }
 
 
