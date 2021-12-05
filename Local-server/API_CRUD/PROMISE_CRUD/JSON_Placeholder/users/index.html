@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>JSON-PlaceHolder-API(users)</title>
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid" style="text-align: center; display: inline;">
+      <a class="navbar-brand" href="#" >JSON-PlaceHolder-API(userss)</a>
+      <button type="button" class="btn btn-outline-success col" style=" width: 180px; height: 50px; display:inline;" onclick="getData()">GET DATA</button>
+    </div>
+  </nav>
+        <div class="container">
+            <div class="row" id="form_row" style="display:none">
+                <div class="col"></div>
+                <div class="col">
+                    <h2 style="text-align:center">UPDATE FORM</h2>
+                    <form id="form">
+                      <div class="mb-3">
+                        <label for="id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="id" onkeyup="validate(id)">
+                      </div>
+                        
+                        <div class="mb-3">
+                          <label for="name" class="form-label"> Name</label>
+                          <input type="text" class="form-control" id="name" onkeyup="validate(id)">
+                        </div>
+    
+                        <div class="mb-3">
+                          <label for="username" class="form-label">UserName</label>
+                          <input type="text" class="form-control" id="username" onkeyup="validate(id)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" onkeyup="validate(id)">
+                          </div>
+                          <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phone" onkeyup="validate(id)">
+                            <div class="mb-3">
+                              <label for="address" class="form-label">Address</label>
+                              <input type="address" class="form-control" id="address" onkeyup="validate(id)">
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label for="website" class="form-label">Website</label>
+                            <input type="text" class="form-control" id="website" onkeyup="validate(id)">
+                          </div>
+                          <!-- <div class="mb-3">
+                            <label for="state" class="form-label">State Name</label>
+                            <input type="text" class="form-control" id="state" onkeyup="validate(id)">
+                          </div>
+                          <div class="mb-3">
+                            <label for="zip" class="form-label"> Zip</label>
+                            <input type="number" class="form-control" id="zip" onkeyup="validate(id)">
+                          </div> -->
+    
+                        <button type="button" class="btn btn-primary" onclick="upDate()" id="update">Update</button>
+                        
+                      </form>
+                </div>
+                
+            </div>
+    
+            <div class="row" id="table_row">
+                <div class="col" >
+                    <table class="table" >
+                        <thead id="thead" >
+                            
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Website</th>
+                            <!-- <th>Company</th> -->
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+<script src="./jsonusers.js"></script>
+<script src="./display.js"></script>
+<script src="./edit.js"></script>
+<script src="./update.js"></script>
+<script src="./delete.js"></script>
+<!-- <script src="./validate.js"></script> -->
+</html>
