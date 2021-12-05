@@ -59,21 +59,21 @@
                     <label for="exampleInputEmail1" class="form-label">ID</label>
                     <input type="email" class="form-control" id="id" aria-describedby="emailHelp">
                   </div>
-                <button type="button" class="btn btn-primary" onclick="updateUser()">Submit</button>
+                <button type="button" class="btn btn-primary" onclick="updatePerson()">Submit</button>
               </form>
         </div>
     </div>
   </div>
     <script>
      let API_URL = "http://localhost:3000/users/";
-var allUsers = [];
-function getAllUsers() {
+var fakeStoreApi = [];
+function getUsers() {
   return new Promise((success)=>{
     var getInfo = new XMLHttpRequest();
   getInfo.onreadystatechange = function () {
     if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allUsers = JSON.parse(getInfo.response);
-      console.log(allUsers);
+      fakeStoreApi = JSON.parse(getInfo.response);
+      console.log(fakeStoreApi);
 success();
     }
   };
@@ -81,26 +81,26 @@ success();
   getInfo.send();
   })
 }
-getAllUsers().then(()=>{
-displayUsers();
+getUsers().then(()=>{
+display();
 })
 
-function displayUsers() {
-  allUsers.forEach((user, i) => {
+function display() {
+  fakeStoreApi.forEach((person, i) => {
     var myTr = document.createElement("tr");
 
-    for (a in user) {
+    for (a in person) {
       if (a !== "address" && a !== "name" && a !== "__v") {
         var myTd = document.createElement("td");
-        myTd.innerHTML = user[a];
+        myTd.innerHTML = person[a];
         myTr.appendChild(myTd);
       } else if (a == "address") {
         var myTd = document.createElement("td");
-        myTd.innerHTML = user[a].city;
+        myTd.innerHTML = person[a].city;
         myTr.appendChild(myTd);
       } else if (a == "name") {
         var myTd = document.createElement("td");
-        myTd.innerHTML = user[a].firstname + " " + user[a].lastname;
+        myTd.innerHTML = person[a].firstname + " " + person[a].lastname;
         myTr.appendChild(myTd);
       }
     }
@@ -109,14 +109,14 @@ function displayUsers() {
     var editBtn = document.createElement("button");
     editBtn.innerHTML = "Edit";
     editBtn.setAttribute("class", "btn btn-warning");
-    editBtn.setAttribute("onclick", "editUser(" + i + ")");
+    editBtn.setAttribute("onclick", "editPerson(" + i + ")");
     EditTd.appendChild(editBtn);
     myTr.appendChild(EditTd);
 
     var deleteTd = document.createElement("td");
     var deleteBtn = document.createElement("button");
     deleteBtn.innerHTML = "Delete";
-    deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+    deleteBtn.setAttribute("onclick", "deletePerson(" + i + ")");
     deleteBtn.setAttribute("class", "btn btn-danger");
     deleteTd.appendChild(deleteBtn);
     myTr.appendChild(deleteTd);
@@ -124,58 +124,68 @@ function displayUsers() {
    document.querySelector("tbody").appendChild(myTr);
   });
 }
-getAllUsers().then(()=>{
-    displayUsers()
-})
 
 
-function editUser(i) {
+
+function editPerson(i) {
   index = i;
-  for (a in allUsers[i]) {
+  for (a in fakeStoreApi[i]) {
     if (a !== "address" && a !== "name" && a !== "__v") {
-      document.getElementById(a).value = allUsers[i][a];
+      document.getElementById(a).value = fakeStoreApi[i][a];
     }
   }
-  console.log(allUsers[i]);
+  console.log(fakeStoreApi[i]);
 }
 
-function deleteUser(i) {
-  console.log(allUsers[i]);
-  var DEL_URL = API_URL + allUsers[i].id;
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allUsers = JSON.parse(getInfo.response);
-      console.log(allUsers);
-      displayUsers();
-    }
-  };
-  getInfo.open("DELETE", DEL_URL);
-  getInfo.send();
-}
 
-function updateUser() {
-  let user = { ...allUsers[index] };
-
-  for (a in user) {
-    if (a !== "address" && a !== "name" && a !== "__v") {
-      user[a] = document.getElementById(a).value;
-    }
+function handleDelete(i){
+      return new Promise((resolve)=>{
+        var DEL_URL = API_URL + fakeStoreApi[i].id;
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.readyState == 4 && getInfo.status == 200) {
+            resolve()
+          }
+        };
+        getInfo.open("DELETE", DEL_URL);
+        getInfo.send();
+      })
   }
-let UPDATE_URL = API_URL+user.id
-  var getInfo = new XMLHttpRequest();
-  getInfo.onreadystatechange = function () {
-    if (getInfo.readyState == 4 && getInfo.status == 200) {
-      allUsers = JSON.parse(getInfo.response);
-      console.log(allUsers);
-      displayUsers();
+
+  function deletePerson(i) {
+        handleDelete(i).then(()=>{
+        })
+  }
+
+  function handleUpdate(person){
+    return new Promise((resolve)=>{
+        let UPDATE_URL = API_URL+person.id
+        var getInfo = new XMLHttpRequest();
+        getInfo.onreadystatechange = function () {
+          if (getInfo.readyState == 4 && getInfo.status == 200) {
+            resolve()
+          }
+        };
+        getInfo.open("PUT", UPDATE_URL);
+        getInfo.setRequestHeader("Content-type","application/json")
+        getInfo.send(JSON.stringify(person));
+    })
+  }
+  
+  function updatePerson() {
+    let person = { ...fakeStoreApi[index] };
+  
+    for (a in person) {
+      if (a !== "address" && a !== "name" && a !== "__v") {
+        person[a] = document.getElementById(a).value;
+      }
     }
-  };
-  getInfo.open("PUT", UPDATE_URL);
-  getInfo.setRequestHeader("Content-type","application/json")
-  getInfo.send(JSON.stringify(user));
-}
- 
+
+    handleUpdate(person).then(()=>{
+    })
+
+  }
+  
     </script>
 </body>
 </html>
