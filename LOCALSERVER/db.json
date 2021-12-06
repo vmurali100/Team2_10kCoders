@@ -2,7 +2,7 @@
   "user1": [
     {
       "id": 1559,
-      "fname": "Jias",
+      "fname": "Jia",
       "lname": "Wright"
     },
     {
@@ -28,24 +28,14 @@
   ],
   "user2": [
     {
-      "id": 2569,
-      "fname": "Kingis",
-      "lname": "Khillah",
-      "tel": "(379)414-5767",
-      "address": "71 Ipsum Dr",
-      "city": "Bella Vista",
-      "state": "MN",
-      "zip": "14811"
-    },
-    {
       "id": 2571,
-      "fname": "Geeta",
+      "fname": "Geetas",
       "lname": "Suesskind",
       "tel": "(272)679-3926",
       "address": "290 Sollicitudin Ln",
       "city": "Gettysburg",
       "state": "IL",
-      "zip": 54824
+      "zip": "54824"
     },
     {
       "id": 2572,
@@ -56,16 +46,6 @@
       "city": "Granite Falls",
       "state": "UT",
       "zip": 56198
-    },
-    {
-      "id": 2573,
-      "fname": "Rachmat",
-      "lname": "Fogle",
-      "tel": "(772)235-4262",
-      "address": "4875 Neque Dr",
-      "city": "Cranford",
-      "state": "AL",
-      "zip": 47312
     },
     {
       "id": 2574,

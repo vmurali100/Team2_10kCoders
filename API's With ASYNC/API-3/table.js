@@ -3,9 +3,9 @@ function table(){
         var tr = document.createElement("tr")
         document.querySelector("tbody").appendChild(tr)
         for(a in user){
-            var td =  document.createElement("td")
+            var td = document.createElement("td")
             tr.appendChild(td)
-            td.innerText = user[a]
+            td.innerText=user[a]
         }
         var editTd = document.createElement("td")
         tr.appendChild(editTd)
@@ -24,12 +24,11 @@ function table(){
         delBtn.setAttribute("type","button")
         delBtn.setAttribute("class","btn btn-danger")
         delBtn.setAttribute("onclick","del("+ i +")")
-
     })
 }
 var index
 function edit(i){
-    index=i
+    index = i
     for(a in allUsers[i]){
         document.getElementById(a).value = allUsers[i][a]
     }

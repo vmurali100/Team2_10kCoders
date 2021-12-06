@@ -2,8 +2,17 @@ function table(){
     allUsers.forEach((user,i)=>{
         var tr = document.createElement("tr")
         document.querySelector("tbody").appendChild(tr)
-        for(a in user){
-            var td =  document.createElement("td")
+        for (a in user) {
+            var td = document.createElement("td")
+            if(a=="address"){
+                td.innerText = user[a].city
+                tr.appendChild(td)
+                continue
+            }else if(a=="name"){
+                td.innerText = user[a].firstname+" "+user[a].lastname
+                tr.appendChild(td)
+                continue
+            }
             tr.appendChild(td)
             td.innerText = user[a]
         }
@@ -11,9 +20,9 @@ function table(){
         tr.appendChild(editTd)
         var editBtn = document.createElement("button")
         editBtn.innerText = "Edit"
-        editBtn.setAttribute("class","btn btn-warning")
-        editBtn.setAttribute("type","button")
-        editBtn.setAttribute("onclick","edit("+i+")")
+        editBtn.setAttribute("class", "btn btn-warning")
+        editBtn.setAttribute("type", "button")
+        editBtn.setAttribute("onclick", "edit(" + i + ")")
         editTd.appendChild(editBtn)
 
         var delTD = document.createElement("td")
@@ -21,16 +30,16 @@ function table(){
         var delBtn = document.createElement("button")
         delTD.appendChild(delBtn)
         delBtn.innerText = "Delete"
-        delBtn.setAttribute("type","button")
-        delBtn.setAttribute("class","btn btn-danger")
-        delBtn.setAttribute("onclick","del("+ i +")")
+        delBtn.setAttribute("type", "button")
+        delBtn.setAttribute("class", "btn btn-danger")
+        delBtn.setAttribute("onclick", "del(" + i + ")")
 
     })
 }
 var index
-function edit(i){
-    index=i
-    for(a in allUsers[i]){
+function edit(i) {
+    index = i
+    for (a in allUsers[i]) {
         document.getElementById(a).value = allUsers[i][a]
     }
 }

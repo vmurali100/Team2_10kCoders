@@ -4,8 +4,8 @@ function table() {
         document.querySelector("tbody").appendChild(tr)
         for (a in user) {
             var td = document.createElement("td")
-            td.innerText = user[a]
             tr.appendChild(td)
+            td.innerText = user[a]
         }
         var editTd = document.createElement("td")
         tr.appendChild(editTd)
@@ -24,7 +24,6 @@ function table() {
         delBtn.setAttribute("type", "button")
         delBtn.setAttribute("class", "btn btn-danger")
         delBtn.setAttribute("onclick", "del(" + i + ")")
-
     })
 }
 var index
@@ -34,47 +33,46 @@ function edit(i) {
         document.getElementById(a).value = allUsers[i][a]
     }
 }
-
-function handleUpdate(user) {
-    return new Promise((sucess) => {
-        let UPDATE_URL = API_URL + user.id
-        var getInfo = new XMLHttpRequest();
-        getInfo.onreadystatechange = function () {
-            if (getInfo.readyState == 4 && getInfo.status == 200) {
-                sucess()
-            }
-        };
-        getInfo.open("PUT", UPDATE_URL);
-        getInfo.setRequestHeader("Content-type", "application/json")
-        getInfo.send(JSON.stringify(user));
-    })
-}
-
-async function updateUser() {
-    let user = { ...allUsers[index] }
-    for (a in user) {
-        user[a] = document.getElementById(a).value
-    }
-  let response = await handleUpdate(user)
-  table()
-
-}
-
-function handleDelete(i) {
-    return new Promise((sucess) => {
-        var DEL_URL = API_URL + allUsers[i].id
+function handleUpdate(user){
+    return new Promise((sucess)=>{
+        var UPDATE_URL = API_URL +user.id
         var getInfo = new XMLHttpRequest()
-        getInfo.onreadystatechange = function () {
-            if (getInfo.status == 200 && getInfo.readyState == 4) {
+        getInfo.onreadystatechange = function(){
+            if(getInfo.status == 200 && getInfo.readyState == 4){
+                allUsers = JSON.parse(getInfo.reponse)
                 sucess()
             }
         }
-        getInfo.open("DELETE", DEL_URL)
-        getInfo.send()
+        getInfo.open("PUT",UPDATE_URL)
+        getInfo.setRequestHeader("content-type","application/json")
+        getInfo.send(JSON.stringify(user))
     })
 }
 
-async function del(i) {
-   let response  =await handleDelete()
+async function updateUser(){
+    var user = {...allUsers[index]}
+    for(a in user){
+        user[a] = document.getElementById(a).value
+    }
+   let response =  await handleUpdate(user)
+   handleUsers()
+}
+ 
+function handleDelete(i){
+    return new Promise((resolve)=>{
+        var DEL_URL = API_URL + allUsers[i].id
+    var getInfo = new XMLHttpRequest()
+    getInfo.onreadystatechange = function(){
+        if(getInfo.status == 200 && getInfo.readyState == 4){
+            resolve()
+        }
+    }
+    getInfo.open("DELETE",DEL_URL)
+    getInfo.send()
+    })
+}
+
+async function del(i){
+   let response  = await handleDelete(i)
    table()
 }

@@ -4,8 +4,19 @@ function table(){
         document.querySelector("tbody").appendChild(tr)
         for(a in user){
             var td =  document.createElement("td")
-            tr.appendChild(td)
+            if(a=="address"){
+                td.innerText = user[a].city
+                tr.appendChild(td)
+                continue
+            }else if(a=="company"){
+                td.innerText=user[a].name
+                tr.appendChild(td)
+                continue
+            }
+            else{
+                tr.appendChild(td)
             td.innerText = user[a]
+            }
         }
         var editTd = document.createElement("td")
         tr.appendChild(editTd)

@@ -15,10 +15,6 @@ function getAllUsers() {
   getInfo.send();
     })
 }
-
-async function handleUsers(){
-  let allUsers = await getAllUsers()
-  table()
-}
-
-handleUsers()
+getAllUsers().then(()=>{
+    table()
+})

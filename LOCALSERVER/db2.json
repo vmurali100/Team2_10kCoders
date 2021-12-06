@@ -204,27 +204,17 @@
         }
       ],
       "__v": 0
-    },
-    {
-      "id": 6,
-      "userId": "8",
-      "date": "2020-03-01T00:00:02.000Z",
-      "products": "OBJECTS PATTERN",
-      "__v": "7"
     }
   ],
   "user3": [
     {
       "id": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      "price": 109.95,
+      "price": "109.95",
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "rating": {
-        "rate": 3.9,
-        "count": 120
-      }
+      "rating": "This is a MultiObject"
     },
     {
       "id": 2,
@@ -236,18 +226,6 @@
       "rating": {
         "rate": 4.1,
         "count": 259
-      }
-    },
-    {
-      "id": 4,
-      "title": "Mens Casual Slim Fit",
-      "price": 15.99,
-      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-      "category": "men's clothing",
-      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-      "rating": {
-        "rate": 2.1,
-        "count": 430
       }
     },
     {
@@ -374,15 +352,6 @@
       "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-      "rating": "This is Rating block"
-    },
-    {
-      "id": 17,
-      "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
-      "price": "39.99",
-      "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
-      "category": "women's clothing",
-      "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
       "rating": "This is Rating block"
     }
   ]
