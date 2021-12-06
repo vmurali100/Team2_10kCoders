@@ -1,4 +1,4 @@
-var API_URL = "  http://localhost:3000/user5/"
+var API_URL = "  http://localhost:3000/user3/"
 var allUsers = []
 function getData(){
     return new Promise((resolve)=>{

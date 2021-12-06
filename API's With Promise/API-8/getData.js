@@ -1,4 +1,4 @@
-var API_URL = "  http://localhost:3000/user1/"
+var API_URL = "  http://localhost:3000/user5/"
 var allUsers = []
 function getData(){
     var getInfo = new XMLHttpRequest()

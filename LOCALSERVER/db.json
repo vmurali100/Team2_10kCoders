@@ -6,19 +6,9 @@
       "lname": "Wright"
     },
     {
-      "id": 1560,
-      "fname": "Joethelia",
-      "lname": "Simpson"
-    },
-    {
       "id": 1561,
-      "fname": "Dina",
+      "fname": "Dinas",
       "lname": "Salter"
-    },
-    {
-      "id": 1562,
-      "fname": "Matthew",
-      "lname": "Cole"
     },
     {
       "id": 1563,
@@ -34,33 +24,18 @@
       "id": 1565,
       "fname": "Marita",
       "lname": "Wittcop"
-    },
-    {
-      "id": 1566,
-      "fname": "Leatrice",
-      "lname": "Goodwin"
     }
   ],
   "user2": [
     {
       "id": 2569,
-      "fname": "Kingi",
+      "fname": "Kingis",
       "lname": "Khillah",
       "tel": "(379)414-5767",
       "address": "71 Ipsum Dr",
       "city": "Bella Vista",
       "state": "MN",
-      "zip": 14811
-    },
-    {
-      "id": 2570,
-      "fname": "RoMeka",
-      "lname": "Jayanti",
-      "tel": "(850)020-5475",
-      "address": "2300 Eget St",
-      "city": "Pleasant Grove",
-      "state": "NY",
-      "zip": 10067
+      "zip": "14811"
     },
     {
       "id": 2571,
@@ -111,30 +86,14 @@
       "city": "Macomb",
       "state": "KY",
       "zip": 11001
-    },
-    {
-      "id": 2576,
-      "fname": "Guadalupe",
-      "lname": "Hess",
-      "tel": "(636)060-5593",
-      "address": "8993 Odio Rd",
-      "city": "Arlington",
-      "state": "ORS",
-      "zip": "90308"
     }
   ],
   "user3": [
     {
       "id": 3503,
       "email": "EStar@nec.com",
-      "username": "Teja",
+      "username": "Teja ss",
       "password": "gTEdWs"
-    },
-    {
-      "id": 3505,
-      "email": "ETurich@mattis.ly",
-      "username": "DKlug",
-      "password": "Tf0ap"
     },
     {
       "id": 3506,
@@ -165,12 +124,6 @@
       "email": "YPeck@sit.org",
       "username": "EYork",
       "password": "ivv2F"
-    },
-    {
-      "id": 3511,
-      "email": "AHippert@lectus.gov",
-      "username": "STollund",
-      "password": "vQ5v7"
     },
     {
       "id": 3512,
