@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Tel</th>
+                <th>Address</th>
+                <th>City Name</th>
+                <th>State</th>
+                <th>Zip</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+    </table>
+    <script>
+    
+
+      var  users = [
+    {
+        "fname": "Colette",
+        "lname": "Pollard",
+        "tel": "(621)939-7352",
+        "address": "7479 Et Rd",
+        "city": "Fort Bragg",
+        "state": "NY",
+        "zip": 12173
+    },
+    {
+        "fname": "Dorci'A",
+        "lname": "Kaiser",
+        "tel": "(523)182-1856",
+        "address": "4793 Neque Rd",
+        "city": "Killeen",
+        "state": "TX",
+        "zip": 93379
+    },
+    {
+        "fname": "Abdul",
+        "lname": "Allison",
+        "tel": "(600)895-6079",
+        "address": "8743 Eros Ct",
+        "city": "Circleville",
+        "state": "OK",
+        "zip": 29597
+    }
+   
+]
+
+
+
+
+        // users.forEach(function (){})
+        users.forEach((user)=>{
+            
+            var myTr = document.createElement("tr");
+            for(a in user){
+                var myTd = document.createElement("td")
+                myTd.innerHTML=user[a]
+                myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr);
+        })
+    </script>
+</body>
+
+</html>
