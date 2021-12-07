@@ -26,7 +26,7 @@ function getData()
 {
     var getInfo = new XMLHttpRequest();
     getInfo.open("GET",url);
-    getInfo.send();
+    getInfo.send(null);
     getInfo.onreadystatechange = function()
     {
         if(getInfo.status == 200 && getInfo.readyState == 4)
@@ -166,42 +166,8 @@ function taskInComplete(i)
         }
     }
 }
-function validate()
-{
-    console.log("key pressed..");
-    if(document.getElementById("todoCreate").value == "")
-    {
-        document.getElementById("updatebtn").setAttribute("disabled",true);
-        document.getElementById("addbtn").setAttribute("disabled",true);
-    }
-    else{
-        document.getElementById("updatebtn").removeAttribute("disabled");
-        document.getElementById("addbtn").removeAttribute("disabled");
-    }
-}
-function editTask(i)
-{
-    index = i;
-    window.location.href="./edit.html";
-    document.getElementById("addbtn").style.display = "none";
-    document.getElementById("updatebtn").style.display = "block";
-    document.getElementById("todoupdate").value = data[i].task;
-}
-
-function updateTodo()
-{
-    var update_url = url+data[index].id;
-    data[index].task = document.getElementById("todoCreate").value;
-    var getInfo = new XMLHttpRequest();
-    getInfo.open("PUT",update_url);
-    getInfo.setRequestHeader("content-type","application/json");
-    getInfo.send(JSON.stringify(data[index]));
-    getInfo.onreadystatechange = function(){
-        if(getInfo.status == 200 && getInfo.readyState == 4)
-        {
-            getData();
-        }
-    }
+function editTask(i){
+    window.location.href="./edit.html?"+i;
 }
 
 function delTask(i)
@@ -217,5 +183,7 @@ function delTask(i)
         }
     }
 }
+
+
 
 getData();
