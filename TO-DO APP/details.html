@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">Activity Name</label>
+        <input type="text" id="activity" /> <br />
+        <label for="">Activity Details</label>
+        <input type="text" id="status" /> <br />
+        <button type="button" onclick="updateActivity()">Update</button>
+        <button onclick="cancelUpdate()" type="button">Cancel</button>
+      </form>
+      <script>
+          var todoActivities = JSON.parse(localStorage.getItem("todoActivities"))
+          var url = window.location.href
+         // console.log(url.substr(url.length-1))
+          var id = url.substr(url.indexOf('?')+1)
+          var activity = todoActivities.find((activity)=>
+              activity.activityId == id
+          )
+          console.log(activity)
+          for(a in activity){
+              if(a!="activityId"){
+                  document.getElementById(a).value = activity[a]
+              }
+          }
+          function cancelUpdate(){
+            window.location.href = 'http://127.0.0.1:5500/TO-DO%20APP/';
+          }
+          function updateActivity(){
+              for(a in activity){
+                  if(a!="activityId"){
+                      activity[a] = document.getElementById(a).value
+                  }
+              }
+              todoActivities.forEach((act)=>{
+                    if(act.activityId == activity.activityId){
+                        act = activity
+                    }
+              })
+              localStorage.setItem("todoActivities",JSON.stringify(todoActivities))
+              window.location.href = "http://127.0.0.1:5500/TO-DO%20APP/"
+          }
+      </script>
+</body>
+
+</html>
