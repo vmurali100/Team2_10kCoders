@@ -10,9 +10,9 @@ function deleteElement(i) {
     getinfo.onreadystatechange = function () {
       if (getinfo.readyState == 4 && getinfo.status == 200) {
             var res = getinfo.response ;
-        users = JSON.parse(res);
+        user = JSON.parse(res);
         console.log(users);
-        displayElements(users);
+        getUsersLocalHostData();
       
       }
     };

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample task manager </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      
+        <style>
+            body{
+                background: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700382606.jpg);
+            }
+            
+            .form-label{
+                color:rgb(112, 109, 109);
+                font-size: 2em;
+                align-self: center;
+            }
+            .btn{
+                background-color: rgba(252, 41, 41, 0.774);
+             
+            }
+            .btn:hover{
+                background-color: rgba(252, 41, 41, 0);
+                /* width: 200px; */
+                /* height: 60px; */
+                color: white;
+            }
+            .form-control{
+                background-color: rgba(238, 238, 238, 0);
+                font-size: 1.5em;
+                color: wheat
+            }
+            .form-control:hover{
+                border:5px red solid;
+                background-color: rgb(255, 247, 247);
+                height: 60px;
+                color: black;
+
+            }
+           
+        </style>
+       
+</head>
+<body>
+
+    <div class="container" style="margin-top: 100px;">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <form style="">
+                    <div class="mb-4">
+                        <label for="id" class="form-label">ID</label>
+                        <input type="number" class="form-control" id="id">
+                    </div>
+                    <div class="mb-4">
+                        <label for="task" class="form-label">TASKS</label>
+                        <input type="text" class="form-control" id="task" aria-describedby="emailHelp">
+            
+                    </div>
+                    <div class="mb-4">
+                        <label for="status" class="form-label">STATUS</label>
+                        <input type="text" class="form-control" id="status">
+                    </div>
+                    <button type="button" class="btn btn-warning" onclick="addNew()"  id="validate">ADD TASK</button>
+                    <button type="button" class="btn btn-warning" onclick="update()">UPDATE</button>
+                    <button type="button" class="btn  btn-danger" onclick="displayTask() , getTask()" >viewTasks</button>
+                </form>
+            
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+   
+    <link rel="text" href="./table.html">
+    <script src="./script.js"></script>
+    <script>
+        function validate(){
+
+if(document.getElementById(a).innerHTML == " " ){
+  document.getElementById("validate").setAttribute("disabled");
+  document.getElementById("validate").setAttribute("disabled");
+
+}
+}
+    </script>
+</body>
+
+</html>

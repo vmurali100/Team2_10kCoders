@@ -1,4 +1,4 @@
-var  deletedItem ;
+
 function deleteElement(i) {
     console.log(users[i]);
     var DEL_URL =  USER_URL + users[i].id;
@@ -8,7 +8,7 @@ function deleteElement(i) {
        var  deletedItem = JSON.parse(getinfo.response);
         console.log(users);
         console.log(deletedItem);
-        displayElements(users);
+        getUsersLocalHostData();
       }
     };
     getinfo.open("DELETE", DEL_URL);

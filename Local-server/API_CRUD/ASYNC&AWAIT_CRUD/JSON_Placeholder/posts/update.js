@@ -1,22 +1,27 @@
-function upDate() {
-    var data = {...datas[index]};
-    for (a in data) {
-        data[a] = document.getElementById(a).value;
-    }
-     var UPDATE_URL = USER_URL + data.id ;
-     var fillText = new XMLHttpRequest;
-    fillText.onreadystatechange = function (data){
-        if(fillText.readyState == 4 && fillText.status == 200){
-            var cloudData = fillText.response ;
-            console.log(cloudData);
-             datas = JSON.parse(cloudData);
-            console.log(datas);
-            displayElements();
-            localStorage.setItem("localData" ,cloudData );
-        }
-    }
-    fillText.open("PUT" , UPDATE_URL);
-    fillText.setRequestHeader("content-type" , "application/json")
+function handleUpdate(data) {
+  return new Promise((done) => {
+    var UPDATE_URL = USER_URL + data.id;
+    var fillText = new XMLHttpRequest();
+    fillText.open("PUT", UPDATE_URL);
+    fillText.setRequestHeader("content-type", "application/json");
     fillText.send(JSON.stringify(data));
-    document.getElementById("form_row").style.display = "none";
+    fillText.onreadystatechange = function () {
+      if (fillText.readyState == 4 && fillText.status == 200) {
+        datas[index] = { ...data };
+         console.log(datas);
+        done();
+      }
+    };
+  });
+}
+
+async function upDate() {
+  var data = { ...datas[index] };
+  for (a in data) {
+    data[a] = document.getElementById(a).value;
+  }
+  var hero = await handleUpdate(data);
+  getData();
+  document.getElementById("table_row").style.display = "block";
+  document.getElementById("form_row").style.display = "none";
 }

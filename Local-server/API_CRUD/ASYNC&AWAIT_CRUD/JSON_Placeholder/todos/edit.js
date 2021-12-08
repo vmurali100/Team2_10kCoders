@@ -1,7 +1,7 @@
 var index ;
 function editElement(i){
     index = i;
-    for (a in datas[i]){
+    for (a in users[i]){
     document.getElementById(a).value = all[i][a]
     }
     document.getElementById("table_row").style.display = "none";

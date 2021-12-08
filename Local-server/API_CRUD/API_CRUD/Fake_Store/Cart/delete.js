@@ -6,7 +6,7 @@ function deleteElement(i) {
     if (getinfo.readyState == 4 && getinfo.status == 200) {
       users = JSON.parse(getinfo.response);
       console.log(users);
-      displayElements();
+      getUsersLocalHostData();
     }
   };
   getinfo.open("DELETE", DEL_URL);

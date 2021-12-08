@@ -4,22 +4,20 @@ var datas = [];
 function getUsersLocalHostData() {
   return new Promise((done) => {
     var fillText = new XMLHttpRequest();
-
+    fillText.open("GET", USER_URL);
+    fillText.send();
     fillText.onreadystatechange = function () {
       if (fillText.readyState == 4 && fillText.status == 200) {
         var cloudData = fillText.response;
-        done();
-        console.log(cloudData);
+       console.log(cloudData);
         datas = JSON.parse(cloudData);
         console.log(datas);
-      
-        
+        done();
       }
     };
-    fillText.open("GET", USER_URL);
-    fillText.send();
   });
 }
-getUsersLocalHostData().then(()=>{
-    displayElements();
-})
+async function getData() {
+  var hero = await getUsersLocalHostData();
+  displayElements();
+}

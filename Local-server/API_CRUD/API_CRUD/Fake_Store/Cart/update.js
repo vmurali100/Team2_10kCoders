@@ -1,6 +1,6 @@
-var users = [];
+
 function upDate() {
-    // index = i;
+  
     let user = {...users[index]};
  for (a in user){
     if (a !== "products" && a !== "__v" ) {
@@ -14,9 +14,9 @@ function upDate() {
      getinfo.send(JSON.stringify(user));
      getinfo.onreadystatechange = (()=>{
          if(getinfo.readyState == 4 && getinfo.status == 200){
-             var users = JSON.parse( getinfo.response);
+             user = JSON.parse( getinfo.response);
              console.log(users)
-             displayElements();
+             getUsersLocalHostData()
          }
      });
   

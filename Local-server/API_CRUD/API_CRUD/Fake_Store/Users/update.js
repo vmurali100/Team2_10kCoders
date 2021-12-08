@@ -16,9 +16,8 @@ let user = {...users[index]}
          if(getinfo.readyState == 4 && getinfo.status == 200){
             user = JSON.parse( getinfo.response);
             console.log(users)
-             displayElements();
+            getUsersLocalHostData();
          }
      });
     
 }
-getUsersLocalHostData();

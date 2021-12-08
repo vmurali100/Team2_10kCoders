@@ -13,8 +13,8 @@
     })
 }
 
-function deleteElement(i) {
-      handleDelete(i).then(()=>{
-        displayElements()
-      })
+async function deleteElement(i) {
+    var hero = await  handleDelete(i);
+        getData();
+      
 }

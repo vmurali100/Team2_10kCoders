@@ -1,8 +1,6 @@
 let USER_URL = "http://localhost:3000/users/";
 var users = [];
 function getUsersLocalHostData() {
-  // return new Promise ((done)=>
-  // {
   var getinfo = new XMLHttpRequest();
   getinfo.onreadystatechange = function () {
     if (getinfo.readyState == 4 && getinfo.status == 200) {
@@ -14,9 +12,7 @@ function getUsersLocalHostData() {
   };
   getinfo.open("GET", USER_URL);
   getinfo.send();
-  // })
+ 
 }
-// getUsersLocalHostData().then(()=>{
-//     displayElements();
-// })
+
 

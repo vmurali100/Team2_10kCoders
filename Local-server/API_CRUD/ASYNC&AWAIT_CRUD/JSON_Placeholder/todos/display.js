@@ -12,7 +12,7 @@
 //   completed: "false" ,
 // }
  function displayElements() {
-     all = datas ;
+     all = users ;
     
    document.querySelector("tbody").innerHTML = "";
     all.forEach((employee , i) => {

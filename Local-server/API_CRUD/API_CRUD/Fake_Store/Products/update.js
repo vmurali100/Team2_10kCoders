@@ -12,12 +12,11 @@ function upDate() {
      getinfo.setRequestHeader ("Content-Type" , "application/json");
      getinfo.send(JSON.stringify(user));
      getinfo.onreadystatechange = function (){
-        //  var users =[];
         users[index] = {...user}
          if(getinfo.readyState == 4 && getinfo.status == 200){
              user = JSON.parse(getinfo.response);
              console.log(users);
-             displayElements(users);
+             getUsersLocalHostData();
             
             
          }

@@ -1,7 +1,7 @@
  
  
 //  var all = JSON.parse(localStorage.getItem("data"));
-// var all ;
+var all ;
 //    var employee = {
 //      id:"",
 //         email: "",
@@ -13,7 +13,7 @@
  // display elements
 // var all = getinfo;
  function displayElements() {
-    // all = users ;
+    all = users ;
   
    document.querySelector("tbody").innerHTML = "";
     all.forEach((employee , i) => {
@@ -53,5 +53,5 @@
     });
    
 }
- displayElements();
- getData()
+//  displayElements();
+//  getData()

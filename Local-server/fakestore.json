@@ -3,94 +3,6 @@
     {
       "address": {
         "geolocation": {
-          "lat": "40.3467",
-          "long": "-30.1310"
-        },
-        "city": "Cullman",
-        "street": "Frances Ct",
-        "number": 86,
-        "zipcode": "29567-1452"
-      },
-      "id": 3,
-      "email": "akhilankathi@gmail.com",
-      "username": "kevinryan",
-      "password": "kev02937@",
-      "name": {
-        "firstname": "kevin",
-        "lastname": "ryan"
-      },
-      "phone": "+919010902696",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
-          "lat": "50.3467",
-          "long": "-20.1310"
-        },
-        "city": "San Antonio",
-        "street": "Hunters Creek Dr",
-        "number": 6454,
-        "zipcode": "98234-1734"
-      },
-      "id": 4,
-      "email": "don@gmail.com",
-      "username": "donero",
-      "password": "ewedon",
-      "name": {
-        "firstname": "don",
-        "lastname": "romer"
-      },
-      "phone": "1-765-789-6734",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
-          "lat": "40.3467",
-          "long": "-40.1310"
-        },
-        "city": "san Antonio",
-        "street": "adams St",
-        "number": 245,
-        "zipcode": "80796-1234"
-      },
-      "id": 5,
-      "email": "derek@gmail.com",
-      "username": "derek",
-      "password": "jklg*_56",
-      "name": {
-        "firstname": "derek",
-        "lastname": "powell"
-      },
-      "phone": "1-956-001-1945",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
-          "lat": "20.1677",
-          "long": "-10.6789"
-        },
-        "city": "el paso",
-        "street": "prospect st",
-        "number": 124,
-        "zipcode": "12346-0456"
-      },
-      "id": 6,
-      "email": "david_r@gmail.com",
-      "username": "david_r",
-      "password": "3478*#54",
-      "name": {
-        "firstname": "david",
-        "lastname": "russell"
-      },
-      "phone": "1-678-345-9856",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
           "lat": "10.3456",
           "long": "20.6419"
         },
@@ -179,18 +91,6 @@
   ],
   "products": [
     {
-      "id": 13,
-      "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-      "price": "599",
-      "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-      "category": "hsoalc,n jjjjjjjjjjjj",
-      "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
-      "rating": {
-        "rate": 2.9,
-        "count": 250
-      }
-    },
-    {
       "id": 14,
       "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
       "price": 999.99,
@@ -276,38 +176,6 @@
     }
   ],
   "cart": [
-    {
-      "id": 5,
-      "userId": 3,
-      "date": "2020-03-01T00:00:02.000Z",
-      "products": [
-        {
-          "productId": 7,
-          "quantity": 1
-        },
-        {
-          "productId": 8,
-          "quantity": 1
-        }
-      ],
-      "__v": 0
-    },
-    {
-      "id": 6,
-      "userId": 4,
-      "date": "2020-03-01T00:00:02.000Z",
-      "products": [
-        {
-          "productId": 10,
-          "quantity": 2
-        },
-        {
-          "productId": 12,
-          "quantity": 3
-        }
-      ],
-      "__v": 0
-    },
     {
       "id": 6,
       "userId": 8,

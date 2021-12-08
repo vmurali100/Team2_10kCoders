@@ -13,7 +13,7 @@
  // display elements
 // var all = getinfo;
  function displayElements() {
-    // all = users ;
+    all = users ;
   
    document.querySelector("tbody").innerHTML = "";
     users.forEach((employee , i) => {
@@ -54,4 +54,4 @@
    
 }
 // getUsersLocalHostData();
- displayElements();
+//  displayElements();
