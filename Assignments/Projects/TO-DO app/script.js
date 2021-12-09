@@ -33,6 +33,7 @@ todoActivites.forEach((todo, i) => {
 
   var deleteBtn = document.createElement('button');
   deleteBtn.innerHTML = 'DELETE';
+  deleteBtn.setAttribute('onclick', 'deleteActivity(' + i + ')');
   actionTd.appendChild(deleteBtn);
 
   myTr.appendChild(actionTd);
@@ -47,3 +48,9 @@ function viewDetails(i) {
   localStorage.setItem('todoActivites', JSON.stringify(todoActivites));
   window.location.href = 'details.html?' + todoActivites[i].activityId;
 }
+function deleteActivity(i){
+  console.log(todoActivites[i])
+  
+
+}
+
