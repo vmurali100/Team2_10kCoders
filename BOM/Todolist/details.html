@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1>activity details</H1>
+    <form>
+        <label for="">ACTIVITY NSME</label>
+        <input type="text" id="activity"><br>
+        <label for="">ACTIVITY DETAILS</label>
+        <input type="text" id="status"><br>
+        <button type="button" onclick="updateActivity()">update</button>
+        <button type="button" onclick="cancelUpdate()">cancel</button>
+    </form>
+    <script>
+        var activitylist = JSON.parse(localStorage.getItem("activitylist"))
+        var url = window.location.href
+        var id = url.substr(url.lastIndexOf("?") + 1)
+        // console.log(activitylist[index])
+        var activity = activitylist.find((activity) => activity.activityId == id)
+        console.log(activity)
+
+        for (a in activity) {
+            if (a !== 'activityId')
+                document.getElementById(a).value = activity[a]
+        }
+        function cancelUpdate() {
+            window.location.href = './1.html'
+        }
+        function updateActivity() {
+            for (a in activity) {
+                if (a !== 'activityId') {
+
+                    activity[a] = document.getElementById(a).value
+                }
+            }
+            activitylist.forEach((act) => {
+                if (act.activity === activity.activityId) {
+                    act = activity
+                }
+            });
+            localStorage.setItem('activitylist', JSON.stringify(activitylist))
+            window.location.href = '1.html'
+
+        }
+    </script>
+
+</body>
+
+</html>
