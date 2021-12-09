@@ -1,0 +1,15 @@
+TO DO Application
+	
+List Down all Activites To do .
+Once the Activity is done , Mark is done.
+Give a provision to Delete the Activity
+Give A provision to Add An Activity
+Give a provision to Update An activity
+
+
+Note Taking App
+
+A form to be given to create a Note
+Add the note in Table
+Add edit Provision in for Note(Redirection)
+update the note and Come back to Main Page

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Activity Details</h2>
+    <form>
+      <label for="">Activity Name</label>
+      <input type="text" id="activity" /> <br />
+      <label for="">Activity Details</label>
+      <input type="text" id="status" /> <br />
+      <button type="button" onclick="updateActivity()">Update</button>
+      <button onclick="cancelUpdate()" type="button">Cancel</button>
+    </form>
+    <script>
+      var todoActivites = JSON.parse(localStorage.getItem('todoActivites'));
+      var url = window.location.href;
+      var id = url.substr(url.indexOf('?') + 1);
+      var activity = todoActivites.find(
+        (activity) => activity.activityId == id
+      );
+      console.log(activity);
+      for (a in activity) {
+        if (a !== 'activityId') {
+          document.getElementById(a).value = activity[a];
+        }
+      }
+
+      function cancelUpdate() {
+        window.location.href = '/';
+      }
+
+      function updateActivity() {
+        for (a in activity) {
+          if (a !== 'activityId') {
+            activity[a] = document.getElementById(a).value;
+          }
+        }
+        console.log(activity)
+
+        todoActivites.forEach((act) => {
+          if (act.activityId === activity.activityId) {
+            act = activity;
+          }
+        });
+
+        localStorage.setItem('todoActivites', JSON.stringify(todoActivites));
+        window.location.href = '/';
+      }
+    </script>
+  </body>
+</html>
