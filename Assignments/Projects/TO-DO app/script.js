@@ -50,7 +50,6 @@ function viewDetails(i) {
 }
 function deleteActivity(i){
   console.log(todoActivites[i])
-  
-
+  todoActivites.splice(i,1)
 }
 
