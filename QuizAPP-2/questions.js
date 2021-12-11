@@ -18,23 +18,31 @@ class Quiz{
     }
 }
 
-var quizObject = new Quiz(questions)
-
-Quiz.prototype.getData = function(){
-    console.log(this.questionIndex)
-    return this.questions[this.questionIndex]
-    
+Quiz.prototype.getData = function()
+{
+    console.log("question index: ",this.questions[this.questionIndex])
+    return this.questions[this.questionIndex]  
 }
 
-Quiz.prototype.correctAnswer = function(answer){
-    if(this.questions[this.questionIndex].answer == answer){
+Quiz.prototype.correctAnswer = function(answer)
+{
+    if(this.questions[this.questionIndex].answer == answer)
+    {
         console.log("You Selected Correct Answer")
         this.score++;
     }
-    this.questionIndex++
+    else
+    {
+        console.log("Wrong answer..")
+    }
+    this.questionIndex ++;
     display()
 }
 
-Quiz.prototype.isEnd = function(){
-    return (questions.length == this.questionIndex) 
+Quiz.prototype.isEnd = function()
+{
+    var len = (questions.length);
+    return (len == this.questionIndex) 
 }
+
+var quizObject = new Quiz(questions)
