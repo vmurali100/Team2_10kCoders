@@ -15,7 +15,7 @@ function updateUser(){
         }
     }
     handleUpdateUser().then(()=>{
-    getData();
+      getData();
     })
 }
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEK</title>
+    <style>
+        #container{
+            width:960px;
+            margin:0 auto;
+            display:grid;
+            
+        }
+        header{
+            width:100%;
+            display:grid;
+            justify-content: center;
+            background-color: #C3E0E5;
+            color:#274472;
+        }
+        main{
+            width:100%;
+            display:grid;
+            grid-template-columns: auto;
+            justify-content: center;
+        }
+        #questionArea{
+            width:100%;
+            height:50px;
+        }
+        #optionsArea{
+            display:grid;
+            grid-template-columns: auto auto;
+            column-gap: 50px;
+            row-gap:20px;
+        }
+        button{
+            width:180px;
+            height:50px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1 id="heading">MEK</h1>
+        </header>
+        <main>
+            <p id="questionArea"></p>
+            <div id="optionsArea">
+                <button type="button" id="choice1"></button>
+                <button type="button" id="choice2"></button>
+                <button type="button" id="choice3"></button>
+                <button type="button" id="choice4"></button>
+            </div>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
