@@ -50,14 +50,13 @@ function handleUpdate(user) {
     })
 }
 
-function updateUser() {
+async function updateUser() {
     let user = { ...allUsers[index] }
     for (a in user) {
         user[a] = document.getElementById(a).value
     }
-    handleUpdate(user).then(()=>{
-        table()
-    })
+  let response = await handleUpdate(user)
+  table()
 
 }
 
@@ -75,8 +74,7 @@ function handleDelete(i) {
     })
 }
 
-function del(i) {
-    handleDelete(i).then(() => {
-        table()
-    })
+async function del(i) {
+   let response  =await handleDelete()
+   table()
 }

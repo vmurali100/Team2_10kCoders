@@ -14,6 +14,8 @@ function getData(){
         getInfo.send()
        })
     }
-    getData().then(()=>{
+    async function handleUsers(){
+        let allUsers = await getData()
         table()
-    })
+    }
+    handleUsers()

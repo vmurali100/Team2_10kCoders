@@ -1,19 +1,15 @@
-function table() {
-    allUsers.forEach((user, i) => {
+function table(){
+    allUsers.forEach((user,i)=>{
         var tr = document.createElement("tr")
         document.querySelector("tbody").appendChild(tr)
         for (a in user) {
             var td = document.createElement("td")
-            if(a=="image"){
-                var imgtd = document.createElement("img")
-                imgtd.setAttribute("src",user[a])
-                imgtd.style.height="150px"
-                imgtd.style.width="150px"
-                td.appendChild(imgtd)
+            if(a=="address"){
+                td.innerText = user[a].city
                 tr.appendChild(td)
                 continue
-            }else if(a == "rating"){
-                td.innerText = "This is Multi Object"
+            }else if(a=="name"){
+                td.innerText = user[a].firstname+" "+user[a].lastname
                 tr.appendChild(td)
                 continue
             }
@@ -37,16 +33,13 @@ function table() {
         delBtn.setAttribute("type", "button")
         delBtn.setAttribute("class", "btn btn-danger")
         delBtn.setAttribute("onclick", "del(" + i + ")")
+
     })
 }
 var index
 function edit(i) {
     index = i
     for (a in allUsers[i]) {
-        if(a=="rating"){
-            document.getElementById(a).value ="This is a MultiObject"
-            continue
-        }
         document.getElementById(a).value = allUsers[i][a]
     }
 }
@@ -66,16 +59,15 @@ function handleUpdate(user){
     })
 }
 
-function updateUser(){
+async function updateUser(){
     var user = {...allUsers[index]}
     for(a in user){
         user[a] = document.getElementById(a).value
     }
-   handleUpdate(user).then(()=>{
-       table()
-   })
+   let response =  await handleUpdate(user)
+   handleUsers()
 }
-
+ 
 function handleDelete(i){
     return new Promise((resolve)=>{
         var DEL_URL = API_URL + allUsers[i].id
@@ -90,6 +82,7 @@ function handleDelete(i){
     })
 }
 
-function del(i){
-    handleDelete(i).then(()=>{table()})
+async function del(i){
+   let response  = await handleDelete(i)
+   table()
 }

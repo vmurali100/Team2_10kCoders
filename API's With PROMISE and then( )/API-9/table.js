@@ -4,7 +4,7 @@ function table() {
         document.querySelector("tbody").appendChild(tr)
         for (a in user) {
             var td = document.createElement("td")
-            if(a=="image"){
+            if(a=="url" || a=="thumbnailUrl"){
                 var imgtd = document.createElement("img")
                 imgtd.setAttribute("src",user[a])
                 imgtd.style.height="150px"
@@ -12,10 +12,7 @@ function table() {
                 td.appendChild(imgtd)
                 tr.appendChild(td)
                 continue
-            }else if(a == "rating"){
-                td.innerText = "This is Multi Object"
-                tr.appendChild(td)
-                continue
+
             }
             tr.appendChild(td)
             td.innerText = user[a]
@@ -43,10 +40,6 @@ var index
 function edit(i) {
     index = i
     for (a in allUsers[i]) {
-        if(a=="rating"){
-            document.getElementById(a).value ="This is a MultiObject"
-            continue
-        }
         document.getElementById(a).value = allUsers[i][a]
     }
 }
@@ -66,16 +59,15 @@ function handleUpdate(user){
     })
 }
 
-function updateUser(){
+async function updateUser(){
     var user = {...allUsers[index]}
     for(a in user){
         user[a] = document.getElementById(a).value
     }
-   handleUpdate(user).then(()=>{
-       table()
-   })
+   let response =  await handleUpdate(user)
+   handleUsers()
 }
-
+ 
 function handleDelete(i){
     return new Promise((resolve)=>{
         var DEL_URL = API_URL + allUsers[i].id
@@ -90,6 +82,7 @@ function handleDelete(i){
     })
 }
 
-function del(i){
-    handleDelete(i).then(()=>{table()})
+async function del(i){
+   let response  = await handleDelete(i)
+   table()
 }

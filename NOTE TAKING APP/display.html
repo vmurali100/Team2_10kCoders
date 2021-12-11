@@ -30,6 +30,7 @@
     </div>
     <script>
         var noteData = JSON.parse(localStorage.getItem("noteData"))
+        document.querySelector("tbody").innerHTML = " "
         noteData.forEach((notes,i)=>{
             var tr = document.createElement("tr")
             document.querySelector("tbody").appendChild(tr)

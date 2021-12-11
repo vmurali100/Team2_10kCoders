@@ -1,4 +1,4 @@
-var API_URL = "  http://localhost:3000/user2/"
+var API_URL ="http://localhost:3000/user1/"
 var allUsers = []
 function getData(){
     return new Promise((resolve)=>{
@@ -14,6 +14,8 @@ function getData(){
         getInfo.send()
        })
     }
-    getData().then(()=>{
+    async function handleUsers(){
+        let allUsers = await getData()
         table()
-    })
+    }
+    handleUsers()
