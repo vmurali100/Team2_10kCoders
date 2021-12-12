@@ -9,7 +9,7 @@ class Questions{
 let questions = [
     new Questions("Which of the following is not the OOPS based Language?",["C++","Java","C","Python"],"C"),
     new Questions("Which of the following is not a primitive data type?",["Boolean","Number","Array","Undefined"],"Array"),
-    new Questions("The correct sequence of HTML tags for starting a webpage is",["Head, Title, HTML, body","HTML, Body, Title, Head","HTML, Head, Title, Body","HTML, Head, Title, Body"],"HTML, Head, Title, Body"),
+    new Questions("The correct sequence of HTML tags for starting a webpage is",["Head, Title, HTML, body","HTML, Body, Title, Head","Title, Head, HTML, Body","HTML, Head, Title, Body"],"HTML, Head, Title, Body"),
     new Questions("Which of the following element is responsible for making the text bold in HTML?",["<pre>","<a>","<b>","<br>"],"<b>"),
     new Questions("How to create a hyperlink in HTML?",['<a href = "www.javatpoint.com"> javaTpoint.com </a>','<a url = "www.javatpoint.com" javaTpoint.com /a>','<a link = "www.javatpoint.com"> javaTpoint.com </a>','<a> www.javatpoint.com <javaTpoint.com /a>'],'<a href = "www.javatpoint.com"> javaTpoint.com </a>'),
     new Questions("How to insert an image in HTML?",['<img href = "jtp.png" />','<img url = "jtp.png" />','<img link = "jtp.png" />','<img src = "jtp.png" />'],'<img src = "jtp.png" />'),
@@ -69,5 +69,6 @@ Quiz.prototype.gameOver = function()
     document.getElementById("container").style.opacity = "0.5";
     document.getElementById("userScore").innerHTML = this.score;
     document.getElementById("totalScore").innerHTML = this.questions.length;
+    document.getElementById("nextbutton").setAttribute("disabled",true);
 }
 var quizObj = new Quiz(questions);
