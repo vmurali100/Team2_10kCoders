@@ -6,6 +6,7 @@ function display()
     }
     else
     {
+        var clicked = false;
         var quizData = quizObj.getData();
         var questionArea = document.getElementById("questionArea");
         
@@ -14,6 +15,8 @@ function display()
         {
             var optionArea = document.getElementById("choice"+i);
             optionArea.innerText = option;
+            optionArea.removeAttribute("disabled");
+            optionArea.style = "background-color: #90ADC6;"
             checkOnClick("choice"+i,option,optionArea)
         });
         
@@ -21,12 +24,31 @@ function display()
         {
             optionArea.onclick = function()
             {
+                clicked = true;
                 console.log("id:",id+" option: ",option);
                 if(quizObj.checkAnswer(option))
                 {
-                    quizObj.score();
+                    optionArea.style = "background-color:green"
+                    quizObj.incScore();
+                }
+                else
+                {
+                    optionArea.style = "background-color:red"
+                }
+                for(var i=0;i<4;i++)
+                {
+                    document.getElementById("choice"+i).setAttribute("disabled",true);
                 }
             }
+        }
+
+        document.getElementById("nextbutton").onclick = function()
+        {
+            if(clicked)
+            {
+                quizObj.nextQuestion();
+            }
+            
         }
     }
 }

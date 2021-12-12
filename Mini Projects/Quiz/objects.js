@@ -38,12 +38,18 @@ Quiz.prototype.checkAnswer = function(answer)
 {
     console.log("answer",this.questions[this.questionIndex].answer) ;
     console.log("user answer",answer);
-    if(this.questions[this.questionIndex].answer === answer)
-    {
-        this.score++;
-        var scoreValue = document.getElementById("scoreValue");
-        scoreValue.innerHTML = this.score;
-    }
+    return this.questions[this.questionIndex].answer === answer;
+}
+
+Quiz.prototype.incScore = function()
+{
+    this.score++;
+    var scoreValue = document.getElementById("scoreValue");
+    scoreValue.innerHTML = this.score;
+}
+
+Quiz.prototype.nextQuestion = function()
+{
     this.questionIndex++;
     display();
 }

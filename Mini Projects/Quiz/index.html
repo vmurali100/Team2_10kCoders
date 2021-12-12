@@ -68,18 +68,28 @@
             background-color:#5885AF;
             color:#333652;
             font-size: 20px;
-            padding:10px 0px;
+            padding:10px 60px 10px 20px;
             margin:0;
             border-radius: 30px;
             display: grid;
-            grid-template-columns: auto auto;
-            justify-content: space-around;
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;
+            align-items: center;
             /* text-align: center; */
         }
         #progressArea > p{
             margin:0;
         }
-        button{
+        #progressArea > button{
+            width:100px;
+            border-radius: 30px;
+            background-color: #90ADC6;
+            color:#E9EAEC;
+            border:1px solid black;
+            font-size:20px;
+            padding:10px 10px;
+        }
+        #optionsArea > button{
             /* width:250px;
             height:50px; */
             border-radius: 30px;
@@ -91,7 +101,7 @@
             font-size:20px;
             padding:10px 10px;
         }
-        button:hover{
+        #optionsArea > button:hover ,#progressArea > button:hover{
             background-color:#74BDCB;
             color:#274472;
         }
@@ -128,6 +138,7 @@
             </div>
             <div id="progressArea">
                 <p>Question <span id="currentQuestion">x</span>/<span id="totalQuestions">y</span></p>
+                <button type="button" id = "nextbutton">Next >></button>
                 <p>Score:<span id="scoreValue">0</span></p>
             </div>
             <!-- <p id="scoreArea"></p> -->
