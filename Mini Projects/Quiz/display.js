@@ -17,6 +17,14 @@ function display()
             optionArea.innerText = option;
             optionArea.removeAttribute("disabled");
             optionArea.style = "background-color: #90ADC6;"
+            optionArea.onmouseover = function()
+            {
+                optionArea.style = "background-color:#74BDCB;"
+            }
+            optionArea.onmouseout = function()
+            {
+                optionArea.style = "background-color:#90ADC6;"
+            }
             checkOnClick("choice"+i,option,optionArea)
         });
         

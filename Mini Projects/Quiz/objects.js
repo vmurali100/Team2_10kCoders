@@ -70,5 +70,18 @@ Quiz.prototype.gameOver = function()
     document.getElementById("userScore").innerHTML = this.score;
     document.getElementById("totalScore").innerHTML = this.questions.length;
     document.getElementById("nextbutton").setAttribute("disabled",true);
+
+    document.getElementById("restart").onclick = function()
+    {
+        quizObj.score = 0;
+        quizObj.questionIndex = 0;
+        document.getElementById("gameover").style.display = "none";
+        document.getElementById("container").style.opacity = "1";
+        document.getElementById("scoreValue").innerText = "0";
+        document.getElementById("nextbutton").removeAttribute("disabled");
+        display();
+        console.log("score = ",quizObj.score+"\nindex = ",quizObj.questionIndex)
+        
+    }
 }
 var quizObj = new Quiz(questions);

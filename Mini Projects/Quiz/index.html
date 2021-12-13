@@ -88,6 +88,7 @@
             border:1px solid black;
             font-size:20px;
             padding:10px 10px;
+            cursor: pointer;
         }
         #optionsArea > button{
             /* width:250px;
@@ -100,15 +101,17 @@
             border:1px solid black;
             font-size:20px;
             padding:10px 10px;
+            cursor: pointer;
         }
         #optionsArea > button:hover ,#progressArea > button:hover{
             background-color:#74BDCB;
             color:#274472;
+            
         }
         #gameover{
             display:none;
-            text-align: center;
             align-content: center;
+            justify-items: center;
             position: absolute;
             top:103px;
             left:630px;
@@ -116,8 +119,17 @@
             color:#b0daec;
             border:1px solid black;
             width:660px;
-            height:340px;
-            opacity:0.85
+            height:365px;
+            opacity:1;
+        }
+        #gameover > button{
+            /* width:100px; */
+            border-radius: 30px;
+            background-color: #90ADC6;
+            color:#E9EAEC;
+            border:1px solid black;
+            font-size:20px;
+            padding:10px 20px;
         }
         
     </style>
@@ -147,6 +159,7 @@
     <div id="gameover">
         <h1>GameOver</h1>
         <h2>Score: <span id="userScore"></span> / <span id="totalScore"></span> </h2>
+        <button type="button" id="restart">Play Again</button>
     </div>
     <script src="./objects.js"></script>
     <script src="./display.js"></script>
