@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEK</title>
+    <title>Quiz with topic choice</title>
     <style>
         #container{
             position:relative;
@@ -13,7 +13,7 @@
             display:grid;
             border:1px solid black;
             border-radius: 30px;
-            padding-bottom:10px;
+            /* padding-bottom:10px; */
             /* background-color: ; */
             
         }
@@ -30,13 +30,15 @@
             font-size: 60px;
             margin:10px
         }
-        h2{
-            font-size: 35px;
-            margin:10px
+        #topicArea{
+            display:none;
+            font-size: 20px;
+            margin:10px;
+            text-align:center;
         }
         main{
             width:100%;
-            display:grid;
+            display:none;
             padding:10px;
             box-sizing: border-box;
             row-gap:30px;
@@ -80,7 +82,7 @@
         #progressArea > p{
             margin:0;
         }
-        #progressArea > button{
+        button{
             width:100px;
             border-radius: 30px;
             background-color: #90ADC6;
@@ -90,20 +92,10 @@
             padding:10px 10px;
             cursor: pointer;
         }
-        #optionsArea > button{
-            /* width:250px;
-            height:50px; */
-            border-radius: 30px;
-            /* background-color:#274472; */
-            /* background-color: #41729F; */
-            background-color: #90ADC6;
-            color:#E9EAEC;
-            border:1px solid black;
-            font-size:20px;
-            padding:10px 10px;
-            cursor: pointer;
+        #optionsArea > button,#progressArea > button:hover,#gameover > button, #topic > button{
+            width:auto;
         }
-        #optionsArea > button:hover ,#progressArea > button:hover{
+        #optionsArea > button:hover {
             background-color:#74BDCB;
             color:#274472;
             
@@ -113,34 +105,49 @@
             align-content: center;
             justify-items: center;
             position: absolute;
-            top:103px;
-            left:630px;
+            top:98px;
+            left:620px;
             background-color:#41729F;
             color:#b0daec;
             border:1px solid black;
-            width:660px;
-            height:365px;
-            opacity:1;
+            width:678px;
+            height:437px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            row-gap: 10px;
         }
-        #gameover > button{
-            /* width:100px; */
-            border-radius: 30px;
-            background-color: #90ADC6;
-            color:#E9EAEC;
+        #topic{
+            display:grid;
+            align-content: center;
+            justify-items: center;
+            background-color:#41729F;
+            color:#b0daec;
             border:1px solid black;
-            font-size:20px;
-            padding:10px 20px;
+            width:678px;
+            height:365px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            row-gap:40px;
         }
-        
+        #topic > label{
+            font-size:30px;
+        }
+        #topic > select {
+            font-size:20px;
+            border-radius: 30px;
+            padding:10px 20px;
+            border:1px solid black;
+        }
+       
     </style>
 </head>
 <body>
     <div id="container">
         <header>
             <h1>Quiz Me Up</h1>
+            <p id="topicArea"></p>
         </header>
         <main>
-            
             <p id="questionArea"></p>
             <div id="optionsArea">
                 <button type="button" id="choice0"></button>
@@ -154,19 +161,23 @@
                 <p>Score:<span id="scoreValue">0</span></p>
             </div>
         </main>
-    </div>
-    <div id="topic">
-        <label for="selectedTopic">Select a Topic</label>
-        <select id="selectedTopic">
-            <option value="webDevelopment">Web Development</option>
-            <option value="cricket">Cricket</option>
-        </select>
-        <button type="button" onclick = "topic()">Selected</button>
+        <div id="topic">
+            <label for="selectedTopic">Select a Topic</label>
+            <select id="selectedTopic">
+                <option value="webDevelopment">Web Development</option>
+                <option value="cricket">Cricket</option>
+                <option value="GK">GK</option>
+                <option value="indianFood">Indian Food</option>
+                <option value="olympics">Olympics</option>
+            </select>
+            <button type="button" onclick = "topic()">Select</button>
+        </div>
     </div>
     <div id="gameover">
         <h1>GameOver</h1>
         <h2>Score: <span id="userScore"></span> / <span id="totalScore"></span> </h2>
         <button type="button" id="restart">Play Again</button>
+        <button type="button" id="changeTopic">Change Topic</button>
     </div>
     <script src="./objects.js"></script>
     <script src="./display.js"></script>
