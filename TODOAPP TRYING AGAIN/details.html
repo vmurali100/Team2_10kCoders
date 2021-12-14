@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="">ActivityName</label>
+        <input type="text" id="activity"></br>
+        <label for="">ActvityState</label>
+        <input type="text" id="activityStatus"></br>
+        <label for="" id="label1">ActivityId</label>
+        <input type="text" id="activityId" disabled></br>
+        <button type="button" onclick="updateUser()">SUBMIT</button>
+        <button type="button" onclick="cancel()">Cancel</button>
+    </form>
+    <script>
+        var data = JSON.parse(localStorage.getItem("dataT"))
+        var l = data.length
+        var dl = data[l-1].activityId
+        console.log(dl)
+        var url = window.location.href
+        var id = url.substr((url.length-1))
+        var activity = data.find((anyRef)=>anyRef.activityId== id)
+        if(activity){
+            for(a in activity){
+            document.getElementById(a).value = activity[a]
+        }
+        function cancel(){
+            window.location.href ="./"
+        }
+
+        function updateUser(){
+            for(a in activity){
+                activity[a] = document.getElementById(a).value
+            }
+          var data1 = JSON.parse(localStorage.getItem("dataT"))
+          data1[activity.activityId-1]= {...activity}
+          localStorage.setItem("dataT",JSON.stringify(data1))
+          window.location.href ="./"
+        }
+        }
+
+        else{
+            function updateUser(){
+                var newact = {
+                    activity:"",
+                    activityStatus:"",
+                    activityId:""
+                }
+                for(a in newact){
+                    if(a == "activityId"){
+                        document.getElementById(a).value =Number( data[data.length-1].activityId)+1
+                    }
+                    newact[a] = document.getElementById(a).value
+                }
+                data.push({...newact})
+                localStorage.setItem("dataT",JSON.stringify(data))
+               
+            }
+        }
+    </script>
+</body>
+</html>
