@@ -18,6 +18,7 @@ class Quiz{
     }
 }
 
+<<<<<<< HEAD
 var quizObject = new Quiz(questions)
 
 Quiz.prototype.getData = function(){
@@ -30,12 +31,30 @@ Quiz.prototype.getData = function(){
 Quiz.prototype.correctAnswer = function(answer){
     if(this.questions[this.questionIndex].answer == answer){
         console.log("You Selected Correct Answer  ",answer)
+=======
+Quiz.prototype.getData = function()
+{
+    console.log("question index: ",this.questions[this.questionIndex])
+    return this.questions[this.questionIndex]  
+}
+
+Quiz.prototype.correctAnswer = function(answer)
+{
+    if(this.questions[this.questionIndex].answer == answer)
+    {
+        console.log("You Selected Correct Answer")
+>>>>>>> 99b95da8d2eb7434656f63ace269193f6831d93c
         this.score++;
     }
-    this.questionIndex++
+    else
+    {
+        console.log("Wrong answer..")
+    }
+    this.questionIndex ++;
     display()
 }
 
+<<<<<<< HEAD
 Quiz.prototype.isEnd = function(){
     return (questions.length == this.questionIndex)
 }
@@ -61,3 +80,12 @@ function restartQuiz(){
     document.querySelector("#quiz").style.display= "block"
     display()
 }
+=======
+Quiz.prototype.isEnd = function()
+{
+    var len = (questions.length);
+    return (len == this.questionIndex) 
+}
+
+var quizObject = new Quiz(questions)
+>>>>>>> 99b95da8d2eb7434656f63ace269193f6831d93c
