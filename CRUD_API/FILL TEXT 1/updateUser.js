@@ -1,4 +1,5 @@
 function updateUser(){
+    document.getElementById("table").style.display="block";
     var data = {...allData[index]}
     for (a in data){
        data[a]=document.getElementById(a).value
@@ -15,3 +16,4 @@ function updateUser(){
         getData.setRequestHeader("content-type","application/json")
         getData.send(JSON.stringify(data))
     }
+    

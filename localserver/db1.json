@@ -1,0 +1,94 @@
+{
+    "details": [
+        {
+            "fname": "Furdella",
+            "lname": "Knight",
+            "tel": "(581)520-1048",
+            "address": "5319 Porttitor St",
+            "city": "Maricopa",
+            "state": "MS",
+            "zip": 29465
+        },
+        {
+            "fname": "Henry",
+            "lname": "Eschenbacher",
+            "tel": "(818)449-0626",
+            "address": "6975 Scelerisque Dr",
+            "city": "Elmwood Park",
+            "state": "MS",
+            "zip": 34772
+        },
+        {
+            "fname": "Melanciaa",
+            "lname": "Maurer",
+            "tel": "(505)861-8363",
+            "address": "1771 Sed St",
+            "city": "Nicholasville",
+            "state": "ME",
+            "zip": 92469
+        },
+        {
+            "fname": "Elizabeth",
+            "lname": "Morris",
+            "tel": "(651)882-7698",
+            "address": "154 Ipsum Ct",
+            "city": "Winston Salem",
+            "state": "KY",
+            "zip": 16381
+        },
+        {
+            "fname": "Shawn",
+            "lname": "Gillott",
+            "tel": "(643)243-2512",
+            "address": "8497 Suspendisse Ln",
+            "city": "Peabody",
+            "state": "MN",
+            "zip": 28349
+        },
+        {
+            "fname": "Napoleon",
+            "lname": "Hatton",
+            "tel": "(652)720-4343",
+            "address": "7514 Tempor St",
+            "city": "Pickerington",
+            "state": "ME",
+            "zip": 68884
+        },
+        {
+            "fname": "Marisa",
+            "lname": "Kliban",
+            "tel": "(358)510-3968",
+            "address": "31 At Ave",
+            "city": "Winona Lake",
+            "state": "AL",
+            "zip": 60739
+        },
+        {
+            "fname": "Lola",
+            "lname": "Fraley",
+            "tel": "(477)422-3402",
+            "address": "6652 Lectus Ave",
+            "city": "Larimore",
+            "state": "ID",
+            "zip": 94322
+        },
+        {
+            "fname": "Val",
+            "lname": "Hutchings",
+            "tel": "(971)435-4846",
+            "address": "2030 Odio Ln",
+            "city": "Kitchener",
+            "state": "OK",
+            "zip": 26802
+        },
+        {
+            "fname": "Nalika",
+            "lname": "Delaura",
+            "tel": "(600)146-6886",
+            "address": "4189 Eget Ct",
+            "city": "Senoia",
+            "state": "IL",
+            "zip": 93078
+        }
+    ]
+}
