@@ -11,6 +11,8 @@ function getAllUsers() {
   };
   getInfo.open("GET", API_URL);
   getInfo.send();
+
+  
 }
 
 function displayUsers() {
