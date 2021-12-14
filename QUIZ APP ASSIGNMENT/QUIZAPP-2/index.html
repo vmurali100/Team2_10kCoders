@@ -24,6 +24,15 @@
     padding: 2px 0px;
     border-radius: 50px;
 }
+.grid h2 {
+    font-family: sans-serif;
+    background: #57636e;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 2px 0px;
+    border-radius: 40px;
+}
 
 .grid #question {
     font-family: sans-serif;
@@ -59,7 +68,6 @@
 	outline: 0;
 }
 
-
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,9 +75,11 @@
     <title>Document</title>
 </head>
 <body>
+    
     <div class="grid">
         <div id="quiz">
             <h1>My Own Quiz</h1>
+            <h2 id="h2" style="display: none;"></h2>
             <hr style="margin-bottom: 20px">
 
             <p id="question"></p>
@@ -85,10 +95,11 @@
             </footer>
         </div>
         <div id="quiz1" style="display: none;">
-            <h1>Results</h1>
+            <h1 id ="h1">Results</h1>
+            <h2 id ="qh2"></h2>
         </div>
     </div>
     <script src="./questions.js"></script>
-    <script src="./displayQuestions.js"></script>
+    <script src="./display.js"></script>
 </body>
 </html>

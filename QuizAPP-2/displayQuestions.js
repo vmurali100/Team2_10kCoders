@@ -1,7 +1,7 @@
 function display(){
     if(quizObject.isEnd()){
         console.log("Quiz is Completed")
-        quizObject.correctAnswer(option)
+        quizObject.quizEnded()
     }
     else{
         var quizData =  quizObject.getData()
@@ -15,7 +15,11 @@ function display(){
         
     })
     function participantAnswer(id,option){
-    document.getElementById(id).addEventListener("click",function(){ quizObject.correctAnswer(option) }) 
+    document.getElementById(id).onclick=function()
+    { 
+    
+        quizObject.correctAnswer(option) 
+    }
     }
     }
    
