@@ -1,20 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Harish from './Harish';
-import Hello from './Hello';
-import Study from './Study';
-import Living from './Living';
-import Course from './Course'
+import {Harish,Harisha,Vardhan} from './Harisha'
 
 function App() {
   return (
     <div className="App">
-      
-     <Hello/>
-     <Harish/>
-     <Study/>
-     <Course/>
-     <Living/>
+      <Harisha/>
+      <Vardhan/>
     </div>
   );
 }
