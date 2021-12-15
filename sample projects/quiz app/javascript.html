@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+		<script defer src="./javascript.js"></script>
+        <style>
+            #canvas{
+  height: 50%;
+  width: 50%;
+  background-color: black;
+}
+        </style>
+		
+	</head>
+	<body>
+		<div class="grid" style=" padding: auto;">
+			<div id="quiz" >
+				<h1>quiz questions</h1>
+				<hr style="margin-bottom: 20px">
+
+				<div id="questionArea">
+					<p id="question"></p>
+					<div class="button">
+						<button id="btn0" class="btn btn-primary"><span id="option0"></span></button>
+						<button id="btn1"><span id="option1"></span></button>
+						<button id="btn2"><span id="option2"></span></button>
+						<button id="btn3"><span id="option3"></span></button>
+					</div></div>
+				<hr style="margin-top: 20px">
+				<div id="quizArea">
+
+				</div>
+                <div id="win" style="display: none;">
+                    <canvas id="canvas"></canvas>
+				</div>
+
+				<footer >
+					   <p id="progress"></p>
+					          <button type="button" onclick="restartQuiz()" id="restart" style="display: none;">Restart Quiz</button>
+				</footer>
+			</div>
+			</div>
+		
+		
+				</div>
+			</div>
+		</div>
+	<script>        const canvas = document.getElementById("canvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        var ctx = canvas.getContext("2d");
+        
+        function Firework(x,y,height,yVol,R,G,B){
+          this.x = x;
+          this.y = y;
+          this.yVol = yVol;
+          this.height = height;
+          this.R = R;
+          this.G = G;
+          this.B = B;
+          this.radius = 2;
+          this.boom = false;
+          var boomHeight = Math.floor(Math.random() * 200);
+          this.draw = function(){
+           
+           ctx.fillStyle = "rgba(" + R + "," + G + "," + B + ")";
+            ctx.strokeStyle = "rgba(" + R + "," + G + "," + B + ")";
+            ctx.beginPath();
+            ctx.arc(this.x,boomHeight,this.radius,Math.PI * 2,0,false);
+            ctx.stroke();//
+           ctx.fillRect(this.x,this.y,5,this.height);
+          }
+          this.update = function(){
+            this.y -= this.yVol;
+            if(this.radius < 20){
+              this.radius += 0.35;
+            }
+            if(this.y < boomHeight){
+              this.boom = true;
+              
+              for(var i = 0; i < 80; i++){
+                particleArray.push(new Particle(
+                  this.x,
+                  this.y,
+                  // (Math.random() * 2) + 0.5//
+                  (Math.random() * 2) + 1,
+                  this.R,
+                  this.G,
+                  this.B,
+                  1,
+                ))
+        
+              }
+            }
+            this.draw();
+          }
+          this.update()
+        }
+        
+        window.addEventListener("click", (e)=>{
+            var x = e.clientX;
+          var y = canvas.height;
+          var R = Math.floor(Math.random() * 255)
+          var G = Math.floor(Math.random() * 255)
+          var B = Math.floor(Math.random() * 255)
+          var height = (Math.floor(Math.random() * 20)) + 10;
+          fireworkArray.push(new Firework(x,y,height,5,R,G,B))
+        })
+        
+        function Particle(x,y,radius,R,G,B,A){
+          this.x = x;
+          this.y = y;
+          this.radius = radius;
+          this.R = R;
+          this.G = G;
+          this.B = B;
+          this.A = A;
+          this.timer = 0;
+          this.fade = false;
+         
+          // Change random spread
+          this.xVol = (Math.random() * 10) - 4
+          this.yVol = (Math.random() * 10) - 4
+          
+          
+          console.log(this.xVol,this.yVol)
+          this.draw = function(){
+         //   ctx.globalCompositeOperation = "lighter"
+            ctx.fillStyle = "rgba(" + R + "," + G + "," + B + "," + this.A + ")";
+            ctx.beginPath(); 
+           // ctx.fillStyle = "white"
+            ctx.arc(this.x,this.y,this.radius,Math.PI * 2,0,false);
+            ctx.fill();
+          }
+          this.update = function(){
+            this.x += this.xVol;
+            this.y += this.yVol;
+            
+            // Comment out to stop gravity. 
+            if(this.timer < 200){
+              this.yVol += 0.12;
+            }
+            this.A -= 0.02;
+            if(this.A < 0){
+              this.fade = true;
+            }
+            this.draw();
+          }
+          this.update();
+        }
+        
+        var fireworkArray = [];
+        var particleArray = [];
+        for(var i = 0; i < 6; i++){
+          var x = Math.random() * canvas.width;
+          var y = canvas.height;
+          var R = Math.floor(Math.random() * 255)
+          var G = Math.floor(Math.random() * 255)
+          var B = Math.floor(Math.random() * 255)
+          var height = (Math.floor(Math.random() * 20)) + 10;
+          fireworkArray.push(new Firework(x,y,height,5,R,G,B))
+        }
+        
+        
+        function animate(){
+          requestAnimationFrame(animate);
+         // ctx.clearRect(0,0,canvas.width,canvas.height)
+          ctx.fillStyle = "rgba(0,0,0,0.1)"
+          ctx.fillRect(0,0,canvas.width,canvas.height);
+          for(var i = 0; i < fireworkArray.length; i++){
+            fireworkArray[i].update();
+          }
+          for(var j = 0; j < particleArray.length; j++){
+            particleArray[j].update();
+          }
+          if(fireworkArray.length < 4){
+              var x = Math.random() * canvas.width;
+              var y = canvas.height;
+              var height = Math.floor(Math.random() * 20);
+              var yVol = 5;
+              var R = Math.floor(Math.random() * 255);
+              var G = Math.floor(Math.random() * 255);          
+              var B = Math.floor(Math.random() * 255);
+              fireworkArray.push(new Firework(x,y,height,yVol,R,G,B));
+          }
+         
+          
+          fireworkArray = fireworkArray.filter(obj => !obj.boom);
+          particleArray = particleArray.filter(obj => !obj.fade);
+        }
+        animate();
+        
+        window.addEventListener("resize", (e) => {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        })</script>
+	</body>
+</html>
