@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 
 export  class Narendra extends Component {
+    // var message = "Hello From Narendra Class Component"
+    // document.querySelector("h3").innerHTML = message
+
+    constructor(){
+       this.state = {}
+
+    }
     render (){
-        return <h3>Hello From Narendra Class Component</h3>
+        return <h3></h3>
     }
 }
 
