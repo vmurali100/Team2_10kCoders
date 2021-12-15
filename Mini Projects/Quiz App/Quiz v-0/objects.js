@@ -6,6 +6,7 @@ class Questions{
         this.answer = answer;
     }
 }
+
 let questions = [
     new Questions("Which of the following is not the OOPS based Language?",["C++","Java","C","Python"],"C"),
     new Questions("Which of the following is not a primitive data type?",["Boolean","Number","Array","Undefined"],"Array"),
@@ -29,6 +30,9 @@ class Quiz{
         this.score = 0;
     }
 }
+var quizObj = new Quiz(questions);
+
+
 Quiz.prototype.getData = function()
 {
     return this.questions[this.questionIndex];
@@ -36,8 +40,6 @@ Quiz.prototype.getData = function()
 
 Quiz.prototype.checkAnswer = function(answer)
 {
-    console.log("answer",this.questions[this.questionIndex].answer) ;
-    console.log("user answer",answer);
     if(this.questions[this.questionIndex].answer === answer)
     {
         this.score++;
@@ -64,4 +66,3 @@ Quiz.prototype.gameOver = function()
     document.getElementById("userScore").innerHTML = this.score;
     document.getElementById("totalScore").innerHTML = this.questions.length;
 }
-var quizObj = new Quiz(questions);
