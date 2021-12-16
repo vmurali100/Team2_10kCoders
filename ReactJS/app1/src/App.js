@@ -1,14 +1,15 @@
-import logo from "./logo.svg";
+
 import "./App.css";
-import { Murali, Krishna, Sam } from "./Murali";
-import { Kiran } from "./Narendra";
-import { Harish } from "./Harish";
+import { Employees } from "./Functional_Components/Employees";
+import { Student } from "./Functional_Components/Student";
+import { Teja } from "./Functional_Components/Teja";
 
 function App() {
   return (
     <div className="App">
       <h2>Hello From App</h2>
-      <Harish/>
+      <Student/>
+      <Employees/>
     </div>
   );
 }
