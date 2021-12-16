@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Divya from './divya';
+import Divyas from './Divyas';
+import Divyass from './Divyass';
+import Divyasss from './Divyasss';
+import Divyassss from './Divyassss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>hi</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Divya/>
+     <Divyas/>
+     <Divyass/>
+     <Divyasss/>
+     <Divyassss/>
+    
     </div>
   );
 }
