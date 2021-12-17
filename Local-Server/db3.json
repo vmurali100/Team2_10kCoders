@@ -47,50 +47,6 @@
     {
       "address": {
         "geolocation": {
-          "lat": "50.3467",
-          "long": "-20.1310"
-        },
-        "city": "San Antonio",
-        "street": "Hunters Creek Dr",
-        "number": 6454,
-        "zipcode": "98234-1734"
-      },
-      "id": 4,
-      "email": "don@gmail.com",
-      "username": "donero",
-      "password": "ewedon",
-      "name": {
-        "firstname": "don",
-        "lastname": "romer"
-      },
-      "phone": "1-765-789-6734",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
-          "lat": "40.3467",
-          "long": "-40.1310"
-        },
-        "city": "san Antonio",
-        "street": "adams St",
-        "number": 245,
-        "zipcode": "80796-1234"
-      },
-      "id": 5,
-      "email": "derek@gmail.com",
-      "username": "derek",
-      "password": "jklg*_56",
-      "name": {
-        "firstname": "derek",
-        "lastname": "powell"
-      },
-      "phone": "1-956-001-1945",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
           "lat": "20.1677",
           "long": "-10.6789"
         },
@@ -130,28 +86,6 @@
         "lastname": "snyder"
       },
       "phone": "1-123-943-0563",
-      "__v": 0
-    },
-    {
-      "address": {
-        "geolocation": {
-          "lat": "50.3456",
-          "long": "10.6419"
-        },
-        "city": "mesa",
-        "street": "vally view ln",
-        "number": 1342,
-        "zipcode": "96378-0245"
-      },
-      "id": 8,
-      "email": "william@gmail.com",
-      "username": "hopkins",
-      "password": "William56$hj",
-      "name": {
-        "firstname": "william",
-        "lastname": "hopkins"
-      },
-      "phone": "1-478-001-0890",
       "__v": 0
     },
     {

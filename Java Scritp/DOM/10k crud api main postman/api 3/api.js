@@ -11,5 +11,6 @@ function getData() {
     };
     getInfo.open('GET', API_URL);
     getInfo.send();
+
 }
 getData()

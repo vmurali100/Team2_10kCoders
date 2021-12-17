@@ -5,7 +5,7 @@ function deletePerson(i) {
         if (getInfo.status == 200 && getInfo.readyState == 4) {
             getAllUsers = JSON.parse(getInfo.response);
             console.log(getAllUsers);
-            display()
+            resolve()
 
         }
     }

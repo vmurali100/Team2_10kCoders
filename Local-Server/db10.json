@@ -5,15 +5,15 @@
       "fname": "Alla",
       "lname": "Kirkley",
       "tel": "(843)713-0056",
-      "address": "8861 Sollicitudin St",
+      "address": "8861 Sollicitudin ",
       "city": "Blacksburg",
       "state": "DE",
-      "zip": 20074
+      "zip": "20074"
     },
     {
       "id": 38,
       "fname": "Canzady mama",
-      "lname": "Borrego",
+      "lname": "Borrego man",
       "tel": "(303)817-8079",
       "address": "3680 Elit St",
       "city": "Denver",
@@ -29,36 +29,6 @@
       "city": "Albuquerque",
       "state": "MT",
       "zip": 89876
-    },
-    {
-      "id": 40,
-      "fname": "Kathryn",
-      "lname": "Bernauer",
-      "tel": "(650)906-9400",
-      "address": "1890 Massa Ct",
-      "city": "Adairsville",
-      "state": "NY",
-      "zip": 46314
-    },
-    {
-      "id": 41,
-      "fname": "Dana",
-      "lname": "More",
-      "tel": "(927)454-0256",
-      "address": "7246 Orci Ct",
-      "city": "Oxford",
-      "state": "GA",
-      "zip": 60879
-    },
-    {
-      "id": 42,
-      "fname": "Mary",
-      "lname": "Frazier",
-      "tel": "(607)866-5258",
-      "address": "5197 Nunc Ave",
-      "city": "Mount Morris",
-      "state": "MD",
-      "zip": 43846
     }
   ]
 }

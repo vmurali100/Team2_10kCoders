@@ -6,12 +6,11 @@ function getData() {
         if (getInfo.status == 200 && getInfo.readyState == 4) {
             getAllUsers = JSON.parse(getInfo.response);
             console.log(getAllUsers);
-            display()
-
+            display();
         }
 
     }
     getInfo.open("GET", API_URL);
     getInfo.send();
 }
-getData();
+getData()
