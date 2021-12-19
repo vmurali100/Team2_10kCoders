@@ -1,17 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { Post } from './Class Components/Post';
-import { Hook } from './Functional Components/Hook';
-import { Players } from './Functional Components/Players';
-import { Persons } from './Functional Components/Persons';
+import LifeCycle from './Class Components/LifeCycle';
 
 function App() {
   return (
     <div className="App">
-    <Post/>
-    <Hook/>
-    <Players/>
-    <Persons/>
+      <LifeCycle/>
     </div>
   );
 }
