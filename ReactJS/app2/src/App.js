@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import { ClassRoom } from './ClassRoom';
 import { User } from './User';
-import LifeCycleComp from './LifeCycles/LifeCycleComp';
+import LifeCycleCompB from './LifeCycles/LifeCycleCompB';
 
 function App() {
   return (
     <div className="App">
-     <LifeCycleComp/>
+      <LifeCycleCompB/>
     </div>
   );
 }
