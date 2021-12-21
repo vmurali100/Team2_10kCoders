@@ -24,7 +24,7 @@ export default class MountingC extends Component {
 
         return (
             <div>
-                <h2 style={{color:'blue'}}>Hello From LifeCycle Component  {this.props.count}</h2>
+                <h2 style={{color:'blue'}}>Hello From LifeCycle Component </h2>
                 <button onClick={this.increase}>Increase Count</button>
                 <UpdatingC count={this.state.count}/>
                 <hr /><hr />
