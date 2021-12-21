@@ -28,7 +28,7 @@ export default class LifeCycle extends Component {
             <div>
                 <h2>Hello from react LifeCycle</h2>
                 <button onClick={this.changeNumber}>Change Number</button>
-                {/* <LifecycleB count={this.state.count} /> */}
+                <LifecycleB count={this.state.count}/>
             </div>
         )
     }
