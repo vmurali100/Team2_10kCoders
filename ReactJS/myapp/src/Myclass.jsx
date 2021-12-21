@@ -15,3 +15,7 @@ export class Myclass3 extends Component  {
         return <div><h1>HEY am from class3 component</h1></div>
     }
 }
+
+
+
+

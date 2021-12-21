@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#myid{
+  background-color: aquamarine;
+  margin: 50px auto;
+  width: 300px;
+  padding: 25px;
+}
+#myp{
+  background-color: rgba(49, 214, 255, 0.541);
+  margin: 50px auto;
+  width: 100px;
+  padding: 25px;
+}

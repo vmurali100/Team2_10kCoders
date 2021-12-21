@@ -7,16 +7,10 @@
     <title>person details </title>
 </head>
 <body>
-    <!-- <button onclick="updateValues()""> click to update</button> -->
+    <button onclick="updateValues()""> click to update</button>
     <div id=myDetails></div>
     <script>
-        
-       var p1 =  new persons(
-            "akhil",
-            24 ,
-            "tg" ,
-        "wgl"
-        )
+
 
         // document.getElementById("myDetails").innerHTML = person.age;
 
@@ -27,38 +21,37 @@
              this.state =  state ;
              this.dist =  dist ;
         } 
+                
+       var p1 =  new persons(
+            "akhil",
+            24 ,
+            "tg" ,
+        "wgl"
+        )
  var p2 = new persons ("ajay" , 27 , "hyd" , "shamshabad" );
 
- document.getElementById("myDetails").innerHTML =  p1.age(37) ;
+//  document.getElementById("myDetails").innerHTML =  p1.age ;
 
         
 
-        // function updateValues(){
-        //     var allInfo = "" 
-        //    person = {
-        //     "name":"varma",
-        //     "age":28,
-        //     "state":"tg",
-        //     "dist":"kmm"
-        //    }
-        //     for (a in person) {
-        //         // console.log(a)
-        //         allInfo = allInfo + person[a]+"<br>"
-        //         // allInfo=person[a]
+        function updateValues(){
+            var allInfo = "" 
+            var allHere = ""
+         var person = new persons  (
+            "varma",28,"tg","kmm"
+           )
+            for (a in person) {
+                // console.log(a)
+                allInfo =  Object.keys(person)+"<br>"
+                allHere = Object.values(person) +"<br>"
+                // allInfo=person[a]
             
-        // }
-        //    }
-        
-        // var allInfo = "" 
-        
-
-        //     // for (a in person) {
-        //     //     // console.log(a)
-        //     //     allInfo = allInfo + person[a]+"<br>"
-        //     //     // allInfo=person[a]
+        }
+        document.getElementById("myDetails").innerHTML = allInfo + allHere ;
+           }
             
         
-        document.getElementById("myDetails").innerHTML = allInfo 
+            
     </script>
 </body>
 </html>

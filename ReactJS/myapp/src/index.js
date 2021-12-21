@@ -8,7 +8,6 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Akhil/>
   </React.StrictMode>,
   document.getElementById('root')
 );
