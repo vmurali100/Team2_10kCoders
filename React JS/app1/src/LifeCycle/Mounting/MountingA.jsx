@@ -13,10 +13,17 @@ export default class MountingA extends Component {
         }
         console.log("Hello from Constructor Mounting - A")
     }
+    static getDerivedStateFromProps(props,state){
+        console.log('I am from getDerivedStateFromProps Mounting -A', state,props)
+        return null
+    }
 
     increase=()=>{
         this.setState({count:this.state.count+1})
 
+    }
+    componentDidMount(){
+        console.log("I am From Mounting - A")
     }
     render() {
         console.log("Hello From Render Mounting - A")

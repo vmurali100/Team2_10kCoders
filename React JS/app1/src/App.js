@@ -9,7 +9,7 @@ import MountingE from './LifeCycle/Mounting/MountingE';
 function App() {
   return (
     <div className="App">
-    <MountingA/>
+    <MountingC/>
     </div>
   );
 }
