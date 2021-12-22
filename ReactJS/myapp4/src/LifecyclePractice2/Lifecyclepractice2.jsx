@@ -14,28 +14,33 @@ export default class Myclass extends  Component{
         return null
     }
     componentDidMount(){
-        alert("component added to the DOM ")
+        console.log("component added to the DOM ")
     }
     shouldComponentUpdate(){
-        
-        alert("lets permit the value to be updated")
+       console.log("lets permit the value to be updated")
         return true
     }
+    getSnapshotBeforeUpdate(){
+        alert("am from  snapshot before update")
+        return null
+    }
     componentDidUpdate(){
-        alert("component updated in the DOM ")
+        console.log("component updated in the DOM ")
     }
     componentWillUnmount(){
-        alert("component deleted from  the DOM ")
+        console.log("component deleted from  the DOM ")
     }
     game = () =>{
        var mynew = Math.ceil(Math.random() *10)
-        {mynew <= 5 && this.setState({colour :  "green" })}
-        {mynew >= 6 && this.setState({colour :  "red" })}
+        {mynew <= 5 && this.setState({colour :  "green" }) } 
+        {mynew <= 5 && (document.getElementById("mydiv").style.background = "green" )}
+        {mynew >= 6 && this.setState({colour :  "red" }) }
+        { mynew >= 6 &&  (document.getElementById("mydiv").style.background = "red" )}
     }
     render(){
-        return <div>
+        return <div id="mydiv">
             <button onClick={()=>this.game()}>Lets play </button>
-            <p>{this.state.colour} <br /> {this.state.mynew}</p>
+            <p id="mypara">{this.state.colour} <br /> {this.state.mynew}</p>
             <Newclass2/>
         </div>
     }

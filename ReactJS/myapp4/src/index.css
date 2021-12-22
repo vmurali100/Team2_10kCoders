@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#mydiv{
+width: 400px;
+height: 200px;
+margin: 100px auto;
+  border:  1px solid red;
+}
+#mypara{
+  margin-top: 50px;
+  border:  1px solid red;
+
+}

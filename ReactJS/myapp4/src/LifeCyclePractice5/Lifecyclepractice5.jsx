@@ -2,7 +2,7 @@ import React ,{ Component } from "react";
 import Lifecyclechild from "./Lifecyclechild";
 import Removecond from "./Removecond";
 
-export default class Lifecyclepractice extends Component{
+export default class Lifecyclepractice5 extends Component{
 constructor(props){
     super(props);
     this.state ={
@@ -46,7 +46,7 @@ this.setState ({count:this.state.count +1});
          <button  onClick={this.increaseMe}>do add</button>
          <Lifecyclechild count={this.state.count}/>
          {this.state.count  < 104 && <Removecond/> }
-        {this.state.count  > 104 && (document.getElementById("here").style.background = "grey")}
+        {this.state.count  > 104 && (document.getElementById("here").style.backgroundImage = "https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg") }
 
      </div>
 
