@@ -3,7 +3,7 @@ import './App.css';
 import Teja from './Teja';
 import Tejaa from './Tejaa';
 import Tejaaa from './Tejaaa';
-import Teeja from './Teeja';
+import Teej from './Teeja';
 import Tteja from './Tteja';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Teja />
         <Tejaa />
         <Tejaaa/>
-        <Teeja />
+        <Teej />
         <Tteja />
       </header>
     </div>

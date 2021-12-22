@@ -1,18 +1,14 @@
 //import logo from './logo.svg';
 import './App.css';
-import Teeja from './Teeja';
-import Teja from './Teja';
-import Tejaa from './Tejaa';
-import Tejja from './Tejja';
-
+// import LifeCycleComp from "./LifeCycles/mounting"
+// import Mounting from './Life Cycles Practice/Mounting';
+import Mounting from './LifeCycles1/Mounting';
 function App() {
   return (
     <div className="App">
       <h1>Hello React JS</h1>
-      <Teja />
-      <Tejaa />
-      <Teeja />
-      <Tejja />
+      {/* <LifeCycleComp /> */}
+      <Mounting />
     </div>
   );
 }
