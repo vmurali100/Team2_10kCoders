@@ -1,4 +1,10 @@
-import React from "react";
-export default function App33(){
-    return<h2>hello from app33 component</h2>
+import { useState } from "react"
+
+export const Apppppp=()=>{
+    const[myName,setmyName]=useState("Divya");
+
+    return  <div>
+        <button onClick={()=>{setmyName("Divyas")}}>change name</button>
+             <h2 style={{color:"Pink"}}>hello from {myName} component</h2>
+</div>
 }
