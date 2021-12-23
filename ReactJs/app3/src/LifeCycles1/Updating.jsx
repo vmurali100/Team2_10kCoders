@@ -3,7 +3,8 @@ import React, { Component } from "react";
 export class Updating extends Component {
     constructor() {
         super()
-        this.state = {}
+        this.state = {
+        }
     }
     static getDerivedStateFromProps(props, state) {
         console.log("This is from getDerivedStateFromProps of Updating")
