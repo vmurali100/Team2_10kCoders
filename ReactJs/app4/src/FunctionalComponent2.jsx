@@ -12,9 +12,10 @@ export const FunctionalComponent2 = ()=>{
 
     return(
         <div>
+            <h1>FUNCTIONAL COMPONENT 2</h1>
             <ul>
                 {carts.map((cart)=>
-                <li>{cart.id}</li>
+                <li>{cart.id}</li>    
                 )}
             </ul>
         </div>

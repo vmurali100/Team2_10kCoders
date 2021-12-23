@@ -1,32 +1,30 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-export default class ClassComponent2 extends Component {
+export default class ClassComponent6 extends Component {
     constructor(){
         super()
-        this.state = {
-            carts:[]
+        this.state= {
+            albums:[]
         }
     }
     render() {
         return (
             <div>
-                <h1>CLASSS COMPONENT2</h1>
+                <h1>Class Component6</h1>
                 <ul>
-                    {this.state.carts.map((cart)=>{
-                        return(<li key={cart.id  }>{cart.date}</li>)
+                    {this.state.albums.map((album)=>{
+                        return(<li key={album.id}>{album.title}</li>)
                     })}
                 </ul>
             </div>
         )
     }
-
     componentDidMount(){
-        let URL = "https://fakestoreapi.com/carts"
+        let URL = "https://jsonplaceholder.typicode.com/albums"
         axios.get(URL).then(({data})=>{
-            console.log(data)
             let newState = {...this.state}
-            newState["carts"] = data
+            newState["albums"] = data
             this.setState(newState)
         })
     }
