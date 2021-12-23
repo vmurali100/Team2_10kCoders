@@ -3,27 +3,25 @@ import axios from 'axios';
 
 
 export const Cart = () => {
-    const [products,setproducts] = useState([]);
+    const [carts, setCarts] = useState([]) ;
+   
+    useEffect(()=>{
+        let URL = "https://fakestoreapi.com/users" ;
+        axios.get(URL).then(({data})=>{
+            console.log(data)
+            setCarts(data)
+        })
+    
+    },[]) 
+   
 
-    useEffect(() => {
-        let Cart_URL = 'https://fakestoreapi.com/products';
-        axios.get(Cart_URL).then((data) => {
-            console.log(data);
+    return <div>
+    <ol>
+    <h1>Fake Store API<span style={{color:'green'}}>"Carts"</span></h1>
 
-            setproducts(data);
-
-        });
-    }, []);
-    return (
-        <div>
-            <h2>Fake Store API<span style={{ color: 'green' }}>"Carts"</span></h2>
-            <ul>
-                {products.map((product) => {
-                    return (
-                        <li><span style={{ color: 'red', font: 'italic' }}> Id:</span> <img src={product.id}  alt="" /></li>
-                    );
-                })}
-            </ul>
-        </div>
-    );
-};
+    {carts.map((cart)=>{
+         return <li key={carts}><span style={{color:'red', font:'italic'}}> Id:  </span>{cart.username}</li>
+       })}
+    </ol>
+   </div>
+}
