@@ -17,7 +17,7 @@ export const Users = () => {
 
     return <div>
     <ol>
-    <h1>Fake Store API<span style={{color:'green'}}>"Users"</span></h1>
+    <h1>Fill Text<span style={{color:'green'}}>"Users"</span></h1>
 
     {user.map((users)=>{
          return <li key={user}><span style={{color:'red', font:'italic'}}> First Name :  </span>{users.username}</li>
