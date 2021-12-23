@@ -25,17 +25,17 @@ export default class Myclass extends  Component{
         return null
     }
     componentDidUpdate(){
-        console.log("component updated in the DOM ")
+        alert("component updated in the DOM ")
     }
     componentWillUnmount(){
         console.log("component deleted from  the DOM ")
     }
     game = () =>{
-       var mynew = Math.ceil(Math.random() *10)
-        {mynew <= 5 && this.setState({colour :  "green" }) } 
-        {mynew <= 5 && (document.getElementById("mydiv").style.background = "green" )}
-        {mynew >= 6 && this.setState({colour :  "red" }) }
-        { mynew >= 6 &&  (document.getElementById("mydiv").style.background = "red" )}
+       var mynew = Math.ceil(Math.random() *5)
+        {mynew <= 2 && this.setState({colour :  "green" }) } 
+        {mynew <= 2 && (document.getElementById("mydiv").style.background = "green" )}
+        {mynew >= 3 && this.setState({colour :  "red" }) }
+        { mynew >= 3 &&  (document.getElementById("mydiv").style.background = "red" )}
     }
     render(){
         return <div id="mydiv">

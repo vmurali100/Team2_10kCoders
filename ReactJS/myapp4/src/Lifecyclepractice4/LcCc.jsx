@@ -9,7 +9,7 @@ export default class LcCc extends Component {
     render(){
        return <div>
             {this.props.greeting.map((good)=>{
-                return <h1>{good} {<button onClick={(g)=>this.props.deletebtn(g)}>Delete</button>}</h1>
+                return <h1 >{good} {<button onClick={(morning)=>this.props.deletebtn(morning)}>Delete</button>}</h1>
             })}
         </div>
 

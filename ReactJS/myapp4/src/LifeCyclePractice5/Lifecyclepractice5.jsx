@@ -30,7 +30,9 @@ componentDidUpdate(){
     console.log("am componentDidUpdate")
 }
 componentWillUnmount(){
-    console.log("am componentWillUnmount")
+    return
+      console.log("am componentWillUnmount Area")
+
     
 }
  increaseMe = ()=>{
@@ -46,7 +48,7 @@ this.setState ({count:this.state.count +1});
          <button  onClick={this.increaseMe}>do add</button>
          <Lifecyclechild count={this.state.count}/>
          {this.state.count  < 104 && <Removecond/> }
-        {this.state.count  > 104 && (document.getElementById("here").style.backgroundImage = "https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg") }
+        {this.state.count  > 104 && (document.getElementById("here").style.backgroundColor = "red" ) }
 
      </div>
 

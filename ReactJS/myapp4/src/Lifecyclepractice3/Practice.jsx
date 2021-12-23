@@ -4,7 +4,7 @@ import Child from "./Childpractice";
 export default  class Practice extends Component {
     constructor(props){
         super(props)
-        this.state =  ["one","two","three" ,"four"] 
+        this.state = ( ["one","two","three" ,"four"] )
     }
     static getDerivedStateFromProps(){
         console.log("getDerivedStateFromProps")

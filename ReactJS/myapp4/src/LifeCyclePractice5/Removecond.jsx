@@ -12,7 +12,7 @@ export default class Removecond extends Component{
     }
      render(){
          return <div>
-             <h1> this is removed after 4 </h1>
+             <h1> this is removed after 3 </h1>
          </div>
      }
 }

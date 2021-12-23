@@ -11,10 +11,10 @@ function App() {
     <div className="App">
      
      {/* <Lifecyclepractice/> */}
-     {/* <Myclass/> */}
+     <Myclass/>
      {/* <Practice/> */}
      {/* <Lcp4 /> */}
-      <Lifecyclepractice5 />
+      {/* <Lifecyclepractice5 /> */}
      
     </div>
   );
