@@ -1,11 +1,11 @@
 import axios from 'axios'
 import React,{Component} from 'react'
-export class Data extends Component{
+export class posts extends Component{
     constructor(){
         super()
         this.state={
             users:[],
-            products:[]
+            comments:[]
         }
     }
     render(){
@@ -13,10 +13,10 @@ export class Data extends Component{
             <div>
                 <h2>Users Component</h2>
                 <ul>
-                    {this.state.products.map((product)=>{
+                    {this.state.products.map((comment)=>{
                         return(
-                            <li key={category} >
-                                { product.category}
+                            <li key={body} >
+                                { comment.email}
                             </li>
                         )
                     })}
@@ -26,11 +26,11 @@ export class Data extends Component{
         )
     }
     componentDidMount(){
-        let Fake_Text_URL ='https://fakestoreapi.com/products'
+        let Fake_Text_URL ='https://jsonplaceholder.typicode.com/comments'
         axios.get(Fake_Text_URL).then((res)=>{
             console.log(res)
             let newState ={...this.state}
-            newState['products'] = res.data;
+            newState['comments'] = res.data;
             this.setState(newState)
         })
 

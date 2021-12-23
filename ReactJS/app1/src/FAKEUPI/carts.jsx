@@ -1,11 +1,11 @@
 import axios from 'axios'
 import React,{Component} from 'react'
-export class Data extends Component{
+export class carts extends Component{
     constructor(){
         super()
         this.state={
             users:[],
-            products:[]
+            carts:[]
         }
     }
     render(){
@@ -13,10 +13,10 @@ export class Data extends Component{
             <div>
                 <h2>Users Component</h2>
                 <ul>
-                    {this.state.products.map((product)=>{
+                    {this.state.products.map((cart)=>{
                         return(
-                            <li key={category} >
-                                { product.category}
+                            <li key={city} >
+                                { cart.id}
                             </li>
                         )
                     })}
@@ -30,7 +30,7 @@ export class Data extends Component{
         axios.get(Fake_Text_URL).then((res)=>{
             console.log(res)
             let newState ={...this.state}
-            newState['products'] = res.data;
+            newState['carts'] = res.data;
             this.setState(newState)
         })
 
