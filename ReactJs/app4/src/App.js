@@ -1,4 +1,5 @@
 import './App.css';
+import RadioComponent from './RadioComponent';
 // import ClassComponent1 from './ClassComponent1';
 // import ClassComponent2 from './ClassComponent2';
 // import ClassComponent3 from './ClassComponent3';
@@ -24,14 +25,15 @@ import './App.css';
 // import FunctionalComponent12 from './FunctionalComponent12';
 // import ClassComponent12 from './ClassComponent12';
 // import MusicComponent from './MusicComponent';
-import { MusicComponentPiano } from './MusicComponentPiano';
+// import { MusicComponentPiano } from './MusicComponentPiano';
 
 
 function App() {
   return (
     <div className="App">
       <h2>welcome to React JS</h2>
-      <MusicComponentPiano />
+      <RadioComponent />
+      {/* <MusicComponentPiano /> */}
       {/* <MusicComponent />
       <ClassComponent1 />
       <FunctionComponent1 />
