@@ -1,14 +1,13 @@
 
 import './App.css';
-import { Data } from './FAKEUPI/Data';
-import { Users } from './FAKEUPI/Users';
+import { CricketComp } from './CricketComp';
 
-import LifeCyclesComp from './LifeCycles/LifeCyclesComp';
 
 function App() {
   return (
     <div className="App">
-     <Users/>
+     <CricketComp/>
+
       </div>
   );
 }
