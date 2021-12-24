@@ -23,12 +23,14 @@ import ClassComponent11 from './ClassComponet11';
 import FunctionalComponent11 from './FunctionalComponent11';
 import FunctionalComponent12 from './FunctionalComponent12';
 import ClassComponent12 from './ClassComponent12';
+import MusicComponent from './MusicComponent';
 
 
 function App() {
   return (
     <div className="App">
       <h2>welcome to React JS</h2>
+      <MusicComponent />
       <ClassComponent1 />
       <FunctionComponent1 />
       <ClassComponent2 />
