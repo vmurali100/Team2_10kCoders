@@ -8,6 +8,7 @@ export class Products extends Component{
         this.state = {
             users : [] ,
             persons :[] ,
+            products : [] 
 
 
         }
@@ -22,19 +23,22 @@ export class Products extends Component{
         })
     
     }
+ 
     render(){
         return <div>
           
          <ol>
          <h1>FAKE STORE - PRODUCTS</h1>
-         {this.state.users.map((user)=>{
-              return <li>{user.title}</li>
+         {this.state.products.map((user)=>{
+              return <li key={"id"}><img style={{"width":"150px"} , {"height": "150px"}} src={user.image} alt="" /> </li>
             })}
               
          </ol>
         </div>
     }
 }
+
+
 export default class User extends Component{
     constructor(props){
         super(props)

@@ -39,12 +39,15 @@ export const UserFuncPro = () =>{
     
     },[]) 
    
-
+const handleDelete = (user)=>{
+  let del =  users.filter((us)=> us !== user)
+  setUsers(del)
+}
     return <div>
     <ol>
     <h1>FAKE STORE - PRODUCTS(FUNCTION)</h1>
     {users.map((user)=>{
-         return <li key={user}>{user.title}</li>
+         return <li key={user}><img style={{"width":"150px"} , {"height": "150px"}} src={user.image} alt="" /> <button onClick={()=>{handleDelete(user)}}>DELETE</button></li>
        })}
     </ol>
    </div>

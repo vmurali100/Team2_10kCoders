@@ -73,16 +73,37 @@ export  class Name extends Component {
      let  newemployee = {...this.state}
      newemployee['name'] = data ;
   this.setState(newemployee);
+  }) ;
+  this.state.name.forEach((nm)=>{
+      let a = "";
+      let myTr =  document.createElement("tr");
+      for (a in nm){
+      let myTd = document.createElement("td");
+      myTd.innerHTML = nm[a]
+      myTr.appendChild(myTd)
+
+      }
+      document.querySelector("tbody").appendChild(myTr)
+
   })
   }
   render(){
       return <div>
           <h1>FILLTEXT -NAME</h1>
-          <ol>
+          {/* <ol>
               {this.state.name.map((emp)=>{
                   return <li>{emp.fname}</li>
               })}
-          </ol>
+          </ol> */}
+          <table>
+              <thead><tr>
+                  <th>fname</th>
+                  <th>lname</th></tr>
+                  </thead>
+              <tbody>
+
+              </tbody>
+          </table>
       </div>
   }
 }

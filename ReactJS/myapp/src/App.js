@@ -25,28 +25,28 @@ function App() {
      <Legend/> */}
    {/* <User />
    <Products />
-   <Carts />
-   <UserFunc />
+   <Carts /> */}
+   {/* <UserFunc /> */}
    <UserFuncPro />
-   <UserFuncCart />
+   {/* <UserFuncCart />
    <Employee />
    < EmployeeFunc />
    <NameFunc />
    <PersonFunc />
-   <Person />
-   <Name /> */}
+   <Person /> */}
+   {/* <Name /> */}
    {/* < Posts />
    <Comments />
    <Albums />
    <Photos />
    <Todos />
    <Usersjson /> */}
-   <JSONpost />
+   {/* <JSONpost />
    <JSONcomments />
    <JSONalbums />
    <JSONphotos />
    <JSONtodos />
-   <JSONusers />
+   <JSONusers /> */}
 
     
     </div>
