@@ -1,19 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
-import App2 from './App2';
-import App22 from './App22';
-import App222 from './App222';
-import App2222 from './app2222';
-import App2222d from './App22222';
+import Js1 from './classapi/Js1';
+import Js2 from './classapi/Js2';
+import Js3 from './classapi/Js3';
+import Js4 from './classapi/Js4';
+import Js5 from './classapi/Js5';
+import Js6 from './classapi/Js6';
+import Fk1 from './classapi/Fk1';
+import Fk2 from './classapi/Fk2';
+import Fk3 from './classapi/Fk3';
+import Ft1 from './classapi/Ft1';
+import Ft2 from './classapi/Ft2';
+import Ft3 from './classapi/Ft3';
 
 function App() {
   return (
     <div className="App">
-      <App2/>
-      <App22/>
-      <App222/>
-      <App2222/>
-      <App2222d/>
+     <Js1/>
+     <Js2/>
+     <Js3/>
+     <Js4/>
+     <Js5/>
+     <Js6/>
+     <Fk1/>
+     <Fk2/>
+     <Fk3/>
+     <Ft1/>
+     <Ft2/>
+     <Ft3/>
     </div>
   );
 }
