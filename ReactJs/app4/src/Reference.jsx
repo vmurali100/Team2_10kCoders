@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 
 export default class Reference extends Component {
-    constructor(){
-        super()
-        this.inputRef = React.createRef()
+    constructor(props){
+        super(props) 
+        this.inputRef = null
+        this.cbcInputRef = (element)=>{
+            this.inputRef = element
+        }
     }
     render() {
         return (
@@ -13,6 +16,6 @@ export default class Reference extends Component {
         )
     }
     componentDidMount(){
-        this.inputRef.focus()
+        this.inputRef.current.focus()
     }
 }
