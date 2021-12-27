@@ -1,5 +1,6 @@
-import Refernce from './Refernce';
+
 import './App.css';
+import Reference from './Reference';
 // import RadioComponent from './RadioComponent';
 // import ClassComponent1 from './ClassComponent1';
 // import ClassComponent2 from './ClassComponent2';
@@ -33,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <h2>welcome to React JS</h2>
-      <Refernce />
+      <Reference />
       {/* <RadioComponent /> */}
       {/* <MusicComponentPiano /> */}
       {/* <MusicComponent />
