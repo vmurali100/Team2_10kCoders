@@ -1,10 +1,13 @@
 
 import "./App.css";
-import { Employees } from "./Functional_Components/Employees";
-import { Student } from "./Functional_Components/Student";
-import { Teja } from "./Functional_Components/Teja";
-import ComponentsContainer from "./PureComponents/ComponentsContainer";
-import ParentComponent from "./RefsComponent/ParentComponent";
+// import { Employees } from "./Functional_Components/Employees";
+// import { Student } from "./Functional_Components/Student";
+// import { Teja } from "./Functional_Components/Teja";
+// import ClickCounter from "./HigherOrderComponent/ClickCounter";
+import HoverCounter from "./HigherOrderComponent/HoverCounter";
+import { MyCompContainer } from "./RenderProps/MyCompContainer";
+// import ComponentsContainer from "./PureComponents/ComponentsContainer";
+// import ParentComponent from "./RefsComponent/ParentComponent";
 
 function App() {
   return (
@@ -12,7 +15,11 @@ function App() {
       {/* <Student/>
       <Employees/> */}
       {/* <ParentComponent/> */}
-      <ComponentsContainer/>
+      {/* <ComponentsContainer/> */}
+      {/* <ClickCounter/> */}
+      {/* <hr/> */}
+      {/* <HoverCounter/> */}
+      <MyCompContainer/>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NormalComponent } from './NormalComponent'
+// import { NormalComponent } from './NormalComponent'
 import PureComp from './PureComp'
 
 export default class ComponentsContainer extends Component {
