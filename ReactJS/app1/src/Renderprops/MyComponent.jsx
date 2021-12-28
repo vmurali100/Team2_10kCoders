@@ -1,11 +1,8 @@
 import React from 'react'
-
-const MyComponent = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+export const MyComponent = (props) => {
+    return (
+        <div>
+            {props.render()}
+        </div>
+    )
 }
-
-export default MyComponent

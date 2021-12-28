@@ -1,11 +1,16 @@
-import React from 'react'
+import React,{useState} from 'react'
+import ClickCounter from '../HigherOrderComponent/ClickCounter'
+import HoverCounter from '../HigherOrderComponent/HoverCounter'
+import { MyComponent } from './MyComponent'
 
-const MyCompContainer = () => {
-  return (
-    <div>
-      <myComponent message={}/>
-    </div>
-  )
+export const MyCompContainer = () => {
+    const [someInfo, setsomeInfo] = useState("Some Info")
+   
+    return (
+    
+        <div>
+            <MyComponent someInfo={someInfo} render={()=><ClickCounter />}/>
+            <MyComponent render={()=><HoverCounter/>}/>
+        </div>
+    )
 }
-
-export default MyCompContainer
