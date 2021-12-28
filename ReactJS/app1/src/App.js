@@ -1,12 +1,17 @@
 
 import './App.css';
-import { CricketComp } from './CricketComp';
+import ClickCounter from './HOC comp/ClickCounter';
+import { HOCComp } from './HOC comp/HOC.Comp';
+import HoverCounter from './HOC comp/HoverCounter';
+
 
 
 function App() {
   return (
     <div className="App">
-     <CricketComp/>
+     <HOCComp/>
+     <ClickCounter/>
+     <HoverCounter/>
 
       </div>
   );
