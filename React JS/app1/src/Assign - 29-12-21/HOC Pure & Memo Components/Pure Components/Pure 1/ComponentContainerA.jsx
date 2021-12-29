@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { NormalComponent } from '../../../../Pure Components/NormalComponent'
-import PureComp from '../../../../Pure Components/PureComp'
 import { NormalComponentA } from './NormalComponentA'
 import PureComponentA from './PureComponentA'
 
