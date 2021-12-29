@@ -14,7 +14,7 @@ export default class ComponentsContainer extends Component {
 
     componentDidMount(){
         setInterval(()=>{
-            this.setState({count:this.state.count+1})
+            this.setState({message:"Im Changing this msg"})
         },2000)
     }
     
@@ -22,7 +22,7 @@ export default class ComponentsContainer extends Component {
         return (
             <div>
                 <h2>Hello From Container Component</h2>
-                {/* <NormalComponent message={this.state.message} count={this.state.count}/> */}
+                <NormalComponent message={this.state.message} /> 
                 <PureComp message={this.state.message}/>
             </div>
         )
