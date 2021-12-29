@@ -6,6 +6,7 @@ import Livesport from './Livesport';
 import Artist from './ArtistTracksAPI';
 import Searchtrack from './SearchTracks';
 import { Cricket } from './Cricket';
+import Trail from './Trail';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
       {/* <Insta /> */}
       {/* <Livesport /> */}
       {/* <Artist /> */}
-      <Searchtrack />
+      {/* <Searchtrack /> */}
          {/* <Cricket /> */}
+         <Trail/>
     </div>
   );
 }
