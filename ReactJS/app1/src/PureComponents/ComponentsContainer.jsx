@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FuncChild from './FuncChild'
 // import { NormalComponent } from './NormalComponent'
 import PureComp from './PureComp'
 
@@ -23,7 +24,8 @@ export default class ComponentsContainer extends Component {
             <div>
                 <h2>Hello From Container Componet</h2>
                 {/* <NormalComponent message={this.state.message} count={this.state.count}/> */}
-                <PureComp message={this.state.message}/>
+                {/* <PureComp message={this.state.message}/> */}
+                <FuncChild message={this.state.message}/>
             </div>
         )
     }

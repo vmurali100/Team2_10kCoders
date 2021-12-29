@@ -6,7 +6,8 @@ import "./App.css";
 // import ClickCounter from "./HigherOrderComponent/ClickCounter";
 import HoverCounter from "./HigherOrderComponent/HoverCounter";
 import { MyCompContainer } from "./RenderProps/MyCompContainer";
-// import ComponentsContainer from "./PureComponents/ComponentsContainer";
+import ComponentsContainer from "./PureComponents/ComponentsContainer";
+import { ContainerComp } from "./Context/ContainerComp";
 // import ParentComponent from "./RefsComponent/ParentComponent";
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       {/* <ClickCounter/> */}
       {/* <hr/> */}
       {/* <HoverCounter/> */}
-      <MyCompContainer/>
+      {/* <MyCompContainer/> */}
+      <ContainerComp/>
     </div>
   );
 }
