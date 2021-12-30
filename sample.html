@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Parent {
+            constructor(fname, lname) {
+                this.fname = fname
+                this.lname = lname
+            }
+        }
+        class Child extends Parent {
+constructor(fname,lname,email){
+    super(fname,lname)
+    this.email=email
+}
+        }
+        var newObj = new Child("tej", "deep","tejdeepchowdary143@gmail.com ")
+        console.log(newObj)
+    </script>
+</body>
+
+</html>
