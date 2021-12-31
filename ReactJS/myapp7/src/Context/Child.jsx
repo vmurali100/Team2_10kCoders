@@ -11,7 +11,7 @@ export const Child = () => {
           console.log(value);
           return (
             <div>
-              <h1>{value}</h1>
+              <h1>{value.fname}</h1>
             </div>
           );
         }}

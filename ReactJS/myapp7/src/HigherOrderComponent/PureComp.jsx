@@ -1,7 +1,7 @@
-import React ,{ Component } from "react"
+import React ,{  PureComponent } from "react"
 import { HOComp } from "./Higherordercomp"
 
-class  RandomImg extends Component{
+class Purecomp extends PureComponent{
     render(){
       let  {handle ,colour ,my} = this.props
         return <div>
@@ -15,4 +15,4 @@ class  RandomImg extends Component{
     }
      
 }
-export default HOComp(RandomImg)
+export default HOComp(Purecomp)
