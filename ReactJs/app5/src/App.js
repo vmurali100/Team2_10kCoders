@@ -9,7 +9,7 @@ import ParentComponent2 from './Assignment Of HOC Components/HOC with PureCompon
 function App() {
   return (
     <div className="App">
-      {/* <ParentComponent /> */}
+      <ParentComponent />
       <ParentComponent2 />
     </div>
   );

@@ -18,6 +18,7 @@ export default class ParentComponent extends Component {
         console.log("****Parent Component Rendering******")
         return (
             <div>
+                <h1>This is FirstComponent</h1>
                 <ClickCounter1 />
                 <HoverCounter />
             </div>
