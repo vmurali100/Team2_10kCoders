@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import ClickCounter1 from './Assignment Of HOC Components/ClickCounter1';
+import HoverCounter from './Assignment Of HOC Components/HOC with PureComponents/HoverCounter';
+import ParentComponent from './Assignment Of HOC Components/ParentComponent';
+import ClickCounter from './Assignment Of HOC Components/HOC with PureComponents/ClickCounter';
+import ParentComponent2 from './Assignment Of HOC Components/HOC with PureComponents/ParentComponent2';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ParentComponent /> */}
+      <ParentComponent2 />
     </div>
   );
 }
