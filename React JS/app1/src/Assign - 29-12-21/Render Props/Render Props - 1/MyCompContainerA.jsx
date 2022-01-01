@@ -1,16 +1,16 @@
 import React,{useState} from 'react'
 import ClickCounterA from './ClickCounterA'
 import HoverCounterA from './HoverCounterA'
-import { MyComponent } from './MyComponent'
+import { MyComponentA } from './MyComponentA'
 
-export const MyCompContainer = () => {
+export const MyCompContainerA = () => {
     const [someInfo, setsomeInfo] = useState("Some Info")
    
     return (
       
         <div>
-            <MyComponent someInfo={someInfo} render={()=><ClickCounterA />}/>
-            <MyComponent render={()=><HoverCounterA/>}/>
+            <MyComponentA someInfo={someInfo} render={()=><ClickCounterA />}/>
+            <MyComponentA render={()=><HoverCounterA/>}/>
         </div>
     )
 }
