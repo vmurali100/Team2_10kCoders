@@ -17,6 +17,10 @@ import HoverCounter1 from './RenderProps Assignment/RenderProps2/HoverCounter1';
 import RenderPropsComponent3 from './RenderProps Assignment/RenderProps3/RenderPropsComponent3';
 import ClickCounter2 from './RenderProps Assignment/RenderProps3/ClickCounter2';
 import HoverComponent2 from './RenderProps Assignment/RenderProps3/HoverComponent2';
+import ComponentA from './ContextApIs Assignment/ContextApi-1/ComponentA';
+import { UserProvider } from './ContextApIs Assignment/ContextApi-1/ContextApi.Component';
+import { UserProvider2 } from './ContextApIs Assignment/ContextApi-2/ContextApi2';
+import ComponentA1 from './ContextApIs Assignment/ContextApi-2/ComponentA1';
 
 function App() {
   return (
@@ -53,6 +57,17 @@ function App() {
       <RenderPropsComponent3 render={(count,incrementCounter)=>{
         return <HoverComponent2 count={count} incrementCounter={incrementCounter} /> 
       }}></RenderPropsComponent3>
+
+      
+    <h1>Assignment4 ContextAPI's</h1>
+    <UserProvider value="Teja">
+        <ComponentA />
+    </UserProvider>
+
+      <h3>Assignmnet4.1</h3>
+      <UserProvider2 value="Ervin">
+        <ComponentA1 />
+      </UserProvider2>
     </div>
   );
 }
