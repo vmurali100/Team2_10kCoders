@@ -1,16 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import ClickCounter1 from './Assignment Of HOC Components/ClickCounter1';
-import HoverCounter from './Assignment Of HOC Components/HOC with PureComponents/HoverCounter';
-import ParentComponent from './Assignment Of HOC Components/ParentComponent';
-import ClickCounter from './Assignment Of HOC Components/HOC with PureComponents/ClickCounter';
-import ParentComponent2 from './Assignment Of HOC Components/HOC with PureComponents/ParentComponent2';
 
+import './App.css';
+
+import ParentComponent from './Assignment Of HOC Components/ParentComponent';
+
+import ParentComponent2 from './Assignment Of HOC Components/HOC with PureComponents/ParentComponent2';
+import ParentComponent3 from './Assignment Of HOC Components/HOC with PureCpmnt2/ParentComponent3';
+import Reference1 from './Assignment on References/Reference1';
+import Reference2 from './Assignment on References/Reference2';
+import Reference3 from './Assignment on References/Reference3';
+import Reference4 from './Assignment on References/Reference4';
 function App() {
   return (
     <div className="App">
       <ParentComponent />
       <ParentComponent2 />
+      <ParentComponent3 />
+      <Reference1 />
+      <Reference2 />
+      <Reference3 />
+      <Reference4 />
     </div>
   );
 }
