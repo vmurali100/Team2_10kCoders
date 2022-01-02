@@ -15,6 +15,7 @@ export const Fk11=()=>{
         let balanceProducts=products.filter((prd)=>prd.id!==product.id);
         setProducts (balanceProducts);
     }
+    
     return(
         <div>
             <h2>products</h2>

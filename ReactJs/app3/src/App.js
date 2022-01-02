@@ -3,13 +3,17 @@ import './App.css';
 import { Apppppp } from './App33';
 import { Student } from './App333';
 import { Employees } from './App3333';
+import { Music } from './securedapi/Music';
+import ParentComponent from './reference/ParentComponent';
 
 function App() {
   return (
     <div className="App">
-  <Apppppp/>
+  {/* <Apppppp/>
   <Student/>
-  <Employees/>
+  <Employees/> */}
+  {/* <Music/> */}
+  <ParentComponent/>
     </div>
   );
 }
