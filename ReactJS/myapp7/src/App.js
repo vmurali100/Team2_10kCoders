@@ -21,8 +21,8 @@ function App() {
      {/* <PureComp /> */}
      {/* <RefComp /> */}
      {/* <Consume/> */}
-     <Sample />
-     <Parent />
+     {/* <Sample /> */}
+     {/* <Parent /> */}
 
      {/* <UserProvider value={zip}>
  <h3>Hello From parent 1 Comp</h3>
