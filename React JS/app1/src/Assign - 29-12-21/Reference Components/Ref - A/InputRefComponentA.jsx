@@ -24,7 +24,6 @@ export default class InputRefComponentA extends Component {
   }
   componentDidMount() {
     console.log(this.childCompRef);
-    // this.inputRef.current.focus()
-    // this.inputRef.focus()
+    
   }
 }
