@@ -1,6 +1,6 @@
 const One = ()=>{
     return {
-        type : "one"
+        type : "One"
     }
 }
 const Two = ()=>{
@@ -15,6 +15,6 @@ const Three = ()=>{
 }
 const Four = ()=>{
     return {
-        type : "four"
+        type : "Four"
     }
 }

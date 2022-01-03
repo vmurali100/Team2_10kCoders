@@ -1,15 +1,15 @@
 const Employee = ()=>{
     return {
-        type : "hey employee"
+        type : "Employee"
     }
 }
 const Manager = ()=>{
     return {
-        type : "hey manager"
+        type : "Manager"
     }
 }
 const Ceo = ()=>{
     return {
-        type : "hey Ceo"
+        type : "Ceo"
     }
 }

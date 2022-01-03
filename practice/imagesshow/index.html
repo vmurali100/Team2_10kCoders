@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
-    <button onclick="getprev()">PRV</button>  <br>
+    <img src="./images/1.jpeg" alt="one image" width="200px" height="200px" margin="0 auto">
+    <button onclick="getprev()">PRV</button> <br>
     <button onclick="getnext()">NXT</button>
-     <script>
-          getprev =  () =>{
-            for(i=4 ; i>0 ; i--){
-               
+    <script defer>
+
+
+        var i = 0;
+        getnext = () => {
+
+            let myarr = ["1.jpeg", "2.jpeg", "3.jpeg"]
+            if (i < 4) {
+                document.querySelector("img").setAttribute('src', './images/' + myarr[i]);
+            } else {
+                document.querySelector("img").setAttribute('src', './images/' + myarr[2]);
             }
-         }
-     </script>
+            i++
+
+            console.log(i)
+
+
+
+        }
+    </script>
 </body>
+
 </html>

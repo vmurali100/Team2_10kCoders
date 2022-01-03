@@ -1,16 +1,16 @@
 const Reducer2 = (state , action) =>{
 const {type} = action ;
 switch (type) {
-    case "one" :{
+    case "One" :{
         return "number one "
     }
-    case "two" :{
+    case "Two" :{
         return "number two "
     }
-    case "three" :{
+    case "Three" :{
         return "number three "
     }
-    case "four" :{
+    case "Four" :{
         return "number four "
     }
     default : {

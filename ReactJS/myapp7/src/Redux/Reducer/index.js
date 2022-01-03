@@ -1,4 +1,4 @@
-const  Reduder  = (state , action) =>{
+const  Reducer  = (state , action) =>{
     const {type} = action ; 
 
     switch (type) {
@@ -15,4 +15,4 @@ const  Reduder  = (state , action) =>{
         return "hey all"
     }
 }
-export default  Reduder
+export default  Reducer 
