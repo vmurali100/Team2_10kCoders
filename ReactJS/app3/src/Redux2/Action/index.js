@@ -1,20 +1,19 @@
-const One = ()=>{
+function getALLEmployess() {
     return {
-        type : "One"
+        type:"GET_ALL_Employess"
     }
 }
-const Two = ()=>{
+
+function getALlSweepers() {
     return {
-        type : "Two"
+        type:"GET_ALL_Sweepers"
     }
 }
-const Three = ()=>{
+
+function getAllItems() {
     return {
-        type : "Three"
+        type:"GET_ALL_ITEMS"
     }
 }
-const Four = ()=>{
-    return {
-        type : "Four"
-    }
-}
+
+// Always Actions will Return Object 

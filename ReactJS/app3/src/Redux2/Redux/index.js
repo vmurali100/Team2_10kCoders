@@ -1,21 +1,18 @@
-const Reducer2 = (state , action) =>{
-    const {type} = action ;
-    switch (type) {
-        case "One" :{
-            return "number one "
-        }
-        case "Two" :{
-            return "number two "
-        }
-        case "Three" :{
-            return "number three "
-        }
-        case "Four" :{
-            return "number four "
-        }
-        default : {
-            return "infinity"
-        }
+const defaultData = {
+    users: [],
+    Employesss :["Ram","Srikanth","Nidadavolu","Sateesh"],
+    Sweepers:[]
+  };
+  
+  export default function rootReducer(state = defaultData, action) {
+    switch (action.type) {
+      case "GET_ALL_Employess":
+        return state.students;
+  
+      case "GET_ALL_Sweepers":
+        return state.products;
+  
+      default:
+        return state;
     }
-    }
-    export default Reducer2 ;
+  }
