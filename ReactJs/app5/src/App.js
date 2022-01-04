@@ -24,51 +24,52 @@ import ComponentA1 from './ContextApIs Assignment/ContextApi-2/ComponentA1';
 
 function App() {
   return (
-    <div className="App">
-      <ParentComponent />
-      <ParentComponent2 />
-      <ParentComponent3 />
-      <Reference1 />
-      <Reference2 />
-      <Reference3 />
-      <Reference4 />
+    // <div className="App">
+    //   <ParentComponent />
+    //   <ParentComponent2 />
+    //   <ParentComponent3 />
+    //   <Reference1 />
+    //   <Reference2 />
+    //   <Reference3 />
+    //   <Reference4 />
 
-      <h1>Assignment3 RenderProps</h1>
-      <RenderProp render={(count,incrementCounter)=>
-      <ClickCounter count={count} incrementCounter ={incrementCounter}></ClickCounter>}>
-      </RenderProp>
+    //   <h1>Assignment3 RenderProps</h1>
+    //   <RenderProp render={(count,incrementCounter)=>
+    //   <ClickCounter count={count} incrementCounter ={incrementCounter}></ClickCounter>}>
+    //   </RenderProp>
 
-      <RenderProp render={(count,incrementCounter)=>{
-        return <HoverCounter count={count} incrementCounter={incrementCounter}></HoverCounter>
-      }}></RenderProp>
+    //   <RenderProp render={(count,incrementCounter)=>{
+    //     return <HoverCounter count={count} incrementCounter={incrementCounter}></HoverCounter>
+    //   }}></RenderProp>
 
-      <h2>Assignment3.1</h2>
-      <RenderPrompComponent render={(count,incrementCounter)=>{
-        return <ClickCounter count={count} incrementCounter={incrementCounter} />
-      }}></RenderPrompComponent>
-      <RenderPrompComponent render ={(count,incrementCounter)=>{
-        return <HoverCounter1 count ={count} incrementCounter={incrementCounter} />
-      }}></RenderPrompComponent>
+    //   <h2>Assignment3.1</h2>
+    //   <RenderPrompComponent render={(count,incrementCounter)=>{
+    //     return <ClickCounter count={count} incrementCounter={incrementCounter} />
+    //   }}></RenderPrompComponent>
+    //   <RenderPrompComponent render ={(count,incrementCounter)=>{
+    //     return <HoverCounter1 count ={count} incrementCounter={incrementCounter} />
+    //   }}></RenderPrompComponent>
 
-      <h2>Assignment3.2</h2>
-      <RenderPropsComponent3 render={(count,incrementCounter)=>{
-        return <ClickCounter2 count ={count} incrementCounter = {incrementCounter} />
-      }}></RenderPropsComponent3>
-      <RenderPropsComponent3 render={(count,incrementCounter)=>{
-        return <HoverComponent2 count={count} incrementCounter={incrementCounter} /> 
-      }}></RenderPropsComponent3>
+    //   <h2>Assignment3.2</h2>
+    //   <RenderPropsComponent3 render={(count,incrementCounter)=>{
+    //     return <ClickCounter2 count ={count} incrementCounter = {incrementCounter} />
+    //   }}></RenderPropsComponent3>
+    //   <RenderPropsComponent3 render={(count,incrementCounter)=>{
+    //     return <HoverComponent2 count={count} incrementCounter={incrementCounter} /> 
+    //   }}></RenderPropsComponent3>
 
       
-    <h1>Assignment4 ContextAPI's</h1>
-    <UserProvider value="Teja">
-        <ComponentA />
-    </UserProvider>
+    // <h1>Assignment4 ContextAPI's</h1>
+    // <UserProvider value="Teja">
+    //     <ComponentA />
+    // </UserProvider>
 
-      <h3>Assignmnet4.1</h3>
-      <UserProvider2 value="Ervin">
-        <ComponentA1 />
-      </UserProvider2>
-    </div>
+    //   <h3>Assignmnet4.1</h3>
+    //   <UserProvider2 value="Ervin">
+    //     <ComponentA1 />
+    //   </UserProvider2>
+    // </div>
+    <h2>React Redux</h2>
   );
 }
 
