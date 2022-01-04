@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Students } from "./Students";
+// import { Students } from "./Students";
 
 export const ClassRoom = () => {
   const [students, setStudents] = useState(["Narendra", "Ram", "Teja", "Srikanth"]);
@@ -9,6 +9,6 @@ export const ClassRoom = () => {
     setStudents(studentsDetails)
   }
   return <div>
-      <Students allStudents={students} handleDelete={deleteStudent}/>
+      {/* <Students allStudents={students} handleDelete={deleteStudent}/> */}
   </div>;
 };
