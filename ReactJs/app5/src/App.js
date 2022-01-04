@@ -22,6 +22,10 @@ import { UserProvider } from './ContextApIs Assignment/ContextApi-1/ContextApi.C
 import { UserProvider2 } from './ContextApIs Assignment/ContextApi-2/ContextApi2';
 import ComponentA1 from './ContextApIs Assignment/ContextApi-2/ComponentA1';
 
+import Enginner from './Enginner';
+import Doctor from './Doctor'
+import Teacher from "./Teacher"
+
 function App() {
   return (
     // <div className="App">
@@ -69,7 +73,11 @@ function App() {
     //     <ComponentA1 />
     //   </UserProvider2>
     // </div>
-    <h2>React Redux</h2>
+   <div>
+      <Enginner />
+      <Doctor />
+      <Teacher />
+   </div>
   );
 }
 

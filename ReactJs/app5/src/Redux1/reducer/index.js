@@ -1,12 +1,22 @@
-export default function rootReducer1(state,action){
+const defaultData = {
+    engineers:["Engineer1","Engineer2"],
+    doctors:["Doctor1","Doctor2"],
+    teachers:["Teacher1","TEacher2"]
+}
+
+export default function rootReducer1(state=defaultData,action){
     switch(action.type){
         case "GET_ALL_ENGINEERS":
-        return "Hai we Are Engineers" ;
+        return state.engineers ;
 
         case "GET_ALL_DOCTORS" :
-            return "Hai We are DOCtors";
-        
+            return state.doctors;
+         
         case "GET_ALL_Teachers":
-            return "Hi from Teachers";
+            return state.teachers;
+    
+        default:
+            return state
     }
+   
 }
