@@ -10,6 +10,7 @@ import RefComp from './UseREF/RefComp';
 import Consume from './Consuming';
 import Sample from './PureComp/sampe1';
 import Parent from './PureComp/parent';
+import Student from './Redux/Student';
 
 function App() {
 //  const[zip ,setZip] = useState(5060000001)
@@ -28,6 +29,7 @@ function App() {
  <h3>Hello From parent 1 Comp</h3>
      <Child />
  </UserProvider> */}
+ <Student />
     </div>
   );
 }

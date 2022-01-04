@@ -7,15 +7,18 @@ import {createStore} from 'redux'
 import Reducer from './Redux/Reducer';
 import { Provider } from 'react-redux';
 import Reducer2 from './Redux2/Reducer';
+import Reducer3 from './Redux3/Reducer';
 
 
 const store = createStore(Reducer) ;
 const mystore = createStore(Reducer2) ;
+const mystore3 = createStore(Reducer3)
 console.log(store) 
 console.log(mystore)
+console.log(mystore3)
 ReactDOM.render(
   <React.StrictMode>
- <Provider store = {store} mystore = {mystore}>
+ <Provider store = {store} mystore = {mystore} mystore3 = {mystore3}>
  <App />
  </Provider>
   </React.StrictMode>,
