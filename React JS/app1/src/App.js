@@ -10,11 +10,12 @@ import HoverCounterA from './Assign - 29-12-21/HOComponents/HOComp - A/HoverCoun
 import ParentComponentA from './Assign - 29-12-21/Reference Components/Ref - A/ParentComponentA';
 import { MyComponentA } from './Assign - 29-12-21/Render Props/Render Props - 1/MyComponentA';
 import { MyCompContainerA } from './Assign - 29-12-21/Render Props/Render Props - 1/MyCompContainerA';
+import Student from './Redux/Student';
 
 function App() {
   return (
     <div className="App">
-    <MyCompContainerA/>
+    <Student/>
     </div>
   );
 }
