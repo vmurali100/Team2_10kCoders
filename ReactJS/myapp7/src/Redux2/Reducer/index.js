@@ -1,21 +1,27 @@
-const Reducer2 = (state , action) =>{
-const {type} = action ;
-switch (type) {
-    case "One" :{
-        return "number one "
+const mystate = {
+  one: ["1", "2", "3", "4", "5", "6"],
+  two: ["a", "b ", "c", "d"],
+  three: "hey am from three",
+};
+
+const Reducer2 = (state = mystate, action) => {
+ 
+  switch (action.type) {
+    case "Get_One": {
+      return state.one;
     }
-    case "Two" :{
-        return "number two "
+    case "Get_Two": {
+      return state.two;
     }
-    case "Three" :{
-        return "number three "
+    case "Get_Three": {
+      return state.three;
     }
-    case "Four" :{
-        return "number four "
+    case "Get_Four": {
+      return "number four ";
     }
-    default : {
-        return "infinity"
+    default: {
+      return "infinity";
     }
-}
-}
-export default Reducer2 ;
+  }
+};
+export default Reducer2;

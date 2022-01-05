@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 
-class Student extends Component {
+class Employee extends Component {
   render() {
     console.log(this.props);
     return (
@@ -19,4 +19,4 @@ function mapStateToProps(state) {
     employee: state.employee,
   };
 }
-export default connect(mapStateToProps)(Student);
+export default connect(mapStateToProps)(Employee);

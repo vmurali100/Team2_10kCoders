@@ -1,6 +1,15 @@
 const mystate = {
-    ceo:[] ,
-    manager:[] ,
+    ceo:[{
+        name: "akvm" ,
+        age : 26 ,
+        zip : 500001 
+    }] ,
+    manager:[{
+        name:"varma" ,
+        age: 25 ,
+        area : "wgl" ,
+        zip : 506001 
+    }] ,
     employee :["ajay" ,"akhil" , "harish"]
 }
 

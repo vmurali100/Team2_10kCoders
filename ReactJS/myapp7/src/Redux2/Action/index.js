@@ -1,20 +1,20 @@
 const One = ()=>{
     return {
-        type : "One"
+        type : "Get_One"
     }
 }
 const Two = ()=>{
     return {
-        type : "Two"
+        type : "Get_Two"
     }
 }
 const Three = ()=>{
     return {
-        type : "Three"
+        type : "Get_Three"
     }
 }
 const Four = ()=>{
     return {
-        type : "Four"
+        type : "Get_Four"
     }
 }

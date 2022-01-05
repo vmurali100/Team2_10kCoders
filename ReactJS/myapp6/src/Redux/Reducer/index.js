@@ -1,22 +1,27 @@
+const mystate = {
+  students : ["akhil" , "akhilvm" , "ajay" , "harish"] ,
+  items : ["tool" , "pad" ,"mixer"] ,
+  cart : ["shirt" , "pant" , "jacket"] ,
+  products : ['oil' , 'sugar' , 'teapowder']
+}
 
-
-const Reducer = (state ,action) => {
+function Reducer (state = mystate, action) {
   switch (action.type) {
     case "Students_Data": {
-      return "hey students";
+      return state.students;
     }
 
     case "Items_Data": {
-      return "hey items";
+      return state.items
     }
     case "Cart_Data": {
-      return "hey Cart";
+      return state.cart
     }
     case "Products_Data": {
-      return "hey products";
+      return state.products
     }
     default :
-    return "heyyyyyyy"
+    return state
   }
 };
-export  default Reducer
+export default Reducer
