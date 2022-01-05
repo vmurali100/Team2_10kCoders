@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Products from './Products';
+// import Students1 from './Students1';
 // import Js1 from './classapi/Js1';
 // import Js2 from './classapi/Js2';
 // import Js3 from './classapi/Js3';
@@ -28,6 +30,8 @@ function App() {
      <Ft1/>
      <Ft2/>
      <Ft3/> */}
+     {/* <Students1/> */}
+     <Products/>
     </div>
   );
 }

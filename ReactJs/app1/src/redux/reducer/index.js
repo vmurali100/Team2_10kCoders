@@ -1,7 +1,7 @@
 const defaultData={
     users:[],
 
-    students:[],
+    students:["abc","bca","cad","dae"],
     products:[]
 
 };

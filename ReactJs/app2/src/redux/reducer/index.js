@@ -1,15 +1,20 @@
+const defaultData={
+    users:[],
+    products:["xxx","yyy","zzz","xyz"]
+}
+
 export default function rootReducer(state,action){
     switch(action.type){
         case "GET_ALL_STUDENTS":
-            return "hello from all students"
+            return state.students
 
         case "GET_ALL_PRODUCTS":
-            return "hello from all products"
+            return state.products
         
         case "GET_ALL_ITEMS":
-            return "hello from all items"
+            return state.items
 
             default:
-                return "hello"
+                return state
     }
 }
