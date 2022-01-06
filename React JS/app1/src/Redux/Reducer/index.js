@@ -2,7 +2,7 @@
 const defaultData = {
     users:[],
     students:['Harish','Rachana','Giri','Usha','Sohail'],
-    products:[]
+    products:['cloths','Dolls','chairs']
 }
 export default function rootReducer(state=defaultData,action) {
     switch (action.type) {

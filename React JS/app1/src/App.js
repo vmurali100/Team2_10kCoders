@@ -1,21 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import { ContainerA } from './Assign - 29-12-21/Context API\'s/Context - A/ContainerA';
-import MemoComponent from './Assign - 29-12-21/HOC Pure & Memo Components/Memo Components/Memo 1/MemoComponent';
-import PureComponentA from './Assign - 29-12-21/HOC Pure & Memo Components/Pure Components/Pure 1/PureComponentA';
-import ComponentContainerA from './Assign - 29-12-21/HOC Pure & Memo Components/Pure Components/Pure 1/ComponentContainerA';
-import { HOCompA } from './Assign - 29-12-21/HOComponents/HOComp - A/HOCompA';
-import ClickCounterA from './Assign - 29-12-21/HOComponents/HOComp - A/ClickCounterA';
-import HoverCounterA from './Assign - 29-12-21/HOComponents/HOComp - A/HoverCounterA';
-import ParentComponentA from './Assign - 29-12-21/Reference Components/Ref - A/ParentComponentA';
-import { MyComponentA } from './Assign - 29-12-21/Render Props/Render Props - 1/MyComponentA';
-import { MyCompContainerA } from './Assign - 29-12-21/Render Props/Render Props - 1/MyCompContainerA';
-import Student from './Redux/Student';
+import Name from './Redux API\'s/Fill Text/Name/Name';
+import Employee from './Redux API\'s/Fill Text/Employee/Employee';
+import Person from './Redux API\'s/Fill Text/Person/Person';
+import Cart from './Redux API\'s/Fake store/Cart/Cart';
+import Products from './Redux API\'s/Fake store/Products/Products';
+import User from './Redux API\'s/Json/Users/Users';
+import Album from './Redux API\'s/Json/Albums/Album';
+import Comments from './Redux API\'s/Json/Comments/Comments';
+import Photos from './Redux API\'s/Json/Photos/Photos';
+import Posts from './Redux API\'s/Json/Posts/Posts';
+import Todos from './Redux API\'s/Json/Todos/Todos';
+
 
 function App() {
   return (
     <div className="App">
-    <Student/>
+    <Todos/>
     </div>
   );
 }
