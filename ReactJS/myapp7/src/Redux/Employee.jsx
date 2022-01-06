@@ -4,10 +4,10 @@ import { connect } from "react-redux";
 
 class Employee extends Component {
   render() {
-    console.log(this.props);
+    console.log(this.props.employee);
     return (
       <div>
-        {this.props.employee.map((e) => {
+        {this.props.employee((e) => {
           return <li key={e}>{e}</li>;
         })}
       </div>
@@ -15,8 +15,10 @@ class Employee extends Component {
   }
 }
 function mapStateToProps(state) {
+  console.log(state)
   return {
     employee: state.employee,
+    
   };
 }
 export default connect(mapStateToProps)(Employee);

@@ -4,7 +4,7 @@ const mystate = {
   three: "hey am from three",
 };
 
-const Reducer2 = (state = mystate, action) => {
+const NumbersReducer = (state = mystate, action) => {
  
   switch (action.type) {
     case "Get_One": {
@@ -24,4 +24,4 @@ const Reducer2 = (state = mystate, action) => {
     }
   }
 };
-export default Reducer2;
+export default NumbersReducer;

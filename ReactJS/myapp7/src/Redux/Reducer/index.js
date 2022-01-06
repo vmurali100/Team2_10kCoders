@@ -1,3 +1,6 @@
+import { combineReducers } from "redux";
+import NumbersReducer from "../../Redux2/Reducer";
+
 const mystate = {
     ceo:[{
         name: "akvm" ,
@@ -14,7 +17,7 @@ const mystate = {
 }
 
 
-const  Reducer  = (state = mystate , action) =>{
+const  EmployeeReducer  = (state = mystate , action) =>{
     const {type} = action ; 
 
     switch (type) {
@@ -31,4 +34,8 @@ const  Reducer  = (state = mystate , action) =>{
         return state
     }
 }
-export default  Reducer 
+ const Rootreducer = combineReducers({
+     employee: EmployeeReducer ,
+     numbers : NumbersReducer,
+ })
+ export default Rootreducer

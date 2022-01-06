@@ -10,7 +10,7 @@ import Employee, { Name, Person } from './Filltext/MyClassAPI';
 import EmployeeFunc, { NameFunc, PersonFunc } from './Filltext/MyfuncAPI';
 import Posts, { Albums, Comments, Photos, Todos, Usersjson } from './JSONPlaceHolder/JSONClass';
 import JSONpost, { JSONalbums, JSONcomments, JSONphotos, JSONtodos, JSONusers } from './JSONPlaceHolder/JSONfunc';
-
+import Display from './Redux/Display';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
    <Products />
    <Carts /> */}
    {/* <UserFunc /> */}
-   <UserFuncPro />
+   {/* <UserFuncPro /> */}
    {/* <UserFuncCart />
    <Employee />
    < EmployeeFunc />
@@ -47,6 +47,7 @@ function App() {
    <JSONphotos />
    <JSONtodos />
    <JSONusers /> */}
+<Display />
 
     
     </div>
