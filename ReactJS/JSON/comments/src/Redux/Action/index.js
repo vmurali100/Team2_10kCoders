@@ -1,7 +1,7 @@
-const getUsersData = ()=>{
+const handleComments = ()=>{
     return {
-        type: "JSON_USERS"
+        type: "JSON_COMMENTS"
 
     }
 }
-export default getUsersData
+export default handleComments
