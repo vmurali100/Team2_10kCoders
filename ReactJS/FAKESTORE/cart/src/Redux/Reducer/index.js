@@ -75,7 +75,12 @@ const Reducer = (state = data , action)=>{
 switch (action.type) {
   case "CART_DATA":
     return state.cart
-
+   case "DEL_CART_DATA" :
+    let newuser = state.user.map((e)=>{
+       return <li>{e.dtate}</li>
+     })
+     newuser.pop() 
+     return newuser
   default:
    return state
 }
