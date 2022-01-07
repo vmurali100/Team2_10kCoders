@@ -12,6 +12,7 @@ export default class Greeting extends Component {
         <h3>{this.props.welc}</h3> */}
         <h2>{this.props.message}</h2>
         <h3>{this.props.welcomeMsg}</h3>
+        <p>{this.props.user}</p>
       </div>
     );
   }

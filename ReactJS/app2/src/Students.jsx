@@ -9,6 +9,7 @@ class Students extends Component {
                 {this.props.students.map((std)=>{
                     return <p key={std}>{std}</p>
                 })}
+                
             </div>
         )
     }

@@ -6,8 +6,10 @@ export class Harish extends Component{
         super()
         this.state={
             message :"Welcome to Harish Component",
-            welcomeMsg:"Hello 10K Team .. Welcome to ReactJS Training "
+            welcomeMsg:"Hello 10K Team .. Welcome to ReactJS Training ",
+            user:"welcome to class component"
         }
+        
     }
 
     render(){
@@ -17,7 +19,7 @@ export class Harish extends Component{
             {/* <Greeting 
             msg={this.state.message}
             welc={this.state.welcomeMsg}/> */}
-
+            <button onClick={()=>{this.setState({user:"peoples"})}}>users</button>
             <Greeting {...this.state}/>
         </div>
     }

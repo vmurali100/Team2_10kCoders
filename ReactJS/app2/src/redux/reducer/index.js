@@ -1,7 +1,7 @@
 const defaultData = {
   users: [],
   students :["Murali","Krishna","Sam","Kumar"],
-  products:[]
+  products:["hello"]
 };
 
 export default function rootReducer(state = defaultData, action) {

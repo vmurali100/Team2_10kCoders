@@ -4,10 +4,11 @@ import "./App.css";
 // import { Student } from "./Functional_Components/Student";
 // import { Teja } from "./Functional_Components/Teja";
 // import ClickCounter from "./HigherOrderComponent/ClickCounter";
-import HoverCounter from "./HigherOrderComponent/HoverCounter";
-import { MyCompContainer } from "./RenderProps/MyCompContainer";
-import ComponentsContainer from "./PureComponents/ComponentsContainer";
-import { ContainerComp } from "./Context/ContainerComp";
+// import HoverCounter from "./HigherOrderComponent/HoverCounter";
+// import { MyCompContainer } from "./RenderProps/MyCompContainer";
+// import ComponentsContainer from "./PureComponents/ComponentsContainer";
+// import { ContainerComp } from "./Context/ContainerComp";
+import { Harish } from "./Class_Components/Harish";
 // import ParentComponent from "./RefsComponent/ParentComponent";
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       {/* <hr/> */}
       {/* <HoverCounter/> */}
       {/* <MyCompContainer/> */}
-      <ContainerComp/>
+      {/* <ContainerComp/> */}
+      <Harish/>
     </div>
   );
 }
