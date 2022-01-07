@@ -1,7 +1,7 @@
-const getUsersData = ()=>{
+const handleTodos = ()=>{
     return {
-        type: "JSON_USERS"
+        type: "JSON_TODOS"
 
     }
 }
-export default getUsersData
+export default handleTodos
