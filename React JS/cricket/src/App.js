@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import LifeCycle from './class Components/LifeCycle';
-import Students from './Redux/Students';
+
+import Users from './Redux CRUD/Redux/Users';
 
 function App() {
   return (
     <div className="App">
-      <Students/>
+      <Users/>
     </div>
   );
 }
