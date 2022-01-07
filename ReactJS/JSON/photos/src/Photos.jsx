@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-class User extends Component {
+class Photos extends Component {
  
   render() {
     return (
       <div>
-        {this.props.users.map((e) => {
+        {this.props.photos.map((e) => {
           return (
             <h1 key={e.id}>
-              {e.email} <button onClick={this.deleteUser}>Delete</button>
+              <img src={e.url} alt="" width="200px"  height="200px"/> <button onClick={this.deleteUser}>Delete</button>
             </h1>
           );
         })}
@@ -20,7 +20,7 @@ class User extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    users: state.users,
+    photos: state.photos,
   };
 };
-export default connect(mapStateToProps)(User);
+export default connect(mapStateToProps)(Photos);

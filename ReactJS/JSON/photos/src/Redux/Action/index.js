@@ -1,7 +1,7 @@
-const getUsersData = ()=>{
+const handlePhotos = ()=>{
     return {
-        type: "JSON_USERS"
+        type: "JSON_PHOTOS"
 
     }
 }
-export default getUsersData
+export default handlePhotos
