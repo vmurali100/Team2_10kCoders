@@ -67,7 +67,7 @@ const Reducer = (state=mdata,action)=>{
  switch(type){
     case "GET_MEMBER":
 
-    return state.members
+    return state.members;
     default:
         return state;
  }

@@ -11,7 +11,7 @@ class Employee extends Component {
     render() {
         return <div>
             
-            {this.props.employee.map((emp)=>{
+            {this.props.Employee.map((emp)=>{
                   return <h1>{emp.lname}</h1>
             })}
         </div>
