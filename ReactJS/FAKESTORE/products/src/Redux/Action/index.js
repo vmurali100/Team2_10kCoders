@@ -1,6 +1,6 @@
-const handleCart =()=>{
+const handleProducts =()=>{
     return {
-        type : "CART_DATA"
+        type : "PRODUCTS_DATA"
     }
 }
-export default handleCart 
+export default handleProducts 
