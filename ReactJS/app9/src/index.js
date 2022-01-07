@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Reducer from './Redux/Reducer';
-import {createStore} from 'redux'
-import {Provider} from 'react-redux'
-
-
+import Reducer from '../../app8/src/Redux/Reducer';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 const store = createStore(Reducer)
 console.log(store)

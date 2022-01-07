@@ -1,3 +1,4 @@
+
 let Employee = [
     {
         "fname": "Yiping",
@@ -97,9 +98,7 @@ const Reducer = (state=Details,action)=>{
     const {type} = action;
     switch (type) {
         case "GET_EMPLOYEE":
-           return state.Employee
-            ;
-    
+           return state.Employee;
         default:
            return state;
     }

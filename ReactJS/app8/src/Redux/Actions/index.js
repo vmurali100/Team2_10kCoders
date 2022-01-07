@@ -1,4 +1,4 @@
-const handle_employee = ()=>{
+export const handle_employee = ()=>{
     return { 
         type: "GET_EMPLOYEE"
 }
