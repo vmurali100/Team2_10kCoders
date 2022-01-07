@@ -1,18 +1,26 @@
-import React , { Component } from 'react'
-import {connect} from "react-redux"
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class User extends Component {
-render(){
-    return <div>
-        {this.props.users.map((e)=>{
-            return <h1 key={e.id}>{e.email}</h1>
+ 
+  render() {
+    return (
+      <div>
+        {this.props.users.map((e) => {
+          return (
+            <h1 key={e.id}>
+              {e.email} <button onClick={this.deleteUser}>Delete</button>
+            </h1>
+          );
         })}
-    </div>
+        <br />
+      </div>
+    );
+  }
 }
-}
-const mapStateToProps =(state)=>{
-return {
-    users : state.users
-}
-}
-export default connect(mapStateToProps)(User)
+const mapStateToProps = (state) => {
+  return {
+    users: state.users,
+  };
+};
+export default connect(mapStateToProps)(User);
