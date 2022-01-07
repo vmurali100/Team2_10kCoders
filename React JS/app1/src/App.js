@@ -5,7 +5,6 @@ import Employee from './Redux API\'s/Fill Text/Employee/Employee';
 import Person from './Redux API\'s/Fill Text/Person/Person';
 import Cart from './Redux API\'s/Fake store/Cart/Cart';
 import Products from './Redux API\'s/Fake store/Products/Products';
-import User from './Redux API\'s/Json/Users/Users';
 import Album from './Redux API\'s/Json/Albums/Album';
 import Comments from './Redux API\'s/Json/Comments/Comments';
 import Photos from './Redux API\'s/Json/Photos/Photos';
