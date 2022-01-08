@@ -1,13 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Cart from './Cart';
-import Userform from '../../../myapp7/src/Userform';
+import Form from './Form';
 
 function App() {
   return (
     <div className="App">
-    <Cart />
-    {/* <Userform /> */}
+      <Form />
     </div>
   );
 }

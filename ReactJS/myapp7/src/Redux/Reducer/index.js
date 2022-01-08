@@ -17,7 +17,7 @@ const mystate = {
 }
 
 
-const  EmployeeReducer  = (state = mystate , action) =>{
+const  Reducer  = (state = mystate , action) =>{
     const {type} = action ; 
 
     switch (type) {
@@ -34,8 +34,8 @@ const  EmployeeReducer  = (state = mystate , action) =>{
         return state
     }
 }
- const Rootreducer = combineReducers({
-     employee: EmployeeReducer ,
-     numbers : NumbersReducer,
- })
- export default Rootreducer
+//  const Rootreducer = combineReducers({
+//      employee: EmployeeReducer ,
+//      numbers : NumbersReducer,
+//  })
+ export default Reducer

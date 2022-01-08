@@ -7,7 +7,7 @@ class Employee extends Component {
     console.log(this.props.employee);
     return (
       <div>
-        {this.props.employee((e) => {
+        {this.props.employee.employee.map((e) => {
           return <li key={e}>{e}</li>;
         })}
       </div>

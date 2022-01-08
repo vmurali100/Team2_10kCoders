@@ -1,7 +1,6 @@
-
-export const handleCart =()=>{
+export const handleUser =()=>{
     return {
-        type : "CART_DATA"
+        type : "GET_USER"
     }
 }
 

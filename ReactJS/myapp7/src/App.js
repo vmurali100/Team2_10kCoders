@@ -14,6 +14,7 @@ import Manager from './Redux/Manager';
 import Employee from './Redux/Employee';
 import Ceo from './Redux/Ceo';
 import One from './Redux2/One';
+import Userform from './Userform';
 
 function App() {
 //  const[zip ,setZip] = useState(5060000001)
@@ -32,10 +33,11 @@ function App() {
  <h3>Hello From parent 1 Comp</h3>
      <Child />
  </UserProvider> */}
- <Employee /> 
- <Manager />
- <Ceo />
-<One />
+ {/* <Employee />  */}
+ {/* <Manager /> */}
+ {/* <Ceo /> */}
+{/* <One /> */}
+<Userform />
     </div>
   );
 }
