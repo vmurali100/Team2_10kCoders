@@ -15,7 +15,6 @@ export const Fk11=()=>{
         let balanceProducts=products.filter((prd)=>prd.id!==product.id);
         setProducts (balanceProducts);
     }
-    
     return(
         <div>
             <h2>products</h2>
@@ -24,6 +23,7 @@ export const Fk11=()=>{
                     return(
 <li>
 <img style={{width:"150px",height:"150px"}} src={product.image}/>
+
 
     <button onClick={()=>{
         handleDelete(product);

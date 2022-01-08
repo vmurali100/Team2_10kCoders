@@ -1,6 +1,6 @@
-function getAllStudents(){
+function getPosts(){
    return{
-       type:"GET_ALL_STUDENTS"
+       type:"GET_POSTS"
    }
 }
 function getAllProducts(){

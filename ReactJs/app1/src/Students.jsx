@@ -7,7 +7,7 @@ class Students extends Component{
         return(
             <div>
 {this.props.students.map((std)=>{
-    return <p key={std}>{std}</p>
+    return <p key={std.title}>{std.title}</p>
 })}
             </div>
         )

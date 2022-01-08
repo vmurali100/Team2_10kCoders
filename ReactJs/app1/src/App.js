@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Students from './Students';
+import Students, {Posts}  from './Students';
 // import { Js11 } from './funcapi/Js11';
 // import { Js12 } from './funcapi/Js12';
 // import { Js13 } from './funcapi/Js13';
