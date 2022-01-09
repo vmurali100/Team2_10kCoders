@@ -1,12 +1,11 @@
 import React,{Component} from "react"
 import {connect} from "react-redux"
-
 class Students extends Component{
     render(){
         console.log(this.props)
         return(
             <div>
-{this.props.students.map((std)=>{
+{this.props.posts.map((std)=>{
     return <p key={std.title}>{std.title}</p>
 })}
             </div>
@@ -15,7 +14,7 @@ class Students extends Component{
 }
 function mapStateToProps(state){
     return{
-        students:state.students
+        posts:state.posts
     }
 }
 export default connect(mapStateToProps)(Students)

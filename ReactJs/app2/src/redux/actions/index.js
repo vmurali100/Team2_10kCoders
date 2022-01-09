@@ -1,18 +1,5 @@
-function getPosts(){
-   return{
-       type:"GET_POSTS"
-   }
-}
-function getAllProducts(){
+export const getComments=()=>{
     return{
-        type:"GET_ALL_PRODUCTS"
+        type:"GET_COMMENTS"
     }
-
-}
-function getAllItems(){
-    return{
-        type:"GET_ALL_ITEMS"
-        
-    }
-
 }

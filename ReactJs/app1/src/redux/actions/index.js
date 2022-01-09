@@ -1,6 +1,7 @@
-export default function getPosts(){
+export const getPosts=()=>{
     return{
         type:"GET_POSTS"
     }
 
 }
+

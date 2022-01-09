@@ -9,6 +9,7 @@ import ClickCounter from './higherordercomponents/ClickCounter';
 import HoverCounter from './higherordercomponents/HoverCounter';
 import { Hordercomp } from './higherordercomponents/Hordercomp';
 import rootReducer from './redux/reducer';
+import Todos from './Todos';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <HoverCounter/>
     
     <Hordercomp/> */}
+    <Todos/>
     </div>
   );
 }

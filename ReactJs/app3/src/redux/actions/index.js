@@ -1,16 +1,5 @@
-function getALLStudents(){
-      return{
-          type:"GET_ALL_STUDENTS"
-      }
+export const getAlbums=()=>{
+    return{
+        type:"GET_ALBUMS"
+    }
 }
-function getALLProducts(){
-       return{
-           type:"GET_ALL_PRODUCTS"
-       }
-}
-function getALLItems(){
-       return{
-           type:"GET_ALL_ITEMS"
-       }
-}
-//always actions will return objects//

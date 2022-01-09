@@ -5,6 +5,7 @@ import { Student } from './App333';
 import { Employees } from './App3333';
 import { Music } from './securedapi/Music';
 import ParentComponent from './reference/ParentComponent';
+import Albums from './Albums';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
   <Employees/> */}
   {/* <Music/> */}
   {/* <ParentComponent/> */}
+  <Albums/>
     </div>
   );
 }
