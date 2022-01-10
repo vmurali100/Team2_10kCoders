@@ -34,17 +34,18 @@ handleCreate=()=>{
                     <label htmlFor='"lname'>LNAME:</label>
                     <input type="text" name="lname" value = {this.state.lname}
                        onChange={(e)=>{this.handleChange(e)}} /><br />
-
+    
                     <label htmlFor='email'>Email:</label>
                     <input type = "email" name="email" value = {this.state.email}
                        onChange={(e)=>{this.handleChange(e)}} /><br />
                        <button type='button' onClick={this.handleCreate}>AddUser</button>
                 </form>
 
-                {this.props.user && this.props.user.map((std) => {
-                    return <p key={std}>{std}</p>
+                {this.props.user && this.props.user.map((std,i) => {
+                    return <p key={std}>{std[i]}</p>
+                
                 })}
-                {console.log("Executing")}
+                {console.log(this.props)}
             </div>
         )
     }

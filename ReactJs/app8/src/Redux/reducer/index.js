@@ -1,5 +1,5 @@
 const defaultData = {
-    user:[]
+    user:["TEJA"]
 }
 
 function rootReducer(state=defaultData,action){
@@ -7,7 +7,7 @@ function rootReducer(state=defaultData,action){
         case "GET_USER":
             return state
         case "CREATE_USER":
-            let newUsers = [...state]
+            let newUsers = [...defaultData.user]
             newUsers.push(action.payload)
             return newUsers
     
