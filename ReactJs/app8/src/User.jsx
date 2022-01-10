@@ -42,13 +42,14 @@ handleCreate=()=>{
                        <button type='button' onClick={this.handleCreate}>AddUser</button>
                 </form>
 
-                {/* {this.props.user && this.props.user.map((std,i) => {
+                {this.props.user && this.props.user.map((std,i) => {
                     return <p key={std.fname}>{std.fname}</p>
                 
-                })} */}
+                })}
                 {console.log(this.props)}
                 {this.props.user.fname}
             
+
             </div>
         )
     }
