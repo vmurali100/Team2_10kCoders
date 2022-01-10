@@ -1,13 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Pictures from './Pictures';
-
-
+import State from './State';
 
 function App() {
   return (
     <div className="App">
-     <Pictures/>
+    <State/>
     </div>
   );
 }

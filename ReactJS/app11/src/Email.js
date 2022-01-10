@@ -21,8 +21,9 @@ class Email extends Component {
 
 function mapStateToProps(state){
     return{
+
         Comment:state.Comment
     }
 }
 
-export default connect(mapStateToprops)(Email);
+export default  connect (mapStateToProps) (Email);
