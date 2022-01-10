@@ -6,6 +6,7 @@ import { Employees } from './App3333';
 import { Music } from './securedapi/Music';
 import ParentComponent from './reference/ParentComponent';
 import Albums from './Albums';
+import { MyCompContainer } from './renderProps/MyCompContainer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
   {/* <Music/> */}
   {/* <ParentComponent/> */}
   <Albums/>
+  {/* <MyCompContainer/> */}
     </div>
   );
 }

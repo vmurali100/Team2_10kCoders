@@ -1,5 +1,5 @@
 import React,{Component} from "react"
-export const Hordercomp =(originalComponent)=>{
+export const Hordercomp =(OriginalComponent)=>{
     //creating a new class component which returns original component//
 class NewComponent extends Component{
     constructor(props){
@@ -13,7 +13,7 @@ class NewComponent extends Component{
     };
     render(){
         return(
-            <originalComponent count={this.state.count} handleCount={this.handleCount}/>
+            <OriginalComponent count={this.state.count} handleCount={this.handleCount}/>
         )
     }
 }

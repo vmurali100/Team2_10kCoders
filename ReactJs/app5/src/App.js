@@ -16,12 +16,12 @@ function App() {
     <div className="App">
    
     {/* <LifeCycleCompB/> */}
-    {/* <ClickCounter/>
+    {/* <ClickCounter/> */}
     <hr/>
-    <HoverCounter/>
+    {/* <HoverCounter/> */}
+    {/* <Hordercomp/> */}
     
-    <Hordercomp/> */}
-    <Todos/>
+    {/* <Todos/> */}
     </div>
   );
 }

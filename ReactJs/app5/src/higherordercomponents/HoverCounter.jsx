@@ -1,5 +1,6 @@
 import React,{Component} from "react"
-export default class HoverCounter extends Component{
+import { Hordercomp } from "./Hordercomp"
+ class HoverCounter extends Component{
     // constructor(props){
     //     super(props)
     //     this.state={
@@ -11,10 +12,12 @@ export default class HoverCounter extends Component{
     // }
 
     render(){
+        console.log(this.props)
         return(
             <div>
-                <h2 onMouseOver={this.handleCount}>you hovered {this.state.count}</h2>
+                <h2 onMouseOver={this.props.handleCount}>you hovered {this.props.count}</h2>
             </div>
         )
     }
 }
+export default Hordercomp(HoverCounter)
