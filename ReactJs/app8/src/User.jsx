@@ -7,9 +7,9 @@ class User extends Component {
         super(props)
 
         this.state = {
-            fname: "",
+            user:{fname: "",
             lname: "",
-            email: ""
+            email: ""}
         }
     }
 handleChange = (e)=>{
@@ -42,10 +42,12 @@ handleCreate=()=>{
                        <button type='button' onClick={this.handleCreate}>AddUser</button>
                 </form>
 
-                {this.props.user && this.props.user.map((std,i) => {
+                {/* {this.props.user && this.props.user.map((std,i) => {
                     return <p key={std.fname}>{std.fname}</p>
                 
-                })}
+                })} */}
+                {console.log(this.props)}
+                {this.props.user.fname}
             
             </div>
         )

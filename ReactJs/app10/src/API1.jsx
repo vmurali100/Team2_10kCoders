@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-export class API1 extends Component {
+ class API1 extends Component {
    
     render() {
         console.log(this.props)
@@ -18,6 +18,7 @@ export class API1 extends Component {
 const mapStateToProps=(state)=>{
     return{
         students:state.api1data
+        
     }
 }
 export default connect(mapStateToProps)(API1)
