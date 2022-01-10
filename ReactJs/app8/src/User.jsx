@@ -19,11 +19,12 @@ handleChange = (e)=>{
 }
 handleCreate=()=>{
     this.props.createUser(this.state.user)
+    console.log("From Creator",this.props)
 }
 
 
     render() {
-        console.log(this.props)
+       
         return (
             <div>
                 <form>
@@ -42,10 +43,10 @@ handleCreate=()=>{
                 </form>
 
                 {this.props.user && this.props.user.map((std,i) => {
-                    return <p key={std}>{std[i]}</p>
+                    return <p key={std.fname}>{std.fname}</p>
                 
                 })}
-                {console.log(this.props)}
+            
             </div>
         )
     }
@@ -53,7 +54,7 @@ handleCreate=()=>{
 
 const mapStateToProps = (state) => {
     return {
-        user: state.user
+        user: state
     }
 }
 function mapDispatchToProps(dispatch){
