@@ -21,7 +21,7 @@ function App() {
     {/* <HoverCounter/> */}
     {/* <Hordercomp/> */}
     
-    {/* <Todos/> */}
+    <Todos/>
     </div>
   );
 }
