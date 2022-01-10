@@ -1,5 +1,5 @@
-export function getApi3Data(){
+export function createUserAction(user){
     return{
-        type:"API_3"
+        type:"CREATE_USER",payload:user
     }
 }
