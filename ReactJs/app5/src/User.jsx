@@ -1,4 +1,3 @@
-
 import React,{useState} from "react"
 export const User=()=>{
     const[fname,setfname]=useState("");

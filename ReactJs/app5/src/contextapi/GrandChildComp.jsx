@@ -7,7 +7,7 @@ export const GrandChildComp=({message})=>{
             <UserConsumer>
                 {(val)=>{
                     console.log(val)
-                    return<h3> message from container component(context): {val.name}</h3>
+                    return<h3> message from container component(context): {val.email}</h3>
                 }}
             </UserConsumer>
         </div>
