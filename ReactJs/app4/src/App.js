@@ -12,9 +12,9 @@ function App() {
       <App44/>
       <App444/>
       <Apppp/> */}
-      {/* <ComponentContainer/>
-       */}
-     <Photos/>
+      <ComponentContainer/>
+      
+     {/* <Photos/> */}
     </div>
   );
 }

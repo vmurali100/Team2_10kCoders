@@ -1,4 +1,5 @@
 import React,{Component} from "react"
+import FuncChild from "./FuncChild";
 import { NormalComponent } from "./NormalComponent"
 import PureComp from "./PureComp";
 export default class ComponentContainer extends Component{
@@ -21,6 +22,7 @@ export default class ComponentContainer extends Component{
     hello from container component
     <NormalComponent message={this.state.message}/>
     <PureComp message={this.state.message}/>
+    <FuncChild message={this.state.message}/>
 </h2>
             </div>
         )
