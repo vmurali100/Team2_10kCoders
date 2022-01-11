@@ -10,6 +10,7 @@ import HoverCounter from './higherordercomponents/HoverCounter';
 import { Hordercomp } from './higherordercomponents/Hordercomp';
 import rootReducer from './redux/reducer';
 import Todos from './Todos';
+import { ContainerComp } from './contextapi/ContainerComp';
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
     <hr/>
     {/* <HoverCounter/> */}
     {/* <Hordercomp/> */}
+    <ContainerComp/>
     
-    <Todos/>
+    {/* <Todos/> */}
     </div>
   );
 }
