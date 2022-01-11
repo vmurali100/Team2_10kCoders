@@ -5,20 +5,12 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import rootReducer from './Redux/Reducer';
-import userReducer from './Redux/Redux _A/Reducer';
-import Reducer from './Redux API\'s/Fill Text/Name/Reducer';
-import EmpReducer from './Redux API\'s/Fill Text/Employee/Reducer';
-import PersonReducer from './Redux API\'s/Fill Text/Person/Reducer';
 import CartReducer from './Redux API\'s/Fake store/Cart/Reducer';
 import ProductReducer from './Redux API\'s/Fake store/Products/Reducer/Index';
-import AlbumReducer from './Redux API\'s/Json/Albums/Reducer';
-import CommentReducer from './Redux API\'s/Json/Comments/Reducer';
-import PhotoReducer from './Redux API\'s/Json/Photos/Reducer';
-import PostReducer from './Redux API\'s/Json/Posts/Reducer';
-import TodoReducer from './Redux API\'s/Json/Todos/Reducer';
+import rootReducer from '../../fullstack/src/CRUD/Redux Crud/Reducer';
 
-const store = createStore(TodoReducer)
+
+const store = createStore(rootReducer)
 console.log(store)
 ReactDOM.render(
   <React.StrictMode>

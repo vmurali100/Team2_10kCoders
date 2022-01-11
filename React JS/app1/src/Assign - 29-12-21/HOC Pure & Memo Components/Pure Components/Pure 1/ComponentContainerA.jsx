@@ -11,7 +11,7 @@ export default class ComponentContainerA extends Component {
         }
     }
 
-    componentDidMount(){
+    componentDidMount(){  
         setInterval(()=>{
             this.setState({message:"I am Changing"})
         },2000)

@@ -10,3 +10,4 @@ const FuncChild = ({message}) => {
 }
 
 export default React.memo(FuncChild);
+

@@ -26,7 +26,7 @@ class Users extends Component {
   };
   handleClear = () => {
     let newUser = {
-      fname: "Ram",
+      fname: "",
       lname: "",
       email: "",
     };

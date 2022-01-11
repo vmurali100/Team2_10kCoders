@@ -2,8 +2,7 @@ import React, { PureComponent } from 'react'
 
 export default class PureComponentA extends PureComponent {
     constructor(props) {
-        super(props)
-                 
+        super(props)              
         }
     render() {
         return (
