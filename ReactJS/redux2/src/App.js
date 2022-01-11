@@ -1,15 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Students from './Students';
+import Products from './Products';
+import Users from './Users';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Reducer 2
-        </p>
-      </header>
+      <Students />
+      <Products />
+      <Users />
     </div>
   );
 }
