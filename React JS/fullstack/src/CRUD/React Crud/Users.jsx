@@ -63,7 +63,7 @@ export default class Users extends Component {
                             this.handleChange(e);
                         }}
                     />
-                    {this.state.index ? (
+                    {this.state.index !==null? (
                         <button type="button" onClick={this.handleUpdate}>
                             Upate User
                         </button>
@@ -76,22 +76,8 @@ export default class Users extends Component {
                 <hr style={{color:'green'}}/>
                 {this.state.users.map((user, i) => (
                     <p key={i}>
-                        <span
-                            onClick={() => {
-                                this.handleEditUser(user, i);
-                            }}
-                        >
-                            {user.fname}
-                        </span>{" "}
-                        -{" "}
-                        <span style={{ color: "red", fontWeight: "bold" }}
-                            onClick={() => {
-                                this.handleDelete(user);
-                            }}
-                        >
-                            {" "}
-                            X{" "}
-                        </span>
+                        <span onClick={() => {this.handleEditUser(user, i); }}>{user.fname} </span>{" "}  -{" "}
+                        <span style={{ color: "red", fontWeight: "bold" }} onClick={() => { this.handleDelete(user); }} >   {" "}  X{" "} </span>                                
                     </p>
                 ))}
             </div>

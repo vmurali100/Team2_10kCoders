@@ -77,22 +77,8 @@ class Users_Redux extends Component {
         <hr />
         {this.props.users.map((user, i) => (
           <p key={i}>
-            <span
-              onClick={() => {
-                this.handleEditUser(user, i);
-              }}
-            >
-              {user.fname}
-            </span>{" "}
-            -{" "}
-            <span
-              onClick={() => {
-                deleteUserFunc(user);
-              }} style={{ color: 'red', fontWeight: "bold" }}
-            >
-              {" "}
-              X{" "}
-            </span>
+            <span onClick={() => { this.handleEditUser(user, i); }}> {user.fname} </span>{" "}   -{" "}
+            <span  onClick={() => { deleteUserFunc(user); }} style={{ color: 'red', fontWeight: "bold" }} > {" "}X{" "} </span>
           </p>
         ))}
       </div>
