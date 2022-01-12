@@ -1,91 +1,114 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addUserAction, getUserAction } from "./Redux/Action";
+import { addUserAction ,deleteUserAction, updateUserAction } from "./Redux/Action";
+// import { addUserAction, deleteUserAction, updateUserAction } from "/Actions";
+
 
 class Form extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       user: {
         fname: "",
-        lname: "",
-        email: "",
       },
+      users: [],
+      index: null,
     };
-    console.log(props)
+    console.log(props);
   }
-  
+
   handleChange = (e) => {
-    console.log(e.target.value);
     let newUser = { ...this.state.user };
     newUser[e.target.name] = e.target.value;
     this.setState({ user: newUser });
-   
   };
-  adduser = (e) => {
-    this.props.creatUser(this.state.user);
-    console.log(this.state.user);
-    let newUser
-    newUser[e.target.value] = ""  ;
-    this.setState({user : newUser})
-    
+  handleClear = () => {
+    this.setState({
+      user: {
+        fname: "",
+      },
+      index: null
+    });
   };
- 
-  getuser =() =>{
-    this.props.getUsers()
-  }
+
+  handleEditUser = (user, i) => {
+    this.setState({ user, index: i });
+  };
+
+  handleUpdate = () => {
+    let updatedUser = { ...this.state.user };
+    updatedUser['id'] = this.state.index;
+    this.props.updateUserFunc(updatedUser)
+    this.handleClear();
+  };
+
   render() {
+    const { addUserFunc, deleteUserFunc, updateUserFunc } = this.props;
     return (
       <div>
+        <h2>Hello From Users Component</h2>
+
         <form>
-          <label htmlFor="fname">FirstName</label>
+          <label htmlFor="fname">First Name : </label>
           <input
             type="text"
             name="fname"
-            value={this.state.fname}
-            onChange={(e) => this.handleChange(e)}
-          />{" "}
-          <br />
-          <label htmlFor="lname">LastName</label>
-          <input
-            type="text"
-            name="lname"
-            value={this.state.lname}
-            onChange={(e) => this.handleChange(e)}
-          />{" "}
-          <br />
-          <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            name="email"
-            value={this.state.email}
-            onChange={(e) => this.handleChange(e)}
-          /> <br />
-          <button type="button" onClick={this.adduser}>ADD USER</button>
+            value={this.state.user.fname}
+            onChange={(e) => {
+              this.handleChange(e);
+            }}
+          />
+          {this.state.index ? (
+            <button type="button" onClick={this.handleUpdate}>
+              Update User
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => {
+                addUserFunc(this.state.user);
+                this.handleClear()
+              }}
+            >
+              Add User
+            </button>
+          )}
         </form>
-        {this.props.users && this.props.users.map((user)=>{
-          return <li>{user.fname}</li>
-        })}
-        <button onClick={this.getuser}>GET USER</button>
-        
+        <hr />
+        {this.props.users.map((user, i) => (
+          <p key={i}>
+            <span>
+              {user.fname}
+              <button type="button" onClick={() => {
+                this.handleEditUser(user, i);
+              }} >Edit</button>
+            </span>
+            <span >
+            <button type="button"   onClick={() => {
+                deleteUserFunc(user);
+              }} style={{ color: 'red', fontWeight: "bold" }}>DELETE</button>
+            </span>
+          </p>
+        ))}
       </div>
     );
   }
 }
 
-const MSTP = (state) => {
+function mapStateToProps(state) {
+  console.log(state);
   return {
     users: state,
   };
-};
+}
 
-const MDTP = (dispatch) => {
+function mapDispatchToProps(dispatch) {
   return {
-    getUsers : ()=>{dispatch(getUserAction())} ,
-    creatUser: (user) => {
-      dispatch(addUserAction(user));
-    },
+    addUserFunc: (user) => dispatch(addUserAction(user)),
+    deleteUserFunc: (user) => dispatch(deleteUserAction(user)),
+    updateUserFunc: (user) => dispatch(updateUserAction(user)),
   };
-};
+}
 
-export default connect(MSTP,MDTP)(Form);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

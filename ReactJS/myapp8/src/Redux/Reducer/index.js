@@ -1,19 +1,27 @@
 const data = {
-    users :[]
-}
- const Reducer = (state = data , action)=>{
-// const {type , payload} = action
+  users: [
+    { fname: "akvm" },
+    { fname: "harish" },
+    { fname: "ajay" },
+  ],
+};
 
-switch (action.type) {
-    case "GET_USER":
-        return state.users
-       case "ADD_USER" :
-           let newUser = [...state] 
-           newUser.push(action.payload) 
-            return newUser
+export default function Reducer(state = data, action) {
+  switch (action.type) {
+    case "ADD_USER":
+      var allUsers = [...state];
+      allUsers.push(action.payload);
+      return allUsers;
+
+    case "DELETE_USER":
+      return state.filter((user) => user.fname !== action.payload.fname);
+
+    case "UPDATE_USER":
+      console.log(action.payload);
+      allUsers = [...state];
+      allUsers[action.payload.id] = action.payload;
+      return allUsers;
     default:
-        return state.users
-       
+      return state.users;
+  }
 }
- }
- export default Reducer 
