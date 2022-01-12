@@ -56,9 +56,9 @@ export default class User extends Component {
                     <label htmlFor='fname'>Fname:</label>
                     <input type="text" name="fname" value={this.state.user.fname} 
                     onChange={(e)=>{this.handleChange(e)}}></input>
-                    {this.state.index?(<button onClick={this.handleUpdate} 
-                    type='button'>UpdateUser</button>):(<button type="button"
-                    onClick={this.handleAddUser}>  AddUser</button>)}
+                    {this.state.index!==null?<button onClick={this.handleUpdate} 
+                    type='button'>UpdateUser</button>:<button type="button"
+                    onClick={this.handleAddUser}>  AddUser</button>}
                 </form>
                 <hr/>
                 {this.state.users.map((user,i)=>(
