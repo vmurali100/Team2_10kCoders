@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Comments from './Comments';
+import Posts from './components/Posts';
 // import Products from './Products';
 // import Students1 from './Students1';
 // import Js1 from './classapi/Js1';
@@ -33,7 +34,8 @@ function App() {
      <Ft3/> */}
      {/* <Students1/>
      <Products/> */}
-     <Comments/>
+     {/* <Comments/> */}
+     <Posts/>
     </div>
   );
 }

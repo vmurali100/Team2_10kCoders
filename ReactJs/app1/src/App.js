@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Posts from './Posts';
+import Users from './Components/Users';
 // import { Js11 } from './funcapi/Js11';
 // import { Js12 } from './funcapi/Js12';
 // import { Js13 } from './funcapi/Js13';
@@ -29,7 +30,8 @@ function App() {
     <Fk12/>
     <Fk13/> */}
     {/* <Students/> */}
-    <Posts/>
+    {/* <Posts/> */}
+    <Users/>
     
 
     
