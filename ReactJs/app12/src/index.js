@@ -6,10 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import userReducer from './redux/reducer';
 import {createStore} from "redux"
 import {Provider} from "react-redux"
+import cartReducer from './redux_async/redux/reducer';
+import {applyMiddleware} from "redux"
+import thunk from "redux-thunk"
 
 
 
-const store=createStore(userReducer)
+const store=createStore(cartReducer,applyMiddleware(thunk))
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
