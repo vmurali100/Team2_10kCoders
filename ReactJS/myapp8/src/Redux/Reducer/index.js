@@ -1,3 +1,6 @@
+import { GETAPI_DATA } from "../Action/actiontype";
+
+
 const data = {
   users: [
     { fname: "akvm" },
@@ -7,6 +10,7 @@ const data = {
 };
 
 export default function Reducer(state = data, action) {
+
   switch (action.type) {
     case "ADD_USER":
       var allUsers = [...state];
@@ -21,7 +25,13 @@ export default function Reducer(state = data, action) {
       allUsers = [...state];
       allUsers[action.payload.id] = action.payload;
       return allUsers;
+      case GETAPI_DATA:
+        return  action.payload
     default:
       return state.users;
+     
+        
+
+       
   }
 }

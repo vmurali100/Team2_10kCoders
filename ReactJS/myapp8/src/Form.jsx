@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addUserAction ,deleteUserAction, updateUserAction } from "./Redux/Action";
+import { addUserAction ,deleteUserAction, getApiDataAction, updateUserAction } from "./Redux/Action";
 // import { addUserAction, deleteUserAction, updateUserAction } from "/Actions";
 
 
@@ -59,7 +59,7 @@ class Form extends Component {
               this.handleChange(e);
             }}
           />
-          {this.state.index ? (
+          {this.state.index !==null ? (
             <button type="button" onClick={this.handleUpdate}>
               Update User
             </button>
@@ -91,6 +91,7 @@ class Form extends Component {
             </span>
           </p>
         ))}
+        <button onClick={this.props.getApiData()}>GET API DATA</button>
       </div>
     );
   }
@@ -108,6 +109,7 @@ function mapDispatchToProps(dispatch) {
     addUserFunc: (user) => dispatch(addUserAction(user)),
     deleteUserFunc: (user) => dispatch(deleteUserAction(user)),
     updateUserFunc: (user) => dispatch(updateUserAction(user)),
+    getApiData : ()=> dispatch(getApiDataAction())
   };
 }
 

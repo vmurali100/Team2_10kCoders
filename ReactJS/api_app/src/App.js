@@ -1,13 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-// import Form from './Form';
-import TodosApi from './TodosApi';
+import Todos from './Todos';
 
 function App() {
   return (
     <div className="App">
-      {/* <Form /> */}
-      <TodosApi/>
+     <Todos />
     </div>
   );
 }
