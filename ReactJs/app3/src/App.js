@@ -7,6 +7,7 @@ import { Music } from './securedapi/Music';
 import ParentComponent from './reference/ParentComponent';
 import Albums from './Albums';
 import { MyCompContainer } from './renderProps/MyCompContainer';
+import Comments from './components/Comments';
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
   <Employees/> */}
   {/* <Music/> */}
   {/* <ParentComponent/> */}
-  <Albums/>
+  {/* <Albums/> */}
   {/* <MyCompContainer/> */}
+  <Comments/>
     </div>
   );
 }
