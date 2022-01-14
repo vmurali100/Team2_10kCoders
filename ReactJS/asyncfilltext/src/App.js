@@ -1,13 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Todos from './Todos';
-import Albums from './Albums';
-
+import Person from "./FILLTEXT/Person"
 function App() {
   return (
     <div className="App">
-      <Albums/> <br/>
-     <Todos />
+      <Person />
     </div>
   );
 }
