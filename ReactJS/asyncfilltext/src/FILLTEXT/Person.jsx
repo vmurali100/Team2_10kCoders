@@ -8,13 +8,13 @@ class  Person extends Component  {
     return <div>
         {/* fill text - person */}
         <button type="button" onClick={()=>this.props.getDataFunc()}>GET DATA</button>
-        {this.props.person.map((e)=> <h1>{e.address}</h1>)}
+        {this.props.person.map((e)=> <h1 key={e.address}>{e.address}</h1>)}
           {/* filltext - name */}
-       
-        {this.props.fname ? this.props.fname.map((e)=> <h1>{e.fname}</h1>): <button type="button" onClick={()=>this.props.getFnameFunc()}>GET FNAME</button>}
+          <button type="button" onClick={()=>this.props.getFnameFunc()}>GET FNAME</button>
+        { this.props.fname.map((e)=> <h1 key={e.fname}>{e.fname}</h1>) }
         {/* filltext - employee */}
         <button type="button" onClick={()=>this.props.getEmployeeFunc()}>GET EMPLOYEE</button>
-        {this.props.employee.map((e)=> <h1>{e.username}</h1>)}
+        {this.props.employee.map((e)=> <h1 key={e.username}>{e.username}</h1>)}
     </div>
  }
 };

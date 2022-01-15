@@ -1,5 +1,5 @@
 import axios from "axios"
-import { GET_DATA, GET_EMPLOYEE, GET_NAME } from "./Action-types"
+import { GET_CART, GET_DATA, GET_EMPLOYEE, GET_NAME, GET_PRODUCTS, GET_USERS } from "./Action-types"
 
 export  const getDataAction = ()=>{
     var personData 
@@ -34,6 +34,47 @@ export  const getEmployeeAction = ()=>{
     dispatch({
         type : GET_EMPLOYEE ,
         payload : employee
+    })
+    })
+   
+}
+
+// FAKE STORE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+export  const getUsersAction = ()=>{
+    var users
+ return  (dispatch)=>  axios.get("https://fakestoreapi.com/users").then(({data})=>{
+    users =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_USERS ,
+        payload : users
+    })
+    })
+   
+}
+
+export  const getProductsAction = ()=>{
+    var products
+ return  (dispatch)=>  axios.get("https://fakestoreapi.com/products").then(({data})=>{
+    products =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_PRODUCTS ,
+        payload : products
+    })
+    })
+   
+}
+
+export  const getCartAction = ()=>{
+    var cart
+ return  (dispatch)=>  axios.get("https://fakestoreapi.com/carts").then(({data})=>{
+    cart =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_CART ,
+        payload : cart
     })
     })
    
