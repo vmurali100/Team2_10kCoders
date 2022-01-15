@@ -1,5 +1,5 @@
 import axios from "axios"
-import { GET_CART, GET_DATA, GET_EMPLOYEE, GET_NAME, GET_PRODUCTS, GET_USERS } from "./Action-types"
+import { GET_ALBUMS, GET_CART, GET_COMMENTS, GET_DATA, GET_EMPLOYEE, GET_JSON_USERS, GET_NAME, GET_PHOTOS, GET_POSTS, GET_PRODUCTS, GET_TODOS, GET_USERS } from "./Action-types"
 
 export  const getDataAction = ()=>{
     var personData 
@@ -79,3 +79,85 @@ export  const getCartAction = ()=>{
     })
    
 }
+
+// JSON -PLACEHOLDER +========================================
+export  const getTodosAction = ()=>{
+    var todos
+ return  (dispatch)=>  axios.get("https://jsonplaceholder.typicode.com/todos").then(({data})=>{
+    todos =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_TODOS ,
+        payload : todos
+    })
+    })
+   
+}
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+export  const getAlbumsAction = ()=>{
+    var albums
+ return  (dispatch)=>  axios.get("https://jsonplaceholder.typicode.com/albums").then(({data})=>{
+    albums =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_ALBUMS ,
+        payload : albums
+    })
+    })
+   
+}
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+export  const getCommentsAction = ()=>{
+    var comments
+ return  (dispatch)=>  axios.get("https://jsonplaceholder.typicode.com/comments").then(({data})=>{
+    comments =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_COMMENTS ,
+        payload : comments
+    })
+    })
+   
+}
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+export  const getJsonUsersAction = ()=>{
+    var jsonusers
+ return  (dispatch)=>  axios.get("https://jsonplaceholder.typicode.com/users").then(({data})=>{
+    jsonusers =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_JSON_USERS ,
+        payload : jsonusers
+    })
+    })
+   
+}
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+export  const getPhotosAction = ()=>{
+    var photos
+ return  (dispatch)=>  axios.get("https://jsonplaceholder.typicode.com/photos").then(({data})=>{
+    photos =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_PHOTOS ,
+        payload : photos
+    })
+    })
+   
+}
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+export  const getPostsAction = ()=>{
+    var posts
+ return  (dispatch)=>  axios.get("https://jsonplaceholder.typicode.com/posts").then(({data})=>{
+    posts =  data
+    //    console.log (personData)
+    dispatch({
+        type : GET_POSTS ,
+        payload : posts
+    })
+    })
+   
+}
+
