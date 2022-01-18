@@ -8,6 +8,9 @@ class Filltext1 extends Component{
         return(
             <div>
 <button onClick={()=>{this.props.getAllFilltext1Func()}}>getfilltext1</button>
+{this.props.filltext1.map((fill1)=>{
+    return <p key={fill1.fname}>{fill1.fname}</p>
+})}
             </div>
         )
     }

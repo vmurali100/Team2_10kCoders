@@ -2,7 +2,7 @@ import { GET_ALL_POSTS } from "../actions/actiontypes";
 
 
 const defaultState={
-    posts:{},
+    posts:[],
 };
 export default function userReducer(state=defaultState,action){
     switch(action.type){

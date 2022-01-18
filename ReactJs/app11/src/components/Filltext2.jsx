@@ -8,6 +8,10 @@ class Filltext2 extends Component{
         return(
             <div>
 <button onClick={()=>{this.props.getAllFilltext2Func()}}>getfilltext2</button>
+     {this.props.filltext2.map((fill2)=>{
+    <p key={fill2.address}>{fill2.address}</p>
+
+     })}
             </div>
         )
     }

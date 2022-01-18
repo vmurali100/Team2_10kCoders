@@ -8,6 +8,9 @@ class Products extends Component{
         return(
             <div>
 <button onClick={()=>{this.props.getAllProductsFunc()}}>getallproducts</button>
+{this.props.products.map((pr)=>{
+    return<p key={pr.title}>{pr.title}</p>
+})}
             </div>
         )
     }

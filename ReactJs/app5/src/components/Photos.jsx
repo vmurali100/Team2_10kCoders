@@ -9,6 +9,11 @@ render(){
     return(
         <div>
 <button onClick={()=>{this.props.getAllPhotosFunc()}}>getallphotos</button>
+{this.props.photos.map((pht)=>{
+                     
+                     return <p key={pht.url}><img style={{width:"150px",height:"150px"}} src={pht.url}/></p>
+                     
+                 })}
         </div>
     )
 }

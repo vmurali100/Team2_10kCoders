@@ -1,7 +1,7 @@
 import { GET_ALL_CARTS } from "../actions/actiontypes";
 
 const defaultState={
-    carts:{}
+    carts:[]
 }
 export default function userReducer(state=defaultState,action){
     switch(action.type){

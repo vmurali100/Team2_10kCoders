@@ -1,7 +1,7 @@
 import { GET_ALL_PHOTOS } from "../actions/actiontypes";
 
 const defaultState={
-    photos:{}
+    photos:[]
 }
 export default function userReducer(state=defaultState,action){
     switch(action.type){

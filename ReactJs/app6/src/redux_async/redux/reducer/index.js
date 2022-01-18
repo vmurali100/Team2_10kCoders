@@ -1,7 +1,7 @@
 import { GET_ALL_TODOS } from "../actions/actiontypes";
 
 const defaultState={
-    todos:{}
+    todos:[]
 }
 export default function userReducer(state=defaultState,action){
     switch(action.type){

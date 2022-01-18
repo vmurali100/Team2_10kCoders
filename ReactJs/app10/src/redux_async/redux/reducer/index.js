@@ -1,7 +1,7 @@
 import { GET_ALL_DATA } from "../actions/actiontypes";
 
 const defaultState={
-    filltext1:{},
+    filltext1:[],
 }
 export default function cartReducer (state=defaultState,action){
     switch(action.type){

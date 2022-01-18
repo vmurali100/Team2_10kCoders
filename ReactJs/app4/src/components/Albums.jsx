@@ -8,6 +8,9 @@ class Albums extends Component{
         return(
             <div>
 <button onClick={()=>{this.props.getAllAlbumsFunc()}}>getallalbums</button>
+{this.props.albums.map((alb)=>{
+    return <p key={alb.title}>{alb.title}</p>
+})}
             </div>
         )
     }

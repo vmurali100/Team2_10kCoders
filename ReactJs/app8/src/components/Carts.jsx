@@ -8,6 +8,9 @@ class Carts extends Component{
         return(
             <div>
 <button onClick={()=>{this.props.getAllCartsFunc()}}>getallcarts</button>
+{this.props.carts.map((ca)=>{
+    return<p key={ca.date}>{ca.date}</p>
+})}
             </div>
         )
     }

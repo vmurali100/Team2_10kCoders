@@ -9,6 +9,9 @@ class Todos extends Component{
         return(
             <div>
 <button onClick={()=>{this.props.getAllTodosFunc()}}>getalltodos</button>
+{this.props.todos.map((to)=>{
+    return<p key={to.title}>{to.title}</p>
+})}
             </div>
         )
 

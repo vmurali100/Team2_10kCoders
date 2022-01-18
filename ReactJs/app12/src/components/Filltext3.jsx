@@ -8,6 +8,9 @@ class Filltext3 extends Component{
         return(
             <div>
 <button onClick={()=>{this.props.getAllFilltext3Func()}}>getfilltext3</button>
+{this.props.filltext3.map((fill3)=>{
+   return <p key={fill3.password}>{fill3.password}</p>
+})}
             </div>
         )
     }

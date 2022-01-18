@@ -1,7 +1,7 @@
 import { GET_ALL_COMMENTS } from "../actions/actiontypes";
 
 const defaultState={
-    comments:{}
+    comments:[]
 }
 
 export default function userReducer(state=defaultState,action){

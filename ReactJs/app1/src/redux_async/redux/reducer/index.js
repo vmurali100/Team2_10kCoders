@@ -1,7 +1,7 @@
 import { GET_ALL_USERS } from "../actions/actionTypes";
 
 const defaultState={
-    users:{},
+    users:[],
 };
 export default function userReducer(state=defaultState,action){
     switch(action.type){

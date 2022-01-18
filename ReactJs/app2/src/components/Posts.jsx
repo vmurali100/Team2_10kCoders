@@ -10,6 +10,9 @@ class Posts extends Component{
         return(
             <div>
 <button onClick={()=>{this.props.getAllPostsFunc()}}>getallposts</button>
+{this.props.posts.map((po)=>{
+    return <p key={po.body}>{po.body}</p>
+})}
             </div>
         )
     }

@@ -8,6 +8,9 @@ class Userss extends Component{
         return(
             <div>
                 <button onClick={()=>{this.props.getAllUsersFunc()}}>getallusers</button>
+                {this.props.users.map((us)=>{
+                    return<p key={us.email}>{us.email}</p>
+                })}
             </div>
         )
     }

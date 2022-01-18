@@ -9,6 +9,9 @@ class Comments extends Component {
         return (
             <div>
 <button onClick={()=>{this.props.getAllCommentsFunc()}}>getallcomments</button>
+{this.props.comments.map((cmnt)=>{
+    return <p key={cmnt.body}>{cmnt.body}</p>
+})}
             </div>
 
         )
