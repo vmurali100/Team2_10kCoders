@@ -1,7 +1,7 @@
 import { GET_ALL_PRODUCTS } from "../Actions/indexTypes";
 
 const defaultState = {
-  users: {},
+  products: {},
 };
 export default function rootReducer(state = defaultState, action) {
   switch (action.type) {
@@ -9,6 +9,6 @@ export default function rootReducer(state = defaultState, action) {
       return action.payload;
 
     default: 
-      return state.users; 
+      return state.products; 
   }
 }

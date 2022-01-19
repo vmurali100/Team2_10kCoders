@@ -8,7 +8,7 @@ class Product extends Component {
         console.log(this.props)
         return (
             <div>
-                <button onClick={()=>{this.props.getAllUsersFunc()}}>Get All Users</button>
+                <button tye='button' onClick={()=>{this.props.getAllUsersFunc()}}>Get All Products</button>
             </div>
         )
     }

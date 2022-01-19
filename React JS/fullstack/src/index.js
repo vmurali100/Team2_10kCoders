@@ -6,7 +6,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import thunk from "redux-thunk";
-import rootReducer from './REdux_Asynch/Json/Users/Reducer';
+import rootReducer from './REdux_Asynch/Fake store/Cart/Reducer/index';
 
 const store = createStore(rootReducer,applyMiddleware(thunk));
 ReactDOM.render(

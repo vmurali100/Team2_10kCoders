@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAllUsersAction } from './Actions'
 
-class Users extends Component {
+class Todos extends Component {
     
     render() {
         console.log(this.props)
@@ -27,4 +27,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Users)
+export default connect(mapStateToProps,mapDispatchToProps)(Todos)

@@ -3,12 +3,14 @@ import { connect } from 'react-redux'
 import { getAllUsersAction } from './Actions'
 
 class Users extends Component {
-    
+
     render() {
         console.log(this.props)
         return (
             <div>
-                <button onClick={()=>{this.props.getAllUsersFunc()}}>Get All Users</button>
+                
+                <button onClick={() => { this.props.getAllUsersFunc() }}>Get All Users</button>
+              
             </div>
         )
     }
@@ -17,14 +19,14 @@ class Users extends Component {
 
 function mapStateToProps(state) {
     return {
-        users:state
+        users: state
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        getAllUsersFunc:()=>dispatch(getAllUsersAction())
+        getAllUsersFunc: () => dispatch(getAllUsersAction())
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Users)
+export default connect(mapStateToProps, mapDispatchToProps)(Users)

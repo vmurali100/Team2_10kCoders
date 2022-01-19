@@ -3,12 +3,17 @@ import { connect } from 'react-redux'
 import { getAllUsersAction } from './Actions'
 
 class Cart extends Component {
-    
+
     render() {
         console.log(this.props)
         return (
             <div>
-                <button onClick={()=>{this.props.getAllUsersFunc()}}>Get All Users</button>
+                <button onClick={() => { this.props.getAllUsersFunc() }}>Get All Carts</button>
+               {/* {this.props.carts.map((e)=>{
+                   return <p key={e.id}>{e.id}</p>
+               })} */}
+
+             
             </div>
         )
     }
@@ -17,14 +22,14 @@ class Cart extends Component {
 
 function mapStateToProps(state) {
     return {
-        cart:state
+        carts: state
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-        getAllUsersFunc:()=>dispatch(getAllUsersAction())
+        getAllUsersFunc: () => dispatch(getAllUsersAction())
     }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Cart)
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)
