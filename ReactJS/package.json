@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.24.0",
+    "create-react-project": "^0.0.30",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2"
   }
