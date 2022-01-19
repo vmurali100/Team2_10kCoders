@@ -26,7 +26,8 @@ function App() {
    
     
      <Routes>
-       <Route path="" element={<Home/>} />
+       {/* <Route path="" element={<Home/>} /> */}
+       <Route path="home" element={!<Home/> ? <Home/> : "" }/>
        <Route path="about" element={<About/>} />
        <Route path="expertise" element={<Expertise/>} />
        <Route path="education" element={<Education/>} />

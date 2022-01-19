@@ -18,7 +18,7 @@ export const Expertise = ()=>{
         </header> <br />
         <div className="row gy-5">
              {expertisedata.map((e)=>{
-                  <div className="col-md-6">
+                return  <div className="col-md-6">
                  <h3 className="h4"><span className="text-primary me-2">{e.id}</span>{e.caption}</h3> ;
                 <p className="text-muted text-sm ms-4 ps-3">{e.description}</p>
                 </div>

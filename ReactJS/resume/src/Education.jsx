@@ -22,7 +22,7 @@ export const Education = () => {
 
           <ul className="timeline">
               {educationData.map((e)=>{
-                   <li className="timeline-item ms-3 pb-4">
+                  return <li className="timeline-item ms-3 pb-4">
                    <div className="timeline-arrow"></div>
                    <div className="row gx-0 gy-4">
                      <div className="col-lg-5">

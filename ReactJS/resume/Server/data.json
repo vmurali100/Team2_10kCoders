@@ -82,6 +82,25 @@
         "des" : "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam etjusto duo dolores et ea rebum. Stet clita kasd gubergren, no sea."
     
     } 
-]
+] ,
+"contact" : [
+    {
+        "content" : "Location" ,
+        "data" : "Warangal, Telangana" 
+    } ,
+    {
+        "content" : "Phone" ,
+        "data" : "9010902696" 
+    },
+    {
+        "content" : "Website" ,
+        "data" : "www.akhilvarma.com" 
+    },
+    {
+        "content" : "Email" ,
+        "data" : "akhilankathi@gmail.com" 
+    }
+] ,
+"footer" : [ "fab fa-facebook-f" , "fab fa-twitter" , "fab fa-linkedin-in" , "fab fa-instagram"]
 
 }

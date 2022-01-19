@@ -19,7 +19,7 @@ export  const Experience = ()=>{
    
         <ul class="timeline">
           {experienceData.map((e)=>{
-              <li class="timeline-item ms-3 pb-4">
+             return <li class="timeline-item ms-3 pb-4">
               <div class="timeline-arrow"></div>
               <div class="row gx-0 gy-4">
                 <div class="col-lg-5">
