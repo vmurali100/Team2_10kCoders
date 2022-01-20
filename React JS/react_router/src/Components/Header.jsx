@@ -4,7 +4,7 @@ import axios from "axios";
 export const Header = () => {
   const [navlinks, setNavlinks] = useState([]);
   useEffect(() => {
- axios.get("http://localhost:3000/navlinks").then((res) => {
+    axios.get("http://localhost:3000/navlinks").then((res) => {
       console.log(res.data);
       setNavlinks(res.data)
     });
