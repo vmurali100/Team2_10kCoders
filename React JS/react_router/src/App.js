@@ -1,36 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
-import { About } from './Components/About';
-import { Expertise } from './Components/Expertise ';
-import { Header } from './Components/Header';
-import { Slider } from './Components/Slider';
-import { Education } from './Components/Education';
-import { Experience } from './Components/Experience';
-import { Contact } from './Components/Contact';
-import { Footer } from './Components/Footer';
+import { Navbar } from '../src/Navbar';
+import "./css/style.default.css" ;
+import "./css/custom.css" ; 
+import {BrowserRouter, Routes , Route} from 'react-router-dom'
+import { Home } from './Home';
+import { Expertise } from './Expertise';
+import { Education } from './Education';
+import { Experience } from './Experiance';
+import { Contact } from './Contact';
+import { Footer } from './Footer';
+import { About } from './About';
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        
-        <Header />
-        <Slider/>
-       
-        <Routes>
-          <Route path="" element={<About />} />
-          <Route path="expertise" element={<Expertise />} />
-          <Route path="education" element={<Education />} />
-          <Route path="experience" element={<Experience />} />
-          <Route path="contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+    <div className="App">
+     <BrowserRouter>
+     <Navbar/>
+     <Home/>
+     {/* <About/>
+     <Expertise/>
+     <Education />
+     <Experiance/>
+     <Contact/> */}
+   
+    
+     <Routes>
+       {/* <Route path="" element={<Home/>} /> */}
+       <Route path="home" element={!<Home/> ? <Home/> : "" }/>
+       <Route path="about" element={<About/>} />
+       <Route path="expertise" element={<Expertise/>} />
+       <Route path="education" element={<Education/>} />
+       <Route path="experience" element={<Experience/>} />
+       <Route path="contact" element={<Contact/>} />
+     </Routes>
+     <Footer/>
+     </BrowserRouter>
+
     </div>
   );
 }

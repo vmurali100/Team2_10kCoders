@@ -1,13 +1,20 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 export const Footer = () => {
+  const [footerData, setFooterData] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:3000/footer").then(({ data }) => {
+      setFooterData(data);
+    });
+  }, []);
   return (
     <div>
       <footer className="pt-5">
         <div className="container text-center py-5">
           <div className="row px-4">
             <div className="col-lg-7 mx-auto">
-              <h2 className="text-uppercase mb-0">Jason Doe </h2>
+              <h2 className="text-uppercase mb-0">HARISH PUNEM </h2>
               <h6 className="text-primary text-uppercase mb-0 letter-spacing-3">
                 Front End Web Developer
               </h6>
@@ -16,26 +23,15 @@ export const Footer = () => {
                 diam nonumy eirmod tempor invidunt ut labore et dolore.
               </p>
               <ul className="list-inline mb-0">
-                <li className="list-inline-item">
-                  <a className="social-link" href="#!">
-                    <i className="fab fa-facebook-f"></i>
-                  </a>
-                </li>
-                <li className="list-inline-item">
-                  <a className="social-link" href="#!">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                </li>
-                <li className="list-inline-item">
-                  <a className="social-link" href="#!">
-                    <i className="fab fa-linkedin-in"></i>
-                  </a>
-                </li>
-                <li className="list-inline-item">
-                  <a className="social-link" href="#!">
-                    <i className="fab fa-instagram"></i>
-                  </a>
-                </li>
+                {footerData.map((e) => {
+                  return (
+                    <li className="list-inline-item">
+                      <a className="social-link" href="#!">
+                        <i className={e}></i>
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
