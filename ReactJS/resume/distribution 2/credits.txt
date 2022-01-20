@@ -1,0 +1,14 @@
+------------------------------------------
+ CREDITS
+------------------------------------------
+
+    - Bootstrap 5    -    https://getbootstrap.com
+
+    - Font Awesome   -    https://fontawesome.com
+
+
+------------------------------------------
+ IMAGES
+------------------------------------------
+
+    - Images used from  -  freepik.com
