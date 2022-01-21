@@ -27,7 +27,7 @@ export const Contact = () => {
                     href="#!"
                   >
                     <i className="fas fa-map-marker-alt fa-2x mb-4"></i>
-                    
+
                     <h4 className="contact-item-title h5 text-uppercase">
                       {e.content}
                     </h4>

@@ -7,7 +7,7 @@ import {BrowserRouter, Routes , Route} from 'react-router-dom'
 import { Home } from './Home';
 import { Expertise } from './Expertise';
 import { Education } from './Education';
-import { Experience } from './Experience';
+import { Experience } from '../src/Experience';
 import { Contact } from './Contact';
 import { Footer } from './Footer';
 import { About } from './About';
@@ -18,11 +18,11 @@ function App() {
      <BrowserRouter>
      <Navbar/>
      <Home/>
-     {/* <About/>
+      {/* <About/>
      <Expertise/>
      <Education />
      <Experiance/>
-     <Contact/> */}
+     <Contact/>  */}
    
     
      <Routes>
