@@ -13,7 +13,7 @@ export const JsonPost = () => {
     return (
     <div>
         <h1>Json Posts</h1>
-        <table>
+        <table className="table">
         <thead>
             <tr>
                 <th>UserId</th>

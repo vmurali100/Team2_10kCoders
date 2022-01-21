@@ -12,8 +12,8 @@ export const JsonTodos = () => {
     }, [])
     return (
     <div>
-        <h1>Json Albums</h1>
-        <table>
+        <h1>Json Todos</h1>
+        <table className="table">
         <thead>
             <tr>
                 <th>UserId</th>

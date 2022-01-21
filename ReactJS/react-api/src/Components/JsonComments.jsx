@@ -13,7 +13,7 @@ export const JsonComments = () => {
     return (
     <div>
         <h1>Json Comments</h1>
-        <table>
+        <table className="table">
         <thead>
             <tr>
                 <th>PostId</th>

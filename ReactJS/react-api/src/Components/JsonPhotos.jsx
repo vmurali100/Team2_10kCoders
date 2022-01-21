@@ -12,8 +12,8 @@ export const JsonPhotos = () => {
     }, [])
     return (
     <div>
-        <h1>Json Albums</h1>
-        <table>
+        <h1>Json Photos</h1>
+        <table className="table">
         <thead>
             <tr>
                 <th>AlbumId</th>

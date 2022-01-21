@@ -13,7 +13,7 @@ export const JsonAlbums = () => {
     return (
     <div>
         <h1>Json Albums</h1>
-        <table>
+        <table className="table">
         <thead>
             <tr>
                 <th>UserId</th>
