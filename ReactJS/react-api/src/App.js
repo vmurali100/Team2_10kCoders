@@ -7,6 +7,12 @@ import { JsonPhotos } from "./Components/JsonPhotos";
 import { JsonTodos } from "./Components/JsonTodos";
 import { JsonUsers } from "./Components/JsonUsers"
 import { Navbar } from "./Components/Navbar";
+import { FakeStoreProducts } from "./Components/FakeStoreProducts";
+import { FakeStoreCart } from "./Components/FakeStoreCart";
+import { FakeStoreUsers } from "./Components/FakeStoreUsers";
+import { FilltextName } from "./Components/FilltextName";
+import { FilltextPerson } from "./Components/FilltextPerson";
+import { FilltextAuth } from "./Components/FilltextAuth";
 
 function App() {
   return (
@@ -31,6 +37,12 @@ function App() {
           <Route path="/json-photos" element={<JsonPhotos />}></Route>
           <Route path="/json-todos" element={<JsonTodos />}></Route>
           <Route path="/json-users" element={<JsonUsers />}></Route>
+          <Route path="/fakestore-products" element={<FakeStoreProducts />}></Route>
+          <Route path="/fakestore-carts" element={<FakeStoreCart />}></Route>
+          <Route path="/fakestore-users" element={<FakeStoreUsers />}></Route>
+          <Route path="/filltext-name" element={<FilltextName />}></Route>
+          <Route path="/filltext-persons" element={<FilltextPerson />}></Route>
+          <Route path="/filltext-auth" element={<FilltextAuth />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

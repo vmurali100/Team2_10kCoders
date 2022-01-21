@@ -3,34 +3,32 @@ import { useState, useEffect } from "react";
 import axios from "axios"
 
 
-export const JsonUsers = () => {
-    const [users, setUsers] = useState([]);
+export const FakeStoreCart = () => {
+    const [cart, setCart] = useState([]);
     useEffect(() => {
-        axios.get("http://jsonplaceholder.typicode.com/users").then((res) => {
-            setUsers(res.data);
+        axios.get("https://fakestoreapi.com/carts").then((res) => {
+            setCart(res.data);
         })
     }, [])
     return (
     <div>
-        <h1>Json Users</h1>
+        <h1>Fake Store Carts</h1>
         <table className="table">
         <thead>
             <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Username</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Website</th>
+                <th scope="col">UserId</th>
+                <th scope="col">Date</th>
             </tr>
         </thead>
 
         <tbody>
             {
-                users.map((obj)=>{
+                cart.map((obj)=>{
                     return <tr>
                         {
-                            Object.keys(obj).filter(o => o !== "id" && o !== "address" && o !== "company").map((key)=>
+                            Object.keys(obj).filter(o => o !== "id" && o !== "products" && o !== "__v").map((key)=>
                             {
+                                console.log(key)
                                 return <td key={obj[key]}>{obj[key]}</td>
                             })
                         }
