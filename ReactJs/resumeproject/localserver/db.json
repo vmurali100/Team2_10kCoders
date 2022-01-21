@@ -1,0 +1,78 @@
+{
+    "navlinks":["home","contact","expertise","experience","education","about"],
+
+
+    "aboutlinks":[{
+       "p1": "Innovative solutions",
+       "h1": "To boost your creative projects",
+        "p2":"Lorem ipsum dolor sit amet,",
+       "s1": "consetetur sadipscing elitr,",     
+        "p3":"sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus.",    
+       "p4": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.",   
+       "p5": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+    }],
+    "contactlinks":[{
+        "p1":"Call me, maybe.",
+        "h1":"Contact",  
+        "h2":"Location",  
+        "p2":"Portland, Oregon",  
+        "h3":"Phone", 
+        "p3":"534 456 886", 
+        "h4":"Website",  
+        "p4":"www.example.com",  
+        "h5":"Email",  
+        "p5":"info@example.com"
+
+    }],
+    "educationlinks":[{
+"p1":"Lazy isn't in my vocabulary." , 
+"h1":"Education", 
+"p2":["2000 - 2005","Jan 2000 - Feb 2000","1998 - 1999 "], 
+"h2":["Software Engineering","UI/UX Workshop.","Web Development."],
+"p3":["Oxford University","IT Academy","IT Academy"], 
+"s1":["United Kingdeom","Portland, OR","Portland, OR"], 
+"p4":["Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.",
+       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.",
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea."]
+
+    }],
+    "experiencelinks":[{
+        "p1":"Yes. I've been around.",  
+        "h1":"Experience", 
+        "p2":["2014 - Present","2014 - 2010 ","2009 - 2010 "], 
+        "h2":["Microsoft inc.","Facebook inc.","Google inc."],  
+        "p3":["Senior Interface Designer","Senior Interface Designer","Senior Interface Designer"], 
+        "s1":["Portland, OR","Portland, OR","Portland, OR"], 
+        "p4":["Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.", 
+                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea.", 
+                 "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea."]
+
+    }],
+    "expertiselinks":[{
+"p1":"Batman would be jealous.", 
+"h1":"Expertise", 
+"h2":["Ecommerce","Copywriter","Web Design","Web Development"], 
+"h3":["Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua..", 
+       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua..",
+       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua..", 
+     "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.." ],  
+"h4":["01","02","03","04"]
+
+
+    }],
+    "footerlinks":[{
+"h1":"Jason Doe", 
+"h2":"Front End Web Developer" ,
+"p1":"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.",
+"p2":"All rights reserved. Template designed by", 
+"p3":"Bootstrapious"
+
+    }],
+    "sliderlinks":[{
+        "h1":"Hi, I am", 
+        "h2":"Jason", 
+        "h3":"Doe" , 
+        "h4":"Front End Web Developer" , 
+        "p":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+}]
+}

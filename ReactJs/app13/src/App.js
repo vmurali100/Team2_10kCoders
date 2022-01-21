@@ -2,14 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import Users from './Crud';
 import Users_redux from './Crudredux';
-// import Users from './Users';
+import Users from './Users';
 
 function App() {
   return (
     <div className="App">
-     {/* <Users/> */}
-     {/* <Users/> */}
-     <Users_redux/>
+  <Users_redux/>
+     
     </div>
   );
 }
