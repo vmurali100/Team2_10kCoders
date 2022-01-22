@@ -19,17 +19,17 @@ setContactlinks(res.data)
                     <h2 className="text-uppercase lined">{cn.h1}</h2>
                 </header>
                 <div className="row gy-4">
-                    <div className="col-lg-3 col-md-6"><a className="px-4 py-5 text-center contact-item shadow-sm reset-anchor d-block" href="#!">
+                    <div className="col-lg-3 col-md-6"><a className="px-4 py-5 text-center contact-item shadow-sm reset-anchor d-block" href={`${cn.hr1}`}>
                         <i className="fas fa-map-marker-alt fa-2x mb-4"></i>
                         <h4 className="contact-item-title h5 text-uppercase">{cn.h2}</h4>
                         <p className="text-sm mb-0"></p>{cn.p2}</a></div>
-                    <div className="col-lg-3 col-md-6"><a className="px-4 py-5 text-center contact-item shadow-sm reset-anchor d-block" href="tel:534456886"><i className="fas fa-map-marker-alt fa-2x mb-4"></i>
+                    <div className="col-lg-3 col-md-6"><a className="px-4 py-5 text-center contact-item shadow-sm reset-anchor d-block" href={`${cn.hr2}`}><i className="fas fa-map-marker-alt fa-2x mb-4"></i>
                         <h4 className="contact-item-title h5 text-uppercase">{cn.h3}</h4>
                         <p className="text-sm mb-0">{cn.p3}</p></a></div>
-                    <div className="col-lg-3 col-md-6"><a className="px-4 py-5 text-center contact-item shadow-sm reset-anchor d-block" href="www.example.com"><i className="fas fa-map-marker-alt fa-2x mb-4"></i>
+                    <div className="col-lg-3 col-md-6"><a className="px-4 py-5 text-center contact-item shadow-sm reset-anchor d-block" href={`${cn.hr3}`}><i className="fas fa-map-marker-alt fa-2x mb-4"></i>
                         <h4 className="contact-item-title h5 text-uppercase">{cn.h4}</h4>
                         <p className="text-sm mb-0"></p>{cn.p4}</a></div>
-                    <div className="col-lg-3 col-md-6"><a className="px-4 py-5 text-center contact-item shadow-sm reset-anchor d-block" href="mailto:info@example.com"><i className="fas fa-map-marker-alt fa-2x mb-4"></i>
+                    <div className="col-lg-3 col-md-6"><a className="px-4 py-5 text-center contact-item shadow-sm reset-anchor d-block" href={`${cn.hr4}`}><i className="fas fa-map-marker-alt fa-2x mb-4"></i>
                         <h4 className="contact-item-title h5 text-uppercase">{cn.h5}</h4>
                         <p className="text-sm mb-0">{cn.p5}</p></a></div>
                 </div>
