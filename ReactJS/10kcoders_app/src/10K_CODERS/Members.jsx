@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
  export const Members = ()=>{
     const [studentsdata , setStudentsdata] =  useState([])
     useEffect(()=>{
-        axios.get(' http://localhost:3000/student').then(({data}) =>{setStudentsdata(data)}) ;
+        axios.get(' http://localhost:3000/student').then(({data}) =>{
+            setStudentsdata(data)
+            localStorage.setItem("students" , JSON.stringify(data))
+    }) ;
+       
 
     },[])
      return <div>
