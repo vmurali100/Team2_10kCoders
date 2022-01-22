@@ -16,19 +16,10 @@ import { FilltextAuth } from "./Components/FilltextAuth";
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       
       
       <BrowserRouter>
-        {/* <header>
-          <ul>
-            <li><Link to="/json-post">Json-post</Link></li>
-            <li><Link to="/json-comments">Json-comments</Link></li>
-            <li><Link to="/json-albums">Json-albums</Link></li>
-            <li><Link to="/json-photos">Json-Photos</Link></li>
-            <li><Link to="/json-users">Json-Users</Link></li>
-          </ul>
-        </header> */}
         <Navbar />
         <Routes>
           <Route path="/json-post" element={<JsonPost />}></Route>
