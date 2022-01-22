@@ -1,0 +1,46 @@
+{
+    "student" : [
+        {
+            "id" : 1 ,
+            "name" : "Ervin" ,
+            "address" : "AP"
+        } ,
+        {
+            "id" : 2,
+            "name" : "Srinakth" ,
+            "address" : "AP"
+        } ,
+        {
+            "id" : 3 ,
+            "name" : "Teja" ,
+            "address" : "AP"
+        },
+        {
+            "id" : 4 ,
+            "name" : "Harish" ,
+            "address" : "AP"
+        },
+        {
+            "id" : 1 ,
+            "name" : "Tejdeep" ,
+            "address" : "AP"
+        },
+        {
+            "id" : 5 ,
+            "name" : "Randeep" ,
+            "address" : "TS"
+        },
+        {
+            "id" : 6 ,
+            "name" : "Narendra" ,
+            "address" : "AP"
+        },
+        {
+            "id" : 7 ,
+            "name" : "Divya" ,
+            "address" : "TS"
+        }
+
+    ] ,
+    "header" : ["Home" , "About" , "Dashboard" ,"Contact" , "members"]
+}
