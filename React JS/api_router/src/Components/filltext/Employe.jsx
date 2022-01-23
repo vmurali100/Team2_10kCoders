@@ -5,7 +5,7 @@ import axios from 'axios'
 export const Employe = () => {
   const[data,setData]=useState([]);
   useEffect(()=>{
-    axios.get('https://filltext.com/?rows=10&id={index}&email={email}&username={username}&password={randomString|5}&pretty=true').then(
+    axios.get('http://localhost:3000/employe').then(
       response=>setData(response.data)
     )
 

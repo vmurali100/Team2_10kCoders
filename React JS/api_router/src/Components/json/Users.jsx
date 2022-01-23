@@ -5,7 +5,7 @@ import axios from 'axios'
 export const Users = () => {
   const[data,setData]=useState([]);
   useEffect(()=>{
-    axios.get('https://jsonplaceholder.typicode.com/users').then(
+    axios.get('http://localhost:3000/users').then(
       response=>setData(response.data)
     )
 

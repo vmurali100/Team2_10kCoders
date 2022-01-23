@@ -5,7 +5,7 @@ import axios from 'axios'
 export const Comments = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/comments').then(
+        axios.get('  http://localhost:3000/comments').then(
             response => setData(response.data)
         )
 

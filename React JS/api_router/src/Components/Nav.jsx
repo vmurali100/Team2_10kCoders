@@ -1,10 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import axios from "axios";
+import React, { useEffect, useState }  from "react";
+import {Link} from 'react-router-dom' ;
 
 export const Nav = () => {
+    const [navdata , setNavdata] = useState([]) ; 
+    useEffect(()=>{
+        axios.get("http://localhost:3000/nav").then(({data})=>{
+            setNavdata(data)
+        })
+    },[])
     return <div className='wrapper'>
         <h1>React Router</h1>
-        <ul>
+
+        {navdata.map((nav)=>{
+                return  <li><Link to={`/${nav}`}>{nav}</Link></li>
+            })}
+        
+        {/* <ul>
             <Link to="/"> <li>Home</li></Link>
             <Link to="/albums"><li>Albums</li></Link>
             <Link to="/comments"><li>Comments</li></Link>
@@ -18,7 +30,7 @@ export const Nav = () => {
             <Link to="/employe"><li>Employe</li></Link>
             <Link to="/name"><li>Name</li></Link>
             <Link to="/person"><li>Person</li></Link>
-        </ul><br/>
+        </ul><br/> */}
     </div>;
   
        

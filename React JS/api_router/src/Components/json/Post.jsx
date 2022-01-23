@@ -5,7 +5,7 @@ import axios from 'axios'
 export const Post = () => {
     const[data,setData]=useState([]);
     useEffect(()=>{
-      axios.get('https://jsonplaceholder.typicode.com/posts').then(
+      axios.get('http://localhost:3000/posts').then(
         response=>setData(response.data)
       )
   

@@ -5,7 +5,7 @@ import axios from 'axios'
 export const Name = () => {
   const[data,setData]=useState([]);
   useEffect(()=>{
-    axios.get('https://filltext.com/?rows=10&fname={firstName}&lname={lastName}&pretty=true').then(
+    axios.get('http://localhost:3000/name').then(
       response=>setData(response.data)
     )
 

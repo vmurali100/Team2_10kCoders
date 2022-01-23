@@ -5,7 +5,7 @@ import axios from 'axios'
 export const Cart = () => {
   const[data,setData]=useState([]);
   useEffect(()=>{
-    axios.get('https://fakestoreapi.com/carts').then(
+    axios.get('http://localhost:3000/cart').then(
       response=>setData(response.data)
     )
 

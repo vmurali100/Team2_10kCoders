@@ -15,6 +15,8 @@ import { Usersfake } from './Components/fakesrore/Usersfake';
 import { Employe } from './Components/filltext/Employe';
 import { Name } from './Components/filltext/Name';
 import { Person } from './Components/filltext/Person';
+import { Students } from './Components/Students';
+import { Student_Details } from './Components/Student_Details';
 
 
 function App() {
@@ -36,6 +38,9 @@ function App() {
           <Route path="/employe" element={<Employe/>}/>
           <Route path="/name" element={<Name/>}/>
           <Route path="/person" element={<Person/>}/>
+          <Route path="/students" element={<Students/>}/>
+          <Route path="/students/:studentname" element={<Student_Details/>}/>
+
 
 
          
