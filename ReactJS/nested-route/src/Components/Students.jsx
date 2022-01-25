@@ -1,5 +1,15 @@
 import React from 'react';
+import { useState } from 'react';
 
 export const Students = () => {
-  return <div><h1>Students Component</h1></div>;
+    const [students, setStudents] = useState(["Ervin","Ravi","Ganesh","Karthik","Bala"])
+  return (<div>
+        {
+            students.map(
+                (student)=>{
+                    return <p key={student}>{student}</p>
+                }
+            )
+        }
+  </div>);
 };
