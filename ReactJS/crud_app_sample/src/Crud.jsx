@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 
 export const Crud = ()=>{
- const [data , setData] = useState([])
+ const [data , setData] = useState({
+   title : " ",
+   auther : " " ,
+   publisher : " " ,
+   stock : " "
+ })
     const addnewrecord =()=>{
       document.getElementById("forminput").style.display = "block" ;
       document.getElementById("table_data").style.display = "none" 
@@ -23,6 +28,7 @@ export const Crud = ()=>{
                myTbody.append(myTr)
            })
       setData(allData)
+      console.log(data)
 
         document.getElementById("table_data").style.display = "block"  ;
         document.getElementById("forminput").style.display = "none" 
@@ -43,19 +49,19 @@ export const Crud = ()=>{
 <div className="col-3"></div>
 <div className="col-6"><form>
   <div class="mb-3">
-    <label for="title" class="form-label">TITLE</label>
+    <label htmlFor="title" class="form-label">TITLE</label>
     <input type="text" class="form-control" id="title" aria-describedby="emailHelp" name="title"/>
      </div>
   <div class="mb-3">
-    <label for="auther" class="form-label">AUTHER</label>
+    <label htmlFor="auther" class="form-label">AUTHER</label>
     <input type="text" class="form-control" id="auther" name="auther"/>
   </div>
   <div class="mb-3">
-    <label for="publisher" class="form-label">PUBLISHER</label>
+    <label htmlFor="publisher" class="form-label">PUBLISHER</label>
     <input type="text" class="form-control" id="publisher" name="publisher"/>
   </div>
   <div class="mb-3">
-    <label for="stock" class="form-label">STOCK</label>
+    <label htmlFor="stock" class="form-label">STOCK</label>
     <input type="number" class="form-control" id="stock" name="stock" />
   </div>
   
