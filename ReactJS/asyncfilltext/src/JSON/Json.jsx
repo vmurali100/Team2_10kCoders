@@ -1,19 +1,21 @@
 import {connect} from "react-redux"
-import { getAlbumsAction, getCommentsAction, getJsonUsersAction, getPhotosAction, getPostsAction, getTodosAction } from "../Redux/Actions/index.js"
+import { getAlbumsAction, getCommentsAction, getJsonUsersAction, getPhotosAction, getPostsAction, getTodosAction, getUserTokenAction } from "../Redux/Actions/index.js"
 
-const  Json = ({todos , comments,posts, photos ,jsonusers ,albums , getTodosFunc , getAlbumsFunc , getCommentsFunc , getPostsFunc , getPhotosFunc , getJsonUsersFunc})=>{
+const  Json = ({todos , comments,posts, photos ,jsonusers ,albums , getTodosFunc , getAlbumsFunc , getCommentsFunc , getPostsFunc , getPhotosFunc , getJsonUsersFunc , getuserformdataFunc})=>{
     return <div> 
-        <button type="button" onClick={()=>getTodosFunc()}>GET TODOS</button> 
+        {/* <button type="button" onClick={()=>getTodosFunc()}>GET TODOS</button> 
         <button type="button" onClick={()=>getAlbumsFunc()}>GET ALBUMS</button> 
         <button type="button" onClick={()=>getCommentsFunc()}>GET Comments</button> 
         <button type="button" onClick={()=>getPostsFunc()}>GET POSTS</button> 
         <button type="button" onClick={()=>getPhotosFunc()}>GET PHOTOS</button> 
-        <button type="button" onClick={()=>getJsonUsersFunc()}>GET JSON USERS</button> 
+        <button type="button" onClick={()=>getJsonUsersFunc()}>GET JSON USERS</button>  */}
+        <button type="button" onClick={()=>getuserformdataFunc()}>GETTTTTTT</button> 
+
 
         {todos.map((e)=>{ 
             return <h1>{e.title}</h1>
         })}
-        {/*  */}
+    
         {posts.map((e)=>{ 
             return <h1>{e.body}</h1>
         })}
@@ -52,6 +54,8 @@ const MDTP = (dispatch) =>{
         getPhotosFunc : ()=>{dispatch(getPhotosAction())} ,
         getPostsFunc : ()=>{dispatch(getPostsAction())} ,
         getJsonUsersFunc : ()=>{dispatch(getJsonUsersAction())} ,
+        getuserformdataFunc : ()=>{dispatch(getUserTokenAction())}
+
     }
 }
 

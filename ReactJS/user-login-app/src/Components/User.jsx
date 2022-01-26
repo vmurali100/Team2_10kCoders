@@ -59,7 +59,7 @@ console.log(props)
           Sign Up
         </button> 
         <button type="button" className="btn btn-warning" style={{"marginLeft" : " 50px"}} onClick={()=>getdata() / props.getuserdata() } >
-         <Link to="username"> Log In</Link>
+         <Link to={user.username}> Log In</Link>
         </button>
       </form></div>
              <div className="col-4"></div>
@@ -71,7 +71,7 @@ console.log(props)
 
 const  MDTP =(dispatch)=>{
   return {
-    getuserdata : ()=>(dispatch(getaction()))
+    getuserdata : ()=>{dispatch(getaction())}
   }
 
 }

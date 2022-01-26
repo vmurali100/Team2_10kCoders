@@ -7,10 +7,12 @@ import { Reducer } from './Reducer';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { Userdetails } from './Components/UserDetails';
+import user from './Components/User';
 
 function App() {
 
   const store =createStore(Reducer , applyMiddleware(thunk))
+  var user = JSON.parse(localStorage.getItem("user"))
   return (
     <div className="App">
     <Provider store={store}>
@@ -20,7 +22,7 @@ function App() {
  <BrowserRouter>
  {/* <User/> */}
  <Routes>
-   <Route path="username"  element={<Userdetails/>} />
+   <Route path={user.username}  element={user.username === 'nikhilchandrapoddar099@gmail.com' && user.password === 'nikhil' ?<Userdetails user = {user}/> : " "}  />
    <Route path="/"  element={<User/>} />
      
   

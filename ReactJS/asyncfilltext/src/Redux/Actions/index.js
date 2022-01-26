@@ -161,3 +161,26 @@ export  const getPostsAction = ()=>{
    
 }
 
+
+export function getUserTokenAction() {
+    console.log("from actions ")
+    return (dispatch) => {
+        var bodyFormData = new FormData();
+        bodyFormData.append("email", "nikhilchandrapoddar099@gmail.com");
+        bodyFormData.append("password", "nikhil");
+        axios({
+            method: "post",
+            url: "https://e-prathibha.com/apis/login",
+            data: bodyFormData,
+            headers: { "Content-Type": "multipart/form-data" }
+        })
+        .then((res) => {
+            console.log(res.data);
+            dispatch({
+                type: "GET_USER_TOKEN",
+                payload: res.data
+            })
+        }) 
+    }
+}
+

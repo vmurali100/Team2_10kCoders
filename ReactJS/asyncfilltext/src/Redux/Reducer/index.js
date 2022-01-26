@@ -59,7 +59,10 @@ export const Reducer = (state = defState, actions) => {
       return actions.payload;
     case GET_POSTS:
       return actions.payload;
+      case "GET_USER_TOKEN" :
+        return actions.payload ;
     default:
       return state.filltext;
+
   }
 };
