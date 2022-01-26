@@ -51,13 +51,13 @@ export const Signup = ()=>{
     <label htmlFor="hno" className="form-label">H.No</label>
     <input type="number" id="hno" value={user.address.houseno} onChange={(e)=>handlechange(e)} name="houseno"/>
     <label htmlFor="street" className="form-label" >Street</label>
-    <input type="text"  id="street" value={user.address.street} onChange={(e)=>handlechange(e)} name="street"/> <br /> <br />
+    <input type="text"  id="street" value={user.address.street} onChange={(e)=>{handlechange(e)}} name="street"/> <br /> <br />
     <label htmlFor="city" className="form-label">City</label>
-    <input type="text" id="city" value={user.address.city} onChange={(e)=>handlechange(e)} name="city"/>
+    <input type="text" id="city" value={user.address.city} onChange={(e)=>{handlechange(e)}} name="city"/>
     <label htmlFor="state" className="form-label" >State</label>
-    <input type="text"  id="state" value={user.address.state}  onChange={(e)=>handlechange(e)} name="state"/> <br /> <br />
+    <input type="text"  id="state" value={user.address.state}  onChange={(e)=>{handlechange(e)}} name="state"/> <br /> <br />
     <label htmlFor="zip" className="form-label">Zip</label>
-    <input type="number"  id="zip" value={user.address.zip} onChange={(e)=>handlechange(e)} name="zip"/>
+    <input type="number"  id="zip" value={user.address.zip} onChange={(e)=>{handlechange(e)}} name="zip"/>
   </div>
 
   <button type="button" class="btn btn-primary" onClick={(e)=>{storeData(e)}}>Sign Up</button>
