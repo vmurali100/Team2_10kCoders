@@ -1,0 +1,25 @@
+{
+    "user" : [{
+        "id" : null ,
+        "username" : "" ,
+        "email" : "" ,
+        "password" : "" ,
+        "address" :{
+            "houseno" : null ,
+            "street" : "" ,
+            "city" : "" ,
+            "state" : "" ,
+            "zip" : null
+        }
+    }] ,
+    "items" : [
+        {
+            "id" : null ,
+            "foodId" : null ,
+            "foodName" : "" ,
+            "foodCost" : null ,
+            "foodType" : ""
+        }
+    ] ,
+    "navbar" : ["home" , "users" , "fooditems" , "signup" , "login" , "contact"]
+}
