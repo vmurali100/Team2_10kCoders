@@ -1,0 +1,12 @@
+{
+    "users":[],
+    "districts":[
+        {"districtName":"Srikakulam","constituencies":["Ichapuram","Palasa","Tekkali"]},
+        {"districtName":"VijayaNagaram","constituencies":[]},
+        {"districtName":"Manyam","constituencies":[]},
+        {"districtName":"Alluri Sitha RamaRaju","constituencies":[]},
+        {"districtName":"VishakaPatnam","constituencies":[]},
+        {"districtName":"Anakapalli","constituencies":[]},
+        {"districtName":"Kakinada","constituencies":[]}
+    ]
+}
