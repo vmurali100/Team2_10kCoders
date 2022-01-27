@@ -29,7 +29,35 @@
     {
       "id": 100,
       "email": "Akhilankathi@gmail.com",
-      "password": "8888888888888888" 
+      "password": "8888888888888888"
+    },
+    {
+      "username": "aka",
+      "password": "123456",
+      "id": 101
+    },
+    {
+      "id": 102,
+      "email": "jimmie@gmail.com",
+      "password": "33333333333",
+      "": ""
+    },
+    {
+      "id": 103,
+      "email": "jimmie@gmail.com",
+      "password": "33333333333",
+      "": ""
+    },
+    {
+      "id": 104,
+      "email": "jimmie@gmail.com",
+      "password": "33333333333",
+      "": ""
+    },
+    {
+      "email": "akhil.varma.2",
+      "password": "555555555",
+      "id": 105
     }
   ],
   "districts": [

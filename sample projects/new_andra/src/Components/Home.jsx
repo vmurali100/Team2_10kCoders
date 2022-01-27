@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import axios from 'axios' ;
 import {Link} from 'react-router-dom'
 import { Login } from "./Login";
+import { createContext } from "react";
+
+const UseContext = React.createContext();
+const UserProvider = UseContext.Provider ;
+const UserConsumer = UseContext.Consumer;
+export {UserConsumer };
 export const Home = ()=>{
     const [input , setInput ] = useState("") ;
 
@@ -13,7 +19,7 @@ export const Home = ()=>{
           let dist =  res.data.find(d=>d.const.indexOf(input) > -1) ;
           console.log(dist.dist)
           window.alert("kindly log in to view the results") ;
-
+        localStorage.setItem("input" , JSON.stringify(input));
 
         })
     }
@@ -30,7 +36,9 @@ export const Home = ()=>{
                 <div className="col-3"></div>
             </div>
         </div>
-        <Login input = {input} />
+       <UserProvider input={input} >
+       
+       </UserProvider>
     </div>
   
 }

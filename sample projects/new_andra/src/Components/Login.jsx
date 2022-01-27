@@ -1,17 +1,38 @@
 import axios from "axios";
-import React, { useState } from "react"; 
+import React, { useEffect, useState } from "react"; 
+import { UserConsumer } from "./Home";
+
+
 export const Login = ()=>{
   const [ user , setUser]  =  useState({
-      id : null ,
-      email : "" ,
+     email : "" ,
       password : "" ,
  }) ;
+ const [input ,setInput] = useState("") ;
+ const [results ,setResults] = useState("")
+
+ useEffect (()=>{
+let newinput =  JSON.parse(localStorage.getItem("input"));
+  setInput(newinput)
+ },[])
+
   const [useres ,setUseres] = useState({})
   const handlechange = (e)=>{
       let newuser = {...user} ;
       newuser[e.target.name] = e.target.value ;
      setUser(newuser);
-  }
+  } ;
+    const showResults = async()=>{
+    axios.get('http://localhost:3000/districts').then((res)=>{
+      console.log(res.data)
+      // let data = res.data
+    let dist =   res.data.find( d=> d.const.indexOf(input) > -1) ;
+    console.log(dist.dist) ;
+  setResults(dist.dist);
+  })
+  document.querySelector(".loginform").style.display = "none" ;
+  document.querySelector(".resform").style.display = "none" ;
+  document.querySelector("#results").style.display = "block" ;} 
   const getuser =()=>{
 
       axios.get('http://localhost:3000/users').then(res=>{
@@ -20,15 +41,15 @@ export const Login = ()=>{
       })
       useres.forEach((e)=>{
       if(e.username == user.username && e.password == user.password){
-        console.log("succesfully logged in")
+        window.alert("succesfully logged in")
+        showResults()
       }})
       console.log(user)
   }
   const getResForm =()=>{
       document.querySelector(".loginform").style.display = "none" ;
-      document.querySelector(".resform").style.display = "block"
-
-  }
+      document.querySelector(".resform").style.display = "block" ;
+ }
   const registerUser = async(e)=>{
     handlechange(e)
     console.log(user)
@@ -43,8 +64,8 @@ export const Login = ()=>{
     // })
     
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- let newUser = {...user , id:100}
-    axios.post("http://localhost:3000/users" , newUser).then((res)=> console.log(res.data));
+//  let newUser = {...user , id:100}
+    axios.post("http://localhost:3000/users" , user).then((res)=> console.log(res.data , useres));
 
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     // let response = await axios.post('http://localhost:3000/users' , JSON.stringify({email : user.email ,password : user.password})).then((res)=>{console.log(res)}).catch((err)=>err)
@@ -57,6 +78,11 @@ export const Login = ()=>{
     // }).then(res=>res.json()).then(data=> console.log(data))
 }
     return <div>
+      <UserConsumer>
+       { (val)=>{
+         console.log(val)
+        }}
+      </UserConsumer>
         <div className="container" style={{"marginTop" : "80px"}}> 
             <div className="row">
                 <div className="col-4"></div>
@@ -72,7 +98,7 @@ export const Login = ()=>{
     <input type="password" class="form-control" value={user.password} onChange={(e)=>{handlechange(e)}} name="password" />
   </div>
   
-  <button type="button" class="btn btn-primary" onClick={getuser}>Log In</button> <br />
+  <button type="button" class="btn btn-primary" onClick={()=>getuser()}>Log In</button> <br />
    Don't Have Account ?   <button type="button" class="btn btn-warning" onClick={getResForm}>Register</button>
 </form> 
 <form className="resform" style={{"display" : "none"}}>
@@ -91,11 +117,15 @@ export const Login = ()=>{
   </div>
   
   <button type="button" class="btn btn-primary" onClick={registerUser}>Sign Up</button>
-  </form>
+  </form> <br />
+  <div style={{"display": "none"}} id="results">
+    <h1>Your District is :{results}</h1>
+  </div>
 
                 </div>
                 <div className="col-4"></div>
             </div>
         </div>
     </div>
+  
 }
