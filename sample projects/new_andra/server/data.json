@@ -1,11 +1,115 @@
 {
-    "users" : [
-       
-    ] ,
-    "districts" : [{
-      "dist" :  "srikakulam" , "const" : ["ichapuram" , "sompeta" , "tekkali" , "harishchandrapuram" , "narsannapeta" , "patapatnam" , "kothuru" , "unukoru" , "palakonda" , "amadalavalasa" , "srikakulam" , "etcherla"] } ,{
-        "dist" : "vizianagaram" , "const" : ["naguru" , "parvathipuram" , "saluru" , "bobbili" , "therlam" ,"cheepurupalli" , "gajapathinagaram" , "vizianagaram" , "sathivada" , "bhogapuram" , "uttarapalli" , "srungavarapukota"] },{
-            "dist" :  "visakhapatnam" , "const" : ["bheemunipatnam" , "visakhapatnam-1" , "visakhapatnam-2" , "pendurthi" , "paderu" , "madugula" , "chodavaram" , "anakapalli" , "paravada" , "elamanchili" , "payakaraopeta" , "narsipatnam" , "chintapalli"] }, {
-                "dist" : "east godavari" , "const" : ["yellavaram" , "burugupudi" , "rajahmundry" , "kadiam" , "jaggampeta" , "peddapuram" , "prathiupadu" , "tuni" , "pithapuram" , "sampara" , "kakinada" , "tallarevu" ,"anaparthi" , "ramachandrapuram" , "alamuru" , "mummudivaram" ,"allavaram" , "amalapuram" ,"kothapeta" , "nagaram" , "razole"]}
-    ]
+  "users": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6,
+      "email": "moretoyourdoor007@gmail.com",
+      "password": "33333333333333333",
+      "": ""
+    },
+    {
+      "id": 7,
+      "email": "Akhilankathi@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "id": 100,
+      "email": "Akhilankathi@gmail.com",
+      "password": "8888888888888888" 
+    }
+  ],
+  "districts": [
+    {
+      "dist": "srikakulam",
+      "const": [
+        "ichapuram",
+        "sompeta",
+        "tekkali",
+        "harishchandrapuram",
+        "narsannapeta",
+        "patapatnam",
+        "kothuru",
+        "unukoru",
+        "palakonda",
+        "amadalavalasa",
+        "srikakulam",
+        "etcherla"
+      ]
+    },
+    {
+      "dist": "vizianagaram",
+      "const": [
+        "naguru",
+        "parvathipuram",
+        "saluru",
+        "bobbili",
+        "therlam",
+        "cheepurupalli",
+        "gajapathinagaram",
+        "vizianagaram",
+        "sathivada",
+        "bhogapuram",
+        "uttarapalli",
+        "srungavarapukota"
+      ]
+    },
+    {
+      "dist": "visakhapatnam",
+      "const": [
+        "bheemunipatnam",
+        "visakhapatnam-1",
+        "visakhapatnam-2",
+        "pendurthi",
+        "paderu",
+        "madugula",
+        "chodavaram",
+        "anakapalli",
+        "paravada",
+        "elamanchili",
+        "payakaraopeta",
+        "narsipatnam",
+        "chintapalli"
+      ]
+    },
+    {
+      "dist": "east godavari",
+      "const": [
+        "yellavaram",
+        "burugupudi",
+        "rajahmundry",
+        "kadiam",
+        "jaggampeta",
+        "peddapuram",
+        "prathiupadu",
+        "tuni",
+        "pithapuram",
+        "sampara",
+        "kakinada",
+        "tallarevu",
+        "anaparthi",
+        "ramachandrapuram",
+        "alamuru",
+        "mummudivaram",
+        "allavaram",
+        "amalapuram",
+        "kothapeta",
+        "nagaram",
+        "razole"
+      ]
+    }
+  ]
 }

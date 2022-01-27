@@ -1,6 +1,7 @@
 import React, { useState } from "react"; 
 import axios from 'axios' ;
 import {Link} from 'react-router-dom'
+import { Login } from "./Login";
 export const Home = ()=>{
     const [input , setInput ] = useState("") ;
 
@@ -29,5 +30,7 @@ export const Home = ()=>{
                 <div className="col-3"></div>
             </div>
         </div>
+        <Login input = {input} />
     </div>
+  
 }
