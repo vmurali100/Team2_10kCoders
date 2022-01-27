@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.svg'; 
 import './App.css';
 import { Signup } from './Components/Signup';
 import { Navbar } from './Components/Navbar';
@@ -12,9 +12,11 @@ function App() {
     <div className="App">
    <BrowserRouter>
    <Navbar/>
+   {/* <Home/> */}
   {/* <Signup/> */}
   <Routes>
-    <Route path = "/" element = {<Home/>} />
+    <Route path = "/" element = { <Home/>  } /> 
+    <Route path = "/home" element = { ! <Home/>  ? <Home/> : "" } /> 
     <Route path = "/signup" element = {<Signup/>} />
     <Route path = "/login" element = {<Login/>} />
     {/* <Route path = "/users" element = {<Users/>} />
