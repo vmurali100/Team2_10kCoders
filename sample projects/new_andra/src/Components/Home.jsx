@@ -13,15 +13,15 @@ export const Home = ()=>{
 
    const getdistrict =()=>{
         console.log(input) ;
-        axios.get('http://localhost:3000/districts').then((res)=>{
-            console.log(res.data)
-            // let data = res.data
-          let dist =  res.data.find(d=>d.const.indexOf(input) > -1) ;
-          console.log(dist.dist)
-          window.alert("kindly log in to view the results") ;
+        // axios.get('http://localhost:3000/districts').then((res)=>{
+        //     console.log(res.data)
+        //     // let data = res.data
+        //   let dist =  res.data.find(d=>d.const.indexOf(input) > -1) ;
+        //   console.log(dist.dist)
+        //   window.alert("kindly log in to view the results") ;
         localStorage.setItem("input" , JSON.stringify(input));
 
-        })
+        // })
     }
     return <div>
         <div className="container" style={{ "marginTop" : "200px"}}>

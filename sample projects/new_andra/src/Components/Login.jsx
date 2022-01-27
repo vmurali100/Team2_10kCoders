@@ -23,12 +23,12 @@ let newinput =  JSON.parse(localStorage.getItem("input"));
      setUser(newuser);
   } ;
     const showResults = async()=>{
-    axios.get('http://localhost:3000/districts').then((res)=>{
+   await axios.get('http://localhost:3000/districts').then((res)=>{
       console.log(res.data)
       // let data = res.data
-    let dist =   res.data.find( d=> d.const.indexOf(input) > -1) ;
-    console.log(dist.dist) ;
-  setResults(dist.dist);
+    let district = res.data.find( d => d.const.indexOf(input) > -1 ) ;
+    console.log(district.dist) ;
+  setResults(district.dist);
   })
   document.querySelector(".loginform").style.display = "none" ;
   document.querySelector(".resform").style.display = "none" ;

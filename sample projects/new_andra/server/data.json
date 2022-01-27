@@ -62,82 +62,109 @@
   ],
   "districts": [
     {
-      "dist": "srikakulam",
-      "const": [
-        "ichapuram",
-        "sompeta",
-        "tekkali",
-        "harishchandrapuram",
-        "narsannapeta",
-        "patapatnam",
-        "kothuru",
-        "unukoru",
-        "palakonda",
-        "amadalavalasa",
-        "srikakulam",
-        "etcherla"
-      ]
+        "dist":"Srikakulam",
+        "const": ["ichapuram","palasa","tekkali","echerla","srikakulam","amadalavalasa","pathapatnam","narasannapeta"]
     },
     {
-      "dist": "vizianagaram",
-      "const": [
-        "naguru",
-        "parvathipuram",
-        "saluru",
-        "bobbili",
-        "therlam",
-        "cheepurupalli",
-        "gajapathinagaram",
-        "vizianagaram",
-        "sathivada",
-        "bhogapuram",
-        "uttarapalli",
-        "srungavarapukota"
-      ]
+        "dist":"Vizianagaram",
+        "const": ["rajam","bobbili","gajapathinagar","cheepurupalli","nellimarla","vizianagaram","sringavarapukota"]
     },
     {
-      "dist": "visakhapatnam",
-      "const": [
-        "bheemunipatnam",
-        "visakhapatnam-1",
-        "visakhapatnam-2",
-        "pendurthi",
-        "paderu",
-        "madugula",
-        "chodavaram",
-        "anakapalli",
-        "paravada",
-        "elamanchili",
-        "payakaraopeta",
-        "narsipatnam",
-        "chintapalli"
-      ]
+        "dist":"Manyam",
+        "const": ["palakonda","kurupam","parvathipuram","salur"]
     },
     {
-      "dist": "east godavari",
-      "const": [
-        "yellavaram",
-        "burugupudi",
-        "rajahmundry",
-        "kadiam",
-        "jaggampeta",
-        "peddapuram",
-        "prathiupadu",
-        "tuni",
-        "pithapuram",
-        "sampara",
-        "kakinada",
-        "tallarevu",
-        "anaparthi",
-        "ramachandrapuram",
-        "alamuru",
-        "mummudivaram",
-        "allavaram",
-        "amalapuram",
-        "kothapeta",
-        "nagaram",
-        "razole"
-      ]
+        "dist":"Alluri Seetharama Raju",
+        "const": ["paderu","araku","rampachodavaram"]
+    },
+    {
+        "dist":"Visakhapatnam",
+        "const": ["bhimili","Visakhapatnam east","Visakhapatnam west","Visakhapatnam south","Visakhapatnam north"]
+    },
+    {
+        "dist":"Anakapalli",
+        "const": ["payakaraopeta","narsipatnam","chodavaram","madugula","anakapalli","yalamanchili","pendurthy"]
+    },
+    {
+        "dist":"East Godavari",
+        "const": ["tuni","prathipadu(east-godavari)","jaggampeta","pithapuram","peddapuram","kakinada rural","kakinada city"]
+    },
+    {
+        "dist":"Konaseema",
+        "const": ["rampachodavaram","mandapeta","kottapeta","mummidivaram","amalapuram","rajolu","p.gannavaram"]
+    },
+    {
+        "dist":"Rajahmundry",
+        "const": ["anaparthi","rajanagaram","rajahmundry city","rajahmundry rural","kovvur","nidadavolu","gopalapuram"]
+    },
+    {
+        "dist":"Narasapuram",
+        "const": ["achanta","palakollu","narasapuram","bhimavaram","undi","tanuku","tadepalligudem"]
+    },
+    {
+        "dist":"West Godavari",
+        "const": ["unguturu","kaikaluru","denduluru","eluru","polavaram","chintalapudi","nuzividu"]
+    },
+    {
+        "dist":"Krishna",
+        "const": ["gudivada","penamaluru","gannavaram","palmeru","pedana","machilipatnam","avanigadda"]
+    },
+    {
+        "dist":"NTR",
+        "const": ["vijayawada west","vijayawada central","vijayawada east","myalavarm","nandigama","jaggayyapeta","thiruvuru"]
+    },
+    {
+        "dist":"Guntur",
+        "const": ["tadikonda","guntur west","guntur central","ponnur","prathipadu(guntur)","mangalagiri","tenali"]
+    },
+    {
+        "dist":"Bapatla",
+        "const": ["vemuru","repalle","bapatla","parchuru","addanki","chirala"]
+    },
+    {
+        "dist":"Palnadu",
+        "const": ["pedakurapadu","gurajala","macharla","chilkaluripeta","narsaraopeta","vinukonda","sattenapalle"]
+    },
+    {
+        "dist":"Prakasam",
+        "const": ["yarragondapalem","giddaluru","markapuram","santhanuthalapadu","ongole","kondepi","darshi","kanigir"]
+    },
+    {
+        "dist":"Sri Pottisriramulu Nellore",
+        "const": ["kovuru(nellore)","nellore city","nellore rural","sarvepalli","atmakuru","udayagiri","kavali","kandukuru"]
+    },
+    {
+        "dist":"Kurnool",
+        "const": ["panyam","kodumuru","kurnool","pratikonda","emmiganur","mantralayam","adoni","alur"]
+    },
+    {
+        "dist":"Nandyal",
+        "const": ["nandyal","allagadda","srisailam","banaganapalle","done","nandikotkur"]
+    },
+    {
+        "dist":"Ananthpur",
+        "const": ["rayadurg","kalyanadurg","uravakonda","rapthadu","singanamala","ananthapur urban","tadipatri","guntakal"]
+    },
+    {
+        "dist":"Sri Sathyasai",
+        "const": ["madakashira","hindupuram","penugonda","dharmavaram","puttaparthi","kadiri"]
+    },
+    {
+        "dist":"YSR Kadapa",
+        "const": ["kadapa","kamalapuram","pulivendula","jammalamadugu","proddatur","badvelu","maidukuru"]
+    },
+    {
+        "dist":"Annamaiah",
+        "const": ["rajampeta","railwaykoduru","rayachoti","pileru","thamallapalle","madanapalle"]
+    },
+    {
+        "dist":"Chittoor",
+        "const": ["nagari","gangadhara nellore","chittoor","pothalpattu","palamaneru","kuppam","punganur"]
+    },
+    {
+        "dist":"Sri Balaji",
+        "const": ["sullurpeta","sathyavedu","gudur","venkatagiri","tirupati","chandragiri","srikalahasti"]
     }
-  ]
+
+]
 }
