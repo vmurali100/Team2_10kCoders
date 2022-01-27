@@ -1,0 +1,32 @@
+{
+    "users":[],
+    "districts":[{
+        "districtName":"Srikakulam","constituencies":[
+            "Ichapuram",
+            "Palasa",
+            "Tekkali"
+        ]
+    },
+    {
+        "districtName":"Vizianagaram","constituencies":[]
+    },
+    {
+        "districtName":"Manyam","constituencies":[]
+    },
+    {
+        "districtName":"Alluri Sitharama Raju ","constituencies":[]
+    },
+    {
+        "districtName":"Visakhapatnam","constituencies":[]
+    },
+    {
+        "districtName":"Anakapalli","constituencies":[]
+    },
+    {
+        "districtName":"Kakinada","constituencies":[]
+    },
+    {
+        "districtName":"Kona Seema ","constituencies":[]
+    }
+]
+}

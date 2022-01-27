@@ -37,6 +37,7 @@ class Form extends Component {
     render() {
         return (
             <div>
+                <h1 style={{color:'blue',fontStyle:'italic'}}>Login</h1>
                 <center>
                     <form>
                         
@@ -47,7 +48,7 @@ class Form extends Component {
                         <label>Password</label>
                         <input type="password" name='password' placeholder='Password' value={this.state.user.password} onChange={this.handleClick} /><br />
 
-                        <button type="button" onClick={this.handleSubmit}> Submit</button>
+                        <button type="button" onClick={this.handleSubmit}><Link to={`/form/${userdetails}`}> Submit</Link></button>
            
        
                     </form>
