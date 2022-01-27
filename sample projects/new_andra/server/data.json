@@ -1,0 +1,11 @@
+{
+    "users" : [
+       
+    ] ,
+    "districts" : [{
+      "dist" :  "srikakulam" , "const" : ["ichapuram" , "sompeta" , "tekkali" , "harishchandrapuram" , "narsannapeta" , "patapatnam" , "kothuru" , "unukoru" , "palakonda" , "amadalavalasa" , "srikakulam" , "etcherla"] } ,{
+        "dist" : "vizianagaram" , "const" : ["naguru" , "parvathipuram" , "saluru" , "bobbili" , "therlam" ,"cheepurupalli" , "gajapathinagaram" , "vizianagaram" , "sathivada" , "bhogapuram" , "uttarapalli" , "srungavarapukota"] },{
+            "dist" :  "visakhapatnam" , "const" : ["bheemunipatnam" , "visakhapatnam-1" , "visakhapatnam-2" , "pendurthi" , "paderu" , "madugula" , "chodavaram" , "anakapalli" , "paravada" , "elamanchili" , "payakaraopeta" , "narsipatnam" , "chintapalli"] }, {
+                "dist" : "east godavari" , "const" : ["yellavaram" , "burugupudi" , "rajahmundry" , "kadiam" , "jaggampeta" , "peddapuram" , "prathiupadu" , "tuni" , "pithapuram" , "sampara" , "kakinada" , "tallarevu" ,"anaparthi" , "ramachandrapuram" , "alamuru" , "mummudivaram" ,"allavaram" , "amalapuram" ,"kothapeta" , "nagaram" , "razole"]}
+    ]
+}
