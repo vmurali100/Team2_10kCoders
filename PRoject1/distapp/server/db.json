@@ -1,12 +1,46 @@
 {
-    "users":[],
-    "districts":[
-        {"districtName":"Srikakulam","constituencies":["Ichapuram","Palasa","Tekkali"]},
-        {"districtName":"VijayaNagaram","constituencies":[]},
-        {"districtName":"Manyam","constituencies":[]},
-        {"districtName":"Alluri Sitha RamaRaju","constituencies":[]},
-        {"districtName":"VishakaPatnam","constituencies":[]},
-        {"districtName":"Anakapalli","constituencies":[]},
-        {"districtName":"Kakinada","constituencies":[]}
-    ]
+  "users": [
+    {
+      "fname": "hh",
+      "lname": "hd",
+      "username": "Teja123",
+      "email": "tejastudent777@gmail.com",
+      "password": "12345",
+      "id": 1
+    }
+  ],
+  "districts": [
+    {
+      "districtName": "Srikakulam",
+      "constituencies": [
+        "Ichapuram",
+        "Palasa",
+        "Tekkali"
+      ]
+    },
+    {
+      "districtName": "VijayaNagaram",
+      "constituencies": []
+    },
+    {
+      "districtName": "Manyam",
+      "constituencies": []
+    },
+    {
+      "districtName": "Alluri Sitha RamaRaju",
+      "constituencies": []
+    },
+    {
+      "districtName": "VishakaPatnam",
+      "constituencies": []
+    },
+    {
+      "districtName": "Anakapalli",
+      "constituencies": []
+    },
+    {
+      "districtName": "Kakinada",
+      "constituencies": []
+    }
+  ]
 }
