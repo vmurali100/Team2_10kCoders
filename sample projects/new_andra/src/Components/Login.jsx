@@ -45,13 +45,15 @@ if(us.length == 0) {
 } else {
   let logged = us.find( myus => myus.username == user.username && myus.password  == user.password) ;
   if(logged){
-    navigate("/")
+    localStorage.setItem("loggedUser" , JSON.stringify(user))
+    navigate("/");
+
   }else{
     window.alert("Not Registered ..... please Register and Login Again");
     navigate("/register")
   }
 }
-localStorage.setItem("loggedUser" , JSON.stringify(user))
+
 
 }
   const getuserprom =()=>{
@@ -108,28 +110,3 @@ localStorage.setItem("loggedUser" , JSON.stringify(user))
   
 }
 
-export class Bar extends Component (){
-
-  constructor(props){
-    super(props)
-    this.state = {
-      email: "", 
-      password : ""
-    }
-  }
-  static getDerivedStateFromProps (props ,state){
-  const localUser = JSON.parse(localStorage.getItem("loggedUser")) ;
-  this.setState(localUser) ;
-  console.log(this.state);
-  }
-  render(){
-  return <div>
-    <div className="container">
-      <div className="row">
-        <div className="col-4"></div>
-        <div className="col-4">{this.state ? <li>{this.state.email}</li> && <button type="button">LogOut</button>: ""} </div>
-        <div className="col-4"></div>
-      </div>
-    </div>
-  </div>
-}}
