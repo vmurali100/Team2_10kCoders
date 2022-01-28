@@ -33,16 +33,17 @@ export const Signup = ()=>{
  const storeData =() =>{
   console.log(user) ;
 
-  let options = {
-    method : "POST" ,
-    url :  "http://localhost:3000/user" ,
-    header : {} ,
-    data : user ,
+//   let options = {
+//     method : "POST" ,
+//     url :  "http://localhost:3000/foodie" ,
+//     header : {} ,
+//     data : user ,
 
+//   }
+//  let res =  axios(options) ;
+//  console.log(res.data)
+axios.post('http://localhost:3000/foodie' , user).then((res)=>{console.log(res.data)})
   }
- let res =  axios(options) ;
- console.log(res.data)
- }
  const {username ,email ,password ,address} = user
     return <div>
   <div className="container" style={{"marginTop": "80px"}}>

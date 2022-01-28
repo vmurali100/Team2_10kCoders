@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import { Home } from './Components/Home';
-import { Login } from './Components/Login';
+import { Bar, Login } from './Components/Login';
 import {BrowserRouter , Routes , Route } from 'react-router-dom'
+import { SignUp } from './Components/Signup';
 
 function App() {
   return (
@@ -11,8 +12,10 @@ function App() {
      <BrowserRouter>
  
      <Routes>
+     <Route path="" element = {<Bar/> &&<Home/>}/>
        <Route path="/login" element = {<Login/>}/>
-       <Route path="" element = {<Home/>}/>
+       <Route path="/register" element = {<SignUp/>}/>
+    
      </Routes>
      </BrowserRouter>
     </div>

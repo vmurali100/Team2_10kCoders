@@ -1,17 +1,7 @@
 {
-    "user" : [{
-        "id" : null ,
-        "username" : "" ,
-        "email" : "" ,
-        "password" : "" ,
-        "address" :{
-            "houseno" : null ,
-            "street" : "" ,
-            "city" : "" ,
-            "state" : "" ,
-            "zip" : null
-        }
-    }] ,
+    "foodie" : [
+  
+    ] ,
     "items" : [
         {
             "id" : null ,
