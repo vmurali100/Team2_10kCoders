@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {getData} from './Actions';
+// import {getData} from './Actions';
 import {getAllUsersAction} from './Actions/actions'
 
 class Form extends Component {
@@ -23,6 +23,7 @@ class Form extends Component {
         e.preventDefault();
         // this.props.createUser(this.state.user);
         this.handleClear();
+        console.log(this.state.user)
         
         
 
@@ -48,7 +49,7 @@ class Form extends Component {
                         <label>Password</label>
                         <input type="password" name='password' placeholder='Password' value={this.state.user.password} onChange={this.handleClick} /><br />
 
-                        <button type="button" onClick={this.handleSubmit}><Link to={`/form/${userdetails}`}> Submit</Link></button>
+                        <button type="button" onClick={this.handleSubmit}> Submit</button>
            
        
                     </form>

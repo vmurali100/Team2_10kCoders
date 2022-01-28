@@ -1,19 +1,35 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 export const DistrictDetails = () => {
+    let navigate = useNavigate();
+
   const [userInput, setuserInput] = useState("");
   const [searchDist, setsearchDist] = useState({});
-
+  const [isLoggedIn, setisLoggedIn] = useState(false);
+  useEffect(()=>{
+    let user = JSON.parse(localStorage.getItem("loggedInUser"));
+    if(user){
+      setisLoggedIn(true)
+      navigate("/");
+    }
+  },[])
   const searchDistrict = () => {
-    console.log(userInput);
-    axios.get("http://localhost:3000/districts").then((res) => {
-      console.log(res.data);
-      let dist = res.data.find(
-        (d) => d.constituencies.indexOf(userInput) > -1
-      );
-      setsearchDist(dist);
-    });
+    
+      if(isLoggedIn){
+        axios.get("http://localhost:3000/districts").then((res) => {
+            console.log(res.data);
+            let dist = res.data.find(
+              (d) => d.constituencies.indexOf(userInput) > -1
+            );
+            setsearchDist(dist);
+          });
+      }else{
+          alert("You Are Not Logged in ... Please Login to See the District Details")
+          navigate("/login");
+        }
+   
   };
   return (
     <div>
@@ -46,7 +62,7 @@ export const DistrictDetails = () => {
           </div>
           {searchDist.districtName && (
             <div className="col">
-              <h2>Your New Disgtrict Name is : {searchDist.districtName}</h2>
+              <h2>Your New District Name is : {searchDist.districtName}</h2>
             </div>
           )}
         </div>
