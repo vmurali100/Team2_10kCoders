@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState ,useEffect} from "react";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
 export const Admin = ()=>{
@@ -29,26 +29,27 @@ const handlechange = (e)=>{
    
 } ;
 
-const getadmin = async()=>{
-    console.log(admin)
-let adminhere = await getadminprom();
-if(admin.email === adminhere.username && admin.password === adminhere.password){
-    navigate("/admindashboard")
-  }else {
-      console.log("wrong")
-  }
-}
-const getadminprom = ()=>{
-    return new Promise ((res ,rej)=>{
+
+const getAdminProm = ()=>{
+    return new Promise ((resolve ,reject)=>{
         axios.get('http://localhost:3000/admin').then(({data})=>{
-            res(data)
+            resolve(data)
             console.log(data)
     })
     
    
     })
 }
-
+const getadmin = async ()=>{
+    console.log(admin)
+let adminhere = await getAdminProm();
+console.log(adminhere)
+if(admin.email === adminhere.email && admin.password === adminhere.password){
+    navigate("/admindashboard")
+  }else {
+      console.log("wrong")
+  }
+}
     return <div>
           <div className="container" style={{"marginTop" : "80px"}}> 
             <div className="row">
@@ -68,10 +69,7 @@ const getadminprom = ()=>{
   <button type="button" class="btn btn-primary" onClick={getadmin}>Log In</button> 
   
 </form> 
-
-
-
-                </div>
+</div>
                 <div className="col-4"></div>
             </div>
         </div>
@@ -79,37 +77,83 @@ const getadminprom = ()=>{
 }
 
 export const Admindashboard =()=>{
-    const [users , setUsers] = useState([]);
-    const [dists ,setDists] = useState([]);
-const getUsers =()=>{
-     axios.get("http://localhost:3000/user").then(({data})=>{
-         setUsers(data);
+  const navigate = useNavigate()
 
-     })
-}
-const getDist =()=>{
-    
-}
+  const getuserlist =()=>{
+        navigate("/admindashboard/userslist")
+   }
     return <div>
        <div className="container">
            <div className="row">
                <div className="col-4"></div>
                <div className="col-4"> 
-               <button type="button" onClick={getUsers}>GET USERS</button><button  type="button" onClick={getDist}>GET DISTRICTS</button>
+               <button type="button" onClick={getuserlist}>GET USERS</button><button  type="button" ><Link to="districtslist">GET DISTRICTS</Link></button> 
+               {/* <button  type="button"><Link to="addnew">ADD NEW DISTRICT DETAILS</Link></button> */}
                </div>
                <div className="col-4"></div>
            </div>
        </div> <br />
-       <div className="container">
-           <div className="row">
-               <div className="col-4"></div>
-               <div className="col-4"> 
-              <table>
+     
+    </div>
+}
+
+
+
+export const DistrictsList = ()=>{
+    const [distlist , setDistlist] = useState([]);
+    useEffect(()=>{
+        axios.get("http://localhost:3000/districts").then(({data})=>{
+            setDistlist(data) ;
+            console.log(data)
+           
+         
+        })
+        
+       
+    },[])
+    const getDists = ()=>{
+        distlist.forEach((user)=>{
+            var myTr = document.createElement("tr");
+            var mytbody = document.querySelector("tbody");
+            
+            for (var a in user){
+                if ( a != "const"){
+                     var myTd = document.createElement("td");
+                     var  myb = document.createElement("b");
+                     myb.innerHTML = user[a] ;
                  
-                  <thead>
-                      <tr>
-                          <td>Email</td>
-                          <td>Password</td>
+                     myTd.append(myb)
+                     myTr.append(myTd)
+                     myTr.style.border = "2px solid"
+                     myTd.style.border = "2px solid"
+                } else if ( a == "const"){
+                    user.const.map((as)=>{
+                        var myTd = document.createElement("td")
+                        myTd.innerHTML = as ;
+                        myTr.append(myTd)
+                        myTr.style.border = "2px solid"
+                    })
+                  
+                   
+                }
+            }
+            mytbody.append(myTr)
+        })
+    }
+    return <div>
+    <h1>USERS LIST</h1>
+    
+    <div className="container" >
+           <div className="row">
+               <div className="col-1"></div>
+               <div className="col-10"> 
+               <button type="button" onClick={ getDists}>get districts list</button>
+              <table style={{"border" : "2px solid" , "marginTop" : "40px"}}>
+                 
+                  <thead style={{"border" : "2px solid"}}>
+                      <tr style={{"border" : "2px solid"}}>
+                          <td style={{"border" : "2px solid"}}> <h4><b>DISTRICT</b></h4> </td>
+                          <td style={{"border" : "2px solid"}} colSpan={8}> <h4><b>CONTUENCY</b></h4> </td>
                       </tr>
                   </thead>
                   <tbody>
@@ -117,8 +161,21 @@ const getDist =()=>{
                   </tbody>
               </table>
                </div>
-               <div className="col-4"></div>
+               <div className="col-1"></div>
+           </div>
+           <div className="row" style={{ "marginTop" : "40px"}}>
+               {/* <button>EDIT</button>
+               <button>DELETE</button> */}
+              <div className="col-4"></div>
+              <div className="col-4"> <button><Link to="/admindashboard/addnew">ADD NEW DIST</Link></button></div>
+              <div className="col-4"></div>
            </div>
        </div>
+    </div>
+}
+
+export const AddNewDist = ()=>{
+    return <div>
+    <h1>Add New Dist</h1>
     </div>
 }
