@@ -30,9 +30,11 @@ export const Login = (props) => {
                 }
             })
         }
-        else {
+        if(validUser == false)
+        {
             alert("Invalid user login details")
         }
+        
 
 
 
