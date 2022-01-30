@@ -1,5 +1,12 @@
 {
-  "admin": [],
+  "admin": [
+    {
+      "username": "Hari Vardhan",
+      "email": "harivardhan999@gmail.com",
+      "password": "vardhan",
+      "id": 1
+    }
+  ],
   "users": [
     {
       "fname": "PUNEM",

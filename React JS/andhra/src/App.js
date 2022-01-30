@@ -3,9 +3,10 @@ import "./App.css";
 import { DistrictDetails } from "./Components/DistrictDetails";
 import { Login } from "./Components/Login";
 import { Register } from "./Components/Register";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import { NavComp } from './Components/NavComp';
 import { AdminLogin } from "./Components/AdminLogin";
+import { AddDetails } from "./Components/AddDetails";
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="admin" element={<AdminLogin />} />
+          <Route path="addDistrict" element={<AddDetails />} />
 
         </Routes>
       </div>

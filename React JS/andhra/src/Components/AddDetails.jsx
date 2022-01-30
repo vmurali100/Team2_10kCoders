@@ -1,57 +1,76 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
+import {useNavigate } from "react-router-dom";
+import axios from 'axios';
+
 
 export const AddDetails = () => {
+    let navigate = useNavigate();
+
     const [district, setdistrict] = useState({
-        add_district:'',
-        constituency:""
+        districtName: '',
+        constituencies: ''
     });
-    
+
     const handleChange = (e) => {
-        let addDistrict= { ...district };
+        let addDistrict = { ...district };
         addDistrict[e.target.name] = e.target.value;
-        setadmin(addDistrict);
+        setdistrict(addDistrict);
     };
 
-    const handleSubmit =()=>{
+    const handleSubmit = () => {
         console.log(district);
-    }
-  return <div>
-       <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">
-                            Add District
-                        </label>
-                        <input
-                            placeholder="User Name"
-                            type="text"
-                            class="form-control"
-                            value={district.add_district}
-                            name="add_district"
-                            onChange={(e) => {
-                                handleChange(e);
-                            }}
-                        />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">
-                            Add Constituency
-                        </label>
-                        <input
-                            placeholder="Email"
-                            type="text"
-                            class="form-control"
-                            value={district.constituency}
-                            name="constituency"
-                            onChange={(e) => {
-                                handleChange(e);
-                            }}
-                        />
-                    </div>
-                   
+        axios.post("http://localhost:3000/districts",district).then(res=>{
+            alert("Details Added Successfully")
+            navigate("admin")
+        })
 
-                    <button style={{ marginBottom: "30px" }} type="button" class="btn btn-primary" onClick={handleSubmit}>
-                        Submit
-                    </button><br />
-                </form>
-  </div>;
+    }
+    return <div>
+        <div style={{ backgroundColor: "pink", width: "900px" }} className="container">
+            <div className="row">
+            <div className="col"></div>
+                <div className="col">
+                <form><br/>
+            <h2>Add New Details</h2><br/>
+            <div className="mb-3">
+                <label className="form-label">
+                    Add District
+                </label>
+                <input
+                    placeholder="Enter New District"
+                    type="text"
+                    className="form-control"
+                    value={district.districtName}
+                    name="districtName"
+                    onChange={(e) => {
+                        handleChange(e);
+                    }}
+                />
+            </div>
+            <div className="mb-3">
+                <label  className="form-label">
+                    Add Constituency
+                </label>
+                <input
+                    placeholder="Add new Constituency"
+                    type="text"
+                    className="form-control"
+                    value={district.constituencies}
+                    name="constituencies"
+                    onChange={(e) => {
+                        handleChange(e);
+                    }}
+                />
+            </div>
+
+
+            <button style={{ marginBottom: "30px" }} type="button" className="btn btn-primary" onClick={handleSubmit}>
+                Add
+            </button><br />
+        </form>
+                </div>
+                <div className="col"></div>
+            </div>
+        </div>
+    </div>;
 };
