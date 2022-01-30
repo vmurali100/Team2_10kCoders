@@ -102,7 +102,7 @@ export const Admindashboard =()=>{
 export const DistrictsList = ()=>{
     const [distlist , setDistlist] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:3000/districts").then(({data})=>{
+        axios.get("http://localhost:3000/districtslist").then(({data})=>{
             setDistlist(data) ;
             console.log(data)
            
@@ -117,7 +117,7 @@ export const DistrictsList = ()=>{
             var mytbody = document.querySelector("tbody");
             
             for (var a in user){
-                if ( a != "const"){
+                if ( a != "constiuencies" && a != "id"){
                      var myTd = document.createElement("td");
                      var  myb = document.createElement("b");
                      myb.innerHTML = user[a] ;
@@ -126,19 +126,40 @@ export const DistrictsList = ()=>{
                      myTr.append(myTd)
                      myTr.style.border = "2px solid"
                      myTd.style.border = "2px solid"
-                } else if ( a == "const"){
-                    user.const.map((as)=>{
+                } else if ( a == "constiuencies" && a != "id"){
+                    user.constiuencies.map((as)=>{
                         var myTd = document.createElement("td")
                         myTd.innerHTML = as ;
                         myTr.append(myTd)
                         myTr.style.border = "2px solid"
                     })
-                  
-                   
-                }
+                 }
+              
             }
-            mytbody.append(myTr)
+               var myTdet = document.createElement("td")
+                 var editBtn = document.createElement("button") ;
+                 editBtn.innerHTML = "edit" ;
+                 editBtn.setAttribute('className' , 'btn btn-warning');
+                 // editBtn.addEventListener('onclick' , )
+                 myTdet.append(editBtn);
+                 myTr.append(myTdet)
+                 mytbody.append(myTr);
+                 editBtn.addEventListener()
+
+                 var myTddt = document.createElement("td")
+                 var deleteBtn = document.createElement("button") ;
+                 deleteBtn.innerHTML = "Delete" ;
+                //  myTddt.classList.add('btn btn-warning');
+                
+                 // editBtn.addEventListener('onclick' , )
+                 myTddt.append(deleteBtn);
+                 myTr.append(myTddt)
+                 mytbody.append(myTr)
+          
         })
+    }
+    const handleEdit = ()=>{
+        
     }
     return <div>
     <h1>USERS LIST</h1>
@@ -154,6 +175,7 @@ export const DistrictsList = ()=>{
                       <tr style={{"border" : "2px solid"}}>
                           <td style={{"border" : "2px solid"}}> <h4><b>DISTRICT</b></h4> </td>
                           <td style={{"border" : "2px solid"}} colSpan={8}> <h4><b>CONTUENCY</b></h4> </td>
+                          <td colSpan={2}>Manage</td>
                       </tr>
                   </thead>
                   <tbody>
@@ -175,7 +197,54 @@ export const DistrictsList = ()=>{
 }
 
 export const AddNewDist = ()=>{
+    const [addnew , setaddNew] = useState({
+        dist : "" ,
+        // consti : [],
+       
+    })
+    const [area ,setArea] = useState("")
+    const handleChange1 =(e)=>{
+        let newone = {...addnew};
+        
+        newone[e.target.name] = e.target.value ;
+    
+        setaddNew(newone);
+    }
+    const handleChange2 =(e)=>{
+      
+       setArea(e.target.value)
+      
+    }
+   const addnewdistFunc =()=>{
+       var constiuencies = [];
+       var constiClone = [...constiuencies];
+       constiClone.push(area)
+   var addnewone = {...addnew}  
+   Object.assign(addnewone , constiClone)
+      axios.post("http://localhost:3000/districtslist" , addnewone ).then(({data})=>{
+          console.log(data)
+      })
+    console.log(addnew)
+   }
+
     return <div>
     <h1>Add New Dist</h1>
+    <div className="container">
+        <div className="row">
+            <div className="col-4"></div>
+            <div className="col-4"><form>
+  <div class="mb-3">
+    <label class="form-label">District</label>
+    <input type="text" class="form-control" value={addnew.dist} name="dist" onChange={(e)=>handleChange1(e)} />
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Constuencey</label>
+    <input type="text" class="form-control" value={area}  name="area" onChange={(e)=>handleChange2(e)}/>
+  </div>
+ <button type="button" class="btn btn-primary" onClick={addnewdistFunc}>ADD</button>
+</form></div>
+            <div className="col-4"></div>
+        </div>
+    </div>
     </div>
 }

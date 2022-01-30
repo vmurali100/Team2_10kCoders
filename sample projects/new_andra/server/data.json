@@ -1,7 +1,7 @@
 {
-  "admin" : {
+  "admin": {
     "email": "joker@gmail.com",
-      "password": "12345678"
+    "password": "12345678"
   },
   "user": [
     {
@@ -17,7 +17,7 @@
     {
       "email": "Akhilankathi@gmail.com",
       "password": "9010902696",
-      "": "",
+    
       "id": 3
     },
     {
@@ -26,10 +26,10 @@
       "id": 4
     }
   ],
-  "districts": [
+  "districtslist": [
     {
       "dist": "Srikakulam",
-      "const": [
+      "constiuencies": [
         "ichapuram",
         "palasa",
         "tekkali",
@@ -42,7 +42,7 @@
     },
     {
       "dist": "Vizianagaram",
-      "const": [
+      "constiuencies": [
         "rajam",
         "bobbili",
         "gajapathinagar",
@@ -54,7 +54,7 @@
     },
     {
       "dist": "Manyam",
-      "const": [
+      "constiuencies": [
         "palakonda",
         "kurupam",
         "parvathipuram",
@@ -63,7 +63,7 @@
     },
     {
       "dist": "Alluri Seetharama Raju",
-      "const": [
+      "constiuencies": [
         "paderu",
         "araku",
         "rampachodavaram"
@@ -71,7 +71,7 @@
     },
     {
       "dist": "Visakhapatnam",
-      "const": [
+      "constiuencies": [
         "bhimili",
         "Visakhapatnam east",
         "Visakhapatnam west",
@@ -81,7 +81,7 @@
     },
     {
       "dist": "Anakapalli",
-      "const": [
+      "constiuencies": [
         "payakaraopeta",
         "narsipatnam",
         "chodavaram",
@@ -93,7 +93,7 @@
     },
     {
       "dist": "East Godavari",
-      "const": [
+      "constiuencies": [
         "tuni",
         "prathipadu(east-godavari)",
         "jaggampeta",
@@ -105,7 +105,7 @@
     },
     {
       "dist": "Konaseema",
-      "const": [
+      "constiuencies": [
         "rampachodavaram",
         "mandapeta",
         "kottapeta",
@@ -117,7 +117,7 @@
     },
     {
       "dist": "Rajahmundry",
-      "const": [
+      "constiuencies": [
         "anaparthi",
         "rajanagaram",
         "rajahmundry city",
@@ -129,7 +129,7 @@
     },
     {
       "dist": "Narasapuram",
-      "const": [
+      "constiuencies": [
         "achanta",
         "palakollu",
         "narasapuram",
@@ -141,7 +141,7 @@
     },
     {
       "dist": "West Godavari",
-      "const": [
+      "constiuencies": [
         "unguturu",
         "kaikaluru",
         "denduluru",
@@ -153,7 +153,7 @@
     },
     {
       "dist": "Krishna",
-      "const": [
+      "constiuencies": [
         "gudivada",
         "penamaluru",
         "gannavaram",
@@ -165,7 +165,7 @@
     },
     {
       "dist": "NTR",
-      "const": [
+      "constiuencies": [
         "vijayawada west",
         "vijayawada central",
         "vijayawada east",
@@ -177,7 +177,7 @@
     },
     {
       "dist": "Guntur",
-      "const": [
+      "constiuencies": [
         "tadikonda",
         "guntur west",
         "guntur central",
@@ -189,7 +189,7 @@
     },
     {
       "dist": "Bapatla",
-      "const": [
+      "constiuencies": [
         "vemuru",
         "repalle",
         "bapatla",
@@ -200,7 +200,7 @@
     },
     {
       "dist": "Palnadu",
-      "const": [
+      "constiuencies": [
         "pedakurapadu",
         "gurajala",
         "macharla",
@@ -212,7 +212,7 @@
     },
     {
       "dist": "Prakasam",
-      "const": [
+      "constiuencies": [
         "yarragondapalem",
         "giddaluru",
         "markapuram",
@@ -225,7 +225,7 @@
     },
     {
       "dist": "Sri Pottisriramulu Nellore",
-      "const": [
+      "constiuencies": [
         "kovuru(nellore)",
         "nellore city",
         "nellore rural",
@@ -238,7 +238,7 @@
     },
     {
       "dist": "Kurnool",
-      "const": [
+      "constiuencies": [
         "panyam",
         "kodumuru",
         "kurnool",
@@ -251,7 +251,7 @@
     },
     {
       "dist": "Nandyal",
-      "const": [
+      "constiuencies": [
         "nandyal",
         "allagadda",
         "srisailam",
@@ -262,7 +262,7 @@
     },
     {
       "dist": "Ananthpur",
-      "const": [
+      "constiuencies": [
         "rayadurg",
         "kalyanadurg",
         "uravakonda",
@@ -275,7 +275,7 @@
     },
     {
       "dist": "Sri Sathyasai",
-      "const": [
+      "constiuencies": [
         "madakashira",
         "hindupuram",
         "penugonda",
@@ -286,7 +286,7 @@
     },
     {
       "dist": "YSR Kadapa",
-      "const": [
+      "constiuencies": [
         "kadapa",
         "kamalapuram",
         "pulivendula",
@@ -298,7 +298,7 @@
     },
     {
       "dist": "Annamaiah",
-      "const": [
+      "constiuencies": [
         "rajampeta",
         "railwaykoduru",
         "rayachoti",
@@ -309,7 +309,7 @@
     },
     {
       "dist": "Chittoor",
-      "const": [
+      "constiuencies": [
         "nagari",
         "gangadhara nellore",
         "chittoor",
@@ -321,7 +321,7 @@
     },
     {
       "dist": "Sri Balaji",
-      "const": [
+      "constiuencies": [
         "sullurpeta",
         "sathyavedu",
         "gudur",
@@ -331,5 +331,6 @@
         "srikalahasti"
       ]
     }
+  
   ]
 }

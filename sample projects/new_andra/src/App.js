@@ -36,8 +36,7 @@ function App() {
             <Route path="admindashboard/userslist" element={<UsersList />} />
             <Route path="admindashboard/districtslist" element={<DistrictsList />} />
             <Route path="admindashboard/addnew" element={<AddNewDist />} />
-         
-        </Routes>
+          </Routes>
       </BrowserRouter>
     </div>
   );

@@ -43,9 +43,10 @@ if(us.length == 0) {
   window.alert("Not Registered ..... please Register and Login Again")
   navigate("/register")
 } else {
-  let logged = us.find( myus => myus.username == user.username && myus.password  == user.password) ;
+  let logged = us.find( myus => myus.email == user.email && myus.password  == user.password) ;
   if(logged){
-    localStorage.setItem("loggedUser" , JSON.stringify(user))
+    localStorage.setItem("loggedUser" , JSON.stringify(user));
+alert("Login successfull......!")
     navigate("/");
 
   }else{
@@ -76,8 +77,8 @@ if(us.length == 0) {
     //   console.log(user)
   }
   const getResForm =()=>{
-      document.querySelector(".loginform").style.display = "none" ;
-      document.querySelector(".resform").style.display = "block" ;
+      // document.querySelector(".loginform").style.display = "none" ;
+      // document.querySelector(".resform").style.display = "block" ;
  }
  
     return <div>
