@@ -45,6 +45,7 @@ const getadmin = async ()=>{
 let adminhere = await getAdminProm();
 console.log(adminhere)
 if(admin.email === adminhere.email && admin.password === adminhere.password){
+    localStorage.setItem("loggedAdmin" , JSON.stringify(admin))
     navigate("/admindashboard")
   }else {
       console.log("wrong")
@@ -108,82 +109,60 @@ export const DistrictsList = ()=>{
            
          
         })
+       
+       
+    },[]) ;
+   
+    const getDists = ()=>{
+        axios.get("http://localhost:3000/districtslist").then(({data})=>{
+            setDistlist(data) ;
+            console.log(data)
+    })
         
        
-    },[])
-    const getDists = ()=>{
-        distlist.forEach((user)=>{
-            var myTr = document.createElement("tr");
-            var mytbody = document.querySelector("tbody");
-            
-            for (var a in user){
-                if ( a != "constiuencies" && a != "id"){
-                     var myTd = document.createElement("td");
-                     var  myb = document.createElement("b");
-                     myb.innerHTML = user[a] ;
-                 
-                     myTd.append(myb)
-                     myTr.append(myTd)
-                     myTr.style.border = "2px solid"
-                     myTd.style.border = "2px solid"
-                } else if ( a == "constiuencies" && a != "id"){
-                    user.constiuencies.map((as)=>{
-                        var myTd = document.createElement("td")
-                        myTd.innerHTML = as ;
-                        myTr.append(myTd)
-                        myTr.style.border = "2px solid"
-                    })
-                 }
               
-            }
-               var myTdet = document.createElement("td")
-                 var editBtn = document.createElement("button") ;
-                 editBtn.innerHTML = "edit" ;
-                 editBtn.setAttribute('className' , 'btn btn-warning');
-                 // editBtn.addEventListener('onclick' , )
-                 myTdet.append(editBtn);
-                 myTr.append(myTdet)
-                 mytbody.append(myTr);
-                 editBtn.addEventListener()
-
-                 var myTddt = document.createElement("td")
-                 var deleteBtn = document.createElement("button") ;
-                 deleteBtn.innerHTML = "Delete" ;
-                //  myTddt.classList.add('btn btn-warning');
-                
-                 // editBtn.addEventListener('onclick' , )
-                 myTddt.append(deleteBtn);
-                 myTr.append(myTddt)
-                 mytbody.append(myTr)
-          
-        })
     }
-    const handleEdit = ()=>{
-        
-    }
+  
+   function handleEdit (i){
+       console.log("clicked " , i)
+   }
+   const handleDelete = (i)=>{
+    console.log("clicked " , i)
+}
+   
     return <div>
-    <h1>USERS LIST</h1>
+    <h1>Districts LIST</h1>
     
     <div className="container" >
            <div className="row">
-               <div className="col-1"></div>
-               <div className="col-10"> 
-               <button type="button" onClick={ getDists}>get districts list</button>
-              <table style={{"border" : "2px solid" , "marginTop" : "40px"}}>
+             
+               
+           <div className="col-3"></div>
+           <div className="col-6">
+           <button type="button" onClick={ getDists} className="btn btn-primary">get districts list</button>
+           {distlist != null ?  <table style={{"border" : "2px solid" , "marginTop" : "40px"}}>
                  
-                  <thead style={{"border" : "2px solid"}}>
-                      <tr style={{"border" : "2px solid"}}>
-                          <td style={{"border" : "2px solid"}}> <h4><b>DISTRICT</b></h4> </td>
-                          <td style={{"border" : "2px solid"}} colSpan={8}> <h4><b>CONTUENCY</b></h4> </td>
-                          <td colSpan={2}>Manage</td>
-                      </tr>
-                  </thead>
-                  <tbody>
-
-                  </tbody>
-              </table>
-               </div>
-               <div className="col-1"></div>
+             
+                 <thead>
+                         <tr>
+                             <th style={{"border" : "2px solid"}}>S.No</th>
+                             <th style={{"border" : "2px solid"}}>DISTRICT</th>
+                             <th   style={{"border" : "2px solid"}}>CONTUENCY</th>
+                             <th colSpan={2} style={{"border" : "2px solid"}}>Manage</th>
+                         </tr>
+                     </thead>
+                 {distlist.map((dist ,i )=>{
+                    return ( <tr style={{"border" : "2px solid"}} > <td style={{"border" : "2px solid"} } >{i+1}</td><td style={{"border" : "2px solid"}}>{dist.dist}</td>
+                          {dist.constiuencies.map((e ,i)=>{
+                             return <tbody><td key={e} style={{"paddingLeft" : "10px"}} ><li style={{"textAlign" : "left"}} >{e}</li></td> </tbody>})}
+                           <td  key={i}  style={{"border" : "2px solid"} }> <button type="button" onClick={(i)=>handleEdit(i)} className="btn btn-warning">Edit</button> <button type="button" onClick={(i)=>handleDelete(i)} className="btn btn-danger">Delete</button></td> </tr>)
+                 })
+                }
+             </table> : ""}
+           </div>
+           <div className="col-3"></div>
+              
+              
            </div>
            <div className="row" style={{ "marginTop" : "40px"}}>
                {/* <button>EDIT</button>
@@ -218,8 +197,8 @@ export const AddNewDist = ()=>{
    const addnewdistFunc =()=>{
        var constiuencies = [];
        var constiClone = [...constiuencies];
-       constiClone.push(area)
-   var addnewone = {...addnew}  
+       constiClone.push(area) ;
+   var addnewone = {...addnew} ;
    Object.assign(addnewone , constiClone)
       axios.post("http://localhost:3000/districtslist" , addnewone ).then(({data})=>{
           console.log(data)
