@@ -15,3 +15,47 @@ code {
   color: white;
   font-size: 17px;
 }
+#footer-font span {
+  font-size: 13px;
+  margin-left: 5px;
+}
+#footer-font > div span {
+  color: orangered;
+}
+#footer-font a {
+  text-decoration: none;
+  color: orangered;
+}
+#footer-font .col-2 {
+  color: white;
+}
+#register-form {
+  /* border: 1px solid black; */
+  margin-top: 50px;
+  background-color: lightgrey;
+  padding: 0px 10px 10px 10px;
+}
+#register-div-6 {
+  margin: 25px auto;
+  padding: 45px 150px;
+  /* box-sizing:border-box ; */
+  background-color: whitesmoke;
+}
+#register-form button {
+  border: 1px solid black;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+/* #register-div-button {
+  padding: 10px;
+  
+}
+#register-div-button button {
+  width: 100px;
+  height: 50px;
+} */
+#login:hover , #register:hover{
+  background-color: black;
+  color: white;
+}
