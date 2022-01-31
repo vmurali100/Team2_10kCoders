@@ -17,7 +17,6 @@
     {
       "email": "Akhilankathi@gmail.com",
       "password": "9010902696",
-    
       "id": 3
     },
     {
@@ -28,7 +27,7 @@
   ],
   "districtslist": [
     {
-      "id": 1 ,
+      "id": 1,
       "dist": "Srikakulam",
       "constiuencies": [
         "ichapuram",
@@ -42,7 +41,7 @@
       ]
     },
     {
-      "id": 2 ,
+      "id": 2,
       "dist": "Vizianagaram",
       "constiuencies": [
         "rajam",
@@ -344,8 +343,8 @@
         "punganur"
       ]
     },
-    { 
-      "id" : 26 ,
+    {
+      "id": 26,
       "dist": "Sri Balaji",
       "constiuencies": [
         "sullurpeta",
@@ -357,6 +356,7 @@
         "srikalahasti"
       ]
     }
-  
+   
+   
   ]
 }
