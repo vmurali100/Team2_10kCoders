@@ -131,6 +131,7 @@ export const Admindashboard = () => {
 
 export const DistrictsList = () => {
   const [distlist, setDistlist] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     axios.get("http://localhost:3000/districtslist").then(({ data }) => {
       setDistlist(data);
@@ -145,11 +146,15 @@ export const DistrictsList = () => {
     });
   };
 
-  function handleEdit(i) {
-    console.log("clicked ", i);
+  function handleEdit(id) {
+    localStorage.setItem("editabledist" , JSON.stringify(distlist[id-1]));
+    console.log("clicked ", distlist[id-1]);
+    navigate("/admindashboard/districtslist/edit")
   }
-  const handleDelete = (i) => {
-    console.log("clicked ", i);
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:3000/districtslist/${id}` ).then(({data})=>{
+      console.log(data)
+  })
   };
 
   return (
@@ -167,6 +172,7 @@ export const DistrictsList = () => {
             >
               get districts list
             </button>
+            {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
             {distlist != null ? (
               <table style={{ border: "2px solid", marginTop: "40px" }}>
                 <thead>
@@ -179,26 +185,29 @@ export const DistrictsList = () => {
                     </th>
                   </tr>
                 </thead>
+                <tbody>
                 {distlist.map((d, i) => {
                   return (
                     <tr style={{ border: "2px solid" }}>
-                      {" "}
+                     
                       <td style={{ border: "2px solid" }}>{d.id}</td>
                       <td style={{ border: "2px solid" }}>{d.dist}</td>
                       {d.constiuencies.map((e) => {
                         return (
-                          <tbody>
-                            <td key={e} style={{ paddingLeft: "10px" }}>
+                          
+                           <tr>
+                           <td key={e} style={{ paddingLeft: "10px" }}>
                               <li style={{ textAlign: "left" }}>{e}</li>
-                            </td>{" "}
-                          </tbody>
+                            </td>
+                           </tr>
+                          
                         );
                       })}
-                      <td key={i} style={{ border: "2px solid" }}>
+                      <td key={d.id} style={{ border: "2px solid" }}>
                         {" "}
                         <button
                           type="button"
-                          onClick={(i) => handleEdit(i)}
+                          onClick={() => handleEdit(d.id)}
                           className="btn btn-warning"
                         >
                           Edit
@@ -210,10 +219,11 @@ export const DistrictsList = () => {
                         >
                           Delete
                         </button>
-                      </td>{" "}
+                      </td>
                     </tr>
                   );
                 })}
+                </tbody>
               </table>
             ) : (
               ""
@@ -259,7 +269,7 @@ export const AddNewDist = () => {
     var constiuencies = [...constiClone];
     constiuencies.push(area);
     var addnewone = { ...addnew , constiuencies};
-    // Object.assign(addnewone, constiClone);
+    // Object.assign(addnewone, constiClone)
     axios
       .post("http://localhost:3000/districtslist", addnewone)
       .then(({ data }) => {
@@ -311,3 +321,80 @@ export const AddNewDist = () => {
     </div>
   );
 };
+
+export  const Edit =()=>{
+ const [dis ,setDis ] = useState({});
+ const [constu ,setConstu] = useState("")
+ var d
+  useEffect(()=>{
+   d = JSON.parse(localStorage.getItem("editabledist"));
+   setDis(d);
+  //  localStorage.clear();
+  //  console.log("here we are displaying d", d);
+   setConstu(d.constiuencies.toString(","))
+  // let dummy = {...dis ,constu };
+ for (var a in d)
+ {
+ if( a != "id"){
+  document.getElementById(a).value = d[a]
+ }
+ }
+  // document.getElementById(dis[a]).value = dummy[a]; 
+  },[]);
+ 
+  const updatedistrict =(id)=>{
+   let constiuencies = constu.split(',')
+   console.log(constiuencies)
+   let newdis= {...dis , constiuencies };
+   console.log(newdis)
+   axios.put(`http://localhost:3000/districtslist/${id-1}` , newdis).then(({data})=>{
+     console.log(data)
+   });
+  }
+  const handlechange=()=>{
+    console.log("clicked")
+  }
+  return <div>
+     <div className="container" style={{ marginTop: "80px" }}>
+        <div className="row">
+          <div className="col-4"></div>
+          <div className="col-4">
+           {dis != null ?  <form className="loginform">
+              <h2>Update District Details</h2>
+              <div class="mb-3">
+                <label class="form-label">District</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  // value={dis.dist}
+                  onChange={(e) => {
+                    handlechange(e);
+                  }}
+                  name="district"
+                  id="dist"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Contiuency</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="constiuencies"
+                  onChange={(e) => {
+                    handlechange(e);
+                  }}
+                  name="constiuency"
+                  // value={constu}
+                />
+              </div>
+
+              <button type="button" class="btn btn-primary" onClick={updatedistrict}>
+                Update
+              </button>
+            </form> : ""}
+          </div>
+          <div className="col-4"></div>
+        </div>
+      </div>
+  </div>
+}

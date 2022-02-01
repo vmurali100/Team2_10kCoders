@@ -11,6 +11,7 @@ import {
   AdminDash,
   Admindashboard,
   DistrictsList,
+  Edit,
 } from "./Components/Admin";
 import { UsersList } from "./Components/Userslist";
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="admindashboard/userslist" element={<UsersList />} />
             <Route path="admindashboard/districtslist" element={<DistrictsList />} />
             <Route path="admindashboard/addnew" element={<AddNewDist />} />
+            <Route path="admindashboard/districtslist/edit" element={ <Edit/>}/>
           </Routes>
       </BrowserRouter>
     </div>
