@@ -7,7 +7,7 @@ export const AdminLogin = () => {
     let navigate = useNavigate();
 
     const [admin, setadmin] = useState({
-        username: "",
+    
         email: "",
         password: "",
     });
@@ -32,21 +32,7 @@ export const AdminLogin = () => {
                 <div className="col"></div>
                 <div className="col">
                     <form>
-                        <div className="mb-3">
-                            <label  className="form-label">
-                                User Name
-                            </label>
-                            <input
-                                placeholder="User Name"
-                                type="text"
-                                className="form-control"
-                                value={admin.username}
-                                name="username"
-                                onChange={(e) => {
-                                    handleChange(e);
-                                }}
-                            />
-                        </div>
+                        
                         <div className="mb-3">
                             <label  className="form-label">
                                 Email address

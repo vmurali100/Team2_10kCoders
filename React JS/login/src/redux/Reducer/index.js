@@ -1,6 +1,6 @@
 
 const defaultData ={
-    users:[],
+    users:[{ }],
 };
 
 const UsersReducer = (state=defaultData,action)=>{

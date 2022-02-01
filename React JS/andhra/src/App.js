@@ -22,6 +22,7 @@ function App() {
           <Route path="admin" element={<AdminLogin />} />
           <Route path="addDistrict" element={<AddDetails />} />
 
+
         </Routes>
       </div>
     </div>

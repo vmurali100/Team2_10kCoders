@@ -1,4 +1,4 @@
-let API_URL = "http://localhost:3000/fname/";
+let API_URL = "http://localhost:3000/fname";
 var allPersons = [];
 function getAllPersons() {
     var getInfo = new XMLHttpRequest();
