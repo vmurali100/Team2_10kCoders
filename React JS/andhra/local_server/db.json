@@ -5,6 +5,55 @@
       "email": "harivardhan999@gmail.com",
       "password": "vardhan",
       "id": 1
+    },
+    {
+      "username": "Charan",
+      "email": "charan@gmail.com",
+      "password": "charan",
+      "id": 2
+    },
+    {
+      "username": "Hari",
+      "email": "hari@gmail",
+      "password": "wertyu",
+      "id": 3
+    },
+    {
+      "username": "Hari Vardhan",
+      "email": "harivardhan999@gmail.com",
+      "password": "vardhan",
+      "id": 4
+    },
+    {
+      "username": "Hari Vardhan",
+      "email": "harivardhan999@gmail.com",
+      "password": "vardhan",
+      "id": 5
+    },
+    {
+      "email": "harivardhan999@gmail.com",
+      "password": "vardhan",
+      "id": 6
+    },
+    {
+      "email": "harivardhan999@gmail.com",
+      "password": "vardhan",
+      "id": 7
+    },
+    {
+      "email": "harivardhan999@gmail.com",
+      "password": "vardhan",
+      "id": 8
+    },
+    {
+      "email": "harivardhan@gmail.com",
+      "password": "vardhan",
+      "id": 9
+    },
+    {
+      "email": "harivardha999@gmail.com",
+      "password": "vardhan",
+      "id": 10
     }
   ],
   "users": [
@@ -227,6 +276,35 @@
         "mungode",
         "deverkonda"
       ]
+    },
+    {
+      "districtName": "Bhadrachalam",
+      "constituencies": [
+        "kothagudem",
+        "wyra"
+      ],
+      "id": 1
+    },
+    {
+      "districtName": "Khammam",
+      "constituencies": [
+        "Kothagudem"
+      ],
+      "id": 2
+    },
+    {
+      "districtName": "Nalgonda",
+      "constituencies": [
+        "khammam"
+      ],
+      "id": 3
+    },
+    {
+      "districtName": "",
+      "constituencies": [
+        ""
+      ],
+      "id": 4
     }
   ]
 }
