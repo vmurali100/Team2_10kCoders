@@ -30,9 +30,6 @@
       "id": 1,
       "dist": "Srikakulam",
       "constiuencies": [
-        "ichapuram",
-        "palasa",
-        "tekkali",
         "echerla",
         "srikakulam",
         "amadalavalasa",
@@ -329,39 +326,6 @@
         "thamallapalle",
         "madanapalle"
       ]
-    },
-    {
-      "id": 25,
-      "dist": "Chittoor",
-      "constiuencies": [
-        "nagari",
-        "gangadhara nellore",
-        "chittoor",
-        "pothalpattu",
-        "palamaneru",
-        "kuppam",
-        "punganur"
-      ]
-    },
-    {
-      "id": 26,
-      "dist": "Sri Balaji",
-      "constiuencies": [
-        "sullurpeta",
-        "sathyavedu",
-        "gudur",
-        "venkatagiri",
-        "tirupati",
-        "chandragiri",
-        "srikalahasti"
-      ]
-    },
-    {
-      "dist": "nalgonda",
-      "constiuencies": [
-        "hnk"
-      ],
-      "id": 28
     }
   ]
 }

@@ -152,8 +152,11 @@ export const DistrictsList = () => {
     navigate("/admindashboard/districtslist/edit")
   }
   const handleDelete = (id) => {
+    console.log(id)
     axios.delete(`http://localhost:3000/districtslist/${id}` ).then(({data})=>{
-      console.log(data)
+      console.log(data);
+      navigate("/admindashboard/districtslist");
+
   })
   };
 
@@ -214,7 +217,7 @@ export const DistrictsList = () => {
                         </button>{" "}
                         <button
                           type="button"
-                          onClick={(i) => handleDelete(i)}
+                          onClick={(i) => handleDelete(d.id)}
                           className="btn btn-danger"
                         >
                           Delete
@@ -265,9 +268,9 @@ export const AddNewDist = () => {
     setArea(e.target.value);
   };
   const addnewdistFunc = () => {
-    var constiClone = [];
+    var constiClone = area.split(",")
     var constiuencies = [...constiClone];
-    constiuencies.push(area);
+    // constiuencies.push(area);
     var addnewone = { ...addnew , constiuencies};
     // Object.assign(addnewone, constiClone)
     axios
@@ -325,6 +328,24 @@ export const AddNewDist = () => {
 export  const Edit =()=>{
  const [dis ,setDis ] = useState({});
  const [constu ,setConstu] = useState("")
+ const [addnew, setaddNew] = useState({
+  dist: "",
+  // consti : [],
+});
+const [area, setArea] = useState("");
+
+const handlechange1 = (e) => {
+  let newone = { ...addnew };
+
+  newone[e.target.name] = e.target.value;
+
+  setaddNew(newone);
+};
+const handlechange2 = (e) => {
+  setArea(e.target.value);
+};
+
+ 
  var d
   useEffect(()=>{
    d = JSON.parse(localStorage.getItem("editabledist"));
@@ -341,19 +362,36 @@ export  const Edit =()=>{
  }
   // document.getElementById(dis[a]).value = dummy[a]; 
   },[]);
- 
-  const updatedistrict =(id)=>{
-   let constiuencies = constu.split(',')
-   console.log(constiuencies)
-   let newdis= {...dis , constiuencies };
-   console.log(newdis)
-   axios.put(`http://localhost:3000/districtslist/${id-1}` , newdis).then(({data})=>{
+ var index 
+  const updatedistrict =(id ,d)=>{
+  //   var constiClone = constu.split(',')
+  //   var constiuencies = [...constiClone];
+  //   // constiuencies.push(area);
+  //   var addnewone = { ...addnew , constiuencies};
+  // //  let constiuencies = constu.split(',')
+  // //  console.log(constiuencies)
+  // //  let newdis= {...dis , constiuencies };
+  // //  console.log(newdis);
+
+  console.log(dis)
+  let newd = {...dis}
+  for (var a in dis){
+   if( a != "id" && a != "constiuencies"){
+    newd[a] =document.getElementById(a).value ;
+   } else if ( a == "constiuencies"){
+    newd[a] = document.getElementById(a).value .split(',');
+    // var constiuencies = [...constiClone];
+    
+
+   }
+  }
+  console.log(newd)
+  console.log(id)
+   axios.put(`http://localhost:3000/districtslist/${id}` , newd).then(({data})=>{
      console.log(data)
    });
   }
-  const handlechange=()=>{
-    console.log("clicked")
-  }
+ 
   return <div>
      <div className="container" style={{ marginTop: "80px" }}>
         <div className="row">
@@ -366,9 +404,9 @@ export  const Edit =()=>{
                 <input
                   type="text"
                   class="form-control"
-                  // value={dis.dist}
+                  // value={addnew.dist}
                   onChange={(e) => {
-                    handlechange(e);
+                    handlechange1(e);
                   }}
                   name="district"
                   id="dist"
@@ -381,14 +419,14 @@ export  const Edit =()=>{
                   class="form-control"
                   id="constiuencies"
                   onChange={(e) => {
-                    handlechange(e);
+                    handlechange2(e);
                   }}
                   name="constiuency"
-                  // value={constu}
+                  // value={area}
                 />
               </div>
 
-              <button type="button" class="btn btn-primary" onClick={updatedistrict}>
+              <button type="button" class="btn btn-primary" onClick={()=>updatedistrict(dis.id)}>
                 Update
               </button>
             </form> : ""}
