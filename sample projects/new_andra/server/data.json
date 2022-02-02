@@ -41,9 +41,6 @@
       "id": 2,
       "dist": "Vizianagaram",
       "constiuencies": [
-        "rajam",
-        "bobbili",
-        "gajapathinagar",
         "cheepurupalli",
         "nellimarla",
         "vizianagaram",
@@ -240,8 +237,6 @@
       "id": 18,
       "dist": "Sri Pottisriramulu Nellore",
       "constiuencies": [
-        "kovuru(nellore)",
-        "nellore city",
         "nellore rural",
         "sarvepalli",
         "atmakuru",
@@ -262,69 +257,6 @@
         "mantralayam",
         "adoni",
         "alur"
-      ]
-    },
-    {
-      "id": 20,
-      "dist": "Nandyal",
-      "constiuencies": [
-        "nandyal",
-        "allagadda",
-        "srisailam",
-        "banaganapalle",
-        "done",
-        "nandikotkur"
-      ]
-    },
-    {
-      "id": 21,
-      "dist": "Ananthpur",
-      "constiuencies": [
-        "rayadurg",
-        "kalyanadurg",
-        "uravakonda",
-        "rapthadu",
-        "singanamala",
-        "ananthapur urban",
-        "tadipatri",
-        "guntakal"
-      ]
-    },
-    {
-      "id": 22,
-      "dist": "Sri Sathyasai",
-      "constiuencies": [
-        "madakashira",
-        "hindupuram",
-        "penugonda",
-        "dharmavaram",
-        "puttaparthi",
-        "kadiri"
-      ]
-    },
-    {
-      "id": 23,
-      "dist": "YSR Kadapa",
-      "constiuencies": [
-        "kadapa",
-        "kamalapuram",
-        "pulivendula",
-        "jammalamadugu",
-        "proddatur",
-        "badvelu",
-        "maidukuru"
-      ]
-    },
-    {
-      "id": 24,
-      "dist": "Annamaiah",
-      "constiuencies": [
-        "rajampeta",
-        "railwaykoduru",
-        "rayachoti",
-        "pileru",
-        "thamallapalle",
-        "madanapalle"
       ]
     }
   ]

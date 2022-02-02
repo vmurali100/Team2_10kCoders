@@ -155,10 +155,12 @@ export const DistrictsList = () => {
     console.log(id)
     axios.delete(`http://localhost:3000/districtslist/${id}` ).then(({data})=>{
       console.log(data);
-      navigate("/admindashboard/districtslist");
-
+  
   })
+  getDists()
+  
   };
+
 
   return (
     <div>
@@ -332,6 +334,7 @@ export  const Edit =()=>{
   dist: "",
   // consti : [],
 });
+const navigate = useNavigate()
 const [area, setArea] = useState("");
 
 const handlechange1 = (e) => {
@@ -379,7 +382,7 @@ const handlechange2 = (e) => {
    if( a != "id" && a != "constiuencies"){
     newd[a] =document.getElementById(a).value ;
    } else if ( a == "constiuencies"){
-    newd[a] = document.getElementById(a).value .split(',');
+    newd[a] = document.getElementById(a).value.split(',');
     // var constiuencies = [...constiClone];
     
 
@@ -390,6 +393,7 @@ const handlechange2 = (e) => {
    axios.put(`http://localhost:3000/districtslist/${id}` , newd).then(({data})=>{
      console.log(data)
    });
+   navigate("/admindashboard/districtslist")
   }
  
   return <div>
