@@ -1,13 +1,13 @@
-
 import "./App.css";
 import { DistrictDetails } from "./Components/DistrictDetails";
 import { Login } from "./Components/Login";
 import { Register } from "./Components/Register";
 import { Routes, Route} from "react-router-dom";
 import { NavComp } from './Components/NavComp';
-import { AdminLogin } from "./Components/AdminLogin";
-import { AddDetails } from "./Components/AddDetails";
-
+// import { AdminLogin } from "./Components/AdminLogin";
+// import { AddDetails } from "./Components/AddDetails";
+// import { GetDetails } from "./Components/GetDetails";
+import { Admin } from "./Components/Admin";
 function App() {
  
   return (
@@ -19,8 +19,12 @@ function App() {
           <Route path="" element={<DistrictDetails />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="admin" element={<AdminLogin />} />
-          <Route path="addDistrict" element={<AddDetails />} />
+          {/* <Route path="admin" element={<AdminLogin />} /> */}
+          <Route path="admin" element={<Admin />} />
+
+          {/* <Route path="addDistrict" element={<AddDetails />} />
+          <Route path="getdetails" element={<GetDetails />} /> */}
+
 
 
         </Routes>

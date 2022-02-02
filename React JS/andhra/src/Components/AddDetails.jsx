@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
 
@@ -36,13 +36,14 @@ export const AddDetails = () => {
         // Object.assign(district,newConstituencies)
         axios.post("http://localhost:3000/districts", newDist).then(res => {
             alert("Details Added Successfully")
-            navigate("/")
+            navigate("/getdetails")
+
         })
         console.log(district, constituency);
 
     }
 
-    
+
     return <div>
         <div style={{ backgroundColor: "pink", width: "900px" }} className="container">
             <div className="row">
@@ -92,42 +93,6 @@ export const AddDetails = () => {
             </div>
 
         </div>
-        <GetDetails/>
-    </div>;
-};
-
-export const GetDetails = () => {
-    const [addDetails, setaddDetails] = useState([]);
-
-    const getData = () => {
-        axios.get(" http://localhost:3000/districts").then(res => {
-            setaddDetails(res.data)
-        })
-
-    }
-
-    return <div>
-        <button style={{ marginBottom: "30px" }} type="button" className="btn btn-primary" onClick={getData}>
-            Get Data
-        </button><br />
-
-        <table className="table">
-            <thead>
-                <tr>
-                    <th scope="col">District</th>
-                    <th scope="col">Consistuency</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-
-        {addDetails.map((e)=>{
-            return <ol key={e.districtName}>{e.districtName} {e.constituencies}</ol>
-        })}
     </div>;
 };
 

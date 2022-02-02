@@ -1,59 +1,14 @@
 {
   "admin": [
     {
-      "username": "Hari Vardhan",
       "email": "harivardhan999@gmail.com",
       "password": "vardhan",
-      "id": 1
-    },
-    {
-      "username": "Charan",
-      "email": "charan@gmail.com",
-      "password": "charan",
-      "id": 2
-    },
-    {
-      "username": "Hari",
-      "email": "hari@gmail",
-      "password": "wertyu",
       "id": 3
     },
     {
-      "username": "Hari Vardhan",
-      "email": "harivardhan999@gmail.com",
-      "password": "vardhan",
+      "email": "harivardhan182@gmail.com",
+      "password": "1234",
       "id": 4
-    },
-    {
-      "username": "Hari Vardhan",
-      "email": "harivardhan999@gmail.com",
-      "password": "vardhan",
-      "id": 5
-    },
-    {
-      "email": "harivardhan999@gmail.com",
-      "password": "vardhan",
-      "id": 6
-    },
-    {
-      "email": "harivardhan999@gmail.com",
-      "password": "vardhan",
-      "id": 7
-    },
-    {
-      "email": "harivardhan999@gmail.com",
-      "password": "vardhan",
-      "id": 8
-    },
-    {
-      "email": "harivardhan@gmail.com",
-      "password": "vardhan",
-      "id": 9
-    },
-    {
-      "email": "harivardha999@gmail.com",
-      "password": "vardhan",
-      "id": 10
     }
   ],
   "users": [
@@ -300,11 +255,55 @@
       "id": 3
     },
     {
+      "districtName": "Nalgonda",
+      "constituencies": [
+        "thorrur"
+      ],
+      "id": 4
+    },
+    {
+      "districtName": "Warangal",
+      "constituencies": [
+        "hanmakonda"
+      ],
+      "id": 5
+    },
+    {
+      "districtName": "Kadapa",
+      "constituencies": [
+        "Thorrur"
+      ],
+      "id": 6
+    },
+    {
+      "districtName": "Khammam",
+      "constituencies": [
+        "yellandu"
+      ],
+      "id": 7
+    },
+    {
       "districtName": "",
       "constituencies": [
         ""
       ],
-      "id": 4
+      "id": 8
+    },
+    {
+      "districtName": "Krishna",
+      "constituencies": [
+        "khammam,yellandu,mahaboobanagar"
+      ],
+      "id": 9
+    },
+    {
+      "districtName": "Khammam",
+      "constituencies": [
+        "mohabbad",
+        "kothagudem"
+      ],
+      "id": 10,
+      "isAddCont": true
     }
   ]
 }
