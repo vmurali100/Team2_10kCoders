@@ -22,6 +22,13 @@ export const Home = (props) => {
         })
     }, [])
 
+    useEffect(() => {
+        axios.get("http://localhost:3000/admin").then((res) => {
+            console.log("admin:", res.data);
+            localStorage.setItem("admin", JSON.stringify(res.data));
+        })
+    }, [])
+
     let flag = false;
     function handleInput(e) {
         setInput(e.target.value);
@@ -46,6 +53,10 @@ export const Home = (props) => {
             navigate("/login");
 
         }
+    }
+
+    const handleEdit = (id) =>{
+        console.log("edit button clicked: ", id)
     }
 
     return (
@@ -97,11 +108,13 @@ export const Home = (props) => {
                                             <th key={i}>{d.districtName}</th>
                                         </tr>
                                         <tr>
+                                            {/* <th key={i}>{d.districtName}</th> */}
                                             {
                                                 d.constituencies.map((c, i) => {
                                                     return <td key={c}>{c}</td>
                                                 })
                                             }
+                                            
                                         </tr>
                                     </tbody>)
                                 })

@@ -7,20 +7,20 @@ export const Register = () => {
     const [alreadyRegistred, setAlreadyRegistered] = useState(false)
     const navigate = useNavigate();
 
-    // const registredUsers = JSON.parse(localStorage.getItem("users"));
-    // if(registredUsers == null)
-    // {
-    //     registredUsers = []
-    // }
-    // else
-    // {
-    //     registredUsers.find((user)=>{
-    //         if(user.email == userInput.email)
-    //         {
-    //             setAlreadyRegistered(true);
-    //         }
-    //     })
-    // }
+    const registredUsers = JSON.parse(localStorage.getItem("users"));
+    if(registredUsers == null)
+    {
+        registredUsers = []
+    }
+    else
+    {
+        registredUsers.find((user)=>{
+            if(user.email == userInput.email)
+            {
+                setAlreadyRegistered(true);
+            }
+        })
+    }
     const handleChange = (e) => {
         console.log(e.target.value)
         const user = { ...userInput };
@@ -29,18 +29,18 @@ export const Register = () => {
     }
 
     const handleRegister = () => {
-        // if(!alreadyRegistred)
-        // {
-            axios.post("http://localhost:3000/users", userInput).
-        then((res) => 
+        if(!alreadyRegistred)
         {
-            alert("Registration succesful");
-            navigate("/")
-        });
-        // }
-        // else{
-        //     alert("You are already registred , please login");
-        // }
+            axios.post("http://localhost:3000/users", userInput).
+            then((res) => 
+            {
+                alert("Registration succesful");
+                navigate("/")
+            });
+        }
+        else{
+            alert("You are already registred , please login");
+        }
     }
 
     return (<div><div className='row'>
