@@ -31,6 +31,12 @@ export const NavComp = () => {
                             {/* <a href="#" className="nav-link link-dark px-2">Sign up</a> */}
                             <Link to="register" className='nav-link link-dark px-2'>Register</Link>
                         </li>
+                        
+                        <li className="nav-item">
+                            {/* <a href="#" className="nav-link link-dark px-2">Sign up</a> */}
+                            <Link to="admin" className='nav-link link-dark px-2'>AdminLogin</Link>
+                        </li>
+
                     </> : <><li className="nav-item" className='nav-link link-dark px-2'>{loggedInUser.username}</li>
                         <li className="nav-item" onClick={logOut}  className='nav-link link-dark px-2' >LogOut</li>
                     </>}

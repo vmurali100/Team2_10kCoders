@@ -1,4 +1,10 @@
 {
+  "admin": [
+    {
+      "email": "tejaulisetti777@gmail.com",
+      "password": 12345
+    }
+  ],
   "users": [
     {
       "fname": "hh",
@@ -11,36 +17,76 @@
   ],
   "districts": [
     {
-      "districtName": "Srikakulam",
-      "constituencies": [
-        "Ichapuram",
-        "Palasa",
-        "Tekkali"
-      ]
-    },
-    {
-      "districtName": "VijayaNagaram",
-      "constituencies": []
-    },
-    {
       "districtName": "Manyam",
-      "constituencies": []
+      "constituencies": [
+        "Razole",
+        "Amalapuram"
+      ],
+      "id": 3
     },
     {
       "districtName": "Alluri Sitha RamaRaju",
-      "constituencies": []
-    },
-    {
-      "districtName": "VishakaPatnam",
-      "constituencies": []
+      "constituencies": [
+        "alluri sitha rama raju",
+        "padapa",
+        "podhuturu"
+      ],
+      "id": 4
     },
     {
       "districtName": "Anakapalli",
-      "constituencies": []
+      "constituencies": [
+        "kovvuru",
+        "janagam"
+      ],
+      "id": 6
     },
     {
       "districtName": "Kakinada",
-      "constituencies": []
+      "constituencies": [],
+      "id": 7
+    },
+    {
+      "districtName": "East Godavari",
+      "constituencies": [
+        "Razole",
+        "Jagannapeta",
+        "Amalapuram"
+      ],
+      "id": 8
+    },
+    {
+      "districtName": "West Godavari",
+      "constituencies": [
+        "Narsapuram",
+        "Palkollu",
+        "Bhimavaram"
+      ],
+      "id": 9
+    },
+    {
+      "districtName": "Krishna",
+      "constituencies": [
+        "Vijayawada",
+        "Vijayawada junction",
+        "Hindhupuram"
+      ],
+      "id": 10
+    },
+    {
+      "districtName": "VijayaNagaram",
+      "constituencies": [
+        "Bebulli",
+        "Chepurupalli"
+      ],
+      "id": 11
+    },
+    {
+      "districtName": "Chittor",
+      "constituencies": [
+        "Tiruapti"
+      ],
+      "id": 12
     }
   ]
 }
