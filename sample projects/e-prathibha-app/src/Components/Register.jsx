@@ -1,5 +1,39 @@
-import React from "react";
-export const Register = () => {
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { Register_User_Action, UserLogInAction } from "../Redux/Actions";
+
+
+
+ const Register = (props) => {
+     const [userRegi ,setUserRegi] = useState({
+      email : "" ,
+      name : "" ,
+      password : "" ,
+      confirmpassword : "" ,
+      mobile : "" 
+      
+     })
+     const [user ,setUser] =useState({
+       email: "",
+       password : ""
+     })
+ const handleChangeregi =(e)=>{
+   let newregiuser = {...userRegi};
+   newregiuser[e.target.name] = e.target.value 
+   setUserRegi(newregiuser)
+ }
+ const RegisterUser =(userRegi)=>{
+   props.RegisterUserFunc(userRegi);
+   console.log(userRegi)
+ }
+ const handleuserChange =(u)=>{
+   let newuser = {...user}
+   newuser[u.target.name] = u.target.value;
+   setUser(newuser)
+ }
+const userlogin = (user)=>{
+  props.UserLogInFunc(user)
+}
   return (
     <div>
       <div className="container">
@@ -29,13 +63,16 @@ export const Register = () => {
               </div>
              <div id="login-input">
              <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" />
+                <input type="email" class="form-control" placeholder="Email" name="email" value={user.email} onChange={(u)=>handleuserChange(u)}/>
               </div>
               <div class="mb-3">
                 <input
                   type="password"
                   class="form-control"
                   placeholder="Password"
+                  name="password"
+                  value={user.password}
+                  onChange={(u)=>handleuserChange(u)}
                 />
               </div>
               <div className="row">
@@ -52,6 +89,7 @@ export const Register = () => {
                       padding: "2px",
                       width: "250px",
                     }}
+                    onClick={(user)=>userlogin(user)}
                   >
                     Log in
                   </button>
@@ -89,26 +127,28 @@ export const Register = () => {
               </div>
              </div>
               <br />
+
+              {/* +++++++++++++++++++++++ signup +++++++++++++++++++++++ */}
               <div id="signup-input" style={{display : "none"}}>
                   <div class="mb-3">
     
-    <input type="email" class="form-control" placeholder="*Email" />
+    <input type="email" class="form-control" placeholder="*Email" name= "email" value={userRegi.email} onChange={(e)=>handleChangeregi(e)}/>
     </div>
   <div class="mb-3">
    
-    <input type="password" class="form-control" placeholder="*Name" />
+    <input type="text" class="form-control" placeholder="*Name" name="name" value={userRegi.name} onChange={(e)=>handleChangeregi(e)}/>
   </div>
   <div class="mb-3">
     
-    <input type="email" class="form-control" placeholder="*Password" />
+    <input type="password" class="form-control" placeholder="*Password" name="password" value={userRegi.password} onChange={(e)=>handleChangeregi(e)}/>
     </div>
   <div class="mb-3">
    
-    <input type="password" class="form-control" placeholder="*Confirm Password" />
+    <input type="password" class="form-control" placeholder="*Confirm Password" name = "confirmpassword" value={userRegi.confirmpassword} onChange={(e)=>handleChangeregi(e)} />
   </div>
   <div class="mb-3">
     
-    <input type="email" class="form-control" placeholder="*Mobile" />
+    <input type="number" class="form-control" placeholder="*Mobile" name="mobile" value={userRegi.mobile} onChange={(e)=>handleChangeregi(e)}/>
     </div>
   <div class="mb-3">
   <div className="row">
@@ -128,10 +168,10 @@ export const Register = () => {
    <div className="col-6"></div>
  </div> <br />
   <div class="mb-3">
-   <input type="password" class="form-control" placeholder="Enter Security code shown above" />
+   <input type="" class="form-control" placeholder="Enter Security code shown above" />
   </div>
   <div className="row">
-    <div className="col-3"><button type="submit" class="btn btn-dark" >
+    <div className="col-3"><button type="button" class="btn btn-dark" onClick={()=>RegisterUser(userRegi)} >
     <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="20"
@@ -159,3 +199,18 @@ export const Register = () => {
     </div>
   );
 };
+
+const MSTP =(state)=>{
+  return {
+    
+  }
+}
+
+const MDTP =(dispatch)=>{
+  return {
+    RegisterUserFunc :  (userRegi)=>dispatch(Register_User_Action(userRegi)),
+    UserLogInFunc : (user)=>dispatch(UserLogInAction(user))
+  }
+}
+
+export default connect(MSTP ,MDTP)(Register)
