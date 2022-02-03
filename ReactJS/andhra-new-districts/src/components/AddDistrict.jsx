@@ -26,6 +26,9 @@ export const AddDistrict = () => {
             navigate("/admin-dashboard");
         })
     }
+    const handleBackButtonClick = () => {
+        navigate("/admin-dashboard")
+    }
 
   return (<div>
     <div className='row'>
@@ -44,6 +47,7 @@ export const AddDistrict = () => {
                 </div>
                 <div className="d-grid gap-2">
                     <button type="button" className="btn btn-primary App" onClick={handleAdd}>Add</button>
+                    <button onClick={handleBackButtonClick} className='btn btn-primary'>Back</button>
                 </div>
             </form>
         </div>

@@ -26,26 +26,13 @@
     {
       "fname": "admin",
       "lname": "1",
+      "isAdmin": true,
       "email": "admin@gmail.com",
       "password": "admin",
       "id": 1
     }
   ],
   "districts": [
-    {
-      "districtName": "Srikakulam",
-      "constituencies": [
-        "ichapuram",
-        "palasa",
-        "tekkali",
-        "echerla",
-        "srikakulam",
-        "amadalavalasa",
-        "pathapatnam",
-        "narasannapeta"
-      ],
-      "id": 1
-    },
     {
       "districtName": "Vizianagaram",
       "constituencies": [

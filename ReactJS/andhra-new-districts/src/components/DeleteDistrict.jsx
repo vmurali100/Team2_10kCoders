@@ -80,20 +80,6 @@ export const DeleteDistrict = () => {
             <div className='row'>
                 <div className='col'></div>
                 <div className="col">
-                    {/* <ul className="list-group">
-            <li className="list-group-item">
-                <strong>{dist.districtName}</strong> &nbsp;&nbsp;&nbsp;
-                <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
-            </li>
-            {
-                dist.constituencies.map((cons)=>{
-                    return <li className="list-group-item">
-                        <strong>{cons}</strong> &nbsp;&nbsp;&nbsp;
-                        <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
-                    </li>
-                })  
-            }
-         </ul> */}
                     <table className='table'>
                         <tbody>
                             <tr>
@@ -103,7 +89,7 @@ export const DeleteDistrict = () => {
                                 <th>
                                     {dist.districtName}
                                 </th>
-                                <td><button className="btn btn-danger" onClick={handleDeleteDist}>Delete</button></td>
+                                <td><button className="btn btn-danger " onClick={handleDeleteDist}>Delete</button></td>
                             </tr>
                             <tr><td><h3>Constituencies</h3></td></tr>
                             {

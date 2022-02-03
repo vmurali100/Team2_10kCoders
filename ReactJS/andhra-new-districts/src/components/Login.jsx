@@ -29,7 +29,8 @@ export const Login = (props) => {
                     setAdminLoggedIn(false);
                     localStorage.setItem("isUserLoggedIn",JSON.stringify(loggedIn));
                     localStorage.setItem("isAdminLoggedIn",JSON.stringify(adminLoggedIn))
-                    setValidUser(true);
+                    alert("Login sucessful");
+                    // setValidUser(true);
                     navigate("/");
                 }
             })

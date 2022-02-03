@@ -2,26 +2,20 @@ import React from 'react';
 import { Link, Navigate, useNavigate } from "react-router-dom"
 
 export const Header = (props) => {
-    const {setLoggedIn} = props;
-    const {setAdminLoggedIn} = props;
+    const {loggedIn,setLoggedIn} = props;
+    const {adminLoggedIn,setAdminLoggedIn} = props;
     const navigate = useNavigate();
     let loggedInUser = JSON.parse(localStorage.getItem("loggedInUserDetails"));
     let username;
-    let loggedIn = JSON.parse(localStorage.getItem("isUserLoggedIn"));
-    let adminLoggedIn = JSON.parse(localStorage.getItem("isAdminLoggedIn"));
+    // let loggedIn = JSON.parse(localStorage.getItem("isUserLoggedIn"));
+    // let adminLoggedIn = JSON.parse(localStorage.getItem("isAdminLoggedIn"));
 
-    console.log("loggedinuse:", loggedIn);
-    console.log("adminLoggedIn:", adminLoggedIn);
+    console.log("HEADER: loggedinuse:", loggedIn);
+    console.log("HEADER: adminLoggedIn:", adminLoggedIn);
     let logged = false;
     if(loggedIn || adminLoggedIn)
     {
         logged = true;
-    }
-
-    if(loggedInUser == null) {
-        loggedInUser = [];
-    }
-    else{
         username = loggedInUser.fname + loggedInUser.lname;
     }
     return (<div>
@@ -33,6 +27,7 @@ export const Header = (props) => {
                 </a>
 
                 {
+                    console.log("HEADER logged is : ",logged),
                     !logged ? 
                     <ul className="nav nav-pills">
                     <li className="nav-item"><Link to="/"  className="nav-link active" aria-current="page">Home</Link></li>
@@ -42,9 +37,19 @@ export const Header = (props) => {
                     </ul> 
                     : 
                     <ul className="nav nav-pills">
-                    <li className="nav-item"><a className="nav-link" >{username}</a></li>
-                    <li className="nav-item"><button className="nav-link" onClick={()=>{setLoggedIn(false); setAdminLoggedIn(false);  localStorage.removeItem("loggedInUserDetails");
-  localStorage.removeItem("loggedInAdminDetails"); navigate("/")}}>Logout</button></li>
+                        <li className="nav-item"><a className="nav-link" >{username}</a></li>
+                        <li className="nav-item">
+                            <button className="nav-link" onClick={()=>
+                            {
+                                setLoggedIn(false); 
+                                setAdminLoggedIn(false);  
+                                localStorage.setItem("isUserLoggedIn",loggedIn);
+                                localStorage.setItem("isAdminLoggedIn",adminLoggedIn)
+                                localStorage.removeItem("loggedInUserDetails");
+                                localStorage.removeItem("loggedInAdminDetails");
+                                navigate("/")
+                            }}>Logout</button>
+                        </li>
                     </ul>
                 }
             </header>

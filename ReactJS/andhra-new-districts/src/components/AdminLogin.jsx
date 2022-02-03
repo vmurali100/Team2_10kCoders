@@ -21,15 +21,24 @@ export const AdminLogin = (props) => {
         setUserInput(user);
     }
 
-    const handleLogin = () => {
-        const adminlist = JSON.parse(localStorage.getItem("admin"))
-        if (adminlist.length === 0) { alert("You are not a member please register"); }
-        else if (adminlist.length > 0) {
-            adminlist.find((admin) => {
-                if (userInput.email === admin.email && userInput.password === admin.password) {
+    const handleLogin = () => 
+    {
+        const adminlist = JSON.parse(localStorage.getItem("admin"));
+
+        if (adminlist.length === 0) 
+        { 
+            alert("You are not a member please register"); 
+        }
+        else if (adminlist.length > 0) 
+        {
+            adminlist.find((admin) => 
+            {
+                if (userInput.email === admin.email && userInput.password === admin.password) 
+                {
                     localStorage.setItem("loggedInUserDetails", JSON.stringify(admin))
                     setAdminLoggedIn(true);
                     setLoggedIn(false);
+                    console.log("ADMIN LOGIN logged in user: ",loggedIn,"logged in admin: ",adminLoggedIn);
                     localStorage.setItem("isUserLoggedIn",JSON.stringify(loggedIn));
                     localStorage.setItem("isAdminLoggedIn",JSON.stringify(adminLoggedIn))
                     // setValidUser(true);
