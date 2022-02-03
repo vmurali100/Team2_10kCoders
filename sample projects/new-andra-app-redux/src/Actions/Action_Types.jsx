@@ -1,0 +1,4 @@
+export  const GET_DISTRICTS_DATA ="GET_DISTRICTS_DATA" ;
+export const   GET_ADMINS_DATA = "GET_ADMINS_DATA" ;
+export  const GET_USERS_DATA = "GTE_USERS_DATA";
+
