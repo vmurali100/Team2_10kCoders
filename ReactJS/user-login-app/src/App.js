@@ -22,7 +22,7 @@ function App() {
  <BrowserRouter>
  {/* <User/> */}
  <Routes>
-   <Route path={user.username}  element={user.username === 'nikhilchandrapoddar099@gmail.com' && user.password === 'nikhil' ?<Userdetails user = {user}/> : " "}  />
+   <Route path={user.email}  element={user.email === 'nikhilchandrapoddar099@gmail.com' && user.password === 'nikhil' ? <Userdetails user = {user}/> : " "}  />
    <Route path="/"  element={<User/>} />
      
   

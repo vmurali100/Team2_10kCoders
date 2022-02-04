@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { Register_User_Action, UserLogInAction } from "../Redux/Actions";
 
 
@@ -17,14 +18,26 @@ import { Register_User_Action, UserLogInAction } from "../Redux/Actions";
        email: "",
        password : ""
      })
+
+     const navigate = useNavigate()
  const handleChangeregi =(e)=>{
    let newregiuser = {...userRegi};
    newregiuser[e.target.name] = e.target.value 
    setUserRegi(newregiuser)
  }
  const RegisterUser =(userRegi)=>{
+   console.log(props)
    props.RegisterUserFunc(userRegi);
    console.log(userRegi)
+   let dummy = {
+    email : "" ,
+    name : "" ,
+    password : "" ,
+    confirmpassword : "" ,
+    mobile : "" 
+   }
+   setUserRegi(dummy)
+   navigate("emailverify")
  }
  const handleuserChange =(u)=>{
    let newuser = {...user}

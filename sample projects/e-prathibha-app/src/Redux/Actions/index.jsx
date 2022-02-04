@@ -3,23 +3,15 @@ import React from "react";
 import { SIGN_UP_USER_DATA, USER_LOGIN } from "./ActionTypes";
 
 export const Register_User_Action = (userRegi)=>{
-    // return (dispatch) =>{
-    //     axios.post('https://e-prathibha.com/apis/register' , )
-    // }
-
-    return (dispatch) => {
-        // var userdata = JSON.parse(localStorage.getItem("user"))
-// console.log(userdata)
+    console.log(userRegi)
+   return (dispatch) => {
         var bodyFormData = new FormData();
         bodyFormData.append("email", userRegi.email);
         bodyFormData.append("name", userRegi.name);
         bodyFormData.append("password", userRegi.password);
         bodyFormData.append("phone", userRegi.mobile);
-        // bodyFormData.append("confirmpassword", userRegi.confirmpassword);
+        bodyFormData.append("confirmpassword", userRegi.confirmpassword);
         // bodyFormData.append("password", userRegi.password);
-
-
-    //    if(userRegi.password ===userRegi.confirmpassword) {
             axios({
             method: "post",
             url: "https://e-prathibha.com/apis/register",
@@ -53,10 +45,19 @@ console.log(user)
         })
         .then((res) => {
             console.log(res.data);
+            // if(user.username == )
+             
             dispatch({
                 type: USER_LOGIN,
                 payload: res.data
             })
         }) 
     }
+ return (dispatch)=>{
+     axios.get('')
+ }
+}
+
+export  const  VerifyEmailAction =()=>{
+  
 }
