@@ -1,6 +1,8 @@
 import axios from "axios";
 import React from "react";
-import { SIGN_UP_USER_DATA, USER_LOGIN } from "./ActionTypes";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { EMAIL_VERIFICATION, SIGN_UP_USER_DATA, USER_LOGIN } from "./ActionTypes";
 
 export const Register_User_Action = (userRegi)=>{
     console.log(userRegi)
@@ -9,8 +11,9 @@ export const Register_User_Action = (userRegi)=>{
         bodyFormData.append("email", userRegi.email);
         bodyFormData.append("name", userRegi.name);
         bodyFormData.append("password", userRegi.password);
+        bodyFormData.append("confirmPassword", userRegi.confirmPassword);
         bodyFormData.append("phone", userRegi.mobile);
-        bodyFormData.append("confirmpassword", userRegi.confirmpassword);
+       
         // bodyFormData.append("password", userRegi.password);
             axios({
             method: "post",
@@ -22,7 +25,7 @@ export const Register_User_Action = (userRegi)=>{
             console.log(res.data);
             dispatch({
                 type: SIGN_UP_USER_DATA,
-                payload: res.data
+                payload: res.data.slice(33 ,40)
             })
         }) 
     // }
@@ -53,11 +56,26 @@ console.log(user)
             })
         }) 
     }
- return (dispatch)=>{
-     axios.get('')
- }
+
 }
 
 export  const  VerifyEmailAction =()=>{
-  
+    const code = useSelector((state) => state.code) ;
+    const navigater = useNavigate()
+  return (dispatch) =>{
+          
+      axios.post('https://e-prathibha.com/apis/verifyEmail' , code.slice(33 , 40) ).then((res)=>{
+          console.log(res.data);
+          alert("Email verified succesfully")
+         
+          dispatch(
+             { type : EMAIL_VERIFICATION ,
+               payload : res.data
+             }
+          )
+      })
+      navigater("register")
+
+   
+  }
 }

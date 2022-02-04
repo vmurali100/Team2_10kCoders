@@ -10,7 +10,7 @@ import { Register_User_Action, UserLogInAction } from "../Redux/Actions";
       email : "" ,
       name : "" ,
       password : "" ,
-      confirmpassword : "" ,
+      confirmPassword : "" ,
       mobile : "" 
       
      })
@@ -33,7 +33,7 @@ import { Register_User_Action, UserLogInAction } from "../Redux/Actions";
     email : "" ,
     name : "" ,
     password : "" ,
-    confirmpassword : "" ,
+    confirmPassword : "" ,
     mobile : "" 
    }
    setUserRegi(dummy)
@@ -153,11 +153,11 @@ const userlogin = (user)=>{
   </div>
   <div class="mb-3">
     
-    <input type="password" class="form-control" placeholder="*Password" name="password" value={userRegi.password} onChange={(e)=>handleChangeregi(e)}/>
+    <input type="" class="form-control" placeholder="*Password" name="password" value={userRegi.password} onChange={(e)=>handleChangeregi(e)}/>
     </div>
   <div class="mb-3">
    
-    <input type="password" class="form-control" placeholder="*Confirm Password" name = "confirmpassword" value={userRegi.confirmpassword} onChange={(e)=>handleChangeregi(e)} />
+    <input type="" class="form-control" placeholder="*Confirm Password" name = "confirmPassword" value={userRegi.confirmPassword} onChange={(e)=>handleChangeregi(e)} />
   </div>
   <div class="mb-3">
     
