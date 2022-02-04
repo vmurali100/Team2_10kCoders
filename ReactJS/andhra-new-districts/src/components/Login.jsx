@@ -22,7 +22,8 @@ export const Login = (props) => {
         const userslist = JSON.parse(localStorage.getItem("users"))
         if (userslist.length === 0) { alert("You are not a member please register"); }
         else if (userslist.length > 0) {
-            userslist.find((user) => {
+            userslist.find((user) => 
+            {
                 if (userInput.email === user.email && userInput.password === user.password) {
                     localStorage.setItem("loggedInUserDetails", JSON.stringify(user))
                     setLoggedIn(true);
@@ -30,16 +31,13 @@ export const Login = (props) => {
                     localStorage.setItem("isUserLoggedIn",JSON.stringify(loggedIn));
                     localStorage.setItem("isAdminLoggedIn",JSON.stringify(adminLoggedIn))
                     alert("Login sucessful");
-                    // setValidUser(true);
                     navigate("/");
+                }
+                else{
+                    alert("Invalid login details")
                 }
             })
         }
-        // console.log("Login form", validUser)
-        // if(validUser == false)
-        // {
-        //     alert("Invalid user login details")
-        // }
         
 
 

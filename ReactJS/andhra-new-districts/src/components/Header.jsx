@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Navigate, useNavigate } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import "../index.css";
 
 export const Header = (props) => {
     const {loggedIn,setLoggedIn} = props;
@@ -12,12 +13,15 @@ export const Header = (props) => {
 
     console.log("HEADER: loggedinuse:", loggedIn);
     console.log("HEADER: adminLoggedIn:", adminLoggedIn);
+    console.log("props",window.location.pathname);
     let logged = false;
     if(loggedIn || adminLoggedIn)
     {
         logged = true;
         username = loggedInUser.fname + loggedInUser.lname;
     }
+
+  
     return (<div>
 
         <div className="container">
@@ -30,10 +34,10 @@ export const Header = (props) => {
                     console.log("HEADER logged is : ",logged),
                     !logged ? 
                     <ul className="nav nav-pills">
-                    <li className="nav-item"><Link to="/"  className="nav-link active" aria-current="page">Home</Link></li>
-                    <li className="nav-item"><Link to="/login"  className="nav-link">Login</Link></li>
-                    <li className="nav-item"><Link to="/register"  className="nav-link">Register</Link></li>
-                    <li className="nav-item"><Link to="/admin-login"  className="nav-link">Admin Login</Link></li>
+                    <li className="nav-item"><Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"} id="home" aria-current="page" >Home</Link></li>
+                    <li className="nav-item"><Link to="/login"  className={window.location.pathname === "/login" ? "nav-link active" : "nav-link"} id="login" >Login</Link></li>
+                    <li className="nav-item"><Link to="/register"  className={window.location.pathname === "/register" ? "nav-link active" : "nav-link"} id="register" >Register</Link></li>
+                    <li className="nav-item"><Link to="/admin-login"  className={window.location.pathname === "/admin-login" ? "nav-link active" : "nav-link"} id="admin-login" >Admin Login</Link></li>
                     </ul> 
                     : 
                     <ul className="nav nav-pills">

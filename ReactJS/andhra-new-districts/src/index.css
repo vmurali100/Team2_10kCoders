@@ -10,3 +10,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.act:active{
+  background-color:black;
+  color:white;
+}
+.act:hover{
+  background-color:grey;
+  color:white;
+}
+.act:focus{
+  background-color:blue;
+}

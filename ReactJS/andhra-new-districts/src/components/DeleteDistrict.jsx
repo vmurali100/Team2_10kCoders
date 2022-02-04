@@ -27,7 +27,7 @@ export const DeleteDistrict = () => {
     }
     const handleDeleteDist = async() => 
     {
-        if (window.confirm(`Do you want to delete '${dist.districtName}'?`))
+        if (window.confirm(`Do you want to delete '${dist.districtName}' district with all its constituencies? `))
         {
             let data = await delPromiseDist();
             console.log("data ",data);
@@ -89,7 +89,7 @@ export const DeleteDistrict = () => {
                                 <th>
                                     {dist.districtName}
                                 </th>
-                                <td><button className="btn btn-danger " onClick={handleDeleteDist}>Delete</button></td>
+                                <td><button className="btn btn-danger " onClick={handleDeleteDist}>Delete All</button></td>
                             </tr>
                             <tr><td><h3>Constituencies</h3></td></tr>
                             {

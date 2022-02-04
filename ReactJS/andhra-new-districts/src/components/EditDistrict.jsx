@@ -80,20 +80,30 @@ export const EditDistrict = () => {
         navigate("/admin-dashboard")
     }
     const handleConstitencies = () => {
-        // setAdded(false)
         return <>
             {
                 dist.constituencies.map((cons, i) => {
-                    return (<input type="text" key={i} name="constituencies" className="form-control" value={dist.constituencies[i]} onChange={(e) => { handleChangeConst(i, e) }} />)
+                    return (<div className='input-group mb-3'>
+                        <input type="text" key={i} name="constituencies" className="form-control" value={dist.constituencies[i]} onChange={(e) => { handleChangeConst(i, e) }} />
+                        <button className="btn btn-primary" type="button" onClick={()=>handleRemoveConst(i)}>Remove</button>
+                    </div>)
                 })
             }
         </>
+    }
+    const handleRemoveConst = (i) => {
+        const distCopy = {...dist};
+        distCopy.constituencies.splice(i,1);
+        setDist({
+            districtName : distCopy.districtName,
+            constituencies : distCopy.constituencies
+        });
     }
 
     return (
         <div className="container">
             <div className='row'>
-
+            <div className='col'></div>
                 <div className='col'>
                     <h2 className="App">Edit and Update Form</h2>
                     <form>
@@ -108,6 +118,12 @@ export const EditDistrict = () => {
                                 handleConstitencies() 
                             }
                         </div>
+                        
+                        <div className="mt-3 input-group">
+                            <input type="text" name="newConst" value={newConst} className="form-control" placeholder="Add new Constituency" onChange={(e) => setnewConst(e.target.value)} />
+                            <button type="button" onClick={handleAdd} type="button" className="btn btn-info" >Add</button>
+                        </div>
+
                         <div className="mt-3">
                             <button onClick={handleUpdate} type="button" className="btn btn-info" style={{ marginRight: 10 + "px" }}>Update</button>
                             <button onClick={handleBackButtonClick} className='btn btn-primary'>Back</button>
@@ -117,21 +133,7 @@ export const EditDistrict = () => {
                     </form>
 
                 </div>
-                <div className='col'>
-                    <h2 className="App">Add new Constituency</h2>
-                    <form>
-
-                        <div className="md-3">
-                            <label className='form-label '>Add new Constituency</label>
-                            <input type="text" name="newConst" value={newConst} className="form-control" onChange={(e) => setnewConst(e.target.value)} />
-                        </div>
-                        <div className="mt-3">
-                            <button type="button" onClick={handleAdd} type="button" className="btn btn-info" >Add</button>
-                        </div>
-
-
-                    </form>
-                </div>
+                <div className='col'></div>
             </div>
         </div>
     );

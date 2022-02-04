@@ -41,17 +41,15 @@ export const AdminLogin = (props) => {
                     console.log("ADMIN LOGIN logged in user: ",loggedIn,"logged in admin: ",adminLoggedIn);
                     localStorage.setItem("isUserLoggedIn",JSON.stringify(loggedIn));
                     localStorage.setItem("isAdminLoggedIn",JSON.stringify(adminLoggedIn))
-                    // setValidUser(true);
-                    // console.log("login verification: ",validUser)
                     alert("Login Sucessful")
                     navigate("/admin-dashboard");
                 }
+                else{
+                    alert("Invalid login details")
+                }
             })
         }
-        // if(validUser === false)
-        // {
-        //     alert("Invalid user login details")
-        // }
+        
         
 
 

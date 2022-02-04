@@ -8,6 +8,7 @@ export const Home = (props) => {
     const [dist, setDist] = useState([]);
     const [input, setInput] = useState("");
     const [ans, setAns] = useState("");
+    const [flag,setFlag] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
         axios.get("http://localhost:3000/districts").then((res) => {
@@ -29,7 +30,6 @@ export const Home = (props) => {
         })
     }, [])
 
-    let flag = false;
     function handleInput(e) {
         setInput(e.target.value);
         setAns("")
@@ -44,6 +44,7 @@ export const Home = (props) => {
             }
             else {
                 setAns("Invalid")
+                setFlag(true)
             }
             setInput("");
         }
@@ -51,12 +52,9 @@ export const Home = (props) => {
         {
             alert("your are not logged in, Please Login");
             navigate("/login");
+            setAns("");
 
         }
-    }
-
-    const handleEdit = (id) =>{
-        console.log("edit button clicked: ", id)
     }
 
     return (
@@ -74,7 +72,7 @@ export const Home = (props) => {
                         <div className='row' style={{ marginTop: 50 + "px" }}>
 
                             {
-                                (ans !== "Invalid" && ans !== "") && <p className='App'>Your new district is <strong>{ans}</strong></p>
+                                loggedIn && ((ans !== "Invalid" && ans !== "") ? <p className='App'>Your new district is <strong>{ans}</strong></p> : <p className='App'><strong>{ans}</strong></p>)
                             }
 
 

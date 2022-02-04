@@ -1,4 +1,5 @@
 import './App.css';
+import "./index.css";
 import { Home } from './components/Home';
 import { Header } from './components/Header';
 import { Navigate, Route, Routes } from 'react-router-dom';
@@ -10,6 +11,7 @@ import { AdminDashboard } from './components/AdminDashboard';
 import { EditDistrict } from './components/EditDistrict';
 import { AddDistrict } from './components/AddDistrict';
 import { DeleteDistrict } from './components/DeleteDistrict';
+import { NotFound } from './components/NotFound';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(null);
@@ -49,13 +51,17 @@ function App() {
           {
             adminLoggedIn &&
             <>
-              <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
+              <Route path="/admin-dashboard" element={<AdminDashboard />}/>
               <Route path="/admin-dashboard/edit-district/:id" element={<EditDistrict />}/>
               <Route path="/admin-dashboard/add-district" element={<AddDistrict />}/>
               <Route path="/admin-dashboard/delete-district/:id" element={<DeleteDistrict />}/>
+              <Route path="/" element={<Navigate to={"/admin-dashboard"}/>}/>
+              <Route path="/login" element={<Navigate to={"/admin-dashboard"}/>}/>
+              <Route path="/register" element={<Navigate to={"/admin-dashboard"}/>}/>
+              <Route path="*" element={<NotFound />}/>
           </>
           }
-          {
+          {/* {
             (adminLoggedIn === false) &&
             <>
               <Route path="" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
@@ -64,7 +70,7 @@ function App() {
               <Route path="/admin-login" element={<AdminLogin adminLoggedIn={adminLoggedIn} setAdminLoggedIn={setAdminLoggedIn} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
               <Route path="*" element={<Navigate to={"/admin-login"}/>}/>
             </>
-          }
+          } */}
           {
             loggedIn &&
             <>
@@ -73,12 +79,17 @@ function App() {
             </>
           }
           {
-            (loggedIn === false) &&
+            ((loggedIn === false) && (adminLoggedIn === false)) &&
             <>
             <Route path="" element={<Home loggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
             <Route path="/login" element={<Login loggedIn={loggedIn} setLoggedIn={setLoggedIn} adminLoggedIn={adminLoggedIn} setAdminLoggedIn={setAdminLoggedIn}/>} />
             <Route path="/register" element={<Register />} />
             <Route path="/admin-login" element={<AdminLogin adminLoggedIn={adminLoggedIn} setAdminLoggedIn={setAdminLoggedIn} loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>} />
+            <Route path="/admin-dashboard" element={<Navigate to={"/admin-login"}/>}/>
+            <Route path="/admin-dashboard/add-district" element={<Navigate to={"/admin-login"}/>}/>
+            <Route path="/admin-dashboard/edit-district" element={<Navigate to={"/admin-login"}/>}/>
+            <Route path="/admin-dashboard/delete-district" element={<Navigate to={"/admin-login"}/>}/>
+            <Route path="*" element={<NotFound />}/>
             </>
           }
           
