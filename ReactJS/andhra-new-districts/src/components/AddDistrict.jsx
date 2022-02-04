@@ -45,9 +45,9 @@ export const AddDistrict = () => {
                     <input type="text" name="constituencies" className="form-control" id="constituencies" onChange={handleChange} />
                     {/* <button type="button" className="btn btn-primary App" onClick={handleAdd}>Add another constituencies</button> */}
                 </div>
-                <div className="d-grid gap-2">
-                    <button type="button" className="btn btn-primary App" onClick={handleAdd}>Add</button>
-                    <button onClick={handleBackButtonClick} className='btn btn-primary'>Back</button>
+                <div className="d-flex">
+                    <button type="button" className="btn btn-primary flex-grow-1 " style={{marginRight: 5+"px"}}onClick={handleAdd}>Add</button>
+                    <button onClick={handleBackButtonClick} className='btn btn-primary flex-grow-1' style={{marginLeft: 5+"px"}}>Back</button>
                 </div>
             </form>
         </div>

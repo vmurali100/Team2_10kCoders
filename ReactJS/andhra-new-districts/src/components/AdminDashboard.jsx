@@ -35,9 +35,8 @@ export const AdminDashboard = () => {
             {/* displaying all the districts and their constistencies */}
             <div className="col App">
                 <h1>Admin Dashboard</h1>
-                <h2 style={{ color: "grey", fontSize: "25px", marginTop: 50 + "px", marginBottom: 50 + "px" }}>Districts and Assembly constituencies</h2>
-
                 <button className='btn btn-primary' onClick={handleAddDistrict}>Add District</button>
+                <h2 style={{ color: "grey", fontSize: "25px", marginTop: 50 + "px", marginBottom: 50 + "px" }}>Districts and Assembly constituencies</h2>
                 <table className='table'>
                     <thead>
                         <tr>

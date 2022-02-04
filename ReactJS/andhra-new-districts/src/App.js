@@ -1,6 +1,5 @@
 import './App.css';
 import { Home } from './components/Home';
-import { Searchbox } from './components/Searchbox';
 import { Header } from './components/Header';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Login } from './components/Login';
@@ -17,6 +16,12 @@ function App() {
   const [adminLoggedIn, setAdminLoggedIn] = useState(null)
   console.log("APP.JS: logged in user: ",loggedIn,"logged in admin: ",adminLoggedIn);
 
+  useEffect(()=>{
+    window.onbeforeunload = () =>{
+      localStorage.remove("isUserLoggedIn");
+      localStorage.remove("isAdminLoggedIn");
+    }
+  },[])
   useEffect(()=>{
     const u = localStorage.getItem("isUserLoggedIn");
     const a = localStorage.getItem("isAdminLoggedIn")

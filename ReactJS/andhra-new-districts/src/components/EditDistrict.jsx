@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { render } from '@testing-library/react';
 
 
 
@@ -15,6 +16,7 @@ export const EditDistrict = () => {
         districtName: "",
         constituencies: []
     });
+    const [newConst, setnewConst] = useState("");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -22,7 +24,7 @@ export const EditDistrict = () => {
             setDist(data);
         }
         fetchData();
-    }, [])
+    },[])
     const getData = () => {
         return new Promise((resolve, reject) => {
             axios.get("http://localhost:3000/districts/" + id).then((res) => {
@@ -37,8 +39,7 @@ export const EditDistrict = () => {
         let obj = { ...dist }; //copying object
         let Holder = e.target.value; //capturing input value into holder
 
-        if (e.target.name === "constituencies") 
-        {
+        if (e.target.name === "constituencies") {
             obj[e.target.name][i] = Holder
         }
         else {
@@ -51,30 +52,50 @@ export const EditDistrict = () => {
 
     const handleUpdate = async () => {
         console.log("handle called");
-        let res = await editPromise();
+        await editPromise();
         navigate("/admin-dashboard")
     }
 
     const editPromise = () => {
-        console.log("cg\hecking", id, dist);
+        console.log("checking", id, dist);
         return new Promise((resolve, reject) => {
             axios.put("http://localhost:3000/districts/" + id, dist).then((res) => {
                 alert("updated sucessfully...")
                 resolve(res.data)
-                
+
             })
         })
     }
-
+    const handleAdd = async () => {
+        const distCopy = {...dist};
+        distCopy.constituencies.push(newConst);
+        setDist({
+            districtName : distCopy.districtName,
+            constituencies : distCopy.constituencies
+        });
+        setnewConst("");
+    }
+    
     const handleBackButtonClick = () => {
         navigate("/admin-dashboard")
     }
+    const handleConstitencies = () => {
+        // setAdded(false)
+        return <>
+            {
+                dist.constituencies.map((cons, i) => {
+                    return (<input type="text" key={i} name="constituencies" className="form-control" value={dist.constituencies[i]} onChange={(e) => { handleChangeConst(i, e) }} />)
+                })
+            }
+        </>
+    }
+
     return (
-        <div class="container">
+        <div className="container">
             <div className='row'>
-                <div className='col'></div>
+
                 <div className='col'>
-                    <h2 className="App">Update Form</h2>
+                    <h2 className="App">Edit and Update Form</h2>
                     <form>
                         <div className='md-3'>
                             <label className="form-label ">District </label>
@@ -84,7 +105,7 @@ export const EditDistrict = () => {
                         <div className="md-3">
                             <label className='form-label '>Constituencies</label>
                             {
-                                dist.constituencies.map((cons, i) => <input type="text" name="constituencies" className="form-control" value={dist.constituencies[i]} onChange={(e) => { handleChangeConst(i, e) }} />)
+                                handleConstitencies() 
                             }
                         </div>
                         <div className="mt-3">
@@ -97,6 +118,19 @@ export const EditDistrict = () => {
 
                 </div>
                 <div className='col'>
+                    <h2 className="App">Add new Constituency</h2>
+                    <form>
+
+                        <div className="md-3">
+                            <label className='form-label '>Add new Constituency</label>
+                            <input type="text" name="newConst" value={newConst} className="form-control" onChange={(e) => setnewConst(e.target.value)} />
+                        </div>
+                        <div className="mt-3">
+                            <button type="button" onClick={handleAdd} type="button" className="btn btn-info" >Add</button>
+                        </div>
+
+
+                    </form>
                 </div>
             </div>
         </div>
