@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { Register_User_Action, UserLogInAction } from "../Redux/Actions";
+import { Register_User_Action, UserLogInAction, ViewProfileAction } from "../Redux/Actions";
 
 
 
@@ -44,8 +44,13 @@ import { Register_User_Action, UserLogInAction } from "../Redux/Actions";
    newuser[u.target.name] = u.target.value;
    setUser(newuser)
  }
-const userlogin = (user)=>{
-  props.UserLogInFunc(user)
+ useEffect(()=>{
+  console.log(user)
+ },[user])
+const userlogin =  (user)=>{
+    props.UserLogInFunc(user);
+    props.ViewProfileFunc()
+  console.log(user)
 }
   return (
     <div>
@@ -76,11 +81,11 @@ const userlogin = (user)=>{
               </div>
              <div id="login-input">
              <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" name="email" value={user.email} onChange={(u)=>handleuserChange(u)}/>
+                <input type="text" class="form-control" placeholder="Email" name="email" value={user.email} onChange={(u)=>handleuserChange(u)}/>
               </div>
               <div class="mb-3">
                 <input
-                  type="password"
+                  type="text"
                   class="form-control"
                   placeholder="Password"
                   name="password"
@@ -102,7 +107,7 @@ const userlogin = (user)=>{
                       padding: "2px",
                       width: "250px",
                     }}
-                    onClick={(user)=>userlogin(user)}
+                    onClick={()=>userlogin(user)}
                   >
                     Log in
                   </button>
@@ -222,7 +227,8 @@ const MSTP =(state)=>{
 const MDTP =(dispatch)=>{
   return {
     RegisterUserFunc :  (userRegi)=>dispatch(Register_User_Action(userRegi)),
-    UserLogInFunc : (user)=>dispatch(UserLogInAction(user))
+    UserLogInFunc : (user)=>dispatch(UserLogInAction(user)) ,
+    ViewProfileFunc : ()=>dispatch(ViewProfileAction())
   }
 }
 

@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import  Register  from './Components/Register';
 import { Home } from './Components/Home';
 import Emailverification from './Components/Emailverification';
+import { Profile } from './Components/Profile';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
     <Route path="register" element={ <Register/>} />
     <Route path="" element={<Home/>}/>
     <Route path="register/emailverify" element={<Emailverification/>}/>
+    <Route path="register/profile" element={<Profile/>}/>
 
   </Routes>
   <Footer/>
