@@ -13,17 +13,17 @@
       "email": "tejastudent777@gmail.com",
       "password": "12345",
       "id": 1
+    },
+    {
+      "fname": "Satish Kumar",
+      "lname": "Prathi",
+      "username": "Satish",
+      "email": "satishkumarprathi7@gmail.com",
+      "password": "Satish@77",
+      "id": 2
     }
   ],
   "districts": [
-    {
-      "districtName": "Manyam",
-      "constituencies": [
-        "Razole",
-        "Amalapuram"
-      ],
-      "id": 3
-    },
     {
       "districtName": "Alluri Sitha RamaRaju",
       "constituencies": [
@@ -43,7 +43,10 @@
     },
     {
       "districtName": "Kakinada",
-      "constituencies": [],
+      "constituencies": [
+        "Kakinada",
+        "Kakinada port"
+      ],
       "id": 7
     },
     {
@@ -80,13 +83,6 @@
         "Chepurupalli"
       ],
       "id": 11
-    },
-    {
-      "districtName": "Chittor",
-      "constituencies": [
-        "Tiruapti"
-      ],
-      "id": 12
     }
   ]
 }
