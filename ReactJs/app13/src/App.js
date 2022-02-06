@@ -5,18 +5,18 @@ import "./css/style.default.css";
 import "./css/custom.css"
 import {BrowserRouter,Routes,Route,Link} from "react-router-dom";
 import { Header } from './Componentapis/Header';
-import { Json1 } from './Componentapis/Json1';
-import { Json2 } from './Componentapis/Json2';
-import { Json3 } from './Componentapis/Json3';
-import { Json4 } from './Componentapis/Json4';
-import { Json5 } from './Componentapis/Json5';
-import { Json6 } from './Componentapis/Json6';
-import { Fill1 } from './Componentapis/Fill1';
-import { Fill2 } from './Componentapis/Fill2';
-import { Fill3 } from './Componentapis/Fill3';
-import { Fake1 } from './Componentapis/Fake1';
-import { Fake2 } from './Componentapis/Fake2';
-import { Fake3 } from './Componentapis/Fake3';
+import { Json1 } from './Componentapis/json1/Json1';
+import { Json2 } from './Componentapis/json2/Json2';
+import { Json3 } from './Componentapis/json3/Json3';
+import { Json4 } from './Componentapis/json4/Json4';
+import { Json5 } from './Componentapis/json5/Json5';
+import { Json6 } from './Componentapis/json6/Json6';
+import { Fill1 } from './Componentapis/filltext1/Fill1';
+import { Fill2 } from './Componentapis/filltext2/Fill2';
+import { Fill3 } from './Componentapis/filltext3/Fill3';
+import { Fake1 } from './Componentapis/fakestore1/Fake1';
+import { Fake2 } from './Componentapis/fakestore2/Fake2';
+import { Fake3 } from './Componentapis/fakestore3/Fake3';
 
 // import Users from './Crud';
 // import Users_redux from './Crudredux';
@@ -41,7 +41,7 @@ function App() {
     <Route path="fake1" element={<Fake1/>}/>
     <Route path="fake2" element={<Fake2/>}/>
     <Route path="fake3" element={<Fake3/>}/>
-
+    
 
 
 
