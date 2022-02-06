@@ -1,8 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import "../App.css";
 import "../index.css";
 export const Navbar = () => {
+const [loggeduser ,setLoggeduser] = useState({});
+const navigate =useNavigate()
+
+useEffect(()=>{
+ setLoggeduser(JSON.parse(localStorage.getItem("loggeduser")))
+},[])
   return (
     <div>
       <div className="container-fluid">
@@ -15,8 +22,8 @@ export const Navbar = () => {
                 </a>
               </div>
 
-              <div className="col-7"></div>
-              <div className="col-5">
+              <div className="col-5"></div>
+              <div className="col-7">
                 <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                     <li class="nav-item">
@@ -76,9 +83,10 @@ export const Navbar = () => {
                         >
                           <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                         </svg>{" "}
-                        <Link to="register">Login/Register</Link>
+                        { loggeduser !=null ? loggeduser.email : <Link to="register">Login/Register</Link>}
                       </a>
                     </li>
+                   { loggeduser !=null && <li><button onClick={()=> localStorage.clear()/ navigate('')}>LogOut</button></li> }
                   </ul>
                 </div>
               </div>

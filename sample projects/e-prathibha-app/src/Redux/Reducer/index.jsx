@@ -1,9 +1,11 @@
 import React from "react";
-import { SIGN_UP_USER_DATA ,EMAIL_VERIFICATION , USER_LOGIN} from "../Actions/ActionTypes";
+import { SIGN_UP_USER_DATA ,EMAIL_VERIFICATION , USER_LOGIN, PROFILE_DATA, GET_EXAMS_LIST} from "../Actions/ActionTypes";
 
 const initState = {
-    tokendata : "" ,
+    tokendata : [] ,
     code : "" ,
+    profiledata : {},
+    examslist:[]
 
 }
 
@@ -18,10 +20,20 @@ export const Reducer  = (state =initState ,actions) =>{
 
         case USER_LOGIN :
             console.log(payload)
-            return {...state , tokendata : payload}
-        
-    
+            var newarr = [...state]
+            newarr.push(payload)
+            console.log(newarr)
+            return newarr
+        case PROFILE_DATA :
+            var newodj = {...state , profiledata: payload};
+
+            return newodj 
+            
+            case GET_EXAMS_LIST :
+                var arr = [...state];
+          arr.push(payload);
+          return arr
         default:
-            break;
+            return state.code
     }
 }
