@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link} from "react-router-dom";
 import { Register_User_Action, UserLogInAction, ViewProfileAction } from "../Redux/Actions";
 
 
 
  const Register = (props) => {
+  let navigate = useNavigate();
+   const { RegisterUserFunc } = props
      const [userRegi ,setUserRegi] = useState({
       email : "" ,
       name : "" ,
@@ -19,7 +21,7 @@ import { Register_User_Action, UserLogInAction, ViewProfileAction } from "../Red
        password : ""
      })
 
-     const navigate = useNavigate()
+    //  const navigate = useNavigate()
  const handleChangeregi =(e)=>{
    let newregiuser = {...userRegi};
    newregiuser[e.target.name] = e.target.value 
@@ -27,7 +29,7 @@ import { Register_User_Action, UserLogInAction, ViewProfileAction } from "../Red
  }
  const RegisterUser =(userRegi)=>{
    console.log(props)
-   props.RegisterUserFunc(userRegi);
+   RegisterUserFunc(userRegi);
    console.log(userRegi)
    let dummy = {
     email : "" ,
@@ -47,11 +49,12 @@ import { Register_User_Action, UserLogInAction, ViewProfileAction } from "../Red
  useEffect(()=>{
   console.log(user)
  },[user])
-const userlogin =  (user)=>{
-    props.UserLogInFunc(user);
-    props.ViewProfileFunc()
-  console.log(user)
-}
+// const userlogin = (user)=>{
+ 
+// //  console.log(user);
+// //  navigate("content")
+
+// }
   return (
     <div>
       <div className="container">
@@ -107,9 +110,9 @@ const userlogin =  (user)=>{
                       padding: "2px",
                       width: "250px",
                     }}
-                    onClick={()=>userlogin(user)}
+                    onClick={()=>props.UserLogInFunc(user , ()=> navigate("content"))}
                   >
-                    Log in
+                  Log in
                   </button>
                   
                  
@@ -220,6 +223,7 @@ const userlogin =  (user)=>{
 
 const MSTP =(state)=>{
   return {
+    // tokendata : state.tokendata
     
   }
 }
@@ -227,8 +231,8 @@ const MSTP =(state)=>{
 const MDTP =(dispatch)=>{
   return {
     RegisterUserFunc :  (userRegi)=>dispatch(Register_User_Action(userRegi)),
-    UserLogInFunc : (user)=>dispatch(UserLogInAction(user)) ,
-    ViewProfileFunc : ()=>dispatch(ViewProfileAction())
+    UserLogInFunc : (user ,x)=>dispatch(UserLogInAction(user , x)) ,
+   
   }
 }
 

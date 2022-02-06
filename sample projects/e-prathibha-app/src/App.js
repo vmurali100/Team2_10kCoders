@@ -6,8 +6,12 @@ import  Register  from './Components/Register';
 import { Home } from './Components/Home';
 import Emailverification from './Components/Emailverification';
 import { Profile } from './Components/Profile';
+import  EntryPage  from './Components/EntryPage';
+import { useSelector } from 'react-redux';
+import { Examslist } from './Components/Examslist';
 
 function App() {
+//  const tokendata = useSelector((state)=>state.tokendata)
   return (
     <div className="App">
    
@@ -18,7 +22,10 @@ function App() {
     <Route path="register" element={ <Register/>} />
     <Route path="" element={<Home/>}/>
     <Route path="register/emailverify" element={<Emailverification/>}/>
-    <Route path="register/profile" element={<Profile/>}/>
+    <Route path="profile" element={<Profile/>}/>
+    <Route path="register/content" element={  <EntryPage/>}/>
+    <Route path="content/examslist" element={  <Examslist/>}/>
+
 
   </Routes>
   <Footer/>

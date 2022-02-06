@@ -1,8 +1,8 @@
 import axios from "axios";
 import React from "react";
-import { useSelector } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { EMAIL_VERIFICATION, PROFILE_DATA, SIGN_UP_USER_DATA, USER_LOGIN } from "./ActionTypes";
+import { EMAIL_VERIFICATION, GET_EXAMS_LIST, PROFILE_DATA, SIGN_UP_USER_DATA, USER_LOGIN } from "./ActionTypes";
 
 export const Register_User_Action = (userRegi)=>{
     console.log(userRegi)
@@ -33,28 +33,31 @@ export const Register_User_Action = (userRegi)=>{
 }
 
 
-export const UserLogInAction =(user)=>{
+export const UserLogInAction =(user , x)=>{
     // const tokendata = useSelector((state) => state.tokendata);
-    const navigate = useNavigate();
-    console.log(user)
-    return async (dispatch) => {
+    // let navigate = useNavigate();
+    // console.log(user)
+    return (dispatch) => {
         var bodyFormData = new FormData();
         bodyFormData.append("email", user.email);
         bodyFormData.append("password", user.password);
         var data = bodyFormData;
        var url = "https://e-prathibha.com/apis/login";
       var headers = { "Content-Type": "multipart/form-data" }
-      await axios.post(url , data , headers).then((res) => {
+    axios.post(url , data , headers).then((res) => {
             console.log(res.data);
             alert("succesfully Loggedin")
-         
+        //    navigate("content")
+              x()
            dispatch({
                 type: USER_LOGIN,
                 payload: res.data.data
             })
         }) 
-        navigate("profile")
+        
+       
     }
+    
     
 
 }
@@ -84,17 +87,17 @@ export  const  VerifyEmailAction =(verificationCode)=>{
    
   }
 export const ViewProfileAction =()=>{
-    const tokendata = useSelector((state) => state.tokendata);
-    const navigater = useNavigate();
+    let tokendata = useSelector((state) => state.tokendata);
+    // const navigater = useNavigate();
     var header = {
-        token : tokendata.token,
-        id : tokendata.id
+        tokenu : tokendata.Token,
+        id : tokendata.Id
     }
     var url = "https://e-prathibha.com/apis/profile"
     return async (dispatch)=>{
     await axios.post(url , header ).then(({data})=>{
         console.log(data)
-        navigater("register");
+        // navigater("profile");
         dispatch({
             type : PROFILE_DATA ,
             payload : data
@@ -102,3 +105,34 @@ export const ViewProfileAction =()=>{
     })
     }
 }
+
+ const GetExamsListAction =(x)=>{
+    let tokend = useSelector((state) => state.tokendata);
+console.log(tokend)
+    return async (dispatch) =>{
+      
+        var header = {
+            tokenu : tokend.Token,
+            id : tokend.Id
+        }
+        var body = {
+            "examId" : 12 ,
+            "qno" : 1
+        }
+        var url = "https://e-prathibha.com/apis/test_free_exam" ;
+      await  axios.post(url ,body ,header ).then(({data})=>{
+            console.log(data) ;
+            x()
+            dispatch({
+                type : GET_EXAMS_LIST ,
+                payload : data
+            })
+        })
+    }
+}
+// const MSTP =(state)=>{
+//     return{
+//         tokend : state.tokendata
+//     }
+// }
+export default (GetExamsListAction)
