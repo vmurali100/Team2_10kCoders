@@ -86,18 +86,7 @@ export const Home = (props) => {
                     {/* displaying all the districts and their constistencies */}
                     <div className="col App">
                         <h2 style={{ textDecoration: "underline", color: "grey", fontSize: "25px", marginTop: 50 + "px" }}><em>List of new districts and their Assembly constituencies</em></h2>
-                        {/* {
-                        dist.map((d, i) => {
-                            return (<div>
-                                <h4 key={i}>{d.districtName}</h4>
-                                {
-                                    d.constituencies.map((c, i) => {
-                                        return <p key={c}>{c}</p>
-                                    })
-                                }
-                            </div>)
-                        })
-                    } */}
+                        
                         <table className='table'>
                             {
                                 dist.map((d, i) => {
@@ -106,7 +95,6 @@ export const Home = (props) => {
                                             <th key={i}>{d.districtName}</th>
                                         </tr>
                                         <tr>
-                                            {/* <th key={i}>{d.districtName}</th> */}
                                             {
                                                 d.constituencies.map((c, i) => {
                                                     return <td key={c}>{c}</td>
