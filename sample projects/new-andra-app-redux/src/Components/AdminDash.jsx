@@ -1,27 +1,33 @@
 import React from "react";
+import { connect } from "react-redux";
+import { GetDistrictsListAction, GetUserListAction } from "../Actions";
+import { Link } from "react-router-dom";
 
-const AdminDash =()=>{
-
+const AdminDash =(props)=>{
+ const {GetDistrictsListFunc , getUserListFunc , districtsList ,usersList} = props
 
 
     return (
+      
         <div>
-          <h1>Districts LIST</h1>
+            {console.log(props)}
     
           <div className="container">
             <div className="row">
               <div className="col-3"></div>
               <div className="col-6">
+                <button type="button" onClick={getUserListFunc}>Get Users List</button>
                 <button
                   type="button"
-                  onClick={getDists}
+                  onClick={GetDistrictsListFunc}
                   className="btn btn-primary"
                 >
                   get districts list
                 </button>
                 {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
-                {distlist != null ? (
+                {districtsList != null ? (
                   <table style={{ border: "2px solid", marginTop: "40px" }}>
+                      <h1>Districts LIST</h1>
                     <thead>
                       <tr>
                         <th style={{ border: "2px solid" }}>S.No</th>
@@ -33,7 +39,7 @@ const AdminDash =()=>{
                       </tr>
                     </thead>
                     <tbody>
-                    {distlist.map((d, i) => {
+                    {districtsList.map((d, i) => {
                       return (
                         <tr style={{ border: "2px solid" }}>
                          
@@ -54,14 +60,14 @@ const AdminDash =()=>{
                             {" "}
                             <button
                               type="button"
-                              onClick={() => handleEdit(d.id)}
+                            //   onClick={() => handleEdit(d.id)}
                               className="btn btn-warning"
                             >
                               Edit
                             </button>{" "}
                             <button
                               type="button"
-                              onClick={(i) => handleDelete(d.id)}
+                            //   onClick={(i) => handleDelete(d.id)}
                               className="btn btn-danger"
                             >
                               Delete
@@ -94,4 +100,17 @@ const AdminDash =()=>{
         </div>
       );
     };
+
+    const MSTP =(state)=>{
+        return {
+            districtsList :state.districtsList ,
+            usersList : state.usersList
+        }
+    }
+const MDTP =(dispatch)=>{
+    return{
+       GetDistrictsListFunc : ()=>dispatch(GetDistrictsListAction()),
+       getUserListFunc : ()=>dispatch(GetUserListAction())
+    }
 }
+export default connect(MSTP ,MDTP)(AdminDash)

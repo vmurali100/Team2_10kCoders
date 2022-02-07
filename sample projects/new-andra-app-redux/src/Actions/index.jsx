@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { ADMIN_LOGIN_DATA, GET_CONST_ANSWER, GET_DISTRICTS_DATA, LOGIN_DATA, LOG_OUT_USER, SIGNUP_DATA } from "./Action_Types";
+import { ADMIN_LOGIN_DATA, GET_CONST_ANSWER, GET_DISTRICTS_DATA, GET_USERS_DATA, LOGIN_DATA, LOG_OUT_USER, SIGNUP_DATA } from "./Action_Types";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -108,4 +108,26 @@ export const AdminLogInAction =(admin ,x)=>{
           })
     })
 }
+}
+export const GetDistrictsListAction =()=>{
+  return async (dispatch)=>{
+  await   axios.get("http://localhost:3000/districtslist").then(({ data }) => {
+   console.log(data);
+   dispatch({
+     type : GET_DISTRICTS_DATA ,
+     payload : data
+   })
+  })
+}
+}
+export const GetUserListAction =()=>{
+  return  async (dispatch)=>{
+    await   axios.get("http://localhost:3000/user").then(({ data }) => {
+     console.log(data);
+     dispatch({
+       type : GET_USERS_DATA ,
+       payload : data
+     })
+    })
+  }
 }

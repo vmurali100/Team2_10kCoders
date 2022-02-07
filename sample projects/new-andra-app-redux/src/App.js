@@ -9,6 +9,8 @@ import Register from './Components/Register';
 import {BrowserRouter ,Routes , Route} from 'react-router-dom'
 import  Login  from './Components/Login';
 import Bar from './Components/Bar';
+import Admin from './Components/Admin';
+import AdminDash from './Components/AdminDash';
 
 function App() {
 
@@ -26,8 +28,8 @@ function App() {
           {/* <Route path="" /> */}
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          {/* <Route path="admin" element={<AdminDash />} /> */}
-          {/* <Route path="admindashboard" element={<Admindashboard />}  /> */}
+          <Route path="adminlogin" element={<Admin />} />
+          <Route path="admindashboard" element={<AdminDash />}  />
             {/* <Route path="admindashboard/userslist" element={<UsersList />} /> */}
             {/* <Route path="admindashboard/districtslist" element={<DistrictsList />} /> */}
             {/* <Route path="admindashboard/addnew" element={<AddNewDist />} /> */}
