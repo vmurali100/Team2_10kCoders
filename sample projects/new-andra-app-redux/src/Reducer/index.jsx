@@ -1,4 +1,4 @@
-import { GET_CONST_ANSWER, GET_DISTRICTS_DATA, LOGIN_DATA, SIGNUP_DATA } from "../Actions/Action_Types";
+import { GET_CONST_ANSWER, GET_DISTRICTS_DATA, LOGIN_DATA, LOG_OUT_USER, SIGNUP_DATA } from "../Actions/Action_Types";
 
 const defdata = {
   districtsList: [],
@@ -48,7 +48,11 @@ export const Reducer = (state = defdata, actions) => {
           case GET_CONST_ANSWER :
             let ans ={...state , result : actions.payload}
             console.log(ans)
-          return ans
+          return ans 
+          case LOG_OUT_USER :
+            let logOutuser = {...state , loggedUser : actions.payload}
+            console.log(logOutuser)
+            return logOutuser
     default:
       return state.usersList;
   }

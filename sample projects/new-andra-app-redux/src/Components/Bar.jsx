@@ -1,35 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { SetlogoutUser } from "../Actions";
 
 const Bar = (props)=>{
-    const {admin , loggedUser} = props
-    // const [user ,setUser] = useState({});
-    const [isUserLogged ,setIsUserLogged] = useState(false)
+    const {admin , loggedUser ,setLogoutFunc} = props
+   
 const navigate = useNavigate()
-    // var localUser 
-    // var localAdmin
-//    useEffect(()=>{ 
-//  localUser = JSON.parse(localStorage.getItem("loggedUser")) ;
-//  localAdmin = JSON.parse(localStorage.getItem("loggedAdmin"));
-//    setUser(localUser) 
-//    setAdmin(localAdmin)
-//    console.log(user)
-//    ;},[])
+
   
     const logOut =()=>{
-        // alert("User Logged Out .....!");
-        // localStorage.clear();
-        // navigate("/login");
-        setIsUserLogged(false)
+        alert("User Logged Out .....!");
+       setLogoutFunc()
+      navigate('login')
+    document.getElementById('userbutton').style.display = "none"
     }
-  useEffect(()=>{
-    if(loggedUser){
-        setIsUserLogged(true)
-    }else{
-        setIsUserLogged(false)
-    }
-  },[])
+//   useEffect(()=>{
+//     if(loggedUser){
+//         setIsUserLogged(true)
+//     }else{
+//         setIsUserLogged(false)
+//     }
+//   },[])
  
     return <div>
        
@@ -37,7 +29,7 @@ const navigate = useNavigate()
         <div className="row">
           <div className="col-4"></div>
           <div className="col-2"> </div>
-          <div className="col-6">{isUserLogged && loggedUser !=null ?<><span style={{"marginRight": "10px"}}>{loggedUser.email}</span>  <button type="button" onClick={logOut}>LogOut</button></> : null}
+          <div className="col-6">{ loggedUser !=null ?<><span style={{"marginRight": "10px"}}>{loggedUser.email}</span>  <button type="button" onClick={logOut} id="userbutton">LogOut</button></> : null}
           {admin != null ?<><span style={{"marginRight": "10px"}}>{admin.email}</span>  <button type="button" onClick={logOut}>LogOut</button></> : null} </div>
 
         </div>
@@ -54,7 +46,7 @@ const navigate = useNavigate()
   }
   const MDTP =(dispatch)=>{
     return{
-        
+        setLogoutFunc : ()=> dispatch(SetlogoutUser())
     }
 }
 export default connect(MSTP ,MDTP)(Bar)

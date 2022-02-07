@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { GET_CONST_ANSWER, GET_DISTRICTS_DATA, LOGIN_DATA, SIGNUP_DATA } from "./Action_Types";
+import { GET_CONST_ANSWER, GET_DISTRICTS_DATA, LOGIN_DATA, LOG_OUT_USER, SIGNUP_DATA } from "./Action_Types";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -82,4 +82,11 @@ export const LoginAction =(user ,reg ,hm )=>{
         })
     }
    
+}
+export const SetlogoutUser =(x)=>{
+    return {
+        type : LOG_OUT_USER,
+        payload : {}
+    }
+    
 }
