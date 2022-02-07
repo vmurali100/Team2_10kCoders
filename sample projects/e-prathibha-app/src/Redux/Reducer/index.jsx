@@ -32,7 +32,8 @@ export const Reducer  = (state =initState ,actions) =>{
             case GET_EXAMS_LIST :
                 var arr = [...state];
           arr.push(payload);
-          return arr
+          console.log(arr[1])
+          return arr[1]
         default:
             return state.code
     }

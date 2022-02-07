@@ -29,7 +29,7 @@ useEffect(()=>{
     <Route path="register/emailverify" element={<Emailverification/>}/>
     <Route path="profile" element={<Profile/>}/> 
    <Route path="register/content" element={  <EntryPage/>}/> 
-    <Route path="content/examslist" element={  <Examslist/>}/>
+    <Route path="register/content/examslist" element={  <Examslist/>}/>
 
 
   </Routes>

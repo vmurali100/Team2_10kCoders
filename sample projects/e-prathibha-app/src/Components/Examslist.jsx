@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 const Examslist =(props)=>{
     var {examslist} = props;
     var examslist = examslist.examslist.exams
+    console.log(examslist)
     return (
         <div>
             <center>welcome to Examslist component</center>
@@ -12,7 +13,14 @@ const Examslist =(props)=>{
                 <div className="col-2"></div>
                     <div className="col-8">
                         {examslist.map((e)=>{
-                            
+                            return <div>
+                               <div><h1>{e}</h1>
+                               {e.map((f)=>{
+                                    for (var a in f) {
+                                        <li>{a}</li>
+                                    }
+                                })}</div>
+                            </div>
                         })}
                     </div>
                     <div className="col-2"></div>
