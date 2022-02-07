@@ -14,7 +14,7 @@ export const Home = ()=>{
 
 
     const navigate = useNavigate();
-   useEffect( ()=>{
+   useEffect(()=>{
         var loggedUser =JSON.parse(localStorage.getItem("loggedUser")) ;
         console.log(loggedUser)
         setUser(loggedUser);
