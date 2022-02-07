@@ -15,14 +15,9 @@ const navigate = useNavigate()
       navigate('login')
     document.getElementById('userbutton').style.display = "none"
     }
-//   useEffect(()=>{
-//     if(loggedUser){
-//         setIsUserLogged(true)
-//     }else{
-//         setIsUserLogged(false)
-//     }
-//   },[])
- 
+ const adminPage =()=>{
+     navigate("/adminlogin")
+ }
     return <div>
        
       <div className="container" style={{"marginTop": "10px"}}>
@@ -30,7 +25,8 @@ const navigate = useNavigate()
           <div className="col-4"></div>
           <div className="col-2"> </div>
           <div className="col-6">{ loggedUser !=null ?<><span style={{"marginRight": "10px"}}>{loggedUser.email}</span>  <button type="button" onClick={logOut} id="userbutton">LogOut</button></> : null}
-          {admin != null ?<><span style={{"marginRight": "10px"}}>{admin.email}</span>  <button type="button" onClick={logOut}>LogOut</button></> : null} </div>
+          {admin != null ?<><span style={{"marginRight": "10px"}}>{admin.email}</span>  <button type="button" onClick={logOut}>LogOut</button></> : null}
+          <button type="button" onClick={adminPage}>Admin Login</button> </div>
 
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { GET_CONST_ANSWER, GET_DISTRICTS_DATA, LOGIN_DATA, LOG_OUT_USER, SIGNUP_DATA } from "./Action_Types";
+import { ADMIN_LOGIN_DATA, GET_CONST_ANSWER, GET_DISTRICTS_DATA, LOGIN_DATA, LOG_OUT_USER, SIGNUP_DATA } from "./Action_Types";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -89,4 +89,23 @@ export const SetlogoutUser =(x)=>{
         payload : {}
     }
     
+}
+export const AdminLogInAction =(admin ,x)=>{
+    return async (dispatch) =>{
+       await axios.get("http://localhost:3000/admin").then(({ data }) => {
+           console.log(data);
+           if (
+            admin.email === data.email &&
+            admin.password === data.password
+          ) {
+            x();
+          } else {
+            console.log("you are not registered admin .....!");
+          }
+          dispatch ({
+              type : ADMIN_LOGIN_DATA ,
+              payload : admin
+          })
+    })
+}
 }
