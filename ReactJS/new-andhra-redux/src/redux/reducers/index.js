@@ -1,14 +1,12 @@
 import { Add_District, Delete_All_Districts, Get_All_Districts, Update_All_Districts } from "../actions/actionTypes";
 
-const initialState = {
-
-}
-
-export const districtReducer = (state = initialState,action) => {
+export const districtReducer = (state=[
+    
+] ,action) => {
     switch (action.type) 
     {
         case Get_All_Districts:
-            return state;
+            return action.payload;
 
         case Update_All_Districts:
             return state;
