@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { ADMIN_LOGIN_DATA, GET_CONST_ANSWER, GET_DISTRICTS_DATA, GET_USERS_DATA, LOGIN_DATA, LOG_OUT_USER, SIGNUP_DATA } from "./Action_Types";
+import { ADDNEWDIST, ADMIN_LOGIN_DATA, EDIT_DIST, GET_CONST_ANSWER, GET_DISTRICTS_DATA, GET_USERS_DATA, LOGIN_DATA, LOG_OUT_USER, SIGNUP_DATA } from "./Action_Types";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -99,6 +99,7 @@ export const AdminLogInAction =(admin ,x)=>{
             admin.password === data.password
           ) {
             x();
+            alert(`${admin.email} has sucessfully logged in`)
           } else {
             console.log("you are not registered admin .....!");
           }
@@ -130,4 +131,45 @@ export const GetUserListAction =()=>{
      })
     })
   }
+}
+
+export const HandleEditAction =(d,x)=>{
+  x()
+  return {
+    type :EDIT_DIST ,
+    payload : d
+  }
+ 
+}
+export const UpdateAction=(newd ,id , x)=>{
+  return async (dispatch)=>{
+    await axios.put(`http://localhost:3000/districtslist/${id}` , newd).then(({data})=>{
+      console.log(data)
+    })
+    x()
+    GetDistrictsListAction()
+  }
+}
+export  const  DeleteAction =(id ,x)=>{
+  return async (dispatch)=>{
+    await axios.delete(`http://localhost:3000/districtslist/${id}`).then(({data})=>{
+      console.log(data)
+    })
+    x()
+    GetDistrictsListAction()
+  }
+}
+
+export const AddnewdistAction =(newdist ,x)=>{
+  return async dispatch =>{
+ await  axios.post("http://localhost:3000/districtslist", newdist).then(({ data }) => {
+   console.log(data);
+   dispatch({
+     type :ADDNEWDIST ,
+     payload : data
+   })
+ });
+
+  }
+  x()
 }

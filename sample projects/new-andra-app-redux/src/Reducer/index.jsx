@@ -1,5 +1,6 @@
 import {
   ADMIN_LOGIN_DATA,
+  EDIT_DIST,
   GET_CONST_ANSWER,
   GET_DISTRICTS_DATA,
   GET_USERS_DATA,
@@ -15,6 +16,7 @@ const defdata = {
   loggedUser: {},
   loggedAdmin: {},
   result: " ",
+  editableUser : {}
 };
 
 export const Reducer = (state = defdata, actions) => {
@@ -68,16 +70,19 @@ export const Reducer = (state = defdata, actions) => {
       let loginAdmin = { ...state, loggedAdmin: actions.payload };
       return loginAdmin;
     case GET_DISTRICTS_DATA:
-      let dlist = [...state]
-      dlist.push(actions.payload);
+      let dlist = [...state.districtsList = actions.payload ]
+      // dlist.push(actions.payload);
       console.log(dlist)
       return dlist;
     case GET_USERS_DATA:
       let userslist = [...state.usersList];
       userslist.push(actions.payload);
-
-      return userslist;
-
+        return userslist;
+        case EDIT_DIST :
+             let edituser = {...state.editableUser }
+             edituser = actions.payload
+          return edituser
+ 
     default:
       return state.usersList;
   }

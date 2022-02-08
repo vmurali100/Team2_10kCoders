@@ -69,6 +69,7 @@ const  MSTP =(state)=>{
 const MDTP =(dispatch)=>{
     return {
         AdminLogInFunc : (admin , x)=>dispatch(AdminLogInAction(admin , x))
+      
     }
 }
 

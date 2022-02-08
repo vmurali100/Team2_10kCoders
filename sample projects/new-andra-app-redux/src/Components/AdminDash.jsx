@@ -1,11 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
-import { GetDistrictsListAction, GetUserListAction } from "../Actions";
-import { Link } from "react-router-dom";
+import { DeleteAction, GetDistrictsListAction, GetUserListAction, HandleEditAction } from "../Actions";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const AdminDash =(props)=>{
- const {GetDistrictsListFunc , getUserListFunc , districtsList ,usersList} = props
+  const navigate = useNavigate()
+ const {GetDistrictsListFunc , getUserListFunc , districtsList ,usersList ,handleEdit , deleteFunc} = props
 
+ useEffect(()=>{
+  GetDistrictsListFunc()
+ },[])
 
     return (
       
@@ -19,15 +24,17 @@ const AdminDash =(props)=>{
                 <button type="button" onClick={getUserListFunc}>Get Users List</button>
                 <button
                   type="button"
-                  onClick={GetDistrictsListFunc}
+                  onClick={()=>GetDistrictsListFunc()}
                   className="btn btn-primary"
                 >
                   get districts list
                 </button>
                 {/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */}
+                <h1>Districts LIST</h1>
                 {districtsList != null ? (
+                  
                   <table style={{ border: "2px solid", marginTop: "40px" }}>
-                      <h1>Districts LIST</h1>
+                    
                     <thead>
                       <tr>
                         <th style={{ border: "2px solid" }}>S.No</th>
@@ -60,14 +67,14 @@ const AdminDash =(props)=>{
                             {" "}
                             <button
                               type="button"
-                            //   onClick={() => handleEdit(d.id)}
+                              onClick={() => handleEdit(d , ()=>navigate("edit"))}
                               className="btn btn-warning"
                             >
                               Edit
                             </button>{" "}
                             <button
                               type="button"
-                            //   onClick={(i) => handleDelete(d.id)}
+                              onClick={() => deleteFunc(d.id , ()=>navigate(""))}
                               className="btn btn-danger"
                             >
                               Delete
@@ -85,13 +92,11 @@ const AdminDash =(props)=>{
               <div className="col-3"></div>
             </div>
             <div className="row" style={{ marginTop: "40px" }}>
-              {/* <button>EDIT</button>
-                   <button>DELETE</button> */}
               <div className="col-4"></div>
               <div className="col-4">
                 {" "}
-                <button>
-                  <Link to="/admindashboard/addnew">ADD NEW DIST</Link>
+                <button type="button">
+                  <Link to="addnew">ADD NEW DIST</Link>
                 </button>
               </div>
               <div className="col-4"></div>
@@ -103,14 +108,16 @@ const AdminDash =(props)=>{
 
     const MSTP =(state)=>{
         return {
-            districtsList :state.districtsList ,
-            usersList : state.usersList
+            districtsList :state ,
+            usersList : state
         }
     }
 const MDTP =(dispatch)=>{
     return{
        GetDistrictsListFunc : ()=>dispatch(GetDistrictsListAction()),
-       getUserListFunc : ()=>dispatch(GetUserListAction())
+       getUserListFunc : ()=>dispatch(GetUserListAction()),
+       handleEdit : (d , x)=>dispatch(HandleEditAction(d , x)),
+       deleteFunc : (id , x)=>dispatch(DeleteAction(id , x))
     }
 }
 export default connect(MSTP ,MDTP)(AdminDash)

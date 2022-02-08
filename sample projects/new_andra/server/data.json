@@ -82,17 +82,15 @@
       ]
     },
     {
-      "id": 6,
       "dist": "Anakapalli",
       "constiuencies": [
-        "payakaraopeta",
-        "narsipatnam",
         "chodavaram",
         "madugula",
         "anakapalli",
         "yalamanchili",
         "pendurthy"
-      ]
+      ],
+      "id": 6
     },
     {
       "id": 7,
@@ -208,59 +206,6 @@
         "parchuru",
         "addanki",
         "chirala"
-      ]
-    },
-    {
-      "id": 16,
-      "dist": "Palnadu",
-      "constiuencies": [
-        "pedakurapadu",
-        "gurajala",
-        "macharla",
-        "chilkaluripeta",
-        "narsaraopeta",
-        "vinukonda",
-        "sattenapalle"
-      ]
-    },
-    {
-      "id": 17,
-      "dist": "Prakasam",
-      "constiuencies": [
-        "yarragondapalem",
-        "giddaluru",
-        "markapuram",
-        "santhanuthalapadu",
-        "ongole",
-        "kondepi",
-        "darshi",
-        "kanigir"
-      ]
-    },
-    {
-      "id": 18,
-      "dist": "Sri Pottisriramulu Nellore",
-      "constiuencies": [
-        "nellore rural",
-        "sarvepalli",
-        "atmakuru",
-        "udayagiri",
-        "kavali",
-        "kandukuru"
-      ]
-    },
-    {
-      "id": 19,
-      "dist": "Kurnool",
-      "constiuencies": [
-        "panyam",
-        "kodumuru",
-        "kurnool",
-        "pratikonda",
-        "emmiganur",
-        "mantralayam",
-        "adoni",
-        "alur"
       ]
     }
   ]

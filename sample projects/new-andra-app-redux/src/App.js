@@ -11,6 +11,8 @@ import  Login  from './Components/Login';
 import Bar from './Components/Bar';
 import Admin from './Components/Admin';
 import AdminDash from './Components/AdminDash';
+import Edit from './Components/Edit';
+import Addnewdist from './Components/Addnewdist';
 
 function App() {
 
@@ -30,9 +32,10 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="adminlogin" element={<Admin />} />
           <Route path="admindashboard" element={<AdminDash />}  />
+          <Route path="admindashboard/edit" element={<Edit />}  />
             {/* <Route path="admindashboard/userslist" element={<UsersList />} /> */}
             {/* <Route path="admindashboard/districtslist" element={<DistrictsList />} /> */}
-            {/* <Route path="admindashboard/addnew" element={<AddNewDist />} /> */}
+            <Route path="admindashboard/addnew" element={<Addnewdist />} />
             {/* <Route path="admindashboard/districtslist/edit" element={ <Edit/>}/> */}
           </Routes>
       </BrowserRouter>
