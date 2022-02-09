@@ -8,6 +8,7 @@ import {
   PROFILE_DATA,
   SIGN_UP_USER_DATA,
   USER_LOGIN,
+  USER_LOG_OUT,
 } from "./ActionTypes";
 
 export const Register_User_Action = (userRegi) => {
@@ -48,11 +49,11 @@ export const UserLogInAction = (user, x) => {
     axios.post(url, data, headers).then((res) => {
       console.log(res.data);
       alert("succesfully Loggedin");
-      localStorage.setItem("loggeduser" , JSON.stringify(user))
-      
+      // localStorage.setItem("loggeduser" , JSON.stringify(user))
+      let logindetails = [res.data.data , user]
       dispatch({
         type: USER_LOGIN,
-        payload: res.data.data,
+        payload: logindetails,
       });
       x();
     });
@@ -96,13 +97,15 @@ export const ViewProfileAction = (tokendata, x) => {
       tokenu : Token ,
       server_key : "3w99V63pW7tJ7vavGXtCKo8cp"}}).then(({ data }) => {
       console.log(data);
-      x();
       dispatch({
         type: PROFILE_DATA,
         payload: data.data,
       });
+     
     });
+   
   };
+  x();
 };
 
 const GetExamsListAction = (tokendata,x) => {
@@ -142,3 +145,11 @@ const GetExamsListAction = (tokendata,x) => {
 //     }
 // }
 export default GetExamsListAction;
+
+
+export const UserLogoutAction=()=>{
+  return {
+     type : USER_LOG_OUT ,
+     payload : {}
+  }
+}

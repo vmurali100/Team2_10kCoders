@@ -29,7 +29,7 @@ const Profile =(props)=>{
 }
 const MSTP =(state)=>{
     return {
-     profiledata : state
+     profiledata : state.profiledata
     }
 }
 export default  connect(MSTP)(Profile)

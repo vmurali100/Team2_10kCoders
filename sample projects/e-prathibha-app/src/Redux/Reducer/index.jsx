@@ -1,5 +1,5 @@
 import React from "react";
-import { SIGN_UP_USER_DATA ,EMAIL_VERIFICATION , USER_LOGIN, PROFILE_DATA, GET_EXAMS_LIST} from "../Actions/ActionTypes";
+import { SIGN_UP_USER_DATA ,EMAIL_VERIFICATION , USER_LOGIN, PROFILE_DATA, GET_EXAMS_LIST, USER_LOG_OUT} from "../Actions/ActionTypes";
 
 const initState = {
     tokendata : [] ,
@@ -23,7 +23,7 @@ export const Reducer  = (state =initState ,actions) =>{
             var newarr = [...state]
             newarr.push(payload)
             console.log(newarr)
-            return newarr
+            return newarr[0]
         case PROFILE_DATA :
             var newodj = {...state , profiledata: payload};
 
@@ -33,7 +33,10 @@ export const Reducer  = (state =initState ,actions) =>{
                 var arr = [...state];
           arr.push(payload);
           console.log(arr[1])
-          return arr[1]
+          return arr[1] 
+          case USER_LOG_OUT :
+              state.profiledata = payload
+              return state.profiledata
         default:
             return state.code
     }

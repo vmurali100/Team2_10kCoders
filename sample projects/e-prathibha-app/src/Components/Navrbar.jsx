@@ -1,15 +1,23 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import { connect } from "react-redux";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "../App.css";
 import "../index.css";
-export const Navbar = () => {
+import { UserLogoutAction } from "../Redux/Actions";
+
+const Navbar = (props) => {
 const [loggeduser ,setLoggeduser] = useState({});
 const navigate =useNavigate()
 
+console.log(props)
 useEffect(()=>{
- setLoggeduser(JSON.parse(localStorage.getItem("loggeduser")))
-},[])
+//  setLoggeduser(JSON.parse(localStorage.getItem("loggeduser")))
+
+},[]);
+const logOutUser =()=>{
+  props.logOutFunc()
+}
   return (
     <div>
       <div className="container-fluid">
@@ -83,10 +91,11 @@ useEffect(()=>{
                         >
                           <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                         </svg>{" "}
-                        { loggeduser !=null ? loggeduser.email : <Link to="register">Login/Register</Link>}
+                        { props.loggeduser[1] !=null ? props.loggeduser[1].email : <Link to="register">Login/Register</Link>}
+                       
                       </a>
                     </li>
-                   { loggeduser !=null && <li><button onClick={()=> localStorage.clear()/ navigate('')}>LogOut</button></li> }
+                   { props.loggeduser[1] !=null  && <li><button onClick={()=> logOutUser() / navigate('')}>LogOut</button></li> }
                   </ul>
                 </div>
               </div>
@@ -97,6 +106,17 @@ useEffect(()=>{
     </div>
   );
 };
+const MSTP =(state)=>{
+  return {
+      loggeduser : state
+  }
+}
+const MDTP =(dispatch)=>{
+  return {
+    logOutFunc : ()=>dispatch(UserLogoutAction())
+  }
+}
+export default connect(MSTP ,MDTP)(Navbar);
 
 export const ContactHeader = () => {
   return (
@@ -159,6 +179,8 @@ export const ContactHeader = () => {
     </div>
   );
 };
+
+
 
 export const Footer = () => {
   return (

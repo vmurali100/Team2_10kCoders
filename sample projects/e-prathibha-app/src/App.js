@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { ContactHeader, Footer, Navbar } from './Components/Navrbar';
+import Navbar, { ContactHeader, Footer } from './Components/Navrbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import  Register  from './Components/Register';
 import { Home } from './Components/Home';

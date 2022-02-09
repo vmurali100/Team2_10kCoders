@@ -110,7 +110,7 @@ import { Register_User_Action, UserLogInAction, ViewProfileAction } from "../Red
                       padding: "2px",
                       width: "250px",
                     }}
-                    onClick={()=>props.UserLogInFunc(user , ()=> navigate("content") )}
+                    onClick={()=>props.UserLogInFunc(user, ()=> navigate("content"))}
                   >
                   Log in
                   </button>
