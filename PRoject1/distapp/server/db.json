@@ -25,15 +25,6 @@
   ],
   "districts": [
     {
-      "districtName": "Alluri Sitha RamaRaju",
-      "constituencies": [
-        "alluri sitha rama raju",
-        "padapa",
-        "podhuturu"
-      ],
-      "id": 4
-    },
-    {
       "districtName": "Anakapalli",
       "constituencies": [
         "kovvuru",

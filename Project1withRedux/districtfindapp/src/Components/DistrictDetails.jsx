@@ -7,6 +7,7 @@ export const DistrictDetails = () => {
     let navigate =  useNavigate()
     const[isLoggedIn,setisLoggedIn] = useState(false)
     const [constval, setconstval] = useState("");
+    const [districtfinder, setdistrictfinder] = useState("");
     useEffect(() => {
         let user = JSON.parse(localStorage.getItem("LoggedInUserLocalStorage"))
         if(user){
@@ -25,7 +26,9 @@ export const DistrictDetails = () => {
         console.log("const",constval);
         if(isLoggedIn){
             axios.get("http://localhost:3000/districts").then((res)=>{
-                console.log("Coming to This part");
+              let dist = res.data.find(d=>d.constituencies.indexOf(constval) > -1)
+              setdistrictfinder(dist)
+              
             })
         }
         else{
@@ -35,15 +38,24 @@ export const DistrictDetails = () => {
     }
 
   return <div>
-    <form>
+   <div className="container">
+     <div className="row">
+       <div className="col">
+       <form>
       <div class="form-group" style={{padding:"0px 50px 0px 50px"}}>
         <label >Enter Constituency</label>
-        <input type="email" className="form-control" value={constval} onChange={(e)=>handleChange(e)} />
+        <input  className="form-control" value={constval} onChange={(e)=>handleChange(e)} />
         
       </div>
       
       <button type="button" className="btn btn-primary" onClick={handleSubmit}>Find District</button>
     </form>
+       </div>
+       <div className="col">
+         {districtfinder&& <h2>Your District Name is :{districtfinder.districtName}</h2>}
+       </div>
+     </div>
+   </div>
       
   </div>;
 };

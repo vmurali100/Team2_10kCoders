@@ -9,6 +9,7 @@ import { Admin } from './Components/Admin';
 import { DistrictDetails } from './Components/DistrictDetails';
 
 
+
 function App() {
   return (
     <div>
@@ -19,6 +20,7 @@ function App() {
           <Route path="login" element={<LogIn />} />
           <Route path="register" element={<Register />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="districts" element={<Districts/>} />
         </Routes>
       </div>
     </div>
