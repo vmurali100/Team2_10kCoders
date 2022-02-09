@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 export const UsersList = ()=>{
     const [userslist , setUserslist] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:3000/user").then(({data})=>{
+        axios.get("http://localhost:3000/users").then(({data})=>{
             setUserslist(data) ;
             console.log(data)
            

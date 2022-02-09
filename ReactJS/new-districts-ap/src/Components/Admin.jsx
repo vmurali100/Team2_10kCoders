@@ -276,7 +276,7 @@ export const AddNewDist = () => {
     var addnewone = { ...addnew , constiuencies};
     // Object.assign(addnewone, constiClone)
     axios
-      .post("http://localhost:3000/districtslist", addnewone)
+      .post("http://localhost:3000/admin", addnewone)
       .then(({ data }) => {
         console.log(data);
       });
@@ -390,10 +390,10 @@ const handlechange2 = (e) => {
   }
   console.log(newd)
   console.log(id)
-   axios.put(`http://localhost:3000/districtslist/${id}` , newd).then(({data})=>{
+   axios.put(`http://localhost:3000/admin${id}` , newd).then(({data})=>{
      console.log(data)
    });
-   navigate("/admindashboard/districtslist")
+   navigate("/admin/districts")
   }
  
   return <div>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { connect } from "react-redux";
+import { SignupAction } from "../Actions";
 
-export const SignUp = ()=>{
+const Register = (props)=>{
     const [ user , setUser]  =  useState({
         email : "" ,
          password : "" ,
@@ -13,16 +15,7 @@ export const SignUp = ()=>{
         newuser[e.target.name] = e.target.value ;
        setUser(newuser);
     } ;
-    const registerUser = async(e)=>{
-       
-        console.log(user)
-       
-        axios.post("http://localhost:3000/users" , user).then((res)=> console.log(res.data , user));
-    
-        alert("Registration succesfull ....!")  
-        navigate("/login") 
-    
-    }
+   
     return <div>
         <div className="container" style={{"marginTop" : "80px"}}>
             <div className="row">
@@ -41,7 +34,7 @@ export const SignUp = ()=>{
     <input type="password" class="form-control" value={user.password} onChange={(e)=>{handlechange(e)}} name="password" />
   </div>
   
-  <button type="button" class="btn btn-primary" onClick={registerUser}>Sign Up</button>
+  <button type="button" class="btn btn-primary" onClick={()=>props.signupFunc(user , ()=>navigate("/login") )}>Sign Up</button>
   </form>
                 </div>
                 <div className="col-4"></div>
@@ -49,3 +42,16 @@ export const SignUp = ()=>{
         </div>
     </div>
 }
+const MSTP =(state)=>{
+    return {
+        
+    }
+}
+const MDTP =(dispatch)=>{
+    return {
+        signupFunc : (user ,x)=>dispatch(SignupAction(user ,x)),
+        // loginFunc : ()=>dispatch(LoginAction())
+    }
+}
+
+export default  connect(MSTP , MDTP )(Register)

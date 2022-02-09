@@ -27,7 +27,7 @@ export const Home = ()=>{
    const getdistrict = ()=>{
         console.log(input) ;
      if(isLoggedIn){
-        axios.get('http://localhost:3000/districtslist').then((res)=>{
+        axios.get('http://localhost:3000').then((res)=>{
             console.log(res.data)
             // let data = res.data
           let dist =  res.data.find(d=>d.constiuencies.indexOf(input) > -1) ;

@@ -59,7 +59,7 @@ alert("Login successfull......!")
 }
   const getuserprom =()=>{
      return new Promise ((resolve ,reject)=> {
-      axios.get('http://localhost:3000/user').then(res=>{
+      axios.get('http://localhost:3000/users').then(res=>{
         resolve( res.data)
         //  setUseres(res.data) 
      });

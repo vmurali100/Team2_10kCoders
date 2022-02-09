@@ -1,233 +1,233 @@
 {
-    "admin":{
-        "email":"ntr@gmail.com",
-        "password":"8499088977"
-    },
-    "users": [
-        {
-            "email":"nidadavolusrikanth@gmail.com",
-            "password":"8499088977",
-            "id":1
-        },
-        {
-            "email":"satyasrikanthnidadavolu999@gmail.com",
-            "password":"nandhan@9",
-            "id":3
-        },
-        {
-            "email":"bheemshankernidadavolu999@gmail.com",
-            "password":"Hanuman@9",
-            "id":4
-        }
-    ],
-    "districts": [
-        {
-            "districtName": "SRIKAKULAM",
-            "constituencies": [
-                "ichapuram",
-                "amadalavalasa",
-                "palasa",
-                "tekkali",
-                "kothuru",
-                "vunukuru",
-                "palakonda",
-                "etcherla",
-                "srikakulam"
-            ]
-        },
-        {
-            "districtName": "VIZIANAGARAM",
-            "constituencies": [
-                "naguru",
-                "prabathipuram",
-                "saluru",
-                "bobbili",
-                "therlam",
-                "cheepurupalli",
-                "gajapathinagaram",
-                "vizianagaram",
-                "sathivada",
-                "bhogapuram",
-                "uttarapalli",
-                "srungavarapupeta"
-            ]
-        },
-        {
-            "districtName": "EAST-GODAVARI",
-            "constituencies": [
-                "yellavaram",
-                "burugupudi",
-                "rajahmundry",
-                "kadiam",
-                "jaggampeta",
-                "peddapuram",
-                "prathipadu",
-                "tuni",
-                "pitapuram",
-                "sampara",
-                "kakinada",
-                "tallarevu",
-                "anaparthi",
-                "ramchandrapuram"
-            ]
-        },
-        {
-            "districtName": "WEST-GODAVARI",
-            "constituencies": [
-                "narasapur",
-                "pallakollu",
-                "achanta",
-                "bhimavaram",
-                "undi",
-                "penugonda",
-                "tanuku",
-                "attili",
-                "tadepalligudem",
-                "ungutur",
-                "dendulur",
-                "eluru",
-                "gopalapuram",
-                "kovvur",
-                "polavaram",
-                "chintalapudi"
-            ]
-        },
-        {
-            "districtName": "KRISHNA",
-            "constituencies": [
-                "jaggayapeta",
-                "nandigama",
-                "vijayawada west",
-                "vijayawada east",
-                "kankipadu",
-                "mylavaram",
-                "tiruvuru",
-                "nuzvid",
-                "gannavaram",
-                "vuyyur",
-                "gudivada",
-                "mudenepalli",
-                "kaikalur",
-                "malleswaram",
-                "bandar",
-                "nidmolu",
-                "avanigadda"
-            ]
-        },
-        {
-            "districtName": "GUNTUR",
-            "constituencies": [
-                "kuchinapudi",
-                "repelle",
-                "vemur",
-                "duggirala",
-                "tenali",
-                "ponnur",
-                "bapatla",
-                "prathipa",
-                "guntur-1",
-                "guntur-2",
-                "mangalagiri",
-                "tadikonda",
-                "sattenapalli",
-                "peddakurapadu",
-                "gurzala",
-                "macherla",
-                "vinukonda",
-                "nasaraopeta",
-                "chilakaluripeta"
-            ]
-        },
-        {
-            "districtName": "PRAKASAM",
-            "constituencies": [
-                "yerragondapalem",
-                "darsi",
-                "parchur",
-                "addanki",
-                "chirala",
-                "santhanuthalapadu",
-                "ongole",
-                "kandukur",
-                "kondapi",
-                "markapuram",
-                "giddalur",
-                "kanigiri"
-               
-            ]
-        },{
-            "districtName": "KARIMNAGAR",
-            "constituencies": [
-                "manthani",
-                "peddapalli",
-                "mynapadam",
-                "huzuravad",
-                "kamalapur",
-                "indurthi",
-                "karimnagar",
-                "choppadandi",
-                "jagtial",
-                "buggaram",
-                "metpalli",
-                "sircilla",
-                "narella"
-                
-               
-            ]
-        },
-        {
-            "districtName": "WARANGAL",
-            "constituencies": [
-                "cheriyal",
-                "jangaon",
-                "chennur",
-                "dornakal",
-                "mahububabad",
-                "narasampeta",
-                "wardhanapet",
-                "choppadandi",
-                "ghanpur",
-                "warangal",
-                "hanamkonda",
-                "chyampeta",
-                "parkal",
-                "mulug"
-                
-            ]
-        },
-        {
-            "districtName": "KHAMMAM",
-            "constituencies": [
-                "bhadrachalam",
-                "burgampahad",
-                "kothagudem",
-                "sathupalli",
-                "madhira",
-                "palair",
-                "khammam",
-                "shujatnagar",
-                "yellandu"
-               
-            ]
-        },
-        {
-            "districtName": "NALGONDA",
-            "constituencies": [
-                "tungaturthi",
-                "suryapet",
-                "kodad",
-                "miryalguda",
-                "chlakurthi",
-                "nakerkal",
-                "nalgonda",
-                "ramanapet",
-                "alair",
-                "bhongir",
-                "mungode",
-                "deverkonda"
-               
-            ]
+  "admin":[
 
-        }
-    ]
+  ] 
+    
+  ,
+  "users": [
+    {
+      "email": "nidadavolusrikanth@gmail.com",
+      "password": "8499088977",
+      "id": 1
+    },
+    {
+      "email": "satyasrikanthnidadavolu999@gmail.com",
+      "password": "nandhan@9",
+      "id": 3
+    },
+    {
+      "email": "bheemshankernidadavolu999@gmail.com",
+      "password": "Hanuman@9",
+      "id": 4
+    },
+    {
+      "email": "nidadavolusrikanth@gmail.com",
+      "password": "8499088977",
+      "id": 5
+    }
+  ],
+  "districts": [
+    {
+      "district": "SRIKAKULAM",
+      "constiuencies": [
+        "ichapuram",
+        "amadalavalasa",
+        "palasa",
+        "tekkali",
+        "kothuru",
+        "vunukuru",
+        "palakonda",
+        "etcherla",
+        "srikakulam"
+      ]
+    },
+    {
+      "district": "VIZIANAGARAM",
+      "constiuencies": [
+        "naguru",
+        "prabathipuram",
+        "saluru",
+        "bobbili",
+        "therlam",
+        "cheepurupalli",
+        "gajapathinagaram",
+        "vizianagaram",
+        "sathivada",
+        "bhogapuram",
+        "uttarapalli",
+        "srungavarapupeta"
+      ]
+    },
+    {
+      "district": "EAST-GODAVARI",
+      "constiuencies": [
+        "yellavaram",
+        "burugupudi",
+        "rajahmundry",
+        "kadiam",
+        "jaggampeta",
+        "peddapuram",
+        "prathipadu",
+        "tuni",
+        "pitapuram",
+        "sampara",
+        "kakinada",
+        "tallarevu",
+        "anaparthi",
+        "ramchandrapuram"
+      ]
+    },
+    {
+      "district": "WEST-GODAVARI",
+      "constiuencies": [
+        "narasapur",
+        "pallakollu",
+        "achanta",
+        "bhimavaram",
+        "undi",
+        "penugonda",
+        "tanuku",
+        "attili",
+        "tadepalligudem",
+        "ungutur",
+        "dendulur",
+        "eluru",
+        "gopalapuram",
+        "kovvur",
+        "polavaram",
+        "chintalapudi"
+      ]
+    },
+    {
+      "district": "KRISHNA",
+      "constiuencies": [
+        "jaggayapeta",
+        "nandigama",
+        "vijayawada west",
+        "vijayawada east",
+        "kankipadu",
+        "mylavaram",
+        "tiruvuru",
+        "nuzvid",
+        "gannavaram",
+        "vuyyur",
+        "gudivada",
+        "mudenepalli",
+        "kaikalur",
+        "malleswaram",
+        "bandar",
+        "nidmolu",
+        "avanigadda"
+      ]
+    },
+    {
+      "district": "GUNTUR",
+      "constiuencies": [
+        "kuchinapudi",
+        "repelle",
+        "vemur",
+        "duggirala",
+        "tenali",
+        "ponnur",
+        "bapatla",
+        "prathipa",
+        "guntur-1",
+        "guntur-2",
+        "mangalagiri",
+        "tadikonda",
+        "sattenapalli",
+        "peddakurapadu",
+        "gurzala",
+        "macherla",
+        "vinukonda",
+        "nasaraopeta",
+        "chilakaluripeta"
+      ]
+    },
+    {
+      "district": "PRAKASAM",
+      "constiuencies": [
+        "yerragondapalem",
+        "darsi",
+        "parchur",
+        "addanki",
+        "chirala",
+        "santhanuthalapadu",
+        "ongole",
+        "kandukur",
+        "kondapi",
+        "markapuram",
+        "giddalur",
+        "kanigiri"
+      ]
+    },
+    {
+      "district": "KARIMNAGAR",
+      "constiuencies": [
+        "manthani",
+        "peddapalli",
+        "mynapadam",
+        "huzuravad",
+        "kamalapur",
+        "indurthi",
+        "karimnagar",
+        "choppadandi",
+        "jagtial",
+        "buggaram",
+        "metpalli",
+        "sircilla",
+        "narella"
+      ]
+    },
+    {
+      "district": "WARANGAL",
+      "constiuencies": [
+        "cheriyal",
+        "jangaon",
+        "chennur",
+        "dornakal",
+        "mahububabad",
+        "narasampeta",
+        "wardhanapet",
+        "choppadandi",
+        "ghanpur",
+        "warangal",
+        "hanamkonda",
+        "chyampeta",
+        "parkal",
+        "mulug"
+      ]
+    },
+    {
+      "district": "KHAMMAM",
+      "constiuencies": [
+        "bhadrachalam",
+        "burgampahad",
+        "kothagudem",
+        "sathupalli",
+        "madhira",
+        "palair",
+        "khammam",
+        "shujatnagar",
+        "yellandu"
+      ]
+    },
+    {
+      "district": "NALGONDA",
+      "constiuencies": [
+        "tungaturthi",
+        "suryapet",
+        "kodad",
+        "miryalguda",
+        "chlakurthi",
+        "nakerkal",
+        "nalgonda",
+        "ramanapet",
+        "alair",
+        "bhongir",
+        "mungode",
+        "deverkonda"
+      ]
+    }
+  ]
 }
