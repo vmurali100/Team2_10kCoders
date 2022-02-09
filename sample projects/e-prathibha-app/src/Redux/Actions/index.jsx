@@ -7,6 +7,7 @@ import {
   GET_EXAMS_LIST,
   PROFILE_DATA,
   SIGN_UP_USER_DATA,
+  START_EXAM,
   USER_LOGIN,
   USER_LOG_OUT,
 } from "./ActionTypes";
@@ -103,9 +104,9 @@ export const ViewProfileAction = (tokendata, x) => {
       });
      
     });
-   
+    x();
   };
-  x();
+
 };
 
 const GetExamsListAction = (tokendata,x) => {
@@ -126,17 +127,17 @@ const GetExamsListAction = (tokendata,x) => {
       examId: 12,
       qno: 1,
     }}, {headers :{
-      tokenu: tokendata[0].Token,
-      id: tokendata[0].Id,
+      tokenu: tokendata.Token,
+      id: tokendata.Id,
       server_key : "3w99V63pW7tJ7vavGXtCKo8cp" ,
     }}).then(({ data }) => {
       console.log(data);
-      x();
       dispatch({
         type: GET_EXAMS_LIST,
         payload: data.data,
       });
     });
+    x();
   };
 };
 // const MSTP =(state)=>{
@@ -152,4 +153,21 @@ export const UserLogoutAction=()=>{
      type : USER_LOG_OUT ,
      payload : {}
   }
+}
+export const StartExamAction =(tokendata , x)=>{
+  var url = "https://e-prathibha.com/apis/start_exam_new?examId=12"
+  return async(dispatch)=>{
+   await axios.post(url ,{headers :{
+    tokenu: tokendata.Token,
+    id: tokendata.Id,
+    server_key : "3w99V63pW7tJ7vavGXtCKo8cp" ,
+  }}).then(({ data }) => {
+    console.log(data);
+    dispatch({
+      type: START_EXAM,
+      payload: data.data,
+    });
+  })
+}
+x()
 }

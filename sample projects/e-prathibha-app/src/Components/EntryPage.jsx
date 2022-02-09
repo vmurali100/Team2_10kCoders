@@ -27,7 +27,7 @@ useEffect(()=>{
                 <div className="row">
                     <div className="col-4"></div>
                     <div className="col-4">
-                    <button type="button" onClick={()=>(GetExamsListFunc( tokendata, ()=> navigate("examslist")))}>GET EXMAS LIST</button>
+                    <button type="button" onClick={()=>(GetExamsListFunc( tokendata[0], ()=> navigate("/examslist")))}>GET EXMAS LIST</button>
                   
                     </div>
                     <div className="col-4">

@@ -10,6 +10,7 @@ import  EntryPage  from './Components/EntryPage';
 import { useSelector } from 'react-redux';
 import  Examslist  from './Components/Examslist';
 import { useEffect, useState } from 'react';
+import { Startexam } from './Components/Startexam';
 
 function App() {
 //  const tokendata = useSelector((state)=>state.tokendata)
@@ -27,9 +28,10 @@ useEffect(()=>{
      <Route path="register" element={loggeduser !=null ? "": <Register/>} />
     <Route path="" element={loggeduser !=null ? <EntryPage/> && <Home/> : <Home/>}/>
     <Route path="register/emailverify" element={<Emailverification/>}/>
-    <Route path="profile" element={<Profile/>}/> 
+    <Route path="/profile" element={<Profile/>}/> 
    <Route path="register/content" element={  <EntryPage/>}/> 
-    <Route path="content/examslist" element={  <Examslist/>}/>
+    <Route path="/examslist" element={  <Examslist/>}/>
+    <Route path="examslist/startexam" element={  <Startexam/>}/>
 
 
   </Routes>

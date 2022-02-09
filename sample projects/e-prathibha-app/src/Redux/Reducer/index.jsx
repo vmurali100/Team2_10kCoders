@@ -32,8 +32,8 @@ export const Reducer  = (state =initState ,actions) =>{
             case GET_EXAMS_LIST :
                 var arr = [...state];
           arr.push(payload);
-          console.log(arr[1])
-          return arr[1] 
+          console.log(arr)
+          return arr 
           case USER_LOG_OUT :
               state.profiledata = payload
               return state.profiledata

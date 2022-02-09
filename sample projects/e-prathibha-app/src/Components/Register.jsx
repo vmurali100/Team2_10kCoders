@@ -7,7 +7,7 @@ import { Register_User_Action, UserLogInAction, ViewProfileAction } from "../Red
 
  const Register = (props) => {
   let navigate = useNavigate();
-   const { RegisterUserFunc } = props
+   const { RegisterUserFunc , UserLogInFunc } = props
      const [userRegi ,setUserRegi] = useState({
       email : "" ,
       name : "" ,
@@ -110,7 +110,7 @@ import { Register_User_Action, UserLogInAction, ViewProfileAction } from "../Red
                       padding: "2px",
                       width: "250px",
                     }}
-                    onClick={()=>props.UserLogInFunc(user, ()=> navigate("content"))}
+                    onClick={()=>UserLogInFunc(user, ()=> navigate("content"))}
                   >
                   Log in
                   </button>
