@@ -50,15 +50,6 @@
       "id": 8
     },
     {
-      "districtName": "West Godavari",
-      "constituencies": [
-        "Narsapuram",
-        "Palkollu",
-        "Bhimavaram"
-      ],
-      "id": 9
-    },
-    {
       "districtName": "Krishna",
       "constituencies": [
         "Vijayawada",
@@ -74,6 +65,15 @@
         "Chepurupalli"
       ],
       "id": 11
+    },
+    {
+      "districtName": "WestGoadavari",
+      "constituencies": [
+        "Narsapuram",
+        "Palkollu",
+        "Bhimavaram"
+      ],
+      "id": 12
     }
   ]
 }

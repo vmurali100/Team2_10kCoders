@@ -1,10 +1,14 @@
 import React,{useEffect,useState} from 'react';
 import { connect, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { deleteDistrictAction, getAllDistictsAction, updateDistrictAction } from '../Redux/actions';
+import { addDistrictAction, deleteDistrictAction, getAllDistictsAction, updateDistrictAction } from '../Redux/actions';
 
-const Districts = ({districts,getAllDistricts,deleteDistrict,updateDistrict}) => {
+const Districts = ({districts,getAllDistricts,deleteDistrict,updateDistrict,addDistrict}) => {
+  
+    // i used distvals for Updating
     const [distvals, setdistvals] = useState({districtName:"",constituencies:[],id:""});
+    const [addnewdistrict, setaddnewdistrict] = useState(false);
+    const [addnewdistvals, setaddnewdistvals] = useState({districtName:"",constituencies:[]});
 
     let navigate = useNavigate()
     let dispatch = useDispatch()
@@ -24,7 +28,7 @@ const Districts = ({districts,getAllDistricts,deleteDistrict,updateDistrict}) =>
           newval[e.target.name]= document.getElementById("constituencies").value.split(",")
           setdistvals(newval)
         }
-       if(e.target.name="districtName"){
+       if(e.target.name=="districtName"){
           newval[e.target.name] =document.getElementById("districtName").value
           setdistvals(newval)
         }
@@ -34,6 +38,23 @@ const Districts = ({districts,getAllDistricts,deleteDistrict,updateDistrict}) =>
         }
       }
 
+      const handleDistrictAdding = ()=>{
+        setaddnewdistrict(true)
+      }
+       const handleChangeadd = (e)=>{
+        let newval = {...addnewdistvals}
+        if(e.target.name=="constituencies"){
+          newval[e.target.name] =  document.getElementById("constituencies1").value.split(",")
+          setaddnewdistvals(newval)
+        }
+        if(e.target.name=="districtName"){
+          newval[e.target.name] = document.getElementById("districtName1").value
+          setaddnewdistvals(newval)
+        }
+       }
+       const handleAdding=()=>{
+         console.log(addnewdistvals);
+       }
   return <div>
       <h2>This is District app</h2>
      <div className="container">
@@ -88,6 +109,28 @@ const Districts = ({districts,getAllDistricts,deleteDistrict,updateDistrict}) =>
          </div>
        </div>
      </div>
+    <div className="container">
+      <div className="row">
+        <div className="col"> <button className="btn btn-primary"  onClick={handleDistrictAdding}>AddDistrict</button></div>
+        <div className="col"></div>
+      </div>
+    </div>
+
+    {/* Adding new District Form */}
+     <div> {addnewdistrict &&
+      <form style={{padding:"0px 100px 0px 100px"}}>
+      <div class="mb-3">
+        <label >DistrictName</label>
+        <input  className="form-control" id="districtName1" onChange={(e)=>handleChangeadd(e)} name='districtName' />
+      </div>
+      <div class="mb-3">
+        <label >Constituencies</label>
+        <input type="text" className="form-control" id='constituencies1' onChange={(e)=>handleChangeadd(e)}  name='constituencies'/>
+      </div>
+     
+      <button type="button" class="btn btn-primary" onClick={()=>{addDistrict(addnewdistvals)}}>Add New District</button>
+    </form>
+     }</div>
   </div>;
   
 };
@@ -100,7 +143,8 @@ const mapDispatchToProps = ()=>{
     return {
        getAllDistricts:getAllDistictsAction,
        deleteDistrict:deleteDistrictAction,
-       updateDistrict:updateDistrictAction
+       updateDistrict:updateDistrictAction,
+       addDistrict:addDistrictAction
       }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Districts)
