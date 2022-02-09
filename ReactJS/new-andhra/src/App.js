@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import { DistrictDetails } from './DistrictDetails';
+import Header from './Header'
+import Form from './Form';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Ap from './Ap'
+
 
 function App() {
   return (
     <div >
-     <nav className="py-2 bg-light border-bottom">
-    <div className="container d-flex flex-wrap">
-      <ul className="nav me-auto">
-        <li className="nav-item"><a href="#" className="nav-link link-dark px-2 active" aria-current="page"></a></li>
-       
-      </ul>
-      <ul className="nav">
-        <li className="nav-item"><a href="#" className="nav-link link-dark px-2">Login</a></li>
-        <li className="nav-item"><a href="#" className="nav-link link-dark px-2">Sign up</a></li>
-      </ul>
-    </div>
-  </nav>
-  <DistrictDetails/>
+    <BrowserRouter>
+    <Header/>
+    <Form/>
+    <Routes>
+    <Route path="/ap" element={<Ap/>}/>
+
+    </Routes>
+
+    </BrowserRouter>
+    <Header/>
+   
     </div>
 
   

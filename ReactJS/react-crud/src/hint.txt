@@ -1,0 +1,14 @@
+A/c transaction
+
+
+withoutredux
+---------
+---------
+
+ TranactionList
+ |||||||||
+ ----TransactionForm
+
+
+ localstorage as DB
+ 

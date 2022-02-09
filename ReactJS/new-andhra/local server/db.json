@@ -1,5 +1,25 @@
 {
-    "users": [],
+    "admin":{
+        "email":"ntr@gmail.com",
+        "password":"8499088977"
+    },
+    "users": [
+        {
+            "email":"nidadavolusrikanth@gmail.com",
+            "password":"8499088977",
+            "id":1
+        },
+        {
+            "email":"satyasrikanthnidadavolu999@gmail.com",
+            "password":"nandhan@9",
+            "id":3
+        },
+        {
+            "email":"bheemshankernidadavolu999@gmail.com",
+            "password":"Hanuman@9",
+            "id":4
+        }
+    ],
     "districts": [
         {
             "districtName": "SRIKAKULAM",
