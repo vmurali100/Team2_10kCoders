@@ -9,11 +9,11 @@ class Cart extends Component {
         return (
             <div>
                 <button onClick={() => { this.props.getAllUsersFunc() }}>Get All Carts</button>
-               {/* {this.props.carts.map((e)=>{
-                   return <p key={e.id}>{e.id}</p>
-               })} */}
+                {this.props.carts.map((e) => {
+                    return <p>{e.id}</p>
+                })}
 
-             
+
             </div>
         )
     }

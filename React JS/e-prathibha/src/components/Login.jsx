@@ -28,13 +28,13 @@ export const Login = () => {
                                 }}>Register</button>
                             </div>
                             <div id="login-input">
-                                <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Email" />
+                                <div className="mb-3">
+                                    <input type="email" className="form-control" placeholder="Email" />
                                 </div>
-                                <div class="mb-3">
+                                <div className="mb-3">
                                     <input
                                         type="password"
-                                        class="form-control"
+                                        className="form-control"
                                         placeholder="Password"
                                     />
                                 </div>
@@ -45,7 +45,7 @@ export const Login = () => {
                                         <a href="#">Re-Send Email Verification</a> <br /> <br />
                                         <button
                                             type="button"
-                                            class="btn btn-dark"
+                                            className="btn btn-dark"
                                             style={{
                                                 height: "35px",
                                                 fontSize: "17px",
@@ -90,29 +90,29 @@ export const Login = () => {
                             </div>
                             <br />
                             <div id="signup-input" style={{ display: "none" }}>
-                                <div class="mb-3">
+                                <div className="mb-3">
 
-                                    <input type="email" class="form-control" placeholder="*Email" />
+                                    <input type="email" className="form-control" placeholder="*Email" />
                                 </div>
-                                <div class="mb-3">
+                                <div className="mb-3">
 
-                                    <input type="password" class="form-control" placeholder="*Name" />
+                                    <input type="password" className="form-control" placeholder="*Name" />
                                 </div>
-                                <div class="mb-3">
+                                <div className="mb-3">
 
-                                    <input type="email" class="form-control" placeholder="*Password" />
+                                    <input type="email" className="form-control" placeholder="*Password" />
                                 </div>
-                                <div class="mb-3">
+                                <div className="mb-3">
 
-                                    <input type="password" class="form-control" placeholder="*Confirm Password" />
+                                    <input type="password" className="form-control" placeholder="*Confirm Password" />
                                 </div>
-                                <div class="mb-3">
+                                <div className="mb-3">
 
-                                    <input type="email" class="form-control" placeholder="*Mobile" />
+                                    <input type="email" className="form-control" placeholder="*Mobile" />
                                 </div>
-                                <div class="mb-3">
+                                <div className="mb-3">
                                     <div className="row">
-                                        <div className="col-9" style={{ paddingRight: "0px" }}> <input type="password" class="form-control" /></div>
+                                        <div className="col-9" style={{ paddingRight: "0px" }}> <input type="password" className="form-control" /></div>
                                         <div className="col-3" style={{ paddingLeft: "0px" }}><button type="button" style={{
                                             height: "38px",
                                             fontSize: "15px",
@@ -127,18 +127,18 @@ export const Login = () => {
                                     <div className="col-6"> <h6 style={{fontSize:"13px"}}>Answer simple maths : 15+9 = ?</h6></div>
                                     <div className="col-6"></div>
                                 </div> <br />
-                                <div class="mb-3">
-                                    <input type="password" class="form-control" placeholder="Enter Security code shown above" />
+                                <div className="mb-3">
+                                    <input type="password" className="form-control" placeholder="Enter Security code shown above" />
                                 </div>
                                 <div className="row">
                                     <div className="col-3">
-                                        <button type="submit" class="btn btn-dark" >
+                                        <button type="submit" className="btn btn-dark" >
                                         {/* <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="30"
                                             height="20"
                                             fill="currentColor"
-                                            class="bi bi-person-fill"
+                                            className="bi bi-person-fill"
                                             viewBox="0 0 16 16"
                                         >
                                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />

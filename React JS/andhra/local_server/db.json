@@ -304,6 +304,27 @@
       ],
       "id": 10,
       "isAddCont": true
+    },
+    {
+      "districtName": "Bhadradri Kothagudem",
+      "constituencies": [
+        "Kothagudem",
+        "Yellandu",
+        "Palvancha",
+        "Tekulapally"
+      ],
+      "id": 11,
+      "isAddCont": true
+    },
+    {
+      "districtName": "Khammam",
+      "constituencies": [
+        "Palvancha",
+        "Mustafa Nagar",
+        "Kodad"
+      ],
+      "id": 12,
+      "isAddCont": true
     }
   ]
 }

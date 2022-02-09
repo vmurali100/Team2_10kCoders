@@ -6,6 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+div.container-fluid :hover{
+color: red;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -15,6 +18,7 @@ code {
   color: white;
   font-size: 17px;
 }
+
 #footer-font span {
   font-size: 13px;
   margin-left: 5px;

@@ -9,6 +9,9 @@ class Users extends Component {
         return (
             <div>
                 <button onClick={()=>{this.props.getAllUsersFunc()}}>Get All Users</button>
+                {this.props.users.map((e)=>{
+                    return <li>{e.fname}</li>
+                })}
             </div>
         )
     }

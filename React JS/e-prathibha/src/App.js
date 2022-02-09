@@ -12,7 +12,7 @@ function App() {
   <ContactHeader/>
   <Navbar/>
   <Routes>
-    <Route path="register" element={ <Login/>} />
+    <Route path="login" element={ <Login/>} />
   </Routes>
   <Footer/>
   </BrowserRouter>
