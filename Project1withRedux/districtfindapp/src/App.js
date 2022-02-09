@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import Districts from './Components/Districts';
+import { Routes, Route } from "react-router-dom"
+import { LogIn } from './Components/LogIn';
+import { Navcomp } from './Components/Navcomp';
+import { Register } from './Components/Register';
+import { Admin } from './Components/Admin';
+import { DistrictDetails } from './Components/DistrictDetails';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navcomp />
+      <div className="App">
+        <Routes>
+          <Route path="" element={<DistrictDetails/>} />
+          <Route path="login" element={<LogIn />} />
+          <Route path="register" element={<Register />} />
+          <Route path="admin" element={<Admin />} />
+        </Routes>
+      </div>
     </div>
   );
 }

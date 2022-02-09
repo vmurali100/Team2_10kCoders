@@ -1,0 +1,1 @@
+export const GET_ALL_DISTRICTS = "GET_ALL_DISTRICTS"
