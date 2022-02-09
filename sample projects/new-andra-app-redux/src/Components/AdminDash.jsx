@@ -51,7 +51,7 @@ const AdminDash =(props)=>{
                         <tr style={{ border: "2px solid" }}>
                          
                           <td style={{ border: "2px solid" }}>{d.id}</td>
-                          <td style={{ border: "2px solid" }}>{d.dist}</td>
+                          <td style={{ border: "2px solid" }}>{d.district}</td>
                           {d.constiuencies.map((e) => {
                             return (
                               
@@ -74,7 +74,7 @@ const AdminDash =(props)=>{
                             </button>{" "}
                             <button
                               type="button"
-                              onClick={() => deleteFunc(d.id , ()=>navigate(""))}
+                              onClick={() => deleteFunc(d.id , ()=>navigate("#"))}
                               className="btn btn-danger"
                             >
                               Delete
@@ -109,7 +109,7 @@ const AdminDash =(props)=>{
     const MSTP =(state)=>{
         return {
             districtsList :state ,
-            usersList : state
+            usersList : state.usersList
         }
     }
 const MDTP =(dispatch)=>{

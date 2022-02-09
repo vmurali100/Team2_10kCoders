@@ -13,10 +13,13 @@ const Profile =(props)=>{
                    <div className="col-4"></div>
                    <div className="col-4">{<div>
                        <img src={profiledata.img} alt="logo"/>
-                       {profiledata.name} <br />
-                       {profiledata.email} <br />
-                       {profiledata.name} <br />
-                       {profiledata.phone} <br />
+                       <h5>{profiledata.name}</h5> <br />
+                       <h5>{profiledata.email}</h5>
+                       <h5>{profiledata.name}</h5>
+                       <h5>{profiledata.phone}</h5>
+                 <br />
+                     <br />
+                       <br />
                    </div> } </div>
                    <div className="col-4"></div>
                </div>

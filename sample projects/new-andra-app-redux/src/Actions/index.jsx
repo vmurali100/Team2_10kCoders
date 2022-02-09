@@ -25,10 +25,10 @@ export const GetConstAction =(input ,loggedUser , nav)=>{
             console.log(res.data)
             // let data = res.data
           let dist =  res.data.find(d=>d.constiuencies.indexOf(input) > -1) ;
-          console.log(dist.dist)
+          console.log(dist.district)
           dispatch({
               type : GET_CONST_ANSWER,
-              payload : dist.dist
+              payload : dist.district
           })
     }
          )}
@@ -112,7 +112,7 @@ export const AdminLogInAction =(admin ,x)=>{
 }
 export const GetDistrictsListAction =()=>{
   return async (dispatch)=>{
-  await   axios.get("http://localhost:3000/districtslist").then(({ data }) => {
+  await axios.get("http://localhost:3000/districtslist").then(({ data }) => {
    console.log(data);
    dispatch({
      type : GET_DISTRICTS_DATA ,
@@ -154,9 +154,11 @@ export  const  DeleteAction =(id ,x)=>{
   return async (dispatch)=>{
     await axios.delete(`http://localhost:3000/districtslist/${id}`).then(({data})=>{
       console.log(data)
+      
     })
-    x()
-    GetDistrictsListAction()
+   
+    
+   
   }
 }
 
@@ -168,8 +170,9 @@ export const AddnewdistAction =(newdist ,x)=>{
      type :ADDNEWDIST ,
      payload : data
    })
+   x()
  });
 
   }
-  x()
+  
 }

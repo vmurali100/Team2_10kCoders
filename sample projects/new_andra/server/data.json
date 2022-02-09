@@ -32,9 +32,13 @@
   ],
   "districtslist": [
     {
-      "id": 1,
-      "dist": "Srikakulam",
+      
+      "district": "Srikakulam",
       "constiuencies": [
+        "ichapuram",
+        "palasa",
+        "tekkali",
+        "echerla",
         "srikakulam",
         "amadalavalasa",
         "pathapatnam",
@@ -42,9 +46,11 @@
       ]
     },
     {
-      "id": 2,
-      "dist": "Vizianagaram",
+      "district": "Vizianagaram",
       "constiuencies": [
+        "rajam",
+        "bobbili",
+        "gajapathinagar",
         "cheepurupalli",
         "nellimarla",
         "vizianagaram",
@@ -52,8 +58,7 @@
       ]
     },
     {
-      "id": 3,
-      "dist": "Manyam",
+      "district": "Manyam",
       "constiuencies": [
         "palakonda",
         "kurupam",
@@ -62,8 +67,7 @@
       ]
     },
     {
-      "id": 4,
-      "dist": "Alluri Seetharama Raju",
+      "district": "Alluri Seetharama Raju",
       "constiuencies": [
         "paderu",
         "araku",
@@ -71,8 +75,7 @@
       ]
     },
     {
-      "id": 5,
-      "dist": "Visakhapatnam",
+      "district": "Visakhapatnam",
       "constiuencies": [
         "bhimili",
         "Visakhapatnam east",
@@ -82,19 +85,19 @@
       ]
     },
     {
-      "dist": "Anakapalli",
+      "district": "Anakapalli",
       "constiuencies": [
+        "payakaraopeta",
+        "narsipatnam",
         "chodavaram",
         "madugula",
         "anakapalli",
         "yalamanchili",
         "pendurthy"
-      ],
-      "id": 6
+      ]
     },
     {
-      "id": 7,
-      "dist": "East Godavari",
+      "district": "East Godavari",
       "constiuencies": [
         "tuni",
         "prathipadu(east-godavari)",
@@ -106,8 +109,7 @@
       ]
     },
     {
-      "id": 8,
-      "dist": "Konaseema",
+      "district": "Konaseema",
       "constiuencies": [
         "rampachodavaram",
         "mandapeta",
@@ -119,8 +121,7 @@
       ]
     },
     {
-      "id": 9,
-      "dist": "Rajahmundry",
+      "district": "Rajahmundry",
       "constiuencies": [
         "anaparthi",
         "rajanagaram",
@@ -132,8 +133,7 @@
       ]
     },
     {
-      "id": 10,
-      "dist": "Narasapuram",
+      "district": "Narasapuram",
       "constiuencies": [
         "achanta",
         "palakollu",
@@ -145,8 +145,7 @@
       ]
     },
     {
-      "id": 11,
-      "dist": "West Godavari",
+      "district": "West Godavari",
       "constiuencies": [
         "unguturu",
         "kaikaluru",
@@ -158,8 +157,7 @@
       ]
     },
     {
-      "id": 12,
-      "dist": "Krishna",
+      "district": "Krishna",
       "constiuencies": [
         "gudivada",
         "penamaluru",
@@ -171,8 +169,7 @@
       ]
     },
     {
-      "id": 13,
-      "dist": "NTR",
+      "district": "NTR",
       "constiuencies": [
         "vijayawada west",
         "vijayawada central",
@@ -184,8 +181,7 @@
       ]
     },
     {
-      "id": 14,
-      "dist": "Guntur",
+      "district": "Guntur",
       "constiuencies": [
         "tadikonda",
         "guntur west",
@@ -197,8 +193,7 @@
       ]
     },
     {
-      "id": 15,
-      "dist": "Bapatla",
+      "district": "Bapatla",
       "constiuencies": [
         "vemuru",
         "repalle",
@@ -206,6 +201,139 @@
         "parchuru",
         "addanki",
         "chirala"
+      ]
+    },
+    {
+      "district": "Palnadu",
+      "constiuencies": [
+        "pedakurapadu",
+        "gurajala",
+        "macharla",
+        "chilkaluripeta",
+        "narsaraopeta",
+        "vinukonda",
+        "sattenapalle"
+      ]
+    },
+    {
+      "district": "Prakasam",
+      "constiuencies": [
+        "yarragondapalem",
+        "giddaluru",
+        "markapuram",
+        "santhanuthalapadu",
+        "ongole",
+        "kondepi",
+        "darshi",
+        "kanigir"
+      ]
+    },
+    {
+      "district": "Sri Pottisriramulu Nellore",
+      "constiuencies": [
+        "kovuru(nellore)",
+        "nellore city",
+        "nellore rural",
+        "sarvepalli",
+        "atmakuru",
+        "udayagiri",
+        "kavali",
+        "kandukuru"
+      ]
+    },
+    {
+      "district": "Kurnool",
+      "constiuencies": [
+        "panyam",
+        "kodumuru",
+        "kurnool",
+        "pratikonda",
+        "emmiganur",
+        "mantralayam",
+        "adoni",
+        "alur"
+      ]
+    },
+    {
+      "district": "Nandyal",
+      "constiuencies": [
+        "nandyal",
+        "allagadda",
+        "srisailam",
+        "banaganapalle",
+        "done",
+        "nandikotkur"
+      ]
+    },
+    {
+      "district": "Ananthpur",
+      "constiuencies": [
+        "rayadurg",
+        "kalyanadurg",
+        "uravakonda",
+        "rapthadu",
+        "singanamala",
+        "ananthapur urban",
+        "tadipatri",
+        "guntakal"
+      ]
+    },
+    {
+      "district": "Sri Sathyasai",
+      "constiuencies": [
+        "madakashira",
+        "hindupuram",
+        "penugonda",
+        "dharmavaram",
+        "puttaparthi",
+        "kadiri"
+      ]
+    },
+    {
+      "district": "YSR Kadapa",
+      "constiuencies": [
+        "kadapa",
+        "kamalapuram",
+        "pulivendula",
+        "jammalamadugu",
+        "proddatur",
+        "badvelu",
+        "maidukuru"
+      ]
+    },
+    {
+      "district": "Annamaiah",
+      "constiuencies": [
+        "rajampeta",
+        "railwaykoduru",
+        "rayachoti",
+        "pileru",
+        "thamallapalle",
+        "madanapalle"
+      ]
+    },
+    {
+      "district": "Chittoor",
+      "constiuencies": [
+        "nagari",
+        "gangadhara nellore",
+        "chittoor",
+        "pothalpattu",
+        "palamaneru",
+        "kuppam",
+        "punganur"
+      ]
+    },
+    {
+      "district": "Sri Balaji",
+      "constiuencies": [
+        "sullurpeta",
+        "sathyavedu",
+        "gudur",
+        "venkatagiri",
+        "tirupati",
+        "chandragiri",
+        "srikalahasti"
       ]
     }
   ]

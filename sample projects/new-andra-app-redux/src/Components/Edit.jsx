@@ -9,7 +9,7 @@ const Edit =(props)=>{
   const {editableUser , updateFunc } =props
   console.log(props)
   const [updateduser , setUpdateduser] = useState({
-    dist : "" ,
+    district : "" ,
     constiuencies:[]
   })
   const [addnew ,setaddnew] =useState({
@@ -66,7 +66,7 @@ const Edit =(props)=>{
                handlechange1(e);
              }}
              name="district"
-             id="dist"
+             id="district"
            />
          </div>
          <div class="mb-3">
