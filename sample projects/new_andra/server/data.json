@@ -30,9 +30,9 @@
       "id": 5
     }
   ],
-  "districtslist": [
+  "districts": [
     {
-      
+      "id" : 1 ,
       "district": "Srikakulam",
       "constiuencies": [
         "ichapuram",
@@ -46,6 +46,7 @@
       ]
     },
     {
+      "id" : 2 ,
       "district": "Vizianagaram",
       "constiuencies": [
         "rajam",
@@ -58,6 +59,7 @@
       ]
     },
     {
+      "id":3 ,
       "district": "Manyam",
       "constiuencies": [
         "palakonda",
@@ -67,6 +69,7 @@
       ]
     },
     {
+      "id" : 4 ,
       "district": "Alluri Seetharama Raju",
       "constiuencies": [
         "paderu",
@@ -75,6 +78,7 @@
       ]
     },
     {
+      "id" : 5 ,
       "district": "Visakhapatnam",
       "constiuencies": [
         "bhimili",
@@ -85,6 +89,7 @@
       ]
     },
     {
+      "id" : 6 ,
       "district": "Anakapalli",
       "constiuencies": [
         "payakaraopeta",
@@ -97,6 +102,7 @@
       ]
     },
     {
+      "id" : 7 ,
       "district": "East Godavari",
       "constiuencies": [
         "tuni",
@@ -109,6 +115,7 @@
       ]
     },
     {
+      "id" : 8,
       "district": "Konaseema",
       "constiuencies": [
         "rampachodavaram",
@@ -121,6 +128,7 @@
       ]
     },
     {
+      "id" : 9 ,
       "district": "Rajahmundry",
       "constiuencies": [
         "anaparthi",
@@ -133,6 +141,7 @@
       ]
     },
     {
+      "id" : 10 ,
       "district": "Narasapuram",
       "constiuencies": [
         "achanta",
@@ -145,6 +154,7 @@
       ]
     },
     {
+      "id" : 11 ,
       "district": "West Godavari",
       "constiuencies": [
         "unguturu",
@@ -157,6 +167,7 @@
       ]
     },
     {
+      "id" : 12 ,
       "district": "Krishna",
       "constiuencies": [
         "gudivada",
@@ -169,6 +180,7 @@
       ]
     },
     {
+      "id" : 13 ,
       "district": "NTR",
       "constiuencies": [
         "vijayawada west",
@@ -181,6 +193,7 @@
       ]
     },
     {
+      "id" : 14 ,
       "district": "Guntur",
       "constiuencies": [
         "tadikonda",
@@ -193,6 +206,7 @@
       ]
     },
     {
+      "id" : 15 ,
       "district": "Bapatla",
       "constiuencies": [
         "vemuru",
@@ -204,6 +218,7 @@
       ]
     },
     {
+      "id" : 16,
       "district": "Palnadu",
       "constiuencies": [
         "pedakurapadu",
@@ -216,6 +231,7 @@
       ]
     },
     {
+      "id" : 17 ,
       "district": "Prakasam",
       "constiuencies": [
         "yarragondapalem",
@@ -229,6 +245,7 @@
       ]
     },
     {
+      "id" : 18 ,
       "district": "Sri Pottisriramulu Nellore",
       "constiuencies": [
         "kovuru(nellore)",
@@ -242,6 +259,7 @@
       ]
     },
     {
+      "id" : 19 ,
       "district": "Kurnool",
       "constiuencies": [
         "panyam",
@@ -255,6 +273,7 @@
       ]
     },
     {
+      "id" : 20 ,
       "district": "Nandyal",
       "constiuencies": [
         "nandyal",
@@ -266,6 +285,7 @@
       ]
     },
     {
+      "id" : 21 ,
       "district": "Ananthpur",
       "constiuencies": [
         "rayadurg",
@@ -279,6 +299,7 @@
       ]
     },
     {
+      "id" : 22 ,
       "district": "Sri Sathyasai",
       "constiuencies": [
         "madakashira",
@@ -290,6 +311,7 @@
       ]
     },
     {
+      "id" : 23 ,
       "district": "YSR Kadapa",
       "constiuencies": [
         "kadapa",
@@ -302,6 +324,7 @@
       ]
     },
     {
+      "id" : 24 ,
       "district": "Annamaiah",
       "constiuencies": [
         "rajampeta",
@@ -313,6 +336,7 @@
       ]
     },
     {
+      "id" : 25 ,
       "district": "Chittoor",
       "constiuencies": [
         "nagari",
@@ -325,6 +349,7 @@
       ]
     },
     {
+      "id" : 26,
       "district": "Sri Balaji",
       "constiuencies": [
         "sullurpeta",

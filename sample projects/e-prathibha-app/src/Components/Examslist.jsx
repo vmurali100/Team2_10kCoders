@@ -42,7 +42,7 @@ const Examslist =(props)=>{
                                    <h5 class="card-title">{f}</h5>
                                    <h6 class="card-subtitle mb-2 text-muted">Exam No :{f[0].id}</h6>
                                    <p class="card-text">{f[0].start_date}</p>
-                                   <a  class="card-link" onClick={()=> startExamFunc(tokendata , ()=> navigate("startexam"))}>Start Exam</a>
+                                   <button  class="card-link" onClick={()=> startExamFunc(tokendata , ()=> navigate("startexam"))}>Start Exam</button>
                                    <a  class="card-link">Another link</a>
                                  </div>
                                </div></div>

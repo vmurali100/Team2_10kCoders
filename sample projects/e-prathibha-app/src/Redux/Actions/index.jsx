@@ -157,7 +157,7 @@ export const UserLogoutAction=()=>{
 export const StartExamAction =(tokendata , x)=>{
   var url = "https://e-prathibha.com/apis/start_exam_new?examId=12"
   return async(dispatch)=>{
-   await axios.post(url ,{headers :{
+   await axios.post(url ,{},{'headers' :{
     tokenu: tokendata.Token,
     id: tokendata.Id,
     server_key : "3w99V63pW7tJ7vavGXtCKo8cp" ,
@@ -168,6 +168,7 @@ export const StartExamAction =(tokendata , x)=>{
       payload: data.data,
     });
   })
+  x()
 }
-x()
+
 }

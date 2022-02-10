@@ -10,7 +10,7 @@ import  EntryPage  from './Components/EntryPage';
 import { useSelector } from 'react-redux';
 import  Examslist  from './Components/Examslist';
 import { useEffect, useState } from 'react';
-import { Startexam } from './Components/Startexam';
+import  Startexam  from './Components/Startexam';
 
 function App() {
 //  const tokendata = useSelector((state)=>state.tokendata)

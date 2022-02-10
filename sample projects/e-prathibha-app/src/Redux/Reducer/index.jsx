@@ -1,11 +1,12 @@
 import React from "react";
-import { SIGN_UP_USER_DATA ,EMAIL_VERIFICATION , USER_LOGIN, PROFILE_DATA, GET_EXAMS_LIST, USER_LOG_OUT} from "../Actions/ActionTypes";
+import { SIGN_UP_USER_DATA ,EMAIL_VERIFICATION , USER_LOGIN, PROFILE_DATA, GET_EXAMS_LIST, USER_LOG_OUT, START_EXAM} from "../Actions/ActionTypes";
 
 const initState = {
     tokendata : [] ,
     code : "" ,
     profiledata : {},
-    examslist:[]
+    examslist:[] ,
+    startexam : {}
 
 }
 
@@ -37,6 +38,9 @@ export const Reducer  = (state =initState ,actions) =>{
           case USER_LOG_OUT :
               state.profiledata = payload
               return state.profiledata
+              case START_EXAM :
+      let examqtions = {...state , startexam : payload};
+      return examqtions
         default:
             return state.code
     }
