@@ -11,6 +11,7 @@ import { useSelector } from 'react-redux';
 import  Examslist  from './Components/Examslist';
 import { useEffect, useState } from 'react';
 import  Startexam  from './Components/Startexam';
+import  Endexam  from './Components/Endexam';
 
 function App() {
 //  const tokendata = useSelector((state)=>state.tokendata)
@@ -32,6 +33,7 @@ useEffect(()=>{
    <Route path="register/content" element={  <EntryPage/>}/> 
     <Route path="/examslist" element={  <Examslist/>}/>
     <Route path="examslist/startexam" element={  <Startexam/>}/>
+    <Route path="endexam" element={  <Endexam/>}/>
 
 
   </Routes>

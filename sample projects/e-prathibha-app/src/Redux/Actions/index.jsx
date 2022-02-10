@@ -4,6 +4,7 @@ import { connect, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
   EMAIL_VERIFICATION,
+  END_EXAM,
   GET_EXAMS_LIST,
   PROFILE_DATA,
   SIGN_UP_USER_DATA,
@@ -171,4 +172,27 @@ export const StartExamAction =(tokendata , x)=>{
   x()
 }
 
+}
+
+export const EndExamAction =(tokendata , x)=>{
+  var body ={
+    "examId": "12",
+    "qno": "1",
+  }
+   return async(dispatch)=>{
+    var url = "https://e-prathibha.com/apis/finishExam";
+    await axios.post(url, body, {headers :{
+      tokenu: tokendata.Token,
+      id: tokendata.Id,
+      server_key : "3w99V63pW7tJ7vavGXtCKo8cp" ,
+    }}).then(({ data }) => {
+      console.log(data);
+      dispatch({
+        type: END_EXAM,
+        payload: data.data,
+      });
+      x();
+    });
+   
+   }
 }
