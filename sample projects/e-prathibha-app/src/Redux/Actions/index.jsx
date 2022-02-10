@@ -23,7 +23,6 @@ export const Register_User_Action = (userRegi) => {
     bodyFormData.append("confirmPassword", userRegi.confirmPassword);
     bodyFormData.append("phone", userRegi.mobile);
 
-    // bodyFormData.append("password", userRegi.password);
     axios({
       method: "post",
       url: "https://e-prathibha.com/apis/register",
@@ -51,8 +50,8 @@ export const UserLogInAction = (user, x) => {
     axios.post(url, data, headers).then((res) => {
       console.log(res.data);
       alert("succesfully Loggedin");
-      // localStorage.setItem("loggeduser" , JSON.stringify(user))
-      let logindetails = [res.data.data , user]
+
+      let logindetails = [res.data.data, user];
       dispatch({
         type: USER_LOGIN,
         payload: logindetails,
@@ -63,7 +62,6 @@ export const UserLogInAction = (user, x) => {
 };
 
 export const VerifyEmailAction = (verificationCode) => {
-  // const code = useSelector((state) => state.code) ;
   console.log(verificationCode);
 
   return async (dispatch) => {
@@ -75,124 +73,127 @@ export const VerifyEmailAction = (verificationCode) => {
     await axios.post(url, data, headers).then((res) => {
       console.log(res.data);
       alert("Email verified succesfully");
-      //   ViewProfileAction()
+
       dispatch({ type: EMAIL_VERIFICATION, payload: res.data.data });
     });
   };
 };
 export const ViewProfileAction = (tokendata, x) => {
-  // let tokendata = useSelector((state) => state.tokendata);
-  // const navigater = useNavigate();
   console.log(tokendata);
-  const {Token ,Id} = tokendata
-  var body ={
-    id : Id
-  }
-  // var headers = [
-  // { id : Id },
-  //   {tokenu : Token },
-  //   {server_key : "3w99V63pW7tJ7vavGXtCKo8cp"},
-  // ];
-  var url = "https://e-prathibha.com/apis/profile";
-  return  (dispatch) => {
-     axios.post(url,body,{headers: { id : Id ,
-      tokenu : Token ,
-      server_key : "3w99V63pW7tJ7vavGXtCKo8cp"}}).then(({ data }) => {
-      console.log(data);
-      dispatch({
-        type: PROFILE_DATA,
-        payload: data.data,
-      });
-     
-    });
-    x();
+  const { Token, Id } = tokendata;
+  var body = {
+    id: Id,
   };
 
+  var url = "https://e-prathibha.com/apis/profile";
+  return (dispatch) => {
+    axios
+      .post(url, body, {
+        headers: {
+          id: Id,
+          tokenu: Token,
+          server_key: "3w99V63pW7tJ7vavGXtCKo8cp",
+        },
+      })
+      .then(({ data }) => {
+        console.log(data);
+        dispatch({
+          type: PROFILE_DATA,
+          payload: data.data,
+        });
+      });
+    x();
+  };
 };
 
-const GetExamsListAction = (tokendata,x) => {
-//   let tokend = useSelector((state) => state.tokendata);
+const GetExamsListAction = (tokendata, x) => {
   console.log(tokendata[0]);
   return async (dispatch) => {
-    // var header = {
-    //   "tokenu": tokendata.Token,
-    //   "id": tokendata.Id,
-    //   "server_key" : "3w99V63pW7tJ7vavGXtCKo8cp"
-    // };
-    // var body = {
-    //   examId: 12,
-    //   qno: 1,
-    // };
     var url = "https://e-prathibha.com/apis/test_free_exam";
-    await axios.post(url, {body:{
-      examId: 12,
-      qno: 1,
-    }}, {headers :{
-      tokenu: tokendata.Token,
-      id: tokendata.Id,
-      server_key : "3w99V63pW7tJ7vavGXtCKo8cp" ,
-    }}).then(({ data }) => {
-      console.log(data);
-      dispatch({
-        type: GET_EXAMS_LIST,
-        payload: data.data,
+    await axios
+      .post(
+        url,
+        {
+          body: {
+            examId: 12,
+            qno: 1,
+          },
+        },
+        {
+          headers: {
+            tokenu: tokendata.Token,
+            id: tokendata.Id,
+            server_key: "3w99V63pW7tJ7vavGXtCKo8cp",
+          },
+        }
+      )
+      .then(({ data }) => {
+        console.log(data);
+        dispatch({
+          type: GET_EXAMS_LIST,
+          payload: data.data,
+        });
       });
-    });
     x();
   };
 };
-// const MSTP =(state)=>{
-//     return{
-//         tokend : state.tokendata
-//     }
-// }
+
 export default GetExamsListAction;
 
-
-export const UserLogoutAction=()=>{
+export const UserLogoutAction = () => {
   return {
-     type : USER_LOG_OUT ,
-     payload : {}
-  }
-}
-export const StartExamAction =(tokendata , x)=>{
-  var url = "https://e-prathibha.com/apis/start_exam_new?examId=12"
-  return async(dispatch)=>{
-   await axios.post(url ,{},{'headers' :{
-    tokenu: tokendata.Token,
-    id: tokendata.Id,
-    server_key : "3w99V63pW7tJ7vavGXtCKo8cp" ,
-  }}).then(({ data }) => {
-    console.log(data);
-    dispatch({
-      type: START_EXAM,
-      payload: data.data,
-    });
-  })
-  x()
-}
-
-}
-
-export const EndExamAction =(tokendata , x)=>{
-  var body ={
-    "examId": "12",
-    "qno": "1",
-  }
-   return async(dispatch)=>{
-    var url = "https://e-prathibha.com/apis/finishExam";
-    await axios.post(url, body, {headers :{
-      tokenu: tokendata.Token,
-      id: tokendata.Id,
-      server_key : "3w99V63pW7tJ7vavGXtCKo8cp" ,
-    }}).then(({ data }) => {
-      console.log(data);
-      dispatch({
-        type: END_EXAM,
-        payload: data.data,
+    type: USER_LOG_OUT,
+    payload: {},
+  };
+};
+export const StartExamAction = (tokendata, x) => {
+  var url = "https://e-prathibha.com/apis/start_exam_new?examId=12";
+  return async (dispatch) => {
+    await axios
+      .post(
+        url,
+        {},
+        {
+          headers: {
+            tokenu: tokendata.Token,
+            id: tokendata.Id,
+            server_key: "3w99V63pW7tJ7vavGXtCKo8cp",
+          },
+        }
+      )
+      .then(({ data }) => {
+        console.log(data);
+        dispatch({
+          type: START_EXAM,
+          payload: data.data,
+        });
       });
-      x();
-    });
-   
-   }
-}
+    x();
+  };
+};
+
+export const EndExamAction = (tokendata, x) => {
+  var body = {
+    examId: "12",
+    qno: "1",
+  };
+  return async (dispatch) => {
+    var url = "https://e-prathibha.com/apis/finishExam";
+    await axios
+      .post(url, body, {
+        headers: {
+          tokenu: tokendata.Token,
+          id: tokendata.Id,
+          server_key: "3w99V63pW7tJ7vavGXtCKo8cp",
+        },
+      })
+      .then(({ data }) => {
+        console.log(data);
+        dispatch({
+          type: END_EXAM,
+          payload: data.data,
+        });
+        x();
+      });
+  };
+};

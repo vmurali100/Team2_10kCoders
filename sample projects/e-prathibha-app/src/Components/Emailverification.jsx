@@ -6,18 +6,16 @@ import { VerifyEmailAction } from "../Redux/Actions";
 
 const EmailVerification = (props) => {
   const [verificationCode, setVerificationCode] = useState("");
-  // const code = useSelector((state) => state.code) ;
-  // const navigate =useNavigate()
- const {verifyEmailFunc} = props
+
+  const { verifyEmailFunc } = props;
   const verifyEmail = (verificationCode) => {
-   verifyEmailFunc(verificationCode);
-    console.log(verificationCode)
+    verifyEmailFunc(verificationCode);
+    console.log(verificationCode);
   };
   const handlechange = (e) => {
     setVerificationCode(e.target.value);
-   
   };
-  useEffect(()=>{ },[])
+  useEffect(() => {}, []);
   return (
     <div>
       <div
@@ -54,7 +52,7 @@ const EmailVerification = (props) => {
               <button
                 type="button"
                 className="btn btn-info"
-                onClick={()=>verifyEmail(verificationCode)}
+                onClick={() => verifyEmail(verificationCode)}
               >
                 Verify
               </button>
@@ -72,8 +70,9 @@ const MSTP = (state) => {
 };
 const MDTP = (dispatch) => {
   return {
-    verifyEmailFunc :(verificationCode)=> (dispatch(VerifyEmailAction(verificationCode)))
+    verifyEmailFunc: (verificationCode) =>
+      dispatch(VerifyEmailAction(verificationCode)),
   };
 };
 
-export default connect(MSTP ,MDTP)(EmailVerification);
+export default connect(MSTP, MDTP)(EmailVerification);

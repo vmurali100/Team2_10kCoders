@@ -7,17 +7,14 @@ import "../index.css";
 import { UserLogoutAction } from "../Redux/Actions";
 
 const Navbar = (props) => {
-const [loggeduser ,setLoggeduser] = useState({});
-const navigate =useNavigate()
+  const [loggeduser, setLoggeduser] = useState({});
+  const navigate = useNavigate();
 
-console.log(props)
-useEffect(()=>{
-//  setLoggeduser(JSON.parse(localStorage.getItem("loggeduser")))
-
-},[]);
-const logOutUser =()=>{
-  props.logOutFunc()
-}
+  console.log(props);
+  useEffect(() => {}, []);
+  const logOutUser = () => {
+    props.logOutFunc();
+  };
   return (
     <div>
       <div className="container-fluid">
@@ -91,11 +88,20 @@ const logOutUser =()=>{
                         >
                           <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                         </svg>{" "}
-                        { props.loggeduser[1] !=null ? props.loggeduser[1].email : <Link to="register">Login/Register</Link>}
-                       
+                        {props.loggeduser[1] != null ? (
+                          props.loggeduser[1].email
+                        ) : (
+                          <Link to="register">Login/Register</Link>
+                        )}
                       </a>
                     </li>
-                   { props.loggeduser[1] !=null  && <li><button onClick={()=> logOutUser() / navigate('')}>LogOut</button></li> }
+                    {props.loggeduser[1] != null && (
+                      <li>
+                        <button onClick={() => logOutUser() / navigate("")}>
+                          LogOut
+                        </button>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>
@@ -106,17 +112,17 @@ const logOutUser =()=>{
     </div>
   );
 };
-const MSTP =(state)=>{
+const MSTP = (state) => {
   return {
-      loggeduser : state
-  }
-}
-const MDTP =(dispatch)=>{
+    loggeduser: state,
+  };
+};
+const MDTP = (dispatch) => {
   return {
-    logOutFunc : ()=>dispatch(UserLogoutAction())
-  }
-}
-export default connect(MSTP ,MDTP)(Navbar);
+    logOutFunc: () => dispatch(UserLogoutAction()),
+  };
+};
+export default connect(MSTP, MDTP)(Navbar);
 
 export const ContactHeader = () => {
   return (
@@ -180,13 +186,15 @@ export const ContactHeader = () => {
   );
 };
 
-
-
 export const Footer = () => {
   return (
     <div>
-      <div className="container-fluid" >
-        <div className="row" id="footer-font" style={{backgroundColor: "black" , height : "50px" , padding: " 5px"}}>
+      <div className="container-fluid">
+        <div
+          className="row"
+          id="footer-font"
+          style={{ backgroundColor: "black", height: "50px", padding: " 5px" }}
+        >
           <div className="col-5">
             <span>About</span>
             <span>Privacy Policy</span>
@@ -197,11 +205,11 @@ export const Footer = () => {
             <span>Refund</span>
           </div>
           <div className="col-1"></div>
-          <div className="col-2">
-            Copyright 2022 E-prathibha
-          </div>
+          <div className="col-2">Copyright 2022 E-prathibha</div>
           <div className="col-1"></div>
-          <div className="col-3">Poweredby: <a href="#">Errortechnologies.com</a></div>
+          <div className="col-3">
+            Poweredby: <a href="#">Errortechnologies.com</a>
+          </div>
         </div>
       </div>
     </div>
