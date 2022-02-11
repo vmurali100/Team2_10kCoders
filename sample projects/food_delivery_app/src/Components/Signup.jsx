@@ -10,41 +10,44 @@ export const Signup = ()=>{
   username : "" ,
   email : "" ,
   password : "" ,
-  address :{
-      houseno : null ,
-      street : "" ,
-      city : "" ,
-      state : "" ,
-      zip : null }
+ 
+ })
+ const [address ,setAddress] = useState({
+    houseno : null ,
+    street : "" ,
+    city : "" ,
+    state : "" ,
+    zip : null 
  })
  
- const handlechange =(e , id )=>{
-  var newuser = JSON.parse(JSON.stringify(user)) ;
-  // var newuser = {...user}
+ const handlechange1 =(e , id )=>{
+  // var newuser = JSON.parse(JSON.stringify(user)) ;
+  var newuser = {...user}
    newuser[e.target.name] = e.target.value ;
    var i = 0 ;
   var id = i++ ;
    setUser(newuser ,id) ;
   
  } ;
+
+ const handlechange2 =(f)=>{
+const newadd = {...address}
+newadd[f.target.name] =f.target.value
+setAddress(newadd)
+ }
  useEffect(()=>{
  
  },[]) ;
  const storeData =() =>{
   console.log(user) ;
+  console.log(address)
+  let signupdetails ={...user , address}
 
-//   let options = {
-//     method : "POST" ,
-//     url :  "http://localhost:3000/foodie" ,
-//     header : {} ,
-//     data : user ,
+console.log(signupdetails)
 
-//   }
-//  let res =  axios(options) ;
-//  console.log(res.data)
-axios.post('http://localhost:3000/foodie' , user).then((res)=>{console.log(res.data)})
+axios.post('http://localhost:3000/foodie' , signupdetails).then((res)=>{console.log(res.data)})
   }
- const {username ,email ,password ,address} = user
+ const {username ,email ,password} = user
     return <div>
   <div className="container" style={{"marginTop": "80px"}}>
       <div className="row">
@@ -54,29 +57,29 @@ axios.post('http://localhost:3000/foodie' , user).then((res)=>{console.log(res.d
           <form>
   <div className="mb-3">
     <label htmlFor="username" className="form-label">Username</label>
-    <input type="username" className="form-control" id="username" value={username}  onChange={(e)=>handlechange(e)} name="username"/>
+    <input type="username" className="form-control" id="username" value={username}  onChange={(e)=>handlechange1(e)} name="username"/>
     
   </div>
   <div className="mb-3">
     <label htmlFor="email" className="form-label">Email address</label>
-    <input type="email" className="form-control" id="email" value={email} onChange={(e)=>handlechange(e)} name="email"/>
+    <input type="email" className="form-control" id="email" value={email} onChange={(e)=>handlechange1(e)} name="email"/>
   </div>
   <div className="mb-3">
     <label htmlFor="password" className="form-label">Password</label>
-    <input type="password" className="form-control" id="password" value={password} onChange={(e)=>handlechange(e)} name="password" />
+    <input type="password" className="form-control" id="password" value={password} onChange={(e)=>handlechange1(e)} name="password" />
     
   </div>
   <div className="mb-3">
     <label htmlFor="hno" className="form-label">H.No</label>
-    <input type="number" id="hno" value={address.houseno} onChange={handlechange} name="houseno"/>
+    <input type="number" id="hno" value={address.houseno} onChange={(f)=>handlechange2(f)} name="houseno"/>
     <label htmlFor="street" className="form-label" >Street</label>
-    <input type="text"  id="street" value={address.street} onChange={handlechange} name="street"/> <br /> <br />
+    <input type="text"  id="street" value={address.street} onChange={(f)=>handlechange2(f)} name="street"/> <br /> <br />
     <label htmlFor="city" className="form-label">City</label>
-    <input type="text" id="city" value={address.city} onChange={handlechange} name="city"/>
+    <input type="text" id="city" value={address.city} onChange={(f)=>handlechange2(f)} name="city"/>
     <label htmlFor="state" className="form-label" >State</label>
-    <input type="text"  id="state" value={address.state}  onChange={handlechange} name="state"/> <br /> <br />
+    <input type="text"  id="state" value={address.state}  onChange={(f)=>handlechange2(f)} name="state"/> <br /> <br />
     <label htmlFor="zip" className="form-label">Zip</label>
-    <input type="number"  id="zip" value={address.zip} onChange={handlechange} name="zip"/>
+    <input type="number"  id="zip" value={address.zip} onChange={(f)=>handlechange2(f)} name="zip"/>
   </div>
 
   <button type="button" class="btn btn-primary" onClick={(e)=>storeData(e)}>Sign Up</button>

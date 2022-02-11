@@ -1,15 +1,38 @@
 {
-    "foodie" : [
-  
-    ] ,
-    "items" : [
-        {
-            "id" : null ,
-            "foodId" : null ,
-            "foodName" : "" ,
-            "foodCost" : null ,
-            "foodType" : ""
-        }
-    ] ,
-    "navbar" : ["home" , "users" , "fooditems" , "signup" , "login" , "contact"]
+  "foodie": [
+    {
+      "id": 1,
+      "username": "Akhil varma ",
+      "email": "akhilankathi@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 2,
+      "username": "Akhil varma ",
+      "email": "akhilankathi@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": 3,
+      "username": "Akhilankathi",
+      "email": "Akhilankathi@gmail.com",
+      "password": "00000000",
+      "address": {
+        "houseno": "123",
+        "street": "Sriram city finance pochamma maidhan",
+        "city": "Warangal",
+        "state": "Telangana",
+        "zip": "506001"
+      }
+    }
+  ],
+  "items": [],
+  "navbar": [
+    "home",
+    "users",
+    "fooditems",
+    "signup",
+    "login",
+    "contact"
+  ]
 }

@@ -32,10 +32,10 @@ export const Register_User_Action = (userRegi) => {
       console.log(res.data);
       dispatch({
         type: SIGN_UP_USER_DATA,
-        payload: res.data.slice(33, 40),
+        payload: res.data.slice(33,40),
       });
     });
-    // }
+  
   };
 };
 
