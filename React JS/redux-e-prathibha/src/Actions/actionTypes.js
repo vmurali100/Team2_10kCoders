@@ -1,3 +1,4 @@
 export const LOGIN="LOGIN";
 export const REGISTER="REGISTER";  
 export const HOME="HOME";
+export const EMAILVERIFICATION="EMAILVERIFICATION"

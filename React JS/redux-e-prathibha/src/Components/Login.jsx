@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { loginAction } from "../Actions/index";
+import { Navigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { LoginAction, loginAction, RegisterAction, registerAction } from "../Actions/index";
+
+
 const Login = (props) => {
+    let navigate=useNavigate()
     console.log(props)
 
     const [userlogin, setuserlogin] = useState({
@@ -9,33 +14,43 @@ const Login = (props) => {
         password: ""
     })
     const [userRegister, setuserRegister] = useState({
-            email:"",
-            name:"",
-            password:"",
-            confirmpassword:"",
-            mobile:""
+        email: "",
+        name: "",
+        password: "",
+        confirmPassword: "",
+        mobile: ""
     })
     const handleChange = (e) => {
         let newuser = { ...userlogin };
-        newuser[e.target.name] = [e.target.value];
+        newuser[e.target.name] = e.target.value;
         console.log(newuser)
         setuserlogin(newuser)
-     }
+    }
 
-     const handlereg=(e)=>{
-        let newreg={...userRegister};
-        newreg[e.target.name]=[e.target.value];
+    const handlereg = (e) => {
+        let newreg = { ...userRegister };
+        newreg[e.target.name] = e.target.value;
         console.log(newreg)
         setuserRegister(newreg)
-     }
-    const handleLogin = (e) => {
-            e.preventDefault();
-            console.log(userlogin)
-        }
+    }
+    // const handleLogin = (e) => {
+    //         e.preventDefault();
+    //         console.log(userlogin)
+    //     }
 
-    const handleRegister=(e)=>{
-        e.preventDefault();
-        console.log(userRegister)
+    // const handleRegister=(e)=>{
+    //     e.preventDefault();
+    //     console.log(userRegister)
+    // }
+    const handleClear = () => {
+        let clear = {
+            email: "",
+            name: "",
+            password: "",
+            confirmPassword: "",
+            mobile: ""
+        }
+        setuserRegister({ userRegister: clear })
     }
     return (
         <div>
@@ -85,7 +100,7 @@ const Login = (props) => {
                                         <button
                                             type="button"
                                             className="btn btn-dark"
-                                            onClick={handleLogin}
+                                            onClick={() => { props.logindata(userlogin,()=>{navigate("/emailVerification")}) }}
                                             style={{
                                                 height: "35px",
                                                 fontSize: "17px",
@@ -132,49 +147,49 @@ const Login = (props) => {
                             <div id="signup-input" style={{ display: "none" }}>
                                 <div className="mb-3">
 
-                                    <input type="email" 
-                                    className="form-control"
-                                     placeholder="*Email" 
-                                     name="email"
-                                     value={userRegister.email}
-                                     onChange={(e)=>{handlereg(e)}}/>
+                                    <input type="email"
+                                        className="form-control"
+                                        placeholder="*Email"
+                                        name="email"
+                                        value={userRegister.email}
+                                        onChange={(e) => { handlereg(e) }} />
                                 </div>
                                 <div className="mb-3">
 
-                                    <input type="text" 
-                                    className="form-control"
-                                     placeholder="*Name" 
-                                     value={userRegister.name}
-                                     onChange={(e)=>{handlereg(e)}}
-                                     name="name"
-                                     />
+                                    <input type="text"
+                                        className="form-control"
+                                        placeholder="*Name"
+                                        value={userRegister.name}
+                                        onChange={(e) => { handlereg(e) }}
+                                        name="name"
+                                    />
                                 </div>
                                 <div className="mb-3">
 
-                                    <input type="password" 
-                                    className="form-control" 
-                                    placeholder="Password"
-                                    name="password" 
-                                    value={userRegister.password}
-                                    onChange={(e)=>{handlereg(e)}}/>
+                                    <input type="password"
+                                        className="form-control"
+                                        placeholder="Password"
+                                        name="password"
+                                        value={userRegister.password}
+                                        onChange={(e) => { handlereg(e) }} />
                                 </div>
                                 <div className="mb-3">
 
-                                    <input type="password" 
-                                    className="form-control" 
-                                    placeholder="*Confirm Password" 
-                                    name="confirmpassword"
-                                    value={userRegister.confirmpassword}
-                                    onChange={(e)=>{handlereg(e)}}/>
+                                    <input type="password"
+                                        className="form-control"
+                                        placeholder="*Confirm Password"
+                                        name="confirmPassword"
+                                        value={userRegister.confirmPassword}
+                                        onChange={(e) => { handlereg(e) }} />
                                 </div>
                                 <div className="mb-3">
 
-                                    <input type="number" 
-                                    className="form-control" 
-                                    placeholder="*Mobile" 
-                                    name="mobile"
-                                    value={userRegister.mobile}
-                                    onChange={(e)=>{handlereg(e)}}/>
+                                    <input type="number"
+                                        className="form-control"
+                                        placeholder="*Mobile"
+                                        name="mobile"
+                                        value={userRegister.mobile}
+                                        onChange={(e) => { handlereg(e) }} />
                                 </div>
                                 <div className="mb-3">
                                     <div className="row">
@@ -198,9 +213,9 @@ const Login = (props) => {
                                 </div>
                                 <div className="row">
                                     <div className="col-3">
-                                        <button type="submit" 
-                                        className="btn btn-dark" 
-                                        onClick={handleRegister}>
+                                        <button type="button"
+                                            className="btn btn-dark"
+                                            onClick={() => { props.registerdata(userRegister, () => { handleClear() }) }}>
                                             {/* <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="30"
@@ -231,12 +246,13 @@ const Login = (props) => {
 };
 
 
-const mapStateToProps = (state) => { return { state } }
-const mapDispatchToProps=()=>{
+const mapStateToProps = (state) => { return {} }
+const mapDispatchToProps = (dispatch) => {
     return {
-        logindata:loginAction
+        logindata: (userlogin,emailverification) => dispatch(LoginAction(userlogin,emailverification)),
+        registerdata: (userRegister, clear) => dispatch(RegisterAction(userRegister, clear)),
     }
 }
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

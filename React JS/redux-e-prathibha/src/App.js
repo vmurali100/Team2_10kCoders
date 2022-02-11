@@ -5,6 +5,7 @@ import { Routes } from 'react-router-dom';
 import Login from './Components/Login';
 import Navbar, { Footer } from './Components/Navbar';
 import Home from './Components/Home';
+import EmailVerification from './Components/EmailVerification';
 
 function App() {
   return (
@@ -12,8 +13,12 @@ function App() {
       <BrowserRouter>
       <Navbar/>
       <Routes>
-      <Route path="home" element={<Home/>}/>
+        <Route path="home" element={<Home/>}/>
         <Route path="login" element={<Login/>}/>
+        <Route path="emailVerification" element={<EmailVerification/>}/>
+
+        
+        
       </Routes>
       <Footer/>
       </BrowserRouter>

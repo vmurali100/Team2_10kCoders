@@ -1,4 +1,4 @@
-import { LOGIN, REGISTER } from "../Actions/actionTypes"
+import { EMAILVERIFICATION, HOME, LOGIN, REGISTER } from "../Actions/actionTypes"
 
 export const reducer=(state,action)=>{
     switch (action.type) {
@@ -7,6 +7,12 @@ export const reducer=(state,action)=>{
             return state
 
         case REGISTER:
+            return state
+
+        case HOME:
+            return state
+
+        case EMAILVERIFICATION:
             return state
     
         default:
