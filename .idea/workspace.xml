@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24f97bcb-d184-477d-b44d-1f36fc92a82c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/React JS/login/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/React JS/login/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React JS/login/src/redux/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React JS/login/src/redux/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Actions/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Actions/actionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Components/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/React JS/redux-e-prathibha/src/Reducer/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

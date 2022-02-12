@@ -1,7 +1,28 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { connect } from 'react-redux'
+import { Navigate } from 'react-router-dom'
+import { EmailVerificationAction } from '../Actions'
+import { useNavigate } from 'react-router-dom'
 
 const EmailVerification = (props) => {
+    let navigate=useNavigate();
+    const [verificationCode, setverificationCode] = useState("")
+    const {EmailVerificationFunc}=props;
+
+    const emailVerify=(verificationCode)=>{
+    EmailVerificationFunc(verificationCode)
+    navigate("/login")
+        console.log(verificationCode)
+        
+    }
+
+    const handlechange=(e)=>{
+        setverificationCode(e.target.value)
+    }
+    useEffect(() => {
+     
+    }, [])
+    
     return (
         <div>
             <div
@@ -25,16 +46,16 @@ const EmailVerification = (props) => {
                             <input
                                 type="text"
                                 placeholder="Enter Code Here"
-                                // value={verificationCode}
+                                value={verificationCode}
                                 name="verificationCode"
                                 style={{ height: "35px", borderRadius: "5px" }}
-                            // onChange={(e) => handlechange(e)}
+                            onChange={(e) => handlechange(e)}
                             />{" "}
                             <br />
                             <button
                                 type="button"
                                 className="btn btn-info m-2"
-                            // onClick={() => verifyEmail(verificationCode)}
+                            onClick={() => emailVerify(verificationCode)}
                             >
                                 Verify
                             </button>
@@ -53,8 +74,10 @@ const mapStateToProps = (state) => {
 
 }
 
-const mapDispatchToProps = () => {
-
+const mapDispatchToProps = (dispatch) => {
+    return{
+        EmailVerificationFunc:(verificationCode)=>dispatch(EmailVerificationAction(verificationCode))
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(EmailVerification)

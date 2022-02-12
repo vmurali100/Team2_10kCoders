@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { connect } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
@@ -6,7 +6,8 @@ import { LoginAction, loginAction, RegisterAction, registerAction } from "../Act
 
 
 const Login = (props) => {
-    let navigate=useNavigate()
+    let navigate = useNavigate()
+    const { Registerdata, logindata } = props
     console.log(props)
 
     const [userlogin, setuserlogin] = useState({
@@ -42,16 +43,26 @@ const Login = (props) => {
     //     e.preventDefault();
     //     console.log(userRegister)
     // }
-    const handleClear = () => {
+
+    const RegisterUser = (userRegister) => {
+        console.log(props);
+        Registerdata(userRegister);
+        console.log(userRegister);
         let clear = {
             email: "",
             name: "",
             password: "",
             confirmPassword: "",
-            mobile: ""
-        }
-        setuserRegister({ userRegister: clear })
-    }
+            mobile: "",
+        };
+        setuserRegister(clear);
+        navigate("/emailVerification");
+    };
+
+    useEffect(() => {
+        console.log(userlogin);
+    }, [userlogin]);
+
     return (
         <div>
             <div className="container">
@@ -100,7 +111,7 @@ const Login = (props) => {
                                         <button
                                             type="button"
                                             className="btn btn-dark"
-                                            onClick={() => { props.logindata(userlogin,()=>{navigate("/emailVerification")}) }}
+                                            onClick={() => { logindata(userlogin,()=>{navigate("/login/entrypage")}) }}
                                             style={{
                                                 height: "35px",
                                                 fontSize: "17px",
@@ -215,7 +226,7 @@ const Login = (props) => {
                                     <div className="col-3">
                                         <button type="button"
                                             className="btn btn-dark"
-                                            onClick={() => { props.registerdata(userRegister, () => { handleClear() }) }}>
+                                            onClick={() => { RegisterUser(userRegister) }}>
                                             {/* <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="30"
@@ -249,8 +260,8 @@ const Login = (props) => {
 const mapStateToProps = (state) => { return {} }
 const mapDispatchToProps = (dispatch) => {
     return {
-        logindata: (userlogin,emailverification) => dispatch(LoginAction(userlogin,emailverification)),
-        registerdata: (userRegister, clear) => dispatch(RegisterAction(userRegister, clear)),
+        logindata: (userlogin,entry) => dispatch(LoginAction(userlogin,entry)),
+        Registerdata: (userRegister) => dispatch(RegisterAction(userRegister))
     }
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -6,8 +6,16 @@ import img from '../images/prathibha.png'
 
 import "../App.css";
 import "../index.css";
+import { UserLogOutAction } from "../Actions";
 const Navbar = (props) => {
-    let navigate = useNavigate();
+    const [loggeduser, setLoggeduser] = useState({});
+    const navigate = useNavigate();
+
+    console.log("NavBar Data",props);
+    useEffect(() => { }, []);
+    const logOutUser = () => {
+        props.logOutFunc();
+    };
     return (
         <div>
             <div className="container-fluid">
@@ -84,6 +92,13 @@ const Navbar = (props) => {
                                                 <Link to="login">Login/Register</Link>
                                             </a>
                                         </li>
+                                        {props.loggeduser != null && (
+                                            <li>
+                                                <button onClick={() => logOutUser() / navigate("home")}>
+                                                    LogOut
+                                                </button>
+                                            </li>
+                                        )}
                                     </ul>
                                 </div>
                             </div>
@@ -98,6 +113,19 @@ const Navbar = (props) => {
 
     );
 };
+
+const mapStateToProps = (state) => {
+    return {
+        loggeduser:state,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        logOutFunc: () => dispatch(UserLogOutAction()),
+      };
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
 
 export const ContactHeader = () => {
     return (
@@ -161,6 +189,13 @@ export const ContactHeader = () => {
         </div>
     );
 };
+// export const Content = () => {
+//     return (
+//       <div>
+//           <Link to="/home"><img src={img} alt="" /></Link>
+//       </div>
+//     )
+//   }
 
 export const Footer = () => {
     return (
@@ -189,13 +224,3 @@ export const Footer = () => {
 };
 
 
-const mapStateToProps = (state) => {
-    return {
-        state
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return{ }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
