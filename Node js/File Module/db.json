@@ -1,0 +1,12 @@
+{
+    "message": "Hello from person Object",
+    "address": {
+        "street": "Mustafanagar",
+        "city": "khammam",
+        "dist": "Telangana"
+    },
+    "users": [
+        "hari",
+        "giri"
+    ]
+}
