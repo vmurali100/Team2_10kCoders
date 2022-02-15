@@ -1,4 +1,4 @@
 const { sayHello,myperson } = require(".");
 
 sayHello("Hello from index 2")
-console.log(myperson)
+console.log("MyPerson variable Data: ",myperson)
