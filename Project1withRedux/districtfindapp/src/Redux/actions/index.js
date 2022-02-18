@@ -31,7 +31,8 @@ export const addDistrictAction = (dist) =>{
     console.log("Adding District Action");
     console.log(dist);
     return async (dispatch)=>{
-        axios.post("http://localhost:3000/districts/",dist).then(()=>{
+        console.log("iS it coming here")
+        axios.push("http://localhost:3000/districts/",dist).then(()=>{
            dispatch( getAllDistictsAction())
         })
     }
