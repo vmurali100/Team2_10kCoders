@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { get_all_users_action } from '../redux/actions';
+import { delete_dist_action, get_all_users_action, updateStateAction, update_dist_action } from '../redux/actions';
 import { useEffect } from 'react';
 
 
-const Home = (props) => 
-{
-    const { districts, getData} = props;
+const Home = (props) => {
+    const { districts, getData, delDist, updateDist, updateState } = props;
     const [input, setInput] = useState("");
     const [ans, setAns] = useState("");
+    const [isDelete, setIsDelete] = useState(false);
+    const [isEdit, setIsEdit] = useState(false);
+    const [isId, setisId] = useState(null);
+    const [alldist, setalldist] = useState()
 
 
 
-    useEffect(() => { getData()}, []);
-    console.log(props)
+    useEffect(() => { getData() }, []);
 
+    useEffect(()=>{
+        setalldist(districts)
+    },[districts])
+    
 
     function handleInput(e) {
         setInput(e.target.value);
@@ -22,15 +28,82 @@ const Home = (props) =>
     }
 
     function handleButton() {
-            let district = districts.find(d => d.constituencies.indexOf(input.toLowerCase()) > -1)
-            if (district !== undefined) {
-                setAns(district.districtName)
+        let district = alldist.find(d => d.constituencies.indexOf(input.toLowerCase()) > -1)
+        if (district !== undefined) {
+            setAns(district.districtName)
 
-            }
-            else {
-                setAns("Invalid")
-            }
-            setInput("");
+        }
+        else {
+            setAns("Invalid")
+        }
+        setInput("");
+    }
+
+    
+    const handleAddDistrict = () => {
+        console.log("add dist");
+    }
+
+    // Delete section
+    const handleDelete = (id) => {
+        setIsDelete(true)
+        setIsEdit(false);
+        setisId(id)
+    }
+
+    const handleDeleteDist = (dist) => {
+        delDist(dist.id);
+    }
+
+    const handleDeleteConst = (dist,index) => {
+        let distCopy = {...dist};
+        distCopy.constituencies.splice(index,1);
+        updateDist(distCopy)
+        console.log(distCopy);
+    }
+
+    //handle cancel button
+    const handleCancel = () => 
+    {
+        setIsEdit(false);
+        setIsDelete(false);
+        setisId(null);
+    }
+
+    //Edit section
+
+    const handleEditDist = (dist) => {
+        delDist(dist.id);
+    }
+
+    const handleEditConst = (dist,index) => {
+        // let distCopy = {...dist};
+        // distCopy.constituencies.splice(index,1);
+        // updateDist(distCopy)
+        // console.log(distCopy);
+    }
+
+    const handleEdit = (id) => 
+    {
+        setisId(id);
+        setIsEdit(true);
+        setIsDelete(false);
+    }
+
+    const handleChange = (i,e,d) => {
+        let distClone = {...d};
+        console.log(i, e.target.value, d);
+        if(i === null)
+        {
+            
+            distClone.districtName = e.target.value;
+        }
+        else{
+            distClone.constituencies[i] += e.target.value;
+        }
+
+        updateState(distClone);
+
     }
 
     return (
@@ -48,7 +121,7 @@ const Home = (props) =>
                         <div className='row' style={{ marginTop: 50 + "px" }}>
 
                             {
-                               <p className='App'>Your new district is <strong>{ans}</strong> </p>
+                                <p className='App'>Your new district is <strong>{ans}</strong> </p>
                             }
 
 
@@ -61,31 +134,84 @@ const Home = (props) =>
                 <div className='row'>
                     {/* displaying all the districts and their constistencies */}
                     <div className="col App">
-                        <h2 style={{ textDecoration: "underline", color: "grey", fontSize: "25px", marginTop: 50 + "px" }}><em>List of new districts and their Assembly constituencies</em></h2>
-                        
+                        <button className='btn btn-primary' onClick={handleAddDistrict}>Add District</button>
+                        <h2 style={{ color: "grey", fontSize: "25px", marginTop: 50 + "px", marginBottom: 50 + "px" }}>Districts and Assembly constituencies</h2>
                         <table className='table'>
-                            {
-                                districts.map((d, i) => {
-                                    return (
-                                        <tbody key={d.id}>
-                                        <tr>
-                                            <th >{d.districtName}</th>
-                                        </tr>
-                                        <tr>
-                                            {
-                                                
-                                                d.constituencies.map((c, i) => 
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>District</th>
+                                    <th>Constituencies</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    alldist.map((d, i) => {
+                                        return (
+                                            < >
                                                 {
-                                                    var unqid = new Date().getTime()*i;
-                                                    return <td key={unqid}>{c}</td>
-                                                })
-                                            }
-                                            
-                                        </tr>
-                                    </tbody>)
-                                })
-                            }
 
+                                                    (<tr key={d.id}>
+                                                        <td>{i + 1}</td>
+                                                        {
+                                                            (isEdit && isId === d.id)? <input value={d.districtName} onChange={(e)=>handleChange(null,e,d)}/> : <th key={i}>{d.districtName}</th>
+                                                        }
+                                                        <td>
+                                                            <ul className='list-group'>
+                                                                {
+                                                                    d.constituencies.map((c, ind) => 
+                                                                    {
+                                                                        return <>
+                                                                        {
+                                                                            isId === d.id ?  
+                                                                            (
+                                                                                isDelete 
+                                                                                ? 
+                                                                                <li className='list-group-item' style={{ border: 0 }}>{c} <button className="btn btn-danger" onClick={() => { handleDeleteConst(d,ind) }}>Delete</button></li> 
+                                                                                : 
+                                                                                <li className='list-group-item' style={{ border: 0 }}><input value = {c} onChange={(e) =>{handleChange(ind,e,d) }}/></li>
+                                                                            )
+                                                                            :
+                                                                            (<li className='list-group-item' style={{ border: 0 }}>{c}</li>)
+                                                                        }</>
+                                                                    })
+                                                                }
+                                                            </ul>
+                                                        </td>
+                                                        {/* <td><button className="btn btn-warning" onClick={() => { handleEdit(d) }}>Edit</button></td> */}
+                                                        {
+                                                            (isEdit && isId === d.id) ? 
+                                                            <td>
+                                                                <button className="btn btn-success" onClick={() => { handleEditDist(d) }}>Save</button>
+                                                                <button className="btn btn-primary" onClick={() => { handleCancel() }}>Cancel</button>
+                                                            </td> 
+                                                            :
+                                                            <td>
+                                                                <button className="btn btn-warning" onClick={() => { handleEdit(d.id) }}>Edit</button>
+                                                            </td>
+                                                        }
+                                                        {
+                                                            (isDelete && isId === d.id) ? 
+                                                            <td>
+                                                                <button className="btn btn-danger" onClick={() => { handleDeleteDist(d) }}>Delete All</button>
+                                                                <button className="btn btn-primary" onClick={() => { handleCancel() }}>Cancel</button>
+                                                            </td> 
+                                                            :
+                                                            <td>
+                                                                <button className="btn btn-danger" onClick={() => { handleDelete(d.id) }}>Delete</button>
+                                                            </td>
+                                                        }
+                                                    </tr>)
+
+                                                }
+
+
+                                            </>
+                                        )
+                                    })
+                                }
+                            </tbody>
                         </table>
 
                     </div>
@@ -104,7 +230,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getData: () => dispatch(get_all_users_action())
+        getData: () => dispatch(get_all_users_action()),
+        delDist: (id) => dispatch(delete_dist_action(id)),
+        updateDist: (districts,id) => dispatch(update_dist_action(districts,id)),
+        updateState : (distClone)=> dispatch(updateStateAction(distClone))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
