@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { registerAction } from '../Redux/Actions'
+import { RegisterAction } from '../Redux/Actions'
 
 
 
-export const Login = ({registers}) => {
+const Login = ({registers}) => {
   let dispatch = useDispatch()
   const [display, setdisplay] = useState(true)
   const [registervals, setregistervals] = 
-  useState({email:"",password:"",name:'',number:""})
+  useState({email:"",password:"",confirmPassword:"",name:'',number:""})
+  const [postvals, setpostvals] = useState([])
   
   const handleChange = (e)=>{
     let newregistervals = {...registervals}
@@ -19,6 +20,11 @@ export const Login = ({registers}) => {
         setregistervals(newregistervals)
       }
     }
+  }
+
+  const handleSubmit = ()=>{
+    console.log(registervals)
+    dispatch(registers(registervals))
   }
 
   return (
@@ -35,7 +41,7 @@ export const Login = ({registers}) => {
             <h2>LOGIN FORM</h2>
             <form style={{padding:"0px 30px 0px 30px"}}>
             <div className="mb-3" >
-              <input type="email" className="form-control" id="exampleInputEmail1" placeholder='Email' />
+              <input type="email" className="form-control" id="exampleInputEmail1" placeholder='*Email' />
             </div>
             <div className="mb-3">
               <input type="password" className="form-control" id="exampleInputPassword1" placeholder='Password' />
@@ -65,7 +71,11 @@ export const Login = ({registers}) => {
               onChange={(e)=>{handleChange(e)}}/>
             </div>
             <div className="mb-3" > 
-              <input type="password" className="form-control" placeholder='*Password'  name='password'
+              <input type="" className="form-control" placeholder='*Password'  name='password'
+              onChange={(e)=>{handleChange(e)}}/>
+            </div>
+            <div className="mb-3" > 
+              <input type="" className="form-control" placeholder='*ConfirmPassword'  name='confirmPassword'
               onChange={(e)=>{handleChange(e)}}/>
             </div>
             <div className="mb-3" >
@@ -73,7 +83,7 @@ export const Login = ({registers}) => {
               onChange={(e)=>{handleChange(e)}}/>
             </div>
             <button type="button" className="btn btn-primary" style={{border:"1px solid black"}}
-                onClick={()=>{dispatch(registers(registervals))}}>Submit</button>
+                onClick={handleSubmit}>Submit</button>
 
           </form></div>  }
         </div>
@@ -89,7 +99,7 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = ()=>{
   return{
-    registers:registerAction
+    registers:RegisterAction
   }
 }
 export default  connect(mapStateToProps,mapDispatchToProps)(Login)

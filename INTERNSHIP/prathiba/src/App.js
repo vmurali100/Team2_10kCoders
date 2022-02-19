@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { NavComp } from './Components/NavComp';
 import { HomePage } from './Components/HomePage';
-import { Login } from './Components/Login-Register';
+import  Login  from './Components/Login-Register';
 import { Footer } from './Components/Footer';
 import {axios} from 'axios'
  
