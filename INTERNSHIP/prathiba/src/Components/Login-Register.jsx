@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { RegisterAction } from '../Redux/Actions'
+import { emailVerification, RegisterAction } from '../Redux/Actions'
 
 
 
-const Login = ({registers}) => {
+const Login = ({registers,emailVer}) => {
   let dispatch = useDispatch()
   const [display, setdisplay] = useState(true)
   const [registervals, setregistervals] = 
   useState({email:"",password:"",confirmPassword:"",name:'',number:""})
-  const [postvals, setpostvals] = useState([])
+ const [logincode, setlogincode] = useState({reg_code:""})
   
   const handleChange = (e)=>{
     let newregistervals = {...registervals}
@@ -22,10 +22,17 @@ const Login = ({registers}) => {
     }
   }
 
-  const handleSubmit = ()=>{
+  const handleSubmit = async()=>{
     console.log(registervals)
-    dispatch(registers(registervals))
+    await dispatch(registers(registervals))
+    alert("Registration Sucessful")
+    setdisplay(true)
   }
+
+const handleLogIn = ()=>{
+  console.log(logincode)
+  dispatch(emailVer(logincode))
+}
 
   return (
     <div style={{ padding: "10px 50px 0px 50px" }}>
@@ -44,7 +51,11 @@ const Login = ({registers}) => {
               <input type="email" className="form-control" id="exampleInputEmail1" placeholder='*Email' />
             </div>
             <div className="mb-3">
-              <input type="password" className="form-control" id="exampleInputPassword1" placeholder='Password' />
+              <input type="password" className="form-control" id="exampleInputPassword1" placeholder='Password' name='reg_code'
+                onChange={(e)=>{var newlogincode = {...logincode}
+                                newlogincode[e.target.name] = e.target.value
+                                setlogincode(newlogincode)
+               }}/>
             </div>
             <div className="mb-3 form-check" > 
               <input type="checkbox" className="form-check-input" id="exampleCheck1" />
@@ -55,7 +66,7 @@ const Login = ({registers}) => {
               <a href='#' style={{float:"right"}}>Reset</a>
                </div>
                <div className="mb-3 form-check">
-            <button type="button" id= "b1" className="btn btn-dark" >Log In</button>
+            <button type="button" id= "b1" className="btn btn-dark"  onClick={()=>{handleLogIn()}}>Log In</button>
             <a href='#' style={{float:"right"}}> Forgot Password</a>
             </div>
           </form></div> :<div style={{ backgroundColor: "whitesmoke" }}>
@@ -99,7 +110,8 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = ()=>{
   return{
-    registers:RegisterAction
+    registers:RegisterAction,
+    emailVer:emailVerification
   }
 }
 export default  connect(mapStateToProps,mapDispatchToProps)(Login)

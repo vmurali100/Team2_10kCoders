@@ -29,3 +29,13 @@ export const RegisterAction = (registervals)=>{
 }
 
 }
+
+
+export const emailVerification = (logincode)=>{
+    return async(dispatch)=>{
+        await axios.post("https://e-prathibha.com/apis/verifyEmail",JSON.stringify(logincode)).then((res)=>{
+            console.log("Posting Data",res.data)
+            dispatch({type:"EMAILVERIFICATION",payload:res.data})
+        })
+    }
+}
