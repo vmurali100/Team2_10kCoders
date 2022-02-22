@@ -8,6 +8,10 @@ export const rootReducer = (state,action)=>{
             console.log("EMAILVERIFICATION DONE SUCESSFULLY IN REDUCERS")
             alert(action.payload)
             return action.payload    
+
+        case "PROFILEDATA":
+            console.log("Getting Data from LogIn Token")
+            return action.payload
     
         default:
             console.log("DEFAULT TYPE")

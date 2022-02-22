@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { emailVerification, RegisterAction } from '../Redux/Actions'
+import { emailVerification, logInAction, RegisterAction, userInfoAction } from '../Redux/Actions'
 
 
 
-const Login = ({registers,emailVer}) => {
+const Login = ({state1,registers,emailVer,logIn,userInfo}) => {
   let dispatch = useDispatch()
   const [display, setdisplay] = useState(true)
   const [registervals, setregistervals] = 
   useState({email:"",password:"",confirmPassword:"",name:'',number:""})
- const [logincode, setlogincode] = useState({reg_code:""})
+  const [emailverdispaly, setemailverdispaly] = useState(false)
+ const [logincode, setlogincode] = useState("")
+ const [loginvals, setloginvals] = useState({email:"",password:""})
   
   const handleChange = (e)=>{
     let newregistervals = {...registervals}
@@ -26,16 +28,51 @@ const Login = ({registers,emailVer}) => {
     console.log(registervals)
     await dispatch(registers(registervals))
     alert("Registration Sucessful")
-    setdisplay(true)
+    setemailverdispaly(true)
   }
 
-const handleLogIn = ()=>{
+  //Email Verification Code
+const handlecode = ()=>{
   console.log(logincode)
   dispatch(emailVer(logincode))
+  setemailverdispaly(false)
+  setdisplay(true)
+}
+
+//Handling LOGIN FORM VALUES
+const handleLogInChange = (e)=>{
+  var newloginvals = {...loginvals}
+  newloginvals[e.target.name] = e.target.value
+  setloginvals(newloginvals)
+}
+
+const handleLogIn = async()=>{
+  await dispatch(logIn(loginvals))
+}
+
+const handleUser = ()=>{
+  var profilevals = state1
+  dispatch(userInfo(profilevals))
 }
 
   return (
-    <div style={{ padding: "10px 50px 0px 50px" }}>
+    <div>
+      {emailverdispaly?<div className="container">
+        <div className="row">
+          <div className="col"></div>
+          <div className="col">
+          <form>
+  <div class="mb-3">
+    <input type="email" className="form-control"  placeholder='Enter Your Code' 
+    onChange={(e)=>{setlogincode(e.target.value)}}/>
+  </div>
+   <button type="button" className="btn btn-primary" onClick={()=>{handlecode()}}>Check Code</button></form>
+          </div>
+          <div className="col"></div>
+        </div>
+      </div>:   
+
+   <div style={{ padding: "10px 50px 0px 50px" }}>
       <div style={{ padding: "5px 50px 0px 50px" }}>
         <div style={{ padding: "5px 50px 0px 200px" }}>
           <nav className="navbar sticky-top navbar-light bg-light">
@@ -48,14 +85,12 @@ const handleLogIn = ()=>{
             <h2>LOGIN FORM</h2>
             <form style={{padding:"0px 30px 0px 30px"}}>
             <div className="mb-3" >
-              <input type="email" className="form-control" id="exampleInputEmail1" placeholder='*Email' />
+              <input type="email" className="form-control"  placeholder='*Email' name="email"
+              onChange={(e)=>{handleLogInChange(e)}} />
             </div>
             <div className="mb-3">
-              <input type="password" className="form-control" id="exampleInputPassword1" placeholder='Password' name='reg_code'
-                onChange={(e)=>{var newlogincode = {...logincode}
-                                newlogincode[e.target.name] = e.target.value
-                                setlogincode(newlogincode)
-               }}/>
+              <input type="" className="form-control"  placeholder='Password' name="password" 
+              onChange={(e)=>{handleLogInChange(e)}}/>
             </div>
             <div className="mb-3 form-check" > 
               <input type="checkbox" className="form-check-input" id="exampleCheck1" />
@@ -66,10 +101,13 @@ const handleLogIn = ()=>{
               <a href='#' style={{float:"right"}}>Reset</a>
                </div>
                <div className="mb-3 form-check">
-            <button type="button" id= "b1" className="btn btn-dark"  onClick={()=>{handleLogIn()}}>Log In</button>
+            <button type="button" id= "b1" className="btn btn-dark" onClick={handleLogIn}>LogIn</button>
+            <button type="button"  className="btn btn-primary" onClick={handleUser}>GetUserINFO</button>
             <a href='#' style={{float:"right"}}> Forgot Password</a>
             </div>
-          </form></div> :<div style={{ backgroundColor: "whitesmoke" }}>
+          </form></div> :
+          
+          <div style={{ backgroundColor: "whitesmoke" }}>
             <h2>Register Form</h2>
             <form style={{padding:"0px 30px 0px 30px"}}> 
           
@@ -99,6 +137,7 @@ const handleLogIn = ()=>{
           </form></div>  }
         </div>
       </div>
+    </div>}
     </div>
   )
 }
@@ -111,7 +150,9 @@ const mapStateToProps = (state)=>{
 const mapDispatchToProps = ()=>{
   return{
     registers:RegisterAction,
-    emailVer:emailVerification
+    emailVer:emailVerification,
+    logIn:logInAction,
+    userInfo:userInfoAction
   }
 }
 export default  connect(mapStateToProps,mapDispatchToProps)(Login)
