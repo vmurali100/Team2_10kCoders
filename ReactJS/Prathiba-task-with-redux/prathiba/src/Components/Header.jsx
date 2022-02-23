@@ -12,10 +12,10 @@ export const Header = () => {
                         <Link className="nav-link active" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#">Login</Link>
+                        <Link className="nav-link" to="/login">Login</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Register</a>
+                        <Link className="nav-link" to="/register">Register</Link>
                     </li>
                 </ul>
             </div>
