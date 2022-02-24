@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { connect, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { emailVerification, logInAction, RegisterAction, userInfoAction } from '../Redux/Actions'
 
 
 
 const Login = ({state1,registers,emailVer,logIn,userInfo}) => {
+  let navigate = useNavigate()
   let dispatch = useDispatch()
   const [display, setdisplay] = useState(true)
   const [registervals, setregistervals] = 
@@ -44,15 +45,20 @@ const handleLogInChange = (e)=>{
   var newloginvals = {...loginvals}
   newloginvals[e.target.name] = e.target.value
   setloginvals(newloginvals)
+ 
 }
 
 const handleLogIn = async()=>{
   await dispatch(logIn(loginvals))
+  navigate("/profilepage")
+  
 }
 
+
+//GEtting State from Reducers
 const handleUser = ()=>{
   var profilevals = state1
-  dispatch(userInfo(profilevals))
+  
 }
 
   return (
@@ -102,7 +108,6 @@ const handleUser = ()=>{
                </div>
                <div className="mb-3 form-check">
             <button type="button" id= "b1" className="btn btn-dark" onClick={handleLogIn}>LogIn</button>
-            <button type="button"  className="btn btn-primary" onClick={handleUser}>GetUserINFO</button>
             <a href='#' style={{float:"right"}}> Forgot Password</a>
             </div>
           </form></div> :

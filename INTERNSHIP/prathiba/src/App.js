@@ -6,6 +6,9 @@ import { HomePage } from './Components/HomePage';
 import  Login  from './Components/Login-Register';
 import { Footer } from './Components/Footer';
 import {axios} from 'axios'
+import { ExamListPage } from './Components/ExamListPage';
+import  ProfilePage  from './Components/ProfilePage';
+
  
 
 function App() {
@@ -15,6 +18,8 @@ function App() {
     <Routes>
     <Route path="" element={<Login/>}></Route> 
       <Route path='homepage' element={<HomePage />}></Route>
+      <Route path='examlist' element={<ExamListPage />} />
+      <Route path='profilepage' element={<ProfilePage/>} />
     </Routes>
     <Footer />
  

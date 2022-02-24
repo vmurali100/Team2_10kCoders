@@ -10,8 +10,12 @@ export const rootReducer = (state,action)=>{
             return action.payload    
 
         case "PROFILEDATA":
-            console.log("Getting Data from LogIn Token")
+            console.log("Getting Data from LogInToken-Reducers")
             return action.payload
+
+        case "USERDETAILS":
+            console.log("Getting user details-Reducers")
+
     
         default:
             console.log("DEFAULT TYPE")
