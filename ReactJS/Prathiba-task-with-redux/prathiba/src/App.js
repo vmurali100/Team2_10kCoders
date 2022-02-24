@@ -17,7 +17,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
       </Routes>
     </div>
-  );
+  ); 
 }
 
 export default App;
