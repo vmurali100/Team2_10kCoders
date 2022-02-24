@@ -52,24 +52,33 @@ export const logInAction = (loginvals)=>{
             data:formData,
             headers:{"Content-Type": "multipart/form-data" }
         }).then((res)=>{
+            console.log(res.data)
             dispatch({type:"PROFILEDATA",payload:res.data.data})
         })
     }
 }
 
+
 export const userInfoAction = (profilevals)=>{
     return (dispatch)=>{
-        var headers = JSON.stringify([{server_key:"3w99V63pW7tJ7vavGXtCKo8cp"},{tokenu:profilevals.Token},{id:profilevals.Id},
-        {"Content-Type":"application/json"}])
-        console.log("HEader Vals",headers)
-        axios({
-            method:"post",
-            url:"https://e-prathibha.com/apis/profile",
-            headers:headers,
-            body:{"id":"1975"}
+        var id1 = profilevals.Id
+        var tokenu1 = profilevals.Token
+        var body = { id : profilevals.Id}
+        var url = "https://e-prathibha.com/apis/profile"
+        console.log("HEader Vals",id1,tokenu1)
+        axios.post(url,body,{
+            headers:{
+                id:id1,
+                tokenu:tokenu1,
+                server_key:"3w99V63pW7tJ7vavGXtCKo8cp",
+            }
         }).then((res)=>{
             console.log(res.data)
-        })
+            dispatch({type:"USERDETAILS",payload:res.data.data})
+            var data = res.data.data
+            console.log(data.name)
+            alert("Hii  :  "+data.name+"...Your Mail ID is  :  "+data.email+"... Your Mobile Number is  :  "+data.phone)
+        })   
     }
 }
 
