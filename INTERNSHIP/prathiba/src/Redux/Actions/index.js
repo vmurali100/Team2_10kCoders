@@ -34,7 +34,7 @@ export const emailVerification = (logincode)=>{
             data:data,
             headers : {"Content-Type":"application/json"}
         }).then((res)=>{
-            console.log(res.data)
+            console.log("EMAIL VERIFICATION DATA",res.data)
             dispatch({type:"EMAILVERIFICATION",payload:res.data.data})
         })
     
@@ -52,7 +52,7 @@ export const logInAction = (loginvals)=>{
             data:formData,
             headers:{"Content-Type": "multipart/form-data" }
         }).then((res)=>{
-            console.log(res.data)
+            console.log("Data From LogIn Action",res.data)
             dispatch({type:"PROFILEDATA",payload:res.data.data})
         })
     }
@@ -60,25 +60,40 @@ export const logInAction = (loginvals)=>{
 
 
 export const userInfoAction = (profilevals)=>{
-    return (dispatch)=>{
+    console.log("Profile Values",profilevals)
+    return async(dispatch)=>{
         var id1 = profilevals.Id
         var tokenu1 = profilevals.Token
         var body = { id : profilevals.Id}
         var url = "https://e-prathibha.com/apis/profile"
         console.log("HEader Vals",id1,tokenu1)
-        axios.post(url,body,{
+        await axios.post(url,body,{
             headers:{
                 id:id1,
                 tokenu:tokenu1,
                 server_key:"3w99V63pW7tJ7vavGXtCKo8cp",
             }
         }).then((res)=>{
-            console.log(res.data)
-            dispatch({type:"USERDETAILS",payload:res.data.data})
-            var data = res.data.data
-            console.log(data.name)
-            alert("Hii  :  "+data.name+"...Your Mail ID is  :  "+data.email+"... Your Mobile Number is  :  "+data.phone)
+            console.log("Data From userInfoAction In Actions ",res.data)
+            dispatch({type:"USERDETAILS",payload:res.data})
         })   
     }
 }
 
+
+export const getExamAction = (tokenvals)=>{
+    console.log("State Data",tokenvals)
+  return async()=>{
+    var url = "https://e-prathibha.com/apis/test_free_exam";
+    var body1 = {examId: 12,qno: 1 }
+    var headers1 = {tokenu:tokenvals.Token,id: tokenvals.Id,server_key: "3w99V63pW7tJ7vavGXtCKo8cp"}
+    await axios.post(
+        url,
+        { body: body1},
+        { headers: headers1}
+        ).then((res)=>{
+        console.log(res.data)
+    })
+      
+  } 
+}

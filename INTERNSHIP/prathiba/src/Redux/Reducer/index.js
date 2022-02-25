@@ -1,8 +1,8 @@
 export const rootReducer = (state,action)=>{
     switch (action.type) {
-        case "REGISTERED":
+        case "REGISTERED_RESPONSE":
             console.log("DATA REGISTERED SUCCESSFULLy")
-            return state
+            return action.payload
 
         case "EMAILVERIFICATION":
             console.log("EMAILVERIFICATION DONE SUCESSFULLY IN REDUCERS")
@@ -15,7 +15,7 @@ export const rootReducer = (state,action)=>{
 
         case "USERDETAILS":
             console.log("Getting user details-Reducers")
-
+            return action.payload
     
         default:
             console.log("DEFAULT TYPE")

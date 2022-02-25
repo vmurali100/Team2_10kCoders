@@ -8,6 +8,8 @@ import { Footer } from './Components/Footer';
 import {axios} from 'axios'
 import { ExamListPage } from './Components/ExamListPage';
 import  ProfilePage  from './Components/ProfilePage';
+import LoginRegister from './Components/Login-Register';
+
 
  
 
@@ -20,6 +22,7 @@ function App() {
       <Route path='homepage' element={<HomePage />}></Route>
       <Route path='examlist' element={<ExamListPage />} />
       <Route path='profilepage' element={<ProfilePage/>} />
+      <Route path='loginpage' element={<LoginRegister />} />
     </Routes>
     <Footer />
  
