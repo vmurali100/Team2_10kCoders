@@ -21,3 +21,9 @@ code {
   float:left;
   border:"1px solid black"
 }
+
+#examPage1{
+  border: 2px solid;
+  margin-top: 2px;
+  background-color: brown;
+}

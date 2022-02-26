@@ -97,3 +97,30 @@ export const getExamAction = (tokenvals)=>{
       
   } 
 }
+
+
+export const startExamAction = (tokenvals)=>{
+    return async(dispatch)=>{
+        var url = "https://e-prathibha.com/apis/start_exam_new?examId=12"
+        await axios.post(
+          url,
+          {},
+          {headers: {tokenu: tokenvals.Token,id: tokenvals.Id,server_key: "3w99V63pW7tJ7vavGXtCKo8cp",}}).
+          then((res)=>{
+            console.log(res.data)
+        })
+    }
+}
+
+
+export const finishExamAction = (tokenvals)=>{
+    return async(dispatch)=>{
+        var url = "https://e-prathibha.com/apis/finishExam"
+        var body = {examId: 12,qno: 1 }
+        axios.post(
+            url,
+            body,
+            {headers:{tokenu: tokenvals.Token,id: tokenvals.Id,server_key: "3w99V63pW7tJ7vavGXtCKo8cp"}},    
+        ).then((res)=>{console.log(res.data)})
+    }
+}
