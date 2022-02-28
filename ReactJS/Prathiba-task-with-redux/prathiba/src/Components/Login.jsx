@@ -3,30 +3,36 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { Login_Verification_Action } from '../Redux/actions';
 
-const Login = () => 
-{
+const Login = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
     //accessing state using useSelector hook
-    const loginStatus = useSelector(state => state.loginReducer.status);
-    const invalidMessage =useSelector(state => state.loginReducer.data);
 
-    const [userInput, setuserInput] = useState({email:"",password:""});
+    const token = useSelector(state => state.token);
+    const EmailVerification = useSelector(state => state);
+    console.log("token ",token)
+    // if (token !== undefined) {
+        var loginStatus = token.data.status
+        var invalidMessage = token.data.data
+    // }
+
+    console.log("login", loginStatus, invalidMessage);
+    console.log("login-Register", EmailVerification)
+    const [userInput, setuserInput] = useState({ email: "", password: "" });
 
     //User input Onchange handler
-    const handleOnChange = (event) =>
-    {
+    const handleOnChange = (event) => {
         let value = event.target.value;
         let name = event.target.name;
-        setuserInput({...userInput, [name] : value})
+        setuserInput({ ...userInput, [name]: value })
     }
 
     //submit button handler
-    const handleSubmit = ()=>
-    {
+    const handleSubmit = () => {
         dispatch(Login_Verification_Action(userInput)) //dispatching action with useDispatch hook
     }
+
 
     return (
         <div className="container">
@@ -43,11 +49,11 @@ const Login = () =>
                         {/* password input box */}
                         <div className="mb-3">
                             <label className="form-label">Password</label>
-                            <input type="password" name="password" value={userInput.password} className="form-control" onChange={handleOnChange}/>
+                            <input type="password" name="password" value={userInput.password} className="form-control" onChange={handleOnChange} />
                         </div>
 
                         {/* displaying error message when user provide invallid credentials */}
-                        {loginStatus === 400 ? <div id="invalid" className="form-text mb-3" style={{color:"red"}}>{invalidMessage}</div> : loginStatus === 200 && navigate("/user-dashboard") }
+                        {loginStatus === 400 ? <div id="invalid" className="form-text mb-3" style={{ color: "red" }}>{invalidMessage}</div> : loginStatus === 200 && navigate("/user-dashboard")}
 
 
                         {/* submit button */}
