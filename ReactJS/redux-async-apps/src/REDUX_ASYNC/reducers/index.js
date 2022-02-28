@@ -15,6 +15,6 @@ export default function rootReducer(state=defaultstate , action){
             return action.payload;
     
         default:
-            return state.users;
+            return action.payload;
     }
 }

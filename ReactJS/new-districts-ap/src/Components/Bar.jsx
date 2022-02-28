@@ -13,6 +13,8 @@ const navigate = useNavigate()
    setUser(localUser) 
    setAdmin(localAdmin)
    console.log(user)
+
+   
    ;},[])
   
     const logOut =()=>{

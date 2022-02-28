@@ -8,9 +8,8 @@ class Users extends Component{
         return(
             <div>
                 <button onClick={()=>{this.props.getAllUsersFunc()}}>GetALLUSERS</button>
-                {this.props.Users.map((x)=>{
-                         return <h1 key={x.id}>{x.name}</h1>
-                })}
+               
+              
             </div>
         )
     }
