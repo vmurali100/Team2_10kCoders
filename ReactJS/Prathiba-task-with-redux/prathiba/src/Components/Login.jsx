@@ -11,13 +11,13 @@ const Login = () => {
 
     const token = useSelector(state => state.token);
     const EmailVerification = useSelector(state => state);
-    console.log("token ",token)
-    // if (token !== undefined) {
-        var loginStatus = token.data.status
-        var invalidMessage = token.data.data
-    // }
+    // console.log("token ",token)
+    // // if (token !== undefined) {
+    //     var loginStatus = token.data.status
+    //     var invalidMessage = token.data.data
+    // // }
 
-    console.log("login", loginStatus, invalidMessage);
+    // console.log("login", loginStatus, invalidMessage);
     console.log("login-Register", EmailVerification)
     const [userInput, setuserInput] = useState({ email: "", password: "" });
 
@@ -53,7 +53,7 @@ const Login = () => {
                         </div>
 
                         {/* displaying error message when user provide invallid credentials */}
-                        {loginStatus === 400 ? <div id="invalid" className="form-text mb-3" style={{ color: "red" }}>{invalidMessage}</div> : loginStatus === 200 && navigate("/user-dashboard")}
+                        {/* {loginStatus === 400 ? <div id="invalid" className="form-text mb-3" style={{ color: "red" }}>{invalidMessage}</div> : loginStatus === 200 && navigate("/user-dashboard")} */}
 
 
                         {/* submit button */}

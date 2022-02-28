@@ -6,7 +6,7 @@ import { EmailVerification } from './Components/EmailVerification';
 import { Header } from './Components/Header';
 import Login from './Components/Login';
 import { Profile } from './Components/Profile';
-import { Register } from './Components/Register';
+import  Register  from './Components/Register';
 import { UserDashboard } from './Components/UserDashboard';
 
 function App() {

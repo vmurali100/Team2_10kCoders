@@ -50,14 +50,7 @@ export const Register_Verification_Action = (userInput) =>
             data : bodyFormData,
             headers: { "Content-Type": "multipart/form-data" }
         }).then((res)=>{
-            if(res.data.status === 200)
-            {
-                var code = res.data.data.slice(-6,-1);
-                dispatch({
-                    type:"Register_Verification",
-                    payload:{status: 200 ,data: code}
-                })
-            }
+            
             dispatch({
                 type:"Register_Verification",
                 payload:{data: res.data}

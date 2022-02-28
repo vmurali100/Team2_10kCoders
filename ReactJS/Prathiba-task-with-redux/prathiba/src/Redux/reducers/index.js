@@ -1,7 +1,9 @@
 const initialState = 
 {
-    token: { data: { status: "", data: {} } },
-    EmailVerificationCode : {data:{status:"",data:""}}
+    // token: { data: { status: "", data: {} } },
+    // EmailVerificationCode : {data:{status:"",data:""}}
+    token:{},
+    EmailVerificationCode : {}
 }
 
 export const reducer = (state = initialState, action) => 
@@ -12,7 +14,9 @@ export const reducer = (state = initialState, action) =>
        
         case "Register_Verification":
             console.log("Register_Verification",action.payload);
-            return { ...state, EmailVerificationCode: action.payload};
+            const obj = { ...state, EmailVerificationCode: action.payload};
+            console.log("new obj",obj);
+            return obj;
 
         case "Login_Verification":
             console.log("login_Verification",action.payload);
@@ -23,3 +27,5 @@ export const reducer = (state = initialState, action) =>
             return state;
     }
 }
+
+

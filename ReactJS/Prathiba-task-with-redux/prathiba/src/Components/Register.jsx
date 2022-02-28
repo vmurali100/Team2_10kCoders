@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Register_Verification_Action } from '../Redux/actions';
 import { EmailVerification } from './EmailVerification';
 
-export const Register = () => {
+const Register = () => {
   const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -100,3 +100,5 @@ export const Register = () => {
         </div>
     )
 }
+
+export default Register;
