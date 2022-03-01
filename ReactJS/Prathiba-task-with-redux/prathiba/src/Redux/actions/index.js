@@ -18,7 +18,7 @@ export const Login_Verification_Action = (userInput) =>
         }).then((res)=>{
             if(res.data.status === 200)
             {
-                localStorage.setItem("loginDetails",JSON.stringify(res.data.data));
+                localStorage.setItem("loginDetails",JSON.stringify(res.data.status));
             }
             dispatch({
                 type:"Login_Verification",
@@ -29,6 +29,12 @@ export const Login_Verification_Action = (userInput) =>
         })
     }
     
+}
+export const Remove_Token_Action = () =>
+{
+    return {
+        type : "Remove_Token"
+    }
 }
 
 export const Register_Verification_Action = (userInput) =>

@@ -8,42 +8,7 @@ class Questions{
 }
 var quizObj;
 var questions;
-// let cricket = [
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],"")
-// ]
-// let cricket = [
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],"")
-// ]
-// let cricket = [
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],""),
-//     new Questions("",["","","",""],"")
-// ]
+
 function topic()
 {
     var select = document.getElementById("selectedTopic");

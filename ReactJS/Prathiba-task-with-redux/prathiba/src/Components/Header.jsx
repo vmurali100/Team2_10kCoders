@@ -1,29 +1,52 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "../Images/prathiba-logo.webp"
+import { Remove_Token_Action } from '../Redux/actions';
 
 export const Header = () => {
 
     const navigate = useNavigate();
-    const [userLoggedIn, setIsUserLoggedIn] = useState(JSON.parse(localStorage.getItem("loginDetails")));
+    const dispatch = useDispatch();
+    const token = useSelector(state => state.token.data.status);
+
+    console.log("header-token", token);
+
+    const [userLoggedIn, setIsUserLoggedIn] = useState();
+    useEffect(() => {
+        let ls = JSON.parse(localStorage.getItem("loginDetails"))
+        if (ls === null) {
+            ls = 0;
+        }
+        if (ls === 200) {
+            setIsUserLoggedIn(true);
+        }
+        else {
+            setIsUserLoggedIn(false);
+        }
+        console.log("useEffect  token",token , ls);
+    }, [token])
+    // (JSON.parse(localStorage.getItem("loginDetails")));
     // const EmailVerification = useSelector(state => state.registerReducer.EmailVerification);
     // console.log("Inheader comp ",EmailVerification)
-    useEffect(() => {
-    
-        window.addEventListener('storage', () => {
-          setIsUserLoggedIn(JSON.parse(localStorage.getItem("loginDetails")) || [])   
-        })
-    })
-    
-    
+    // useEffect(() => {
 
-    const handleLogout = ()=>
-    {
+    //     window.addEventListener('storage', () => {
+    //       setIsUserLoggedIn(JSON.parse(localStorage.getItem("loginDetails")) || [])   
+    //     })
+    // })
+
+
+
+    const handleLogout = () => {
         localStorage.removeItem("loginDetails");
-        setIsUserLoggedIn({});
-        navigate("/");
+        dispatch(Remove_Token_Action());
+        // if (userLoggedIn === false) {
+            navigate("/");
+        // }
     }
+
+
     return (
         <div className="wrapper">
             <div className="container cont">
@@ -60,5 +83,6 @@ export const Header = () => {
                 }
             </div>
         </div>
+
     )
 }

@@ -9,11 +9,14 @@ const Register = () => {
     const dispatch = useDispatch();
 
     // accessing state using useSelector hook
-    // const RegisterStatus = useSelector(state => state.registerReducer.EmailVerification.data.status);
-    // const invalidMessage =useSelector(state => state.registerReducer.EmailVerification.data.data);
-    const EmailVerification = useSelector(state => state);
-    const RegisterStatus = "";
-    const invalidMessage = "";
+    const RegisterStatus = useSelector(state =>{
+        console.log(state)
+        return  state.EmailVerificationCode.data.status
+    });
+    const invalidMessage =useSelector(state => state.EmailVerificationCode.data.data);
+    // const EmailVerification = useSelector(state => state);
+    // const RegisterStatus = "";
+    // const invalidMessage = "";
 
     
 
@@ -27,21 +30,21 @@ const Register = () => {
         setuserInput({...userInput, [name] : value})
     }
 
-    const handleOnFileChange = (event) =>
-    {
-        if (event.target.files && event.target.files[0]) 
-        {
-          let img = event.target.files[0];
-          setuserInput({...userInput, [event.target.name]: img})
-        }
-    };
+    // const handleOnFileChange = (event) =>
+    // {
+    //     if (event.target.files && event.target.files[0]) 
+    //     {
+    //       let img = event.target.files[0];
+    //       setuserInput({...userInput, [event.target.name]: img})
+    //     }
+    // };
 
     //submit button handler
     const handleSubmit = ()=>
     {
         dispatch(Register_Verification_Action(userInput)) //dispatching action with useDispatch hook
         
-        console.log("Register", EmailVerification)
+        console.log("Register comp", EmailVerification)
         // console.log(userInput)
     }
 
@@ -50,6 +53,7 @@ const Register = () => {
             <div className="row">
                 <div className="col"></div>
                 <div className="col">
+                <div className='mb-3'><h2>Registration Form</h2></div>
                     <form>
                         {/* email input box */}
                         <div className="mb-3">
@@ -82,17 +86,17 @@ const Register = () => {
                         </div>
 
                         {/* mobile number input box */}
-                        <div className="mb-3">
+                        {/* <div className="mb-3">
                             <label className="form-label">Choose Photo</label>
                             <input type="file" name="photo" className="form-control" onChange={handleOnFileChange}/>
-                        </div>
+                        </div> */}
 
                         {/* displaying error message when user provide invallid credentials */}
-                        {/* {RegisterStatus === 400 ? <div id="invalid" className="form-text mb-3" style={{color:"red"}}>{invalidMessage}</div> : RegisterStatus === 200 && navigate("/email-verification") } */}
+                        {RegisterStatus && RegisterStatus !== 200 ? <div id="invalid" className="form-text mb-3" style={{color:"red"}}>{invalidMessage}</div> : RegisterStatus === 200 && navigate("/email-verification") }
 
 
                         {/* submit button */}
-                        <button type="button" className="btn btn-primary" onClick={handleSubmit}>Submit</button>
+                        <div className='mb-5'><button type="button" className="btn btn-primary" onClick={handleSubmit}>Submit</button></div>
                     </form>
                 </div>
                 <div className="col"></div>

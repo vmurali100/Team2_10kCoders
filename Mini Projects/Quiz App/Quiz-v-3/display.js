@@ -11,6 +11,7 @@ function display()
         var questionArea = document.getElementById("questionArea");
         
         questionArea.innerHTML = quizData.text;
+        
         quizData.choice.forEach((option,i) =>
         {
             var optionArea = document.getElementById("choice"+i);
