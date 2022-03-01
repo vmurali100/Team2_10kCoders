@@ -11,9 +11,9 @@ const Register = () => {
     // accessing state using useSelector hook
     const RegisterStatus = useSelector(state =>{
         console.log(state)
-        return  state.EmailVerificationCode.data.status
+        return  state.register.data.status
     });
-    const invalidMessage =useSelector(state => state.EmailVerificationCode.data.data);
+    const invalidMessage =useSelector(state => state.register.data.data);
     // const EmailVerification = useSelector(state => state);
     // const RegisterStatus = "";
     // const invalidMessage = "";
