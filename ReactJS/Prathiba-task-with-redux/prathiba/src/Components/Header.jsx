@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "../Images/prathiba-logo.webp"
-import { Remove_Token_Action, User_Data_Action } from '../Redux/actions';
+import { Exam_List_Action, Remove_Token_Action, User_Data_Action } from '../Redux/actions';
 
 export const Header = () => {
 
@@ -23,6 +23,7 @@ export const Header = () => {
             const data = JSON.parse(localStorage.getItem("loginDetails"));
             console.log("profile token data", data);
             dispatch(User_Data_Action(data));
+            dispatch(Exam_List_Action(data));
             setIsUserLoggedIn(true);
         }
         else {
@@ -33,14 +34,12 @@ export const Header = () => {
 
 
 
-
-
-
-
     const handleLogout = () => {
         localStorage.removeItem("loginStatus");
         localStorage.removeItem("loginDetails");
         localStorage.removeItem("userDetails");
+        localStorage.removeItem("examList");
+        localStorage.removeItem("startExam");
         dispatch(Remove_Token_Action());
         navigate("/");
     }

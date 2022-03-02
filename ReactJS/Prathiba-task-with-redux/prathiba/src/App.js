@@ -9,21 +9,28 @@ import { Header } from './Components/Header';
 import Login from './Components/Login';
 import { Profile } from './Components/Profile';
 import Register from './Components/Register';
-import { UserDashboard } from './Components/UserDashboard';
+import { Examlist } from './Components/Examlist';
+import { Startexam } from './Components/Startexam';
+import { FinishExam } from './Components/FinishExam';
 
-function App() {
-
-
+function App() 
+{
+  
   return (
     <div>
       <Header />
       <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/email-verification" element={<EmailVerification />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/exam-list" element={<UserDashboard />} />
-          <Route path="*" element={<ErrorPage />}/>
+        
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/exam-list" element={<Examlist />} />
+            <Route path="/start-exam/:id" element={<Startexam/>} />
+            <Route path="/finish-exam/:id" element={<FinishExam/>} />
+         
+            <Route path="/" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/email-verification" element={<EmailVerification />} />
+          
+        {/* <Route path="*" element={<ErrorPage />} /> */}
       </Routes>
       <Footer />
     </div>

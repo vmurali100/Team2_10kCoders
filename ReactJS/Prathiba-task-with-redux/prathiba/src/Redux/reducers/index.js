@@ -3,7 +3,9 @@ const initialState =
     token: { data: { status: "", data: {} } },
     register: { data: { status: "", data: "" } },
     emailVerification: { data: { status: "", data:"" }},
-    userData: {}
+    userData: {},
+    examList : [],
+    startExam:[]
     // token:{},
     // EmailVerificationCode : {}
 }
@@ -35,6 +37,12 @@ export const reducer = (state = initialState, action) => {
 
         case "User_Data":
             return {...state, userData: action.payload};
+
+        case "Exam_List":
+            return {...state, examList: action.payload};
+
+        case "Start_Exam":
+            return {...state, startExam: action.payload}
         default:
             console.log("default")
             return state;
