@@ -49,7 +49,7 @@ const Register = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container" style={{marginBottom:50+"px"}}>
             <div className="row">
                 <div className="col"></div>
                 <div className="col">
@@ -82,7 +82,7 @@ const Register = () => {
                         {/* mobile number input box */}
                         <div className="mb-3">
                             <label className="form-label">Mobile Number</label>
-                            <input type="number" name="mobile" value={userInput.mobile} className="form-control" onChange={handleOnChange}/>
+                            <input type="text" name="mobile" value={userInput.mobile} className="form-control" onChange={handleOnChange}/>
                         </div>
 
                         {/* mobile number input box */}

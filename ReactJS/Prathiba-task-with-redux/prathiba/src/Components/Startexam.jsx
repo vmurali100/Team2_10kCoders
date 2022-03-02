@@ -38,7 +38,7 @@ export const Startexam = () => {
    
 
     return (
-        <div className="container">
+        <div className="container " style={{marginBottom:50+"px"}}>
             {startExamData && <h1>ExamId: {startExamData && startExamData.data.exam[0].Exam.id}</h1>}
             <button className="btn btn-primary" onClick={handleFinishExam}>Finish Exam</button>
             {
