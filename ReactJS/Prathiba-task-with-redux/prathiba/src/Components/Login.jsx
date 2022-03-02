@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
-import { Login_Verification_Action } from '../Redux/actions';
+import { Login_Verification_Action, User_Data_Action } from '../Redux/actions';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -10,13 +10,11 @@ const Login = () => {
     //accessing state using useSelector hook
 
     const token = useSelector(state => state.token);
-    // console.log("token ",token)
-    // // if (token !== undefined) {
-        var loginStatus = token.data.status
-        var invalidMessage = token.data.data
+    var invalidMessage = token.data.data
+    var loginStatus = token.data.status
     // // }
 
-    // console.log("login", loginStatus, invalidMessage);
+    console.log("login", loginStatus, invalidMessage);
     // console.log("login-Register", EmailVerification)
     const [userInput, setuserInput] = useState({ email: "", password: "" });
 
@@ -31,6 +29,10 @@ const Login = () => {
     const handleSubmit = () => {
         dispatch(Login_Verification_Action(userInput)) //dispatching action with useDispatch hook
     }
+    // if(loginStatus === 200)
+    //     {
+    //         dispatch(User_Data_Action(invalidMessage));
+    //     }
 
 
     return (

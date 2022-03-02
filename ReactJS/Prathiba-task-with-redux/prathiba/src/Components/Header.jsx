@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from "../Images/prathiba-logo.webp"
-import { Remove_Token_Action } from '../Redux/actions';
+import { Remove_Token_Action, User_Data_Action } from '../Redux/actions';
 
 export const Header = () => {
 
@@ -14,36 +14,35 @@ export const Header = () => {
 
     const [userLoggedIn, setIsUserLoggedIn] = useState();
     useEffect(() => {
-        let ls = JSON.parse(localStorage.getItem("loginDetails"))
+        let ls = JSON.parse(localStorage.getItem("loginStatus"))
+
         if (ls === null) {
             ls = 0;
         }
         if (ls === 200) {
+            const data = JSON.parse(localStorage.getItem("loginDetails"));
+            console.log("profile token data", data);
+            dispatch(User_Data_Action(data));
             setIsUserLoggedIn(true);
         }
         else {
             setIsUserLoggedIn(false);
         }
-        console.log("useEffect  token",token , ls);
+        console.log("useEffect  token", token, ls);
     }, [token])
-    // (JSON.parse(localStorage.getItem("loginDetails")));
-    // const EmailVerification = useSelector(state => state.registerReducer.EmailVerification);
-    // console.log("Inheader comp ",EmailVerification)
-    // useEffect(() => {
 
-    //     window.addEventListener('storage', () => {
-    //       setIsUserLoggedIn(JSON.parse(localStorage.getItem("loginDetails")) || [])   
-    //     })
-    // })
+
+
+
 
 
 
     const handleLogout = () => {
+        localStorage.removeItem("loginStatus");
         localStorage.removeItem("loginDetails");
+        localStorage.removeItem("userDetails");
         dispatch(Remove_Token_Action());
-        // if (userLoggedIn === false) {
-            navigate("/");
-        // }
+        navigate("/");
     }
 
 
@@ -59,10 +58,10 @@ export const Header = () => {
                             <Link className="nav-link active" to="/">Home</Link>
                         </li> */}
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">Login</Link>
+                            <Link className="nav-link" to="/"><button className="btn btn-primary">Login</button></Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/register">Register</Link>
+                            <Link className="nav-link" to="/register"><button className="btn btn-primary">Register</button></Link>
                         </li>
                     </ul>
                 }
@@ -74,10 +73,10 @@ export const Header = () => {
                             <Link className="nav-link active" to="/">Home</Link>
                         </li> */}
                         <li className="nav-item">
-                            <Link className="nav-link" to="/profile">Profile</Link>
+                            <Link to="/profile"><button className="btn btn-primary">Profile</button></Link>
                         </li>
                         <li className="nav-item">
-                            <button className="nav-link" onClick={handleLogout}>Logout</button>
+                            <button className="btn btn-primary" onClick={handleLogout}>Logout</button>
                         </li>
                     </ul>
                 }

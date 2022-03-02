@@ -16,7 +16,8 @@ export const Login_Verification_Action = (userInput) => {
             headers: { "Content-Type": "multipart/form-data" }
         }).then((res) => {
             if (res.data.status === 200) {
-                localStorage.setItem("loginDetails", JSON.stringify(res.data.status));
+                localStorage.setItem("loginStatus", JSON.stringify(res.data.status));
+                localStorage.setItem("loginDetails",JSON.stringify(res.data.data));
             }
             dispatch({
                 type: "Login_Verification",
@@ -27,6 +28,14 @@ export const Login_Verification_Action = (userInput) => {
         })
     }
 
+}
+export const Add_Token_Action = () =>
+{
+    const data = JSON.parse(localStorage.getItem("loginDetails"));
+    return {
+        type: "Login_Verification",
+        payload: data
+    }
 }
 export const Remove_Token_Action = () => {
     return {
@@ -93,7 +102,8 @@ export const Email_Verification_Action = (code) => {
         {
             if (res.data.status === 200) 
             {
-                localStorage.setItem("loginDetails", JSON.stringify(res.data.status));
+                localStorage.setItem("loginStatus", JSON.stringify(res.data.status));
+                localStorage.setItem("loginDetails",JSON.stringify(res.data.data));
                 alert(res.data.data.message);
             }
             dispatch({
@@ -101,6 +111,39 @@ export const Email_Verification_Action = (code) => {
                 payload: { data: res.data }
             })
             console.log("Email verification action", res.data);
+        }).catch((err) => {
+            console.log("err", err.message);
+        })
+    }
+}
+export const User_Data_Action = (userData) => {
+    console.log("UserData action",userData);
+
+    const url = "https://e-prathibha.com/apis/profile";
+    const body = { id: userData.Id };
+    const header = 
+    {
+        id : userData.Id,
+        tokenu : userData.Token,
+        server_key : "3w99V63pW7tJ7vavGXtCKo8cp"
+    }
+    return (dispatch) => 
+    {
+        axios({
+            method: "post",
+            url: url,
+            data: body,
+            headers: header
+        }).then((res) => 
+        {
+            if (res.data.status === 200) 
+            {
+                localStorage.setItem("userDetails",JSON.stringify(res.data.data));
+            }
+            dispatch({
+                type: "User_Data",
+                payload: { data: res.data.data}
+            })
         }).catch((err) => {
             console.log("err", err.message);
         })
