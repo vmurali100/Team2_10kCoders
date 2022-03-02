@@ -68,11 +68,11 @@ export const Header = () => {
                 {
                     userLoggedIn
                     &&
-                    <ul className="nav justify-content-end">
-                        {/* <li className="nav-item">
-                            <Link className="nav-link active" to="/">Home</Link>
-                        </li> */}
-                        <li className="nav-item">
+                    <ul className="nav">
+                        <li className="nav-item ml-3">
+                            <Link to="/exam-list"><button className="btn btn-primary">Exam List</button></Link>
+                        </li>
+                        <li className="nav-item ml-3">
                             <Link to="/profile"><button className="btn btn-primary">Profile</button></Link>
                         </li>
                         <li className="nav-item">

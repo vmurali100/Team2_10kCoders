@@ -55,7 +55,7 @@ const Login = () => {
                         </div>
 
                         {/* displaying error message when user provide invallid credentials */}
-                        {loginStatus === 400 ? <div id="invalid" className="form-text mb-3" style={{ color: "red" }}>{invalidMessage}</div> : loginStatus === 200 && navigate("/user-dashboard")}
+                        {loginStatus === 400 ? <div id="invalid" className="form-text mb-3" style={{ color: "red" }}>{invalidMessage}</div> : loginStatus === 200 && navigate("/exam-list")}
 
 
                         {/* submit button */}
