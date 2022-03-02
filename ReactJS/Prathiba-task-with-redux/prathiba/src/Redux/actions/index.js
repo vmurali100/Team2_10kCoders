@@ -52,21 +52,21 @@ export const Register_Verification_Action = (userInput) => {
             data: bodyFormData,
             headers: { "Content-Type": "multipart/form-data" }
         }).then((res) => {
-            console.log("action status", res.data.status);
-            if (res.data.status === 200) {
-                var code = res.data.data.slice(-7, -1);
-                dispatch({
-                    type: "Register_Verification",
-                    payload: { data: { status: 200, data: code } }
-                })
-            }
-            else {
-                console.log("out of if condition")
+            // console.log("action status", res.data.status);
+            // if (res.data.status === 200) {
+            //     var code = res.data.data.slice(-7, -1);
+            //     dispatch({
+            //         type: "Register_Verification",
+            //         payload: { data: { status: 200, data: code } }
+            //     })
+            // }
+            // else {
+            //     console.log("out of if condition")
                 dispatch({
                     type: "Register_Verification",
                     payload: { data: res.data }
                 })
-            }
+            // }
 
 
 
@@ -78,16 +78,24 @@ export const Register_Verification_Action = (userInput) => {
 }
 
 export const Email_Verification_Action = (code) => {
-    console.log("emailverification action :",code);
+    console.log("emailverification action",code);
+    console.log("code length ",code.length);
     const url = "https://e-prathibha.com/apis/verifyEmail";
     const body = { reg_code: code };
-    return (dispatch) => {
+    return (dispatch) => 
+    {
         axios({
             method: "post",
             url: url,
             data: body,
-            headers: { "Content-Type": "multipart/form-data" }
-        }).then((res) => {
+            headers: { "Content-Type": 'application/json' }
+        }).then((res) => 
+        {
+            if (res.data.status === 200) 
+            {
+                localStorage.setItem("loginDetails", JSON.stringify(res.data.status));
+                alert(res.data.data.message);
+            }
             dispatch({
                 type: "Email_Verification",
                 payload: { data: res.data }

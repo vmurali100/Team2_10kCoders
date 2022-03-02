@@ -2,7 +2,7 @@ const initialState =
 {
     token: { data: { status: "", data: {} } },
     register: { data: { status: "", data: "" } },
-    emailVerification: { data: { status: "", data: "" } }
+    emailVerification: { data: { status: "", data:"" }}
     // token:{},
     // EmailVerificationCode : {}
 }
@@ -22,7 +22,15 @@ export const reducer = (state = initialState, action) => {
 
         case "Email_Verification":
             console.log("Email verification reducer",action.payload);
-            return { ...state, emailVerification: action.payload};
+            console.log("Email verification reducer status",action.payload.data.status);
+            if(action.payload.data.status === 200)
+            {
+                return { ...state, token: action.payload, emailVerification: action.payload };
+            }
+            else
+            {
+                return { ...state, emailVerification: action.payload};
+            }
 
         default:
             console.log("default")

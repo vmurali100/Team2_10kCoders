@@ -8,8 +8,18 @@ export const EmailVerification = () => {
   const navigate = useNavigate();
 
   const verification = useSelector(state => state.emailVerification);
+  console.log("verification: ",verification)
   var status = verification.data.status;
-  var message = verification.data.data;
+  var message ;
+  if(status === 200)
+  {
+    navigate("/user-dashboard");
+  }
+  else{
+    message = verification.data.data;
+  }
+  console.log("verification-status: ",status);
+  console.log("verification-message: ",message);
 
   const code = useSelector(state => state.register.data.data);
   const [userInput,setUserInput] = useState(""); 
@@ -45,7 +55,7 @@ export const EmailVerification = () => {
             </div>
 
             {/* displaying error message when user provide invallid credentials */}
-            {status !== 200 ? <div id="invalid" className="form-text mb-3" style={{color:"red"}}>{message}</div> : status === 200 && (alert({message}) && navigate("/")) }
+            {status !== 200 && <div id="invalid" className="form-text mb-3" style={{color:"red"}}>{message}</div> }
 
             <button type="button" className="btn btn-primary alignCenter" onClick = {handleVerify}>Verify</button>
 
