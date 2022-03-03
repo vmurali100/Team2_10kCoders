@@ -19,20 +19,13 @@ export const reducer = (state = initialState, action) =>
             return {...state, token: { data: { status: "", data: {} } }};
         
         case "Remove_Email_Verification":
-            return {...state, emailVerification: { data: { status: "", data:"" }}};
+            return {...state, emailVerification: { data: { status: "", data:"" }}, register: { data: { status: "", data: "" } }};
 
         case "Register_Verification":
             return { ...state, register: action.payload };
 
         case "Email_Verification":
-            if(action.payload.status === 200)
-            {
-                return {...state, emailVerification: { data: { status: 200, data:"" }}};
-            }
-            else
-            {
-                return { ...state, emailVerification: action.payload};
-            }
+            return { ...state, emailVerification: action.payload};
             
         case "User_Data":
             return {...state, userData: action.payload};

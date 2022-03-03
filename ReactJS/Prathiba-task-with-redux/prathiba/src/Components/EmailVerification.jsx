@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { Email_Verification_Action } from '../Redux/actions';
+import { Email_Verification_Action, Remove_Email_Verification_Action } from '../Redux/actions';
 
 export const EmailVerification = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,9 @@ export const EmailVerification = () => {
   var status = verification.data.status;
   var message;
 
-  if (status === 200) {
+  if (status === 200) 
+  {
+    dispatch(Remove_Email_Verification_Action());
     navigate("/");
   }
   else {

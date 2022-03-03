@@ -95,6 +95,12 @@ export const Email_Verification_Action = (code) =>
     }
 }
 
+export const Remove_Email_Verification_Action = () => {
+    return {
+        type: "Remove_Email_Verification"
+    }
+}
+
 
 export const User_Data_Action = (userData) => 
 {
