@@ -1,21 +1,17 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { User_Data_Action } from '../Redux/actions'
 
 
 export const Profile = () => {
 
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  
   const userData = JSON.parse(localStorage.getItem("userDetails"));
-  console.log("user-data profile comp: ", userData);
 
   const handleBackButton= () =>
   {
     navigate(-1)
   }
+  
   return (
     <div className='container'>
       <div className='mb-3'><h1 className='alignCenter'>Profile</h1></div>

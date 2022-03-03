@@ -9,10 +9,14 @@ export const FinishExam = () =>
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const loginDetails = JSON.parse(localStorage.getItem("loginDetails"));
-    useEffect(()=>{
+
+    useEffect(()=>
+    {
         dispatch(Finish_Exam_Action(loginDetails,id));
         navigate("/exam-list");
+
     },[])
+    
     return (
         <div>
             finish exam

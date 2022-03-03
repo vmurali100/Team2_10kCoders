@@ -12,9 +12,9 @@ const Login = () => {
     const token = useSelector(state => state.token);
     var invalidMessage = token.data.data
     var loginStatus = token.data.status
-    // // }
+    
 
-    console.log("login", loginStatus, invalidMessage);
+    
     // console.log("login-Register", EmailVerification)
     const [userInput, setuserInput] = useState({ email: "", password: "" });
 
@@ -29,10 +29,6 @@ const Login = () => {
     const handleSubmit = () => {
         dispatch(Login_Verification_Action(userInput)) //dispatching action with useDispatch hook
     }
-    // if(loginStatus === 200)
-    //     {
-    //         dispatch(User_Data_Action(invalidMessage));
-    //     }
 
 
     return (

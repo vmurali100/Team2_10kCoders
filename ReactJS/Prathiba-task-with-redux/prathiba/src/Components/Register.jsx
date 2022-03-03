@@ -9,17 +9,11 @@ const Register = () => {
     const dispatch = useDispatch();
 
     // accessing state using useSelector hook
-    const RegisterStatus = useSelector(state =>{
-        console.log(state)
+    const RegisterStatus = useSelector(state =>
+    {
         return  state.register.data.status
     });
     const invalidMessage =useSelector(state => state.register.data.data);
-    // const EmailVerification = useSelector(state => state);
-    // const RegisterStatus = "";
-    // const invalidMessage = "";
-
-    
-
     const [userInput, setuserInput] = useState({email:"", name:"", password:"", cpassword:"", mobile:"", photo:""});
 
     //User input Onchange handler
@@ -30,22 +24,10 @@ const Register = () => {
         setuserInput({...userInput, [name] : value})
     }
 
-    // const handleOnFileChange = (event) =>
-    // {
-    //     if (event.target.files && event.target.files[0]) 
-    //     {
-    //       let img = event.target.files[0];
-    //       setuserInput({...userInput, [event.target.name]: img})
-    //     }
-    // };
-
     //submit button handler
     const handleSubmit = ()=>
     {
         dispatch(Register_Verification_Action(userInput)) //dispatching action with useDispatch hook
-        
-        console.log("Register comp", EmailVerification)
-        // console.log(userInput)
     }
 
     return (
@@ -85,7 +67,7 @@ const Register = () => {
                             <input type="text" name="mobile" value={userInput.mobile} className="form-control" onChange={handleOnChange}/>
                         </div>
 
-                        {/* mobile number input box */}
+                        {/* photo input box */}
                         {/* <div className="mb-3">
                             <label className="form-label">Choose Photo</label>
                             <input type="file" name="photo" className="form-control" onChange={handleOnFileChange}/>

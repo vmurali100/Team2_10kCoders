@@ -7,21 +7,13 @@ export const Startexam = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
     const loginDetails = JSON.parse(localStorage.getItem("loginDetails"));
-
     const startExamData = useSelector(state => state.startExam.data);
-    useEffect(() => {
+
+    useEffect(() => 
+    {
         dispatch(Start_Exam_Action(loginDetails, id))
-        // if (startExamData)
-        // {
-        //     var alert = startExamData.alert;
-        //     console.log(alert);
-        //     if(alert)
-        //     {
-        //         window.alert(alert);
-        //     }
-        // }
+        
     }, [])
     
 
@@ -39,7 +31,10 @@ export const Startexam = () => {
 
     return (
         <div className="container " style={{marginBottom:50+"px"}}>
-            {startExamData && <h1>ExamId: {startExamData && startExamData.data.exam[0].Exam.id}</h1>}
+            <h3>Start Exam </h3>
+            {
+                startExamData && <h2>ExamId: {startExamData && startExamData.data.exam[0].Exam.id}</h2>
+            }
             <button className="btn btn-primary" onClick={handleFinishExam}>Finish Exam</button>
             {
                 startExamData !== undefined && startExamData  && startExamData.data.exam.map((e) => 

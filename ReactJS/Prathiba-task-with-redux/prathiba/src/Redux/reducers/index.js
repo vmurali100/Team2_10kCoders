@@ -6,30 +6,34 @@ const initialState =
     userData: {},
     examList : [],
     startExam:[]
-    // token:{},
-    // EmailVerificationCode : {}
 }
 
-export const reducer = (state = initialState, action) => {
-    console.log("action", action.payload);
-    switch (action.type) {
+export const reducer = (state = initialState, action) => 
+{
+    switch (action.type) 
+    {
         case "Login_Verification":
             return { ...state, token: action.payload };
 
         case "Remove_Token":
             return {...state, token: { data: { status: "", data: {} } }};
+        
+        case "Remove_Email_Verification":
+            return {...state, emailVerification: { data: { status: "", data:"" }}};
 
         case "Register_Verification":
-            console.log("Reducer",action.payload);
             return { ...state, register: action.payload };
 
         case "Email_Verification":
-            console.log("Email verification reducer",action.payload);
-            console.log("Email verification reducer status",action.payload.data.status);
+            if(action.payload.status === 200)
+            {
+                return {...state, emailVerification: { data: { status: 200, data:"" }}};
+            }
+            else
+            {
+                return { ...state, emailVerification: action.payload};
+            }
             
-            return { ...state, emailVerification: action.payload};
-            
-
         case "User_Data":
             return {...state, userData: action.payload};
 
@@ -38,8 +42,8 @@ export const reducer = (state = initialState, action) => {
 
         case "Start_Exam":
             return {...state, startExam: action.payload}
+
         default:
-            console.log("default")
             return state;
     }
 }

@@ -9,19 +9,20 @@ export const Header = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const token = useSelector(state => state.token.data.status);
-
-    console.log("header-token", token);
-
     const [userLoggedIn, setIsUserLoggedIn] = useState();
-    useEffect(() => {
+
+    useEffect(() => 
+    {
         let ls = JSON.parse(localStorage.getItem("loginStatus"))
 
-        if (ls === null) {
+        if (ls === null) 
+        {
             ls = 0;
         }
-        if (ls === 200) {
+
+        if (ls === 200) 
+        {
             const data = JSON.parse(localStorage.getItem("loginDetails"));
-            console.log("profile token data", data);
             dispatch(User_Data_Action(data));
             dispatch(Exam_List_Action(data));
             setIsUserLoggedIn(true);
@@ -29,7 +30,7 @@ export const Header = () => {
         else {
             setIsUserLoggedIn(false);
         }
-        console.log("useEffect  token", token, ls);
+
     }, [token])
 
 
@@ -38,8 +39,6 @@ export const Header = () => {
         localStorage.removeItem("loginStatus");
         localStorage.removeItem("loginDetails");
         localStorage.removeItem("userDetails");
-        localStorage.removeItem("examList");
-        localStorage.removeItem("startExam");
         dispatch(Remove_Token_Action());
         navigate("/");
     }
@@ -53,9 +52,6 @@ export const Header = () => {
                     !userLoggedIn
                     &&
                     <ul className="nav justify-content-end">
-                        {/* <li className="nav-item">
-                            <Link className="nav-link active" to="/">Home</Link>
-                        </li> */}
                         <li className="nav-item">
                             <Link className="nav-link" to="/"><button className="btn btn-primary">Login</button></Link>
                         </li>
