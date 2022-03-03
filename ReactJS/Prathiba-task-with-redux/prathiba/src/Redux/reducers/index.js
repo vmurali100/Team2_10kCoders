@@ -26,14 +26,9 @@ export const reducer = (state = initialState, action) => {
         case "Email_Verification":
             console.log("Email verification reducer",action.payload);
             console.log("Email verification reducer status",action.payload.data.status);
-            if(action.payload.data.status === 200)
-            {
-                return { ...state, token: action.payload, emailVerification: action.payload };
-            }
-            else
-            {
-                return { ...state, emailVerification: action.payload};
-            }
+            
+            return { ...state, emailVerification: action.payload};
+            
 
         case "User_Data":
             return {...state, userData: action.payload};

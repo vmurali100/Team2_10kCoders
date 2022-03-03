@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { Email_Verification_Action, User_Data_Action } from '../Redux/actions';
+import { Email_Verification_Action} from '../Redux/actions';
 
 export const EmailVerification = () => {
   const dispatch = useDispatch();
@@ -14,8 +14,10 @@ export const EmailVerification = () => {
   console.log("verification: ", verification)
   var status = verification.data.status;
   var message;
-  if (status === 200) {
-    navigate("/user-dashboard");
+  if (status === 200) 
+  {
+    // alert("Registered sucessfully please login");
+    navigate("/");
   }
   else {
     message = verification.data.data;
@@ -26,7 +28,7 @@ export const EmailVerification = () => {
   console.log("verification-status: ", status);
   console.log("verification-message: ", message);
 
-  const code = useSelector(state => state.register.data.data);
+  // const status = useSelector(state => state.emailVerification.status);
   const [userInput, setUserInput] = useState("");
 
   const handleChange = (event) => {

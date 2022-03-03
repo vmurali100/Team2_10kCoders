@@ -102,8 +102,8 @@ export const Email_Verification_Action = (code) => {
         {
             if (res.data.status === 200) 
             {
-                localStorage.setItem("loginStatus", JSON.stringify(res.data.status));
-                localStorage.setItem("loginDetails",JSON.stringify(res.data.data));
+                // localStorage.setItem("loginStatus", JSON.stringify(res.data.status));
+                // localStorage.setItem("loginDetails",JSON.stringify(res.data.data));
                 alert(res.data.data.message);
             }
             dispatch({
