@@ -9,6 +9,7 @@ import {axios} from 'axios'
 import { ExamListPage } from './Components/ExamListPage';
 import  ProfilePage  from './Components/ProfilePage';
 import LoginRegister from './Components/Login-Register';
+import  EmailVerification  from './Components/EmailVerification';
 
 
  
@@ -23,6 +24,7 @@ function App() {
       <Route path='examlist' element={<ExamListPage />} />
       <Route path='profilepage' element={<ProfilePage/>} />
       <Route path='loginpage' element={<LoginRegister />} />
+      <Route path="emailver" element = {<EmailVerification/>} />
     </Routes>
     <Footer />
  

@@ -26,7 +26,7 @@ const ProfilePage = ({state}) => {
         console.log("token Vals",tokenvals)
         await dispatch(getExamAction(tokenvals))
         setbtndisplay(true)
-
+        
     }
 
     const handleStartExam= ()=>{
@@ -55,8 +55,12 @@ const ProfilePage = ({state}) => {
         <div className="row"></div>
         <div className="row">
           <div className="col"></div>
-          <div className="col">
-            <h1 id='examPage1'>Online Exam</h1>
+          <div className="col" id='examPage1'>
+            <h1 >Explore For Free </h1>
+            <h5>A.3 Year Old Question Paper Civil Services(prelims)</h5>
+            <h5>B.Limited UPSC old Question Papers(CDS,Geo Scientists,CISF ,CAPF,NDA)</h5>
+            <h5>C.Limited questions from Basics of School NCERT(6th to 10th Class)</h5>
+            
           </div>
           <div className="col"></div>
         <div className="row"></div>
@@ -91,7 +95,9 @@ const ProfilePage = ({state}) => {
 }
 
 const mapStateToProps = (state)=>{
-    return {state:state}
+  
+    return {state:state
+    }
 }
 const mapDispatchToProps = ()=>{
     return {

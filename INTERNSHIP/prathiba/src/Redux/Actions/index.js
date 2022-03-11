@@ -4,21 +4,21 @@ import axios,{useState} from "axios"
 export const RegisterAction = (registervals)=>{
     console.log("RegisterVals",registervals)
     
-    return ()=>{
+    return async(dispatch)=>{
         var formData = new FormData()
         formData.append("email",registervals.email)
         formData.append("name",registervals.name)
         formData.append("password",registervals.password)
         formData.append("phone",registervals.phone)
         formData.append("confirmPassword",registervals.confirmPassword)
-     axios({
-        
+     await axios({
            method:"post",
            url: "https://e-prathibha.com/apis/register",
            data:formData,
-           headers:{"Content-Type": "multipart/form-data" }
+           headers:{"Content-Type": "multipart/form-data"},
        }).then((res)=>{
            console.log(res.data)
+            dispatch({type:"REGISTERED_RESPONSE",payload:res.data})
        })
 }
 
@@ -26,18 +26,17 @@ export const RegisterAction = (registervals)=>{
 
 
 export const emailVerification = (logincode)=>{
-    var data = JSON.stringify({"reg_code":logincode})
-    return async(dispatch)=>{
-        axios({
-            method:"post",
-            url:"https://e-prathibha.com/apis/verifyEmail",
-            data:data,
-            headers : {"Content-Type":"application/json"}
-        }).then((res)=>{
-            console.log("EMAIL VERIFICATION DATA",res.data)
-            dispatch({type:"EMAILVERIFICATION",payload:res.data.data})
-        })
-    
+    return async (dispatch) => {
+        var url = "https://e-prathibha.com/apis/verifyEmail";
+        var data = {
+          reg_code: logincode,
+        };
+        var headers = { "Content-Type": "application/json" };
+        await axios.post(url, data, headers).then((res) => {
+          console.log(res.data);
+          alert("Email verified succesfully");
+          dispatch({ type:" EMAILVERIFICATION", payload: res.data });
+        });
     }
 }
 
@@ -83,7 +82,7 @@ export const userInfoAction = (profilevals)=>{
 
 export const getExamAction = (tokenvals)=>{
     console.log("State Data",tokenvals)
-  return async()=>{
+  return async(dispatch)=>{
     var url = "https://e-prathibha.com/apis/test_free_exam";
     var body1 = {examId: 12,qno: 1 }
     var headers1 = {tokenu:tokenvals.Token,id: tokenvals.Id,server_key: "3w99V63pW7tJ7vavGXtCKo8cp"}
@@ -93,6 +92,7 @@ export const getExamAction = (tokenvals)=>{
         { headers: headers1}
         ).then((res)=>{
         console.log(res.data)
+        dispatch({type:"EXAM_LIST",payload:res.data})
     })
       
   } 

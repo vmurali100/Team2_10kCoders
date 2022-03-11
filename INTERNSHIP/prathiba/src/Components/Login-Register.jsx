@@ -12,7 +12,6 @@ const Login = ({state1,registers,emailVer,logIn,userInfo}) => {
   const [registervals, setregistervals] = 
   useState({email:"",password:"",confirmPassword:"",name:'',number:""})
   const [emailverdispaly, setemailverdispaly] = useState(false)
- const [logincode, setlogincode] = useState("")
  const [loginvals, setloginvals] = useState({email:"",password:""})
   
   const handleChange = (e)=>{
@@ -28,17 +27,10 @@ const Login = ({state1,registers,emailVer,logIn,userInfo}) => {
   const handleSubmit = async()=>{
     console.log(registervals)
     await dispatch(registers(registervals))
-    alert("Registration Sucessful")
-    setemailverdispaly(true)
+    navigate("/emailver")
   }
 
-  //Email Verification Code
-const handlecode = ()=>{
-  console.log(logincode)
-  dispatch(emailVer(logincode))
-  setemailverdispaly(false)
-  setdisplay(true)
-}
+
 
 //Handling LOGIN FORM VALUES
 const handleLogInChange = (e)=>{
@@ -63,20 +55,7 @@ const handleUser = ()=>{
 
   return (
     <div>
-      {emailverdispaly?<div className="container">
-        <div className="row">
-          <div className="col"></div>
-          <div className="col">
-          <form>
-  <div class="mb-3">
-    <input type="email" className="form-control"  placeholder='Enter Your Code' 
-    onChange={(e)=>{setlogincode(e.target.value)}}/>
-  </div>
-   <button type="button" className="btn btn-primary" onClick={()=>{handlecode()}}>Check Code</button></form>
-          </div>
-          <div className="col"></div>
-        </div>
-      </div>:   
+
 
    <div style={{ padding: "10px 50px 0px 50px" }}>
       <div style={{ padding: "5px 50px 0px 50px" }}>
@@ -142,7 +121,7 @@ const handleUser = ()=>{
           </form></div>  }
         </div>
       </div>
-    </div>}
+    </div>
     </div>
   )
 }
