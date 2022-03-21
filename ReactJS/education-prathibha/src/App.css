@@ -1,0 +1,14 @@
+.alignCenter {
+  text-align: center;
+}
+
+.wrapper{
+  background-color:black;
+  height:auto;
+  padding:30px;
+  margin-bottom:30px;
+}
+.cont{
+  display:flex;
+  justify-content: space-between;
+}

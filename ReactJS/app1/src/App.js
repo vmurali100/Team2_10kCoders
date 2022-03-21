@@ -9,9 +9,7 @@ import HoverCounter from './HOC comp/HoverCounter';
 function App() {
   return (
     <div className="App">
-     <HOCComp/>
-     <ClickCounter/>
-     <HoverCounter/>
+    <SRi/>
 
       </div>
   );
