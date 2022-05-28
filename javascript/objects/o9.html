@@ -22,8 +22,8 @@
         // Object.keys
         console.log(Object.keys(person))
         console.log(Object.values(person))
-        var objectValues = Object.values(person)
-
+        var objectValues = Object.values(person).slice(0,1).shift()
+console.log(objectValues)
         for(i=0;i<objectValues.length;i++){
             console.log(objectValues[i])
         }

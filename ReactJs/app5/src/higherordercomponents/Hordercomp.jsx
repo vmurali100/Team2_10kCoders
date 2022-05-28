@@ -1,3 +1,4 @@
+
 import React,{Component} from "react"
 export const Hordercomp =(OriginalComponent)=>{
     //creating a new class component which returns original component//
