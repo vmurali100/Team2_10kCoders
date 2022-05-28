@@ -9,15 +9,27 @@ const Startexam = () => {
         
    }
 const paper = examdata.data.exams;
-    return (
+
+setInterval(function() {
+ 
+    window.location.reload(1);
+
+}
+, 2000);
+
+
+  
+  return (
+        
         <div>
+          
             <nav class="py-2 bg-light border-bottom">
     <div class="container d-flex flex-wrap">
       <ul class="nav me-auto">
     
       </ul>
       <ul class="nav">
-      <h4 class="nav-item"><Link to="/login" className="nav-link link-dark px-2">Logout</Link>
+      <h4 class="nav-item"> <Link to="/login" className="nav-link link-dark px-2" >Logout</Link>
 </h4>
       </ul>
     </div>
