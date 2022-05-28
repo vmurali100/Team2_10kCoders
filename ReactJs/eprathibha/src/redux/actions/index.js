@@ -5,7 +5,6 @@ export const registeraction=(users)=>{
     console.log(users)
     return async (dispatch)=>{
          await axios.post("https://e-prathibha.com/apis/register",users).then((res)=>{
-            console.log(res.data)
              dispatch({
                 type:GET_REGISTER_DATA,
                 payload:res.data
@@ -19,7 +18,6 @@ export const registeraction=(users)=>{
  export const verifyaction=(regdata)=>{
      return async (dispatch)=>{
          await axios.post("https://e-prathibha.com/apis/verifyEmail",regdata).then((res)=>{
-             console.log(res.data)
              
              dispatch({
                  type:GET_VERIFY_DATA,
@@ -32,7 +30,6 @@ export const registeraction=(users)=>{
  export const loginaction=(loginuser)=>{
      return async (dispatch)=>{
          await axios.post("https://e-prathibha.com/apis/login",loginuser).then((res)=>{
-             console.log(res.data)
              dispatch({
                  type:GET_LOGIN_DATA,
                  payload:res.data
@@ -42,7 +39,6 @@ export const registeraction=(users)=>{
  }
 
  export const examlistaction=({id,tokenu,server_key})=>{
-     console.log(id,tokenu,server_key)
      return async (dispatch)=>{
          await axios.get("https://e-prathibha.com/apis/test_free_exam",{
              body:{
@@ -59,7 +55,6 @@ export const registeraction=(users)=>{
          }
 
          ).then((res)=>{
-             console.log(res.data)
              dispatch({
                  type:GET_EXAM_DATA,
                  payload:res.data
@@ -68,7 +63,6 @@ export const registeraction=(users)=>{
      }
  }
  export const startexamaction=({id,tokenu,server_key})=>{
-    console.log(id,tokenu,server_key)
     return async (dispatch)=>{
         await axios.get("https://e-prathibha.com/apis/start_exam_new?examId=12",{
           
@@ -82,7 +76,6 @@ export const registeraction=(users)=>{
         }
 
         ).then((res)=>{
-            console.log(res.data)
             dispatch({
                 type:GET_STARTEXAM_DATA,
                 payload:res.data
@@ -91,7 +84,6 @@ export const registeraction=(users)=>{
     }
 }
 export const finishexamaction=({id,tokenu,server_key})=>{
-    console.log(id,tokenu,server_key)
     return async (dispatch)=>{
         await axios.get("https://e-prathibha.com/apis/finishExam",{
             body:{
@@ -108,7 +100,6 @@ export const finishexamaction=({id,tokenu,server_key})=>{
         }
 
         ).then((res)=>{
-            console.log(res)
             dispatch({
                 type:GET_FINISHEXAM_DATA,
                 payload:res

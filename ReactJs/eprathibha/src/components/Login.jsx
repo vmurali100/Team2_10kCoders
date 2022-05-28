@@ -9,7 +9,6 @@ const Login = () => {
   const dispatch = useDispatch()
 
   const loggedindata = useSelector(state => state.logindata)
-  console.log("hello from login reducer", loggedindata)
 const [loginuser, setloginuser] = useState({
     "email": "",
     "password": ""
@@ -35,7 +34,6 @@ useEffect(() => {
     setloginuser(newloginuser)
   }
   const handlesubmit = (loginuser) => {
-    console.log(loginuser)
     dispatch(loginaction(loginuser))
   }
   return (

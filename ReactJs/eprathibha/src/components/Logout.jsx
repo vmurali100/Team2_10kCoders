@@ -3,10 +3,7 @@ import { useNavigate,Link} from 'react-router-dom'
 
  const Logout = () => {
    const navigate=useNavigate();
-   setInterval(() => {
-    window.location.reload();
-  }, 1000);
-    
+   
   return (
     <div>
       <div>

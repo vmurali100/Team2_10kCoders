@@ -8,15 +8,9 @@ const Startexam = () => {
         navigate("/question")
         
    }
-
-setInterval(() => {
-    window.location.reload();
-  }, 1000);
-    
-    const paper = examdata.data.exams;
+const paper = examdata.data.exams;
     return (
         <div>
-            <div class="header" style={{ position: 'fixed', left: '0', top: '0', width: '100%', backgroundColor: 'skyblue',float:'left' }}>
             <nav class="py-2 bg-light border-bottom">
     <div class="container d-flex flex-wrap">
       <ul class="nav me-auto">
@@ -29,10 +23,9 @@ setInterval(() => {
     </div>
   </nav>      
           
-            <h2 style={{ color: 'blue' }}>welcome to homescreen</h2>    
+            <h2 style={{ color: 'blue' }}>Welcome To Homescreen</h2>    
                
-            </div>
-            <br /><br /><br /><br/>
+            <br />
             <div>
                 <br/>
                 <h2 style={{ color: 'blueviolet' }}>Question Papers</h2>

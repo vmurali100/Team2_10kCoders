@@ -6,7 +6,6 @@ import { verifyaction } from '../redux/actions'
 const Emailverification = () => {
   const navigate=useNavigate()
   const verifieddata=useSelector(state=>state.verifydata)
-  console.log("hello from verify",verifieddata)
   let dispatch=useDispatch()
   const[regcode,setregcode]=useState({
     "reg_code":""
@@ -30,7 +29,6 @@ const Emailverification = () => {
 setregcode(newcode)
   }
   const handlesubmit=(regcode)=>{
-    console.log(regcode)
     dispatch(verifyaction(regcode))
 
   }

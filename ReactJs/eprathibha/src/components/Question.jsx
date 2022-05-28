@@ -9,7 +9,6 @@ const Question = () => {
     const navigate = useNavigate()
   
     const tokendata = JSON.parse(localStorage.getItem("loggedindata"))
-    console.log(tokendata)
     const id = tokendata.data.Id;
     const tokenu = tokendata.data.Token;
     const server_key = "3w99V63pW7tJ7vavGXtCKo8cp"
@@ -22,7 +21,6 @@ const Question = () => {
     
       }, [tokendata.status])
       const examstart = useSelector(state => state.startexamdata)
-      console.log("hello from startexam reducer", examstart)
       
       useEffect(() => {
         if (examstart.status === 200) {

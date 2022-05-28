@@ -6,9 +6,7 @@ const Questionpaper = () => {
   const navigate=useNavigate()
   const dispatch=useDispatch()
     const examstarts = JSON.parse(localStorage.getItem("examstart"))
-    console.log(examstarts) 
     const Quespap=examstarts.data.exam
-    console.log(Quespap)
     const handlefinish=()=>{
       navigate("/finish")
     }

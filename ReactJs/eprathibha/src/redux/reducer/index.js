@@ -18,14 +18,11 @@ case GET_VERIFY_DATA:
   case GET_LOGIN_DATA:
     return{...state,logindata:action.payload}
     case GET_EXAM_DATA:
-      console.log(action.payload)
       return{...state,examlist:action.payload}
       
-      case GET_STARTEXAM_DATA:
-        console.log(action.payload)
+     case GET_STARTEXAM_DATA:
         return{...state,startexamdata:action.payload}
         case GET_FINISHEXAM_DATA:
-          console.log(action.payload)
           return{...state,finishexamdata:action.payload}
 
             default:

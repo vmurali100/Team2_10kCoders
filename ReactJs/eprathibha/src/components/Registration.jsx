@@ -34,7 +34,6 @@ const handlechange=(e)=>{
 }
 
 const handlesubmit=(users)=>{
-  console.log(users)
   dispatch(registeraction(users))
  
 }
