@@ -5,7 +5,7 @@ import { useNavigate,Link} from 'react-router-dom'
    const navigate=useNavigate();
    setInterval(function() {
  
-    window.location.reload(1);
+    window.location.reload();
 
 }
 , 2000);

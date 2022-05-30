@@ -30,6 +30,7 @@ export const registeraction=(users)=>{
  export const loginaction=(loginuser)=>{
      return async (dispatch)=>{
          await axios.post("https://e-prathibha.com/apis/login",loginuser).then((res)=>{
+             console.log(res)
              dispatch({
                  type:GET_LOGIN_DATA,
                  payload:res.data

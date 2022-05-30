@@ -10,13 +10,21 @@ const Startexam = () => {
    }
 const paper = examdata.data.exams;
 
-setInterval(function() {
+// setInterval(function() {
  
-    window.location.reload(1);
+//     window.location.reload();
 
+// }
+// , 2000);
+let count = 0;
+function handle() {
+  count++;
+  window.location.reload()
+  if (count > 4) {
+    clearInterval(interval);
+  }
 }
-, 2000);
-
+const interval = setInterval(handle, 2000);
 
   
   return (

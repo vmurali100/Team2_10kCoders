@@ -19,8 +19,7 @@ case GET_VERIFY_DATA:
     return{...state,logindata:action.payload}
     case GET_EXAM_DATA:
       return{...state,examlist:action.payload}
-      
-     case GET_STARTEXAM_DATA:
+       case GET_STARTEXAM_DATA:
         return{...state,startexamdata:action.payload}
         case GET_FINISHEXAM_DATA:
           return{...state,finishexamdata:action.payload}
