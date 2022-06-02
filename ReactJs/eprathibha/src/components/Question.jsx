@@ -1,22 +1,24 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate ,useParams} from 'react-router-dom'
 import { startexamaction } from '../redux/actions'
 
 const Question = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-  
+    console.log(useParams())
+    const {examId}=useParams()
+
+    localStorage.setItem("examid",JSON.stringify(examId)) 
+
     const tokendata = JSON.parse(localStorage.getItem("loggedindata"))
     const id = tokendata.data.Id;
     const tokenu = tokendata.data.Token;
     const server_key = "3w99V63pW7tJ7vavGXtCKo8cp"
     useEffect(() => {
         if (tokendata.status === 200) {
-            dispatch(startexamaction({ id, tokenu, server_key }))
-    
-    
+            dispatch(startexamaction({ id, tokenu, server_key,examId }))
         }
     
       }, [tokendata.status])
@@ -25,7 +27,7 @@ const Question = () => {
       useEffect(() => {
         if (examstart.status === 200) {
     localStorage.setItem("examstart",JSON.stringify(examstart)) 
-    navigate("/questionpaper")     
+    navigate("/questionpaper")
         }
       }, [examstart.status])
     

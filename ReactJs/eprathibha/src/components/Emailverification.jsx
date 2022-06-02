@@ -15,7 +15,7 @@ const Emailverification = () => {
       alert("email verified successfully, login to continue")
       navigate("/login")
     }else if(verifieddata.status===400){
-      alert("some issues are there...enter correct verification id")
+      alert("enter correct verification id")
 
       navigate("/emailverification")
       

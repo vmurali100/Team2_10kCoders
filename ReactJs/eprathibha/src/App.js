@@ -25,7 +25,7 @@ function App() {
 <Route path="tokendata" element={<Tokendata/>}/>
 <Route path="startexam" element={<Startexam/>}/>
 <Route path="questionpaper" element={<Questionpaper/>}/>
-<Route path="question" element={<Question/>}/>
+<Route path="/:examId" element={<Question/>}/>
 <Route path="finish" element={<Finishexam/>}/>
 <Route path="logout" element={<Logout/>}/>
 

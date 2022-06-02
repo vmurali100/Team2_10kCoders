@@ -3,13 +3,11 @@ import { useNavigate,Link} from 'react-router-dom'
 
  const Logout = () => {
    const navigate=useNavigate();
-   setInterval(function() {
- 
-    window.location.reload();
-
-}
-, 2000);
-
+  //  setInterval(() => {
+  //   window.location.reload();
+  // }, 1000);
+  const finishdata = JSON.parse(localStorage.getItem("examfinish"))
+  const examstarts = JSON.parse(localStorage.getItem("examstart"))
   return (
     <div>
       <div>
@@ -29,7 +27,9 @@ import { useNavigate,Link} from 'react-router-dom'
       </div>
     <div>
    
-          <h3 style={{textAlign:'center',marginTop:'200px',color:'blue'}}>your exam has been successfully submitted</h3>
+          <h3 style={{textAlign:'center',marginTop:'200px',color:'blue'}}>{finishdata.data.data}</h3>
+          <h3 style={{textAlign:'center',marginTop:'200px',color:'blue'}}>{examstarts.alert}</h3>
+
 
           </div>
           </div>

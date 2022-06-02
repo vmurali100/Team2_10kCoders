@@ -2,7 +2,6 @@ import { GET_EXAM_DATA, GET_FINISHEXAM_DATA, GET_LOGIN_DATA, GET_REGISTER_DATA, 
 import axios from 'axios'
 
 export const registeraction=(users)=>{
-    console.log(users)
     return async (dispatch)=>{
          await axios.post("https://e-prathibha.com/apis/register",users).then((res)=>{
              dispatch({
@@ -30,7 +29,6 @@ export const registeraction=(users)=>{
  export const loginaction=(loginuser)=>{
      return async (dispatch)=>{
          await axios.post("https://e-prathibha.com/apis/login",loginuser).then((res)=>{
-             console.log(res)
              dispatch({
                  type:GET_LOGIN_DATA,
                  payload:res.data
@@ -63,9 +61,9 @@ export const registeraction=(users)=>{
          })
      }
  }
- export const startexamaction=({id,tokenu,server_key})=>{
+ export const startexamaction=({id,tokenu,server_key,examId})=>{
     return async (dispatch)=>{
-        await axios.get("https://e-prathibha.com/apis/start_exam_new?examId=12",{
+        await axios.get(`https://e-prathibha.com/apis/start_exam_new?examId=${examId}`,{
           
             headers:{
 "id":id,
@@ -84,13 +82,15 @@ export const registeraction=(users)=>{
         })
     }
 }
-export const finishexamaction=({id,tokenu,server_key})=>{
+export const finishexamaction=({id,tokenu,server_key,examId})=>{
+
     return async (dispatch)=>{
-        await axios.get("https://e-prathibha.com/apis/finishExam",{
-            body:{
-                "examId":12,
-                "qno":1
-            },
+      const  body={
+            "examId":examId,
+            "qno":1
+        }
+        await axios.post("https://e-prathibha.com/apis/finishExam",body,{
+        
             headers:{
 "id":id,
 "server_key":"3w99V63pW7tJ7vavGXtCKo8cp",
