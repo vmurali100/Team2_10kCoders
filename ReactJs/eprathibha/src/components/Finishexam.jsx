@@ -26,7 +26,7 @@ const Finishexam = () => {
         if (examfinish.status=== 200) {
           localStorage.setItem("examfinish", JSON.stringify(examfinish))
 
-          alert(examfinish.data.data)
+          alert(examfinish.data)
           navigate("/logout")
 
         }

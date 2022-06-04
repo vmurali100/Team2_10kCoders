@@ -103,7 +103,7 @@ export const finishexamaction=({id,tokenu,server_key,examId})=>{
         ).then((res)=>{
             dispatch({
                 type:GET_FINISHEXAM_DATA,
-                payload:res
+                payload:res.data
             })
         })
     }
